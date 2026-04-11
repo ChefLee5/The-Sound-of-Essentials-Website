@@ -1,49 +1,22 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import ResearchAssistant from '../components/ResearchAssistant';
 import { assetPath } from '../utils/assetPath';
-
-/* ── Reveal Hook ── */
-const useReveal = () => {
-    const ref = useRef(null);
-    useEffect(() => {
-        const el = ref.current;
-        if (!el) return;
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    el.classList.add('revealed');
-                    observer.unobserve(el);
-                }
-            },
-            { threshold: 0.15 }
-        );
-        observer.observe(el);
-        return () => observer.disconnect();
-    }, []);
-    return ref;
-};
-
-const RevealSection = ({ children, className = '', delay = 0 }) => {
-    const ref = useReveal();
-    return (
-        <div ref={ref} className={`reveal-block ${className}`} style={{ animationDelay: `${delay}s` }}>
-            {children}
-        </div>
-    );
-};
+import { RevealSection } from '../hooks/useReveal';
 
 const Science = () => {
     const { t } = useTranslation();
+    useEffect(() => { document.title = 'Science of the Sound — SOE Rhythm Quest'; }, []);
     return (
         <div className="science-page">
             {/* ── Hero ── */}
             <header className="science-hero">
                 <div className="container text-center">
-                    <div>
-                        <h1 className="hero-stagger" style={{ animationDelay: '0.1s' }}>Science of the <span className="accent-gradient">Sound</span></h1>
-                        <p className="section-subtitle hero-stagger" style={{ margin: '1.5rem auto', animationDelay: '0.25s' }}>
+                    <div className="animate-fade-up">
+                        <div className="section-label">Pedagogy & Science</div>
+                        <h1>Science of the <span className="text-gold">Sound</span></h1>
+                        <p className="section-subtitle" style={{ margin: '1rem auto' }}>
                             Chronicles of the Clock: Understanding the neurological architecture behind every rhythm.
                         </p>
                     </div>
@@ -162,11 +135,7 @@ const Science = () => {
                                     </p>
                                 </div>
                                 <div className="science-image-wrap animate-float">
-                                    <img
-                                        src={assetPath('/assets/characters/ELIAS.png')}
-                                        alt="Elias - The Time Keeper"
-                                        className="science-image"
-                                    />
+                                    <div className="science-image-placeholder">⏰</div>
                                 </div>
                             </div>
                         </div>
@@ -182,9 +151,8 @@ const Science = () => {
                         <p className="section-subtitle" style={{ marginTop: '1rem' }}>
                             {t('science.cta_subtitle')}
                         </p>
-                        <div style={{ marginTop: '3rem', display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-                            <Link to="/join" className="btn btn-gold">Join the Quest</Link>
-                            <Link to="/media" className="btn btn-outline">
+                        <div style={{ marginTop: '3rem' }}>
+                            <Link to="/media" className="page-bottom-link">
                                 {t('home.explore_media')}
                             </Link>
                         </div>
@@ -195,8 +163,8 @@ const Science = () => {
             <style>{`
                 .science-page .reveal-block {
                     opacity: 0;
-                    transform: translateY(20px);
-                    transition: opacity 0.7s var(--ease-premium), transform 0.7s var(--ease-premium);
+                    transform: translateY(25px);
+                    transition: opacity 0.8s var(--ease-gentle), transform 0.8s var(--ease-gentle);
                 }
                 .science-page .reveal-block.revealed {
                     opacity: 1;
@@ -258,6 +226,18 @@ const Science = () => {
                     border-radius: var(--radius-lg);
                     border: 2px solid var(--color-border);
                     box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+                }
+
+                .science-image-placeholder {
+                    width: 100%;
+                    min-height: 300px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 6rem;
+                    background: rgba(0,0,0,0.03);
+                    border-radius: var(--radius-lg);
+                    border: 2px dashed var(--color-border);
                 }
 
                 @media (max-width: 768px) {

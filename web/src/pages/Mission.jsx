@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { useAnimeReveal } from '../hooks/useAnimeReveal';
 
 /* ── Reveal Hook ── */
 const useReveal = () => {
@@ -78,18 +79,69 @@ const AnimatedStat = ({ value, suffix = '', label, color }) => {
     );
 };
 
+/* ── Ambient Scene Gallery ── */
+const SCENES = [
+  { src: 'b-roll-boats.webp',        caption: 'On the Water',         land: 'Lexiconia' },
+  { src: 'b-roll-flowers.webp',      caption: 'Through the Fields',   land: 'Natura' },
+  { src: 'climb-numeria.webp',       caption: 'Climbing Numeria',      land: 'Numeria' },
+  { src: 'donkey.webp',              caption: 'A Trusty Companion',    land: 'Animalia' },
+  { src: 'drums.webp',               caption: 'The Beat Goes On',      land: 'Harmonia' },
+  { src: 'seriphia-in-celestia.webp',caption: 'Seriphia at the Gate',  land: 'Celestia' },
+  { src: 'touch-your-toes.webp',     caption: 'Body in Motion',        land: 'Kinesthia' },
+  { src: 'wave.webp',                caption: 'Riding the Wave',       land: 'Aquaria' },
+];
+
+const MissionSceneGallery = () => {
+  const gridRef = useAnimeReveal({ selector: '.mission-scene', staggerMs: 85, translateY: [24, 0], scale: [0.96, 1] });
+
+  return (
+    <section className="section mission-scene-section">
+      <div className="container">
+        <RevealSection className="text-center">
+          <div className="section-label">🌍 The Seven Lands</div>
+          <h2 className="section-title">
+            A World Built for <span className="text-gold">Every Child</span>
+          </h2>
+          <p className="section-subtitle" style={{ margin: '0 auto 2.5rem auto' }}>
+            Each land in the Rhythm Quest universe mirrors a real domain of learning —
+            bringing vocabulary, music, and movement to life through immersive scenes.
+          </p>
+        </RevealSection>
+
+        <div className="mission-scene-mosaic" ref={gridRef}>
+          {SCENES.map((s) => (
+            <div key={s.src} className="mission-scene anime-item">
+              <img
+                src={`${import.meta.env.BASE_URL}assets/scenes/${s.src}`}
+                alt={s.caption}
+                loading="lazy"
+              />
+              <div className="mission-scene__label">
+                <span className="mission-scene__land">{s.land}</span>
+                <span className="mission-scene__caption">{s.caption}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
 const Mission = () => {
     const { t } = useTranslation();
+    React.useEffect(() => { document.title = 'Our Mission — SOE Rhythm Quest'; }, []);
     return (
         <div className="mission-page">
             {/* ── Hero ── */}
             <header className="mission-hero">
                 <div className="container text-center">
-                    <div>
-                        <h1 className="hero-stagger" style={{ animationDelay: '0.1s' }}>
-                            A <span className="accent-gradient">State of Emergency</span>
+                    <div className="animate-fade-up">
+                        <div className="section-label">Our Mission</div>
+                        <h1>
+                            A <span className="accent-text">State of Emergency</span>
                         </h1>
-                        <p className="section-subtitle hero-stagger" style={{ margin: '1.5rem auto', animationDelay: '0.25s' }}>
+                        <p className="section-subtitle" style={{ margin: '1rem auto' }}>
                             The world's most vulnerable children are running out of time.
                             SOE exists to change that equation through the universal language of music.
                         </p>
@@ -211,9 +263,8 @@ const Mission = () => {
                                 {t('mission.cta_title_1')}{' '}
                                 <span className="accent-text">{t('mission.cta_title_2')}</span>
                             </h3>
-                            <div style={{ marginTop: '2rem', display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-                                <Link to="/join" className="btn btn-gold">Join the Quest</Link>
-                                <Link to="/media" className="btn btn-outline">
+                            <div style={{ marginTop: '2rem' }}>
+                                <Link to="/media" className="page-bottom-link">
                                     {t('home.explore_media')}
                                 </Link>
                             </div>
@@ -222,11 +273,25 @@ const Mission = () => {
                 </div>
             </section>
 
+            {/* ── Scene Strip: Into the World ── */}
+            <div className="scene-strip" aria-hidden="true">
+              <img
+                src={`${import.meta.env.BASE_URL}assets/scenes/wildflower-path.webp`}
+                alt=""
+                className="scene-strip__img"
+                loading="lazy"
+              />
+              <div className="scene-strip__overlay" />
+            </div>
+
+            {/* ── Ambient Scene Gallery ── */}
+            <MissionSceneGallery />
+
             <style>{`
         .mission-page .reveal-block {
           opacity: 0;
-          transform: translateY(20px);
-          transition: opacity 0.7s var(--ease-premium), transform 0.7s var(--ease-premium);
+          transform: translateY(25px);
+          transition: opacity 0.8s var(--ease-gentle), transform 0.8s var(--ease-gentle);
         }
         .mission-page .reveal-block.revealed {
           opacity: 1;
@@ -396,6 +461,86 @@ const Mission = () => {
           .solution-grid {
             grid-template-columns: 1fr;
           }
+        }
+
+        /* ── Mission Scene Mosaic ── */
+        .mission-scene-mosaic {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          grid-auto-rows: 220px;
+          gap: 0.75rem;
+        }
+
+        /* Make first scene span 2 cols for visual interest */
+        .mission-scene:first-child {
+          grid-column: span 2;
+        }
+
+        .mission-scene {
+          position: relative;
+          overflow: hidden;
+          border-radius: var(--radius-md);
+          background: var(--color-surface);
+          cursor: default;
+          opacity: 0;
+          will-change: transform, opacity;
+        }
+
+        .mission-scene img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+          transition: transform 0.7s var(--ease-gentle);
+        }
+
+        .mission-scene:hover img {
+          transform: scale(1.07);
+          animation: kenBurns 10s ease-in-out infinite alternate;
+        }
+
+        .mission-scene__label {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          padding: 0.75rem 1rem;
+          background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, transparent 100%);
+          display: flex;
+          flex-direction: column;
+          gap: 0.15rem;
+          opacity: 0;
+          transition: opacity 0.35s ease;
+        }
+
+        .mission-scene:hover .mission-scene__label {
+          opacity: 1;
+        }
+
+        .mission-scene__land {
+          font-family: var(--font-heading);
+          font-size: 0.7rem;
+          font-weight: 700;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          color: var(--color-gold);
+        }
+
+        .mission-scene__caption {
+          font-size: 0.9rem;
+          color: rgba(255, 255, 255, 0.9);
+          font-weight: 500;
+        }
+
+        @media (max-width: 900px) {
+          .mission-scene-mosaic { grid-template-columns: repeat(2, 1fr); }
+          .mission-scene:first-child { grid-column: span 2; }
+        }
+
+        @media (max-width: 540px) {
+          .mission-scene-mosaic { grid-template-columns: 1fr; grid-auto-rows: 180px; }
+          .mission-scene:first-child { grid-column: span 1; }
+          .mission-scene__label { opacity: 1; }
         }
       `}</style>
         </div>

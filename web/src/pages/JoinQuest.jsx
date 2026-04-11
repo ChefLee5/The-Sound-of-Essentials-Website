@@ -1,39 +1,11 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-
-/* ── Reveal Hook ── */
-const useReveal = () => {
-    const ref = useRef(null);
-    useEffect(() => {
-        const el = ref.current;
-        if (!el) return;
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    el.classList.add('revealed');
-                    observer.unobserve(el);
-                }
-            },
-            { threshold: 0.15 }
-        );
-        observer.observe(el);
-        return () => observer.disconnect();
-    }, []);
-    return ref;
-};
-
-const RevealSection = ({ children, className = '', delay = 0 }) => {
-    const ref = useReveal();
-    return (
-        <div ref={ref} className={`reveal-block ${className}`} style={{ animationDelay: `${delay}s` }}>
-            {children}
-        </div>
-    );
-};
+import { RevealSection } from '../hooks/useReveal';
 
 const JoinQuest = () => {
     const { t } = useTranslation();
+    useEffect(() => { document.title = 'Join the Quest — SOE Rhythm Quest'; }, []);
     // Newsletter State
     const [newsletter, setNewsletter] = useState({ email: '', submitted: false });
     const [newsLoading, setNewsLoading] = useState(false);
@@ -83,12 +55,13 @@ const JoinQuest = () => {
             {/* ── Hero ── */}
             <header className="join-hero">
                 <div className="container text-center">
-                    <div>
-                        <h1 className="hero-stagger" style={{ animationDelay: '0.1s' }}>
+                    <div className="animate-fade-up">
+                        <div className="section-label">{t('join.hero_label')}</div>
+                        <h1>
                             {t('join.hero_title_1')}
-                            <span className="accent-gradient">{t('join.hero_title_2')}</span>
+                            <span className="text-gold">{t('join.hero_title_2')}</span>
                         </h1>
-                        <p className="section-subtitle hero-stagger" style={{ margin: '1.5rem auto', animationDelay: '0.25s' }}>
+                        <p className="section-subtitle" style={{ margin: '1rem auto' }}>
                             {t('join.hero_subtitle')}
                         </p>
                     </div>
@@ -294,11 +267,10 @@ const JoinQuest = () => {
                         <p className="section-subtitle" style={{ marginTop: '1rem' }}>
                             {t('join.mission_subtitle')}
                         </p>
-                        <div style={{ marginTop: '3rem', display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-                            <Link to="/media" className="btn btn-gold">
+                        <div style={{ marginTop: '3rem' }}>
+                            <Link to="/media" className="page-bottom-link">
                                 {t('join.explore_media')}
                             </Link>
-                            <Link to="/universe" className="btn btn-outline">The Universe →</Link>
                         </div>
                     </RevealSection>
                 </div>
@@ -307,8 +279,8 @@ const JoinQuest = () => {
             <style>{`
         .join-page .reveal-block {
           opacity: 0;
-          transform: translateY(20px);
-          transition: opacity 0.7s var(--ease-premium), transform 0.7s var(--ease-premium);
+          transform: translateY(25px);
+          transition: opacity 0.8s var(--ease-gentle), transform 0.8s var(--ease-gentle);
         }
         .join-page .reveal-block.revealed {
           opacity: 1;
@@ -442,7 +414,7 @@ const JoinQuest = () => {
           color: var(--color-text-primary);
           font-family: var(--font-body);
           font-size: 0.95rem;
-          transition: border-color 0.25s var(--ease-premium);
+          transition: border-color var(--transition-med);
         }
 
         .form-input:focus {

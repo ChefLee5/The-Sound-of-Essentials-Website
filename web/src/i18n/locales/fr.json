@@ -6,7 +6,6 @@
         "heroes": "Héros",
         "science": "Science",
         "media": "Médiathèque",
-        "dictionary": "Dictionnaire",
         "mission": "Notre Mission",
         "join": "Rejoindre l'Aventure",
         "toggle_menu": "Afficher le menu de navigation",
@@ -71,11 +70,11 @@
             },
             "science": {
                 "title": "Science",
-                "desc": "Nature, anatomy and discovery through sensory exploration."
+                "desc": "Nature, anatomie et découverte par l'exploration sensorielle."
             },
             "social_emotional": {
                 "title": "Socio-Émotionnel",
-                "desc": "Manners, empathy and self-regulation through collaborative music."
+                "desc": "Savoir-vivre, empathie et autorégulation par la musique collaborative."
             }
         },
         "features": {
@@ -512,5 +511,50 @@
         "line2": "l'Essentiel",
         "subtitle": "Rhythm Quest",
         "tagline": "Conçu pour le cerveau en développement"
+    },
+    "media": {
+        "hero_label": "Médiathèque",
+        "hero_title_1": "Entendez l'",
+        "hero_title_2": "Essentiel",
+        "hero_subtitle": "Musique, histoires et apprentissage visuel des sept terres de Rhythm Quest.",
+        "audio_label": "La Bande Sonore",
+        "audio_title_1": "Écoutez les",
+        "audio_title_2": "Pistes de Rhythm Quest",
+        "audio_subtitle": "Sept terres, sept sons — chaque piste une leçon déguisée.",
+        "coloring_label": "Le Livre de Coloriage",
+        "coloring_title_1": "Colorier la",
+        "coloring_title_2": "Quête",
+        "coloring_subtitle": "Pages haute résolution du livre de coloriage SOE — imprimer, colorier et apprendre.",
+        "read_label": "Le Livre de Contes",
+        "read_title_1": "Lire le",
+        "read_title_2": "Livre de Contes",
+        "read_subtitle": "Suivez Seriphia et les héros page après page.",
+        "prev": "← Précédent",
+        "next": "Suivant →",
+        "pre_order_coloring": "Pré-commander le Livre de Coloriage",
+        "pre_order_book": "Pré-commander le Livre de Contes",
+        "lyrics_btn": "Paroles",
+        "no_lyrics": "Pas de paroles disponibles pour ce morceau.",
+        "tracks": {
+            "1":  { "title": "Jour Ensoleillé (Intro)",         "domain": "Introduction",               "desc": "Une douce mélodie de lever de soleil qui accueille les apprenants." },
+            "2":  { "title": "Les Jours de la Semaine",         "domain": "Temps et Chronia",           "desc": "Elias et Selene chantent les sept jours, développant les compétences de séquençage." },
+            "3":  { "title": "Remix de l'Alphabet",             "domain": "Langage et Harmonia",        "desc": "Kenji et Aiko donnent vie à l'alphabet avec un remix phonétique rythmique." },
+            "4":  { "title": "Interlude des Chevaux",           "domain": "Science et Natura",          "desc": "Un voyage parlé et ludique à travers le règne animal." },
+            "5":  { "title": "Le Cheval",                       "domain": "Langage et Lexiconia",       "desc": "Un hommage bilingue français-anglais à la puissance et la grâce du cheval." },
+            "6":  { "title": "Étirons-nous",                    "domain": "Physique et Vitalis",        "desc": "Felix et Amara guident une routine complète de respiration et d'étirement." },
+            "7":  { "title": "L'Heure de l'Exercice",           "domain": "Physique et Vitalis",        "desc": "Une marche stimulante avec des chants en appel et réponse rythmiques." },
+            "8":  { "title": "Les Nombres",                     "domain": "Mathématiques et Numeria",   "desc": "Kwame et Octavia comptent jusqu'à 10 avec des claquements de mains." },
+            "9":  { "title": "Mon Corps",                       "domain": "Science et Natura",          "desc": "Athena et Ezra guident les apprenants à travers l'anatomie du corps humain." },
+            "10": { "title": "Les Manières",                    "domain": "Socio-Émotionnel",           "desc": "Aiko enseigne le langage de la courtoisie — s'il vous plaît, merci, excusez-moi." },
+            "11": { "title": "Savez-vous Quelle Heure Il Est ?", "domain": "Temps et Chronia",         "desc": "Elias et Selene introduisent la lecture de l'horloge et les routines quotidiennes." },
+            "12": { "title": "Changements",                     "domain": "Science et Natura",          "desc": "Nerissa réfléchit sur les changements météorologiques et la constance de l'amour." },
+            "13": { "title": "Cent",                            "domain": "Mathématiques et Numeria",   "desc": "Octavia compte jusqu'à 100 — une étape importante en numératie." },
+            "14": { "title": "L'Océan",                         "domain": "Science et Natura",          "desc": "Un voyage sonore immersif explorant les merveilles de l'océan." },
+            "15": { "title": "Les Mots Difficiles",             "domain": "Langage et Lexiconia",       "desc": "Ronan et Nerissa s'attaquent au vocabulaire polysyllabique avec des exercices rythmiques." },
+            "16": { "title": "Les Formes",                      "domain": "Mathématiques et Geometria", "desc": "Silas et Vesta chantent les cercles, carrés, triangles et plus encore." },
+            "17": { "title": "Les Mois de l'Année",             "domain": "Temps et Chronia",           "desc": "Elias guide une récitation complète du calendrier sur une mélodie mémorable." },
+            "18": { "title": "La Pluie",                        "domain": "Science et Natura",          "desc": "Athena et Ezra explorent le cycle de l'eau et la beauté de la pluie." },
+            "19": { "title": "Après la Tempête (Outro)",       "domain": "Introduction",               "desc": "Une piste de clôture apaisante — la promesse que la lumière suit toujours la tempête." }
+        }
     }
 }

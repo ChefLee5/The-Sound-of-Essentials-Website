@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { assetPath } from '../utils/assetPath';
 
 /* ── Reveal on scroll ── */
 const RevealSection = ({ children, className = '', delay = 0 }) => {
@@ -86,12 +85,24 @@ const CharacterCard = ({ char, index, isExpanded, onToggle }) => {
                 aria-expanded={isExpanded}
             >
                 <div className="char-card__image-wrap">
-                    <img
-                        src={assetPath(char.img)}
-                        alt={char.name}
-                        className="char-card__image"
-                        style={{ borderColor: char.landColor }}
-                    />
+                    {char.name === 'Seriphia' ? (
+                        <div className="char-card__img-bg char-card__img-bg--scene">
+                            <img
+                                src={`${import.meta.env.BASE_URL}assets/characters/SERIPHIA_celestia.png`}
+                                alt={char.name}
+                                className="char-card__image char-card__image--scene"
+                            />
+                        </div>
+                    ) : (
+                        <div className="char-card__img-bg" style={{ background: '#fff' }}>
+                            <img
+                                src={`${import.meta.env.BASE_URL}assets/characters/${char.name.toUpperCase()}_crop.png`}
+                                alt={char.name}
+                                className="char-card__image"
+                                style={{ mixBlendMode: 'multiply' }}
+                            />
+                        </div>
+                    )}
                     <div className="char-card__land-badge" style={{ background: char.landColor }}>
                         {t(`heroes.lands.${char.land}`)}
                     </div>
@@ -135,9 +146,10 @@ const Characters = () => {
             {/* ── Hero ── */}
             <header className="char-hero">
                 <div className="container text-center">
-                    <div>
-                        <h1 className="hero-stagger" style={{ animationDelay: '0.1s' }}>{t('heroes.hero_title_1')} <span className="accent-gradient">{t('heroes.hero_title_2')}</span></h1>
-                        <p className="section-subtitle hero-stagger" style={{ margin: '1.5rem auto', animationDelay: '0.25s' }}>
+                    <div className="animate-fade-up">
+                        <div className="section-label">{t('heroes.hero_label')}</div>
+                        <h1>{t('heroes.hero_title_1')} <span className="text-gold">{t('heroes.hero_title_2')}</span></h1>
+                        <p className="section-subtitle" style={{ margin: '1rem auto' }}>
                             {t('heroes.hero_subtitle')}
                         </p>
                     </div>
@@ -188,9 +200,8 @@ const Characters = () => {
                         <p className="section-subtitle" style={{ margin: '1rem auto 2rem' }}>
                             {t('heroes.cta_subtitle')}
                         </p>
-                        <div style={{ marginTop: '2rem', display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-                            <Link to="/join" className="btn btn-gold">Join the Quest</Link>
-                            <Link to="/media" className="btn btn-outline">
+                        <div style={{ marginTop: '2rem' }}>
+                            <Link to="/media" className="page-bottom-link">
                                 {t('home.explore_media')}
                             </Link>
                         </div>
@@ -201,8 +212,8 @@ const Characters = () => {
             <style>{`
                 .characters-page .reveal-block {
                     opacity: 0;
-                    transform: translateY(20px);
-                    transition: opacity 0.7s var(--ease-premium), transform 0.7s var(--ease-premium);
+                    transform: translateY(25px);
+                    transition: opacity 0.8s var(--ease-gentle), transform 0.8s var(--ease-gentle);
                 }
                 .characters-page .reveal-block.revealed {
                     opacity: 1;
@@ -231,7 +242,7 @@ const Characters = () => {
                     font-weight: 500;
                     color: var(--color-text-secondary);
                     cursor: pointer;
-                    transition: all 0.25s var(--ease-premium);
+                    transition: all 0.25s ease;
                 }
 
                 .char-filter-btn:hover {
@@ -255,14 +266,13 @@ const Characters = () => {
                 /* ── Card ── */
                 .char-card {
                     padding: 0;
-                    overflow: hidden;
                     cursor: pointer;
-                    transition: transform 0.35s var(--ease-premium), box-shadow 0.35s var(--ease-premium);
+                    transition: transform 0.35s var(--ease-gentle), box-shadow 0.35s var(--ease-gentle);
                 }
 
                 .char-card:hover {
-                    transform: translateY(-5px);
-                    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+                    transform: translateY(-6px);
+                    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
                 }
 
                 .char-card--featured {
@@ -296,20 +306,65 @@ const Characters = () => {
                     right: 0;
                     width: 55%;
                     height: 30%;
-                    background: linear-gradient(to top left, rgba(26,21,40,0.95) 20%, rgba(26,21,40,0) 70%);
+                    background: linear-gradient(to top left, rgba(255,255,255,0.95) 20%, rgba(255,255,255,0) 70%);
                     pointer-events: none;
                     z-index: 1;
                 }
 
+                /* ── Image Container ── */
+                .char-card__img-bg {
+                    width: 100%;
+                    min-height: 220px;
+                    background: #fff;
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: center;
+                    overflow: hidden;
+                    border-bottom: 3px solid rgba(255,255,255,0.5);
+                }
+
                 .char-card__image {
                     width: 100%;
-                    height: auto;
+                    height: 220px;
+                    object-fit: contain;
+                    object-position: center bottom;
                     display: block;
-                    border-bottom: 4px solid;
-                    transition: transform 0.5s var(--ease-premium);
+                    transition: transform 0.5s var(--ease-gentle);
+                }
+
+                .char-card--featured .char-card__img-bg {
+                    min-height: 400px;
+                }
+
+                .char-card--featured .char-card__image {
+                    height: 400px;
                 }
 
                 .char-card:hover .char-card__image {
+                    transform: scale(1.04);
+                }
+
+                /* ── Seriphia scene variant ── */
+                .char-card__img-bg--scene {
+                    background: linear-gradient(135deg, #1a1060 0%, #4a2080 50%, #c47020 100%);
+                }
+
+                .char-card__image--scene {
+                    width: 100%;
+                    height: 220px;
+                    object-fit: cover;
+                    object-position: 30% top;
+                    display: block;
+                    mix-blend-mode: normal;
+                    transition: transform 0.5s var(--ease-gentle);
+                }
+
+                .char-card--featured .char-card__image--scene {
+                    height: 400px;
+                    object-position: 30% top;
+                }
+
+                .char-card:hover .char-card__image--scene {
                     transform: scale(1.04);
                 }
 
@@ -330,7 +385,7 @@ const Characters = () => {
 
                 /* ── Info ── */
                 .char-card__info {
-                    padding: 1.5rem;
+                    padding: 1.25rem;
                 }
 
                 .char-card__name {
@@ -379,7 +434,7 @@ const Characters = () => {
                     letter-spacing: 0.05em;
                     cursor: pointer;
                     position: relative;
-                    transition: background 0.2s var(--ease-premium), color 0.2s var(--ease-premium);
+                    transition: background 0.2s ease, color 0.2s ease;
                 }
 
                 .char-card__trait:hover {

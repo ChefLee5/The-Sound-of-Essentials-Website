@@ -4,39 +4,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import AudioVisualizer from '../components/AudioVisualizer';
 import { assetPath } from '../utils/assetPath';
+import { RevealSection } from '../hooks/useReveal';
+import { useAnimeReveal } from '../hooks/useAnimeReveal';
 
-/* ── Reveal Hook ── */
-const useReveal = () => {
-  const ref = useRef(null);
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          el.classList.add('revealed');
-          observer.unobserve(el);
-        }
-      },
-      { threshold: 0.15 }
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
-  return ref;
-};
-
-const RevealSection = ({ children, className = '', delay = 0 }) => {
-  const ref = useReveal();
-  return (
-    <div ref={ref} className={`reveal-block ${className}`} style={{ animationDelay: `${delay}s` }}>
-      {children}
-    </div>
-  );
-};
-
-
-/* ── Book Pages ── */
+/* ── Book Pages (Coloring) ── */
 const bookPages = [
   '/assets/coloring-book/Coloring book cover.png',
   '/assets/coloring-book/Coloring page 1.png',
@@ -48,12 +19,64 @@ const bookPages = [
   '/assets/coloring-book/Coloring page 7.png',
 ].map(assetPath);
 
-const soeBookPages = [
-  '/assets/book/SOE_RQ_COVER.png',
-  ...Array.from({ length: 14 }, (_, i) => `/assets/book/${i + 1}.png`),
-  '/assets/book/Page 3.1.png',
-  '/assets/book/Page 7.1.png',
-].map(assetPath);
+/* ── SOE Book Pages (real assets) ── */
+const soeBookPages = Array.from({ length: 14 }, (_, i) =>
+  assetPath(`/assets/pages/page-${String(i + 1).padStart(2, '0')}.webp`)
+);
+
+/* ── Behind the Quest Photo Gallery ── */
+const galleryShots = Array.from({ length: 11 }, (_, i) =>
+  assetPath(`/assets/media/shot-${String(i + 1).padStart(2, '0')}.webp`)
+);
+
+/* ── Gallery Grid Component ── */
+const GalleryGrid = ({ shots }) => {
+  const [lightbox, setLightbox] = useState(null);
+  const gridRef = useAnimeReveal({ selector: '.gallery-shot', staggerMs: 60, translateY: [20, 0], scale: [0.95, 1] });
+
+  return (
+    <>
+      <div className="gallery-grid" ref={gridRef}>
+        {shots.map((src, i) => (
+          <button
+            key={i}
+            className="gallery-shot"
+            onClick={() => setLightbox(i)}
+            aria-label={`View photo ${i + 1}`}
+          >
+            <img src={src} alt={`SOE scene ${i + 1}`} loading="lazy" />
+            <div className="gallery-shot__overlay">
+              <span className="gallery-shot__zoom">⊕</span>
+            </div>
+          </button>
+        ))}
+      </div>
+
+      {lightbox !== null && (
+        <div className="gallery-lightbox" onClick={() => setLightbox(null)} role="dialog" aria-modal="true">
+          <button className="gallery-lightbox__close" onClick={() => setLightbox(null)} aria-label="Close">✕</button>
+          <button
+            className="gallery-lightbox__nav gallery-lightbox__nav--prev"
+            onClick={(e) => { e.stopPropagation(); setLightbox((lightbox - 1 + shots.length) % shots.length); }}
+            aria-label="Previous"
+          >‹</button>
+          <img
+            src={shots[lightbox]}
+            alt={`SOE scene ${lightbox + 1}`}
+            className="gallery-lightbox__img"
+            onClick={(e) => e.stopPropagation()}
+          />
+          <button
+            className="gallery-lightbox__nav gallery-lightbox__nav--next"
+            onClick={(e) => { e.stopPropagation(); setLightbox((lightbox + 1) % shots.length); }}
+            aria-label="Next"
+          >›</button>
+          <span className="gallery-lightbox__counter">{lightbox + 1} / {shots.length}</span>
+        </div>
+      )}
+    </>
+  );
+};
 
 /* ── Album Art Carousel ── */
 const AlbumCarousel = ({ tracks, currentTrack, onSelect }) => {
@@ -83,7 +106,22 @@ const AlbumCarousel = ({ tracks, currentTrack, onSelect }) => {
               }}
               onClick={() => onSelect(i)}
             >
-              <img src={t.cover} alt={t.title} className="album-cover" />
+              {t.cover ? (
+                <img
+                  src={t.cover}
+                  alt={t.title}
+                  className="album-cover"
+                  style={{ objectFit: 'cover' }}
+                />
+              ) : (
+                <div
+                  className="album-cover album-cover--placeholder"
+                  style={{ background: `${t.color}22`, borderColor: `${t.color}44` }}
+                  aria-hidden="true"
+                >
+                  <span style={{ fontSize: '2.5rem' }}>{t.domainIcon}</span>
+                </div>
+              )}
               <AnimatePresence>
                 {isActive && (
                   <motion.div
@@ -305,30 +343,31 @@ const AudioPlayer = ({ tracks }) => {
 /* ── Media Room Page ── */
 const MediaRoom = () => {
   const { t } = useTranslation();
+  useEffect(() => { document.title = 'Media Room — SOE Rhythm Quest'; }, []);
   const [bookIndex, setBookIndex] = useState(0);
   const [soeBookIndex, setSoeBookIndex] = useState(0);
 
   /* ── Track Data ── */
   const tracks = [
-    { id: 1, title: t('media.tracks.1.title'), domain: t('media.tracks.1.domain'), domainIcon: '☀️', desc: t('media.tracks.1.desc'), src: assetPath('/audio/01. Sunny Day (intro).mp3'), color: '#FF6F00', lyrics: null, cover: assetPath('/assets/soe-logo.png') },
+    { id: 1, title: t('media.tracks.1.title'), domain: t('media.tracks.1.domain'), domainIcon: '☀️', desc: t('media.tracks.1.desc'), src: assetPath('/audio/01. Sunny Day (intro).mp3'), color: '#FF6F00', lyrics: null, cover: assetPath('/assets/soe-logo.jpg') },
     { id: 2, title: t('media.tracks.2.title'), domain: t('media.tracks.2.domain'), domainIcon: '📅', desc: t('media.tracks.2.desc'), src: assetPath('/audio/02. Days of the Week.mp3'), color: '#1E88E5', cover: assetPath('/assets/characters/ELIAS.png'), lyrics: `(Verse)\nSeven days of a week I'll sing my song.\nCreation speaks to me all day long.\nHow I enjoy looking at those big white fluffy clouds.\nIn the daytime at night, I always look forward\nto the bright stars sparkling in the sky.\n\n(Chorus)\nSunday, Monday, Tuesday, Wednesday,\nThursday, Friday, Saturday.\nSunday, Monday, Tuesday, Wednesday,\nThursday, Friday, Saturday.` },
     { id: 3, title: t('media.tracks.3.title'), domain: t('media.tracks.3.domain'), domainIcon: '🗣️', desc: t('media.tracks.3.desc'), src: assetPath('/audio/03. Alphabet Song Remix.mp3'), color: '#FF6F00', cover: assetPath('/assets/characters/KENJI.png'), lyrics: `(Verse)\nA B C D E F G H I J K L M N O P\nQ R S T U V W X Y and Z.\nNow I know my ABC.\nNext time, won't you sing with me?\n\n(Remix / Breakdown)\nNow I know my ABCs remix.\nA A A B B B... C C C... D...\nE E F F... G G... H H I I I...\nJ J... K K K... L L M M...\nN O O O... P P P... Q...\nR S S T T T... U V W X Y Z` },
-    { id: 4, title: t('media.tracks.4.title'), domain: t('media.tracks.4.domain'), domainIcon: '🎨', desc: t('media.tracks.4.desc'), src: assetPath('/audio/04. Horses Interlude.mp3'), color: '#9C27B0', cover: assetPath('/assets/characters/AMARA.png'), lyrics: `(Spoken / Dialogue)\nHorses. Horses.\nThat's not a horse. That's a donkey.\nHorses. Horses.\nWait a minute. That's not a horse. That's a pig.\nHorses. Horses.\nGuys, did someone let the dogs out? That's a sheep.\nThat's not a horse.\n\nOh, can someone please get that cat out of here?\nWe're looking for a horse.\nAn elephant is certainly not a horse.\nLove those chickens, but I still need a horse.\nMonkeys. We need a horse.\nHorses. Now that's a horse.` },
+    { id: 4, title: t('media.tracks.4.title'), domain: t('media.tracks.4.domain'), domainIcon: '🎨', desc: t('media.tracks.4.desc'), src: assetPath('/audio/04. Horses Interlude.mp3'), color: '#9C27B0', cover: assetPath('/assets/track-art/Donkey.jpg'), lyrics: `(Spoken / Dialogue)\nHorses. Horses.\nThat's not a horse. That's a donkey.\nHorses. Horses.\nWait a minute. That's not a horse. That's a pig.\nHorses. Horses.\nGuys, did someone let the dogs out? That's a sheep.\nThat's not a horse.\n\nOh, can someone please get that cat out of here?\nWe're looking for a horse.\nAn elephant is certainly not a horse.\nLove those chickens, but I still need a horse.\nMonkeys. We need a horse.\nHorses. Now that's a horse.` },
     { id: 5, title: t('media.tracks.5.title'), domain: t('media.tracks.5.domain'), domainIcon: '🇫🇷', desc: t('media.tracks.5.desc'), src: assetPath('/audio/05. Le Cheval.mp3'), color: '#1E88E5', cover: assetPath('/assets/characters/RONAN.png'), lyrics: `(Verse — Sung in French)\nDeux accrets le cheval, fort et puissant\nDeux accrets le cheval, fort et puissant\nDeux accrets le cheval, fort et puissant\n\nOh, I can almost see the horses now grazing,\nEating up grass and apples, which they love so much.\nThe horse has strength and power,\nable to see almost all the way around its body.\nAfraid of nothing in the time of war,\nThe horse walks, trots, canter, and gallops.\nWhat an amazing creation.` },
-    { id: 6, title: t('media.tracks.6.title'), domain: t('media.tracks.6.domain'), domainIcon: '🤸', desc: t('media.tracks.6.desc'), src: assetPath('/audio/06. Lets Stretch.mp3'), color: '#4CAF50', cover: assetPath('/assets/characters/FELIX.png'), lyrics: `(Breathing Exercise)\\nBreathe in through your nose.\\nBreathe out through your mouth.\\n(Repeat)\\n\\n(Stretching Movements)\\nLet's stretch.\\nBring your arms up. Reach to the sky.\\nStretch real high.\\nBring your arms down.\\nDon't bend your knees.\\nTouch your toes.\\n(Repeat)` },
-    { id: 7, title: t('media.tracks.7.title'), domain: t('media.tracks.7.domain'), domainIcon: '💪', desc: t('media.tracks.7.desc'), src: assetPath('/audio/07. Drill Time.mp3'), color: '#4CAF50', cover: assetPath('/assets/characters/VESTA.png'), lyrics: `(Intro)\\nOn your mark, get set, ready, go.\\nStay on the path. Always learning.\\n\\n(The March)\\nForward march.\\nLeft, left, left, right, left.\\nLeft, left, left, right, left.\\n\\n(Chant)\\nAll I know is all I know.\\nWisdom is more precious than gold.\\nSound off! 1, 2, 3, 4.\\n\\n(The Shake)\\nWe're so excited about learning, we want to shake. Woohoo!\\nShake, shake, shake your left arm.\\nShake, shake, shake your right arm.\\nShake, shake, shake your left leg.\\nShake, shake, shake your right leg.\\n\\n(Outro)\\nChildren, please remember\\nalways stay on the right path and keep on learning.` },
+    { id: 6, title: t('media.tracks.6.title'), domain: t('media.tracks.6.domain'), domainIcon: '🤸', desc: t('media.tracks.6.desc'), src: assetPath('/audio/06. Lets Stretch.mp3'), color: '#4CAF50', cover: assetPath('/assets/track-art/Touch your toes.png'), lyrics: `(Breathing Exercise)\\nBreathe in through your nose.\\nBreathe out through your mouth.\\n(Repeat)\\n\\n(Stretching Movements)\\nLet's stretch.\\nBring your arms up. Reach to the sky.\\nStretch real high.\\nBring your arms down.\\nDon't bend your knees.\\nTouch your toes.\\n(Repeat)` },
+    { id: 7, title: t('media.tracks.7.title'), domain: t('media.tracks.7.domain'), domainIcon: '💪', desc: t('media.tracks.7.desc'), src: assetPath('/audio/07. Drill Time.mp3'), color: '#4CAF50', cover: assetPath('/assets/track-art/Drums.jpg'), lyrics: `(Intro)\\nOn your mark, get set, ready, go.\\nStay on the path. Always learning.\\n\\n(The March)\\nForward march.\\nLeft, left, left, right, left.\\nLeft, left, left, right, left.\\n\\n(Chant)\\nAll I know is all I know.\\nWisdom is more precious than gold.\\nSound off! 1, 2, 3, 4.\\n\\n(The Shake)\\nWe're so excited about learning, we want to shake. Woohoo!\\nShake, shake, shake your left arm.\\nShake, shake, shake your right arm.\\nShake, shake, shake your left leg.\\nShake, shake, shake your right leg.\\n\\n(Outro)\\nChildren, please remember\\nalways stay on the right path and keep on learning.` },
     { id: 8, title: t('media.tracks.8.title'), domain: t('media.tracks.8.domain'), domainIcon: '🔢', desc: t('media.tracks.8.desc'), src: assetPath('/audio/08. Numbers.mp3'), color: '#FF6F00', cover: assetPath('/assets/characters/KWAME.png'), lyrics: `(Intro)\\nI like the numbers.\\nIt is so much fun to count.\\n\\n(Call and Response)\\nNow let's count to 10 while we clap.\\nOne clap. Follow me. One.\\nTwo claps. Follow me. One. Two.\\nThree claps. Follow me. One. Two. Three.\\n...\\nTen claps. Follow me.\\n1 2 3 4 5 6 7 8 9 10.\\n\\n(Outro)\\nHooray. You did it.\\nGive yourself a great big hand clap.` },
     { id: 9, title: t('media.tracks.9.title'), domain: t('media.tracks.9.domain'), domainIcon: '🔬', desc: t('media.tracks.9.desc'), src: assetPath('/audio/09. My Body.mp3'), color: '#9C27B0', cover: assetPath('/assets/characters/ATHENA.png'), lyrics: `(Verse 1: Face)\\nWhat's on your face?\\nEyes, nose, mouth, chin.\\nDon't forget about your forehead, cheeks, and two ears.\\n\\n(Verse 2: Upper Body)\\nMy body is strong.\\nNeck, shoulders, back, arms.\\nDon't forget about your hands and tip fingers.\\n\\n(Verse 3: Lower Body)\\nMy body is strong.\\nHip, thighs, knees, legs.\\nDon't forget about your ankles, feet, and ten toes.\\n\\n(Bridge)\\nWe are going to keep our body strong\\nby eating right and staying healthy.\\nConsuming living foods, stretching,\\nand keeping our hearts right.` },
     { id: 10, title: t('media.tracks.10.title'), domain: t('media.tracks.10.domain'), domainIcon: '🤝', desc: t('media.tracks.10.desc'), src: assetPath('/audio/10. Manners.mp3'), color: '#1E88E5', cover: assetPath('/assets/characters/AIKO.png'), lyrics: `(Verse)\\nWhen you receive, say Thank You.\\nThen I'll say You're Welcome.\\nYes, Please.\\nExcuse Me.\\nNo, Thank You.\\nI'm Sorry.` },
     { id: 11, title: t('media.tracks.11.title'), domain: t('media.tracks.11.domain'), domainIcon: '⏰', desc: t('media.tracks.11.desc'), src: assetPath('/audio/11. Time.mp3'), color: '#FF6F00', cover: assetPath('/assets/characters/SELENE.png'), lyrics: `Do you know? Do you know? Do you know what time it is?\\nIs it 1:00, 2:00, 3:00, 4:00, 5:00, 6:00, 7:00, 8:00, 9:00, 10:00, 11:00, 12:00?\\nDo you know? Do you know? Do you know what time it is?\\nIs it 1:30, 2:30, 3:30, 4:30, 5:30, 6:30, 7:30, 8:30, 9:30, 10:30, 11:30, 12:30?\\nDo you know? Do you know? Do you know what time it is?\\nIs it in the morning when you just wake up?\\nIs it in the afternoon and you're eating some lunch?\\nIs it in the evening and you're getting ready for bed?\\nDo you know what time it is?\\nIs it 1:00? Is it 1:30?\\nIs it in the morning when you just wake up?\\nIs it in the afternoon and you're eating some lunch?\\nIs it in the evening and you're getting ready for bed?\\nDo you know? Do you know? Do you know what time it is?` },
     { id: 12, title: t('media.tracks.12.title'), domain: t('media.tracks.12.domain'), domainIcon: '🦋', desc: t('media.tracks.12.desc'), src: assetPath('/audio/12. Changes.mp3'), color: '#4CAF50', cover: assetPath('/assets/characters/NERISSA.png'), lyrics: `(Verse)\\nIt's sunny outside. Yesterday it rained.\\nOh! Somewhere it might snow tomorrow.\\nThat's the weather, it changes.\\nBut not love from above.\\nTrue love is unchanging, always the same.\\nYesteray, today, and forever.` },
     { id: 13, title: t('media.tracks.13.title'), domain: t('media.tracks.13.domain'), domainIcon: '💯', desc: t('media.tracks.13.desc'), src: assetPath('/audio/13. One hundred.mp3'), color: '#9C27B0', cover: assetPath('/assets/characters/OCTAVIA.png'), lyrics: null },
-    { id: 14, title: t('media.tracks.14.title'), domain: t('media.tracks.14.domain'), domainIcon: '🌊', desc: t('media.tracks.14.desc'), src: assetPath('/audio/14. The Ocean.mp3'), color: '#1E88E5', cover: assetPath('/assets/characters/EZRA.png'), lyrics: null },
+    { id: 14, title: t('media.tracks.14.title'), domain: t('media.tracks.14.domain'), domainIcon: '🌊', desc: t('media.tracks.14.desc'), src: assetPath('/audio/14. The Ocean.mp3'), color: '#1E88E5', cover: assetPath('/assets/track-art/Wave.jpg'), lyrics: null },
     { id: 15, title: t('media.tracks.15.title'), domain: t('media.tracks.15.domain'), domainIcon: '📖', desc: t('media.tracks.15.desc'), src: assetPath('/audio/15. Hard Words.mp3'), color: '#FF6F00', cover: assetPath('/assets/characters/RONAN.png'), lyrics: `(Intro)\\nSometimes you may hear a word that's hard to say,\\nbut don't worry. Slow down and say...\\n\\n(Word Drill)\\nBalloon. Hawaii. Oklahoma.\\nLouisiana. Octopus. Vegetables.\\nSpaghetti. Macaroni.\\nAlaska. Nevada. Colorado.` },
     { id: 16, title: t('media.tracks.16.title'), domain: t('media.tracks.16.domain'), domainIcon: '🔷', desc: t('media.tracks.16.desc'), src: assetPath('/audio/16. Shapes.mp3'), color: '#4CAF50', cover: assetPath('/assets/characters/SILAS.png'), lyrics: `(Chorus)\\nI see shapes all around me.\\nDo you see shapes all around you?\\n\\n(Verse)\\nThere goes a Circle.\\nThat's a Square. (Yes, four equal sides).\\nTriangle. Stars. Rectangle.\\nTrapezoids. Pentagons. Hexagon.\\nHeptagon. Octagon. Cube. Spheres.` },
     { id: 17, title: t('media.tracks.17.title'), domain: t('media.tracks.17.domain'), domainIcon: '🗓️', desc: t('media.tracks.17.desc'), src: assetPath('/audio/17. Months of the Year.mp3'), color: '#9C27B0', cover: assetPath('/assets/characters/ELIAS.png'), lyrics: `(Intro)\\nTime. Seconds, minutes, hours, days, weeks, months.\\nIt's time for the months of the year song.\\n\\n(Chorus)\\nJanuary, February, March,\\nApril, May, June,\\nJuly, August, September,\\nOctober, November, December.` },
     { id: 18, title: t('media.tracks.18.title'), domain: t('media.tracks.18.domain'), domainIcon: '🌧️', desc: t('media.tracks.18.desc'), src: assetPath('/audio/18. Rain.mp3'), color: '#1E88E5', cover: assetPath('/assets/characters/ATHENA.png'), lyrics: `(Chant)\\nWatching raindrops falling down,\\ncleaning the atmosphere.\\nWatching raindrops falling down,\\ncleaning the atmosphere.` },
-    { id: 19, title: t('media.tracks.19.title'), domain: t('media.tracks.19.domain'), domainIcon: '🌈', desc: t('media.tracks.19.desc'), src: assetPath('/audio/20. After the Storm (outro).mp3'), color: '#4CAF50', cover: assetPath('/assets/soe-logo.png'), lyrics: null },
+    { id: 19, title: t('media.tracks.19.title'), domain: t('media.tracks.19.domain'), domainIcon: '🌈', desc: t('media.tracks.19.desc'), src: assetPath('/audio/20. After the Storm (outro).mp3'), color: '#4CAF50', cover: assetPath('/assets/soe-logo.jpg'), lyrics: null },
   ];
 
   return (
@@ -336,9 +375,10 @@ const MediaRoom = () => {
       {/* ── Hero ── */}
       <header className="media-hero">
         <div className="container text-center">
-          <div>
-            <h1 className="hero-stagger" style={{ animationDelay: '0.1s' }}>{t('media.hero_title_1')} <span className="accent-gradient">{t('media.hero_title_2')}</span></h1>
-            <p className="section-subtitle hero-stagger" style={{ margin: '1.5rem auto', animationDelay: '0.25s' }}>
+          <div className="animate-fade-up">
+            <div className="section-label">{t('media.hero_label')}</div>
+            <h1>{t('media.hero_title_1')} <span className="text-gold">{t('media.hero_title_2')}</span></h1>
+            <p className="section-subtitle" style={{ margin: '1rem auto' }}>
               {t('media.hero_subtitle')}
             </p>
           </div>
@@ -365,6 +405,43 @@ const MediaRoom = () => {
         </div>
       </section>
 
+      {/* ── Le Cheval Video Section ── */}
+      <section className="section">
+        <div className="container">
+          <RevealSection className="text-center">
+            <div className="section-label">🎬 Music Video</div>
+            <h2 className="section-title">
+              Le <span className="text-gold">Cheval</span>
+            </h2>
+            <p className="section-subtitle" style={{ margin: '0 auto 2rem auto' }}>
+              A bilingual musical journey celebrating the majesty of the horse — sung in French and English.
+            </p>
+          </RevealSection>
+
+          <RevealSection>
+            <div className="video-feature glass-card">
+              <video
+                className="video-feature__player"
+                src={assetPath('/videos/Le Cheval Video.mp4')}
+                poster={assetPath('/assets/characters/RONAN.png')}
+                controls
+                preload="metadata"
+                playsInline
+                aria-label="Le Cheval music video"
+              />
+              <div className="video-feature__meta">
+                <span className="video-feature__badge" style={{ background: '#1E88E5' }}>🇫🇷 Bilingual</span>
+                <h3 className="video-feature__title">Le Cheval — Track 5</h3>
+                <p className="video-feature__desc">
+                  Ronan &amp; Nerissa guide learners through the world of horses with rich French vocabulary,
+                  movement, and cross-cultural storytelling from the land of Lexiconia.
+                </p>
+              </div>
+            </div>
+          </RevealSection>
+        </div>
+      </section>
+
       {/* ── Coloring Book Section ── */}
       <section className="section glow-plum">
         <div className="container">
@@ -385,6 +462,7 @@ const MediaRoom = () => {
                   src={bookPages[bookIndex]}
                   alt={`Coloring book page ${bookIndex + 1}`}
                   className="book-viewer__page"
+                  style={{ width: '100%', display: 'block', borderRadius: 'var(--radius-md)' }}
                 />
               </div>
               <div className="book-viewer__controls">
@@ -436,6 +514,7 @@ const MediaRoom = () => {
                   src={soeBookPages[soeBookIndex]}
                   alt={`SOE Storybook page ${soeBookIndex + 1}`}
                   className="book-viewer__page"
+                  style={{ width: '100%', display: 'block', borderRadius: 'var(--radius-md)' }}
                 />
               </div>
               <div className="book-viewer__controls">
@@ -467,11 +546,28 @@ const MediaRoom = () => {
         </div>
       </section>
 
+      {/* ── Behind the Quest — Photo Gallery ── */}
+      <section className="section glow-sage">
+        <div className="container">
+          <RevealSection className="text-center">
+            <div className="section-label">📸 Behind the Quest</div>
+            <h2 className="section-title">
+              A World <span className="text-sage">Brought to Life</span>
+            </h2>
+            <p className="section-subtitle" style={{ margin: '0 auto 2.5rem auto' }}>
+              Glimpses from the world of SOE — characters, scenes, and moments from the Seven Lands.
+            </p>
+          </RevealSection>
+
+          <GalleryGrid shots={galleryShots} />
+        </div>
+      </section>
+
       <style>{`
         .media-page .reveal-block {
           opacity: 0;
-          transform: translateY(20px);
-          transition: opacity 0.7s var(--ease-premium), transform 0.7s var(--ease-premium);
+          transform: translateY(25px);
+          transition: opacity 0.8s var(--ease-gentle), transform 0.8s var(--ease-gentle);
         }
         .media-page .reveal-block.revealed {
           opacity: 1;
@@ -602,6 +698,13 @@ const MediaRoom = () => {
           height: 100%;
           object-fit: cover;
           display: block;
+        }
+
+        .album-cover--placeholder {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: 2px solid;
         }
 
         .album-label {
@@ -857,6 +960,57 @@ const MediaRoom = () => {
 
 
 
+        /* ── Le Cheval Video Feature ── */
+        .video-feature {
+          max-width: 900px;
+          margin: 0 auto;
+          padding: 0;
+          overflow: hidden;
+        }
+
+        .video-feature__player {
+          width: 100%;
+          display: block;
+          max-height: 520px;
+          object-fit: cover;
+          background: #000;
+        }
+
+        .video-feature__meta {
+          padding: 1.75rem 2rem;
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+        }
+
+        .video-feature__badge {
+          display: inline-block;
+          font-size: 0.7rem;
+          font-weight: 700;
+          color: #fff;
+          padding: 0.25rem 0.75rem;
+          border-radius: 999px;
+          text-transform: uppercase;
+          letter-spacing: 0.06em;
+          width: fit-content;
+        }
+
+        .video-feature__title {
+          font-family: var(--font-heading);
+          font-size: 1.3rem;
+          font-weight: 600;
+          color: var(--color-text-primary);
+          margin: 0;
+        }
+
+        .video-feature__desc {
+          font-size: 0.9rem;
+          color: var(--color-text-secondary);
+          line-height: 1.7;
+          margin: 0;
+          max-width: 680px;
+        }
+
         /* ── Book Viewer ── */
         .book-viewer {
           max-width: 750px;
@@ -889,6 +1043,20 @@ const MediaRoom = () => {
           display: block;
         }
 
+        .book-viewer__page--placeholder {
+          min-height: 420px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: rgba(0,0,0,0.04);
+          border-radius: var(--radius-md);
+          border: 2px dashed var(--color-border);
+          font-family: var(--font-heading);
+          font-size: 4rem;
+          font-weight: 700;
+          color: var(--color-text-muted);
+        }
+
         .book-viewer__controls {
           display: flex;
           align-items: center;
@@ -911,6 +1079,141 @@ const MediaRoom = () => {
           .video-grid {
             grid-template-columns: 1fr;
           }
+        }
+
+        /* ── Photo Gallery Grid ── */
+        .gallery-grid {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 0.75rem;
+        }
+
+        .gallery-shot {
+          position: relative;
+          aspect-ratio: 4/3;
+          overflow: hidden;
+          border-radius: var(--radius-md);
+          border: none;
+          padding: 0;
+          cursor: pointer;
+          background: var(--color-surface);
+          opacity: 0;
+          will-change: transform, opacity;
+        }
+
+        .gallery-shot img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+          transition: transform 0.6s var(--ease-gentle);
+        }
+
+        .gallery-shot:hover img {
+          transform: scale(1.08);
+          animation: kenBurns 8s ease-in-out infinite alternate;
+        }
+
+        .gallery-shot__overlay {
+          position: absolute;
+          inset: 0;
+          background: rgba(0, 0, 0, 0.35);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          opacity: 0;
+          transition: opacity 0.3s ease;
+        }
+
+        .gallery-shot:hover .gallery-shot__overlay {
+          opacity: 1;
+        }
+
+        .gallery-shot__zoom {
+          font-size: 2rem;
+          color: white;
+          text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+        }
+
+        /* ── Lightbox ── */
+        .gallery-lightbox {
+          position: fixed;
+          inset: 0;
+          background: rgba(0, 0, 0, 0.92);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 9999;
+          cursor: pointer;
+        }
+
+        .gallery-lightbox__img {
+          max-width: 90vw;
+          max-height: 85vh;
+          object-fit: contain;
+          border-radius: var(--radius-md);
+          box-shadow: 0 30px 80px rgba(0,0,0,0.7);
+          cursor: default;
+        }
+
+        .gallery-lightbox__close {
+          position: absolute;
+          top: 1.5rem;
+          right: 1.5rem;
+          background: rgba(255,255,255,0.1);
+          border: 1px solid rgba(255,255,255,0.2);
+          color: white;
+          font-size: 1.5rem;
+          width: 3rem;
+          height: 3rem;
+          border-radius: 50%;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: background 0.2s;
+        }
+
+        .gallery-lightbox__close:hover { background: rgba(255,255,255,0.2); }
+
+        .gallery-lightbox__nav {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          background: rgba(255,255,255,0.1);
+          border: 1px solid rgba(255,255,255,0.2);
+          color: white;
+          font-size: 2.5rem;
+          width: 3.5rem;
+          height: 5rem;
+          border-radius: var(--radius-md);
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: background 0.2s;
+          line-height: 1;
+        }
+
+        .gallery-lightbox__nav:hover { background: rgba(255,255,255,0.2); }
+        .gallery-lightbox__nav--prev { left: 1.5rem; }
+        .gallery-lightbox__nav--next { right: 1.5rem; }
+
+        .gallery-lightbox__counter {
+          position: absolute;
+          bottom: 1.5rem;
+          left: 50%;
+          transform: translateX(-50%);
+          color: rgba(255,255,255,0.7);
+          font-size: 0.9rem;
+          font-family: var(--font-heading);
+        }
+
+        @media (max-width: 900px) {
+          .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+        @media (max-width: 600px) {
+          .gallery-grid { grid-template-columns: repeat(2, 1fr); }
         }
       `}</style>
     </div>
