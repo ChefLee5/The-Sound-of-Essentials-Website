@@ -306,6 +306,7 @@ const Home = () => {
           position: relative;
           overflow: hidden;
           gap: 0;
+          background: var(--color-bg-cream);
         }
 
         /* Text block */
@@ -340,6 +341,7 @@ const Home = () => {
           line-height: 1.1;
           margin-bottom: 1.25rem;
           font-weight: 700;
+          color: var(--color-text-primary);
         }
 
         .hero__title-accent {
