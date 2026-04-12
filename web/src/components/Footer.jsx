@@ -86,26 +86,40 @@ const Footer = () => {
         ────────────────────────────────────────────── */
 
         .site-footer {
-          background: #f8f9fa;
-          border-top: 2px solid rgba(0,0,0,0.06);
+          background: linear-gradient(160deg, #1565C0 0%, #0D47A1 50%, #0a3880 100%);
+          border-top: none;
           padding: 4rem 0 2rem 0;
           position: relative;
           z-index: 1;
+          overflow: hidden;
         }
 
-        /* Subtle top accent strip */
+        /* Decorative light blob top-right */
+        .site-footer::after {
+          content: '';
+          position: absolute;
+          top: -80px;
+          right: -80px;
+          width: 320px;
+          height: 320px;
+          border-radius: 50%;
+          background: radial-gradient(circle, rgba(255,255,255,0.07) 0%, transparent 70%);
+          pointer-events: none;
+        }
+
+        /* Rainbow accent strip */
         .site-footer::before {
           content: '';
           position: absolute;
           top: 0;
           left: 0;
           right: 0;
-          height: 3px;
+          height: 4px;
           background: linear-gradient(90deg,
-            var(--color-green),
-            var(--color-blue),
-            var(--color-purple),
-            var(--color-orange)
+            #4CAF50,
+            #29B6F6,
+            #7B1FA2,
+            #FF6F00
           );
         }
 
@@ -127,7 +141,7 @@ const Footer = () => {
           font-family: var(--font-heading);
           font-weight: 700;
           font-size: 1.05rem;
-          color: var(--color-text-primary);
+          color: #ffffff;
           margin-bottom: 0.8rem;
         }
 
@@ -146,7 +160,7 @@ const Footer = () => {
 
         .footer__tagline {
           font-size: 0.88rem;
-          color: var(--color-text-muted);
+          color: rgba(255,255,255,0.7);
           font-style: italic;
           margin-bottom: 1.25rem;
           line-height: 1.6;
@@ -158,7 +172,7 @@ const Footer = () => {
         }
 
         .footer__social a {
-          color: var(--color-text-secondary);
+          color: rgba(255,255,255,0.85);
           transition: all var(--transition-med);
           display: flex;
           align-items: center;
@@ -166,15 +180,16 @@ const Footer = () => {
           width: 36px;
           height: 36px;
           border-radius: var(--radius-full);
-          background: #fff;
-          border: 1.5px solid var(--color-border-light);
+          background: rgba(255,255,255,0.12);
+          border: 1.5px solid rgba(255,255,255,0.25);
         }
 
         .footer__social a:hover {
-          color: var(--color-green);
-          border-color: var(--color-green);
+          color: #ffffff;
+          background: rgba(255,255,255,0.22);
+          border-color: rgba(255,255,255,0.5);
           transform: translateY(-2px);
-          box-shadow: 0 4px 12px var(--color-green-soft);
+          box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         }
 
         .footer__col {
@@ -189,13 +204,13 @@ const Footer = () => {
           font-size: 0.78rem;
           letter-spacing: 0.12em;
           text-transform: uppercase;
-          color: var(--color-text-primary);
+          color: rgba(255,255,255,0.55);
           margin-bottom: 0.6rem;
         }
 
         .footer__link {
           font-size: 0.9rem;
-          color: var(--color-text-secondary);
+          color: rgba(255,255,255,0.8);
           transition: color var(--transition-med);
           display: inline-flex;
           align-items: center;
@@ -203,12 +218,12 @@ const Footer = () => {
         }
 
         .footer__link:hover {
-          color: var(--color-green);
+          color: #ffffff;
         }
 
         .footer__newsletter-text {
           font-size: 0.85rem;
-          color: var(--color-text-muted);
+          color: rgba(255,255,255,0.7);
           line-height: 1.6;
           margin-bottom: 0.25rem;
         }
@@ -237,7 +252,7 @@ const Footer = () => {
         }
 
         .footer__bottom {
-          border-top: 1px solid var(--color-border);
+          border-top: 1px solid rgba(255,255,255,0.15);
           padding-top: 1.5rem;
           display: flex;
           justify-content: space-between;
@@ -248,7 +263,7 @@ const Footer = () => {
 
         .footer__bottom > p {
           font-size: 0.8rem;
-          color: var(--color-text-muted);
+          color: rgba(255,255,255,0.55);
           max-width: none;
         }
 
@@ -259,12 +274,12 @@ const Footer = () => {
 
         .footer__bottom-link {
           font-size: 0.8rem;
-          color: var(--color-text-muted);
+          color: rgba(255,255,255,0.55);
           transition: color var(--transition-med);
         }
 
         .footer__bottom-link:hover {
-          color: var(--color-green);
+          color: #ffffff;
         }
 
         @media (max-width: 900px) {
