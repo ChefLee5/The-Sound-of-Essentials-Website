@@ -306,7 +306,6 @@ const Home = () => {
           position: relative;
           overflow: hidden;
           gap: 0;
-          background: var(--color-bg-cream);
         }
 
         /* Text block */
@@ -341,7 +340,6 @@ const Home = () => {
           line-height: 1.1;
           margin-bottom: 1.25rem;
           font-weight: 700;
-          color: var(--color-text-primary);
         }
 
         .hero__title-accent {
@@ -372,8 +370,8 @@ const Home = () => {
           z-index: 1;
           width: 100%;
           overflow: hidden;
-          background: rgba(17, 17, 24, 0.85);
-          backdrop-filter: blur(8px);
+          background: rgba(255,255,255,0.7);
+          backdrop-filter: blur(0px);
           /* Fade edges */
           mask-image: linear-gradient(
             to right,
@@ -444,14 +442,14 @@ const Home = () => {
           height: 260px;
           object-fit: contain;
           object-position: center bottom;
-          mix-blend-mode: normal;
-          filter: drop-shadow(0 6px 24px rgba(0,0,0,0.45)) brightness(1.05);
+          mix-blend-mode: multiply;
+          filter: drop-shadow(0 6px 16px rgba(0,0,0,0.12));
           transition: filter 0.3s ease, transform 0.3s ease;
           display: block;
         }
 
         .hero__char:hover .hero__char-img {
-          filter: drop-shadow(0 14px 40px rgba(0,0,0,0.55)) brightness(1.1);
+          filter: drop-shadow(0 14px 32px rgba(0,0,0,0.20));
         }
 
         .hero__char-label {

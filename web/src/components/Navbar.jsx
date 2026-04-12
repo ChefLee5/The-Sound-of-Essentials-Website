@@ -146,18 +146,17 @@ const Navbar = () => {
           padding: 0 clamp(1.5rem, 5vw, 3rem);
           height: 68px;
           transition: background 0.35s ease, box-shadow 0.35s ease, height 0.35s ease;
-          background: rgba(13, 13, 24, 0.6);
-          backdrop-filter: blur(12px);
-          -webkit-backdrop-filter: blur(12px);
-          border-bottom: 1px solid rgba(255,255,255,0.06);
+          background: rgba(255,255,255,0.55);
+          backdrop-filter: blur(10px);
+          -webkit-backdrop-filter: blur(10px);
         }
 
         .navbar--scrolled {
           height: 60px;
-          background: rgba(13, 13, 24, 0.92);
+          background: rgba(255, 255, 255, 0.97);
           backdrop-filter: blur(20px);
           -webkit-backdrop-filter: blur(20px);
-          box-shadow: 0 1px 0 rgba(255,255,255,0.06), 0 4px 24px rgba(0,0,0,0.3);
+          box-shadow: 0 1px 0 rgba(0,0,0,0.09), 0 4px 24px rgba(0,0,0,0.07);
         }
 
         /* ── Logo ── */
@@ -199,7 +198,7 @@ const Navbar = () => {
           font-weight: 800;
           font-size: 0.95rem;
           letter-spacing: 0.08em;
-          color: var(--color-text-primary);
+          color: #0d0d1a;
           text-transform: uppercase;
         }
 
@@ -208,7 +207,7 @@ const Navbar = () => {
           font-weight: 500;
           font-size: 0.65rem;
           letter-spacing: 0.04em;
-          color: var(--color-text-muted);
+          color: #555;
           text-transform: uppercase;
         }
 
@@ -230,7 +229,7 @@ const Navbar = () => {
           font-family: var(--font-display);
           font-weight: 600;
           font-size: 0.88rem;
-          color: var(--color-text-secondary);
+          color: #1a1a2e;
           padding: 0.45rem 0.7rem;
           border-radius: 8px;
           text-decoration: none;
@@ -241,12 +240,12 @@ const Navbar = () => {
         }
 
         .navbar__link:hover {
-          color: var(--color-text-primary);
-          background: rgba(255,255,255,0.06);
+          color: #000;
+          background: rgba(0,0,0,0.05);
         }
 
         .navbar__link--active {
-          color: var(--color-text-primary);
+          color: #000;
           font-weight: 700;
         }
 
@@ -279,9 +278,9 @@ const Navbar = () => {
           font-size: 0.78rem;
           font-weight: 700;
           letter-spacing: 0.06em;
-          color: var(--color-text-secondary);
+          color: #1a1a2e;
           background: none;
-          border: 1.5px solid rgba(255,255,255,0.15);
+          border: 1.5px solid rgba(0,0,0,0.2);
           border-radius: 8px;
           padding: 0.38rem 0.65rem;
           cursor: pointer;
@@ -330,13 +329,13 @@ const Navbar = () => {
         }
 
         .navbar__hamburger:hover {
-          background: rgba(255,255,255,0.08);
+          background: rgba(0,0,0,0.06);
         }
 
         .navbar__hamburger span {
           width: 22px;
           height: 2px;
-          background: var(--color-text-primary);
+          background: #1a1a2e;
           border-radius: 2px;
           display: block;
           transition: all 0.3s ease;
@@ -372,8 +371,8 @@ const Navbar = () => {
             justify-content: flex-start;
             gap: 0.25rem;
             padding: 0 1.5rem 2rem;
-            background: var(--color-bg-light);
-            box-shadow: -8px 0 40px rgba(0,0,0,0.5);
+            background: #fff;
+            box-shadow: -8px 0 40px rgba(0,0,0,0.1);
             transition: right 0.38s cubic-bezier(0.4, 0, 0.2, 1);
             z-index: 1000;
             overflow-y: auto;

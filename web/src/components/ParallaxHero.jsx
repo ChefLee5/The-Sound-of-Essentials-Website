@@ -164,8 +164,8 @@ const ParallaxHero = ({ variant = 'home' }) => {
                     inset: -10% -5%;
                     background-size: cover;
                     background-position: center;
-                    opacity: 0.03;
-                    filter: blur(4px) saturate(0.3);
+                    opacity: 0.09;
+                    filter: blur(3px) saturate(0.7);
                     mix-blend-mode: luminosity;
                     will-change: transform;
                     transition: transform 0.1s linear;
