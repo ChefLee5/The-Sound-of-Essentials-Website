@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:epub="http://www.idpf.org/2007/ops"
+      lang="en" xml:lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>{{ DAY_LABEL }} — SOE The Summer Stretch Workbook</title>
+  <link rel="stylesheet" type="text/css" href="../../styles/workbook.css"/>
+  <!-- Land-scoped primary color injected by the Python generator for the header gradient -->
+  <style>
+    .day-page > header.day-header { --land-color: {{ PRIMARY_LAND_COLOR }}; }
+  </style>
+</head>
+
+<body>
+<article class="day-page" epub:type="chapter" id="week{{ WEEK_NUM }}-day{{ DAY_NUM }}">
+
+  <!-- ===== DAY HEADER ===== -->
+  <header class="day-header">
+    <div>
+      <p class="day-label">Week {{ WEEK_NUM }} · Day {{ DAY_NUM }} · {{ DAY_LABEL }}</p>
+      <h1 class="day-title">{{ DAY_TITLE }}</h1>
+      <!-- ESOL: Uncomment and populate for bilingual editions -->
+      <!-- <p class="day-title-es" lang="es">{{ DAY_TITLE_ES }}</p> -->
+    </div>
+    <div class="character-badge">
+      <img src="../images/characters/{{ PRIMARY_CHAR_IMG }}"
+           alt="{{ PRIMARY_CHAR_NAMES }}"
+           width="52" height="52"/>
+      <span>{{ PRIMARY_CHAR_NAMES }}</span>
+    </div>
+  </header>
+
+  <!-- ===== DAILY GOAL TRACKER ===== -->
+  <nav class="goal-tracker" aria-label="Daily Goals Checklist">
+    <span class="goal-tracker-label">My Goals Today</span>
+    <div class="goal-item">
+      <span class="check-box" aria-hidden="true"></span>
+      <span>📖 Reading</span>
+    </div>
+    <div class="goal-item">
+      <span class="check-box" aria-hidden="true"></span>
+      <span>🔢 Math</span>
+    </div>
+    <div class="goal-item">
+      <span class="check-box" aria-hidden="true"></span>
+      <span>🌿 Science</span>
+    </div>
+    <div class="goal-item">
+      <span class="check-box" aria-hidden="true"></span>
+      <span>💪 Movement</span>
+    </div>
+    <div class="goal-item">
+      <span class="check-box" aria-hidden="true"></span>
+      <span>🌙 Reflection</span>
+    </div>
+  </nav>
+
+  <!-- ===================================================
+       BLOCK A: READING &amp; PHONICS — Land 1: Harmonia
+       Kenji &amp; Aiko · Every day
+       =================================================== -->
+  <section class="activity-block land1" aria-labelledby="act1-title">
+    <p class="block-tag">📖 Reading &amp; Phonics · Land 1: Harmonia</p>
+    <h2 class="block-title" id="act1-title">{{ ACT1_TITLE }}</h2>
+    <p class="block-time">⏱ {{ ACT1_TIME }} minutes with Kenji &amp; Aiko</p>
+
+    <!-- Dictionary scene image from SOE Picture Dictionary -->
+    <figure class="dict-image-zone">
+      <img src="../images/dictionary/{{ ACT1_IMG }}"
+           alt="{{ ACT1_IMG_ALT }}"
+           width="360" height="200"/>
+      <figcaption>From the SOE Picture Dictionary · {{ ACT1_IMG_SOURCE }}</figcaption>
+    </figure>
+
+    <!-- ESOL Support Panel: Phonetic guide + bilingual writing space -->
+    <div class="esol-panel" aria-label="Language Support">
+      <span class="phonetic" aria-label="Pronunciation">{{ ACT1_PHONETIC }}</span>
+      <span class="my-language" aria-label="My language translation space"></span>
+    </div>
+
+    <div class="block-body">
+      <p>{{ ACT1_INSTRUCTIONS }}</p>
+    </div>
+
+    <span class="zone-label">✏️ Write your answer here:</span>
+    <div class="write-zone" role="note" aria-label="Writing space"></div>
+
+    <aside class="char-tip" aria-label="Kenji and Aiko's Tip">
+      <img class="char-avatar"
+           src="../images/characters/kenji.png"
+           alt="Kenji"
+           width="44" height="44"/>
+      <div class="tip-content">
+        <em>Kenji &amp; Aiko's Tip</em>
+        <p>{{ ACT1_TIP }}</p>
+      </div>
+    </aside>
+  </section>
+
+  <hr class="divider"/>
+
+  <!-- ===================================================
+       BLOCK B: MATH &amp; PROBLEM SOLVING — Land 2: Numeria
+       Kwame &amp; Octavia · Every day
+       =================================================== -->
+  <section class="activity-block land2" aria-labelledby="act2-title">
+    <p class="block-tag">🔢 Math &amp; Problem Solving · Land 2: Numeria</p>
+    <h2 class="block-title" id="act2-title">{{ ACT2_TITLE }}</h2>
+    <p class="block-time">⏱ {{ ACT2_TIME }} minutes with Kwame &amp; Octavia</p>
+
+    <figure class="dict-image-zone">
+      <img src="../images/dictionary/{{ ACT2_IMG }}"
+           alt="{{ ACT2_IMG_ALT }}"
+           width="360" height="200"/>
+      <figcaption>From the SOE Picture Dictionary · {{ ACT2_IMG_SOURCE }}</figcaption>
+    </figure>
+
+    <div class="block-body">
+      <p>{{ ACT2_INSTRUCTIONS }}</p>
+    </div>
+
+    <span class="zone-label">✏️ Show your math work here:</span>
+    <div class="write-zone" role="note" aria-label="Math workspace"></div>
+
+    <aside class="char-tip" aria-label="Kwame and Octavia's Tip">
+      <img class="char-avatar"
+           src="../images/characters/kwame.png"
+           alt="Kwame"
+           width="44" height="44"/>
+      <div class="tip-content">
+        <em>Kwame &amp; Octavia's Tip</em>
+        <p>{{ ACT2_TIP }}</p>
+      </div>
+    </aside>
+  </section>
+
+  <hr class="divider"/>
+
+  <!-- ===================================================
+       BLOCK C: SCIENCE &amp; NATURE — Land 3: Terrasol
+       Silas &amp; Vesta · Every day
+       =================================================== -->
+  <section class="activity-block land3" aria-labelledby="act3-title">
+    <p class="block-tag">🌿 Science &amp; Nature · Land 3: Terrasol</p>
+    <h2 class="block-title" id="act3-title">{{ ACT3_TITLE }}</h2>
+    <p class="block-time">⏱ {{ ACT3_TIME }} minutes with Silas &amp; Vesta</p>
+
+    <figure class="dict-image-zone">
+      <img src="../images/dictionary/{{ ACT3_IMG }}"
+           alt="{{ ACT3_IMG_ALT }}"
+           width="360" height="200"/>
+      <figcaption>From the SOE Picture Dictionary · {{ ACT3_IMG_SOURCE }}</figcaption>
+    </figure>
+
+    <div class="esol-panel" aria-label="Language Support">
+      <span class="phonetic" aria-label="Pronunciation">{{ ACT3_PHONETIC }}</span>
+      <span class="my-language" aria-label="My language translation space"></span>
+    </div>
+
+    <div class="block-body">
+      <p>{{ ACT3_INSTRUCTIONS }}</p>
+    </div>
+
+    <span class="zone-label">🔬 Draw your observation here:</span>
+    <div class="draw-zone" role="note" aria-label="Scientific drawing space">
+      <span>Draw here</span>
+    </div>
+
+    <aside class="char-tip" aria-label="Silas and Vesta's Tip">
+      <img class="char-avatar"
+           src="../images/characters/silas.png"
+           alt="Silas"
+           width="44" height="44"/>
+      <div class="tip-content">
+        <em>Silas &amp; Vesta's Tip</em>
+        <p>{{ ACT3_TIP }}</p>
+      </div>
+    </aside>
+  </section>
+
+  <hr class="divider"/>
+
+  <!-- ===================================================
+       BLOCK D: DAILY MOVEMENT — Land 5: Vitalis
+       Felix &amp; Amara · Every day
+       =================================================== -->
+  <section class="activity-block land5" aria-labelledby="act4-title">
+    <p class="block-tag">💪 Daily Movement · Land 5: Vitalis</p>
+    <h2 class="block-title" id="act4-title">{{ ACT4_TITLE }}</h2>
+    <p class="block-time">⏱ {{ ACT4_TIME }} minutes with Felix &amp; Amara</p>
+
+    <figure class="dict-image-zone">
+      <img src="../images/dictionary/{{ ACT4_IMG }}"
+           alt="{{ ACT4_IMG_ALT }}"
+           width="360" height="200"/>
+      <figcaption>From the SOE Picture Dictionary · {{ ACT4_IMG_SOURCE }}</figcaption>
+    </figure>
+
+    <div class="block-body">
+      <p>{{ ACT4_INSTRUCTIONS }}</p>
+    </div>
+
+    <aside class="char-tip" aria-label="Felix and Amara's Tip">
+      <img class="char-avatar"
+           src="../images/characters/felix.png"
+           alt="Felix"
+           width="44" height="44"/>
+      <div class="tip-content">
+        <em>Felix &amp; Amara's Tip</em>
+        <p>{{ ACT4_TIP }}</p>
+      </div>
+    </aside>
+  </section>
+
+  <hr class="divider"/>
+
+  <!-- ===================================================
+       BLOCK E: ROTATING SUBJECT
+       Mon/Wed = Geography (L4: Aquaria) · Ronan &amp; Nerissa
+       Tue/Thu = Civics (L6: Sophia) · Ezra &amp; Athena
+       Fri    = Full Review (L7: Celestia) · Elias &amp; Selene
+       =================================================== -->
+  <section class="activity-block {{ ACT5_LAND_CLASS }}" aria-labelledby="act5-title">
+    <p class="block-tag">{{ ACT5_ICON }} {{ ACT5_SUBJECT }} · Land {{ ACT5_LAND_NUM }}: {{ ACT5_LAND_NAME }}</p>
+    <h2 class="block-title" id="act5-title">{{ ACT5_TITLE }}</h2>
+    <p class="block-time">⏱ {{ ACT5_TIME }} minutes with {{ ACT5_CHAR_NAMES }}</p>
+
+    <figure class="dict-image-zone">
+      <img src="../images/dictionary/{{ ACT5_IMG }}"
+           alt="{{ ACT5_IMG_ALT }}"
+           width="360" height="200"/>
+      <figcaption>From the SOE Picture Dictionary · {{ ACT5_IMG_SOURCE }}</figcaption>
+    </figure>
+
+    <div class="block-body">
+      <p>{{ ACT5_INSTRUCTIONS }}</p>
+    </div>
+
+    <span class="zone-label">✏️ Write your response here:</span>
+    <div class="write-zone" role="note" aria-label="Response space"></div>
+
+    <aside class="char-tip" aria-label="{{ ACT5_CHAR_NAMES }}'s Tip">
+      <img class="char-avatar"
+           src="../images/characters/{{ ACT5_CHAR_IMG }}"
+           alt="{{ ACT5_CHAR_NAMES }}"
+           width="44" height="44"/>
+      <div class="tip-content">
+        <em>{{ ACT5_CHAR_NAMES }}'s Tip</em>
+        <p>{{ ACT5_TIP }}</p>
+      </div>
+    </aside>
+  </section>
+
+  <hr class="divider"/>
+
+  <!-- ===================================================
+       BLOCK F: END-OF-DAY REFLECTION — Land 7: Celestia
+       Elias &amp; Selene · Every day · 2 minutes
+       =================================================== -->
+  <section class="activity-block land7" aria-labelledby="reflect-title">
+    <p class="block-tag">🌙 Daily Reflection · Land 7: Celestia</p>
+    <h2 class="block-title" id="reflect-title">Elias &amp; Selene's Quest Journal</h2>
+    <p class="block-time">⏱ 2 minutes — write from your heart</p>
+    <div class="block-body">
+      <p>{{ REFLECTION_PROMPT }}</p>
+    </div>
+    <div class="write-zone" role="note" aria-label="Reflection journal space"></div>
+  </section>
+
+  <!-- ===== DAILY SUMMARY BUBBLE ===== -->
+  <div class="reflection-bubble">
+    <span class="stars" aria-label="Star rating">☆ ☆ ☆</span>
+    <p>How did your Quest go today?<br/>Color the stars — 1 star if it was tough, 3 if it was awesome!</p>
+    <p class="sign-off">
+      Parent / Guardian sign-off: _______________________________
+      <br/>Date: _______________
+    </p>
+  </div>
+
+</article>
+</body>
+</html>

@@ -51,7 +51,7 @@ function serveEbookPlugin() {
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), serveEbookPlugin()],
-  base: '/The-Sound-of-Essentials-Eco-System/',
+  base: '/SOE-Website/',
   server: {
     fs: {
       allow: ['..'],

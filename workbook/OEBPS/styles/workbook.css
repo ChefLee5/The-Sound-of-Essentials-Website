@@ -1,0 +1,500 @@
+/* =========================================================
+   SOE The Summer Stretch Workbook — workbook.css
+   Design System: "Calm. Focused. Essential."
+   Version: 1.0.0
+   Inherits token naming from dictionary.css
+   ========================================================= */
+
+/* --- Google Fonts (loaded via network; fallbacks always present) --- */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Lexend:wght@400;600&display=swap');
+
+/* --- EPUB / Print Reset --- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; }
+
+/* =========================================================
+   DESIGN TOKENS
+   ========================================================= */
+:root {
+  /* Land accent colors (matches dictionary.css exactly) */
+  --land1-color:   #d4a843; /* Harmonia  – Reading & Phonics       */
+  --land2-color:   #7fb685; /* Numeria   – Math & Problem-Solving  */
+  --land3-color:   #10B981; /* Terrasol  – Science & Nature        */
+  --land4-color:   #2563EB; /* Aquaria   – Geography & Mapping     */
+  --land5-color:   #c4785a; /* Vitalis   – Fitness & Health        */
+  --land6-color:   #5ba4c9; /* Sophia    – Community & Civics      */
+  --land7-color:   #9678c4; /* Celestia  – Time & Reflection       */
+
+  /* Neutral palette */
+  --bg-page:       #FAFAF8;
+  --bg-card:       #FFFFFF;
+  --text-primary:  #1a1a2e;
+  --text-secondary:#4a5568;
+  --text-hint:     #9ca3af;
+  --border-soft:   #e8e8e8;
+  --border-dashed: #d1d5db;
+
+  /* Activity box backgrounds (light tints) */
+  --land1-tint:    #fef9ee;
+  --land2-tint:    #f0faf2;
+  --land3-tint:    #ecfdf5;
+  --land4-tint:    #eff6ff;
+  --land5-tint:    #fdf4f1;
+  --land6-tint:    #f0f8fd;
+  --land7-tint:    #f5f1fd;
+
+  /* Spacing scale */
+  --space-xs:  4px;
+  --space-sm:  8px;
+  --space-md:  16px;
+  --space-lg:  24px;
+  --space-xl:  40px;
+
+  /* Typography */
+  --font-body:    'Nunito', 'Segoe UI', Arial, sans-serif;
+  --font-display: 'Lexend', 'Segoe UI', Arial, sans-serif;
+  --line-height:  1.75;
+  --letter-spacing: 0.01em;
+
+  /* Shape */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+}
+
+/* =========================================================
+   PAGE SHELL
+   ========================================================= */
+body {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: var(--line-height);
+  color: var(--text-primary);
+  background-color: var(--bg-page);
+  padding: var(--space-lg);
+  max-width: 740px;
+  margin: 0 auto;
+}
+
+/* Page break before every new day */
+.day-page { page-break-before: always; }
+
+/* =========================================================
+   DAY HEADER BAND
+   ========================================================= */
+.day-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md) var(--space-lg);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-lg);
+  background: linear-gradient(
+    135deg,
+    var(--land-color, #d4a843) 0%,
+    color-mix(in srgb, var(--land-color, #d4a843) 60%, white) 100%
+  );
+  color: #fff;
+}
+
+.day-header .day-label {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0.85;
+  margin-bottom: 4px;
+}
+
+.day-header .day-title {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.day-header .character-badge {
+  margin-left: auto;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  opacity: 0.9;
+  text-align: center;
+  max-width: 80px;
+}
+
+.day-header .character-badge img {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 2.5px solid rgba(255,255,255,0.7);
+  object-fit: cover;
+  object-position: top;
+  background: rgba(255,255,255,0.2);
+}
+
+/* =========================================================
+   DAILY GOAL TRACKER (print-referencing)
+   ========================================================= */
+.goal-tracker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm) var(--space-md);
+  margin-bottom: var(--space-lg);
+  padding: var(--space-sm) var(--space-md);
+  background: var(--bg-card);
+  border: 1.5px solid var(--border-soft);
+  border-radius: var(--radius-md);
+}
+
+.goal-tracker-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-hint);
+  width: 100%;
+}
+
+.goal-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+/* Print-ready checkboxes — clear squares learners can physically check */
+.goal-item .check-box {
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--border-dashed);
+  border-radius: 4px;
+  flex-shrink: 0;
+  display: inline-block;
+}
+
+/* =========================================================
+   ACTIVITY BLOCK
+   ========================================================= */
+.activity-block {
+  background: var(--bg-card);
+  border-radius: var(--radius-md);
+  border-left: 5px solid var(--land-color, #d4a843);
+  padding: var(--space-md) var(--space-lg);
+  margin-bottom: var(--space-md);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+}
+
+/* Land colour scoping */
+.activity-block.land1 { --land-color: var(--land1-color); background: var(--land1-tint); }
+.activity-block.land2 { --land-color: var(--land2-color); background: var(--land2-tint); }
+.activity-block.land3 { --land-color: var(--land3-color); background: var(--land3-tint); }
+.activity-block.land4 { --land-color: var(--land4-color); background: var(--land4-tint); }
+.activity-block.land5 { --land-color: var(--land5-color); background: var(--land5-tint); }
+.activity-block.land6 { --land-color: var(--land6-color); background: var(--land6-tint); }
+.activity-block.land7 { --land-color: var(--land7-color); background: var(--land7-tint); }
+
+.activity-block .block-tag {
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--land-color, #d4a843);
+  margin-bottom: var(--space-xs);
+}
+
+.activity-block .block-title {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-xs);
+}
+
+.activity-block .block-time {
+  font-size: 0.72rem;
+  color: var(--text-hint);
+  margin-bottom: var(--space-sm);
+}
+
+.activity-block .block-body {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+/* =========================================================
+   DICTIONARY IMAGE ZONE
+   ========================================================= */
+.dict-image-zone {
+  border: 2px dashed var(--border-dashed);
+  border-radius: var(--radius-sm);
+  margin: var(--space-sm) 0;
+  overflow: hidden;
+  text-align: center;
+  background: rgba(255,255,255,0.6);
+}
+
+.dict-image-zone img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  max-height: 180px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.dict-image-zone figcaption {
+  font-size: 0.68rem;
+  color: var(--text-hint);
+  padding: var(--space-xs) var(--space-sm);
+  font-style: italic;
+  border-top: 1px solid var(--border-soft);
+}
+
+/* =========================================================
+   WRITING / DRAWING ZONES (print-referencing)
+   ========================================================= */
+.write-zone {
+  border: 1px solid var(--border-dashed);
+  border-radius: var(--radius-sm);
+  min-height: 72px;
+  margin: var(--space-sm) 0;
+  padding: var(--space-sm);
+  /* Lined paper effect */
+  background:
+    repeating-linear-gradient(
+      transparent,
+      transparent 27px,
+      #e5e7eb 27px,
+      #e5e7eb 28px
+    );
+  background-color: rgba(255,255,255,0.9);
+  background-position: 0 10px;
+}
+
+.draw-zone {
+  border: 2px dashed var(--border-dashed);
+  border-radius: var(--radius-sm);
+  min-height: 110px;
+  margin: var(--space-sm) 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-hint);
+  font-size: 0.78rem;
+  font-style: italic;
+  background: rgba(255,255,255,0.7);
+}
+
+.zone-label {
+  font-size: 0.78rem;
+  color: var(--text-hint);
+  margin-top: var(--space-sm);
+  display: block;
+}
+
+/* =========================================================
+   ESOL / BILINGUAL SUPPORT PANEL
+   ========================================================= */
+.esol-panel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm) var(--space-md);
+  align-items: center;
+  margin: var(--space-sm) 0;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-sm);
+  background: rgba(255,255,255,0.75);
+  border: 1px solid var(--border-soft);
+}
+
+.esol-panel .phonetic {
+  font-size: 0.8rem;
+  color: var(--text-hint);
+  font-style: italic;
+  font-family: 'Courier New', monospace;
+}
+
+.esol-panel .my-language {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  border-bottom: 1.5px solid var(--border-dashed);
+  min-width: 160px;
+  padding-bottom: 2px;
+  padding-left: 4px;
+}
+
+.esol-panel .my-language::before {
+  content: 'My language: ';
+  color: var(--text-hint);
+  font-style: italic;
+}
+
+/* =========================================================
+   CHARACTER TIP BOX
+   ========================================================= */
+.char-tip {
+  display: flex;
+  gap: var(--space-md);
+  align-items: flex-start;
+  background: rgba(255,255,255,0.88);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  margin-top: var(--space-md);
+  border: 1.5px solid var(--border-soft);
+  border-left: 4px solid var(--land-color, #d4a843);
+}
+
+.char-tip img.char-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top center;
+  flex-shrink: 0;
+  border: 2px solid var(--land-color, #d4a843);
+  background: #f3f4f6;
+}
+
+.char-tip .tip-content em {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--land-color, #d4a843);
+  margin-bottom: 5px;
+  font-style: normal;
+}
+
+.char-tip .tip-content p {
+  font-size: 0.83rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* =========================================================
+   END-OF-DAY REFLECTION BUBBLE (Land 7 — Celestia)
+   ========================================================= */
+.reflection-bubble {
+  background: var(--bg-card);
+  border-radius: var(--radius-xl);
+  border: 2px solid var(--border-soft);
+  padding: var(--space-lg);
+  margin-top: var(--space-lg);
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.reflection-bubble .stars {
+  font-size: 1.5rem;
+  letter-spacing: 6px;
+  margin-bottom: var(--space-sm);
+  display: block;
+}
+
+.reflection-bubble p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-md);
+  line-height: 1.6;
+}
+
+.reflection-bubble .sign-off {
+  font-size: 0.75rem;
+  color: var(--text-hint);
+  border-top: 1.5px dashed var(--border-dashed);
+  padding-top: var(--space-sm);
+  margin-top: var(--space-sm);
+}
+
+/* =========================================================
+   WEEK INTRO PAGE
+   ========================================================= */
+.week-intro {
+  text-align: center;
+  padding: var(--space-xl) var(--space-lg);
+  background: linear-gradient(160deg, #f5f1fd 0%, #ecfdf5 100%);
+  border-radius: var(--radius-xl);
+  margin-bottom: var(--space-xl);
+}
+
+.week-intro .week-num {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-hint);
+  margin-bottom: var(--space-sm);
+}
+
+.week-intro .week-theme {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.2;
+  margin-bottom: var(--space-md);
+}
+
+.week-intro .lands-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  justify-content: center;
+  margin-top: var(--space-md);
+}
+
+.lands-pills .pill {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 100px;
+  color: #fff;
+}
+.pill.l1 { background: var(--land1-color); }
+.pill.l2 { background: var(--land2-color); }
+.pill.l3 { background: var(--land3-color); }
+.pill.l4 { background: var(--land4-color); }
+.pill.l5 { background: var(--land5-color); }
+.pill.l6 { background: var(--land6-color); }
+.pill.l7 { background: var(--land7-color); }
+
+/* =========================================================
+   UTILITY CLASSES
+   ========================================================= */
+.sr-only {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0,0,0,0); white-space: nowrap; border-width: 0;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid var(--border-soft);
+  margin: var(--space-md) 0;
+}
+
+/* =========================================================
+   PRINT MEDIA OVERRIDES
+   ========================================================= */
+@media print {
+  @page { size: letter; margin: 15mm 12mm; }
+  body { background: white; padding: 0; font-size: 10.5pt; max-width: 100%; }
+  .activity-block { box-shadow: none; border-left-width: 4pt; break-inside: avoid; }
+  .write-zone { min-height: 22mm; }
+  .draw-zone  { min-height: 38mm; }
+  .dict-image-zone { break-inside: avoid; }
+  .char-tip { break-inside: avoid; }
+  .day-header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  a { text-decoration: none; color: inherit; }
+  .reflection-bubble { break-inside: avoid; }
+}

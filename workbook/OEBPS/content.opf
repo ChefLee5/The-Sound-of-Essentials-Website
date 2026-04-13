@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://www.idpf.org/2007/opf"
+         version="3.0"
+         unique-identifier="uid"
+         xml:lang="en">
+
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <dc:identifier id="uid">soe-summer-bridge-workbook-2025</dc:identifier>
+    <dc:title>SOE Rhythm Quest: The Summer Stretch Workbook</dc:title>
+    <dc:creator>The Sound of Essentials Team</dc:creator>
+    <dc:language>en</dc:language>
+    <dc:subject>Education; Summer Learning; ESOL; Early Childhood; Elementary</dc:subject>
+    <dc:description>A neuro-affirming, bilingual-ready 8-week The Summer Stretch workbook set in the 7 Lands of the SOE universe. 15 minutes of daily cross-curricular activities for grades Kâ€“3.</dc:description>
+    <dc:rights>Copyright The Sound of Essentials Team. All rights reserved.</dc:rights>
+    <meta property="dcterms:modified">2026-04-12T23:24:15Z</meta>
+    <meta name="cover" content="cover-img"/>
+  </metadata>
+
+  <manifest>
+    <item id="css-workbook" href="styles/workbook.css" media-type="text/css"/>
+    <item id="cover-img" href="images/ui/cover_art.png" media-type="image/png" properties="cover-image"/>
+    <item id="nav" href="pages/nav.xhtml" media-type="application/xhtml+xml" properties="nav"/>
+    <item id="cover" href="pages/cover.xhtml" media-type="application/xhtml+xml"/>
+    <item id="frontmatter" href="pages/frontmatter.xhtml" media-type="application/xhtml+xml"/>
+    <item id="weekly_overview" href="pages/weekly_overview.xhtml" media-type="application/xhtml+xml"/>
+    <item id="week1_day1" href="pages/week1/day1.xhtml" media-type="application/xhtml+xml"/>
+    <item id="week1_day2" href="pages/week1/day2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="week1_day3" href="pages/week1/day3.xhtml" media-type="application/xhtml+xml"/>
+    <item id="week1_day4" href="pages/week1/day4.xhtml" media-type="application/xhtml+xml"/>
+    <item id="week1_day5" href="pages/week1/day5.xhtml" media-type="application/xhtml+xml"/>
+    <item id="week2_day1" href="pages/week2/day1.xhtml" media-type="application/xhtml+xml"/>
+    <item id="week2_day2" href="pages/week2/day2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="week2_day3" href="pages/week2/day3.xhtml" media-type="application/xhtml+xml"/>
+    <item id="week2_day4" href="pages/week2/day4.xhtml" media-type="application/xhtml+xml"/>
+    <item id="week2_day5" href="pages/week2/day5.xhtml" media-type="application/xhtml+xml"/>
+    <item id="week3_day1" href="pages/week3/day1.xhtml" media-type="application/xhtml+xml"/>
+    <item id="week3_day2" href="pages/week3/day2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="week3_day3" href="pages/week3/day3.xhtml" media-type="application/xhtml+xml"/>
+    <item id="week3_day4" href="pages/week3/day4.xhtml" media-type="application/xhtml+xml"/>
+    <item id="week3_day5" href="pages/week3/day5.xhtml" media-type="application/xhtml+xml"/>
+    <item id="week4_day1" href="pages/week4/day1.xhtml" media-type="application/xhtml+xml"/>
+    <item id="week4_day2" href="pages/week4/day2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="week4_day3" href="pages/week4/day3.xhtml" media-type="application/xhtml+xml"/>
+    <item id="week4_day4" href="pages/week4/day4.xhtml" media-type="application/xhtml+xml"/>
+    <item id="week4_day5" href="pages/week4/day5.xhtml" media-type="application/xhtml+xml"/>
+    <item id="week5_day1" href="pages/week5/day1.xhtml" media-type="application/xhtml+xml"/>
+    <item id="week5_day2" href="pages/week5/day2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="week5_day3" href="pages/week5/day3.xhtml" media-type="application/xhtml+xml"/>
+    <item id="week5_day4" href="pages/week5/day4.xhtml" media-type="application/xhtml+xml"/>
+    <item id="week5_day5" href="pages/week5/day5.xhtml" media-type="application/xhtml+xml"/>
+    <item id="week6_day1" href="pages/week6/day1.xhtml" media-type="application/xhtml+xml"/>
+    <item id="week6_day2" href="pages/week6/day2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="week6_day3" href="pages/week6/day3.xhtml" media-type="application/xhtml+xml"/>
+    <item id="week6_day4" href="pages/week6/day4.xhtml" media-type="application/xhtml+xml"/>
+    <item id="week6_day5" href="pages/week6/day5.xhtml" media-type="application/xhtml+xml"/>
+    <item id="week7_day1" href="pages/week7/day1.xhtml" media-type="application/xhtml+xml"/>
+    <item id="week7_day2" href="pages/week7/day2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="week7_day3" href="pages/week7/day3.xhtml" media-type="application/xhtml+xml"/>
+    <item id="week7_day4" href="pages/week7/day4.xhtml" media-type="application/xhtml+xml"/>
+    <item id="week7_day5" href="pages/week7/day5.xhtml" media-type="application/xhtml+xml"/>
+    <item id="week8_day1" href="pages/week8/day1.xhtml" media-type="application/xhtml+xml"/>
+    <item id="week8_day2" href="pages/week8/day2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="week8_day3" href="pages/week8/day3.xhtml" media-type="application/xhtml+xml"/>
+    <item id="week8_day4" href="pages/week8/day4.xhtml" media-type="application/xhtml+xml"/>
+    <item id="week8_day5" href="pages/week8/day5.xhtml" media-type="application/xhtml+xml"/>
+    <item id="backmatter_bm_achievement" href="pages/backmatter/bm_achievement.xhtml" media-type="application/xhtml+xml"/>
+    <item id="backmatter_bm_glossary" href="pages/backmatter/bm_glossary.xhtml" media-type="application/xhtml+xml"/>
+    <item id="backmatter_bm_parent_guide" href="pages/backmatter/bm_parent_guide.xhtml" media-type="application/xhtml+xml"/>
+  </manifest>
+
+  <spine page-progression-direction="ltr">
+    <itemref idref="nav"/>
+    <itemref idref="cover"/>
+    <itemref idref="frontmatter"/>
+    <itemref idref="weekly_overview"/>
+    <itemref idref="week1_day1"/>
+    <itemref idref="week1_day2"/>
+    <itemref idref="week1_day3"/>
+    <itemref idref="week1_day4"/>
+    <itemref idref="week1_day5"/>
+    <itemref idref="week2_day1"/>
+    <itemref idref="week2_day2"/>
+    <itemref idref="week2_day3"/>
+    <itemref idref="week2_day4"/>
+    <itemref idref="week2_day5"/>
+    <itemref idref="week3_day1"/>
+    <itemref idref="week3_day2"/>
+    <itemref idref="week3_day3"/>
+    <itemref idref="week3_day4"/>
+    <itemref idref="week3_day5"/>
+    <itemref idref="week4_day1"/>
+    <itemref idref="week4_day2"/>
+    <itemref idref="week4_day3"/>
+    <itemref idref="week4_day4"/>
+    <itemref idref="week4_day5"/>
+    <itemref idref="week5_day1"/>
+    <itemref idref="week5_day2"/>
+    <itemref idref="week5_day3"/>
+    <itemref idref="week5_day4"/>
+    <itemref idref="week5_day5"/>
+    <itemref idref="week6_day1"/>
+    <itemref idref="week6_day2"/>
+    <itemref idref="week6_day3"/>
+    <itemref idref="week6_day4"/>
+    <itemref idref="week6_day5"/>
+    <itemref idref="week7_day1"/>
+    <itemref idref="week7_day2"/>
+    <itemref idref="week7_day3"/>
+    <itemref idref="week7_day4"/>
+    <itemref idref="week7_day5"/>
+    <itemref idref="week8_day1"/>
+    <itemref idref="week8_day2"/>
+    <itemref idref="week8_day3"/>
+    <itemref idref="week8_day4"/>
+    <itemref idref="week8_day5"/>
+    <itemref idref="backmatter_bm_achievement"/>
+    <itemref idref="backmatter_bm_glossary"/>
+    <itemref idref="backmatter_bm_parent_guide"/>
+  </spine>
+
+</package>

@@ -1,0 +1,673 @@
+{
+  "title": "SOE Rhythm Quest: The Summer Stretch Workbook",
+  "subtitle": "The Summer Stretch",
+  "grades": "K\u20133",
+  "weeks": [
+    {
+      "week": 1,
+      "theme": "Hello, 7 Lands!",
+      "primary_land": 1,
+      "days": [
+        {
+          "week": 1,
+          "day": 1,
+          "day_label": "Monday",
+          "day_title": "Greetings from Harmonia",
+          "primary_land": 1,
+          "primary_land_color": "#d4a843",
+          "primary_char_img": "AMARA.jpg",
+          "primary_char_names": "Amara & Kwame",
+          "blocks": {
+            "A": {
+              "title": "Word Detectives: Greetings",
+              "time": 3,
+              "img": "land1_greetings-introductions.jpg",
+              "img_alt": "Children waving hello in Harmonia village",
+              "img_source": "SOE Picture Dictionary \u2014 Land 1",
+              "phonetic": "heh-LOW | hye | GUD-mor-ning",
+              "instructions": "Look at the picture. Find 3 greeting words. Trace each one, then write it yourself below.",
+              "tip": "Amara says: When you learn a new greeting, practice it with your whole face \u2014 smile big!"
+            },
+            "B": {
+              "title": "Numeria Number Hunt",
+              "time": 3,
+              "img": "land2_numbers-counting.jpg",
+              "img_alt": "Number tiles and counting beads in Numeria",
+              "img_source": "SOE Picture Dictionary \u2014 Land 2",
+              "phonetic": "WUN | TOO | THREE | FOR | FIEV",
+              "instructions": "Count the objects in the picture. Write the total in each box. Circle the biggest number.",
+              "tip": "Kwame says: Use your finger to count carefully. Slow and steady wins the math race!"
+            },
+            "C": {
+              "title": "Terrasol Garden Secrets",
+              "time": 3,
+              "img": "land3_seeds-growing.jpg",
+              "img_alt": "Seeds sprouting in Terrasol garden",
+              "img_source": "SOE Picture Dictionary \u2014 Land 3",
+              "phonetic": "SEED | ROOT | SPROUT | LEEF | SUN",
+              "instructions": "Draw a seed under the soil and a sprout above it. Label 3 parts: seed, root, sprout.",
+              "tip": "Silas says: Every giant tree started as a tiny seed \u2014 just like every big reader started with one word!"
+            },
+            "D": {
+              "title": "Vitalis Wake-Up Move",
+              "time": 2,
+              "img": "land5_exercise-movement.jpg",
+              "img_alt": "Children stretching in Vitalis",
+              "img_source": "SOE Picture Dictionary \u2014 Land 5",
+              "phonetic": "STRETCH | JUMP | BREETH | MOOV",
+              "instructions": "Stand up! Do 5 arm circles forward, 5 backward. Take 3 deep breaths. Shake out your hands. You're ready to learn!",
+              "tip": "Nerissa says: Your brain learns better when your body moves first!"
+            },
+            "E": {
+              "title": "Aquaria Map Adventure",
+              "time": 2,
+              "img": "land4_geography-landforms.jpg",
+              "img_alt": "Mountains, rivers, and plains on an Aquaria map",
+              "img_source": "SOE Picture Dictionary \u2014 Land 4",
+              "phonetic": "MOWN-tin | RIV-er | PLAYN | oh-SHUN",
+              "instructions": "Look at the landform picture. Can you find a mountain? A river? Draw your own simple map with 2 landforms and label them.",
+              "tip": "Ronan says: Maps are stories about places. Every map tells you something new!",
+              "land": 4,
+              "land_class": "land4",
+              "land_name": "Aquaria",
+              "icon": "\ud83c\udf0a",
+              "subject": "Geography",
+              "char_img": "RONAN.jpg",
+              "char_names": "Ronan & Selene"
+            },
+            "F": {
+              "reflection_prompt": "What was your favorite activity today? Draw a star next to it and write one word that describes how you feel right now."
+            }
+          }
+        },
+        {
+          "week": 1,
+          "day": 2,
+          "day_label": "Tuesday",
+          "day_title": "Numbers Rule in Numeria",
+          "primary_land": 2,
+          "primary_land_color": "#7fb685",
+          "primary_char_img": "KWAME.jpg",
+          "primary_char_names": "Kwame & Amara",
+          "blocks": {
+            "A": {
+              "title": "Daily Routine Words",
+              "time": 3,
+              "img": "land1_daily-routines.jpg",
+              "img_alt": "Morning routines in Harmonia homes",
+              "img_source": "SOE Picture Dictionary \u2014 Land 1",
+              "phonetic": "WAKE | BRUSH | EET | GO | SLEAP",
+              "instructions": "Put these daily routine words in order: eat, sleep, wake, brush teeth, go to school. Write numbers 1\u20135 next to them.",
+              "tip": "Amara says: Words about your day are the easiest to remember \u2014 you live them!"
+            },
+            "B": {
+              "title": "What Shape Is That?",
+              "time": 3,
+              "img": "land2_shapes-geometry.jpg",
+              "img_alt": "Geometric shapes in Numeria marketplace",
+              "img_source": "SOE Picture Dictionary \u2014 Land 2",
+              "phonetic": "SER-kul | TRY-ang-ul | SKWAIR | REK-tang-gul",
+              "instructions": "Find 3 shapes in the picture. Draw each one in a box. Write how many sides each shape has.",
+              "tip": "Kwame says: Look around the room. How many rectangles can you spot right now?"
+            },
+            "C": {
+              "title": "Wild Animal Watch",
+              "time": 3,
+              "img": "land3_wild-animals.jpg",
+              "img_alt": "Wild animals in the Terrasol forest",
+              "img_source": "SOE Picture Dictionary \u2014 Land 3",
+              "phonetic": "LY-on | el-uh-FUNT | GI-raff | ZE-bruh",
+              "instructions": "Pick 2 animals from the picture. Draw a simple habitat for each one. Write one word that describes each animal.",
+              "tip": "Vesta says: Scientists who study animals are called zoologists. You're a junior zoologist today!"
+            },
+            "D": {
+              "title": "Vitalis Healthy Habits Check",
+              "time": 2,
+              "img": "land5_healthy-habits-hygiene.jpg",
+              "img_alt": "Good hygiene habits in Vitalis",
+              "img_source": "SOE Picture Dictionary \u2014 Land 5",
+              "phonetic": "HYJE-een | BRUSH | WASH | SLEEP | HEL-thee",
+              "instructions": "Check off each habit you did today: \u2610 Brush teeth \u2610 Wash hands \u2610 Drink water \u2610 Sleep well \u2610 Move body. How many checked?",
+              "tip": "Octavia says: 5 out of 5 makes you a Vitalis Champion!"
+            },
+            "E": {
+              "title": "Sophia: Rights & Duties",
+              "time": 2,
+              "img": "land6_rights-responsibilities.jpg",
+              "img_alt": "Community members working together in Sophia",
+              "img_source": "SOE Picture Dictionary \u2014 Land 6",
+              "phonetic": "RITE | doo-TEE | re-SPON-sih-BIL-ih-tee",
+              "instructions": "A right is something you have. A duty is something you do. Write 1 right and 1 duty you have at home. Share with someone!",
+              "tip": "Felix says: Good citizens know their rights AND their responsibilities.",
+              "land": 6,
+              "land_class": "land6",
+              "land_name": "Sophia",
+              "icon": "\u2696\ufe0f",
+              "subject": "Civics",
+              "char_img": "FELIX.jpg",
+              "char_names": "Felix & Athena"
+            },
+            "F": {
+              "reflection_prompt": "Draw your face right now. Are you happy, tired, focused, or excited? Write the word under your drawing."
+            }
+          }
+        },
+        {
+          "week": 1,
+          "day": 3,
+          "day_label": "Wednesday",
+          "day_title": "Weather Watchers in Terrasol",
+          "primary_land": 3,
+          "primary_land_color": "#10B981",
+          "primary_char_img": "SILAS.jpg",
+          "primary_char_names": "Silas & Vesta",
+          "blocks": {
+            "A": {
+              "title": "Feelings Words Explore",
+              "time": 3,
+              "img": "land1_emotions-feelings.jpg",
+              "img_alt": "Children showing different emotions in Harmonia",
+              "img_source": "SOE Picture Dictionary \u2014 Land 1",
+              "phonetic": "HAP-ee | SAD | AN-gree | SUR-prizd | SKAIRD",
+              "instructions": "Find 4 emotion words in the picture. Write each one and draw the face that matches.",
+              "tip": "Amara says: Knowing how you feel helps you talk to others. Feelings words are power words!"
+            },
+            "B": {
+              "title": "Measurement Mission",
+              "time": 3,
+              "img": "land2_measurement-at-home.jpg",
+              "img_alt": "Rulers, cups, and scales in a Numeria home",
+              "img_source": "SOE Picture Dictionary \u2014 Land 2",
+              "phonetic": "MEZH-er | IN-ch | FOOT | CUP | POUND",
+              "instructions": "Use your hand as a ruler. Measure 3 objects near you in 'hand lengths'. Write: Object, Measurement, Longer or Shorter than a pencil?",
+              "tip": "Kwame says: Before rulers existed, people measured with body parts. You're using ancient math!"
+            },
+            "C": {
+              "title": "Weather Watchers Report",
+              "time": 3,
+              "img": "land3_weather-seasons.jpg",
+              "img_alt": "Four seasons shown in Terrasol landscape",
+              "img_source": "SOE Picture Dictionary \u2014 Land 3",
+              "phonetic": "RAIN | SUN-ee | SNOW | WIND | KLOU-dee",
+              "instructions": "Look outside. What is the weather right now? Write: Today's weather is ___. Draw the weather symbol. Circle the matching season.",
+              "tip": "Silas says: Weather scientists are called meteorologists. Report the weather like a pro!"
+            },
+            "D": {
+              "title": "Vitalis Sports Moves",
+              "time": 2,
+              "img": "land5_sports-fitness.jpg",
+              "img_alt": "Children playing different sports in Vitalis",
+              "img_source": "SOE Picture Dictionary \u2014 Land 5",
+              "phonetic": "RUN | JUMP | SWIM | KICK | THROW",
+              "instructions": "Do each action for 10 seconds: hop on one foot, march in place, jump with both feet, spin slowly. Rest and breathe.",
+              "tip": "Nerissa says: Every time you move, you make your heart stronger. Go team!"
+            },
+            "E": {
+              "title": "Aquaria: Ocean Life",
+              "time": 2,
+              "img": "land4_the-ocean-marine-life.jpg",
+              "img_alt": "Colorful sea creatures in the Aquaria ocean",
+              "img_source": "SOE Picture Dictionary \u2014 Land 4",
+              "phonetic": "oh-SHUN | FISH | KOR-ul | WAIV | DEAP",
+              "instructions": "Find 3 ocean creatures in the picture. Draw your favorite in the box below. Write its name and one amazing fact about it.",
+              "tip": "Selene says: The ocean covers 71% of Earth. It's the biggest habitat on the planet!",
+              "land": 4,
+              "land_class": "land4",
+              "land_name": "Aquaria",
+              "icon": "\ud83c\udf0a",
+              "subject": "Geography",
+              "char_img": "RONAN.jpg",
+              "char_names": "Ronan & Selene"
+            },
+            "F": {
+              "reflection_prompt": "What did you learn today that surprised you? Write one sentence and add 3 stars if you're proud of your work."
+            }
+          }
+        },
+        {
+          "week": 1,
+          "day": 4,
+          "day_label": "Thursday",
+          "day_title": "Community Helpers in Sophia",
+          "primary_land": 6,
+          "primary_land_color": "#5ba4c9",
+          "primary_char_img": "FELIX.jpg",
+          "primary_char_names": "Felix & Athena",
+          "blocks": {
+            "A": {
+              "title": "Classroom Word Wall",
+              "time": 3,
+              "img": "land1_the-classroom.jpg",
+              "img_alt": "A colorful classroom in Harmonia",
+              "img_source": "SOE Picture Dictionary \u2014 Land 1",
+              "phonetic": "DESK | BORD | PEN-sul | BOO-k | CHAIRE",
+              "instructions": "Find 5 classroom objects in the picture. Write each word. Then write the first letter of each word in a column \u2014 do they spell anything?",
+              "tip": "Amara says: Your classroom is your first learning land. Know its vocabulary!"
+            },
+            "B": {
+              "title": "Clock Detectives",
+              "time": 3,
+              "img": "land2_time-clocks.jpg",
+              "img_alt": "Analog and digital clocks in Numeria",
+              "img_source": "SOE Picture Dictionary \u2014 Land 2",
+              "phonetic": "OW-er | MIN-it | oh-KLOK | HAF-past",
+              "instructions": "Draw these times on the blank clock faces: 3:00, 7:30, 12:00. What time do you wake up? Draw that too!",
+              "tip": "Kwame says: Reading a clock is a superpower. You can always know where you are in the day!"
+            },
+            "C": {
+              "title": "Recycling Rangers",
+              "time": 3,
+              "img": "land3_recycling-sustainability.jpg",
+              "img_alt": "Recycling bins and sorting in Terrasol",
+              "img_source": "SOE Picture Dictionary \u2014 Land 3",
+              "phonetic": "re-SY-kul | COM-post | RE-DOOSE | re-YOOZ",
+              "instructions": "Sort these items: paper, banana peel, plastic bottle, cardboard, apple core. Draw them in the correct bin: Recycle / Compost / Trash.",
+              "tip": "Vesta says: Every item you recycle saves energy. Small acts = big impact!"
+            },
+            "D": {
+              "title": "Vitalis Body Knowledge",
+              "time": 2,
+              "img": "land5_the-human-body.jpg",
+              "img_alt": "Labeled human body diagram in Vitalis",
+              "img_source": "SOE Picture Dictionary \u2014 Land 5",
+              "phonetic": "HART | LUNG | BRANE | BON | MUS-ul",
+              "instructions": "Point to your heart, lungs, and brain on your own body. Jump 10 times. Press your hand to your chest \u2014 feel your heart beating faster?",
+              "tip": "Octavia says: Your heart beats about 100,000 times a day. Thank your heart!"
+            },
+            "E": {
+              "title": "Sophia: Community Helpers",
+              "time": 2,
+              "img": "land6_community-helpers-services.jpg",
+              "img_alt": "Police officers, firefighters, and doctors serving in Sophia",
+              "img_source": "SOE Picture Dictionary \u2014 Land 6",
+              "phonetic": "DOKT-er | FYR-fyt-er | TEE-cher | NER-s | PO-leece",
+              "instructions": "Write the name of 2 community helpers you know personally. Draw one of them. What superpower do they have?",
+              "tip": "Felix says: Community helpers make our neighborhood safe and strong. Who's your hero?",
+              "land": 6,
+              "land_class": "land6",
+              "land_name": "Sophia",
+              "icon": "\u2696\ufe0f",
+              "subject": "Civics",
+              "char_img": "FELIX.jpg",
+              "char_names": "Felix & Athena"
+            },
+            "F": {
+              "reflection_prompt": "Which community helper would you like to be someday? Write their job title and one reason why."
+            }
+          }
+        },
+        {
+          "week": 1,
+          "day": 5,
+          "day_label": "Friday",
+          "day_title": "Week 1 Celebration Quest",
+          "primary_land": 7,
+          "primary_land_color": "#9678c4",
+          "primary_char_img": "ELIAS.jpg",
+          "primary_char_names": "Elias & Ezra",
+          "blocks": {
+            "A": {
+              "title": "My Info Book Page",
+              "time": 3,
+              "img": "land1_personal-information.jpg",
+              "img_alt": "A personal ID card in Harmonia",
+              "img_source": "SOE Picture Dictionary \u2014 Land 1",
+              "phonetic": "NAIM | AY-j | AD-res | FONE | SKOOL",
+              "instructions": "Fill in your personal info page: Name, Age, Favorite Color, Favorite Food, Best Friend, Dream Job. Decorate the border!",
+              "tip": "Amara says: Knowing how to write your own information is an important life skill!"
+            },
+            "B": {
+              "title": "Chart Masters",
+              "time": 3,
+              "img": "land2_charts-graphs.jpg",
+              "img_alt": "Bar graphs and pie charts in Numeria",
+              "img_source": "SOE Picture Dictionary \u2014 Land 2",
+              "phonetic": "CHART | GRAF | BAR | PIE | DAY-tuh",
+              "instructions": "Ask 3 family members: Cats or dogs? Draw a tally chart with your results. Then draw a simple bar graph to show the winner!",
+              "tip": "Kwame says: Data is just information organized so we can understand it better!"
+            },
+            "C": {
+              "title": "Scientific Method Steps",
+              "time": 3,
+              "img": "land7_the-scientific-method.jpg",
+              "img_alt": "Science steps diagram in Celestia",
+              "img_source": "SOE Picture Dictionary \u2014 Land 7",
+              "phonetic": "HY-poth-uh-sis | ob-SER-vay-shun | EK-sper-ih-ment | CON-kloo-zhun",
+              "instructions": "Put these steps in order: Observe, Question, Hypothesize, Test, Conclude. Write 1-5 next to each. What question would you love to test?",
+              "tip": "Elias says: Every great scientist asks 'What if?' What's your favorite 'What if?' question?"
+            },
+            "D": {
+              "title": "Vitalis Nutrition Plate",
+              "time": 2,
+              "img": "land5_nutrition-food-groups.jpg",
+              "img_alt": "A healthy plate with food groups in Vitalis",
+              "img_source": "SOE Picture Dictionary \u2014 Land 5",
+              "phonetic": "VEJ-tuh-bul | FROOT | GRAIN | PRO-teen | DAIR-ee",
+              "instructions": "Draw a plate divided in half. Fill half with fruits and vegetables. Add a grain and a protein. Draw your dream healthy meal!",
+              "tip": "Nerissa says: Colorful plates are healthy plates. Eat the rainbow!"
+            },
+            "E": {
+              "title": "Celestia Week 1 Review",
+              "time": 2,
+              "img": "land7_the-scientific-method.jpg",
+              "img_alt": "A reflection scroll in Celestia library",
+              "img_source": "SOE Picture Dictionary \u2014 Land 7",
+              "phonetic": "re-VIEW | re-MEM-ber | LERND | PROUD | NEXT",
+              "instructions": "Look back at your work from Days 1\u20134. Circle your best page. Write 3 things you learned this week. Give yourself a Quest Star \u2b50!",
+              "tip": "Ezra says: Reviewing what you learned makes it stick in your memory forever!",
+              "land": 7,
+              "land_class": "land7",
+              "land_name": "Celestia",
+              "icon": "\u2728",
+              "subject": "Review & Reflection",
+              "char_img": "ELIAS.jpg",
+              "char_names": "Elias & Ezra"
+            },
+            "F": {
+              "reflection_prompt": "Write 3 words that describe your Week 1 journey. Color a star for each activity you completed this week!"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "week": 2,
+      "theme": "Feelings & Families",
+      "primary_land": 1,
+      "days": [
+        {
+          "week": 2, "day": 1, "day_label": "Monday", "day_title": "Family Ties in Harmonia",
+          "primary_land": 1, "primary_land_color": "#d4a843",
+          "primary_char_img": "AMARA.jpg", "primary_char_names": "Amara & Kwame",
+          "blocks": {
+            "A": {"title": "Family Words", "time": 3, "img": "land1_family-relationships.jpg", "img_alt": "Families in Harmonia village square", "img_source": "SOE Picture Dictionary \u2014 Land 1", "phonetic": "FAM-ih-lee | MOM | DAD | SIS-ter | BRUTH-er", "instructions": "Write the names of 5 family members or close friends. Draw one family scene below with labels.", "tip": "Amara says: Every family looks different \u2014 all families are special!"},
+            "B": {"title": "Calendar Math", "time": 3, "img": "land2_calendar-math.jpg", "img_alt": "A large calendar with numbers in Numeria", "img_source": "SOE Picture Dictionary \u2014 Land 2", "phonetic": "MON-th | WEEK | DAY | YEE-er | TO-day", "instructions": "Write today's full date. How many days until your next birthday? Which month has the most letters?", "tip": "Kwame says: Calendars are time maps. Always know where you are in the year!"},
+            "C": {"title": "Inside Your Home", "time": 3, "img": "land3_inside-the-home.jpg", "img_alt": "Rooms inside a cozy Terrasol home", "img_source": "SOE Picture Dictionary \u2014 Land 3", "phonetic": "KITCH-en | BED-room | BATH-room | LIV-ing | FLOOR", "instructions": "Draw your home's floor plan from memory. Label: kitchen, bedroom, bathroom, living room. Add your favorite spot with a star!", "tip": "Silas says: Your home is your base camp for all adventures!"},
+            "D": {"title": "Wake-Up Stretch Routine", "time": 2, "img": "land5_exercise-movement.jpg", "img_alt": "Morning stretch sequence", "img_source": "SOE Picture Dictionary \u2014 Land 5", "phonetic": "STRETCH | REECH | BEND | TWIST | BREETH", "instructions": "Do the Harmony Morning Flow: Reach up 5\u00d7, touch toes 5\u00d7, twist left-right 5\u00d7, take 5 deep breaths. Feel calm and ready!", "tip": "Octavia says: A morning body warm-up = a morning brain warm-up!"},
+            "E": {"title": "Aquaria: Map Reading", "time": 2, "img": "land4_map-reading-gps.jpg", "img_alt": "A treasure map in the Aquaria jungle", "img_source": "SOE Picture Dictionary \u2014 Land 4", "phonetic": "MAP | KOM-pass | NORTH | EAST | WEST | SOUTH", "instructions": "Draw a compass rose with N, S, E, W. Then draw a simple map of your bedroom with a compass rose in the corner.", "tip": "Ronan says: Every explorer needs to know: which way is North?", "land": 4, "land_class": "land4", "land_name": "Aquaria", "icon": "\ud83c\udf0a", "subject": "Geography", "char_img": "RONAN.jpg", "char_names": "Ronan & Selene"},
+            "F": {"reflection_prompt": "Who is one person in your family or community you are grateful for? Write their name and one reason."}
+          }
+        },
+        {
+          "week": 2, "day": 2, "day_label": "Tuesday", "day_title": "Patterns & Pets",
+          "primary_land": 2, "primary_land_color": "#7fb685",
+          "primary_char_img": "KWAME.jpg", "primary_char_names": "Kwame & Amara",
+          "blocks": {
+            "A": {"title": "Pets at Home", "time": 3, "img": "land1_pets-at-home.jpg", "img_alt": "Pets and owners in Harmonia homes", "img_source": "SOE Picture Dictionary \u2014 Land 1", "phonetic": "DOG | KAT | FISH | BER-d | RAB-it", "instructions": "Write the pet names from the picture. Do you have a pet? Draw and label it. If not, draw your dream pet!", "tip": "Kwame says: Learning names of animals in English AND your home language doubles your vocabulary!"},
+            "B": {"title": "Pattern Power", "time": 3, "img": "land2_patterns-sequences.jpg", "img_alt": "Repeating patterns in Numeria tiles", "img_source": "SOE Picture Dictionary \u2014 Land 2", "phonetic": "PAT-ern | re-PEET | SEE-kwens | NEXT | RULE", "instructions": "Find the pattern rule for each row in the picture. Draw the next 2 shapes. Create your own A-B-C pattern using colors or shapes!", "tip": "Kwame says: Math is the science of patterns. Patterns are everywhere!"},
+            "C": {"title": "Terrasol Pets Science", "time": 3, "img": "land3_pets-companions.jpg", "img_alt": "Animals as pets in Terrasol setting", "img_source": "SOE Picture Dictionary \u2014 Land 3", "phonetic": "MAM-ul | BIRD | REP-tile | AM-fib-ee-an", "instructions": "Pick one pet from the picture. Write: What it eats, where it sleeps, and one fun fact. Use the picture for clues!", "tip": "Vesta says: Caring for pets teaches responsibility and empathy!"},
+            "D": {"title": "Vitalis Cool-Down Flow", "time": 2, "img": "land5_healthy-habits-hygiene.jpg", "img_alt": "Healthy bedtime routine in Vitalis", "img_source": "SOE Picture Dictionary \u2014 Land 5", "phonetic": "re-LAKS | KOOL-down | KWYET | REST | KUHM", "instructions": "Slow body, calm mind: Roll your shoulders back 3\u00d7. Nod your head slowly 3\u00d7. Breathe in for 4 counts, out for 4. Wiggle fingers and rest.", "tip": "Octavia says: Calm bodies learn the most. You've earned this rest!"},
+            "E": {"title": "Sophia: Government Basics", "time": 2, "img": "land6_government-civics.jpg", "img_alt": "Leaders and government buildings in Sophia", "img_source": "SOE Picture Dictionary \u2014 Land 6", "phonetic": "GOV-ern-ment | LEED-er | LAW | VOT | COM-yoo-nih-tee", "instructions": "Name 2 leaders in your community (school, city, or country). Write: Name, Job Title, One way they help people.", "tip": "Felix says: Government exists to help communities work well together!", "land": 6, "land_class": "land6", "land_name": "Sophia", "icon": "\u2696\ufe0f", "subject": "Civics", "char_img": "FELIX.jpg", "char_names": "Felix & Athena"},
+            "F": {"reflection_prompt": "What pattern did you notice in your day today? (e.g., wake up \u2192 eat \u2192 learn \u2192 play \u2192 sleep). Draw or write your daily pattern."}
+          }
+        },
+        {
+          "week": 2, "day": 3, "day_label": "Wednesday", "day_title": "Color & Creativity",
+          "primary_land": 1, "primary_land_color": "#d4a843",
+          "primary_char_img": "AMARA.jpg", "primary_char_names": "Amara & Kwame",
+          "blocks": {
+            "A": {"title": "Colors & Patterns Words", "time": 3, "img": "land1_colors-patterns.jpg", "img_alt": "Colorful patterns in Harmonia art class", "img_source": "SOE Picture Dictionary \u2014 Land 1", "phonetic": "RED | BLOO | GR\u012aIN | YEL-oh | PUR-pul | or-INJ", "instructions": "Write 6 color words from the picture. Then write each color in its own color (use crayons or pencils if you have them!)", "tip": "Amara says: Colors have names in every language. Learn the rainbow in 2 languages!"},
+            "B": {"title": "Fractions Fun", "time": 3, "img": "land2_fractions-decimals.jpg", "img_alt": "Fractions shown with shapes and food", "img_source": "SOE Picture Dictionary \u2014 Land 2", "phonetic": "FRAK-shun | HALF | QWAR-ter | THIRD | WHOLE", "instructions": "Fold a piece of paper in half. That's 1/2! Fold again \u2014 that's 1/4! Draw and label: 1 whole, 1/2, 1/4 of a circle.", "tip": "Kwame says: Cutting a pizza = fractions! You already know more math than you think!"},
+            "C": {"title": "Insects & Bugs Field Guide", "time": 3, "img": "land3_insects-bugs.jpg", "img_alt": "Colorful insects illustrated in Terrasol meadow", "img_source": "SOE Picture Dictionary \u2014 Land 3", "phonetic": "IN-sekt | BUT-er-fly | BEE | ANT | CRICK-et | LEG", "instructions": "Find an insect in the picture. Write: name, number of legs, wings (yes/no), where it lives. Compare with a second insect!", "tip": "Silas says: All insects have 6 legs. Use that to tell bugs from spiders!"},
+            "D": {"title": "Vitalis Jump Circuit", "time": 2, "img": "land5_sports-fitness.jpg", "img_alt": "Children doing jumping exercises in Vitalis", "img_source": "SOE Picture Dictionary \u2014 Land 5", "phonetic": "JUM | HOP | SKIP | LAND | BAL-ens", "instructions": "Complete the circuit: 10 jumping jacks, 5 hops on each foot, 10 skips (alternate feet). Rest. Repeat if you have energy!", "tip": "Nerissa says: Circuits build heart strength AND coordination. Go go go!"},
+            "E": {"title": "Aquaria: Directions", "time": 2, "img": "land4_directions-navigation.jpg", "img_alt": "Street signs and direction arrows in Aquaria city", "img_source": "SOE Picture Dictionary \u2014 Land 4", "phonetic": "LEST | RITE | STRATE | TER-n | FOR-werd | BACK", "instructions": "Give directions from your room to the kitchen using: left, right, straight, turn. Draw the route like a top-view map.", "tip": "Selene says: Knowing directions keeps you from getting lost. Be your own map!", "land": 4, "land_class": "land4", "land_name": "Aquaria", "icon": "\ud83c\udf0a", "subject": "Geography", "char_img": "RONAN.jpg", "char_names": "Ronan & Selene"},
+            "F": {"reflection_prompt": "If you could paint a mural of your favorite land, which one would you choose? Sketch a tiny version here."}
+          }
+        },
+        {
+          "week": 2, "day": 4, "day_label": "Thursday", "day_title": "Manners & Money",
+          "primary_land": 1, "primary_land_color": "#d4a843",
+          "primary_char_img": "AMARA.jpg", "primary_char_names": "Amara & Kwame",
+          "blocks": {
+            "A": {"title": "Manners Matter", "time": 3, "img": "land1_manners-politeness.jpg", "img_alt": "Children being polite in Harmonia market", "img_source": "SOE Picture Dictionary \u2014 Land 1", "phonetic": "PL\u012aZ | THANK-yoo | EK-SKYOOZ-mee | SOR-ee | WEL-kum", "instructions": "Write 5 polite phrases from the picture. Practice saying each one aloud. Write one sentence using 2 of these phrases.", "tip": "Amara says: Kind words open every door. Practice them today!"},
+            "B": {"title": "Money Makes Sense", "time": 3, "img": "land2_money-currency.jpg", "img_alt": "Coins and bills in Numeria market stalls", "img_source": "SOE Picture Dictionary \u2014 Land 2", "phonetic": "COIN | BIL | CENT | DOL-er | PRICE | CHANJE", "instructions": "If you have $1.00 and a candy costs $0.35, how much change do you get? Draw the coins you'd receive. Try with $0.75 too!", "tip": "Kwame says: Being good with money starts with learning to count it!"},
+            "C": {"title": "Fruits & Vegetables Lab", "time": 3, "img": "land3_fruits-vegetables.jpg", "img_alt": "Colorful produce in a Terrasol farmer's market", "img_source": "SOE Picture Dictionary \u2014 Land 3", "phonetic": "FROOT | VEJ-ih-tuh-bul | SEED | SKIN | JOO-see", "instructions": "Sort these into Fruit or Vegetable: apple, carrot, banana, broccoli, mango, spinach. How do you know which is which? Write your rule.", "tip": "Vesta says: A fruit has seeds inside. A vegetable is a stem, leaf, or root. Check your rule!"},
+            "D": {"title": "Vitalis Mindful Moment", "time": 2, "img": "land5_mental-health-emotions.jpg", "img_alt": "Children breathing and being mindful in Vitalis", "img_source": "SOE Picture Dictionary \u2014 Land 5", "phonetic": "MIND-ful | BREETH | KAM | FO-kus | PEE-ful", "instructions": "Sit up straight. Close your eyes. Breathe in slowly \u2014 4 counts. Hold \u2014 2 counts. Out slowly \u2014 6 counts. Do this 3 times. How do you feel?", "tip": "Octavia says: 3 mindful breaths can change your whole mood. Science says so!"},
+            "E": {"title": "Sophia: Types of Workers", "time": 2, "img": "land6_types-of-workers.jpg", "img_alt": "Many occupations illustrated in Sophia city", "img_source": "SOE Picture Dictionary \u2014 Land 6", "phonetic": "WER-ker | JOB | OC-yoo-PAY-shun | SKILL | EARN", "instructions": "Pick 2 workers from the picture. Write: Job Name, What they do, What skills they need. Which job would you choose?", "tip": "Athena says: Every job is important. Community works because people share responsibilities!", "land": 6, "land_class": "land6", "land_name": "Sophia", "icon": "\u2696\ufe0f", "subject": "Civics", "char_img": "FELIX.jpg", "char_names": "Felix & Athena"},
+            "F": {"reflection_prompt": "What is one way you showed good manners today? Write it down. Good manners are a superpower!"}
+          }
+        },
+        {
+          "week": 2, "day": 5, "day_label": "Friday", "day_title": "Week 2 Quest Complete!",
+          "primary_land": 7, "primary_land_color": "#9678c4",
+          "primary_char_img": "EZRA.jpg", "primary_char_names": "Ezra & Elias",
+          "blocks": {
+            "A": {"title": "Hobby & Hobbies Page", "time": 3, "img": "land1_hobbies-recreation.jpg", "img_alt": "Children enjoying hobbies in Harmonia park", "img_source": "SOE Picture Dictionary \u2014 Land 1", "phonetic": "HOB-ee | PLAY | DRAW | READ | DAN-s | SPORT", "instructions": "Write 5 hobbies from the picture. Circle your favorite. Write 3 sentences: 'I love to ___ because ___.'", "tip": "Kwame says: Hobbies feed your soul and grow your skills. Protect your hobbies!"},
+            "B": {"title": "Estimation Challenge", "time": 3, "img": "land2_estimation-comparison.jpg", "img_alt": "Estimation jars and comparison problems", "img_source": "SOE Picture Dictionary \u2014 Land 2", "phonetic": "ES-tih-MAY-shun | MORE | LES | A-BOUT | KWOZ-ee", "instructions": "Grab a handful of small objects (coins, beans, buttons). Estimate first, then count. Write: My estimate ___, Actual count ___, Difference ___.", "tip": "Kwame says: Estimation is making a smart guess. The best estimators count the most carefully!"},
+            "C": {"title": "Rocks & Minerals Study", "time": 3, "img": "land3_rocks-minerals.jpg", "img_alt": "Colorful rocks and crystals in Terrasol caves", "img_source": "SOE Picture Dictionary \u2014 Land 3", "phonetic": "ROK | MIN-er-ul | KRIS-tul | SMOOTH | ROUGH | HARD", "instructions": "Find 2 rocks near you (outside or in a picture). Describe each: Color, Texture (smooth/rough), Weight (heavy/light), Shiny or dull.", "tip": "Silas says: Every rock tells the story of where it's been. Rocks are Earth's diary!"},
+            "D": {"title": "Vitalis Rest & Recovery", "time": 2, "img": "land5_sleep-rest.jpg", "img_alt": "Healthy sleep habits and rest in Vitalis", "img_source": "SOE Picture Dictionary \u2014 Land 5", "phonetic": "SLEEP | REST | DREEM | RE-cover | EN-er-jee", "instructions": "How many hours did you sleep last night? Kids need 9-11 hours! Write your bedtime routine: 3 steps that help you sleep well.", "tip": "Nerissa says: Sleep = brain recharge. Your brain sorts and saves memories while you sleep!"},
+            "E": {"title": "Celestia Week 2 Review", "time": 2, "img": "land7_the-scientific-method.jpg", "img_alt": "Stars and reflection tools in Celestia", "img_source": "SOE Picture Dictionary \u2014 Land 7", "phonetic": "re-FLEKT | re-VIEW | GROW | LERND | NEXT-WEEK", "instructions": "Draw your Week 2 highlight. Write: 1 thing I learned, 1 thing I want to learn more about, 1 way I grew as a learner this week.", "tip": "Ezra says: Reflection turns experience into wisdom. Future-you thanks present-you!", "land": 7, "land_class": "land7", "land_name": "Celestia", "icon": "\u2728", "subject": "Review & Reflection", "char_img": "ELIAS.jpg", "char_names": "Elias & Ezra"},
+            "F": {"reflection_prompt": "Color the Quest Map star for Week 2. You earned it! Write one word that describes your summer quest so far."}
+          }
+        }
+      ]
+    },
+    {
+      "week": 3,
+      "theme": "Community & Cooperation",
+      "primary_land": 6,
+      "days": [
+        {"week": 3, "day": 1, "day_label": "Monday", "day_title": "Neighborhood Explorers", "primary_land": 6, "primary_land_color": "#5ba4c9", "primary_char_img": "FELIX.jpg", "primary_char_names": "Felix & Athena", "blocks": {"A": {"title": "The Neighborhood", "time": 3, "img": "land1_the-neighborhood.jpg", "img_alt": "Streets, parks and shops in Harmonia neighborhood", "img_source": "SOE Picture Dictionary \u2014 Land 1", "phonetic": "NAIB-er | STREET | PARK | STORE | LIB-ruh-ree", "instructions": "Write 6 neighborhood places from the picture. Which one do you visit most? Draw your street and label 3 places.", "tip": "Amara says: Your neighborhood is your first world. Know every part of it!"},
+        "B": {"title": "Problem Solving Logic", "time": 3, "img": "land2_problem-solving-logic.jpg", "img_alt": "Logic puzzles in Numeria classroom", "img_source": "SOE Picture Dictionary \u2014 Land 2", "phonetic": "PROB-lem | SOL-ve | STEP | THINK | AN-ser", "instructions": "Read: There are 12 apples. 4 children each want the same amount. How many does each child get? Show your work in 3 steps!", "tip": "Kwame says: Every math problem is a puzzle waiting to be solved step by step!"},
+        "C": {"title": "The Environment Project", "time": 3, "img": "land3_the-environment.jpg", "img_alt": "Clean rivers and forests in Terrasol", "img_source": "SOE Picture Dictionary \u2014 Land 3", "phonetic": "en-VY-ron-ment | PO-loo-shun | PRO-tekt | NA-tur | KLEEN", "instructions": "Draw a before/after: one side shows a polluted environment, the other shows a clean one. Write 2 things YOU can do to help.", "tip": "Vesta says: The environment is everyone's home. Protect what you love!"},
+        "D": {"title": "Vitalis Team Fitness", "time": 2, "img": "land5_sports-fitness.jpg", "img_alt": "Team sports and cooperation in Vitalis", "img_source": "SOE Picture Dictionary \u2014 Land 5", "phonetic": "TEEM | CO-op-er-ayt | SPORT | PASS | CHEER", "instructions": "Play mirror game: stand facing a partner or mirror. One person leads slow movements. Switch! Leaders: be creative. Followers: be precise!", "tip": "Nerissa says: Sports teach us to work together AND listen carefully!"},
+        "E": {"title": "Aquaria: Community Places", "time": 2, "img": "land4_community-places.jpg", "img_alt": "Community buildings from a bird's eye view in Aquaria", "img_source": "SOE Picture Dictionary \u2014 Land 4", "phonetic": "SKOOL | HOS-pih-tul | LIB-ruh-ree | POST-of-is | PARK", "instructions": "Write 4 community places. Write why each one is important. Which one would be hardest to live without? Defend your answer!", "tip": "Ronan says: Community places are shared treasure. Take care of them!", "land": 4, "land_class": "land4", "land_name": "Aquaria", "icon": "\ud83c\udf0a", "subject": "Geography", "char_img": "RONAN.jpg", "char_names": "Ronan & Selene"},
+        "F": {"reflection_prompt": "What makes a good neighbor? Write 3 qualities. Are you that kind of neighbor? Circle: Yes / Working on it / Not yet \u2014 then make a plan!"}}},
+        {"week": 3, "day": 2, "day_label": "Tuesday", "day_title": "Jobs & Journeys", "primary_land": 6, "primary_land_color": "#5ba4c9", "primary_char_img": "ATHENA.jpg", "primary_char_names": "Athena & Felix", "blocks": {"A": {"title": "Communication Tech", "time": 3, "img": "land1_communication-technology.jpg", "img_alt": "Phones, computers and letters in Harmonia", "img_source": "SOE Picture Dictionary \u2014 Land 1", "phonetic": "FONE | KOM-pyu-ter | EM-ayl | LET-er | MES-ij", "instructions": "List 5 ways people communicate from the picture. Old or New? Mark each O (old) or N (new). Which way do you use most?", "tip": "Amara says: Communication connects us to the world. Choose your words carefully!"},
+        "B": {"title": "The Grocery Store Math", "time": 3, "img": "land2_the-grocery-store-shopping.jpg", "img_alt": "Shopping at a busy Numeria market", "img_source": "SOE Picture Dictionary \u2014 Land 2", "phonetic": "PRICE | BUD-jet | CHANGE | LIST | COM-pair", "instructions": "Make a grocery list for a pretend party. Write 5 items with prices. Calculate the total. You have $10 \u2014 can you afford it all?", "tip": "Kwame says: Shopping on a budget is real math. You're a financial superstar!"},
+        "C": {"title": "Farm to Table Journey", "time": 3, "img": "land3_farm-to-table.jpg", "img_alt": "Crops being harvested and brought to market", "img_source": "SOE Picture Dictionary \u2014 Land 3", "phonetic": "FARM | HAR-vest | TRANS-port | STORE | COOK | EET", "instructions": "Draw the journey of a tomato: seed \u2192 plant \u2192 harvest \u2192 store \u2192 your plate! Label each step with an action word.", "tip": "Silas says: Understanding where food comes from makes every meal more meaningful!"},
+        "D": {"title": "Vitalis First Aid Basics", "time": 2, "img": "land5_first-aid-injuries.jpg", "img_alt": "First aid kit and basic injury care in Vitalis", "img_source": "SOE Picture Dictionary \u2014 Land 5", "phonetic": "FERST-AYD | BAND-AYJ | ICE | WASH | HELP", "instructions": "Write what you should do for: a small cut, a bruise, a burn. Write STOP, LOOK, THINK before each answer. Ask a adult to check!", "tip": "Octavia says: Knowing first aid is knowing how to help. Be a helper!"},
+        "E": {"title": "Sophia: Occupations", "time": 2, "img": "land6_occupations-careers.jpg", "img_alt": "Workers in different careers in Sophia", "img_source": "SOE Picture Dictionary \u2014 Land 6", "phonetic": "OK-yoo-PAY-shun | CAREER | SKILL | TRAIN | EARN", "instructions": "Pick your dream career from the picture. Write: Job name, 3 skills needed, 1 reason you'd love it. Interview yourself in 3 Q&As!", "tip": "Felix says: Exploring career options now helps you dream bigger later!", "land": 6, "land_class": "land6", "land_name": "Sophia", "icon": "\u2696\ufe0f", "subject": "Civics", "char_img": "ATHENA.jpg", "char_names": "Athena & Felix"},
+        "F": {"reflection_prompt": "If you could help your community in ANY way, what would you do? Write your community superpower!"}}},
+        {"week": 3, "day": 3, "day_label": "Wednesday", "day_title": "Music & Movement", "primary_land": 1, "primary_land_color": "#d4a843", "primary_char_img": "AMARA.jpg", "primary_char_names": "Amara & Kwame", "blocks": {"A": {"title": "Music Instruments", "time": 3, "img": "land1_music-instruments.jpg", "img_alt": "Musical instruments displayed in Harmonia stage", "img_source": "SOE Picture Dictionary \u2014 Land 1", "phonetic": "GYTAR | PYAN-oh | DRUM | FLO\u014aT | VY-oh-lin", "instructions": "Write 5 instrument names. Sort them: String, Wind, or Percussion. Which one sounds like a heartbeat? Which like the wind?", "tip": "Amara says: Music is the universal language. It needs no translation!"},
+        "B": {"title": "Distance & Speed", "time": 3, "img": "land2_distance-speed.jpg", "img_alt": "Race tracks and speed charts in Numeria", "img_source": "SOE Picture Dictionary \u2014 Land 2", "phonetic": "DIS-tans | SPEED | FAST | SLOW | MILE | KIL-oh-ME-ter", "instructions": "If you walk 3 steps per second, how many steps in 10 seconds? 30 seconds? 1 minute? Now time yourself walking 20 steps. How fast?", "tip": "Kwame says: Speed = distance \u00f7 time. You just did physics!"},
+        "C": {"title": "Trees of the Forest", "time": 3, "img": "land3_trees-the-forest.jpg", "img_alt": "Tall trees and forest floor in Terrasol", "img_source": "SOE Picture Dictionary \u2014 Land 3", "phonetic": "TREE | BARK | BRANCH | LEEF | ROOT | SAP", "instructions": "Go outside or look at a tree image. Write 5 tree parts. Draw a tree and label all 5 parts. What animals might live in this tree?", "tip": "Vesta says: One tree can be home to hundreds of creatures. Trees are apartment buildings!"},
+        "D": {"title": "Vitalis Dance Break", "time": 2, "img": "land5_exercise-movement.jpg", "img_alt": "Children dancing freely in Vitalis studio", "img_source": "SOE Picture Dictionary \u2014 Land 5", "phonetic": "DAN-s | RITH-um | BEET | MOV | FEEL", "instructions": "Play your favorite song. Dance freely for the whole song! No rules. Move every part of your body. When it ends, breathe and smile.", "tip": "Nerissa says: Dance is exercise disguised as joy. Sneak in the movement!"},
+        "E": {"title": "Aquaria: Weather & Climate", "time": 2, "img": "land4_weather-climate.jpg", "img_alt": "Climate zones shown on a world map", "img_source": "SOE Picture Dictionary \u2014 Land 4", "phonetic": "KLY-mut | ZONE | TRO-pik-ul | DES-ert | PO-ler", "instructions": "Find 3 climate zones in the picture. Write the zone name and 2 things plants/animals need to survive there.", "tip": "Selene says: Climate is the personality of a place \u2014 the weather it usually has!", "land": 4, "land_class": "land4", "land_name": "Aquaria", "icon": "\ud83c\udf0a", "subject": "Geography", "char_img": "RONAN.jpg", "char_names": "Ronan & Selene"},
+        "F": {"reflection_prompt": "Hum or sing 3 notes right now. You just made music! Write: How did it feel to make sound with your voice?"}}},
+        {"week": 3, "day": 4, "day_label": "Thursday", "day_title": "Safety & Science", "primary_land": 3, "primary_land_color": "#10B981", "primary_char_img": "SILAS.jpg", "primary_char_names": "Silas & Vesta", "blocks": {"A": {"title": "School Events & Activities", "time": 3, "img": "land1_school-events-activities.jpg", "img_alt": "School fair, science day and field trip in Harmonia", "img_source": "SOE Picture Dictionary \u2014 Land 1", "phonetic": "SKOOL-FAIR | SY-ens-DAY | FEELD-TRIP | GRAD-yoo-A-shun", "instructions": "Write 4 school events from the picture. Which is your favorite and why? Write 3 sentences using: first, next, finally.", "tip": "Amara says: School events build community. Show up for your people!"},
+        "B": {"title": "Budget & Savings", "time": 3, "img": "land2_budget-savings.jpg", "img_alt": "A piggy bank and savings chart in Numeria", "img_source": "SOE Picture Dictionary \u2014 Land 2", "phonetic": "BUD-jet | SAVE | SPEND | EARN | GOL", "instructions": "You earn $5 per week for chores. You want a $20 toy. How many weeks to save? Plan your budget: Save $___, Spend $___ each week.", "tip": "Kwame says: Savers are powerful! Future-you will thank present-you!"},
+        "C": {"title": "Rivers & Lakes Science", "time": 3, "img": "land3_rivers-lakes.jpg", "img_alt": "River systems and lake ecology in Terrasol", "img_source": "SOE Picture Dictionary \u2014 Land 3", "phonetic": "RIV-er | LAYK | STREAM | BANKE | FLOW | FRESH-wah-ter", "instructions": "Write how a river is different from a lake. Now draw a river with: source, bank, current, and mouth. Label all 4 parts!", "tip": "Silas says: Rivers are nature's highways. They've carried people and goods for thousands of years!"},
+        "D": {"title": "Vitalis Personal Care", "time": 2, "img": "land5_personal-care-products.jpg", "img_alt": "Personal care products laid out in Vitalis bathroom", "img_source": "SOE Picture Dictionary \u2014 Land 5", "phonetic": "SOAP | SHAM-poo | TOOTH-brUSH | DE-od-or-ant | COMB", "instructions": "Write a 5-step hygiene routine for morning. Write a 3-step routine for bedtime. Circle one habit you want to build this summer.", "tip": "Octavia says: Personal care = self-respect in action!"},
+        "E": {"title": "Sophia: Safety & Emergencies", "time": 2, "img": "land6_safety-emergencies.jpg", "img_alt": "Emergency procedures and safety signs in Sophia", "img_source": "SOE Picture Dictionary \u2014 Land 6", "phonetic": "E-mer-jen-see | SAFE | KALL | HELP | EK-zit | FYRE", "instructions": "Write your home address and a trusted adult's phone number (with their permission). Practice saying: 'My name is ___, my address is ___.'", "tip": "Felix says: Knowing your address could save your life one day!",  "land": 6, "land_class": "land6", "land_name": "Sophia", "icon": "\u2696\ufe0f", "subject": "Civics", "char_img": "FELIX.jpg", "char_names": "Felix & Athena"},
+        "F": {"reflection_prompt": "Write 3 safety rules you follow. Why is each one important? Who taught you these rules? Say thank you to that person today."}}},
+        {"week": 3, "day": 5, "day_label": "Friday", "day_title": "Week 3 Celebration!", "primary_land": 7, "primary_land_color": "#9678c4", "primary_char_img": "EZRA.jpg", "primary_char_names": "Ezra & Elias", "blocks": {"A": {"title": "Playground Vocabulary", "time": 3, "img": "land1_the-playground-recess.jpg", "img_alt": "Playground equipment and children playing in Harmonia", "img_source": "SOE Picture Dictionary \u2014 Land 1", "phonetic": "SLIDE | SWING | CLIMB | RUN | FRIEND", "instructions": "Write 6 playground words. Use 3 of them in a story about your best recess ever. Include a beginning, middle, and end.", "tip": "Kwame says: Great stories have a problem AND a solution. What's the problem at recess?"},
+        "B": {"title": "Data & Statistics", "time": 3, "img": "land2_data-statistics.jpg", "img_alt": "Charts and graphs showing data in Numeria", "img_source": "SOE Picture Dictionary \u2014 Land 2", "phonetic": "DAY-tuh | AVER-ij | MODE | RANGE | SUR-vay", "instructions": "Survey 5 people: How many hours of TV did you watch yesterday? Find the average (add all \u00f7 5). Now make a bar graph!", "tip": "Kwame says: Data tells stories that words can't always tell. Be a data detective!"},
+        "C": {"title": "Camping & Hiking Adventure", "time": 3, "img": "land3_camping-hiking.jpg", "img_alt": "Campers with gear in the Terrasol wilderness", "img_source": "SOE Picture Dictionary \u2014 Land 3", "phonetic": "CAMP | HIKE | TENT | TRAIL | PACK | FIRE-place", "instructions": "Pack your imaginary backpack for a 1-day hike! Write 8 essential items. Explain why each is important using 'because'.", "tip": "Vesta says: Preparation is the most important outdoor skill. Prepare well, hike safely!"},
+        "D": {"title": "Vitalis Eye Care", "time": 2, "img": "land5_eye-care-vision.jpg", "img_alt": "Eye health and vision care in Vitalis clinic", "img_source": "SOE Picture Dictionary \u2014 Land 5", "phonetic": "EYE | VI-zhun | GLASS-ez | BLINK | CHART", "instructions": "Take an eye break: Look away from this page for 20 seconds. Blink 10 times. Focus on something far away. How do your eyes feel?", "tip": "Nerissa says: The 20-20-20 rule: every 20 min, look 20 feet away for 20 seconds. Protect your eyes!"},
+        "E": {"title": "Celestia Week 3 Review", "time": 2, "img": "land7_the-future-dreams.jpg", "img_alt": "Children dreaming about the future in Celestia", "img_source": "SOE Picture Dictionary \u2014 Land 7", "phonetic": "DREEM | FU-cher | GOAL | HOPE | PLAN | GROW", "instructions": "Draw your future self doing your dream job. Write: Age I'll be, Job title, One skill I need to learn to get there!", "tip": "Ezra says: Dreams become plans when you write them down. Write yours TODAY!", "land": 7, "land_class": "land7", "land_name": "Celestia", "icon": "\u2728", "subject": "Review & Reflection", "char_img": "ELIAS.jpg", "char_names": "Elias & Ezra"},
+        "F": {"reflection_prompt": "3 weeks done! Color 3 stars on your Quest Map. Write: The best thing about this summer stretch so far is ___"}}}
+      ]
+    },
+    {
+      "week": 4,
+      "theme": "Wonders of the World",
+      "primary_land": 4,
+      "days": [
+        {"week": 4, "day": 1, "day_label": "Monday", "day_title": "Transportation Around the World", "primary_land": 4, "primary_land_color": "#2563EB", "primary_char_img": "RONAN.jpg", "primary_char_names": "Ronan & Selene", "blocks": {"A": {"title": "Celebrations Around the World", "time": 3, "img": "land1_celebrations-traditions.jpg", "img_alt": "Festivals and celebrations from different cultures in Harmonia", "img_source": "SOE Picture Dictionary \u2014 Land 1", "phonetic": "SEL-eh-BRAY-shun | TRA-dish-un | FES-tih-vul | CUS-tum", "instructions": "Find 3 celebrations in the picture. Write each name and one thing people do during it. Share: what is a celebration from YOUR culture?", "tip": "Amara says: Every culture's celebrations are beautiful. Curiosity = respect!"},
+        "B": {"title": "Weight & Measurement", "time": 3, "img": "land2_weights-measures.jpg", "img_alt": "Scales and metric units in Numeria workshop", "img_source": "SOE Picture Dictionary \u2014 Land 2", "phonetic": "WATE | POUND | KILO | SCALE | LIB-re", "instructions": "Find 5 objects at home. Estimate: heavier or lighter than a shoe? Now check by lifting both. Were your estimates right?", "tip": "Kwame says: Estimation gets better with practice. Every wrong guess teaches you!"},
+        "C": {"title": "Desert Dry Lands", "time": 3, "img": "land3_desert-dry-lands.jpg", "img_alt": "Cacti and desert animals in a Terrasol dry zone", "img_source": "SOE Picture Dictionary \u2014 Land 3", "phonetic": "DES-ert | KAK-tus | SAND | DRY | SUR-vive", "instructions": "Write 3 desert adaptations plants OR animals use to survive. Draw a desert scene with at least 2 living things labeled.", "tip": "Silas says: Desert creatures are survival experts. What can we learn from them?"},
+        "D": {"title": "Vitalis Outdoor Moves", "time": 2, "img": "land5_exercise-movement.jpg", "img_alt": "Outdoor physical activities in Vitalis", "img_source": "SOE Picture Dictionary \u2014 Land 5", "phonetic": "HIKE | KART-WHEEL | KLIM | WADE | EK-splore", "instructions": "Go outside (or open a window). Do 10 jumping jacks, 5 push-ups against a wall, and hold a balance pose for 10 seconds each leg!", "tip": "Nerissa says: Fresh air + movement = the best learning fuel!"},
+        "E": {"title": "Aquaria: Transportation", "time": 2, "img": "land4_transportation.jpg", "img_alt": "Trains, planes, and ships in the Aquaria world", "img_source": "SOE Picture Dictionary \u2014 Land 4", "phonetic": "TRANS-port | PLANE | TRAIN | SHIP | BUS | KAR", "instructions": "List 5 types of transport. Write: Land, Water, or Air? Which is fastest? Draw your favorite and write one fact about it!", "tip": "Ronan says: Transportation shrinks the world. How many places can you reach in a day?", "land": 4, "land_class": "land4", "land_name": "Aquaria", "icon": "\ud83c\udf0a", "subject": "Geography", "char_img": "RONAN.jpg", "char_names": "Ronan & Selene"},
+        "F": {"reflection_prompt": "If you could travel to any country in the world, where would you go? Write 3 things you would see, eat, or do there."}}},
+        {"week": 4, "day": 2, "day_label": "Tuesday", "day_title": "Banking & Borrowing", "primary_land": 2, "primary_land_color": "#7fb685", "primary_char_img": "KWAME.jpg", "primary_char_names": "Kwame & Amara", "blocks": {"A": {"title": "Colors in Clothing", "time": 3, "img": "land1_clothing-getting-dressed.jpg", "img_alt": "Clothing items for different seasons in Harmonia", "img_source": "SOE Picture Dictionary \u2014 Land 1", "phonetic": "SHIRT | PANTS | DRESS | SOKS | SHOES | JAK-et", "instructions": "Write 8 clothing items from the picture. Sort by: Hot weather / Cold weather / Any weather. What are you wearing right now? List 5 items.", "tip": "Kwame says: Dressing for the weather is practical science!"},
+        "B": {"title": "The Bank & Finances", "time": 3, "img": "land2_the-bank.jpg", "img_alt": "A bank and financial services in Numeria", "img_source": "SOE Picture Dictionary \u2014 Land 2", "phonetic": "BANK | SAV-ings | A-KOUNT | DE-poz-it | WITH-draw", "instructions": "You deposit $10 on Monday. Withdraw $3 on Wednesday. Deposit $5 on Friday. What's your balance? Show your work like a bank statement!", "tip": "Kwame says: A bank is just a safe place for your savings that also pays you interest!"},
+        "C": {"title": "Inside the Body", "time": 3, "img": "land5_inside-the-body.jpg", "img_alt": "Body system diagrams in Vitalis medical center", "img_source": "SOE Picture Dictionary \u2014 Land 5", "phonetic": "HART | LUNG | STOM-ak | BRANE | BONE | MUS-ul", "instructions": "Match the organ to its job: Heart (pumps blood), Lungs (breathe air), Stomach (digests food), Brain (thinks & controls). Draw and label!", "tip": "Octavia says: You have an entire system working for you right now. Thank your body!"},
+        "D": {"title": "Vitalis Dental Health", "time": 2, "img": "land5_the-dentist.jpg", "img_alt": "A dentist visit and dental tools in Vitalis clinic", "img_source": "SOE Picture Dictionary \u2014 Land 5", "phonetic": "TOOTH | BRUS | FLOSS | DEN-tist | KAV-ih-tee", "instructions": "Brush your teeth for exactly 2 minutes (time yourself!). Do you brush all surfaces? Write your dental routine in 4 steps.", "tip": "Nerissa says: Your teeth are your forever tools. Treat them like gold!"},
+        "E": {"title": "Sophia: Banking Services", "time": 2, "img": "land6_banking-online-services.jpg", "img_alt": "Online banking and ATMs in Sophia financial district", "img_source": "SOE Picture Dictionary \u2014 Land 6", "phonetic": "ON-line | A-T-M | DE-bit | KRED-it | TRANS-fer", "instructions": "Write 3 banking words and their definitions. Ask an adult: do they use a bank? What do they use it for? Record their answers.", "tip": "Athena says: Understanding money systems gives you power over your financial future!", "land": 6, "land_class": "land6", "land_name": "Sophia", "icon": "\u2696\ufe0f", "subject": "Civics", "char_img": "ATHENA.jpg", "char_names": "Athena & Felix"},
+        "F": {"reflection_prompt": "What is one thing you want to save money for someday? Write the goal and how long you think it would take."}}},
+        {"week": 4, "day": 3, "day_label": "Wednesday", "day_title": "Maps & Modes of Travel", "primary_land": 4, "primary_land_color": "#2563EB", "primary_char_img": "SELENE.jpg", "primary_char_names": "Selene & Ronan", "blocks": {"A": {"title": "Days, Months & Numbers", "time": 3, "img": "land1_days-months-numbers.jpg", "img_alt": "Calendar page and ordinal numbers in Harmonia", "img_source": "SOE Picture Dictionary \u2014 Land 1", "phonetic": "JAN-yoo-ere | FEB-roo-ere | MARCH | A-pril | MAY", "instructions": "Write all 12 months in order. How many start with J? With M? Cross out the month of your birthday. How many months until it?", "tip": "Amara says: Calendar fluency is time mastery. Own your year!"},
+        "B": {"title": "Cooking Measurements", "time": 3, "img": "land2_cooking-measurements.jpg", "img_alt": "Measuring cups and spoons in a Numeria kitchen", "img_source": "SOE Picture Dictionary \u2014 Land 2", "phonetic": "CUP | TABLE-spoon | TEE-spoon | PINT | QUART | GAL-on", "instructions": "How many teaspoons in a tablespoon? (3!) How many tablespoons in 1/4 cup? (4!) Practice converting: 2 cups to tablespoons. Show work!", "tip": "Kwame says: Kitchen math is real-world math that tastes delicious!"},
+        "C": {"title": "The Garden at Work", "time": 3, "img": "land3_the-garden.jpg", "img_alt": "A productive vegetable garden in Terrasol", "img_source": "SOE Picture Dictionary \u2014 Land 3", "phonetic": "GAR-den | SOY-ul | WEED | WAHR-ter | POL-ih-nayt | GROWS", "instructions": "Draw a garden with: 3 vegetables, bugs that help it (bees!), a water source, and soil layers. Label everything. Add sun and rain!", "tip": "Vesta says: A garden is the world's most patient science experiment!"},
+        "D": {"title": "Vitalis Walking Challenge", "time": 2, "img": "land4_bicycle-walking.jpg", "img_alt": "Walking paths and cycling routes in Aquaria", "img_source": "SOE Picture Dictionary \u2014 Land 4", "phonetic": "WALK | BIKE | PATHS | EK-ser-syz | HEALTH | MYLE", "instructions": "Count your steps for 1 minute of normal walking. Multiply by 10 for your 10-minute total. Most adults walk 10,000 steps/day. How many minutes for you?", "tip": "Nerissa says: Walking is the most underrated exercise. It's powerful AND free!"},
+        "E": {"title": "Aquaria: Seasons & Cycles", "time": 2, "img": "land4_seasons-nature-cycles.jpg", "img_alt": "The four seasons shown in Aquaria landscape", "img_source": "SOE Picture Dictionary \u2014 Land 4", "phonetic": "SPRI\u014a | SUM-er | FOL | WIN-ter | SY-kul | CHAYNJ", "instructions": "Draw a circle divided in 4 sections for the 4 seasons. Add: one plant and one animal for each season. Write the season names!", "tip": "Selene says: Seasons are Earth's way of breathing. Everything changes and returns!", "land": 4, "land_class": "land4", "land_name": "Aquaria", "icon": "\ud83c\udf0a", "subject": "Geography", "char_img": "RONAN.jpg", "char_names": "Ronan & Selene"},
+        "F": {"reflection_prompt": "If Earth had 5 seasons, what would the new one be called? What would the weather be like? What would grow?"}}},
+        {"week": 4, "day": 4, "day_label": "Thursday", "day_title": "School Subjects Showcase", "primary_land": 6, "primary_land_color": "#5ba4c9", "primary_char_img": "FELIX.jpg", "primary_char_names": "Felix & Athena", "blocks": {"A": {"title": "The Home Vocabulary", "time": 3, "img": "land1_the-home.jpg", "img_alt": "Rooms and furniture inside a Harmonia home", "img_source": "SOE Picture Dictionary \u2014 Land 1", "phonetic": "ROO-m | FUR-nih-cher | CEIL-ing | FLOOR | WIN-dow | DOOR", "instructions": "Write 8 home vocabulary words from the picture. Now write 3 sentences describing your home. Use at least 5 vocabulary words!", "tip": "Amara says: Home vocabulary helps you describe your world to new friends!"},
+        "B": {"title": "Basic Math Operations", "time": 3, "img": "land2_basic-math-operations.jpg", "img_alt": "Addition, subtraction, multiplication and division in Numeria", "img_source": "SOE Picture Dictionary \u2014 Land 2", "phonetic": "ADD | SUB-trakt | MUL-tih-ply | dih-VIDE | E-KWALS", "instructions": "Solve one of each: 47+38=?, 93-26=?, 6\u00d79=?, 56\u00f77=?  Show your work. Circle the operation that feels hardest. Practice 3 more of those!", "tip": "Kwame says: Practice the hard ones FIRST. That's where the growth is!"},
+        "C": {"title": "Ocean Beach Science", "time": 3, "img": "land3_the-ocean-beach.jpg", "img_alt": "Tide pools and beach life in Terrasol coast", "img_source": "SOE Picture Dictionary \u2014 Land 3", "phonetic": "TIDE | WAVE | SHELL | SAND | KRAB | STAR-fish", "instructions": "Draw a tide pool from memory or from the picture. Label 4 creatures. Write: How does a tide pool form? (Hint: tides go in and out!)", "tip": "Silas says: Tide pools are windows into the ocean world. So much life in one tiny space!"},
+        "D": {"title": "Vitalis Produce Market", "time": 2, "img": "land5_the-produce-market.jpg", "img_alt": "Colorful fruit and vegetable stands in Vitalis market", "img_source": "SOE Picture Dictionary \u2014 Land 5", "phonetic": "PRO-dyoos | FRESH | OR-gan-ik | SEE-zon-ul | LOK-ul", "instructions": "Name 5 fruits or vegetables in the picture. Write: local (grown nearby) or not? In season (it's summer!) or not? Draw your top 3 picks!", "tip": "Octavia says: Fresh, local, seasonal food is the most nutritious. Shop smart!"},
+        "E": {"title": "Sophia: School & Education", "time": 2, "img": "land6_school-subjects-education.jpg", "img_alt": "Classroom subjects displayed in Sophia academy", "img_source": "SOE Picture Dictionary \u2014 Land 6", "phonetic": "MATH | SY-ens | HISS-tree | ENG-lish | ART | MU-zik", "instructions": "List 6 school subjects. Write your favorite and why. Write one that's hard for you. Write ONE strategy you'll try to improve!", "tip": "Athena says: Hard subjects are just skills you haven't mastered yet. Yet is the most powerful word!", "land": 6, "land_class": "land6", "land_name": "Sophia", "icon": "\u2696\ufe0f", "subject": "Civics", "char_img": "ATHENA.jpg", "char_names": "Athena & Felix"},
+        "F": {"reflection_prompt": "If you were a teacher for one day, what subject would you teach? How would you make it fun? Plan your lesson in 3 steps."}}},
+        {"week": 4, "day": 5, "day_label": "Friday", "day_title": "Week 4 World Wonder Complete!", "primary_land": 7, "primary_land_color": "#9678c4", "primary_char_img": "ELIAS.jpg", "primary_char_names": "Elias & Ezra", "blocks": {"A": {"title": "Emergency & Postal Services", "time": 3, "img": "land4_emergency-services.jpg", "img_alt": "Emergency vehicles and services in Aquaria city", "img_source": "SOE Picture Dictionary \u2014 Land 4", "phonetic": "AM-byoo-lans | FYRE-TRUk | PO-leece | RES-kyoo | HELP", "instructions": "Write 5 emergency service words. Write the correct number to call in an emergency (911 in USA). When should you call for help?", "tip": "Ronan says: Knowing when and how to call for help is a life skill. Practice it!"},
+        "B": {"title": "Problem Solving: Word Problems", "time": 3, "img": "land2_problem-solving-logic.jpg", "img_alt": "Students solving word problems in Numeria lab", "img_source": "SOE Picture Dictionary \u2014 Land 2", "phonetic": "PROB-lem | UND-er-stand | PLAN | SOLVE | CHECK", "instructions": "Make up your own word problem using numbers from your life (your age, family size, etc.). Write it and solve it. Share with a family member!", "tip": "Kwame says: When you write math problems, you understand math deeply!"},
+        "C": {"title": "Shapes in the World", "time": 3, "img": "land3_shapes-in-the-world.jpg", "img_alt": "Geometric shapes found in nature and buildings", "img_source": "SOE Picture Dictionary \u2014 Land 3", "phonetic": "SHAPE | NA-cher | HEXA-gon | SPI-ral | SIM-et-ree", "instructions": "Look around you. Find 5 real-world shapes: Write the object and the shape. Draw each object. Which shape appears most in nature?", "tip": "Vesta says: Beehives are hexagons because it's the strongest and most efficient shape. Nature is a mathematician!"},
+        "D": {"title": "Vitalis Sleep Science", "time": 2, "img": "land5_sleep-rest.jpg", "img_alt": "Sleep cycle diagram and rest tips in Vitalis", "img_source": "SOE Picture Dictionary \u2014 Land 5", "phonetic": "SLEEP | DREEM | REM | SAIKL | REST | MEM-oh-ree", "instructions": "Design your perfect bedtime routine in 5 steps. Include: a wind-down activity, no screens, a write/draw journal time, and lights out time!", "tip": "Nerissa says: A consistent bedtime routine is one of the best gifts you can give your brain!"},
+        "E": {"title": "Celestia Week 4 Review", "time": 2, "img": "land7_planet-earth.jpg", "img_alt": "Planet Earth from space shown in Celestia observatory", "img_source": "SOE Picture Dictionary \u2014 Land 7", "phonetic": "PLAN-et | ORE-bit | AK-sis | RO-tate | RE-volv | GRAV-ih-tee", "instructions": "Draw Earth. Label: North Pole, South Pole, equator, and one continent. Write one amazing fact about Earth you learned this week!", "tip": "Ezra says: Earth is the only planet we know that has life. It's the most precious thing in the universe!", "land": 7, "land_class": "land7", "land_name": "Celestia", "icon": "\u2728", "subject": "Review & Reflection", "char_img": "ELIAS.jpg", "char_names": "Elias & Ezra"},
+        "F": {"reflection_prompt": "4 weeks! Halfway! Color your Quest Map halfway point. Write: The world-wonder I learned that amazed me most was ___ because ___"}}
+        }
+      ]
+    },
+    {
+      "week": 5,
+      "theme": "Body, Mind & Balance",
+      "primary_land": 5,
+      "days": [
+        {"week": 5, "day": 1, "day_label": "Monday", "day_title": "Mind-Body Morning", "primary_land": 5, "primary_land_color": "#c4785a", "primary_char_img": "NERISSA.jpg", "primary_char_names": "Nerissa & Octavia", "blocks": {"A": {"title": "Mental Health & Emotions", "time": 3, "img": "land5_mental-health-emotions.jpg", "img_alt": "Children expressing emotions safely in Vitalis", "img_source": "SOE Picture Dictionary \u2014 Land 5", "phonetic": "MEN-tul-HELTH | ANG-ZY-uh-tee | JOY | STRESS | KAM", "instructions": "Write 6 emotions from the picture. Write when you feel each one. Draw 3 healthy things you can do when feeling upset or anxious.", "tip": "Octavia says: All feelings are valid. What matters is what you DO with them!"},
+        "B": {"title": "Basic Math Facts Sprint", "time": 3, "img": "land2_basic-math-operations.jpg", "img_alt": "Math fact flashcards in Numeria sprint challenge", "img_source": "SOE Picture Dictionary \u2014 Land 2", "phonetic": "FAKT | SPEED | PRAK-tis | MAS-ter | TIYMD", "instructions": "Time yourself: write all multiples of 3 up to 30. Then all multiples of 4 up to 40. Then all multiples of 7 up to 70. Beat your time!", "tip": "Kwame says: Math facts are your mental tools. Sharper tools = faster building!"},
+        "C": {"title": "Inside the Body Systems", "time": 3, "img": "land5_inside-the-body.jpg", "img_alt": "Human body internal organs in Vitalis", "img_source": "SOE Picture Dictionary \u2014 Land 5", "phonetic": "DY-jest | SIR-kyoo-layt | BREETH | SENS | NAYRV", "instructions": "Write the 3 body systems from the picture. For each: Name of system + its job + one organ that belongs to it. Draw one system!", "tip": "Nerissa says: Your body has 11 major systems all working together every second!"},
+        "D": {"title": "Vitalis Yoga Moves", "time": 2, "img": "land5_exercise-movement.jpg", "img_alt": "Yoga poses for children in Vitalis", "img_source": "SOE Picture Dictionary \u2014 Land 5", "phonetic": "YO-guh | POSE | BAL-ens | BREETH | STRENG-th | FLEX", "instructions": "Try 3 yoga poses: Mountain pose (stand tall, 10 breaths), Warrior I (lunge forward, arms up, 5 breaths), Child's pose (fold forward, 10 breaths).", "tip": "Octavia says: Yoga is strength, flexibility AND calm all in one. It's a full body upgrade!"},
+        "E": {"title": "Aquaria: Freshwater Life", "time": 2, "img": "land4_freshwater-life.jpg", "img_alt": "Fish, frogs and plants in freshwater habitat", "img_source": "SOE Picture Dictionary \u2014 Land 4", "phonetic": "FRESH-wah-ter | FROG | FISH | AL-gee | DRAGONFLY | POND", "instructions": "Write 4 freshwater animals. Write: Does it live IN the water, ON the water, or NEAR the water? Draw a labeled freshwater food chain!", "tip": "Ronan says: Freshwater is rare \u2014 only 3% of Earth's water is fresh. Every drop counts!", "land": 4, "land_class": "land4", "land_name": "Aquaria", "icon": "\ud83c\udf0a", "subject": "Geography", "char_img": "RONAN.jpg", "char_names": "Ronan & Selene"},
+        "F": {"reflection_prompt": "How does your body feel right now? Rate each: energy (1-5), mood (1-5), focus (1-5). What does your body need today?"}}},
+        {"week": 5, "day": 2, "day_label": "Tuesday", "day_title": "Kitchen Science", "primary_land": 5, "primary_land_color": "#c4785a", "primary_char_img": "OCTAVIA.jpg", "primary_char_names": "Octavia & Nerissa", "blocks": {"A": {"title": "Meal Time Vocabulary", "time": 3, "img": "land5_meal-time.jpg", "img_alt": "Family eating a healthy meal in Vitalis dining room", "img_source": "SOE Picture Dictionary \u2014 Land 5", "phonetic": "MEAL | BREK-fust | LUN-ch | DIN-er | SNAKS | TEB-ul", "instructions": "Write 8 meal-related words from the picture. Plan a healthy breakfast using words from the picture. Write ingredients and one reason it's nutritious.", "tip": "Nerissa says: Breakfast fuels your morning brain. It's the most important input!"},
+        "B": {"title": "Fractions in the Kitchen", "time": 3, "img": "land2_cooking-measurements.jpg", "img_alt": "Baking with fractions in Numeria kitchen", "img_source": "SOE Picture Dictionary \u2014 Land 2", "phonetic": "FRAK-shun | HAF | QWAR-ter | THIRD | MEZ-er", "instructions": "A recipe needs 3/4 cup of flour. You want to make double. How much flour do you need? Half the recipe? Show ALL your work with fraction drawings!", "tip": "Kwame says: Doubling or halving recipes is the most delicious fraction practice!"},
+        "C": {"title": "Kitchen Science Lab", "time": 3, "img": "land3_the-barnyard.jpg", "img_alt": "Farm animals and barns in Terrasol countryside", "img_source": "SOE Picture Dictionary \u2014 Land 3", "phonetic": "BARN | KAO | PIG | HEN | EGG | MIL-k | WOOL", "instructions": "Write 5 farm animals and one food they give us (cow\u2192milk, hen\u2192egg). Draw a barnyard scene with labels. Which animal gives us the most products?", "tip": "Vesta says: Farms are the original food factories. Farmers are heroes!"},
+        "D": {"title": "Vitalis Doctor's Visit", "time": 2, "img": "land5_the-doctors-office.jpg", "img_alt": "A friendly doctor's office in Vitalis medical center", "img_source": "SOE Picture Dictionary \u2014 Land 5", "phonetic": "DOKT-er | NURS | CHECK-up | VIT-uls | STETH-oh-skope", "instructions": "Write 5 doctor's office words. When did you last have a check-up? Write 3 questions you would ask your doctor if you could see one today.", "tip": "Octavia says: Asking doctors questions is how you take charge of your health!"},
+        "E": {"title": "Sophia: Forms & Documents", "time": 2, "img": "land6_forms-documents.jpg", "img_alt": "Official forms and documents in Sophia city hall", "img_source": "SOE Picture Dictionary \u2014 Land 6", "phonetic": "FORM | DOK-yoo-ment | SIGN | DATE | ID | FILL-in", "instructions": "Fill in this mini form: Full Name, Date, City, Favorite Subject, Signature. Why do we need forms? Write 2 reasons documents are important.", "tip": "Athena says: Knowing how to fill out forms is a real-world life skill. Practice today!", "land": 6, "land_class": "land6", "land_name": "Sophia", "icon": "\u2696\ufe0f", "subject": "Civics", "char_img": "ATHENA.jpg", "char_names": "Athena & Felix"},
+        "F": {"reflection_prompt": "What is one healthy habit you want to start this week? Write it as a goal: I will ___ every day for ___ days."}}},
+        {"week": 5, "day": 3, "day_label": "Wednesday", "day_title": "Energy & Rest", "primary_land": 5, "primary_land_color": "#c4785a", "primary_char_img": "NERISSA.jpg", "primary_char_names": "Nerissa & Octavia", "blocks": {"A": {"title": "The Pharmacy Vocabulary", "time": 3, "img": "land5_the-pharmacy.jpg", "img_alt": "Medicine bottles and pharmacy in Vitalis", "img_source": "SOE Picture Dictionary \u2014 Land 5", "phonetic": "FAR-muh-see | MED-ih-sin | DOSE | PRE-skrip-shun | AL-er-jee", "instructions": "Write 5 pharmacy words. Why is it important to follow medicine instructions carefully? Write 2 rules for taking medicine safely.", "tip": "Nerissa says: ALWAYS ask a trusted adult before taking any medicine. Always!"},
+        "B": {"title": "Numeria Calendar & Planning", "time": 3, "img": "land2_calendar-math.jpg", "img_alt": "Monthly calendar with events marked", "img_source": "SOE Picture Dictionary \u2014 Land 2", "phonetic": "SKED-yool | PLAN | EVENT | DEAD-line | RE-mind-er", "instructions": "Mark YOUR current month's calendar: circle today, draw a star on your birthday month, add 3 summer plans with dates. How many school days until September?", "tip": "Kwame says: Planning ahead puts YOU in charge of your time. Own your calendar!"},
+        "C": {"title": "Energy & Forces", "time": 3, "img": "land7_energy-forces.jpg", "img_alt": "Solar, wind, and water energy in Celestia", "img_source": "SOE Picture Dictionary \u2014 Land 7", "phonetic": "EN-er-jee | FORCE | PUSH | PULL | SO-ler | WIND", "instructions": "Write 3 types of energy from the picture. For each: What is the source? How do we use it? Is it renewable? Draw YOUR favorite energy source!", "tip": "Elias says: The sun powers all life on Earth \u2014 directly or indirectly. It's the original power source!"},
+        "D": {"title": "Vitalis Sleep Experiment", "time": 2, "img": "land5_sleep-rest.jpg", "img_alt": "Sleep tracking chart in Vitalis wellness center", "img_source": "SOE Picture Dictionary \u2014 Land 5", "phonetic": "TIRED | ENERGIZED | HOURS | TRACK | AVER-ij", "instructions": "Find out: How many hours did you sleep the last 3 nights? Calculate the average. Are you getting the 9-11 hours kids need? Make a plan!", "tip": "Octavia says: Consistent sleep beats occasional long sleeps. Routine is key!"},
+        "E": {"title": "Aquaria: Road Signs Safety", "time": 2, "img": "land4_road-signs-safety.jpg", "img_alt": "Traffic signs and pedestrian safety in Aquaria streets", "img_source": "SOE Picture Dictionary \u2014 Land 4", "phonetic": "STOP | YELD | SPEED | KROSign | PEED-ES-tree-an", "instructions": "Draw and label 5 road signs from memory. Write what each one means. Which sign is most important for pedestrians (people walking)?", "tip": "Selene says: Understanding road signs keeps everyone safe. Signs speak a universal language!", "land": 4, "land_class": "land4", "land_name": "Aquaria", "icon": "\ud83c\udf0a", "subject": "Geography", "char_img": "RONAN.jpg", "char_names": "Ronan & Selene"},
+        "F": {"reflection_prompt": "Rate your energy today (1-5). What gave you energy? What drained you? Write one change that could help you feel more energized tomorrow."}}},
+        {"week": 5, "day": 4, "day_label": "Thursday", "day_title": "Strength & Strategy", "primary_land": 5, "primary_land_color": "#c4785a", "primary_char_img": "OCTAVIA.jpg", "primary_char_names": "Octavia & Nerissa", "blocks": {"A": {"title": "The Home Expanded", "time": 3, "img": "land1_the-home.jpg", "img_alt": "Expanded home vocabulary in Harmonia", "img_source": "SOE Picture Dictionary \u2014 Land 1", "phonetic": "PORCH | AK-atik | SEELER | YARD | FENCE | GAY-raj", "instructions": "Add 5 new home words to your vocabulary: attic, basement, porch, yard, garage. Write a sentence for each. Draw your dream home!", "tip": "Amara says: Your home vocabulary grows as your world grows!"},
+        "B": {"title": "Money Management", "time": 3, "img": "land6_money-management-bills.jpg", "img_alt": "Bills and money management worksheets in Sophia", "img_source": "SOE Picture Dictionary \u2014 Land 6", "phonetic": "BIL | RENT | EL-ek-trik | FOOD | SAV-ings | NEEDS | WANTS", "instructions": "Sort these into Needs or Wants: food, game console, electricity, shoes, streaming service, medication, new toy. Total needs vs. wants. Which should come first?", "tip": "Athena says: Understanding needs vs. wants is the foundation of all financial wisdom!"},
+        "C": {"title": "Silas & Vesta's Cottage", "time": 3, "img": "land3_silas-vestas-cottage-outside.jpg", "img_alt": "The outside of Silas and Vesta's cottage in Terrasol", "img_source": "SOE Picture Dictionary \u2014 Land 3", "phonetic": "KOT-ij | GAR-den | NECH-er | QUYET | HERBS | STREAM", "instructions": "Study the cottage carefully. Write 5 things you CAN see and 3 things you IMAGINE are inside. Why would you love or dislike living there?", "tip": "Silas says: Our cottage is small, but it has everything we need. Simplicity is power!"},
+        "D": {"title": "Vitalis Sports Drill", "time": 2, "img": "land5_sports-fitness.jpg", "img_alt": "Sports drills and training in Vitalis arena", "img_source": "SOE Picture Dictionary \u2014 Land 5", "phonetic": "DRIL | TRAYN | PRAK-tis | KOOR-dih-nay-shun | AGIL-ih-tee", "instructions": "Agility drill: Lay out 5 spots on the floor (socks work!). Touch each with your right hand as fast as possible, then left hand. Time both rounds!", "tip": "Nerissa says: Agility is quick, controlled movement. It's useful in sports AND in life!"},
+        "E": {"title": "Sophia: Job Interview Skills", "time": 2, "img": "land6_job-interview-skills.jpg", "img_alt": "A job interview scene in Sophia workplace", "img_source": "SOE Picture Dictionary \u2014 Land 6", "phonetic": "IN-ter-view | PO-liyt | KON-fi-dent | PRAK-tis | SKILL", "instructions": "Practice answering: 'What is your greatest strength?' and 'What do you want to improve?' Write both answers in full sentences. Then say them aloud!", "tip": "Felix says: Confidence is a skill, not a gift. Practice it daily!", "land": 6, "land_class": "land6", "land_name": "Sophia", "icon": "\u2696\ufe0f", "subject": "Civics", "char_img": "FELIX.jpg", "char_names": "Felix & Athena"},
+        "F": {"reflection_prompt": "What is one thing your body can do that you're proud of? Write it and say it out loud. Your body is amazing!"}}},
+        {"week": 5, "day": 5, "day_label": "Friday", "day_title": "Week 5 Balance Champion!", "primary_land": 7, "primary_land_color": "#9678c4", "primary_char_img": "ELIAS.jpg", "primary_char_names": "Elias & Ezra", "blocks": {"A": {"title": "School Events Recap", "time": 3, "img": "land1_school-events-activities.jpg", "img_alt": "Fun school events in Harmonia", "img_source": "SOE Picture Dictionary \u2014 Land 1", "phonetic": "FELD-TRI-p | FAIR | PLAY | SEL-eh-BRAY-shun | per-FOR-mans", "instructions": "Write about your best school memory from last year. Use: who, what, where, when, why. Write 4-6 sentences with descriptive details!", "tip": "Amara says: Your memories are your stories. Write them before you forget!"},
+        "B": {"title": "Math Review Sprint", "time": 3, "img": "land2_basic-math-operations.jpg", "img_alt": "Mixed math practice problems in Numeria", "img_source": "SOE Picture Dictionary \u2014 Land 2", "phonetic": "MIX | re-VIEW | PRAK-tis | ROUN | ES-tim-ayt", "instructions": "Solve: 23+45+17=?, 100-38=?, 8\u00d76=?, 42\u00f76=? Round 347 to nearest ten, hundred. Estimate 49+51 before calculating. Check each answer!", "tip": "Kwame says: Mixed practice is the best practice. It shows you what you truly know!"},
+        "C": {"title": "Sustainability Check", "time": 3, "img": "land7_environment-sustainability.jpg", "img_alt": "Sustainable living practices in Celestia", "img_source": "SOE Picture Dictionary \u2014 Land 7", "phonetic": "sus-TAYN-uh-bul | RE-nyoo-uh-bul | KAR-bon | EKO | GREEEN", "instructions": "Write 5 sustainable actions from the picture. Circle 3 you can do THIS WEEK. Make a 'Green Pledge' and write it formally: 'I, ___, promise to ___'", "tip": "Ezra says: Sustainable choices protect the future for everyone, including you!"},
+        "D": {"title": "Vitalis Kitchen", "time": 2, "img": "land5_the-kitchen.jpg", "img_alt": "A well-organized kitchen in Vitalis home", "img_source": "SOE Picture Dictionary \u2014 Land 5", "phonetic": "KITCH-en | COOK | CHOP | MIX | SAIF | CLEAN", "instructions": "Write 5 kitchen safety rules. Ask an adult to teach you one simple cooking task today (stirring, peeling, washing). Write what you learned!", "tip": "Octavia says: Kitchen skills = independence skills. Learn one new kitchen task this summer!"},
+        "E": {"title": "Celestia Week 5 Review", "time": 2, "img": "land7_the-scientific-method.jpg", "img_alt": "Scientific discovery in Celestia library", "img_source": "SOE Picture Dictionary \u2014 Land 7", "phonetic": "GROW | LEAR-n | STRENG-th | CHA-lenj | NEXT", "instructions": "Create a body-mind report card for this week. Grade yourself A-D on: Sleep, Nutrition, Exercise, Mindfulness, Learning. Set goals for Week 6!", "tip": "Elias says: Self-assessment is the highest form of learning. Be honest AND kind with yourself!", "land": 7, "land_class": "land7", "land_name": "Celestia", "icon": "\u2728", "subject": "Review & Reflection", "char_img": "ELIAS.jpg", "char_names": "Elias & Ezra"},
+        "F": {"reflection_prompt": "5 weeks complete! You are a Summer Stretch Champion! Write: My biggest growth this summer has been ___ and next week I plan to ___"}}
+        }
+      ]
+    },
+    {
+      "week": 6,
+      "theme": "Inventions & Discoveries",
+      "primary_land": 7,
+      "days": [
+        {"week": 6, "day": 1, "day_label": "Monday", "day_title": "Inventors & Innovations", "primary_land": 7, "primary_land_color": "#9678c4", "primary_char_img": "ELIAS.jpg", "primary_char_names": "Elias & Ezra", "blocks": {"A": {"title": "Inventions & Discoveries", "time": 3, "img": "land7_inventions-discoveries.jpg", "img_alt": "Famous inventions on display in Celestia museum", "img_source": "SOE Picture Dictionary \u2014 Land 7", "phonetic": "IN-ven-shun | DIS-KUV-er-ee | CREATE | IN-ven-tor | PA-tent", "instructions": "Write 4 inventions from the picture. For each: Who invented it? When? How did it change the world? Which is most important to you?", "tip": "Elias says: Every invention started with someone asking 'What if it worked differently?'"},
+        "B": {"title": "Numeria Problem Solving", "time": 3, "img": "land2_problem-solving-logic.jpg", "img_alt": "Inventors using math to solve problems in Numeria", "img_source": "SOE Picture Dictionary \u2014 Land 2", "phonetic": "SOL-vuh | CREE-ayt | TEST | FAIL | TRY-uh-gen", "instructions": "Invent a math word problem about your life. Include: a main character (you!), a problem, numbers to work with, and a final answer. Solve it!", "tip": "Kwame says: Inventors fail many times before succeeding. Failure is data, not defeat!"},
+        "C": {"title": "Energy in Motion", "time": 3, "img": "land7_energy-forces.jpg", "img_alt": "Wind turbines, solar panels and water power", "img_source": "SOE Picture Dictionary \u2014 Land 7", "phonetic": "SO-ler | WIND | HY-dro | EL-ek-trik | RE-nyoo-uh-bul", "instructions": "Design your own energy invention! Draw it and explain: What energy source does it use? What problem does it solve? Who would use it?", "tip": "Vesta says: The world needs more energy inventors right now. Maybe that's you!"},
+        "D": {"title": "Vitalis Bicycle & Walking", "time": 2, "img": "land4_bicycle-walking.jpg", "img_alt": "Healthy transportation by bike in Aquaria streets", "img_source": "SOE Picture Dictionary \u2014 Land 4", "phonetic": "BY-sikl | PED-ul | BAL-ens | HEL-met | SAFE", "instructions": "Go for a walk or bike ride (with a helmet!) for at least 10 minutes. When you return: write 5 things you observed outside. No screens \u2014 just eyes!", "tip": "Nerissa says: Walking or biking instead of driving is eco-friendly AND healthy. Double win!"},
+        "E": {"title": "Aquaria: Public Transport", "time": 2, "img": "land4_public-transportation.jpg", "img_alt": "Buses, trains and subways in Aquaria city", "img_source": "SOE Picture Dictionary \u2014 Land 4", "phonetic": "BUS | TRAIN | SUB-way | SCHED-yool | FARE | ROUTE", "instructions": "Think about public transportation in your city. Write: 2 types available, a route you know, and 2 benefits of using public transport vs. a car.", "tip": "Ronan says: One full bus takes 40 cars off the road. Public transport protects the planet!", "land": 4, "land_class": "land4", "land_name": "Aquaria", "icon": "\ud83c\udf0a", "subject": "Geography", "char_img": "RONAN.jpg", "char_names": "Ronan & Selene"},
+        "F": {"reflection_prompt": "What would YOU invent to make the world better? Draw it and write a 3-sentence pitch explaining your invention."}}},
+        {"week": 6, "day": 2, "day_label": "Tuesday", "day_title": "Historical Timekeeping", "primary_land": 7, "primary_land_color": "#9678c4", "primary_char_img": "EZRA.jpg", "primary_char_names": "Ezra & Elias", "blocks": {"A": {"title": "Ages & Life Stages", "time": 3, "img": "land7_ages-life-stages.jpg", "img_alt": "Human life stages from baby to elder in Celestia", "img_source": "SOE Picture Dictionary \u2014 Land 7", "phonetic": "BAY-bee | CHILD | TEEN | A-DULT | ELD-er | LIFE-SAIKL", "instructions": "Draw a timeline of YOUR life so far. Mark: birth, first word, first step, starting school, today. Add 3 future milestones you're excited about!", "tip": "Ezra says: Your life is a story still being written. Every year is a new chapter!"},
+        "B": {"title": "Numeria Time Concepts", "time": 3, "img": "land2_time-clocks.jpg", "img_alt": "Digital and analog clocks in multiple time zones", "img_source": "SOE Picture Dictionary \u2014 Land 2", "phonetic": "SEKON | MIN-it | HOUR | DAY | WEEK | MONTH | YEAR", "instructions": "Convert: 2 hours = __ minutes = __ seconds. 3 days = __ hours. 2 weeks = __ days. 1 year = __ days. How many seconds have you been alive?", "tip": "Kwame says: Time is the most precious resource because you can never get it back!"},
+        "C": {"title": "Historical Timekeeping", "time": 3, "img": "land7_historical-timekeeping.jpg", "img_alt": "Sundials, hourglasses, and ancient clocks in Celestia museum", "img_source": "SOE Picture Dictionary \u2014 Land 7", "phonetic": "SUN-DY-ul | OUR-GLAS | PEN-dyu-lum | MECH-an-ik | DIJ-ih-tul", "instructions": "List 4 time-telling devices from history (oldest to newest). How did each work? Draw your favorite and write 2 sentences about why it's clever!", "tip": "Elias says: Before clocks, people read time in the sky. The stars are history's first clock!"},
+        "D": {"title": "Vitalis Mindful Walk", "time": 2, "img": "land5_exercise-movement.jpg", "img_alt": "A peaceful nature walk in Vitalis", "img_source": "SOE Picture Dictionary \u2014 Land 5", "phonetic": "MIND-ful | WOK | NO-tis | BREETH | PRES-ent | SENS-ez", "instructions": "Take a 5-minute mindful walk inside or outside. Notice: 5 things you see, 4 you hear, 3 you can touch, 2 you smell, 1 you taste. Write them all!", "tip": "Octavia says: Mindful walking is meditation in motion. It calms and energizes at the same time!"},
+        "E": {"title": "Sophia: Voting & Elections", "time": 2, "img": "land6_voting-elections.jpg", "img_alt": "Voting booths and ballot boxes in Sophia democracy hall", "img_source": "SOE Picture Dictionary \u2014 Land 6", "phonetic": "VOT | e-LEK-shun | BAL-ot | DEM-oh-kra-see | CHOICE | VOICE", "instructions": "Run a classroom/family vote on something fun (best pizza topping, best movie genre). Create a ballot, count votes, announce the winner! Write the result.", "tip": "Athena says: Every vote matters. Democracy only works when everyone participates!", "land": 6, "land_class": "land6", "land_name": "Sophia", "icon": "\u2696\ufe0f", "subject": "Civics", "char_img": "ATHENA.jpg", "char_names": "Athena & Felix"},
+        "F": {"reflection_prompt": "What is one thing about history that amazes you? Write 2 sentences. What would you time-travel back to see?"}}},
+        {"week": 6, "day": 3, "day_label": "Wednesday", "day_title": "Rhythm & Rhyme", "primary_land": 1, "primary_land_color": "#d4a843", "primary_char_img": "AMARA.jpg", "primary_char_names": "Amara & Kwame", "blocks": {"A": {"title": "Music & Rhythm", "time": 3, "img": "land7_time-in-music-rhythm.jpg", "img_alt": "Musical notation and rhythm patterns in Celestia", "img_source": "SOE Picture Dictionary \u2014 Land 7", "phonetic": "RITH-um | BEET | ME-ter | PULSE | MEL-oh-dee | HAR-mo-nee", "instructions": "Clap this rhythm: CLAP-clap-clap CLAP-clap-clap (louder clap = strong beat). Write your own 4-beat rhythm pattern using BIG and small letters!", "tip": "Amara says: Language has rhythm too. Read this page aloud and feel the beat of words!"},
+        "B": {"title": "Numeria Patterns Advanced", "time": 3, "img": "land2_patterns-sequences.jpg", "img_alt": "Advanced number patterns in Numeria sequence lab", "img_source": "SOE Picture Dictionary \u2014 Land 2", "phonetic": "SE-KWENS | RULE | GROW | SHRINK | FIB-on-a-chee", "instructions": "Continue these sequences: 2,4,8,16,_,_ | 100,90,81,73,_,_ | 1,1,2,3,5,8,_,_ (That last one is Fibonacci!). What's the RULE for each?", "tip": "Kwame says: The Fibonacci sequence appears in sunflowers, shells, and galaxies. Math is everywhere!"},
+        "C": {"title": "Water Cycle Science", "time": 3, "img": "land7_the-water-cycle-weather-systems.jpg", "img_alt": "The full water cycle shown in Celestia", "img_source": "SOE Picture Dictionary \u2014 Land 7", "phonetic": "EV-ap-oh-RAY-shun | CON-den-SAY-shun | PRE-sip-ih-TAY-shun | run-OFF", "instructions": "Draw the complete water cycle. Label all 4 steps: evaporation, condensation, precipitation, runoff. Add the sun and arrows showing direction!", "tip": "Silas says: The water you drink today may have been dinosaur rain. Water is ancient and endless!"},
+        "D": {"title": "Vitalis Healthy Meal Plan", "time": 2, "img": "land5_nutrition-food-groups.jpg", "img_alt": "Balanced meal planning in Vitalis nutrition center", "img_source": "SOE Picture Dictionary \u2014 Land 5", "phonetic": "PLAN | BAL-anst | Nutrients | SERV-ing | VAR-ee-eh-tee", "instructions": "Plan one day of healthy eating: breakfast, snack, lunch, snack, dinner. Include at least 3 food groups in every meal. Calculate fruit/veg servings!", "tip": "Nerissa says: Meal planning is self-care in action. Plan ahead, eat well!"},
+        "E": {"title": "Aquaria: Mail & Postal", "time": 2, "img": "land4_mail-postal-services.jpg", "img_alt": "Post boxes, stamps and delivery in Aquaria town", "img_source": "SOE Picture Dictionary \u2014 Land 4", "phonetic": "MALE | STAMP | PAK-ij | DE-liv-er | AD-ress | POST-of-is", "instructions": "Address a pretend letter to yourself (include: name, street, city, state, ZIP). Write a 3-sentence message inside. What would you tell past-you?", "tip": "Selene says: Writing letters is a kindness technology that never goes out of date!", "land": 4, "land_class": "land4", "land_name": "Aquaria", "icon": "\ud83c\udf0a", "subject": "Geography", "char_img": "RONAN.jpg", "char_names": "Ronan & Selene"},
+        "F": {"reflection_prompt": "Write a 4-line poem about summer. It doesn't have to rhyme, but try! Share it with someone who loves you."}}},
+        {"week": 6, "day": 4, "day_label": "Thursday", "day_title": "Hotels, Hosting & Hospitality", "primary_land": 4, "primary_land_color": "#2563EB", "primary_char_img": "RONAN.jpg", "primary_char_names": "Ronan & Selene", "blocks": {"A": {"title": "Manners Expanded", "time": 3, "img": "land1_manners-politeness.jpg", "img_alt": "Polite gestures and hospitality in Harmonia", "img_source": "SOE Picture Dictionary \u2014 Land 1", "phonetic": "HOS-pih-tal-ih-tee | GRATE-ful | WEL-kum | GUEST | SHARE", "instructions": "Write 6 actions that show hospitality (welcoming someone warmly). Roleplay: You have a guest from another country. Write what you'd say and do!", "tip": "Amara says: Hospitality is kindness with action. Make someone feel at home!"},
+        "B": {"title": "Travel Budget Planning", "time": 3, "img": "land4_hotels-lodging.jpg", "img_alt": "Hotel lobby and travel expenses in Aquaria", "img_source": "SOE Picture Dictionary \u2014 Land 4", "phonetic": "HO-tel | LODGE | BUD-jet | BOOK | NITE | COST | PLAN", "instructions": "Plan a 3-day trip for 2 people: Hotel ($80/night), 3 meals/day ($15/meal), 1 activity ($30). What's the total trip cost? How much to save per week for 6 weeks?", "tip": "Kwame says: Travel budgeting is real-life math with real rewards!"},
+        "C": {"title": "The Solar System", "time": 3, "img": "land7_the-solar-system.jpg", "img_alt": "Planets orbiting the sun in Celestia observatory", "img_source": "SOE Picture Dictionary \u2014 Land 7", "phonetic": "SOL-er-SIS-tem | PLAN-et | OR-bit | SUN | MOON | GRAV-ih-tee", "instructions": "Order the planets from the Sun: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune. Write one amazing fact about your favorite planet!", "tip": "Elias says: If the Sun were a basketball, Earth would be the size of a pea. Scale is mind-bending!"},
+        "D": {"title": "Vitalis Morning Routine", "time": 2, "img": "land5_healthy-habits-hygiene.jpg", "img_alt": "A complete healthy morning routine in Vitalis", "img_source": "SOE Picture Dictionary \u2014 Land 5", "phonetic": "ROOTING | KONSIST-ent | FIR-st | THEN | FINY-lee | HABBIT", "instructions": "Write your IDEAL morning routine step by step (8+ steps). Time how long each step takes. What total time do you need from wake-up to ready?", "tip": "Octavia says: A morning routine removes decisions so your brain can focus on learning!"},
+        "E": {"title": "Sophia: Travel Documents", "time": 2, "img": "land4_travel-documents.jpg", "img_alt": "Passports, visas and travel papers in Sophia embassy", "img_source": "SOE Picture Dictionary \u2014 Land 4", "phonetic": "PAS-port | VI-za | ID | BORD-er | SIT-ih-zen-ship | FLY", "instructions": "Write 4 travel document vocabulary words and their definitions. Why do countries require passports? Write 2 reasons. Do you have a passport?", "tip": "Selene says: A passport is a ticket to the whole world. It says: 'This person belongs somewhere!'", "land": 4, "land_class": "land4", "land_name": "Aquaria", "icon": "\ud83c\udf0a", "subject": "Geography", "char_img": "RONAN.jpg", "char_names": "Ronan & Selene"},
+        "F": {"reflection_prompt": "Write about a place you want to visit someday. Why that place? What would you learn there? Who would you bring?"}}},
+        {"week": 6, "day": 5, "day_label": "Friday", "day_title": "Week 6 Discovery Day!", "primary_land": 7, "primary_land_color": "#9678c4", "primary_char_img": "ELIAS.jpg", "primary_char_names": "Elias & Ezra", "blocks": {"A": {"title": "Digital Time & Screens", "time": 3, "img": "land7_digital-time-screens.jpg", "img_alt": "Screen time balance and digital wellness in Celestia", "img_source": "SOE Picture Dictionary \u2014 Land 7", "phonetic": "SKREEN | DIG-ih-tul | BAL-ans | TECH-nol-oh-jee | LIMI-t", "instructions": "Track your screen time today: how many minutes? Write 3 activities that are not screen-based that you enjoy. Create your personal screen time rules!", "tip": "Ezra says: Tech is a tool, not a boss. Be intentional about how you use it!"},
+        "B": {"title": "Number Patterns Challenge", "time": 3, "img": "land2_patterns-sequences.jpg", "img_alt": "Advanced pattern challenge in Numeria", "img_source": "SOE Picture Dictionary \u2014 Land 2", "phonetic": "PAT-ern | RULE | FIND | EX-tend | CREE-ayt", "instructions": "Create 3 original number patterns. Write the first 5 terms + the rule for each. Trade with a family member and solve each other's patterns!", "tip": "Kwame says: Creating patterns is harder than solving them. You're thinking like a mathematician!"},
+        "C": {"title": "Time Concepts & History", "time": 3, "img": "land7_time-concepts-history.jpg", "img_alt": "A historical timeline in Celestia archive", "img_source": "SOE Picture Dictionary \u2014 Land 7", "phonetic": "PAST | PREzent | FU-cher | TIME-lyne | HIss-tree | ERR-uh", "instructions": "Create a timeline of YOUR lifetime. Include: born, walked, talked, started school, learned to read, today, and 3 future goals. Draw it as an actual line!", "tip": "Elias says: Your personal history matters. It shapes who you are and who you'll become!"},
+        "D": {"title": "Vitalis Sports Free Choice", "time": 2, "img": "land5_sports-fitness.jpg", "img_alt": "Children choosing their favorite sport in Vitalis", "img_source": "SOE Picture Dictionary \u2014 Land 5", "phonetic": "CHOICE | FAVE | ENJOY | GOOD-AT | GOAL", "instructions": "Choose YOUR favorite physical activity and do it for 10 minutes! Anything counts: dancing, jumping, walking, yoga. Write what you did and how you feel!", "tip": "Nerissa says: Exercise you LOVE is the best exercise. Find your joyful movement!"},
+        "E": {"title": "Celestia Week 6 Review", "time": 2, "img": "land7_inventions-discoveries.jpg", "img_alt": "Inventions celebrated in Celestia innovation hall", "img_source": "SOE Picture Dictionary \u2014 Land 7", "phonetic": "INVENT | DIS-kover | CREATE | IMAG-in | EX-plore", "instructions": "Write your top 3 discoveries this week (facts, skills, or ideas). Draw your 'Invention of the Summer'\u2014something YOU could create to solve a real problem!", "tip": "Ezra says: The best inventors keep learning every day. Your next discovery is around the corner!", "land": 7, "land_class": "land7", "land_name": "Celestia", "icon": "\u2728", "subject": "Review & Reflection", "char_img": "ELIAS.jpg", "char_names": "Elias & Ezra"},
+        "F": {"reflection_prompt": "6 weeks done! You are an INVENTOR of your own learning! Write: My greatest discovery this summer has been ___"}}
+        }
+      ]
+    },
+    {
+      "week": 7,
+      "theme": "Sound & Story",
+      "primary_land": 1,
+      "days": [
+        {"week": 7, "day": 1, "day_label": "Monday", "day_title": "Storytelling Masters", "primary_land": 1, "primary_land_color": "#d4a843", "primary_char_img": "AMARA.jpg", "primary_char_names": "Amara & Kwame", "blocks": {"A": {"title": "Sight Words Review A", "time": 3, "img": "land1_greetings-introductions.jpg", "img_alt": "Essential sight words illustrated in Harmonia", "img_source": "SOE Picture Dictionary \u2014 Land 1", "phonetic": "THE | AND | IS | IT | WAS | ARE | HAVE | THIS | THAT", "instructions": "Write 10 sight words in a Word Wall grid. Use each in a sentence. Challenge: Write a 6-sentence story using only sight words!", "tip": "Amara says: Sight words are the glue of English. Master them and reading flows!"},
+        "B": {"title": "Story Math Problems", "time": 3, "img": "land2_money-currency.jpg", "img_alt": "A Numeria marketplace math adventure", "img_source": "SOE Picture Dictionary \u2014 Land 2", "phonetic": "STOH-ree | PROB-lem | UNDR-stand | SOLVE | CHECK", "instructions": "Write and solve: Maya has 48 stickers. She gives 1/4 to her sister and buys 12 more. How many does she have? Show ALL steps. Write your own similar problem!", "tip": "Kwame says: Story problems connect math to real life. They're math in disguise!"},
+        "C": {"title": "Animals in Terrasol", "time": 3, "img": "land3_pets-companions.jpg", "img_alt": "Animals as characters and companions in Terrasol", "img_source": "SOE Picture Dictionary \u2014 Land 3", "phonetic": "CHAR-ak-ter | AN-ih-mul | FABLE | LESON | MORAL | STORY", "instructions": "Pick an animal from the picture. Write a 5-sentence fable where the animal teaches a lesson. Include a 'Moral:' sentence at the end!", "tip": "Vesta says: Every animal has a story to tell. Be their author!"},
+        "D": {"title": "Vitalis Story Moves", "time": 2, "img": "land5_exercise-movement.jpg", "img_alt": "Children acting out a story with movement", "img_source": "SOE Picture Dictionary \u2014 Land 5", "phonetic": "AKT | MOVE | CHAR-ak-ter | FEEL | SHOW", "instructions": "Act out one scene from your favorite book or movie \u2014 with full body movement! No speaking, just movement. Can someone guess what scene it is?", "tip": "Nerissa says: Acting out stories is reading comprehension AND exercise in one!"},
+        "E": {"title": "Aquaria: Airport & Travel", "time": 2, "img": "land4_the-airport-travel.jpg", "img_alt": "An airport scene in Aquaria international hub", "img_source": "SOE Picture Dictionary \u2014 Land 4", "phonetic": "AIR-port | GATE | BORD | BAG-ij | PAS-port | FLIYT", "instructions": "Write the steps to get on a plane in order (check-in, security, gate, boarding, takeoff). Have you flown before? Write 3 sentences about your experience!", "tip": "Ronan says: Airports are the crossroads of the world. Every flight carries a thousand stories!", "land": 4, "land_class": "land4", "land_name": "Aquaria", "icon": "\ud83c\udf0a", "subject": "Geography", "char_img": "RONAN.jpg", "char_names": "Ronan & Selene"},
+        "F": {"reflection_prompt": "If your summer stretch was a story, what would the title be? Write 3 sentences describing the plot so far."}}},
+        {"week": 7, "day": 2, "day_label": "Tuesday", "day_title": "Write Your World", "primary_land": 1, "primary_land_color": "#d4a843", "primary_char_img": "KWAME.jpg", "primary_char_names": "Kwame & Amara", "blocks": {"A": {"title": "Sight Words B", "time": 3, "img": "land1_communication-technology.jpg", "img_alt": "Words flying through communication channels", "img_source": "SOE Picture Dictionary \u2014 Land 1", "phonetic": "THEY | FROM | WITH | BEEN | WHAT | WHEN | THERE | WHERE | COULD", "instructions": "Write 10 Sight Words Group B. Use 5 of them in a letter to a friend describing your summer. Use at least 1 punctuation mark per sentence!", "tip": "Amara says: Writing letters is a gift. It shows you value someone enough to put words on paper!"},
+        "B": {"title": "Numeria Geometry Review", "time": 3, "img": "land2_shapes-geometry.jpg", "img_alt": "Geometric shapes in an architecture puzzle", "img_source": "SOE Picture Dictionary \u2014 Land 2", "phonetic": "PER-im-eh-ter | AIR-ee-uh | VOL-yoom | ANG-gul | SIM-et-ree", "instructions": "Draw a rectangle 6cm x 4cm. Calculate: perimeter (all sides added) = ? Area (length x width) = ? Now draw 2 other shapes and do the same!", "tip": "Kwame says: Perimeter and area are what architects and builders use every day. Math builds worlds!"},
+        "C": {"title": "The Water Cycle Story", "time": 3, "img": "land7_the-water-cycle-weather-systems.jpg", "img_alt": "Water cycle with weather system arrows", "img_source": "SOE Picture Dictionary \u2014 Land 7", "phonetic": "DROP | EVAPO-RAYT | CLOUD | RAIN | ROON-OFF | ABSORB", "instructions": "Write a story from the perspective of a water drop going through the complete water cycle. Use: first person ('I'), sensory details, and all 4 steps!", "tip": "Elias says: Science becomes meaningful when you put yourself inside the process. Become the water drop!"},
+        "D": {"title": "Vitalis Writing Posture", "time": 2, "img": "land5_healthy-habits-hygiene.jpg", "img_alt": "Correct writing posture and ergonomics in Vitalis", "img_source": "SOE Picture Dictionary \u2014 Land 5", "phonetic": "POS-cher | SIT | STRAIGHT | WRIST | PEN-sil | GRIP", "instructions": "Check your posture right now: feet flat? Back straight? Paper tilted? Pencil grip correct? Make all 4 adjustments. Hold for 60 seconds. Feels better!", "tip": "Octavia says: Good posture while writing protects your neck, back, and focus. Sit strong!"},
+        "E": {"title": "Sophia: Legal Terms Basics", "time": 2, "img": "land6_legal-court-terms.jpg", "img_alt": "Simple legal concepts shown in Sophia justice building", "img_source": "SOE Picture Dictionary \u2014 Land 6", "phonetic": "LAW | JUS-tis | FAYER | RULE | RITE | PRO-tek-shun", "instructions": "Write 3 legal words and what they mean in simple language. Why do communities need laws? Write 2 reasons. What would happen without any laws?", "tip": "Athena says: Laws protect everyone equally. Understanding them is a civic superpower!", "land": 6, "land_class": "land6", "land_name": "Sophia", "icon": "\u2696\ufe0f", "subject": "Civics", "char_img": "ATHENA.jpg", "char_names": "Athena & Felix"},
+        "F": {"reflection_prompt": "Write the beginning of a story. Give it a character, a setting, and a problem. Stop at the most exciting moment! Come back to it later!"}}},
+        {"week": 7, "day": 3, "day_label": "Wednesday", "day_title": "Sound Science", "primary_land": 7, "primary_land_color": "#9678c4", "primary_char_img": "ELIAS.jpg", "primary_char_names": "Elias & Ezra", "blocks": {"A": {"title": "Sight Words C", "time": 3, "img": "land1_music-instruments.jpg", "img_alt": "Musical story words floating in Harmonia", "img_source": "SOE Picture Dictionary \u2014 Land 1", "phonetic": "THEIR | WOULD | SHOULD | THROUGH | THOUGH | THOUGHT | OUGHT", "instructions": "Write 10 Sight Words Group C \u2014 these are tricky! Practice each one 3 times. Write 5 sentences using at least 2 sight words each.", "tip": "Kwame says: Tricky words become easy words with enough practice. Repetition IS learning!"},
+        "B": {"title": "Data Collection Project", "time": 3, "img": "land2_data-statistics.jpg", "img_alt": "Graphs and data display boards in Numeria", "img_source": "SOE Picture Dictionary \u2014 Land 2", "phonetic": "SUR-vay | KWEST-yun | COL-ekt | AN-a-lyze | DIS-play", "instructions": "Survey question: 'What is your favorite subject in school?' Ask 6 people. Make a tally chart. Find the mode (most popular answer). Create a bar graph!", "tip": "Kwame says: A good survey starts with a clear, fair question. Check yours!"},
+        "C": {"title": "Sound in Science", "time": 3, "img": "land7_time-in-music-rhythm.jpg", "img_alt": "Sound wave visualizations in Celestia science lab", "img_source": "SOE Picture Dictionary \u2014 Land 7", "phonetic": "SOWND | VY-BRAY-shun | WAVE | PITCH | VOL-yoom | EK-oh", "instructions": "Make a sound by tapping a table. Feel the vibration with your hand. Write: What is vibrating? What carries the sound to your ear? Draw a sound wave!", "tip": "Elias says: All sound is vibration. Your voice is just air vibrating. You make science every time you speak!"},
+        "D": {"title": "Vitalis Music Movement", "time": 2, "img": "land1_music-instruments.jpg", "img_alt": "Children playing instruments and moving in Harmonia", "img_source": "SOE Picture Dictionary \u2014 Land 5", "phonetic": "RITH-um | BEETE | MOOOV | KLAP | STOMP | SWAY", "instructions": "Create your own body percussion piece: use clapping, stomping, and snapping. Make a 4-beat pattern. Repeat 4 times. Then teach it to someone!", "tip": "Nerissa says: Your body is the most portable instrument there is!"},
+        "E": {"title": "Aquaria: Tricky English Words", "time": 2, "img": "land4_tricky-english-words.jpg", "img_alt": "Homophones and confusing English words illustrated", "img_source": "SOE Picture Dictionary \u2014 Land 4", "phonetic": "THER | THEIR | THEYRE | TO | TOO | TWO | HERE | HEAR", "instructions": "Write the difference between: there/their/they're and to/too/two. Write one sentence using all 3 versions of each set correctly!", "tip": "Selene says: English is full of word twins that sound alike but mean different things. Context is king!", "land": 4, "land_class": "land4", "land_name": "Aquaria", "icon": "\ud83c\udf0a", "subject": "Geography", "char_img": "RONAN.jpg", "char_names": "Ronan & Selene"},
+        "F": {"reflection_prompt": "What sound fills your home most often? (laughter, music, TV, cooking?) Write 3 sentences about what that sound means to you."}}},
+        {"week": 7, "day": 4, "day_label": "Thursday", "day_title": "Read, Write, Perform!", "primary_land": 1, "primary_land_color": "#d4a843", "primary_char_img": "AMARA.jpg", "primary_char_names": "Amara & Kwame", "blocks": {"A": {"title": "Study Skills & Strategies", "time": 3, "img": "land1_the-classroom.jpg", "img_alt": "Study skills posters in Harmonia classroom", "img_source": "SOE Picture Dictionary \u2014 Land 1", "phonetic": "STUD-ee | NOTE-TAKE | SUM-er-IZE | RE-call | TEST-PREP", "instructions": "Try the Cornell Notes method: Draw a vertical line 1/3 from the left. Write ideas on the right. Key words on the left. Summary at the bottom. Try it with today's lesson!", "tip": "Amara says: How you study matters more than how long you study. Study smarter!"},
+        "B": {"title": "Fractions in Real Life", "time": 3, "img": "land2_fractions-decimals.jpg", "img_alt": "Fractions on a number line and in objects", "img_source": "SOE Picture Dictionary \u2014 Land 2", "phonetic": "FRAK-shun | DES-ih-mul | PER-sent | E-KWIV-uh-lent | COM-fair", "instructions": "Convert: 1/2 = ?% | 1/4 = ?% | 3/4 = ?%. Write 2 real-life examples of when you use fractions. Draw a number line showing: 0, 1/4, 1/2, 3/4, 1.", "tip": "Kwame says: Fractions, decimals, and percents are the same family in different clothes!"},
+        "C": {"title": "Desert Animals Adaptations", "time": 3, "img": "land3_desert-dry-lands.jpg", "img_alt": "Desert survival adaptations in Terrasol arid zone", "img_source": "SOE Picture Dictionary \u2014 Land 3", "phonetic": "A-DAP-TAY-shun | SUR-vive | KAM-oh-flaj | STORE-wah-ter | NOK-tur-nal", "instructions": "Pick one desert animal. Write: 3 adaptations it has AND why each helps survival. Draw the animal in its habitat with labels.", "tip": "Vesta says: Adaptations make survival possible. Humans adapt too \u2014 think: coats in winter, sunscreen in summer!"},
+        "D": {"title": "Vitalis Eye & Body Health", "time": 2, "img": "land5_eye-care-vision.jpg", "img_alt": "Eye exercises and vision health in Vitalis", "img_source": "SOE Picture Dictionary \u2014 Land 5", "phonetic": "EYE | BLINK | FOKE-us | NEAR | FAR | REST", "instructions": "Eye exercise: Look far (window) for 20 seconds, then near (fingers 12 inches away) for 20 seconds. Repeat 5 times. Your eyes should feel relaxed!", "tip": "Octavia says: Your eye muscles need exercise too. Train them gently every day!"},
+        "E": {"title": "Sophia: Childcare & Parenting", "time": 2, "img": "land6_childcare-parenting.jpg", "img_alt": "Parents, children, and caregivers in Sophia community", "img_source": "SOE Picture Dictionary \u2014 Land 6", "phonetic": "CARE | PAR-ent | CHILD | SUP-port | LOVE | NEED | SAFE", "instructions": "Write 5 things a caregiver does for children. Write 3 things children can do to return kindness to their caregivers. Write a thank-you note!", "tip": "Felix says: Caregiving is one of the hardest and most important jobs. Say thank you today!", "land": 6, "land_class": "land6", "land_name": "Sophia", "icon": "\u2696\ufe0f", "subject": "Civics", "char_img": "FELIX.jpg", "char_names": "Felix & Athena"},
+        "F": {"reflection_prompt": "Write a thank-you note to one person who took care of you this summer. Be specific \u2014 mention one thing they did that meant a lot."}}},
+        {"week": 7, "day": 5, "day_label": "Friday", "day_title": "Week 7 Story Grand Finale!", "primary_land": 7, "primary_land_color": "#9678c4", "primary_char_img": "EZRA.jpg", "primary_char_names": "Ezra & Elias", "blocks": {"A": {"title": "Study Skills Graduation", "time": 3, "img": "land1_school-events-activities.jpg", "img_alt": "Study skill celebration in Harmonia end of year", "img_source": "SOE Picture Dictionary \u2014 Land 1", "phonetic": "GRAD-yoo-ayt | READY | KON-fi-dent | TOOL | SKILL | GROW", "instructions": "List every study skill you've practiced this summer: (note-taking, Cornell notes, sight words, reading, etc.). Circle your top 3. Plan to keep practicing!", "tip": "Kwame says: Skills don't expire! Use what you learn this summer all year long!"},
+        "B": {"title": "Math Story Creation", "time": 3, "img": "land2_charts-graphs.jpg", "img_alt": "A full math story problem project in Numeria", "img_source": "SOE Picture Dictionary \u2014 Land 2", "phonetic": "CREE-ayt | PROB-lem | GRAPH | SOLVE | SHARE", "instructions": "Make your own illustrated math story problem book with 3 pages: page 1 = the story, page 2 = the math question with diagram, page 3 = the solution!", "tip": "Kwame says: Teaching math is the BEST way to learn it. Share your book with someone!"},
+        "C": {"title": "Environment & Sustainability", "time": 3, "img": "land7_environment-sustainability.jpg", "img_alt": "Green earth and sustainability practices in Celestia", "img_source": "SOE Picture Dictionary \u2014 Land 7", "phonetic": "SUS-TAYN-uh-bul | RENEW | KLEE-an | PROTECT | FUTURE | EARTH", "instructions": "Write your Personal Environmental Report: 3 eco-friendly things you already do, 3 you'll add, and 1 big change you wish the world would make.", "tip": "Elias says: You can't change everything, but you can change your part. That's how big change happens!"},
+        "D": {"title": "Vitalis Summer Fitness Badge", "time": 2, "img": "land5_sports-fitness.jpg", "img_alt": "Fitness achievement ceremony in Vitalis", "img_source": "SOE Picture Dictionary \u2014 Land 5", "phonetic": "A-CHEEV | BADGE | STRONG | FIT | GROW | PROUD", "instructions": "Final fitness challenge: How many push-ups (on knees OK), sit-ups, and jumping jacks can you do in 1 minute each? Write your results. Then CELEBRATE!", "tip": "Nerissa says: Fitness is a lifelong gift you give yourself. Keep moving all year!"},
+        "E": {"title": "Celestia Week 7 Review", "time": 2, "img": "land7_the-future-dreams.jpg", "img_alt": "Future dreamers celebrated in Celestia", "img_source": "SOE Picture Dictionary \u2014 Land 7", "phonetic": "DREEM | PLAN | GOAL | ACTION | BE-LIEVE | FUTE-cher", "instructions": "Write YOUR summer story title, author (you!), and a 3-sentence summary. This is your memoir opening. Save it \u2014 you'll write the ending next week!", "tip": "Ezra says: Every great story has an author who kept going. You are that author!", "land": 7, "land_class": "land7", "land_name": "Celestia", "icon": "\u2728", "subject": "Review & Reflection", "char_img": "ELIAS.jpg", "char_names": "Elias & Ezra"},
+        "F": {"reflection_prompt": "7 weeks! ONE week to go! Write: The story of my Summer Stretch, in exactly 7 words (one for each week)."}}
+        }
+      ]
+    },
+    {
+      "week": 8,
+      "theme": "Grand Celebration & Launch",
+      "primary_land": 7,
+      "days": [
+        {"week": 8, "day": 1, "day_label": "Monday", "day_title": "All 7 Lands Recap", "primary_land": 7, "primary_land_color": "#9678c4", "primary_char_img": "ELIAS.jpg", "primary_char_names": "All Heroes Unite!", "blocks": {"A": {"title": "Land 1 Harmonia Recap", "time": 3, "img": "land1_greetings-introductions.jpg", "img_alt": "All Land 1 themes collaged in Harmonia", "img_source": "SOE Picture Dictionary \u2014 Land 1", "phonetic": "re-VIEW | HAR-mo-nee-uh | LANG-gwij | WORD | KOM-yoo-ni-kayt", "instructions": "From memory: Write 10 Land 1 vocab words (greetings, family, emotions, etc.). Use ALL 10 in a short paragraph about your summer life!", "tip": "Amara says: Language is your superpower. Use it!"},
+        "B": {"title": "Land 2 Numeria Recap", "time": 3, "img": "land2_basic-math-operations.jpg", "img_alt": "All Land 2 math topics reviewed in Numeria", "img_source": "SOE Picture Dictionary \u2014 Land 2", "phonetic": "re-VIEW | NU-mer-ee-uh | MATH | NUM-ber | SOL-ve", "instructions": "Solve one of each operation type: addition, subtraction, multiplication, division. Solve: 3/4 + 1/4 = ? Convert 75% to a fraction. Write one math story!", "tip": "Kwame says: Math isn't a subject. It's a way of thinking. Think like Numeria!"},
+        "C": {"title": "Lands 3-5 Science Recap", "time": 3, "img": "land3_the-environment.jpg", "img_alt": "Nature, body, and science themes reviewed", "img_source": "SOE Picture Dictionary \u2014 Land 3,5", "phonetic": "re-VIEW | SY-ens | NA-cher | BOD-ee | EN-er-jee", "instructions": "Write 3 facts you learned each from: Terrasol (nature), Vitalis (health/body), Celestia (science/time). That's 9 amazing facts! Circle your favorite.", "tip": "Vesta says: Every fact you remember is a tool for your future. Keep building!"},
+        "D": {"title": "Grand Fitness Challenge", "time": 2, "img": "land5_exercise-movement.jpg", "img_alt": "Olympic-style fitness events in Vitalis", "img_source": "SOE Picture Dictionary \u2014 Land 5", "phonetic": "CHAL-enj | BEST | TRY | BEAT | PER-sonal-REC-ord", "instructions": "Try your personal best: Hold a plank for as long as possible. Write the time. Compare to Week 1 (if you tracked it). You have grown stronger!", "tip": "Nerissa says: Fitness growth is quiet but real. Look how far you've come!"},
+        "E": {"title": "Lands 4 & 6 Social Studies Recap", "time": 2, "img": "land4_geography-landforms.jpg", "img_alt": "World geography and community overview", "img_source": "SOE Picture Dictionary \u2014 Lands 4,6", "phonetic": "re-VIEW | GEO-gruh-fee | COM-yoo-nih-tee | SIV-iks | WORLD", "instructions": "Write 3 geography facts (from Land 4) and 3 civic facts (from Land 6) you remember. Draw one thing that represents each land for you personally.", "tip": "Ronan says: Social studies is the study of YOU and your world together. You ARE the subject!", "land": 7, "land_class": "land7", "land_name": "Celestia", "icon": "\u2728", "subject": "Review & Reflection", "char_img": "ELIAS.jpg", "char_names": "All Heroes"},
+        "F": {"reflection_prompt": "Which of the 7 Lands is your favorite? Write 3 reasons. Which hero do you identify with most? Why?"}}},
+        {"week": 8, "day": 2, "day_label": "Tuesday", "day_title": "Showcase Prep Day", "primary_land": 7, "primary_land_color": "#9678c4", "primary_char_img": "EZRA.jpg", "primary_char_names": "Ezra & All Heroes", "blocks": {"A": {"title": "My Summer Word Collection", "time": 3, "img": "land1_personal-information.jpg", "img_alt": "A personal vocabulary book in Harmonia", "img_source": "SOE Picture Dictionary \u2014 Land 1", "phonetic": "KOL-ekt | VOCAB-yoo-lair-ee | MINE | GREW | LERN-ed", "instructions": "Flip through your workbook. Find 20 words you learned this summer. Copy them into a Word Collection page. Sort by: land, type, or difficulty!", "tip": "Amara says: Collecting words is collecting power. Your word count grew this summer!"},
+        "B": {"title": "Math Portfolio Review", "time": 3, "img": "land2_charts-graphs.jpg", "img_alt": "Math achievement showcase in Numeria", "img_source": "SOE Picture Dictionary \u2014 Land 2", "phonetic": "PORT-fo-lee-oh | re-VIEW | BEST | PROOF | SHOW", "instructions": "Look through your math work. Choose your BEST problem. Copy it neatly on this page with full solution steps. Add a title: 'My Best Math Moment!'", "tip": "Kwame says: A portfolio shows growth over time. Looking back = looking forward with wisdom!"},
+        "C": {"title": "Science Journal Review", "time": 3, "img": "land7_the-scientific-method.jpg", "img_alt": "Science discoveries recorded in Celestia journal", "img_source": "SOE Picture Dictionary \u2014 Land 7", "phonetic": "JER-nul | re-VIEW | DIS-kover | RECORD | GROW | LEAR-n", "instructions": "Write a science discovery journal entry for your BEST science observation this summer. Include: question, what you saw, what you learned, one more question!", "tip": "Elias says: A science mind never stops asking 'Why?' or 'What if?'"},
+        "D": {"title": "Vitalis Showcase Warm-Up", "time": 2, "img": "land5_exercise-movement.jpg", "img_alt": "Children warming up for a showcase event in Vitalis", "img_source": "SOE Picture Dictionary \u2014 Land 5", "phonetic": "WARM-up | SHOW-case | PER-form | ENER-jee | STRONG", "instructions": "Create a 2-minute warm-up routine for your Summer Showcase. Include: 3 stretches, 3 strength moves, and a final pose. Name and practice it!", "tip": "Octavia says: A great presentation starts with a confident, energized body!"},
+        "E": {"title": "Sophia: Resume Basics", "time": 2, "img": "land6_resume-applications.jpg", "img_alt": "A resume template in Sophia career center", "img_source": "SOE Picture Dictionary \u2014 Land 6", "phonetic": "REZ-yoo-may | SKILL | EX-peer-ee-ens | ACHIEV-ment | GOAL", "instructions": "Write a 'Student Resume' for yourself: Name, Grade, 3 Strengths, 2 Things I Improved This Summer, 1 Goal for Next Year. Make it look professional!", "tip": "Athena says: A resume is a story of your best self. Start growing that story now!", "land": 6, "land_class": "land6", "land_name": "Sophia", "icon": "\u2696\ufe0f", "subject": "Civics", "char_img": "ATHENA.jpg", "char_names": "Athena & Felix"},
+        "F": {"reflection_prompt": "Design the cover of your Summer Stretch memory book. Draw it in the box and write the title in your best handwriting."}}},
+        {"week": 8, "day": 3, "day_label": "Wednesday", "day_title": "Quest Map Final Update", "primary_land": 7, "primary_land_color": "#9678c4", "primary_char_img": "ELIAS.jpg", "primary_char_names": "Elias, Ezra & All", "blocks": {"A": {"title": "My Summer Stretch Story", "time": 3, "img": "land1_school-events-activities.jpg", "img_alt": "Children celebrating learning accomplishments in Harmonia", "img_source": "SOE Picture Dictionary \u2014 Land 1", "phonetic": "STORY | BEGIN | MID-ul | END | de-TAIL-s | PROUD", "instructions": "Write your complete Summer Stretch Story: beginning (how you started), middle (your biggest challenge), end (what you learned). Aim for 8-10 sentences!", "tip": "Amara says: Every learner has a hero's story. You are the hero of yours!"},
+        "B": {"title": "Math Celebration Problems", "time": 3, "img": "land2_money-currency.jpg", "img_alt": "Celebration math puzzles in Numeria", "img_source": "SOE Picture Dictionary \u2014 Land 2", "phonetic": "SEL-eh-brayt | SOL-ve | FUN | CHAL-enj | REWARD", "instructions": "Celebration problems: If this workbook has 8 weeks, 5 days/week, 6 blocks/day, how many total activities did you complete? Show your multiplication!", "tip": "Kwame says: 240 activities in 8 weeks! That's an army of brain cells you've built!"},
+        "C": {"title": "Celestia Calendar of Dreams", "time": 3, "img": "land7_the-calendar-cycles.jpg", "img_alt": "A beautiful year-long calendar in Celestia observatory", "img_source": "SOE Picture Dictionary \u2014 Land 7", "phonetic": "CAL-en-der | CYCLE | PLAN | DIS-ciplin | GOAL | DREAM", "instructions": "Mark your school year calendar with 4 big goals: one per quarter. Write each as: 'By [month], I will have ___.' Sign and date it as a contract with yourself!", "tip": "Ezra says: A written goal is a commitment. A committed learner is unstoppable!"},
+        "D": {"title": "Vitalis Vitality Dance", "time": 2, "img": "land5_sports-fitness.jpg", "img_alt": "End of summer celebration dance in Vitalis", "img_source": "SOE Picture Dictionary \u2014 Land 5", "phonetic": "SEL-eh-brayt | MOVE | JOY | DANCE | ENER-jee | FREE", "instructions": "Celebration dance: play your favorite song. Dance as if you just finished 8 weeks of amazing learning (because you did!). No rules. Just joy!", "tip": "Nerissa says: You earned this dance. Move with pride, Summer Stretch Champion!"},
+        "E": {"title": "Aquaria: My World Map", "time": 2, "img": "land4_map-reading-gps.jpg", "img_alt": "A personal world map in Aquaria cartography center", "img_source": "SOE Picture Dictionary \u2014 Land 4", "phonetic": "WORLD | MAP | KON-tih-nent | COUN-tree | PLACE | ME", "instructions": "Draw a simple world map. Mark: where you live with a star, one place an ancestor came from, and one place you dream of visiting. Label all 3!", "tip": "Selene says: Every person is a world traveler in their heart. Dream maps become real maps!", "land": 4, "land_class": "land4", "land_name": "Aquaria", "icon": "\ud83c\udf0a", "subject": "Geography", "char_img": "RONAN.jpg", "char_names": "Ronan & Selene"},
+        "F": {"reflection_prompt": "Draw your Quest Map completely filled in \u2014 all 8 lands explored! Write your QUEST MOTTO: the words you'll carry with you into the school year."}}},
+        {"week": 8, "day": 4, "day_label": "Thursday", "day_title": "Letters & Legacy", "primary_land": 1, "primary_land_color": "#d4a843", "primary_char_img": "AMARA.jpg", "primary_char_names": "Amara & All Heroes", "blocks": {"A": {"title": "Letter to Future Me", "time": 3, "img": "land1_personal-information.jpg", "img_alt": "A letter-writing ceremony in Harmonia square", "img_source": "SOE Picture Dictionary \u2014 Land 1", "phonetic": "LET-er | FU-cher | PROM-ice | GOAL | RE-MEM-ber", "instructions": "Write a letter to yourself to open on the FIRST DAY of school. Tell future-you: what you learned, what you're proud of, and 3 goals for the school year!", "tip": "Amara says: Letters to your future self are the kindest thing you can write. Be gentle and encouraging!"},
+        "B": {"title": "Numbers I Know", "time": 3, "img": "land2_numbers-counting.jpg", "img_alt": "Number achievement wall in Numeria", "img_source": "SOE Picture Dictionary \u2014 Land 2", "phonetic": "COUNT | MATH-FACTS | FRACTIONS | MEAS-ure | DATA | proud", "instructions": "Write your math highlight reel: best addition fact, fastest multiplication, hardest problem you solved, coolest pattern you found, favorite data you collected.", "tip": "Kwame says: Math highlighets show you your strengths. Celebrate each one!"},
+        "C": {"title": "Nature's Thank You Note", "time": 3, "img": "land3_the-environment.jpg", "img_alt": "Children writing letters to nature in Terrasol", "img_source": "SOE Picture Dictionary \u2014 Land 3", "phonetic": "THANK | NAT-ure | PRO-tect | CARE | FUTURE | EKO", "instructions": "Write a letter to your favorite place in nature (a park, the ocean, a tree, your backyard). Tell it what you love about it and how you'll protect it!", "tip": "Vesta says: People protect what they love. Love begins with gratitude. Feel it!"},
+        "D": {"title": "Vitalis Champions Forever", "time": 2, "img": "land5_healthy-habits-hygiene.jpg", "img_alt": "Champion health habits displayed in Vitalis", "img_source": "SOE Picture Dictionary \u2014 Land 5", "phonetic": "CHAM-pee-on | HAB-it | FOR-ever | CHOICE | HEALTH | STRONG", "instructions": "Write your 5 Health Champion Habits that you'll keep AFTER summer: one for sleep, nutrition, movement, mental health, and hygiene. Sign your name!", "tip": "Octavia says: Champions aren't born. They're built from daily habits. You are a champion!"},
+        "E": {"title": "Sophia: Future Citizen Pledge", "time": 2, "img": "land6_rights-responsibilities.jpg", "img_alt": "Future citizens making a pledge in Sophia town hall", "img_source": "SOE Picture Dictionary \u2014 Land 6", "phonetic": "PLEDGE | SIT-ih-zen | COM-mit | PRO-mize | re-SPON-si-BIL-ih-tee", "instructions": "Write your Future Citizen Pledge: I commit to being ___, contributing ___, protecting ___, and treating others ___. Sign and date it! It's official!", "tip": "Felix says: The world needs citizens who believe in something bigger than themselves. Be that citizen!", "land": 6, "land_class": "land6", "land_name": "Sophia", "icon": "\u2696\ufe0f", "subject": "Civics", "char_img": "FELIX.jpg", "char_names": "Felix & Athena"},
+        "F": {"reflection_prompt": "What will you tell your friends about this summer? Write 3 sentences that capture the whole experience. Make them memorable!"}}},
+        {"week": 8, "day": 5, "day_label": "Friday", "day_title": "\ud83c\udf89 Grand Celebration Day!", "primary_land": 7, "primary_land_color": "#9678c4", "primary_char_img": "ELIAS.jpg", "primary_char_names": "Every Hero in the 7 Lands!", "blocks": {"A": {"title": "SOE Glossary Page", "time": 3, "img": "land1_greetings-introductions.jpg", "img_alt": "All the SOE heroes celebrating in Harmonia", "img_source": "SOE Picture Dictionary \u2014 All Lands", "phonetic": "All the words. All the lands. All the knowledge.", "instructions": "Write one word you'll never forget from EACH of the 7 Lands (7 words total). Write WHY each one matters to you. These are your 7 Power Words!", "tip": "Amara says: Knowledge collected is power earned. You have earned so much!"},
+        "B": {"title": "The Final Math Quest", "time": 3, "img": "land2_charts-graphs.jpg", "img_alt": "Grand math tournament in Numeria", "img_source": "SOE Picture Dictionary \u2014 Land 2", "phonetic": "QUEST | CHAL-enj | SOLVE | WIN | SMART", "instructions": "Final challenge: Using ONLY the numbers 1, 2, 3, and 4 (each once), make equations that equal 1 through 10. Example: 4-3=1, 4-3+2-... How creative can you be?", "tip": "Kwame says: Math is creative thinking with numbers. There's always more than one solution!"},
+        "C": {"title": "My Summer Science Discovery", "time": 3, "img": "land7_the-scientific-method.jpg", "img_alt": "Summer science fair celebration in Celestia", "img_source": "SOE Picture Dictionary \u2014 Land 7", "phonetic": "DIS-kover | PROVE | SHARE | SHOW | A-MAYZ", "instructions": "Present your GREATEST science discovery from this summer: topic, what you observed, what it means, and one question it opened up. Write it like a scientist!", "tip": "Elias says: Science is a conversation that never ends. Your discovery adds a word to that conversation!"},
+        "D": {"title": "Vitalis Grand Finale Move", "time": 2, "img": "land5_sports-fitness.jpg", "img_alt": "Grand finale fitness celebration in Vitalis", "img_source": "SOE Picture Dictionary \u2014 Land 5", "phonetic": "FI-nuh-lee | GRAND | cel-eh-BRAYT | STRONG | FIT | READY", "instructions": "Final move challenge: Do your ultimate exercise set \u2014 choose 3 moves you mastered this summer. Do 15 reps of each. Take a bow. You DID IT!", "tip": "Nerissa says: August you is STRONGER than June you. You built this! Be proud!"},
+        "E": {"title": "Celestia: The Future Dreams", "time": 2, "img": "land7_the-future-dreams.jpg", "img_alt": "All heroes dreaming of the future together in Celestia", "img_source": "SOE Picture Dictionary \u2014 All 7 Lands", "phonetic": "DRE\u0251-m | FU-cher | A-CHIEVE | BE-COME | POS-sih-bul | DARE", "instructions": "Draw ALL 7 of your hero characters gathered together. Write a speech bubble for each with one word of encouragement. You lead them all now!", "tip": "All Heroes say: You completed The Summer Stretch! The 7 Lands are inside you now. Go change the world!", "land": 7, "land_class": "land7", "land_name": "Celestia", "icon": "\u2728", "subject": "The Grand Finale", "char_img": "ELIAS.jpg", "char_names": "Every Hero United"},
+        "F": {"reflection_prompt": "\ud83c\udf89 CONGRATULATIONS, Summer Stretch CHAMPION! \ud83c\udf89 Fill in your Quest Achievement Chart. Then write three words that describe the learner you have become this summer."}}
+        }
+      ]
+    }
+  ]
+}
