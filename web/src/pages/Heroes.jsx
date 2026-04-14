@@ -88,18 +88,17 @@ const CharacterCard = ({ char, index, isExpanded, onToggle }) => {
                     {char.name === 'Seriphia' ? (
                         <div className="char-card__img-bg char-card__img-bg--scene">
                             <img
-                                src={`${import.meta.env.BASE_URL}assets/characters/SERIPHIA.png`}
+                                src={`${import.meta.env.BASE_URL}assets/characters/SERIPHIA_celestia.png`}
                                 alt={char.name}
                                 className="char-card__image char-card__image--scene"
                             />
                         </div>
                     ) : (
-                        <div className="char-card__img-bg" style={{ background: '#fff' }}>
+                        <div className={`char-card__img-bg char-card__img-bg--${char.land.toLowerCase().replace(/\s+/g, '-')}`}>
                             <img
                                 src={`${import.meta.env.BASE_URL}assets/characters/${char.name.toUpperCase()}.png`}
                                 alt={char.name}
                                 className="char-card__image"
-                                style={{ mixBlendMode: 'multiply' }}
                             />
                         </div>
                     )}
@@ -321,6 +320,58 @@ const Characters = () => {
                     justify-content: center;
                     overflow: hidden;
                     border-bottom: 3px solid rgba(255,255,255,0.5);
+                    position: relative;
+                }
+
+                .char-card__img-bg::before {
+                    content: '';
+                    position: absolute;
+                    top: 0; left: 0; right: 0; bottom: 0;
+                    opacity: 0;
+                    background: linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.4) 50%, transparent 60%);
+                    background-size: 200% 100%;
+                    transition: opacity 0.4s ease;
+                    z-index: 2;
+                    pointer-events: none;
+                }
+
+                .char-card:hover .char-card__img-bg::before {
+                    opacity: 1;
+                    animation: cardShimmer 1.2s ease forwards;
+                }
+
+                @keyframes cardShimmer {
+                    from { background-position: 200% 0; }
+                    to { background-position: -200% 0; }
+                }
+
+                /* ── Land Gradients ── */
+                .char-card__img-bg--harmonia {
+                    background: linear-gradient(160deg, #fef9e7 0%, #fdebd0 30%, #f9e4b7 60%, #fdf2e9 100%);
+                }
+
+                .char-card__img-bg--numeria {
+                    background: linear-gradient(160deg, #eafaf1 0%, #d5f5e3 30%, #abebc6 60%, #e8f8f5 100%);
+                }
+
+                .char-card__img-bg--vitalis {
+                    background: linear-gradient(160deg, #fdf2e9 0%, #f6ddcc 30%, #edbb99 60%, #faebd7 100%);
+                }
+
+                .char-card__img-bg--chronia {
+                    background: linear-gradient(160deg, #f4ecf7 0%, #e8daef 30%, #d2b4de 60%, #f5eef8 100%);
+                }
+
+                .char-card__img-bg--lexiconia {
+                    background: linear-gradient(160deg, #fef5e7 0%, #fdebd0 30%, #f0c27f 60%, #fdf2e9 100%);
+                }
+
+                .char-card__img-bg--geometria {
+                    background: linear-gradient(160deg, #e8f8f5 0%, #d1f2eb 30%, #a3e4d7 60%, #eafaf1 100%);
+                }
+
+                .char-card__img-bg--natura {
+                    background: linear-gradient(160deg, #ebf5fb 0%, #d4e6f1 30%, #a9cce3 60%, #eaf2f8 100%);
                 }
 
                 .char-card__image {
@@ -353,7 +404,7 @@ const Characters = () => {
                     width: 100%;
                     height: 220px;
                     object-fit: cover;
-                    object-position: 30% top;
+                    object-position: center 20%;
                     display: block;
                     mix-blend-mode: normal;
                     transition: transform 0.5s var(--ease-gentle);
@@ -361,7 +412,7 @@ const Characters = () => {
 
                 .char-card--featured .char-card__image--scene {
                     height: 400px;
-                    object-position: 30% top;
+                    object-position: center 20%;
                 }
 
                 .char-card:hover .char-card__image--scene {
