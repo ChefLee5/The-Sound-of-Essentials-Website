@@ -1,22 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <package xmlns="http://www.idpf.org/2007/opf"
+
          version="3.0"
+
          unique-identifier="uid"
+
          xml:lang="en">
 
+
+
   <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+
     <dc:identifier id="uid">soe-summer-bridge-workbook-2025</dc:identifier>
+
     <dc:title>SOE Rhythm Quest: The Summer Stretch Workbook</dc:title>
+
     <dc:creator>The Sound of Essentials Team</dc:creator>
+
     <dc:language>en</dc:language>
+
     <dc:subject>Education; Summer Learning; ESOL; Early Childhood; Elementary</dc:subject>
-    <dc:description>A neuro-affirming, bilingual-ready 8-week The Summer Stretch workbook set in the 7 Lands of the SOE universe. 15 minutes of daily cross-curricular activities for grades Kâ€“3.</dc:description>
+
+    <dc:description>A neuro-affirming, bilingual-ready 8-week The Summer Stretch workbook set in the 7 Lands of the SOE universe. 15 minutes of daily cross-curricular activities for grades KÃ¢â‚¬â€œ3.</dc:description>
+
     <dc:rights>Copyright The Sound of Essentials Team. All rights reserved.</dc:rights>
-    <meta property="dcterms:modified">2026-04-12T23:24:15Z</meta>
+
+    <meta property="dcterms:modified">2026-04-14T09:20:12Z</meta>
+
     <meta name="cover" content="cover-img"/>
+
   </metadata>
 
+
+
   <manifest>
+
     <item id="css-workbook" href="styles/workbook.css" media-type="text/css"/>
     <item id="cover-img" href="images/ui/cover_art.png" media-type="image/png" properties="cover-image"/>
     <item id="nav" href="pages/nav.xhtml" media-type="application/xhtml+xml" properties="nav"/>
@@ -66,9 +85,13 @@
     <item id="backmatter_bm_achievement" href="pages/backmatter/bm_achievement.xhtml" media-type="application/xhtml+xml"/>
     <item id="backmatter_bm_glossary" href="pages/backmatter/bm_glossary.xhtml" media-type="application/xhtml+xml"/>
     <item id="backmatter_bm_parent_guide" href="pages/backmatter/bm_parent_guide.xhtml" media-type="application/xhtml+xml"/>
+
   </manifest>
 
+
+
   <spine page-progression-direction="ltr">
+
     <itemref idref="nav"/>
     <itemref idref="cover"/>
     <itemref idref="frontmatter"/>
@@ -116,6 +139,10 @@
     <itemref idref="backmatter_bm_achievement"/>
     <itemref idref="backmatter_bm_glossary"/>
     <itemref idref="backmatter_bm_parent_guide"/>
+
   </spine>
 
+
+
 </package>
+

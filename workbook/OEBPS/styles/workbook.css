@@ -22,7 +22,7 @@ html { font-size: 16px; }
   --land3-color:   #10B981; /* Terrasol  – Science & Nature        */
   --land4-color:   #2563EB; /* Aquaria   – Geography & Mapping     */
   --land5-color:   #c4785a; /* Vitalis   – Fitness & Health        */
-  --land6-color:   #5ba4c9; /* Sophia    – Community & Civics      */
+  --land6-color:   #5ba4c9; /* Luminosity    – Community & Civics      */
   --land7-color:   #9678c4; /* Celestia  – Time & Reflection       */
 
   /* Neutral palette */
@@ -130,13 +130,16 @@ body {
 }
 
 .day-header .character-badge img {
-  width: 52px;
-  height: 52px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
-  border: 2.5px solid rgba(255,255,255,0.7);
+  border: 2.5px solid rgba(255,255,255,0.85);
   object-fit: cover;
-  object-position: top;
-  background: rgba(255,255,255,0.2);
+  object-position: top center;
+  background: rgba(255,255,255,0.25);
+  overflow: hidden;
+  display: block;
+  flex-shrink: 0;
 }
 
 /* =========================================================
@@ -262,36 +265,43 @@ body {
 /* =========================================================
    WRITING / DRAWING ZONES (print-referencing)
    ========================================================= */
+
+/* WRITE ZONE: minimum 4 lined rows for a child's handwriting */
 .write-zone {
-  border: 1px solid var(--border-dashed);
+  border: 1.5px solid var(--border-dashed);
   border-radius: var(--radius-sm);
-  min-height: 72px;
+  min-height: 116px;   /* 4 rows × 29px line height */
   margin: var(--space-sm) 0;
-  padding: var(--space-sm);
-  /* Lined paper effect */
+  padding: 8px var(--space-sm) 0;
   background:
     repeating-linear-gradient(
       transparent,
-      transparent 27px,
-      #e5e7eb 27px,
-      #e5e7eb 28px
+      transparent 28px,
+      #d1d5db 28px,
+      #d1d5db 29px
     );
-  background-color: rgba(255,255,255,0.9);
-  background-position: 0 10px;
+  background-color: rgba(255,255,255,0.95);
+  background-position: 0 8px;
 }
 
+/* DRAW ZONE: large empty space for a child's drawing */
 .draw-zone {
-  border: 2px dashed var(--border-dashed);
-  border-radius: var(--radius-sm);
-  min-height: 110px;
+  border: 2.5px dashed var(--land-color, #10B981);
+  border-radius: var(--radius-md);
+  min-height: 210px;   /* generous space for a child to draw */
   margin: var(--space-sm) 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: rgba(255,255,255,0.9);
+  position: relative;
+}
+
+.draw-zone .draw-prompt {
+  position: absolute;
+  bottom: var(--space-sm);
+  right: var(--space-md);
+  font-size: 0.68rem;
   color: var(--text-hint);
-  font-size: 0.78rem;
   font-style: italic;
-  background: rgba(255,255,255,0.7);
+  pointer-events: none;
 }
 
 .zone-label {
@@ -302,7 +312,7 @@ body {
 }
 
 /* =========================================================
-   ESOL / BILINGUAL SUPPORT PANEL
+   ESOL / SPELLING / BILINGUAL SUPPORT PANEL
    ========================================================= */
 .esol-panel {
   display: flex;
@@ -316,8 +326,21 @@ body {
   border: 1px solid var(--border-soft);
 }
 
+/* Spelling word (how it's written) */
+.esol-panel .spell-word {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--text-primary);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-right: 2px solid var(--land-color, #d4a843);
+  padding-right: var(--space-sm);
+  margin-right: calc(var(--space-sm) * -1);
+}
+
+/* Phonetic pronunciation */
 .esol-panel .phonetic {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   color: var(--text-hint);
   font-style: italic;
   font-family: 'Courier New', monospace;

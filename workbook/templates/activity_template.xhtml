@@ -74,9 +74,10 @@
       <figcaption>From the SOE Picture Dictionary · {{ ACT1_IMG_SOURCE }}</figcaption>
     </figure>
 
-    <!-- ESOL Support Panel: Phonetic guide + bilingual writing space -->
-    <div class="esol-panel" aria-label="Language Support">
-      <span class="phonetic" aria-label="Pronunciation">{{ ACT1_PHONETIC }}</span>
+    <!-- ESOL/Spelling Panel: Word + Phonetic side by side -->
+    <div class="esol-panel" aria-label="Spelling &amp; Pronunciation">
+      <span class="spell-word" aria-label="Spelling">{{ ACT1_SPELL_WORD }}</span>
+      <span class="phonetic" aria-label="Phonetic pronunciation">{{ ACT1_PHONETIC }}</span>
       <span class="my-language" aria-label="My language translation space"></span>
     </div>
 
@@ -84,7 +85,7 @@
       <p>{{ ACT1_INSTRUCTIONS }}</p>
     </div>
 
-    <span class="zone-label">✏️ Write your answer here:</span>
+    <span class="zone-label">✏️ Write your answer here — use at least 2 sentences:</span>
     <div class="write-zone" role="note" aria-label="Writing space"></div>
 
     <aside class="char-tip" aria-label="Kenji and Aiko's Tip">
@@ -154,8 +155,10 @@
       <figcaption>From the SOE Picture Dictionary · {{ ACT3_IMG_SOURCE }}</figcaption>
     </figure>
 
-    <div class="esol-panel" aria-label="Language Support">
-      <span class="phonetic" aria-label="Pronunciation">{{ ACT3_PHONETIC }}</span>
+    <!-- ESOL/Spelling Panel: Word + Phonetic side by side -->
+    <div class="esol-panel" aria-label="Spelling &amp; Pronunciation">
+      <span class="spell-word" aria-label="Spelling">{{ ACT3_SPELL_WORD }}</span>
+      <span class="phonetic" aria-label="Phonetic pronunciation">{{ ACT3_PHONETIC }}</span>
       <span class="my-language" aria-label="My language translation space"></span>
     </div>
 
@@ -163,9 +166,9 @@
       <p>{{ ACT3_INSTRUCTIONS }}</p>
     </div>
 
-    <span class="zone-label">🔬 Draw your observation here:</span>
-    <div class="draw-zone" role="note" aria-label="Scientific drawing space">
-      <span>Draw here</span>
+    <span class="zone-label">🎨 Draw your observation here — use the whole space!</span>
+    <div class="draw-zone" role="img" aria-label="Scientific drawing space">
+      <span class="draw-prompt">✏️ Draw here</span>
     </div>
 
     <aside class="char-tip" aria-label="Silas and Vesta's Tip">
@@ -202,6 +205,9 @@
       <p>{{ ACT4_INSTRUCTIONS }}</p>
     </div>
 
+    <span class="zone-label">✏️ Write how it felt &amp; what you did:</span>
+    <div class="write-zone" role="note" aria-label="Movement journal space"></div>
+
     <aside class="char-tip" aria-label="Felix and Amara's Tip">
       <img class="char-avatar"
            src="../images/characters/felix.png"
@@ -218,8 +224,8 @@
 
   <!-- ===================================================
        BLOCK E: ROTATING SUBJECT
-       Mon/Wed = Geography (L4: Aquaria) · Ronan &amp; Nerissa
-       Tue/Thu = Civics (L6: Sophia) · Ezra &amp; Athena
+       Mon/Wed = Geography (L4: Aquaria)   · Ronan &amp; Nerissa
+       Tue/Thu = Civics (L6: Luminosity)   · Ezra &amp; Athena
        Fri    = Full Review (L7: Celestia) · Elias &amp; Selene
        =================================================== -->
   <section class="activity-block {{ ACT5_LAND_CLASS }}" aria-labelledby="act5-title">
@@ -238,7 +244,7 @@
       <p>{{ ACT5_INSTRUCTIONS }}</p>
     </div>
 
-    <span class="zone-label">✏️ Write your response here:</span>
+    <span class="zone-label">✏️ Write your response here — use complete sentences:</span>
     <div class="write-zone" role="note" aria-label="Response space"></div>
 
     <aside class="char-tip" aria-label="{{ ACT5_CHAR_NAMES }}'s Tip">
@@ -266,6 +272,7 @@
     <div class="block-body">
       <p>{{ REFLECTION_PROMPT }}</p>
     </div>
+    <span class="zone-label">✏️ Write from your heart — every feeling counts:</span>
     <div class="write-zone" role="note" aria-label="Reflection journal space"></div>
   </section>
 

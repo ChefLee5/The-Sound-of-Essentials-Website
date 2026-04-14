@@ -214,10 +214,9 @@ const AudioPlayer = ({ tracks }) => {
       setDuration(audio.duration);
     };
     const onEnded = () => {
-      setIsPlaying(false);
-      if (currentTrack < tracks.length - 1) {
-        setCurrentTrack(currentTrack + 1);
-      }
+      const next = (currentTrack + 1) % tracks.length;
+      setCurrentTrack(next);
+      setIsPlaying(true);
     };
 
     audio.addEventListener('timeupdate', onTimeUpdate);
@@ -355,7 +354,16 @@ const AudioPlayer = ({ tracks }) => {
             onClick={() => selectTrack(i)}
             aria-label={`Play ${t.title}`}
           >
-            <span className="audio-player__track-icon" style={{ color: t.color }}>{t.domainIcon}</span>
+            {t.cover ? (
+              <img
+                className="audio-player__track-thumb"
+                src={t.cover}
+                alt={t.title}
+                loading="lazy"
+              />
+            ) : (
+              <span className="audio-player__track-icon" style={{ color: t.color }}>{t.domainIcon}</span>
+            )}
             <div className="audio-player__track-info">
               <span className="audio-player__track-title">{t.title}</span>
               <span className="audio-player__track-domain">{t.domain}</span>
@@ -379,25 +387,148 @@ const MediaRoom = () => {
 
   /* ── Track Data ── */
   const tracks = [
-    { id: 1, title: t('media.tracks.1.title'), domain: t('media.tracks.1.domain'), domainIcon: '☀️', desc: t('media.tracks.1.desc'), src: assetPath('/audio/01. Sunny Day (intro).mp3'), color: '#FF6F00', lyrics: null, cover: assetPath('/assets/soe-logo.jpg') },
-    { id: 2, title: t('media.tracks.2.title'), domain: t('media.tracks.2.domain'), domainIcon: '📅', desc: t('media.tracks.2.desc'), src: assetPath('/audio/02. Days of the Week.mp3'), color: '#1E88E5', cover: assetPath('/assets/characters/ELIAS.png'), lyrics: `(Verse)\nSeven days of a week I'll sing my song.\nCreation speaks to me all day long.\nHow I enjoy looking at those big white fluffy clouds.\nIn the daytime at night, I always look forward\nto the bright stars sparkling in the sky.\n\n(Chorus)\nSunday, Monday, Tuesday, Wednesday,\nThursday, Friday, Saturday.\nSunday, Monday, Tuesday, Wednesday,\nThursday, Friday, Saturday.` },
-    { id: 3, title: t('media.tracks.3.title'), domain: t('media.tracks.3.domain'), domainIcon: '🗣️', desc: t('media.tracks.3.desc'), src: assetPath('/audio/03. Alphabet Song Remix.mp3'), color: '#FF6F00', cover: assetPath('/assets/characters/KENJI.png'), lyrics: `(Verse)\nA B C D E F G H I J K L M N O P\nQ R S T U V W X Y and Z.\nNow I know my ABC.\nNext time, won't you sing with me?\n\n(Remix / Breakdown)\nNow I know my ABCs remix.\nA A A B B B... C C C... D...\nE E F F... G G... H H I I I...\nJ J... K K K... L L M M...\nN O O O... P P P... Q...\nR S S T T T... U V W X Y Z` },
-    { id: 4, title: t('media.tracks.4.title'), domain: t('media.tracks.4.domain'), domainIcon: '🎨', desc: t('media.tracks.4.desc'), src: assetPath('/audio/04. Horses Interlude.mp3'), color: '#9C27B0', cover: assetPath('/assets/track-art/Donkey.jpg'), lyrics: `(Spoken / Dialogue)\nHorses. Horses.\nThat's not a horse. That's a donkey.\nHorses. Horses.\nWait a minute. That's not a horse. That's a pig.\nHorses. Horses.\nGuys, did someone let the dogs out? That's a sheep.\nThat's not a horse.\n\nOh, can someone please get that cat out of here?\nWe're looking for a horse.\nAn elephant is certainly not a horse.\nLove those chickens, but I still need a horse.\nMonkeys. We need a horse.\nHorses. Now that's a horse.` },
-    { id: 5, title: t('media.tracks.5.title'), domain: t('media.tracks.5.domain'), domainIcon: '🇫🇷', desc: t('media.tracks.5.desc'), src: assetPath('/audio/05. Le Cheval.mp3'), color: '#1E88E5', cover: assetPath('/assets/characters/RONAN.png'), lyrics: `(Verse — Sung in French)\nDeux accrets le cheval, fort et puissant\nDeux accrets le cheval, fort et puissant\nDeux accrets le cheval, fort et puissant\n\nOh, I can almost see the horses now grazing,\nEating up grass and apples, which they love so much.\nThe horse has strength and power,\nable to see almost all the way around its body.\nAfraid of nothing in the time of war,\nThe horse walks, trots, canter, and gallops.\nWhat an amazing creation.` },
-    { id: 6, title: t('media.tracks.6.title'), domain: t('media.tracks.6.domain'), domainIcon: '🤸', desc: t('media.tracks.6.desc'), src: assetPath('/audio/06. Lets Stretch.mp3'), color: '#4CAF50', cover: assetPath('/assets/track-art/Touch your toes.png'), lyrics: `(Breathing Exercise)\\nBreathe in through your nose.\\nBreathe out through your mouth.\\n(Repeat)\\n\\n(Stretching Movements)\\nLet's stretch.\\nBring your arms up. Reach to the sky.\\nStretch real high.\\nBring your arms down.\\nDon't bend your knees.\\nTouch your toes.\\n(Repeat)` },
-    { id: 7, title: t('media.tracks.7.title'), domain: t('media.tracks.7.domain'), domainIcon: '💪', desc: t('media.tracks.7.desc'), src: assetPath('/audio/07. Drill Time.mp3'), color: '#4CAF50', cover: assetPath('/assets/track-art/Drums.jpg'), lyrics: `(Intro)\\nOn your mark, get set, ready, go.\\nStay on the path. Always learning.\\n\\n(The March)\\nForward march.\\nLeft, left, left, right, left.\\nLeft, left, left, right, left.\\n\\n(Chant)\\nAll I know is all I know.\\nWisdom is more precious than gold.\\nSound off! 1, 2, 3, 4.\\n\\n(The Shake)\\nWe're so excited about learning, we want to shake. Woohoo!\\nShake, shake, shake your left arm.\\nShake, shake, shake your right arm.\\nShake, shake, shake your left leg.\\nShake, shake, shake your right leg.\\n\\n(Outro)\\nChildren, please remember\\nalways stay on the right path and keep on learning.` },
-    { id: 8, title: t('media.tracks.8.title'), domain: t('media.tracks.8.domain'), domainIcon: '🔢', desc: t('media.tracks.8.desc'), src: assetPath('/audio/08. Numbers.mp3'), color: '#FF6F00', cover: assetPath('/assets/characters/KWAME.png'), lyrics: `(Intro)\\nI like the numbers.\\nIt is so much fun to count.\\n\\n(Call and Response)\\nNow let's count to 10 while we clap.\\nOne clap. Follow me. One.\\nTwo claps. Follow me. One. Two.\\nThree claps. Follow me. One. Two. Three.\\n...\\nTen claps. Follow me.\\n1 2 3 4 5 6 7 8 9 10.\\n\\n(Outro)\\nHooray. You did it.\\nGive yourself a great big hand clap.` },
-    { id: 9, title: t('media.tracks.9.title'), domain: t('media.tracks.9.domain'), domainIcon: '🔬', desc: t('media.tracks.9.desc'), src: assetPath('/audio/09. My Body.mp3'), color: '#9C27B0', cover: assetPath('/assets/characters/ATHENA.png'), lyrics: `(Verse 1: Face)\\nWhat's on your face?\\nEyes, nose, mouth, chin.\\nDon't forget about your forehead, cheeks, and two ears.\\n\\n(Verse 2: Upper Body)\\nMy body is strong.\\nNeck, shoulders, back, arms.\\nDon't forget about your hands and tip fingers.\\n\\n(Verse 3: Lower Body)\\nMy body is strong.\\nHip, thighs, knees, legs.\\nDon't forget about your ankles, feet, and ten toes.\\n\\n(Bridge)\\nWe are going to keep our body strong\\nby eating right and staying healthy.\\nConsuming living foods, stretching,\\nand keeping our hearts right.` },
-    { id: 10, title: t('media.tracks.10.title'), domain: t('media.tracks.10.domain'), domainIcon: '🤝', desc: t('media.tracks.10.desc'), src: assetPath('/audio/10. Manners.mp3'), color: '#1E88E5', cover: assetPath('/assets/characters/AIKO.png'), lyrics: `(Verse)\\nWhen you receive, say Thank You.\\nThen I'll say You're Welcome.\\nYes, Please.\\nExcuse Me.\\nNo, Thank You.\\nI'm Sorry.` },
-    { id: 11, title: t('media.tracks.11.title'), domain: t('media.tracks.11.domain'), domainIcon: '⏰', desc: t('media.tracks.11.desc'), src: assetPath('/audio/11. Time.mp3'), color: '#FF6F00', cover: assetPath('/assets/characters/SELENE.png'), lyrics: `Do you know? Do you know? Do you know what time it is?\\nIs it 1:00, 2:00, 3:00, 4:00, 5:00, 6:00, 7:00, 8:00, 9:00, 10:00, 11:00, 12:00?\\nDo you know? Do you know? Do you know what time it is?\\nIs it 1:30, 2:30, 3:30, 4:30, 5:30, 6:30, 7:30, 8:30, 9:30, 10:30, 11:30, 12:30?\\nDo you know? Do you know? Do you know what time it is?\\nIs it in the morning when you just wake up?\\nIs it in the afternoon and you're eating some lunch?\\nIs it in the evening and you're getting ready for bed?\\nDo you know what time it is?\\nIs it 1:00? Is it 1:30?\\nIs it in the morning when you just wake up?\\nIs it in the afternoon and you're eating some lunch?\\nIs it in the evening and you're getting ready for bed?\\nDo you know? Do you know? Do you know what time it is?` },
-    { id: 12, title: t('media.tracks.12.title'), domain: t('media.tracks.12.domain'), domainIcon: '🦋', desc: t('media.tracks.12.desc'), src: assetPath('/audio/12. Changes.mp3'), color: '#4CAF50', cover: assetPath('/assets/characters/NERISSA.png'), lyrics: `(Verse)\\nIt's sunny outside. Yesterday it rained.\\nOh! Somewhere it might snow tomorrow.\\nThat's the weather, it changes.\\nBut not love from above.\\nTrue love is unchanging, always the same.\\nYesteray, today, and forever.` },
-    { id: 13, title: t('media.tracks.13.title'), domain: t('media.tracks.13.domain'), domainIcon: '💯', desc: t('media.tracks.13.desc'), src: assetPath('/audio/13. One hundred.mp3'), color: '#9C27B0', cover: assetPath('/assets/characters/OCTAVIA.png'), lyrics: null },
-    { id: 14, title: t('media.tracks.14.title'), domain: t('media.tracks.14.domain'), domainIcon: '🌊', desc: t('media.tracks.14.desc'), src: assetPath('/audio/14. The Ocean.mp3'), color: '#1E88E5', cover: assetPath('/assets/track-art/Wave.jpg'), lyrics: null },
-    { id: 15, title: t('media.tracks.15.title'), domain: t('media.tracks.15.domain'), domainIcon: '📖', desc: t('media.tracks.15.desc'), src: assetPath('/audio/15. Hard Words.mp3'), color: '#FF6F00', cover: assetPath('/assets/characters/RONAN.png'), lyrics: `(Intro)\\nSometimes you may hear a word that's hard to say,\\nbut don't worry. Slow down and say...\\n\\n(Word Drill)\\nBalloon. Hawaii. Oklahoma.\\nLouisiana. Octopus. Vegetables.\\nSpaghetti. Macaroni.\\nAlaska. Nevada. Colorado.` },
-    { id: 16, title: t('media.tracks.16.title'), domain: t('media.tracks.16.domain'), domainIcon: '🔷', desc: t('media.tracks.16.desc'), src: assetPath('/audio/16. Shapes.mp3'), color: '#4CAF50', cover: assetPath('/assets/characters/SILAS.png'), lyrics: `(Chorus)\\nI see shapes all around me.\\nDo you see shapes all around you?\\n\\n(Verse)\\nThere goes a Circle.\\nThat's a Square. (Yes, four equal sides).\\nTriangle. Stars. Rectangle.\\nTrapezoids. Pentagons. Hexagon.\\nHeptagon. Octagon. Cube. Spheres.` },
-    { id: 17, title: t('media.tracks.17.title'), domain: t('media.tracks.17.domain'), domainIcon: '🗓️', desc: t('media.tracks.17.desc'), src: assetPath('/audio/17. Months of the Year.mp3'), color: '#9C27B0', cover: assetPath('/assets/characters/ELIAS.png'), lyrics: `(Intro)\\nTime. Seconds, minutes, hours, days, weeks, months.\\nIt's time for the months of the year song.\\n\\n(Chorus)\\nJanuary, February, March,\\nApril, May, June,\\nJuly, August, September,\\nOctober, November, December.` },
-    { id: 18, title: t('media.tracks.18.title'), domain: t('media.tracks.18.domain'), domainIcon: '🌧️', desc: t('media.tracks.18.desc'), src: assetPath('/audio/18. Rain.mp3'), color: '#1E88E5', cover: assetPath('/assets/characters/ATHENA.png'), lyrics: `(Chant)\\nWatching raindrops falling down,\\ncleaning the atmosphere.\\nWatching raindrops falling down,\\ncleaning the atmosphere.` },
-    { id: 19, title: t('media.tracks.19.title'), domain: t('media.tracks.19.domain'), domainIcon: '🌈', desc: t('media.tracks.19.desc'), src: assetPath('/audio/20. After the Storm (outro).mp3'), color: '#4CAF50', cover: assetPath('/assets/soe-logo.jpg'), lyrics: null },
+    { id: 1, title: t('media.tracks.1.title'), domain: t('media.tracks.1.domain'), domainIcon: '☀️', desc: t('media.tracks.1.desc'), src: assetPath('/audio/01. Sunny Day (intro).mp3'), color: '#FF6F00', lyrics: null, cover: assetPath('/assets/track-art/sunny-day.png') },
+    { id: 2, title: t('media.tracks.2.title'), domain: t('media.tracks.2.domain'), domainIcon: '📅', desc: t('media.tracks.2.desc'), src: assetPath('/audio/02. Days of the Week.mp3'), color: '#1E88E5', cover: assetPath('/assets/track-art/days-of-the-week.png'), lyrics: `(Verse)\nSeven days of a week I'll sing my song.\nCreation speaks to me all day long.\nHow I enjoy looking at those big white fluffy clouds.\nIn the daytime at night, I always look forward\nto the bright stars sparkling in the sky.\n\n(Chorus)\nSunday, Monday, Tuesday, Wednesday,\nThursday, Friday, Saturday.\nSunday, Monday, Tuesday, Wednesday,\nThursday, Friday, Saturday.` },
+    { id: 3, title: t('media.tracks.3.title'), domain: t('media.tracks.3.domain'), domainIcon: '🗣️', desc: t('media.tracks.3.desc'), src: assetPath('/audio/03. Alphabet Song Remix.mp3'), color: '#FF6F00', cover: assetPath('/assets/track-art/alphabet-song.png'), lyrics: `(Verse)\nA B C D E F G H I J K L M N O P\nQ R S T U V W X Y and Z.\nNow I know my ABC.\nNext time, won't you sing with me?\n\n(Remix / Breakdown)\nNow I know my ABCs remix.\nA A A B B B... C C C... D...\nE E F F... G G... H H I I I...\nJ J... K K K... L L M M...\nN O O O... P P P... Q...\nR S S T T T... U V W X Y Z` },
+    { id: 4, title: t('media.tracks.4.title'), domain: t('media.tracks.4.domain'), domainIcon: '🎨', desc: t('media.tracks.4.desc'), src: assetPath('/audio/04. Horses Interlude.mp3'), color: '#9C27B0', cover: assetPath('/assets/track-art/horses-interlude.png'), lyrics: `(Spoken / Dialogue)\nHorses. Horses.\nThat's not a horse. That's a donkey.\nHorses. Horses.\nWait a minute. That's not a horse. That's a pig.\nHorses. Horses.\nGuys, did someone let the dogs out? That's a sheep.\nThat's not a horse.\n\nOh, can someone please get that cat out of here?\nWe're looking for a horse.\nAn elephant is certainly not a horse.\nLove those chickens, but I still need a horse.\nMonkeys. We need a horse.\nHorses. Now that's a horse.` },
+    { id: 5, title: t('media.tracks.5.title'), domain: t('media.tracks.5.domain'), domainIcon: '🇫🇷', desc: t('media.tracks.5.desc'), src: assetPath('/audio/05. Le Cheval.mp3'), color: '#1E88E5', cover: assetPath('/assets/track-art/le-cheval.png'), lyrics: `(Verse — Sung in French)\nDeux accrets le cheval, fort et puissant\nDeux accrets le cheval, fort et puissant\nDeux accrets le cheval, fort et puissant\n\nOh, I can almost see the horses now grazing,\nEating up grass and apples, which they love so much.\nThe horse has strength and power,\nable to see almost all the way around its body.\nAfraid of nothing in the time of war,\nThe horse walks, trots, canter, and gallops.\nWhat an amazing creation.` },
+    { id: 6, title: t('media.tracks.6.title'), domain: t('media.tracks.6.domain'), domainIcon: '🤸', desc: t('media.tracks.6.desc'), src: assetPath('/audio/06. Lets Stretch.mp3'), color: '#4CAF50', cover: assetPath('/assets/scenes/touch-your-toes.webp'), lyrics: `(Breathing Exercise)
+Breathe in through your nose.
+Breathe out through your mouth.
+(Repeat)
+
+(Stretching Movements)
+Let's stretch.
+Bring your arms up. Reach to the sky.
+Stretch real high.
+Bring your arms down.
+Don't bend your knees.
+Touch your toes.
+(Repeat)` },
+    { id: 7, title: t('media.tracks.7.title'), domain: t('media.tracks.7.domain'), domainIcon: '💪', desc: t('media.tracks.7.desc'), src: assetPath('/audio/07. Drill Time.mp3'), color: '#4CAF50', cover: assetPath('/assets/scenes/drums.webp'), lyrics: `(Intro)
+On your mark, get set, ready, go.
+Stay on the path. Always learning.
+
+(The March)
+Forward march.
+Left, left, left, right, left.
+Left, left, left, right, left.
+
+(Chant)
+All I know is all I know.
+Wisdom is more precious than gold.
+Sound off! 1, 2, 3, 4.
+
+(The Shake)
+We're so excited about learning, we want to shake. Woohoo!
+Shake, shake, shake your left arm.
+Shake, shake, shake your right arm.
+Shake, shake, shake your left leg.
+Shake, shake, shake your right leg.
+
+(Outro)
+Children, please remember
+always stay on the right path and keep on learning.` },
+    { id: 8, title: t('media.tracks.8.title'), domain: t('media.tracks.8.domain'), domainIcon: '🔢', desc: t('media.tracks.8.desc'), src: assetPath('/audio/08. Numbers.mp3'), color: '#FF6F00', cover: assetPath('/assets/track-art/numbers.png'), lyrics: `(Intro)
+I like the numbers.
+It is so much fun to count.
+
+(Call and Response)
+Now let's count to 10 while we clap.
+One clap. Follow me. One.
+Two claps. Follow me. One. Two.
+Three claps. Follow me. One. Two. Three.
+...
+Ten claps. Follow me.
+1 2 3 4 5 6 7 8 9 10.
+
+(Outro)
+Hooray. You did it.
+Give yourself a great big hand clap.` },
+    { id: 9, title: t('media.tracks.9.title'), domain: t('media.tracks.9.domain'), domainIcon: '🔬', desc: t('media.tracks.9.desc'), src: assetPath('/audio/09. My Body.mp3'), color: '#9C27B0', cover: assetPath('/assets/track-art/my-body.png'), lyrics: `(Verse 1: Face)
+What's on your face?
+Eyes, nose, mouth, chin.
+Don't forget about your forehead, cheeks, and two ears.
+
+(Verse 2: Upper Body)
+My body is strong.
+Neck, shoulders, back, arms.
+Don't forget about your hands and tip fingers.
+
+(Verse 3: Lower Body)
+My body is strong.
+Hip, thighs, knees, legs.
+Don't forget about your ankles, feet, and ten toes.
+
+(Bridge)
+We are going to keep our body strong
+by eating right and staying healthy.
+Consuming living foods, stretching,
+and keeping our hearts right.` },
+    { id: 10, title: t('media.tracks.10.title'), domain: t('media.tracks.10.domain'), domainIcon: '🤝', desc: t('media.tracks.10.desc'), src: assetPath('/audio/10. Manners.mp3'), color: '#1E88E5', cover: assetPath('/assets/track-art/manners.png'), lyrics: `(Verse)
+When you receive, say Thank You.
+Then I'll say You're Welcome.
+Yes, Please.
+Excuse Me.
+No, Thank You.
+I'm Sorry.` },
+    { id: 11, title: t('media.tracks.11.title'), domain: t('media.tracks.11.domain'), domainIcon: '⏰', desc: t('media.tracks.11.desc'), src: assetPath('/audio/11. Time.mp3'), color: '#FF6F00', cover: assetPath('/assets/track-art/time.png'), lyrics: `Do you know? Do you know? Do you know what time it is?
+Is it 1:00, 2:00, 3:00, 4:00, 5:00, 6:00, 7:00, 8:00, 9:00, 10:00, 11:00, 12:00?
+Do you know? Do you know? Do you know what time it is?
+Is it 1:30, 2:30, 3:30, 4:30, 5:30, 6:30, 7:30, 8:30, 9:30, 10:30, 11:30, 12:30?
+Do you know? Do you know? Do you know what time it is?
+Is it in the morning when you just wake up?
+Is it in the afternoon and you're eating some lunch?
+Is it in the evening and you're getting ready for bed?
+Do you know what time it is?
+Is it 1:00? Is it 1:30?
+Is it in the morning when you just wake up?
+Is it in the afternoon and you're eating some lunch?
+Is it in the evening and you're getting ready for bed?
+Do you know? Do you know? Do you know what time it is?` },
+    { id: 12, title: t('media.tracks.12.title'), domain: t('media.tracks.12.domain'), domainIcon: '🦋', desc: t('media.tracks.12.desc'), src: assetPath('/audio/12. Changes.mp3'), color: '#4CAF50', cover: assetPath('/assets/track-art/changes.png'), lyrics: `(Verse)
+It's sunny outside. Yesterday it rained.
+Oh! Somewhere it might snow tomorrow.
+That's the weather, it changes.
+But not love from above.
+True love is unchanging, always the same.
+Yesterday, today, and forever.` },
+    { id: 13, title: t('media.tracks.13.title'), domain: t('media.tracks.13.domain'), domainIcon: '💯', desc: t('media.tracks.13.desc'), src: assetPath('/audio/13. One hundred.mp3'), color: '#9C27B0', cover: assetPath('/assets/track-art/one-hundred.png'), lyrics: null },
+    { id: 14, title: t('media.tracks.14.title'), domain: t('media.tracks.14.domain'), domainIcon: '🌊', desc: t('media.tracks.14.desc'), src: assetPath('/audio/14. The Ocean.mp3'), color: '#1E88E5', cover: assetPath('/assets/track-art/the-ocean.png'), lyrics: null },
+    { id: 15, title: t('media.tracks.15.title'), domain: t('media.tracks.15.domain'), domainIcon: '📖', desc: t('media.tracks.15.desc'), src: assetPath('/audio/15. Hard Words.mp3'), color: '#FF6F00', cover: assetPath('/assets/track-art/hard-words.png'), lyrics: `(Intro)
+Sometimes you may hear a word that's hard to say,
+but don't worry. Slow down and say...
+
+(Word Drill)
+Balloon. Hawaii. Oklahoma.
+Louisiana. Octopus. Vegetables.
+Spaghetti. Macaroni.
+Alaska. Nevada. Colorado.` },
+    { id: 16, title: t('media.tracks.16.title'), domain: t('media.tracks.16.domain'), domainIcon: '🔷', desc: t('media.tracks.16.desc'), src: assetPath('/audio/16. Shapes.mp3'), color: '#4CAF50', cover: assetPath('/assets/track-art/shapes.png'), lyrics: `(Chorus)
+I see shapes all around me.
+Do you see shapes all around you?
+
+(Verse)
+There goes a Circle.
+That's a Square. (Yes, four equal sides).
+Triangle. Stars. Rectangle.
+Trapezoids. Pentagons. Hexagon.
+Heptagon. Octagon. Cube. Spheres.` },
+    { id: 17, title: t('media.tracks.17.title'), domain: t('media.tracks.17.domain'), domainIcon: '🗓️', desc: t('media.tracks.17.desc'), src: assetPath('/audio/17. Months of the Year.mp3'), color: '#9C27B0', cover: assetPath('/assets/track-art/months-of-the-year.png'), lyrics: `(Intro)
+Time. Seconds, minutes, hours, days, weeks, months.
+It's time for the months of the year song.
+
+(Chorus)
+January, February, March,
+April, May, June,
+July, August, September,
+October, November, December.` },
+    { id: 18, title: t('media.tracks.18.title'), domain: t('media.tracks.18.domain'), domainIcon: '🌧️', desc: t('media.tracks.18.desc'), src: assetPath('/audio/18. Rain.mp3'), color: '#1E88E5', cover: assetPath('/assets/scenes/b-roll-boats.webp'), lyrics: `(Chant)
+Watching raindrops falling down,
+cleaning the atmosphere.
+Watching raindrops falling down,
+cleaning the atmosphere.` },
+    { id: 19, title: t('media.tracks.19.title'), domain: t('media.tracks.19.domain'), domainIcon: '🌈', desc: t('media.tracks.19.desc'), src: assetPath('/audio/20. After the Storm (outro).mp3'), color: '#4CAF50', cover: assetPath('/assets/track-art/after-the-storm.png'), lyrics: null },
   ];
 
   return (
@@ -777,19 +908,22 @@ const MediaRoom = () => {
 
         .album-label {
           position: absolute;
-          bottom: 1rem;
+          bottom: 0.6rem;
           left: 50%;
           transform: translateX(-50%);
-          background: rgba(0,0,0,0.7);
-          backdrop-filter: blur(10px);
-          -webkit-backdrop-filter: blur(10px);
-          padding: 0.4rem 1.2rem;
-          border-radius: 999px;
-          color: white;
+          background: rgba(0,0,0,0.45);
+          backdrop-filter: blur(16px) saturate(1.4);
+          -webkit-backdrop-filter: blur(16px) saturate(1.4);
+          padding: 0.35rem 0.8rem;
+          border-radius: var(--radius-sm);
+          color: rgba(255,255,255,0.95);
           font-family: var(--font-heading);
-          font-size: 0.75rem;
+          font-size: 0.7rem;
           font-weight: 600;
-          white-space: nowrap;
+          white-space: normal;
+          text-align: center;
+          max-width: 85%;
+          line-height: 1.3;
           border: 1px solid rgba(255,255,255,0.15);
           pointer-events: none;
           z-index: 20;
@@ -1007,8 +1141,19 @@ const MediaRoom = () => {
           font-size: 1.2rem;
         }
 
+        .audio-player__track-thumb {
+          width: 44px;
+          height: 44px;
+          border-radius: var(--radius-sm);
+          object-fit: cover;
+          flex-shrink: 0;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+        }
+
         .audio-player__track-info {
           flex: 1;
+          min-width: 0;
+          overflow: visible;
         }
 
         .audio-player__track-title {
@@ -1016,6 +1161,9 @@ const MediaRoom = () => {
           font-family: var(--font-heading);
           font-weight: 500;
           font-size: 0.9rem;
+          word-wrap: break-word;
+          overflow-wrap: break-word;
+          white-space: normal;
         }
 
         .audio-player__track-domain {

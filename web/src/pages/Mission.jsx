@@ -214,64 +214,7 @@ const Mission = () => {
                 </div>
             </section>
 
-            {/* ── The Solution ── */}
-            <section className="section">
-                <div className="container">
-                    <RevealSection className="text-center">
-                        <div className="section-label">{t('mission.solution_label')}</div>
-                        <h2 className="section-title">
-                            {t('mission.solution_title_1')} <span className="text-sage">{t('mission.solution_title_2')}</span> {t('mission.solution_title_3')}
-                        </h2>
-                    </RevealSection>
 
-                    <RevealSection>
-                        <div className="solution-grid">
-                            <div className="glass-card solution-card">
-                                <span className="solution-card__icon">🎵</span>
-                                <h3>{t('mission.solutions.music.title')}</h3>
-                                <p>
-                                    {t('mission.solutions.music.desc')}
-                                </p>
-                            </div>
-                            <div className="glass-card solution-card">
-                                <span className="solution-card__icon">📦</span>
-                                <h3>{t('mission.solutions.box.title')}</h3>
-                                <p>
-                                    {t('mission.solutions.box.desc')}
-                                </p>
-                            </div>
-                            <div className="glass-card solution-card">
-                                <span className="solution-card__icon">🌍</span>
-                                <h3>{t('mission.solutions.scale.title')}</h3>
-                                <p>
-                                    {t('mission.solutions.scale.desc')}
-                                </p>
-                            </div>
-                            <div className="glass-card solution-card">
-                                <span className="solution-card__icon">🧠</span>
-                                <h3>{t('mission.solutions.neuro.title')}</h3>
-                                <p>
-                                    {t('mission.solutions.neuro.desc')}
-                                </p>
-                            </div>
-                        </div>
-                    </RevealSection>
-
-                    <RevealSection className="text-center">
-                        <div className="manifesto-cta">
-                            <h3 style={{ marginBottom: '1rem' }}>
-                                {t('mission.cta_title_1')}{' '}
-                                <span className="accent-text">{t('mission.cta_title_2')}</span>
-                            </h3>
-                            <div style={{ marginTop: '2rem' }}>
-                                <Link to="/media" className="page-bottom-link">
-                                    {t('home.explore_media')}
-                                </Link>
-                            </div>
-                        </div>
-                    </RevealSection>
-                </div>
-            </section>
 
             {/* ── Scene Strip: Into the World ── */}
             <div className="scene-strip" aria-hidden="true">
