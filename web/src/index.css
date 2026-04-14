@@ -1,22 +1,22 @@
 /* ========================================
    SOE: RHYTHM QUEST — Design System
-   Bright & Fun — Playful. Vibrant. Essential.
+   Bright & Playful — Warm. Vibrant. Joyful.
    ======================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200;12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Fredoka:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700&family=Dancing+Script:wght@400;500;600;700&display=swap');
 
 
 :root {
-  /* ── Light & Bright Palette ── */
+  /* ── Bright & Playful Palette ── */
   --color-bg-white: #ffffff;
-  --color-bg-cream: #f8f9fa;
-  --color-bg-light: #f0f4f8;
+  --color-bg-cream: #faf9f7;
+  --color-bg-light: #f3f1ee;
   --color-bg-card: #ffffff;
-  --color-bg-card-hover: #f8f9fa;
+  --color-bg-card-hover: #f7f6f3;
 
-  /* Orange / Warm accent */
+  /* Amber / Gold accent */
   --color-orange: #FF6F00;
-  --color-orange-light: #FF8F00;
+  --color-orange-light: #FF9800;
   --color-orange-soft: rgba(255, 111, 0, 0.10);
 
   /* Green / Sage accent */
@@ -32,38 +32,38 @@
   /* Blue accent */
   --color-blue: #1E88E5;
   --color-blue-light: #42A5F5;
-  --color-blue-soft: rgba(30, 136, 229, 0.10);
+  --color-blue-soft: rgba(30, 136, 229, 0.08);
 
   --color-yellow: #FFB300;
   --color-yellow-light: #FFC107;
-  --color-yellow-soft: rgba(255, 179, 0, 0.12);
+  --color-yellow-soft: rgba(255, 179, 0, 0.10);
 
   --color-red: #E53935;
-  --color-red-soft: rgba(229, 57, 53, 0.10);
+  --color-red-soft: rgba(229, 57, 53, 0.08);
 
-  /* Aliases */
+  /* Legacy aliases */
   --color-sage: #4CAF50;
   --color-sage-light: #66BB6A;
-  --color-sage-glow: rgba(76, 175, 80, 0.12);
+  --color-sage-glow: rgba(76, 175, 80, 0.10);
 
   --color-plum: #7B1FA2;
   --color-plum-light: #9C27B0;
-  --color-plum-glow: rgba(123, 31, 162, 0.10);
+  --color-plum-glow: rgba(123, 31, 162, 0.08);
 
   --color-gold: #FF6F00;
-  --color-gold-light: #FF8F00;
-  --color-gold-glow: rgba(255, 111, 0, 0.12);
+  --color-gold-light: #FF9800;
+  --color-gold-glow: rgba(255, 111, 0, 0.10);
 
-  --color-bg-deep: #e8ecf0;
-  --color-bg-navy: #f0f4f8;
+  --color-bg-deep: #f0eeeb;
+  --color-bg-navy: #f5f3f0;
 
   --color-text-primary: #1a1a2e;
-  --color-text-secondary: #4a4a6a;
-  --color-text-muted: #8a8aaa;
+  --color-text-secondary: #555568;
+  --color-text-muted: #8e8ea0;
   --color-text-dark: #1a1a2e;
 
-  --color-border: rgba(0, 0, 0, 0.08);
-  --color-border-light: rgba(0, 0, 0, 0.12);
+  --color-border: rgba(0, 0, 0, 0.06);
+  --color-border-light: rgba(0, 0, 0, 0.10);
 
   /* ── Typography ── */
   --font-display: 'Bricolage Grotesque', 'Outfit', sans-serif;
@@ -108,10 +108,10 @@ body {
   line-height: 1.7;
   min-height: 100vh;
   overflow-x: hidden;
-  /* Warm light gradient */
+  /* Soft warm gradient tints */
   background-image:
-    radial-gradient(ellipse 80% 40% at 20% 0%, rgba(255, 111, 0, 0.04) 0%, transparent 60%),
-    radial-gradient(ellipse 60% 50% at 80% 100%, rgba(76, 175, 80, 0.04) 0%, transparent 60%);
+    radial-gradient(ellipse 80% 40% at 20% 0%, rgba(76, 175, 80, 0.04) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 50% at 80% 100%, rgba(123, 31, 162, 0.03) 0%, transparent 60%);
   background-attachment: fixed;
 }
 
@@ -325,13 +325,13 @@ img {
   border: 2px solid var(--color-border);
   border-radius: var(--radius-lg);
   padding: 2rem;
-  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.05);
   transition: all var(--transition-med);
 }
 
 .glass-card:hover {
-  border-color: var(--color-green-soft);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  border-color: rgba(76, 175, 80, 0.25);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.10);
   transform: translateY(-4px);
 }
 
@@ -553,7 +553,7 @@ img {
   width: 900px;
   height: 900px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 111, 0, 0.06) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(76, 175, 80, 0.06) 0%, transparent 70%);
   top: -300px;
   left: -200px;
   animation: atmosphereFloat1 20s ease-in-out infinite;
@@ -565,7 +565,7 @@ img {
   width: 700px;
   height: 700px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(76, 175, 80, 0.06) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(123, 31, 162, 0.05) 0%, transparent 70%);
   bottom: -200px;
   right: -100px;
   animation: atmosphereFloat2 25s ease-in-out infinite;
@@ -700,11 +700,11 @@ img {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--color-bg-cream);
+  background: #f0eeeb;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #ccc;
+  background: #c8c6c2;
   border-radius: 4px;
 }
 

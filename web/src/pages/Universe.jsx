@@ -134,7 +134,7 @@ const Universe = () => {
   const duosGridRef = useRef(null);
   const landTilesRef = useAnimeReveal({ selector: '.land-tile', staggerMs: 70 });
   const duoCardsRef = useAnimeReveal({ selector: '.duo-card', staggerMs: 90, translateY: [30, 0] });
-  const spotlightRef = useAnimeReveal({ selector: '.duo-spotlight-card', staggerMs: 120, scale: [0.94, 1] });
+
 
   const scrollToLand = (landName) => {
     const index = heroDuos.findIndex(d => d.land === landName);
@@ -244,48 +244,6 @@ const Universe = () => {
         </div>
       </section>
 
-      {/* ── Featured Duo Spotlights ── */}
-      <section className="section glow-plum">
-        <div className="container">
-          <RevealSection className="text-center">
-            <div className="section-label">✨ Featured Duos</div>
-            <h2 className="section-title">
-              Together They <span className="text-plum">Learn</span>
-            </h2>
-            <p className="section-subtitle" style={{ margin: '0 auto 3rem auto' }}>
-              Three iconic duos, three legendary lands — each pair bringing their unique gifts to the Quest.
-            </p>
-          </RevealSection>
-
-          <div className="duo-spotlight-grid" ref={spotlightRef}>
-            {heroDuos.filter(d => d.groupShot).map((duo, i) => (
-              <div
-                key={duo.land}
-                className="duo-spotlight-card glass-card anime-item"
-                style={{ '--spotlight-color': duo.landColor }}
-              >
-                <div className="duo-spotlight-card__img-wrap">
-                  <img
-                    src={duo.groupShot}
-                    alt={`${duo.duo[0]} and ${duo.duo[1]} from ${duo.land}`}
-                    className="duo-spotlight-card__img"
-                  />
-                  <div className="duo-spotlight-card__overlay">
-                    <span className="duo-spotlight-card__land-icon">{duo.landIcon}</span>
-                    <span className="duo-spotlight-card__land" style={{ color: duo.landColor }}>{duo.land}</span>
-                  </div>
-                </div>
-                <div className="duo-spotlight-card__body">
-                  <h3 className="duo-spotlight-card__names" style={{ color: duo.landColor }}>
-                    {duo.duo[0]} &amp; {duo.duo[1]}
-                  </h3>
-                  <p className="duo-spotlight-card__focus">{duo.focus}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* ── 7 Lands & Hero Duos ── */}
       <section className="section glow-sage">
@@ -526,94 +484,7 @@ const Universe = () => {
           }
         }
 
-        /* ── Duo Spotlight Grid ── */
-        .duo-spotlight-grid {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 2rem;
-          margin-top: 0;
-        }
 
-        .duo-spotlight-card {
-          padding: 0;
-          overflow: hidden;
-          border: 2px solid rgba(255,255,255,0.05);
-          transition: all var(--transition-med);
-          cursor: default;
-        }
-
-        .duo-spotlight-card:hover {
-          transform: translateY(-6px);
-          box-shadow: 0 24px 60px rgba(0,0,0,0.14), 0 0 30px rgba(from var(--spotlight-color) r g b / 0.08);
-          border-color: var(--spotlight-color);
-        }
-
-        .duo-spotlight-card__img-wrap {
-          position: relative;
-          overflow: hidden;
-          aspect-ratio: 3/4;
-        }
-
-        .duo-spotlight-card__img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          object-position: top center;
-          display: block;
-          transition: transform 0.6s var(--ease-gentle);
-        }
-
-        .duo-spotlight-card:hover .duo-spotlight-card__img {
-          transform: scale(1.05);
-        }
-
-        .duo-spotlight-card__overlay {
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          padding: 2rem 1.5rem 1rem;
-          background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);
-          display: flex;
-          align-items: center;
-          gap: 0.5rem;
-        }
-
-        .duo-spotlight-card__land-icon {
-          font-size: 1.3rem;
-        }
-
-        .duo-spotlight-card__land {
-          font-family: var(--font-heading);
-          font-weight: 700;
-          font-size: 1rem;
-          letter-spacing: 0.05em;
-          text-shadow: 0 1px 4px rgba(0,0,0,0.5);
-        }
-
-        .duo-spotlight-card__body {
-          padding: 1.25rem 1.5rem;
-        }
-
-        .duo-spotlight-card__names {
-          font-size: 1.15rem;
-          font-weight: 700;
-          margin-bottom: 0.35rem;
-        }
-
-        .duo-spotlight-card__focus {
-          font-size: 0.8rem;
-          color: var(--color-text-muted);
-          text-transform: uppercase;
-          letter-spacing: 0.1em;
-          margin: 0;
-        }
-
-        @media (max-width: 900px) {
-          .duo-spotlight-grid {
-            grid-template-columns: 1fr;
-          }
-        }
 
         /* ── Duos Grid ── */
         .duos-grid {
