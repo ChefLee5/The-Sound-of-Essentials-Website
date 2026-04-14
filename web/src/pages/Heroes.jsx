@@ -88,7 +88,7 @@ const CharacterCard = ({ char, index, isExpanded, onToggle }) => {
                     {char.name === 'Seriphia' ? (
                         <div className="char-card__img-bg char-card__img-bg--scene">
                             <img
-                                src={`${import.meta.env.BASE_URL}assets/characters/SERIPHIA_celestia.png`}
+                                src={`${import.meta.env.BASE_URL}assets/characters/SERIPHIA.png`}
                                 alt={char.name}
                                 className="char-card__image char-card__image--scene"
                             />
@@ -96,7 +96,7 @@ const CharacterCard = ({ char, index, isExpanded, onToggle }) => {
                     ) : (
                         <div className="char-card__img-bg" style={{ background: '#fff' }}>
                             <img
-                                src={`${import.meta.env.BASE_URL}assets/characters/${char.name.toUpperCase()}_crop.png`}
+                                src={`${import.meta.env.BASE_URL}assets/characters/${char.name.toUpperCase()}.png`}
                                 alt={char.name}
                                 className="char-card__image"
                                 style={{ mixBlendMode: 'multiply' }}
