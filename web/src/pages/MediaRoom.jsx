@@ -9,15 +9,45 @@ import { useAnimeReveal } from '../hooks/useAnimeReveal';
 
 /* ── Book Pages (Coloring) ── */
 const bookPages = [
-  '/assets/coloring-book/Coloring book cover.png',
-  '/assets/coloring-book/Coloring page 1.png',
-  '/assets/coloring-book/Coloring page 2.png',
-  '/assets/coloring-book/Coloring page 3.png',
-  '/assets/coloring-book/Coloring page 4.png',
-  '/assets/coloring-book/Coloring page 5.png',
-  '/assets/coloring-book/Coloring page 6.png',
-  '/assets/coloring-book/Coloring page 7.png',
-].map(assetPath);
+  'CB_ABCjum.png',
+  'CB_Aquaria.png',
+  'CB_AquariaDuo.png',
+  'CB_Boats.png',
+  'CB_Breath.png',
+  'CB_Brushhorse.png',
+  'CB_CelestiaDuo.png',
+  'CB_Congrats.png',
+  'CB_Flowercrown.png',
+  'CB_HarmoniaDuo.png',
+  'CB_Hear2.png',
+  'CB_Hearthecall.png',
+  'CB_Hill.png',
+  'CB_Horse.png',
+  'CB_Keeponlearning.png',
+  'CB_LeCheval.png',
+  'CB_lookhowfar.png',
+  'CB_Luminosity Duo.png',
+  'CB_lunch.png',
+  'CB_Numeria.png',
+  'CB_Oink.png',
+  'CB_Orchard.png',
+  'CB_Pasture.png',
+  'CB_Path.png',
+  'CB_Pethorse.png',
+  'CB_Ponyapple.png',
+  'CB_Ponysleep.png',
+  'CB_Seriphiacall.png',
+  'CB_Shapes.png',
+  'CB_Stones.png',
+  'CB_Tag.png',
+  'CB_Terrasol.png',
+  'CB_TerrasolDuo.png',
+  'CB_Tulips.png',
+  'CB_VitalisDuo.png',
+  'CB_water.png',
+  'CB_WaveSunset.png',
+  'CB_WordPath.png',
+].map(f => assetPath(`/assets/coloring-book/${f}`));
 
 /* ── SOE Book Pages (real assets) ── */
 const soeBookPages = Array.from({ length: 14 }, (_, i) =>
@@ -486,7 +516,45 @@ const MediaRoom = () => {
                   {t('media.next')}
                 </button>
               </div>
-              <div className="text-center" style={{ marginTop: '1.5rem' }}>
+              <div className="book-viewer__actions" style={{ display: 'flex', justifyContent: 'center', gap: '1rem', marginTop: '1.5rem', flexWrap: 'wrap' }}>
+                <button
+                  className="btn btn-outline"
+                  onClick={() => {
+                    const w = window.open('', '_blank');
+                    w.document.write(`
+                      <html>
+                        <head>
+                          <title>SOE Coloring Page ${bookIndex + 1}</title>
+                          <style>
+                            * { margin: 0; padding: 0; }
+                            body { display: flex; justify-content: center; align-items: center; min-height: 100vh; background: #fff; }
+                            img { max-width: 100%; max-height: 100vh; object-fit: contain; }
+                            @media print {
+                              @page { margin: 0.5cm; size: auto; }
+                              body { background: #fff; }
+                              img { max-width: 100%; max-height: 100%; }
+                            }
+                          </style>
+                        </head>
+                        <body>
+                          <img src="${bookPages[bookIndex]}" onload="window.print(); window.close();" />
+                        </body>
+                      </html>
+                    `);
+                    w.document.close();
+                  }}
+                  aria-label="Print this page"
+                >
+                  🖨️ Print This Page
+                </button>
+                <a
+                  className="btn btn-outline"
+                  href={bookPages[bookIndex]}
+                  download={`SOE-Coloring-Page-${bookIndex + 1}.png`}
+                  aria-label="Download this page"
+                >
+                  ⬇️ Download
+                </a>
                 <Link to="/join" className="btn btn-gold">{t('media.pre_order_coloring')}</Link>
               </div>
             </div>

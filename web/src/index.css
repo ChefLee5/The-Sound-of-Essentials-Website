@@ -241,11 +241,14 @@ img {
 }
 
 .section-subtitle {
-  font-size: 1.15rem;
-  color: var(--color-text-secondary);
+  font-family: var(--font-cursive);
+  font-weight: 400;
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  color: var(--color-orange);
   max-width: 600px;
   margin: 0 auto;
-  line-height: 1.8;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
 }
 
 /* ── Buttons ── */
