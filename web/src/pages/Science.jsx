@@ -135,7 +135,11 @@ const Science = () => {
                                     </p>
                                 </div>
                                 <div className="science-image-wrap animate-float">
-                                    <div className="science-image-placeholder">⏰</div>
+                                    <img
+                                        src={assetPath('/assets/scenes/time-celestia.webp')}
+                                        alt="Time concept illustration from Celestia"
+                                        className="science-image"
+                                    />
                                 </div>
                             </div>
                         </div>

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { RevealSection } from '../hooks/useReveal';
+import { assetPath } from '../utils/assetPath';
 
 const JoinQuest = () => {
     const { t } = useTranslation();
@@ -53,8 +54,12 @@ const JoinQuest = () => {
     return (
         <div className="join-page">
             {/* ── Hero ── */}
-            <header className="join-hero">
-                <div className="container text-center">
+            <header className="join-hero" style={{ position: 'relative', overflow: 'hidden' }}>
+                <div className="scene-backdrop" aria-hidden="true">
+                    <img src={assetPath('/assets/marketing/quest-collage.webp')} alt="" className="scene-backdrop__img" />
+                    <div className="scene-backdrop__scrim" />
+                </div>
+                <div className="container text-center" style={{ position: 'relative', zIndex: 1 }}>
                     <div className="animate-fade-up">
                         <div className="section-label">{t('join.hero_label')}</div>
                         <h1>
@@ -129,7 +134,13 @@ const JoinQuest = () => {
 
                     <div className="audience-grid">
                         <RevealSection delay={0}>
-                            <div className="glass-card audience-card">
+                            <div className="glass-card audience-card" style={{ position: 'relative', overflow: 'hidden' }}>
+                                <img
+                                    src={assetPath('/assets/scenes/excited-to-learn.webp')}
+                                    alt=""
+                                    className="audience-card__scene"
+                                    loading="lazy"
+                                />
                                 <span className="audience-card__icon">👪</span>
                                 <h3>{t('join.audience_1_title')}</h3>
                                 <p>
@@ -139,7 +150,13 @@ const JoinQuest = () => {
                         </RevealSection>
 
                         <RevealSection delay={0.15}>
-                            <div className="glass-card audience-card">
+                            <div className="glass-card audience-card" style={{ position: 'relative', overflow: 'hidden' }}>
+                                <img
+                                    src={assetPath('/assets/scenes/counting-claps.webp')}
+                                    alt=""
+                                    className="audience-card__scene"
+                                    loading="lazy"
+                                />
                                 <span className="audience-card__icon">🏫</span>
                                 <h3>{t('join.audience_2_title')}</h3>
                                 <p>
@@ -149,7 +166,13 @@ const JoinQuest = () => {
                         </RevealSection>
 
                         <RevealSection delay={0.3}>
-                            <div className="glass-card audience-card">
+                            <div className="glass-card audience-card" style={{ position: 'relative', overflow: 'hidden' }}>
+                                <img
+                                    src={assetPath('/assets/scenes/march-luminosity.webp')}
+                                    alt=""
+                                    className="audience-card__scene"
+                                    loading="lazy"
+                                />
                                 <span className="audience-card__icon">💼</span>
                                 <h3>{t('join.audience_3_title')}</h3>
                                 <p>
@@ -260,8 +283,12 @@ const JoinQuest = () => {
             </section>
 
             {/* ── FINAL CTA ── */}
-            <section className="section text-center">
-                <div className="container">
+            <section className="section text-center" style={{ position: 'relative', overflow: 'hidden' }}>
+                <div className="scene-backdrop" aria-hidden="true">
+                    <img src={assetPath('/assets/marketing/quest-complete.webp')} alt="" className="scene-backdrop__img" />
+                    <div className="scene-backdrop__scrim" />
+                </div>
+                <div className="container" style={{ position: 'relative', zIndex: 1 }}>
                     <RevealSection>
                         <h2>{t('join.mission_title_1')}<span className="text-gold">{t('join.mission_title_2')}</span></h2>
                         <p className="section-subtitle" style={{ marginTop: '1rem' }}>
@@ -377,6 +404,30 @@ const JoinQuest = () => {
           color: var(--color-text-secondary);
           line-height: 1.7;
           max-width: 100%;
+        }
+
+        .audience-card__scene {
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          opacity: 0.06;
+          pointer-events: none;
+          transition: opacity 0.5s var(--ease-gentle);
+          z-index: 0;
+          border-radius: inherit;
+        }
+
+        .audience-card:hover .audience-card__scene {
+          opacity: 0.14;
+        }
+
+        .audience-card__icon,
+        .audience-card h3,
+        .audience-card p {
+          position: relative;
+          z-index: 1;
         }
 
         /* ── Contact Form ── */

@@ -534,8 +534,12 @@ cleaning the atmosphere.` },
   return (
     <div className="media-page">
       {/* ── Hero ── */}
-      <header className="media-hero">
-        <div className="container text-center">
+      <header className="media-hero" style={{ position: 'relative', overflow: 'hidden' }}>
+        <div className="scene-backdrop" aria-hidden="true">
+          <img src={assetPath('/assets/marketing/quest-collage.webp')} alt="" className="scene-backdrop__img" />
+          <div className="scene-backdrop__scrim" />
+        </div>
+        <div className="container text-center" style={{ position: 'relative', zIndex: 1 }}>
           <div className="animate-fade-up">
             <div className="section-label">{t('media.hero_label')}</div>
             <h1>{t('media.hero_title_1')} <span className="text-gold">{t('media.hero_title_2')}</span></h1>
@@ -759,6 +763,124 @@ cleaning the atmosphere.` },
           </RevealSection>
 
           <GalleryGrid shots={galleryShots} />
+        </div>
+      </section>
+
+      {/* ── World Art Gallery ── */}
+      <section className="section">
+        <div className="container">
+          <RevealSection className="text-center">
+            <div className="section-label">🎨 World Art Gallery</div>
+            <h2 className="section-title">
+              Scenes from <span className="text-gold">the Seven Lands</span>
+            </h2>
+            <p className="section-subtitle" style={{ margin: '0 auto 2.5rem auto' }}>
+              Explore the vibrant illustrations that bring the Rhythm Quest universe to life.
+            </p>
+          </RevealSection>
+
+          <div className="masonry-gallery">
+            {[
+              { src: 'pond-aiko-kenji.webp',       caption: 'Aiko & Kenji at the Pond',       land: 'Harmonia' },
+              { src: 'honeycomb-kwame-selene.webp',  caption: 'Kwame & Selene\'s Honeycomb',     land: 'Numeria' },
+              { src: 'creek-felix-elias.webp',       caption: 'Felix & Elias at the Creek',      land: 'Vitalis' },
+              { src: 'tent-ezra-athena.webp',        caption: 'Ezra & Athena\'s Camp',           land: 'Natura' },
+              { src: 'blanket-amara-octavia.webp',   caption: 'Amara & Octavia Resting',         land: 'Vitalis' },
+              { src: 'cubes-ronan-nerissa.webp',     caption: 'Ronan & Nerissa Build',           land: 'Lexiconia' },
+              { src: 'dance-harmonia-vitalis.webp',  caption: 'Dance of Two Lands',              land: 'Harmonia' },
+              { src: 'tulip-river-path.webp',        caption: 'The Tulip River Path',            land: 'Natura' },
+              { src: 'seriphia-valley.webp',         caption: 'Seriphia\'s Valley',               land: 'Celestia' },
+              { src: 'aquaria-shore.webp',           caption: 'Shores of Aquaria',               land: 'Aquaria' },
+              { src: 'path-to-terrasol.webp',        caption: 'Path to TerraSol',                land: 'TerraSol' },
+              { src: 'sundial-weather.webp',         caption: 'Reading the Sundial',             land: 'Chronia' },
+            ].map((s) => (
+              <div key={s.src} className="masonry-gallery__item">
+                <img
+                  src={assetPath(`/assets/scenes/${s.src}`)}
+                  alt={s.caption}
+                  loading="lazy"
+                />
+                <div className="masonry-gallery__label">
+                  <span className="masonry-gallery__land">{s.land}</span>
+                  <span className="masonry-gallery__caption">{s.caption}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Shape Art Gallery ── */}
+      <section className="section glow-plum">
+        <div className="container">
+          <RevealSection className="text-center">
+            <div className="section-label">📐 Shape Art</div>
+            <h2 className="section-title">
+              Interactive <span className="text-plum">Shape Gallery</span>
+            </h2>
+            <p className="section-subtitle" style={{ margin: '0 auto 2.5rem auto' }}>
+              Beautiful hand-drawn shapes from the land of Geometria.
+            </p>
+          </RevealSection>
+
+          <div className="shape-gallery">
+            {[
+              { name: 'Circle',    file: 'circle.webp',    fact: '360° of infinite symmetry' },
+              { name: 'Triangle',  file: 'triangle.webp',  fact: '3 sides — the strongest shape' },
+              { name: 'Rectangle', file: 'rectangle.webp', fact: '4 right angles, 2 pairs' },
+              { name: 'Star',      file: 'star.webp',      fact: '5 points of light' },
+              { name: 'Hexagon',   file: 'hexagon.webp',   fact: '6 sides — nature\'s favorite' },
+              { name: 'Heptagon',  file: 'heptagon.webp',  fact: '7 sides — one for each land' },
+            ].map((s) => (
+              <div key={s.name} className="shape-card">
+                <img
+                  src={assetPath(`/assets/shapes/${s.file}`)}
+                  alt={s.name}
+                  className="shape-card__img"
+                  loading="lazy"
+                />
+                <div className="shape-card__name">{s.name}</div>
+                <div className="shape-card__fact">{s.fact}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── SOE Globe Video ── */}
+      <section className="section">
+        <div className="container">
+          <RevealSection className="text-center">
+            <div className="section-label">🌍 The SOE Globe</div>
+            <h2 className="section-title">
+              A World <span className="text-gold">in Motion</span>
+            </h2>
+            <p className="section-subtitle" style={{ margin: '0 auto 2rem auto' }}>
+              Watch the Seven Lands come alive — an animated panorama of the entire Rhythm Quest universe.
+            </p>
+          </RevealSection>
+
+          <RevealSection>
+            <div className="video-feature glass-card">
+              <video
+                className="video-feature__player"
+                src={assetPath('/videos/SOE Globe.mp4')}
+                poster={assetPath('/assets/marketing/quest-collage.webp')}
+                controls
+                preload="metadata"
+                playsInline
+                loop
+                aria-label="SOE Globe panoramic animation"
+              />
+              <div className="video-feature__meta">
+                <span className="video-feature__badge" style={{ background: '#4CAF50' }}>🌍 Animated</span>
+                <h3 className="video-feature__title">The SOE Globe</h3>
+                <p className="video-feature__desc">
+                  A rotating panorama showcasing all seven lands, their heroes, and the vibrant world of SOE.
+                </p>
+              </div>
+            </div>
+          </RevealSection>
         </div>
       </section>
 

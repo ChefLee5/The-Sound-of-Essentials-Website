@@ -46,6 +46,7 @@ const Universe = () => {
       landColor: '#d4a843',
       duo: ['Kenji', 'Aiko'],
       chars: ['KENJI', 'AIKO'],
+      sceneBg: `${import.meta.env.BASE_URL}assets/scenes/pond-aiko-kenji.webp`,
       focus: t('universe.lands.Harmonia.focus'),
       desc: t('universe.lands.Harmonia.desc'),
     },
@@ -55,6 +56,7 @@ const Universe = () => {
       landColor: '#7fb685',
       duo: ['Kwame', 'Octavia'],
       chars: ['KWAME', 'OCTAVIA'],
+      sceneBg: `${import.meta.env.BASE_URL}assets/scenes/kwame-counting.webp`,
       focus: t('universe.lands.Numeria.focus'),
       desc: t('universe.lands.Numeria.desc'),
     },
@@ -64,6 +66,7 @@ const Universe = () => {
       landColor: '#c4785a',
       duo: ['Felix', 'Amara'],
       chars: ['FELIX', 'AMARA'],
+      sceneBg: `${import.meta.env.BASE_URL}assets/scenes/dance-harmonia-vitalis.webp`,
       focus: t('universe.lands.Vitalis.focus'),
       desc: t('universe.lands.Vitalis.desc'),
     },
@@ -181,7 +184,7 @@ const Universe = () => {
             <div className="seriphia-block">
               <div className="seriphia-block__image">
                 <img
-                  src={`${import.meta.env.BASE_URL}assets/characters/SERIPHIA_celestia.png`}
+                  src={`${import.meta.env.BASE_URL}assets/scenes/seriphia-valley.webp`}
                   alt="Seriphia — the guardian of the Seven Lands"
                   className="seriphia-portrait"
                 />
@@ -215,13 +218,13 @@ const Universe = () => {
             </p>
             <div className="lands-map-grid" ref={landTilesRef}>
               {[
-                { land: 'Harmonia',  icon: '🎵', color: '#d4a843', duo: 'Kenji & Aiko',      focus: 'Music & Rhythm' },
-                { land: 'Numeria',   icon: '🔢', color: '#7fb685', duo: 'Kwame & Octavia',   focus: 'Numbers & Counting' },
-                { land: 'Vitalis',   icon: '🤸', color: '#c4785a', duo: 'Felix & Amara',     focus: 'Movement & Wellness' },
-                { land: 'Chronia',   icon: '⏰', color: '#9678c4', duo: 'Elias & Selene',    focus: 'Time & Seasons' },
-                { land: 'Lexiconia', icon: '📖', color: '#d4897a', duo: 'Ronan & Nerissa',   focus: 'Language & Stories' },
-                { land: 'Geometria', icon: '📐', color: '#5fb685', duo: 'Silas & Vesta',     focus: 'Shapes & Space' },
-                { land: 'Natura',    icon: '🌊', color: '#5ba4c9', duo: 'Ezra & Athena',     focus: 'Nature & Science' },
+                { land: 'Harmonia',  icon: '🎵', color: '#d4a843', duo: 'Kenji & Aiko',      focus: 'Music & Rhythm',       panorama: 'harmonia-panorama.webp' },
+                { land: 'Numeria',   icon: '🔢', color: '#7fb685', duo: 'Kwame & Octavia',   focus: 'Numbers & Counting',   panorama: 'numeria-panorama.webp' },
+                { land: 'Vitalis',   icon: '🤸', color: '#c4785a', duo: 'Felix & Amara',     focus: 'Movement & Wellness',  panorama: 'vitalis-panorama.webp' },
+                { land: 'Chronia',   icon: '⏰', color: '#9678c4', duo: 'Elias & Selene',    focus: 'Time & Seasons',       panorama: 'celestia-panorama.webp' },
+                { land: 'Lexiconia', icon: '📖', color: '#d4897a', duo: 'Ronan & Nerissa',   focus: 'Language & Stories',    panorama: 'lexiconia-panorama.webp' },
+                { land: 'Geometria', icon: '📐', color: '#5fb685', duo: 'Silas & Vesta',     focus: 'Shapes & Space',       panorama: 'aquaria-panorama.webp' },
+                { land: 'Natura',    icon: '🌊', color: '#5ba4c9', duo: 'Ezra & Athena',     focus: 'Nature & Science',     panorama: 'luminosity-panorama.webp' },
               ].map((land) => (
                 <div
                   key={land.land}
@@ -233,6 +236,14 @@ const Universe = () => {
                   title={`Explore ${land.land}`}
                 >
                   <span className="land-tile__icon">{land.icon}</span>
+                  {land.panorama && (
+                    <img
+                      src={`${import.meta.env.BASE_URL}assets/lands/${land.panorama}`}
+                      alt=""
+                      className="land-tile__panorama"
+                      loading="lazy"
+                    />
+                  )}
                   <h3 className="land-tile__name" style={{ color: land.color }}>{land.land}</h3>
                   <p className="land-tile__duo">{land.duo}</p>
                   <p className="land-tile__focus">{land.focus}</p>
@@ -284,12 +295,12 @@ const Universe = () => {
                 <div className="duo-card__image-wrap">
                   <div className="duo-card__char-pair">
                     <img
-                      src={`${import.meta.env.BASE_URL}assets/characters/${duo.chars[0]}_crop.png`}
+                      src={`${import.meta.env.BASE_URL}assets/characters/${duo.chars[0]}.png`}
                       alt={duo.duo[0]}
                       className="duo-card__char-img"
                     />
                     <img
-                      src={`${import.meta.env.BASE_URL}assets/characters/${duo.chars[1]}_crop.png`}
+                      src={`${import.meta.env.BASE_URL}assets/characters/${duo.chars[1]}.png`}
                       alt={duo.duo[1]}
                       className="duo-card__char-img"
                     />
@@ -433,6 +444,23 @@ const Universe = () => {
 
         .land-tile:hover .land-tile__glow {
           opacity: 0.12;
+        }
+
+        .land-tile__panorama {
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          opacity: 0.08;
+          pointer-events: none;
+          transition: opacity 0.5s var(--ease-gentle);
+          z-index: 0;
+          border-radius: inherit;
+        }
+
+        .land-tile:hover .land-tile__panorama {
+          opacity: 0.18;
         }
 
         .land-tile__icon {

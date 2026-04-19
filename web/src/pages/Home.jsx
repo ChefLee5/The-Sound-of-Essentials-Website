@@ -14,20 +14,20 @@ const Home = () => {
 
   /* ── All 14 characters ── */
   const allChars = [
-    { name: 'Kenji',   file: 'KENJI_crop.png',   color: '#FF6F00', note: '♪' },
-    { name: 'Amara',   file: 'AMARA_crop.png',   color: '#4CAF50', note: '♫' },
-    { name: 'Silas',   file: 'SILAS_crop.png',   color: '#7B1FA2', note: '♩' },
-    { name: 'Athena',  file: 'ATHENA_crop.png',  color: '#1E88E5', note: '♬' },
-    { name: 'Aiko',    file: 'AIKO_crop.png',    color: '#E91E8C', note: '♪' },
-    { name: 'Elias',   file: 'ELIAS_crop.png',   color: '#00ACC1', note: '♫' },
-    { name: 'Ezra',    file: 'EZRA_crop.png',    color: '#F4511E', note: '♩' },
-    { name: 'Felix',   file: 'FELIX_crop.png',   color: '#8BC34A', note: '♬' },
-    { name: 'Kwame',   file: 'KWAME_crop.png',   color: '#FFB300', note: '♪' },
-    { name: 'Nerissa', file: 'NERISSA_crop.png', color: '#26C6DA', note: '♫' },
-    { name: 'Octavia', file: 'OCTAVIA_crop.png', color: '#AB47BC', note: '♩' },
-    { name: 'Ronan',   file: 'RONAN_crop.png',   color: '#5C6BC0', note: '♬' },
-    { name: 'Selene',  file: 'SELENE_crop.png',  color: '#EC407A', note: '♪' },
-    { name: 'Vesta',   file: 'VESTA_crop.png',   color: '#26A69A', note: '♫' },
+    { name: 'Kenji',   file: 'KENJI.png',   color: '#FF6F00', note: '♪' },
+    { name: 'Amara',   file: 'AMARA.png',   color: '#4CAF50', note: '♫' },
+    { name: 'Silas',   file: 'SILAS.png',   color: '#7B1FA2', note: '♩' },
+    { name: 'Athena',  file: 'ATHENA.png',  color: '#1E88E5', note: '♬' },
+    { name: 'Aiko',    file: 'AIKO.png',    color: '#E91E8C', note: '♪' },
+    { name: 'Elias',   file: 'ELIAS.png',   color: '#00ACC1', note: '♫' },
+    { name: 'Ezra',    file: 'EZRA.png',    color: '#F4511E', note: '♩' },
+    { name: 'Felix',   file: 'FELIX.png',   color: '#8BC34A', note: '♬' },
+    { name: 'Kwame',   file: 'KWAME.png',   color: '#FFB300', note: '♪' },
+    { name: 'Nerissa', file: 'NERISSA.png', color: '#26C6DA', note: '♫' },
+    { name: 'Octavia', file: 'OCTAVIA.png', color: '#AB47BC', note: '♩' },
+    { name: 'Ronan',   file: 'RONAN.png',   color: '#5C6BC0', note: '♬' },
+    { name: 'Selene',  file: 'SELENE.png',  color: '#EC407A', note: '♪' },
+    { name: 'Vesta',   file: 'VESTA.png',   color: '#26A69A', note: '♫' },
   ];
 
   /* Double the array so the infinite scroll looks seamless */
@@ -145,7 +145,7 @@ const Home = () => {
       {/* ═══ SCENE STRIP 1 — World Break ═══ */}
       <div className="scene-strip" aria-hidden="true">
         <img
-          src={`${import.meta.env.BASE_URL}assets/backgrounds/soe-bg-1.webp`}
+          src={`${import.meta.env.BASE_URL}assets/lands/celestia-panorama.webp`}
           alt=""
           className="scene-strip__img"
           loading="lazy"
@@ -182,7 +182,7 @@ const Home = () => {
       {/* ═══ SCENE STRIP 2 — World Break ═══ */}
       <div className="scene-strip" aria-hidden="true">
         <img
-          src={`${import.meta.env.BASE_URL}assets/backgrounds/soe-bg-2.webp`}
+          src={`${import.meta.env.BASE_URL}assets/lands/aquaria-panorama.webp`}
           alt=""
           className="scene-strip__img"
           style={{ animationDirection: 'reverse' }}
@@ -234,13 +234,24 @@ const Home = () => {
 
           <RevealSection delay={0.2}>
             <div className="book-feature-layout">
-              <div className="cover-tilt">
-                <div className="cover-tilt__inner">
-                  <img
-                    src={`${import.meta.env.BASE_URL}assets/cover/cover.webp`}
-                    alt="SOE Rhythm Quest Picture Dictionary cover"
-                    style={{ maxWidth: '320px' }}
-                  />
+              <div className="book-covers-duo">
+                <div className="cover-tilt">
+                  <div className="cover-tilt__inner">
+                    <img
+                      src={`${import.meta.env.BASE_URL}assets/book/SOE_RQ_COVER.png`}
+                      alt="SOE Rhythm Quest Picture Dictionary — front cover"
+                      style={{ maxWidth: '280px' }}
+                    />
+                  </div>
+                </div>
+                <div className="cover-tilt">
+                  <div className="cover-tilt__inner">
+                    <img
+                      src={`${import.meta.env.BASE_URL}assets/marketing/back-cover.webp`}
+                      alt="SOE Rhythm Quest Picture Dictionary — back cover"
+                      style={{ maxWidth: '280px' }}
+                    />
+                  </div>
                 </div>
               </div>
 
@@ -263,7 +274,7 @@ const Home = () => {
       {/* ═══ SCENE STRIP 3 — World Break ═══ */}
       <div className="scene-strip" aria-hidden="true">
         <img
-          src={`${import.meta.env.BASE_URL}assets/backgrounds/soe-bg-3.webp`}
+          src={`${import.meta.env.BASE_URL}assets/scenes/tulip-river-path.webp`}
           alt=""
           className="scene-strip__img"
           loading="lazy"
@@ -275,7 +286,11 @@ const Home = () => {
       <section className="section cta-section text-center">
         <div className="container">
           <RevealSection>
-            <div className="cta-card">
+            <div className="cta-card" style={{ position: 'relative', overflow: 'hidden' }}>
+              <div className="scene-backdrop" aria-hidden="true">
+                <img src={`${import.meta.env.BASE_URL}assets/marketing/quest-collage.webp`} alt="" className="scene-backdrop__img" />
+                <div className="scene-backdrop__scrim" />
+              </div>
               <div className="cta-icon" aria-hidden="true">🔔</div>
               <h2>{t('home.cta_title')}</h2>
               <p className="section-subtitle" style={{ marginTop: '1rem' }}>
@@ -657,6 +672,16 @@ const Home = () => {
           gap: 4rem;
           justify-content: center;
           text-align: left;
+        }
+
+        .book-covers-duo {
+          display: flex;
+          gap: 1.5rem;
+          align-items: flex-start;
+        }
+
+        .book-covers-duo .cover-tilt:last-child {
+          transform: translateY(2rem);
         }
 
         .book-feature-copy {

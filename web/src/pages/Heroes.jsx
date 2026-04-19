@@ -2,6 +2,25 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
+/* ── Scene images for expanded character cards ── */
+const CHAR_SCENES = {
+  Kenji: 'pond-aiko-kenji.webp',
+  Aiko: 'pond-aiko-kenji.webp',
+  Silas: 'bubbles-vesta-silas.webp',
+  Vesta: 'bubbles-vesta-silas.webp',
+  Felix: 'creek-felix-elias.webp',
+  Amara: 'blanket-amara-octavia.webp',
+  Ezra: 'tent-ezra-athena.webp',
+  Athena: 'tent-ezra-athena.webp',
+  Kwame: 'honeycomb-kwame-selene.webp',
+  Octavia: 'kwame-counting.webp',
+  Elias: 'time-celestia.webp',
+  Selene: 'honeycomb-kwame-selene.webp',
+  Ronan: 'cubes-ronan-nerissa.webp',
+  Nerissa: 'aquaria-shore.webp',
+  Seriphia: 'seriphia-valley.webp',
+};
+
 /* ── Reveal on scroll ── */
 const RevealSection = ({ children, className = '', delay = 0 }) => {
     const ref = React.useRef(null);
@@ -114,6 +133,14 @@ const CharacterCard = ({ char, index, isExpanded, onToggle }) => {
 
                     {isExpanded && (
                         <div className="char-card__details animate-fade-in">
+                            {CHAR_SCENES[char.name] && (
+                                <img
+                                    src={`${import.meta.env.BASE_URL}assets/scenes/${CHAR_SCENES[char.name]}`}
+                                    alt={`${char.name} in their world`}
+                                    className="char-scene-img"
+                                    loading="lazy"
+                                />
+                            )}
                             <p className="char-card__bio">{t(`heroes.data.${char.name}.bio`)}</p>
                             <div className="char-card__traits">
                                 {char.traits.map((tId) => (
@@ -143,8 +170,12 @@ const Characters = () => {
     return (
         <div className="characters-page">
             {/* ── Hero ── */}
-            <header className="char-hero">
-                <div className="container text-center">
+            <header className="char-hero" style={{ position: 'relative', overflow: 'hidden' }}>
+                <div className="scene-backdrop" aria-hidden="true">
+                    <img src={`${import.meta.env.BASE_URL}assets/marketing/quest-collage.webp`} alt="" className="scene-backdrop__img" />
+                    <div className="scene-backdrop__scrim" />
+                </div>
+                <div className="container text-center" style={{ position: 'relative', zIndex: 1 }}>
                     <div className="animate-fade-up">
                         <div className="section-label">{t('heroes.hero_label')}</div>
                         <h1>{t('heroes.hero_title_1')} <span className="text-gold">{t('heroes.hero_title_2')}</span></h1>

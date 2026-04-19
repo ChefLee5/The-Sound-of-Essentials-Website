@@ -81,14 +81,23 @@ const AnimatedStat = ({ value, suffix = '', label, color }) => {
 
 /* ── Ambient Scene Gallery ── */
 const SCENES = [
-  { src: 'b-roll-boats.webp',        caption: 'On the Water',         land: 'Lexiconia' },
-  { src: 'b-roll-flowers.webp',      caption: 'Through the Fields',   land: 'Natura' },
-  { src: 'climb-numeria.webp',       caption: 'Climbing Numeria',      land: 'Numeria' },
-  { src: 'donkey.webp',              caption: 'A Trusty Companion',    land: 'Animalia' },
-  { src: 'drums.webp',               caption: 'The Beat Goes On',      land: 'Harmonia' },
-  { src: 'seriphia-in-celestia.webp',caption: 'Seriphia at the Gate',  land: 'Celestia' },
-  { src: 'touch-your-toes.webp',     caption: 'Body in Motion',        land: 'Kinesthia' },
-  { src: 'wave.webp',                caption: 'Riding the Wave',       land: 'Aquaria' },
+  { src: 'b-roll-boats.webp',          caption: 'On the Water',            land: 'Lexiconia' },
+  { src: 'b-roll-flowers.webp',        caption: 'Through the Fields',      land: 'Natura' },
+  { src: 'climb-numeria.webp',         caption: 'Climbing Numeria',        land: 'Numeria' },
+  { src: 'donkey.webp',                caption: 'A Trusty Companion',      land: 'Animalia' },
+  { src: 'drums.webp',                 caption: 'The Beat Goes On',        land: 'Harmonia' },
+  { src: 'seriphia-in-celestia.webp',  caption: 'Seriphia at the Gate',    land: 'Celestia' },
+  { src: 'touch-your-toes.webp',       caption: 'Body in Motion',          land: 'Kinesthia' },
+  { src: 'wave.webp',                  caption: 'Riding the Wave',         land: 'Aquaria' },
+  // ── New scenes ──
+  { src: 'excited-to-learn.webp',      caption: 'Excited to Learn',        land: 'All Lands' },
+  { src: 'floating-letters.webp',      caption: 'Floating Letters',        land: 'Lexiconia' },
+  { src: 'counting-claps.webp',        caption: 'Counting Claps',          land: 'Numeria' },
+  { src: 'path-to-terrasol.webp',      caption: 'Path to TerraSol',        land: 'TerraSol' },
+  { src: 'living-food.webp',           caption: 'Living Food',             land: 'Vitalis' },
+  { src: 'kwame-counting.webp',        caption: 'Kwame at Work',           land: 'Numeria' },
+  { src: 'march-luminosity.webp',      caption: 'March of Luminosity',     land: 'Luminosity' },
+  { src: 'sundial-weather.webp',       caption: 'Reading the Sundial',     land: 'Chronia' },
 ];
 
 const MissionSceneGallery = () => {
@@ -202,11 +211,15 @@ const Mission = () => {
                             </div>
                             <div className="bio-window__visual">
                                 <div className="neural-viz" aria-hidden="true">
-                                    <div className="neural-circle neural-circle--1"></div>
-                                    <div className="neural-circle neural-circle--2"></div>
-                                    <div className="neural-circle neural-circle--3"></div>
-                                    <span className="neural-number">1M</span>
-                                    <span className="neural-label">connections / second</span>
+                                    <img
+                                        src={`${import.meta.env.BASE_URL}assets/marketing/busy-brain.webp`}
+                                        alt="Busy brain illustration"
+                                        className="neural-brain-img"
+                                    />
+                                    <div className="neural-overlay">
+                                        <span className="neural-number">1M</span>
+                                        <span className="neural-label">connections / second</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -292,62 +305,56 @@ const Mission = () => {
 
         .neural-viz {
           position: relative;
-          width: 280px;
-          height: 280px;
+          width: 320px;
+          height: 320px;
           margin: 0 auto;
           display: flex;
           flex-direction: column;
           align-items: center;
           justify-content: center;
-        }
-
-        .neural-circle {
-          position: absolute;
           border-radius: 50%;
-          border: 1px solid;
-          animation: softPulse 4s ease-in-out infinite;
+          overflow: hidden;
         }
 
-        .neural-circle--1 {
+        .neural-brain-img {
           width: 100%;
           height: 100%;
-          border-color: var(--color-sage-glow);
-          background: var(--color-sage-glow);
-          animation-delay: 0s;
+          object-fit: cover;
+          border-radius: 50%;
+          display: block;
+          animation: softPulse 4s ease-in-out infinite;
+          box-shadow: 0 20px 60px rgba(123, 31, 162, 0.15);
         }
 
-        .neural-circle--2 {
-          width: 70%;
-          height: 70%;
-          border-color: var(--color-plum-glow);
-          background: var(--color-plum-glow);
-          animation-delay: 1s;
-        }
-
-        .neural-circle--3 {
-          width: 40%;
-          height: 40%;
-          border-color: var(--color-gold-glow);
-          background: var(--color-gold-glow);
-          animation-delay: 2s;
+        .neural-overlay {
+          position: absolute;
+          inset: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          background: radial-gradient(circle, rgba(0,0,0,0.35) 0%, transparent 70%);
+          border-radius: 50%;
         }
 
         .neural-number {
           font-family: var(--font-heading);
           font-size: 3rem;
           font-weight: 700;
-          color: var(--color-gold);
+          color: #fff;
           position: relative;
           z-index: 1;
+          text-shadow: 0 2px 10px rgba(0,0,0,0.4);
         }
 
         .neural-label {
           font-size: 0.75rem;
-          color: var(--color-text-muted);
+          color: rgba(255,255,255,0.85);
           text-transform: uppercase;
           letter-spacing: 0.1em;
           position: relative;
           z-index: 1;
+          text-shadow: 0 1px 6px rgba(0,0,0,0.3);
         }
 
         /* ── Solution Grid ── */
