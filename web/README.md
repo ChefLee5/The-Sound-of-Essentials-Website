@@ -30,7 +30,7 @@ By the numbers:
 | 🌿 **TerraSol** | Nature, Science & Environment | Felix & Amara |
 | 🌊 **Aquaria** | Travel, Transportation & World | Ezra & Athena |
 | 💪 **Vitalis** | Health, Body & Wellness | Kwame & Octavia |
-| 📚 **Sophia** | Community, Work & Life Skills | Marcus & Elena |
+| 📚 **Luminosity** | Community, Work & Life Skills | Marcus & Elena |
 | 🔭 **Celestia** | Time, Space & The Universe | Elias & Selene |
 
 ---
