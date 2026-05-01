@@ -68,7 +68,7 @@ const Navbar = () => {
     { to: '/science',    label: t('navbar.science') },
     { to: '/mission',    label: t('navbar.mission') },
     { to: '/media',      label: t('navbar.media') },
-    { to: '/dictionary', label: '📖 Dictionary' },
+    { to: '/allies',     label: '🤝 Ally Annex' },
   ];
 
   const isActive = (to) =>

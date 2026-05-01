@@ -57,10 +57,11 @@
   --color-bg-deep: #f0eeeb;
   --color-bg-navy: #f5f3f0;
 
-  --color-text-primary: #1a1a2e;
-  --color-text-secondary: #555568;
-  --color-text-muted: #8e8ea0;
+  --color-text-primary: #E65100;
+  --color-text-secondary: #F57C00;
+  --color-text-muted: rgba(230, 81, 0, 0.65);
   --color-text-dark: #1a1a2e;
+  --color-text-dark-secondary: #555568;
 
   --color-border: rgba(0, 0, 0, 0.06);
   --color-border-light: rgba(0, 0, 0, 0.10);
@@ -83,6 +84,7 @@
   --ease-gentle: cubic-bezier(0.25, 0.46, 0.45, 0.94);
   --transition-slow: 0.6s var(--ease-gentle);
   --transition-med: 0.3s var(--ease-gentle);
+  --transition-fast: 0.18s var(--ease-gentle);
 }
 
 /* ── Reset ── */
@@ -100,7 +102,7 @@ html {
 }
 
 body {
-  background: var(--color-bg-cream);
+  background: linear-gradient(135deg, #B3E5FC 0%, #81D4FA 100%);
   color: var(--color-text-primary);
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
@@ -108,10 +110,6 @@ body {
   line-height: 1.7;
   min-height: 100vh;
   overflow-x: hidden;
-  /* Soft warm gradient tints */
-  background-image:
-    radial-gradient(ellipse 80% 40% at 20% 0%, rgba(76, 175, 80, 0.04) 0%, transparent 60%),
-    radial-gradient(ellipse 60% 50% at 80% 100%, rgba(123, 31, 162, 0.03) 0%, transparent 60%);
   background-attachment: fixed;
 }
 
@@ -307,6 +305,29 @@ img {
   box-shadow: 0 4px 20px var(--color-purple-soft);
 }
 
+/* BEM aliases used by some pages */
+.btn--primary {
+  background: linear-gradient(135deg, var(--color-orange), var(--color-orange-light));
+  color: #fff;
+  box-shadow: 0 4px 20px var(--color-orange-soft);
+}
+
+.btn--primary:hover {
+  box-shadow: 0 8px 32px rgba(255, 111, 0, 0.25);
+}
+
+.btn--outline {
+  background: transparent;
+  color: var(--color-text-primary);
+  border: 2px solid var(--color-border-light);
+}
+
+.btn--outline:hover {
+  background: var(--color-bg-cream);
+  border-color: var(--color-green);
+  color: var(--color-green);
+}
+
 .page-bottom-link {
   color: var(--color-orange);
   font-size: 1.25rem;
@@ -325,6 +346,7 @@ img {
 /* ── Cards ── */
 .glass-card {
   background: var(--color-bg-card);
+  color: var(--color-text-primary);
   border: 2px solid var(--color-border);
   border-radius: var(--radius-lg);
   padding: 2rem;
@@ -610,6 +632,11 @@ img {
 .app {
   position: relative;
   z-index: 2;
+}
+
+main {
+  position: relative;
+  z-index: 1;
 }
 
 /* ── Page Hero Helper ── */
@@ -903,6 +930,7 @@ img {
 .shape-card {
   position: relative;
   background: var(--color-bg-card);
+  color: var(--color-text-primary);
   border: 2px solid var(--color-border);
   border-radius: var(--radius-lg);
   padding: 1.5rem 1rem;
@@ -1000,4 +1028,4 @@ img {
 @keyframes charSceneIn {
   from { opacity: 0; transform: scale(0.95); }
   to   { opacity: 1; transform: scale(1); }
-}
+}

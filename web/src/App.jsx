@@ -18,7 +18,7 @@ const Mission    = lazy(() => import('./pages/Mission'));
 const JoinQuest  = lazy(() => import('./pages/JoinQuest'));
 const Characters = lazy(() => import('./pages/Heroes'));
 const Science    = lazy(() => import('./pages/Science'));
-const Dictionary = lazy(() => import('./pages/Dictionary/Dictionary'));
+const AllyAnnex  = lazy(() => import('./pages/AllyAnnex'));
 
 // ── Minimal loading fallback ─────────────────────────────────────
 const PageLoader = () => (
@@ -57,7 +57,7 @@ const App = () => {
               <Route path="/join"       element={<AnimatedPage><JoinQuest /></AnimatedPage>} />
               <Route path="/characters" element={<AnimatedPage><Characters /></AnimatedPage>} />
               <Route path="/science"    element={<AnimatedPage><Science /></AnimatedPage>} />
-              <Route path="/dictionary" element={<AnimatedPage><Dictionary /></AnimatedPage>} />
+              <Route path="/allies"    element={<AnimatedPage><AllyAnnex /></AnimatedPage>} />
             </Routes>
           </AnimatePresence>
         </Suspense>

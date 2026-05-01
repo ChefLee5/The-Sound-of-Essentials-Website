@@ -15,7 +15,7 @@ By the numbers:
 - 🌍 **7 Lands** spanning language, math, science, travel, health, community, and time
 - 🧑‍🤝‍🧑 **14 characters** (+ Seriphia, the hidden Easter-egg guide)
 - 🌐 **3 languages** — English, Spanish, and French (full i18n)
-- 📄 **8 pages** — Home, Universe, Heroes, Mission, Science, Media Room, Dictionary, Join the Quest
+- 📄 **7 pages** — Home, Universe, Heroes, Mission, Science, Media Room, Join the Quest
 - 🎬 **Cinematic splash screen** with particle effects and audio visualizer
 - 📱 **Fully responsive** — mobile-first with smooth page transitions
 
@@ -62,7 +62,6 @@ web/
 │   ├── hooks/           # Custom React hooks
 │   ├── i18n/            # i18n config + locale JSON (en · es · fr)
 │   ├── pages/           # Route-level page components
-│   │   └── Dictionary/  # Interactive picture dictionary browser
 │   ├── remotion/        # Remotion video compositions
 │   ├── utils/           # Helper functions
 │   ├── App.jsx          # Root app with routing

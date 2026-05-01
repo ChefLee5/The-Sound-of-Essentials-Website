@@ -392,6 +392,9 @@ const Mission = () => {
           margin-top: 3rem;
           padding: 3rem;
           background: var(--color-bg-card);
+          --color-text-primary: var(--color-text-dark);
+          --color-text-secondary: var(--color-text-dark-secondary);
+          color: var(--color-text-primary);
           border: 1px solid var(--color-border);
           border-radius: var(--radius-lg);
         }

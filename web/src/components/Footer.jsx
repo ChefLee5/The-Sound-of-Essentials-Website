@@ -45,7 +45,6 @@ const Footer = () => {
             <Link to="/science" className="footer__link">{t('footer.sci_sound')}</Link>
             <Link to="/mission" className="footer__link">{t('navbar.mission')}</Link>
             <Link to="/media" className="footer__link">{t('navbar.media')}</Link>
-            <Link to="/dictionary" className="footer__link">📖 Picture Dictionary</Link>
           </div>
 
           {/* Get Involved */}
@@ -86,7 +85,8 @@ const Footer = () => {
         ────────────────────────────────────────────── */
 
         .site-footer {
-          background: linear-gradient(160deg, #1565C0 0%, #0D47A1 50%, #0a3880 100%);
+          background-color: #FF6F00;
+          background-image: linear-gradient(135deg, #FFA726 0%, #FF5722 100%);
           border-top: none;
           padding: 4rem 0 2rem 0;
           position: relative;

@@ -418,6 +418,7 @@ const Universe = () => {
         .land-tile {
           position: relative;
           background: #fff;
+          color: var(--color-text-primary);
           border: 2px solid var(--land-color);
           border-radius: var(--radius-lg);
           padding: 1.5rem 1rem;

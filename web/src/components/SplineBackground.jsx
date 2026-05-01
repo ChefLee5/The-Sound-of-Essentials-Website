@@ -186,8 +186,7 @@ const CanvasBackground = () => {
       const H = canvas.height;
 
       // Background fill — warm cream white matching --color-bg-white
-      ctx.fillStyle = '#fafafa';
-      ctx.fillRect(0, 0, W, H);
+      ctx.clearRect(0, 0, W, H);
 
       // Draw layers: orbs → sparkles → notes
       for (const o of orbs)     { o.update(W, H);    o.draw(ctx); }

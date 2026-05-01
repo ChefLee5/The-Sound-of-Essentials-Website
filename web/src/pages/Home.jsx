@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import ParallaxHero from '../components/ParallaxHero';
@@ -30,8 +30,21 @@ const Home = () => {
     { name: 'Vesta',   file: 'VESTA.png',   color: '#26A69A', note: '♫' },
   ];
 
-  /* Double the array so the infinite scroll looks seamless */
-  const marqueeChars = [...allChars, ...allChars];
+  const numChars = allChars.length;
+  const theta = 360 / numChars;
+  const radius = Math.round(80 / Math.tan(Math.PI / numChars)) + 60; // 80 is half of 160px width
+  const [rotation, setRotation] = useState(0);
+
+  const rotateLeft = () => setRotation(r => r + theta);
+  const rotateRight = () => setRotation(r => r - theta);
+
+  // Make carousel dynamic by auto-rotating
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setRotation(r => r - theta);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [theta]);
 
   const stats = [
     { value: t('home.stat_1_val'), label: t('home.stat_1_lab'), color: 'var(--color-orange)' },
@@ -82,14 +95,24 @@ const Home = () => {
           </div>
         </div>
 
-        {/* Full-width character marquee */}
-        <div className="hero__marquee-wrap" aria-hidden="true">
-          <div className="hero__marquee-track">
-            {marqueeChars.map((char, i) => (
+        {/* Interactive 3D Circle Carousel */}
+        <div className="hero__carousel-scene">
+          <button className="carousel-btn prev-btn" onClick={rotateLeft} aria-label="Previous characters">
+            &#10094;
+          </button>
+          
+          <div 
+            className="hero__carousel-spinner" 
+            style={{ transform: `rotateY(${rotation}deg)` }}
+          >
+            {allChars.map((char, i) => (
               <div
                 key={`${char.name}-${i}`}
                 className="hero__char"
-                style={{ '--char-color': char.color }}
+                style={{ 
+                  '--char-color': char.color,
+                  transform: `rotateY(${i * theta}deg) translateZ(${radius}px)`
+                }}
               >
                 <div className="hero__char-note">{char.note}</div>
                 <img
@@ -103,6 +126,10 @@ const Home = () => {
               </div>
             ))}
           </div>
+
+          <button className="carousel-btn next-btn" onClick={rotateRight} aria-label="Next characters">
+            &#10095;
+          </button>
         </div>
 
         {/* Bottom info strip */}
@@ -379,66 +406,87 @@ const Home = () => {
           box-shadow: 0 6px 24px rgba(255,111,0,0.25);
         }
 
-        /* ── Character Marquee ── */
-        .hero__marquee-wrap {
+        /* ── 3D Circle Carousel ── */
+        .hero__carousel-scene {
           position: relative;
           z-index: 1;
           width: 100%;
+          height: 450px; /* Space for the 3D rotating cylinder */
+          perspective: 1200px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
           overflow: hidden;
           background: rgba(255,255,255,0.7);
-          backdrop-filter: blur(0px);
-          /* Fade edges */
+          backdrop-filter: blur(10px);
+          -webkit-backdrop-filter: blur(10px);
+          margin-top: 2rem;
           mask-image: linear-gradient(
             to right,
             transparent 0%,
-            black 6%,
-            black 94%,
+            black 15%,
+            black 85%,
             transparent 100%
           );
           -webkit-mask-image: linear-gradient(
             to right,
             transparent 0%,
-            black 6%,
-            black 94%,
+            black 15%,
+            black 85%,
             transparent 100%
           );
-          padding: 1rem 0 0;
         }
 
-        .hero__marquee-track {
+        .hero__carousel-spinner {
+          width: 160px;
+          height: 300px;
+          position: relative;
+          transform-style: preserve-3d;
+          transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+
+        .carousel-btn {
+          background: rgba(0,0,0,0.6);
+          color: white;
+          border: 1px solid rgba(255,255,255,0.2);
+          width: 48px;
+          height: 48px;
+          border-radius: 50%;
+          font-size: 1.4rem;
+          cursor: pointer;
+          position: absolute;
+          z-index: 100;
+          transition: all 0.3s ease;
           display: flex;
-          gap: 0.75rem;
-          align-items: flex-end;
-          width: max-content;
-          animation: marqueeScroll 50s linear infinite;
-          padding-bottom: 0.5rem;
+          align-items: center;
+          justify-content: center;
+          box-shadow: 0 4px 15px rgba(0,0,0,0.3);
         }
 
-        .hero__marquee-track:hover {
-          animation-play-state: paused;
+        .carousel-btn:hover {
+          background: rgba(0,0,0,0.9);
+          transform: scale(1.1);
+          border-color: rgba(255,255,255,0.5);
         }
 
-        @keyframes marqueeScroll {
-          from { transform: translateX(0); }
-          to   { transform: translateX(-50%); }
-        }
+        .prev-btn { left: 5%; }
+        .next-btn { right: 5%; }
 
-        /* Individual character item */
+        /* Individual character item in 3D */
         .hero__char {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 160px;
+          height: 100%;
           display: flex;
           flex-direction: column;
           align-items: center;
           gap: 0.35rem;
-          flex-shrink: 0;
-          width: 160px;
-          cursor: default;
-          transition: transform 0.3s ease;
+          backface-visibility: visible; /* Allowing to see the backs slightly adds depth, or hidden */
+          /* Note: backface-visibility is generally better left to default for true 3D if opacity handles depth, but let's make it fully solid */
+          cursor: pointer;
         }
-
-        .hero__char:hover {
-          transform: scale(1.05) translateY(-8px);
-        }
-
         .hero__char-note {
           font-size: 1.2rem;
           color: var(--char-color);
@@ -465,6 +513,7 @@ const Home = () => {
 
         .hero__char:hover .hero__char-img {
           filter: drop-shadow(0 14px 32px rgba(0,0,0,0.20));
+          transform: scale(1.1) translateY(-8px);
         }
 
         .hero__char-label {
