@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import ParallaxHero from '../components/ParallaxHero';
 import { useAnimeReveal } from '../hooks/useAnimeReveal';
+import landsData from '../data/lands.json';
+import JsonLd from '../components/JsonLd';
+import { universeSchema } from '../utils/schema';
 
 /* ── Reveal Hook ── */
 const useReveal = () => {
@@ -38,82 +41,18 @@ const Universe = () => {
   const { t } = useTranslation();
   React.useEffect(() => { document.title = 'The Universe — SOE Rhythm Quest'; }, []);
 
-  /* ── Character Data ── */
-  const heroDuos = [
-    {
-      land: 'Harmonia',
-      landIcon: '🎵',
-      landColor: '#d4a843',
-      duo: ['Kenji', 'Aiko'],
-      chars: ['KENJI', 'AIKO'],
-      sceneBg: `${import.meta.env.BASE_URL}assets/scenes/pond-aiko-kenji.webp`,
-      focus: t('universe.lands.Harmonia.focus'),
-      desc: t('universe.lands.Harmonia.desc'),
-    },
-    {
-      land: 'Numeria',
-      landIcon: '🔢',
-      landColor: '#7fb685',
-      duo: ['Kwame', 'Octavia'],
-      chars: ['KWAME', 'OCTAVIA'],
-      sceneBg: `${import.meta.env.BASE_URL}assets/scenes/kwame-counting.webp`,
-      focus: t('universe.lands.Numeria.focus'),
-      desc: t('universe.lands.Numeria.desc'),
-    },
-    {
-      land: 'Vitalis',
-      landIcon: '🤸',
-      landColor: '#c4785a',
-      duo: ['Felix', 'Amara'],
-      chars: ['FELIX', 'AMARA'],
-      sceneBg: `${import.meta.env.BASE_URL}assets/scenes/dance-harmonia-vitalis.webp`,
-      focus: t('universe.lands.Vitalis.focus'),
-      desc: t('universe.lands.Vitalis.desc'),
-    },
-    {
-      land: 'Chronia',
-      landIcon: '⏰',
-      landColor: '#9678c4',
-      duo: ['Elias', 'Selene'],
-      chars: ['ELIAS', 'SELENE'],
-      groupShot: `${import.meta.env.BASE_URL}assets/duos/Celestia_Elias_Selene.webp`,
-      sceneBg: `${import.meta.env.BASE_URL}assets/scenes/seriphia-in-celestia.webp`,
-      focus: t('universe.lands.Chronia.focus'),
-      desc: t('universe.lands.Chronia.desc'),
-    },
-    {
-      land: 'Lexiconia',
-      landIcon: '📖',
-      landColor: '#d4a843',
-      duo: ['Ronan', 'Nerissa'],
-      chars: ['RONAN', 'NERISSA'],
-      groupShot: `${import.meta.env.BASE_URL}assets/duos/Aquaria_Ronan_Nerissa.webp`,
-      sceneBg: `${import.meta.env.BASE_URL}assets/scenes/b-roll-boats.webp`,
-      focus: t('universe.lands.Lexiconia.focus'),
-      desc: t('universe.lands.Lexiconia.desc'),
-    },
-    {
-      land: 'Geometria',
-      landIcon: '📐',
-      landColor: '#7fb685',
-      duo: ['Silas', 'Vesta'],
-      chars: ['SILAS', 'VESTA'],
-      sceneBg: `${import.meta.env.BASE_URL}assets/scenes/wildflower-path.webp`,
-      focus: t('universe.lands.Geometria.focus'),
-      desc: t('universe.lands.Geometria.desc'),
-    },
-    {
-      land: 'Natura',
-      landIcon: '🌊',
-      landColor: '#5ba4c9',
-      duo: ['Ezra', 'Athena'],
-      chars: ['EZRA', 'ATHENA'],
-      groupShot: `${import.meta.env.BASE_URL}assets/duos/Luminosity_Athena_Ezra.webp`,
-      sceneBg: `${import.meta.env.BASE_URL}assets/scenes/b-roll-flowers.webp`,
-      focus: t('universe.lands.Natura.focus'),
-      desc: t('universe.lands.Natura.desc'),
-    },
-  ];
+  /* ── Character Data (from canonical data layer) ── */
+  const heroDuos = landsData.map(land => ({
+    land: land.name,
+    landIcon: land.icon,
+    landColor: land.color,
+    duo: land.heroes.map(h => h.charAt(0).toUpperCase() + h.slice(1)),
+    chars: land.heroes.map(h => h.toUpperCase()),
+    ...(land.groupShot ? { groupShot: `${import.meta.env.BASE_URL}assets/duos/${land.groupShot}` } : {}),
+    sceneBg: `${import.meta.env.BASE_URL}assets/scenes/${land.sceneBg}`,
+    focus: t(`universe.lands.${land.name}.focus`),
+    desc: t(`universe.lands.${land.name}.desc`),
+  }));
 
   const pedagogyMethods = [
     {
@@ -151,6 +90,7 @@ const Universe = () => {
 
   return (
     <div className="universe-page">
+      <JsonLd data={universeSchema()} />
       {/* ── Hero ── */}
       <header className="universe-hero" style={{ position: 'relative', overflow: 'hidden' }}>
         <ParallaxHero variant="universe" />
@@ -217,15 +157,10 @@ const Universe = () => {
               {t('universe.map_subtitle')}
             </p>
             <div className="lands-map-grid" ref={landTilesRef}>
-              {[
-                { land: 'Harmonia',  icon: '🎵', color: '#d4a843', duo: 'Kenji & Aiko',      focus: 'Music & Rhythm',       panorama: 'harmonia-panorama.webp' },
-                { land: 'Numeria',   icon: '🔢', color: '#7fb685', duo: 'Kwame & Octavia',   focus: 'Numbers & Counting',   panorama: 'numeria-panorama.webp' },
-                { land: 'Vitalis',   icon: '🤸', color: '#c4785a', duo: 'Felix & Amara',     focus: 'Movement & Wellness',  panorama: 'vitalis-panorama.webp' },
-                { land: 'Chronia',   icon: '⏰', color: '#9678c4', duo: 'Elias & Selene',    focus: 'Time & Seasons',       panorama: 'celestia-panorama.webp' },
-                { land: 'Lexiconia', icon: '📖', color: '#d4897a', duo: 'Ronan & Nerissa',   focus: 'Language & Stories',    panorama: 'lexiconia-panorama.webp' },
-                { land: 'Geometria', icon: '📐', color: '#5fb685', duo: 'Silas & Vesta',     focus: 'Shapes & Space',       panorama: 'aquaria-panorama.webp' },
-                { land: 'Natura',    icon: '🌊', color: '#5ba4c9', duo: 'Ezra & Athena',     focus: 'Nature & Science',     panorama: 'luminosity-panorama.webp' },
-              ].map((land) => (
+              {landsData.map((land) => ({
+                land: land.name, icon: land.icon, color: land.color,
+                duo: land.duoLabel, focus: land.focus, panorama: land.panorama,
+              })).map((land) => (
                 <div
                   key={land.land}
                   className="land-tile"
@@ -295,12 +230,12 @@ const Universe = () => {
                 <div className="duo-card__image-wrap">
                   <div className="duo-card__char-pair">
                     <img
-                      src={`${import.meta.env.BASE_URL}assets/characters/${duo.chars[0]}.png`}
+                      src={`${import.meta.env.BASE_URL}assets/characters/${duo.chars[0]}.webp`}
                       alt={duo.duo[0]}
                       className="duo-card__char-img"
                     />
                     <img
-                      src={`${import.meta.env.BASE_URL}assets/characters/${duo.chars[1]}.png`}
+                      src={`${import.meta.env.BASE_URL}assets/characters/${duo.chars[1]}.webp`}
                       alt={duo.duo[1]}
                       className="duo-card__char-img"
                     />
@@ -314,6 +249,31 @@ const Universe = () => {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ── Scenic Accents Strip ── */}
+      <section className="section" style={{ paddingTop: '1rem', paddingBottom: '1rem' }}>
+        <div className="container">
+          <RevealSection>
+            <div className="accent-strip">
+              {[
+                { src: 'skyview-harmonia.webp', label: 'Skyview Harmonia' },
+                { src: 'luminosity-hall.webp',  label: 'Luminosity Hall' },
+                { src: 'valley.webp',           label: 'The Valley' },
+              ].map((img) => (
+                <div key={img.src} className="accent-strip__item">
+                  <img
+                    src={`${import.meta.env.BASE_URL}assets/lands/${img.src}`}
+                    alt={img.label}
+                    loading="lazy"
+                    className="accent-strip__img"
+                  />
+                  <span className="accent-strip__label">{img.label}</span>
+                </div>
+              ))}
+            </div>
+          </RevealSection>
         </div>
       </section>
 
@@ -677,6 +637,53 @@ const Universe = () => {
           }
           .pedagogy-grid {
             grid-template-columns: 1fr;
+          }
+        }
+
+        /* ── Accent Strip ── */
+        .accent-strip {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 1.25rem;
+        }
+
+        .accent-strip__item {
+          position: relative;
+          border-radius: var(--radius-lg);
+          overflow: hidden;
+          aspect-ratio: 4 / 3;
+        }
+
+        .accent-strip__img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+          transition: transform 0.6s var(--ease-gentle);
+        }
+
+        .accent-strip__item:hover .accent-strip__img {
+          transform: scale(1.06);
+        }
+
+        .accent-strip__label {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          padding: 0.6rem 1rem;
+          background: linear-gradient(transparent, rgba(0,0,0,0.55));
+          color: #fff;
+          font-size: 0.8rem;
+          font-weight: 600;
+          letter-spacing: 0.04em;
+          text-align: center;
+        }
+
+        @media (max-width: 768px) {
+          .accent-strip {
+            grid-template-columns: 1fr;
+            gap: 1rem;
           }
         }
       `}</style>

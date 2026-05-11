@@ -1,0 +1,86 @@
+[
+  {
+    "id": "harmonia",
+    "name": "Harmonia",
+    "icon": "🎵",
+    "color": "#d4a843",
+    "focus": "Language & Manners",
+    "heroes": ["kenji", "aiko"],
+    "duoLabel": "Kenji & Aiko",
+    "panorama": "harmonia.webp",
+    "sceneBg": "pond-aiko-kenji.webp",
+    "groupShot": null
+  },
+  {
+    "id": "numeria",
+    "name": "Numeria",
+    "icon": "🔢",
+    "color": "#7fb685",
+    "focus": "Numbers & Mathematics",
+    "heroes": ["kwame", "octavia"],
+    "duoLabel": "Kwame & Octavia",
+    "panorama": "numeria.webp",
+    "sceneBg": "kwame-counting.webp",
+    "groupShot": null
+  },
+  {
+    "id": "vitalis",
+    "name": "Vitalis",
+    "icon": "🤸",
+    "color": "#c4785a",
+    "focus": "Physical & Motor Skills",
+    "heroes": ["felix", "amara"],
+    "duoLabel": "Felix & Amara",
+    "panorama": "vitalis.webp",
+    "sceneBg": "dance-harmonia-vitalis.webp",
+    "groupShot": null
+  },
+  {
+    "id": "chronia",
+    "name": "Chronia",
+    "icon": "⏰",
+    "color": "#9678c4",
+    "focus": "Time & Seasons",
+    "heroes": ["elias", "selene"],
+    "duoLabel": "Elias & Selene",
+    "panorama": "celestia.webp",
+    "sceneBg": "seriphia-in-celestia.webp",
+    "groupShot": "Celestia_Elias_Selene.webp"
+  },
+  {
+    "id": "lexiconia",
+    "name": "Lexiconia",
+    "icon": "📖",
+    "color": "#d4897a",
+    "focus": "Advanced Language",
+    "heroes": ["ronan", "nerissa"],
+    "duoLabel": "Ronan & Nerissa",
+    "panorama": "luminosity.webp",
+    "sceneBg": "b-roll-boats.webp",
+    "groupShot": "Aquaria_Ronan_Nerissa.webp"
+  },
+  {
+    "id": "geometria",
+    "name": "Geometria",
+    "icon": "📐",
+    "color": "#5fb685",
+    "focus": "Shapes & Spatial Reasoning",
+    "heroes": ["silas", "vesta"],
+    "duoLabel": "Silas & Vesta",
+    "panorama": "aquaria.webp",
+    "sceneBg": "wildflower-path.webp",
+    "groupShot": null
+  },
+  {
+    "id": "natura",
+    "name": "Natura",
+    "icon": "🌊",
+    "color": "#5ba4c9",
+    "focus": "Science & Nature",
+    "heroes": ["ezra", "athena"],
+    "duoLabel": "Ezra & Athena",
+    "panorama": "valley.webp",
+    "sceneBg": "b-roll-flowers.webp",
+    "groupShot": "Luminosity_Athena_Ezra.webp"
+  }
+]

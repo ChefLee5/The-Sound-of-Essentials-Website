@@ -1,0 +1,192 @@
+[
+  {
+    "id": 1,
+    "slug": "sunny-day",
+    "audioFile": "01. Sunny Day (intro).mp3",
+    "cover": "sunny-day.png",
+    "color": "#FF6F00",
+    "domainIcon": "☀️",
+    "landId": "terrasol",
+    "lyrics": null
+  },
+  {
+    "id": 2,
+    "slug": "days-of-the-week",
+    "audioFile": "02. Days of the Week.mp3",
+    "cover": "days-of-the-week.webp",
+    "color": "#1E88E5",
+    "domainIcon": "📅",
+    "landId": "chronia",
+    "lyrics": "(Verse)\nSeven days of a week I'll sing my song.\nCreation speaks to me all day long.\nHow I enjoy looking at those big white fluffy clouds.\nIn the daytime at night, I always look forward\nto the bright stars sparkling in the sky.\n\n(Chorus)\nSunday, Monday, Tuesday, Wednesday,\nThursday, Friday, Saturday.\nSunday, Monday, Tuesday, Wednesday,\nThursday, Friday, Saturday."
+  },
+  {
+    "id": 3,
+    "slug": "alphabet-song-remix",
+    "audioFile": "03. Alphabet Song Remix.mp3",
+    "cover": "alphabet-song.png",
+    "color": "#FF6F00",
+    "domainIcon": "🗣️",
+    "landId": "harmonia",
+    "lyrics": "(Verse)\nA B C D E F G H I J K L M N O P\nQ R S T U V W X Y and Z.\nNow I know my ABC.\nNext time, won't you sing with me?\n\n(Remix / Breakdown)\nNow I know my ABCs remix.\nA A A B B B... C C C... D...\nE E F F... G G... H H I I I...\nJ J... K K K... L L M M...\nN O O O... P P P... Q...\nR S S T T T... U V W X Y Z"
+  },
+  {
+    "id": 4,
+    "slug": "horses-interlude",
+    "audioFile": "04. Horses Interlude.mp3",
+    "cover": "horses-interlude.png",
+    "color": "#9C27B0",
+    "domainIcon": "🎨",
+    "landId": "natura",
+    "lyrics": "(Spoken / Dialogue)\nHorses. Horses.\nThat's not a horse. That's a donkey.\nHorses. Horses.\nWait a minute. That's not a horse. That's a pig.\nHorses. Horses.\nGuys, did someone let the dogs out? That's a sheep.\nThat's not a horse.\n\nOh, can someone please get that cat out of here?\nWe're looking for a horse.\nAn elephant is certainly not a horse.\nLove those chickens, but I still need a horse.\nMonkeys. We need a horse.\nHorses. Now that's a horse."
+  },
+  {
+    "id": 5,
+    "slug": "le-cheval",
+    "audioFile": "05. Le Cheval.mp3",
+    "cover": "le-cheval.png",
+    "color": "#1E88E5",
+    "domainIcon": "🇫🇷",
+    "landId": "lexiconia",
+    "lyrics": "(Verse — Sung in French)\nDeux accrets le cheval, fort et puissant\nDeux accrets le cheval, fort et puissant\nDeux accrets le cheval, fort et puissant\n\nOh, I can almost see the horses now grazing,\nEating up grass and apples, which they love so much.\nThe horse has strength and power,\nable to see almost all the way around its body.\nAfraid of nothing in the time of war,\nThe horse walks, trots, canter, and gallops.\nWhat an amazing creation."
+  },
+  {
+    "id": 6,
+    "slug": "lets-stretch",
+    "audioFile": "06. Lets Stretch.mp3",
+    "cover": "lets-stretch.webp",
+    "color": "#4CAF50",
+    "domainIcon": "🤸",
+    "landId": "vitalis",
+    "lyrics": "(Breathing Exercise)\nBreathe in through your nose.\nBreathe out through your mouth.\n(Repeat)\n\n(Stretching Movements)\nLet's stretch.\nBring your arms up. Reach to the sky.\nStretch real high.\nBring your arms down.\nDon't bend your knees.\nTouch your toes.\n(Repeat)"
+  },
+  {
+    "id": 7,
+    "slug": "drill-time",
+    "audioFile": "07. Drill Time.mp3",
+    "cover": "drill-time.webp",
+    "color": "#4CAF50",
+    "domainIcon": "💪",
+    "landId": "vitalis",
+    "lyrics": "(Intro)\nOn your mark, get set, ready, go.\nStay on the path. Always learning.\n\n(The March)\nForward march.\nLeft, left, left, right, left.\nLeft, left, left, right, left.\n\n(Chant)\nAll I know is all I know.\nWisdom is more precious than gold.\nSound off! 1, 2, 3, 4.\n\n(The Shake)\nWe're so excited about learning, we want to shake. Woohoo!\nShake, shake, shake your left arm.\nShake, shake, shake your right arm.\nShake, shake, shake your left leg.\nShake, shake, shake your right leg.\n\n(Outro)\nChildren, please remember\nalways stay on the right path and keep on learning."
+  },
+  {
+    "id": 8,
+    "slug": "numbers",
+    "audioFile": "08. Numbers.mp3",
+    "cover": "numbers.webp",
+    "color": "#FF6F00",
+    "domainIcon": "🔢",
+    "landId": "numeria",
+    "lyrics": "(Intro)\nI like the numbers.\nIt is so much fun to count.\n\n(Call and Response)\nNow let's count to 10 while we clap.\nOne clap. Follow me. One.\nTwo claps. Follow me. One. Two.\nThree claps. Follow me. One. Two. Three.\n...\nTen claps. Follow me.\n1 2 3 4 5 6 7 8 9 10.\n\n(Outro)\nHooray. You did it.\nGive yourself a great big hand clap."
+  },
+  {
+    "id": 9,
+    "slug": "my-body",
+    "audioFile": "09. My Body.mp3",
+    "cover": "my-body.png",
+    "color": "#9C27B0",
+    "domainIcon": "🔬",
+    "landId": "natura",
+    "lyrics": "(Verse 1: Face)\nWhat's on your face?\nEyes, nose, mouth, chin.\nDon't forget about your forehead, cheeks, and two ears.\n\n(Verse 2: Upper Body)\nMy body is strong.\nNeck, shoulders, back, arms.\nDon't forget about your hands and tip fingers.\n\n(Verse 3: Lower Body)\nMy body is strong.\nHip, thighs, knees, legs.\nDon't forget about your ankles, feet, and ten toes.\n\n(Bridge)\nWe are going to keep our body strong\nby eating right and staying healthy.\nConsuming living foods, stretching,\nand keeping our hearts right."
+  },
+  {
+    "id": 10,
+    "slug": "manners",
+    "audioFile": "10. Manners.mp3",
+    "cover": "manners.webp",
+    "color": "#1E88E5",
+    "domainIcon": "🤝",
+    "landId": "harmonia",
+    "lyrics": "(Verse)\nWhen you receive, say Thank You.\nThen I'll say You're Welcome.\nYes, Please.\nExcuse Me.\nNo, Thank You.\nI'm Sorry."
+  },
+  {
+    "id": 11,
+    "slug": "time",
+    "audioFile": "11. Time.mp3",
+    "cover": "time.png",
+    "color": "#FF6F00",
+    "domainIcon": "⏰",
+    "landId": "chronia",
+    "lyrics": "Do you know? Do you know? Do you know what time it is?\nIs it 1:00, 2:00, 3:00, 4:00, 5:00, 6:00, 7:00, 8:00, 9:00, 10:00, 11:00, 12:00?\nDo you know? Do you know? Do you know what time it is?\nIs it 1:30, 2:30, 3:30, 4:30, 5:30, 6:30, 7:30, 8:30, 9:30, 10:30, 11:30, 12:30?\nDo you know? Do you know? Do you know what time it is?\nIs it in the morning when you just wake up?\nIs it in the afternoon and you're eating some lunch?\nIs it in the evening and you're getting ready for bed?\nDo you know what time it is?\nIs it 1:00? Is it 1:30?\nIs it in the morning when you just wake up?\nIs it in the afternoon and you're eating some lunch?\nIs it in the evening and you're getting ready for bed?\nDo you know? Do you know? Do you know what time it is?"
+  },
+  {
+    "id": 12,
+    "slug": "changes",
+    "audioFile": "12. Changes.mp3",
+    "cover": "changes.webp",
+    "color": "#4CAF50",
+    "domainIcon": "🦋",
+    "landId": "natura",
+    "lyrics": "(Verse)\nIt's sunny outside. Yesterday it rained.\nOh! Somewhere it might snow tomorrow.\nThat's the weather, it changes.\nBut not love from above.\nTrue love is unchanging, always the same.\nYesterday, today, and forever."
+  },
+  {
+    "id": 13,
+    "slug": "one-hundred",
+    "audioFile": "13. One hundred.mp3",
+    "cover": "one-hundred.webp",
+    "color": "#9C27B0",
+    "domainIcon": "💯",
+    "landId": "numeria",
+    "lyrics": null
+  },
+  {
+    "id": 14,
+    "slug": "the-ocean",
+    "audioFile": "14. The Ocean.mp3",
+    "cover": "the-ocean.webp",
+    "color": "#1E88E5",
+    "domainIcon": "🌊",
+    "landId": "natura",
+    "lyrics": null
+  },
+  {
+    "id": 15,
+    "slug": "hard-words",
+    "audioFile": "15. Hard Words.mp3",
+    "cover": "hard-words.webp",
+    "color": "#FF6F00",
+    "domainIcon": "📖",
+    "landId": "lexiconia",
+    "lyrics": "(Intro)\nSometimes you may hear a word that's hard to say,\nbut don't worry. Slow down and say...\n\n(Word Drill)\nBalloon. Hawaii. Oklahoma.\nLouisiana. Octopus. Vegetables.\nSpaghetti. Macaroni.\nAlaska. Nevada. Colorado."
+  },
+  {
+    "id": 16,
+    "slug": "shapes",
+    "audioFile": "16. Shapes.mp3",
+    "cover": "shapes.png",
+    "color": "#4CAF50",
+    "domainIcon": "🔷",
+    "landId": "geometria",
+    "lyrics": "(Chorus)\nI see shapes all around me.\nDo you see shapes all around you?\n\n(Verse)\nThere goes a Circle.\nThat's a Square. (Yes, four equal sides).\nTriangle. Stars. Rectangle.\nTrapezoids. Pentagons. Hexagon.\nHeptagon. Octagon. Cube. Spheres."
+  },
+  {
+    "id": 17,
+    "slug": "months-of-the-year",
+    "audioFile": "17. Months of the Year.mp3",
+    "cover": "months-of-the-year.webp",
+    "color": "#9C27B0",
+    "domainIcon": "🗓️",
+    "landId": "chronia",
+    "lyrics": "(Intro)\nTime. Seconds, minutes, hours, days, weeks, months.\nIt's time for the months of the year song.\n\n(Chorus)\nJanuary, February, March,\nApril, May, June,\nJuly, August, September,\nOctober, November, December."
+  },
+  {
+    "id": 18,
+    "slug": "rain",
+    "audioFile": "18. Rain.mp3",
+    "cover": "rain.webp",
+    "color": "#1E88E5",
+    "domainIcon": "🌧️",
+    "landId": "natura",
+    "lyrics": "(Chant)\nWatching raindrops falling down,\ncleaning the atmosphere.\nWatching raindrops falling down,\ncleaning the atmosphere."
+  },
+  {
+    "id": 19,
+    "slug": "after-the-storm",
+    "audioFile": "20. After the Storm (outro).mp3",
+    "cover": "after-the-storm.png",
+    "color": "#4CAF50",
+    "domainIcon": "🌈",
+    "landId": "terrasol",
+    "lyrics": null
+  }
+]

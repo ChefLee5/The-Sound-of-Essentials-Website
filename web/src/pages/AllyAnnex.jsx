@@ -2,6 +2,8 @@ import React, { useState, useMemo, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { assetPath } from '../utils/assetPath';
+import JsonLd from '../components/JsonLd';
+import { productsSchema } from '../utils/schema';
 import './AllyAnnex.css';
 
 /* ─── Partner Data ─────────────────────────────────────────────────── */
@@ -176,6 +178,7 @@ const AllyAnnex = () => {
 
   return (
     <div className="annex-page">
+      <JsonLd data={productsSchema()} />
       {/* ── Hero ── */}
       <header className="annex-hero">
         <div className="scene-backdrop" aria-hidden="true">

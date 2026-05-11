@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import JsonLd from '../components/JsonLd';
+import { heroesSchema } from '../utils/schema';
 
 /* ── Scene images for expanded character cards ── */
 const CHAR_SCENES = {
@@ -104,23 +106,13 @@ const CharacterCard = ({ char, index, isExpanded, onToggle }) => {
                 aria-expanded={isExpanded}
             >
                 <div className="char-card__image-wrap">
-                    {char.name === 'Seriphia' ? (
-                        <div className="char-card__img-bg char-card__img-bg--scene">
+                        <div className="char-card__img-bg char-card__img-bg--selfie">
                             <img
-                                src={`${import.meta.env.BASE_URL}assets/characters/SERIPHIA_celestia.png`}
+                                src={`${import.meta.env.BASE_URL}assets/heroes/${char.name.toLowerCase()}-selfie.webp`}
                                 alt={char.name}
-                                className="char-card__image char-card__image--scene"
+                                className="char-card__image char-card__image--selfie"
                             />
                         </div>
-                    ) : (
-                        <div className={`char-card__img-bg char-card__img-bg--${char.land.toLowerCase().replace(/\s+/g, '-')}`}>
-                            <img
-                                src={`${import.meta.env.BASE_URL}assets/characters/${char.name.toUpperCase()}.png`}
-                                alt={char.name}
-                                className="char-card__image"
-                            />
-                        </div>
-                    )}
                     <div className="char-card__land-badge" style={{ background: char.landColor }}>
                         {t(`heroes.lands.${char.land}`)}
                     </div>
@@ -169,6 +161,7 @@ const Characters = () => {
 
     return (
         <div className="characters-page">
+            <JsonLd data={heroesSchema()} />
             {/* ── Hero ── */}
             <header className="char-hero" style={{ position: 'relative', overflow: 'hidden' }}>
                 <div className="scene-backdrop" aria-hidden="true">
@@ -376,77 +369,28 @@ const Characters = () => {
                     to { background-position: -200% 0; }
                 }
 
-                /* ── Land Gradients ── */
-                .char-card__img-bg--harmonia {
-                    background: linear-gradient(160deg, #fef9e7 0%, #fdebd0 30%, #f9e4b7 60%, #fdf2e9 100%);
+                /* ── Land Gradients (legacy, kept for expansion) ── */
+
+                /* ── Selfie Image Style ── */
+                .char-card__img-bg--selfie {
+                    background: linear-gradient(135deg, #f0f4f8 0%, #e8ecf0 100%);
                 }
 
-                .char-card__img-bg--numeria {
-                    background: linear-gradient(160deg, #eafaf1 0%, #d5f5e3 30%, #abebc6 60%, #e8f8f5 100%);
-                }
-
-                .char-card__img-bg--vitalis {
-                    background: linear-gradient(160deg, #fdf2e9 0%, #f6ddcc 30%, #edbb99 60%, #faebd7 100%);
-                }
-
-                .char-card__img-bg--chronia {
-                    background: linear-gradient(160deg, #f4ecf7 0%, #e8daef 30%, #d2b4de 60%, #f5eef8 100%);
-                }
-
-                .char-card__img-bg--lexiconia {
-                    background: linear-gradient(160deg, #fef5e7 0%, #fdebd0 30%, #f0c27f 60%, #fdf2e9 100%);
-                }
-
-                .char-card__img-bg--geometria {
-                    background: linear-gradient(160deg, #e8f8f5 0%, #d1f2eb 30%, #a3e4d7 60%, #eafaf1 100%);
-                }
-
-                .char-card__img-bg--natura {
-                    background: linear-gradient(160deg, #ebf5fb 0%, #d4e6f1 30%, #a9cce3 60%, #eaf2f8 100%);
-                }
-
-                .char-card__image {
+                .char-card__image--selfie {
                     width: 100%;
-                    height: 220px;
-                    object-fit: contain;
-                    object-position: center bottom;
-                    display: block;
-                    transition: transform 0.5s var(--ease-gentle);
-                }
-
-                .char-card--featured .char-card__img-bg {
-                    min-height: 400px;
-                }
-
-                .char-card--featured .char-card__image {
-                    height: 400px;
-                }
-
-                .char-card:hover .char-card__image {
-                    transform: scale(1.04);
-                }
-
-                /* ── Seriphia scene variant ── */
-                .char-card__img-bg--scene {
-                    background: linear-gradient(135deg, #1a1060 0%, #4a2080 50%, #c47020 100%);
-                }
-
-                .char-card__image--scene {
-                    width: 100%;
-                    height: 220px;
+                    height: 280px;
                     object-fit: cover;
-                    object-position: center 20%;
+                    object-position: center 15%;
                     display: block;
-                    mix-blend-mode: normal;
                     transition: transform 0.5s var(--ease-gentle);
                 }
 
-                .char-card--featured .char-card__image--scene {
-                    height: 400px;
-                    object-position: center 20%;
+                .char-card--featured .char-card__image--selfie {
+                    height: 440px;
+                    object-position: center 10%;
                 }
 
-                .char-card:hover .char-card__image--scene {
+                .char-card:hover .char-card__image--selfie {
                     transform: scale(1.04);
                 }
 

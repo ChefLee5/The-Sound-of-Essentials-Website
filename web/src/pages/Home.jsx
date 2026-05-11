@@ -4,6 +4,9 @@ import { useTranslation } from 'react-i18next';
 import ParallaxHero from '../components/ParallaxHero';
 import { RevealSection } from '../hooks/useReveal';
 import { useAnimeReveal } from '../hooks/useAnimeReveal';
+import heroesData from '../data/heroes.json';
+import JsonLd from '../components/JsonLd';
+import { homeSchema } from '../utils/schema';
 
 const Home = () => {
   const { t } = useTranslation();
@@ -12,23 +15,15 @@ const Home = () => {
     document.title = 'SOE: Rhythm Quest — Designed for the Developing Brain';
   }, []);
 
-  /* ── All 14 characters ── */
-  const allChars = [
-    { name: 'Kenji',   file: 'KENJI.png',   color: '#FF6F00', note: '♪' },
-    { name: 'Amara',   file: 'AMARA.png',   color: '#4CAF50', note: '♫' },
-    { name: 'Silas',   file: 'SILAS.png',   color: '#7B1FA2', note: '♩' },
-    { name: 'Athena',  file: 'ATHENA.png',  color: '#1E88E5', note: '♬' },
-    { name: 'Aiko',    file: 'AIKO.png',    color: '#E91E8C', note: '♪' },
-    { name: 'Elias',   file: 'ELIAS.png',   color: '#00ACC1', note: '♫' },
-    { name: 'Ezra',    file: 'EZRA.png',    color: '#F4511E', note: '♩' },
-    { name: 'Felix',   file: 'FELIX.png',   color: '#8BC34A', note: '♬' },
-    { name: 'Kwame',   file: 'KWAME.png',   color: '#FFB300', note: '♪' },
-    { name: 'Nerissa', file: 'NERISSA.png', color: '#26C6DA', note: '♫' },
-    { name: 'Octavia', file: 'OCTAVIA.png', color: '#AB47BC', note: '♩' },
-    { name: 'Ronan',   file: 'RONAN.png',   color: '#5C6BC0', note: '♬' },
-    { name: 'Selene',  file: 'SELENE.png',  color: '#EC407A', note: '♪' },
-    { name: 'Vesta',   file: 'VESTA.png',   color: '#26A69A', note: '♫' },
-  ];
+  /* ── All characters (from canonical data layer) ── */
+  const allChars = heroesData
+    .filter(h => h.id !== 'seriphia')
+    .map(h => ({
+      name: h.name,
+      file: `${h.name.toUpperCase()}.webp`,
+      color: h.carouselColor,
+      note: h.carouselNote,
+    }));
 
   const numChars = allChars.length;
   const theta = 360 / numChars;
@@ -70,6 +65,7 @@ const Home = () => {
 
   return (
     <div className="home-page">
+      <JsonLd data={homeSchema()} />
 
       {/* ═══ HERO ═══ */}
       <header className="hero">
@@ -172,7 +168,7 @@ const Home = () => {
       {/* ═══ SCENE STRIP 1 — World Break ═══ */}
       <div className="scene-strip" aria-hidden="true">
         <img
-          src={`${import.meta.env.BASE_URL}assets/lands/celestia-panorama.webp`}
+          src={`${import.meta.env.BASE_URL}assets/lands/celestia.webp`}
           alt=""
           className="scene-strip__img"
           loading="lazy"
@@ -209,7 +205,7 @@ const Home = () => {
       {/* ═══ SCENE STRIP 2 — World Break ═══ */}
       <div className="scene-strip" aria-hidden="true">
         <img
-          src={`${import.meta.env.BASE_URL}assets/lands/aquaria-panorama.webp`}
+          src={`${import.meta.env.BASE_URL}assets/lands/aquaria.webp`}
           alt=""
           className="scene-strip__img"
           style={{ animationDirection: 'reverse' }}
@@ -298,10 +294,10 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ═══ SCENE STRIP 3 — World Break ═══ */}
+      {/* ═══ SCENE STRIP 3 — TerraSol ═══ */}
       <div className="scene-strip" aria-hidden="true">
         <img
-          src={`${import.meta.env.BASE_URL}assets/scenes/tulip-river-path.webp`}
+          src={`${import.meta.env.BASE_URL}assets/lands/terrasol.webp`}
           alt=""
           className="scene-strip__img"
           loading="lazy"
