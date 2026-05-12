@@ -7,11 +7,7 @@ import { productsSchema } from '../utils/schema';
 import './AllyAnnex.css';
 
 /* ─── Partner Data ─────────────────────────────────────────────────── */
-const ARCHETYPES = {
-  guide:    { emoji: '🧭', label: 'The Guide',   color: 'var(--color-purple)' },
-  engine:   { emoji: '⚙️', label: 'The Engine',  color: 'var(--color-orange)' },
-  explorer: { emoji: '🔍', label: 'The Explorer', color: 'var(--color-green)' },
-};
+
 
 const CATEGORIES = [
   { key: 'all',        emoji: '✨', label: 'All Allies' },
@@ -54,14 +50,7 @@ const TIER_LABELS = {
 
 /* ─── Components ───────────────────────────────────────────────────── */
 
-const ArchetypeBadge = ({ arch }) => {
-  const a = ARCHETYPES[arch];
-  return (
-    <span className={`annex-badge annex-badge--${arch}`}>
-      {a.emoji} {a.label}
-    </span>
-  );
-};
+
 
 const TierBadge = ({ badge }) => {
   if (!badge) return null;
@@ -70,15 +59,13 @@ const TierBadge = ({ badge }) => {
 
 const PartnerCard = ({ p }) => {
   const [imgError, setImgError] = useState(false);
-  const a = ARCHETYPES[p.arch];
   const showPlaceholder = !p.img || imgError;
 
   return (
     <div className={`annex-card annex-card--tier${p.tier}`} id={`ally-${p.id}`}>
-      <div className={`annex-card__image-wrapper annex-card__image-wrapper--${p.arch}`}>
+      <div className="annex-card__image-wrapper">
         {showPlaceholder ? (
-          <div className={`annex-card__placeholder annex-card__placeholder--${p.arch}`}>
-            <span className="annex-card__placeholder-emoji">{a.emoji}</span>
+          <div className="annex-card__placeholder">
             <span className="annex-card__placeholder-name">{p.name}</span>
             <span className="annex-card__placeholder-sub">{p.sub}</span>
           </div>
@@ -99,7 +86,6 @@ const PartnerCard = ({ p }) => {
             <TierBadge badge={p.badge} />
           </div>
           <p className="annex-card__sub">{p.sub}</p>
-          <ArchetypeBadge arch={p.arch} />
         </div>
         <p className="annex-card__highlight">{p.hl}</p>
         <a
@@ -115,41 +101,7 @@ const PartnerCard = ({ p }) => {
   );
 };
 
-const FunnelDiagram = () => (
-  <div className="annex-funnel">
-    <div className="annex-funnel__step annex-funnel__step--1">
-      <span className="annex-funnel__icon">📄</span>
-      <div>
-        <strong>Free Teacher's Guide</strong>
-        <p>Foundational principles</p>
-      </div>
-    </div>
-    <div className="annex-funnel__arrow">▼</div>
-    <div className="annex-funnel__step annex-funnel__step--2">
-      <span className="annex-funnel__icon">📦</span>
-      <div>
-        <strong>The Rhythm Quest Bundle</strong>
-        <p>Digital curriculum package</p>
-      </div>
-    </div>
-    <div className="annex-funnel__arrow">▼</div>
-    <div className="annex-funnel__step annex-funnel__step--3">
-      <span className="annex-funnel__icon">🏡</span>
-      <div>
-        <strong>Sanctuary Solutions</strong>
-        <p>Curated tools from the Annex</p>
-      </div>
-    </div>
-    <div className="annex-funnel__arrow">▼</div>
-    <div className="annex-funnel__step annex-funnel__step--4">
-      <span className="annex-funnel__icon">🌍</span>
-      <div>
-        <strong>Community & Growth</strong>
-        <p>Ongoing support and expansion</p>
-      </div>
-    </div>
-  </div>
-);
+
 
 /* ─── Main Page ────────────────────────────────────────────────────── */
 
@@ -197,56 +149,14 @@ const AllyAnnex = () => {
               <span className="text-gold">Learning Sanctuary</span>
             </h1>
             <p className="section-subtitle" style={{ margin: '1rem auto', maxWidth: '680px' }}>
-              Every product in this annex has been carefully selected and vetted against SOE's three archetypes —
-              The Guide, The Engine, and The Explorer — to provide your family with the best tools for the Rhythm Quest.
+              Every product in this annex has been carefully selected and vetted
+              to provide your family with the best tools for the Rhythm Quest.
             </p>
           </div>
         </div>
       </header>
 
-      {/* ── Archetype Legend ── */}
-      <section className="section glow-sage">
-        <div className="container">
-          <div className="animate-fade-up">
-            <div className="section-label">The Archetypes</div>
-            <h2 className="text-center">
-              Three Pillars of the{' '}
-              <span className="text-sage">Ecosystem</span>
-            </h2>
-            <div className="annex-archetypes">
-              {Object.entries(ARCHETYPES).map(([key, a]) => (
-                <div key={key} className={`annex-archetype-card annex-archetype-card--${key}`}>
-                  <span className="annex-archetype-card__emoji">{a.emoji}</span>
-                  <h3>{a.label}</h3>
-                  <p>
-                    {key === 'guide' && 'Empowering the caregiver — nervous system regulation, conscious parenting, and self-mastery tools.'}
-                    {key === 'engine' && 'Fueling the curriculum — music education, video lessons, and literature-rich learning systems.'}
-                    {key === 'explorer' && 'Equipping the child — physical environment, sensory tools, and the sanctuary they learn in.'}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* ── Ascension Funnel ── */}
-      <section className="section glow-plum">
-        <div className="container">
-          <div className="animate-fade-up animate-delay-2">
-            <div className="section-label">The Ascension Funnel</div>
-            <h2 className="text-center">
-              From Free Guide to{' '}
-              <span className="text-plum">Full Ecosystem</span>
-            </h2>
-            <p className="section-subtitle text-center" style={{ maxWidth: '600px', margin: '0 auto 2rem' }}>
-              Our ally recommendations follow a natural progression — meeting families
-              exactly where they are in their learning journey.
-            </p>
-            <FunnelDiagram />
-          </div>
-        </div>
-      </section>
 
       {/* ── Filter Bar ── */}
       <section className="section">
