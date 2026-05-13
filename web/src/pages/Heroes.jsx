@@ -552,15 +552,53 @@ const Characters = () => {
 
                 /* ── Responsive ── */
                 @media (max-width: 768px) {
+                    .char-hero {
+                        padding: 7rem 0 2.5rem;
+                    }
                     .char-card--featured {
                         grid-template-columns: 1fr;
                     }
                     .char-card--featured .char-card__image {
                         min-height: 250px;
                     }
+                    .char-card--featured .char-card__image--selfie {
+                        height: 280px;
+                        object-position: center 20%;
+                    }
                     .char-grid {
                         grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
                         gap: 1.25rem;
+                    }
+                    .char-card__image--selfie {
+                        height: 240px;
+                        object-position: center 25%;
+                    }
+                    .char-card__img-bg {
+                        min-height: 200px;
+                    }
+                    .char-filters {
+                        gap: 0.4rem;
+                    }
+                    .char-filter-btn {
+                        padding: 0.4rem 0.9rem;
+                        font-size: 0.78rem;
+                    }
+                }
+
+                @media (max-width: 480px) {
+                    .char-grid {
+                        grid-template-columns: 1fr;
+                        gap: 1rem;
+                    }
+                    .char-card__image--selfie {
+                        height: 220px;
+                        object-position: center 30%;
+                    }
+                    .char-card__name {
+                        font-size: 1.2rem;
+                    }
+                    .char-card__info {
+                        padding: 1rem;
                     }
                 }
             `}</style>

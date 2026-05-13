@@ -479,8 +479,7 @@ const Home = () => {
           flex-direction: column;
           align-items: center;
           gap: 0.35rem;
-          backface-visibility: visible; /* Allowing to see the backs slightly adds depth, or hidden */
-          /* Note: backface-visibility is generally better left to default for true 3D if opacity handles depth, but let's make it fully solid */
+          backface-visibility: hidden;
           cursor: pointer;
         }
         .hero__char-note {
@@ -692,22 +691,39 @@ const Home = () => {
 
         /* ── Responsive ── */
         @media (max-width: 768px) {
+          .hero__carousel-scene { height: 320px; perspective: 800px; }
+          .hero__carousel-spinner { width: 120px; height: 220px; }
           .hero__char { width: 120px; }
           .hero__char-img { width: 120px; height: 180px; }
-          .hero__marquee-track { gap: 0.5rem; }
+          .hero__char-label { font-size: 0.68rem; padding: 0.15rem 0.5rem; }
+          .hero__char-note { font-size: 1rem; }
+          .carousel-btn { width: 40px; height: 40px; font-size: 1.1rem; }
+          .prev-btn { left: 2%; }
+          .next-btn { right: 2%; }
+          .hero__info-strip { font-size: 0.75rem; gap: 0.5rem; flex-wrap: wrap; justify-content: center; }
           .why-stats    { grid-template-columns: 1fr; }
           .features-grid  { grid-template-columns: 1fr; }
           .domains-grid   { grid-template-columns: repeat(2, 1fr); }
+          .book-feature-layout { flex-direction: column; align-items: center; text-align: center; gap: 2rem; }
+          .book-covers-duo { justify-content: center; }
+          .book-covers-duo .cover-tilt:last-child { transform: translateY(0); }
+          .book-feature-list { align-items: center; }
         }
 
         @media (max-width: 640px) {
           .hero__content  { text-align: center; }
           .hero__actions  { justify-content: center; }
+          .hero__carousel-scene { height: 260px; perspective: 600px; margin-top: 1rem; }
+          .hero__carousel-spinner { width: 90px; height: 180px; }
           .hero__char { width: 90px; }
           .hero__char-img { width: 90px; height: 135px; }
+          .hero__char-label { font-size: 0.6rem; }
+          .hero__char-note { font-size: 0.85rem; height: 1.2rem; }
           .domains-grid   { grid-template-columns: 1fr; }
           .cta-card       { padding: 3rem 1.5rem; }
-          .book-feature-layout { flex-direction: column; align-items: center; }
+          .book-covers-duo img { max-width: 200px !important; }
+          .hero__title { font-size: clamp(1.8rem, 6vw, 2.4rem); }
+          .hero__subtitle { font-size: 0.95rem; }
         }
 
         /* ── Book Feature Section ── */

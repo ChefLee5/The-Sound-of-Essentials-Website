@@ -459,23 +459,27 @@ const JoinQuest = () => {
         .form-input {
           width: 100%;
           padding: 0.8rem 1rem;
-          border: 1px solid var(--color-border-light);
-          border-radius: var(--radius-sm);
-          background: #f8f9fa;
-          color: var(--color-text-primary);
+          border: 1.5px solid var(--color-border-light, var(--color-border, #d0d5dd));
+          border-radius: var(--radius-sm, 8px);
+          background: #ffffff;
+          color: var(--color-text-primary, #1a1a2e);
           font-family: var(--font-body);
           font-size: 0.95rem;
-          transition: border-color var(--transition-med);
+          transition: border-color var(--transition-med, 0.3s ease);
+          -webkit-appearance: none;
+          appearance: none;
+          box-sizing: border-box;
         }
 
         .form-input:focus {
           outline: none;
-          border-color: var(--color-sage);
-          box-shadow: 0 0 0 3px var(--color-sage-glow);
+          border-color: var(--color-sage, #4CAF50);
+          box-shadow: 0 0 0 3px var(--color-sage-glow, rgba(76, 175, 80, 0.15));
         }
 
         .form-input::placeholder {
-          color: var(--color-text-muted);
+          color: var(--color-text-muted, #9ca3af);
+          opacity: 1;
         }
 
         .form-textarea {
@@ -488,14 +492,38 @@ const JoinQuest = () => {
         }
 
         @media (max-width: 768px) {
+          .join-hero {
+            padding: 7rem 0 2.5rem;
+          }
           .audience-grid {
             grid-template-columns: 1fr;
           }
           .newsletter-form__row {
             flex-direction: column;
           }
+          .newsletter-form__row .btn {
+            width: 100%;
+          }
           .form-grid {
             grid-template-columns: 1fr;
+          }
+          .newsletter-block {
+            padding: 2rem 1.5rem;
+          }
+          .contact-form-card {
+            padding: 2rem 1.5rem;
+          }
+          .audience-card {
+            padding: 2rem 1.5rem;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .newsletter-block h2 {
+            font-size: 1.3rem;
+          }
+          .form-input {
+            font-size: 16px; /* Prevents iOS zoom on focus */
           }
         }
 

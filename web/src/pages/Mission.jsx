@@ -406,6 +406,7 @@ const Mission = () => {
           .bio-window {
             grid-template-columns: 1fr;
             text-align: center;
+            gap: 2rem;
           }
           .bio-window__content p {
             margin-left: auto;
@@ -413,6 +414,25 @@ const Mission = () => {
           }
           .solution-grid {
             grid-template-columns: 1fr;
+          }
+          .mission-hero {
+            padding: 7rem 0 2.5rem;
+          }
+          .neural-viz {
+            width: 240px;
+            height: 240px;
+          }
+          .neural-number {
+            font-size: 2.2rem;
+          }
+          .mission-stat__number {
+            font-size: 2.5rem;
+          }
+          .mission-stat {
+            padding: 1.5rem 1rem;
+          }
+          .manifesto-cta {
+            padding: 2rem 1.5rem;
           }
         }
 

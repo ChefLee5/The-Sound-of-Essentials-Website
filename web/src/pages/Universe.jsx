@@ -464,12 +464,36 @@ const Universe = () => {
           .lands-map-grid {
             grid-template-columns: repeat(2, 1fr);
           }
+          .duos-grid {
+            grid-template-columns: 1fr;
+          }
+          .duo-card__char-pair {
+            height: 160px;
+          }
         }
 
         @media (max-width: 480px) {
           .lands-map-grid {
             grid-template-columns: repeat(2, 1fr);
             gap: 0.75rem;
+          }
+          .land-tile {
+            padding: 1rem 0.75rem;
+          }
+          .land-tile__icon {
+            font-size: 1.5rem;
+          }
+          .land-tile__name {
+            font-size: 0.85rem;
+          }
+          .land-tile__duo, .land-tile__focus {
+            font-size: 0.65rem;
+          }
+          .universe-hero {
+            padding: 7rem 0 2rem;
+          }
+          .seriphia-portrait {
+            max-height: 280px;
           }
         }
 
@@ -630,13 +654,21 @@ const Universe = () => {
           .seriphia-block {
             grid-template-columns: 1fr;
             text-align: center;
+            gap: 2rem;
           }
           .seriphia-block__image img {
             max-height: 350px;
             margin: 0 auto;
           }
+          .seriphia-portrait {
+            max-height: 350px;
+            margin: 0 auto;
+          }
           .pedagogy-grid {
             grid-template-columns: 1fr;
+          }
+          .pedagogy-card {
+            padding: 2rem 1.5rem;
           }
         }
 
