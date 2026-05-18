@@ -1,5 +1,5 @@
 import { lazy, Suspense, useState, useCallback } from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import AnimatedPage from './components/AnimatedPage';
 import Navbar from './components/Navbar';
@@ -13,12 +13,14 @@ import CanvasBackground from './components/SplineBackground';
 // cutting the initial JS bundle by ~40%.
 const Home       = lazy(() => import('./pages/Home'));
 const Universe   = lazy(() => import('./pages/Universe'));
-const MediaRoom  = lazy(() => import('./pages/MediaRoom'));
+// MediaRoom is now merged into Listen — /media redirects to /listen
 const Mission    = lazy(() => import('./pages/Mission'));
 const JoinQuest  = lazy(() => import('./pages/JoinQuest'));
 const Characters = lazy(() => import('./pages/Heroes'));
 const Science    = lazy(() => import('./pages/Science'));
 const AllyAnnex  = lazy(() => import('./pages/AllyAnnex'));
+const DictionarySale = lazy(() => import('./pages/DictionarySale'));
+const Listen     = lazy(() => import('./pages/Listen'));
 
 // ── Minimal loading fallback ─────────────────────────────────────
 const PageLoader = () => (
@@ -52,12 +54,14 @@ const App = () => {
             <Routes location={location} key={location.pathname}>
               <Route path="/"           element={<AnimatedPage><Home /></AnimatedPage>} />
               <Route path="/universe"   element={<AnimatedPage><Universe /></AnimatedPage>} />
-              <Route path="/media"      element={<AnimatedPage><MediaRoom /></AnimatedPage>} />
+              <Route path="/media"      element={<Navigate to="/listen" replace />} />
               <Route path="/mission"    element={<AnimatedPage><Mission /></AnimatedPage>} />
+              <Route path="/listen"    element={<AnimatedPage><Listen /></AnimatedPage>} />
               <Route path="/join"       element={<AnimatedPage><JoinQuest /></AnimatedPage>} />
               <Route path="/characters" element={<AnimatedPage><Characters /></AnimatedPage>} />
               <Route path="/science"    element={<AnimatedPage><Science /></AnimatedPage>} />
               <Route path="/allies"    element={<AnimatedPage><AllyAnnex /></AnimatedPage>} />
+              <Route path="/dictionary" element={<AnimatedPage><DictionarySale /></AnimatedPage>} />
             </Routes>
           </AnimatePresence>
         </Suspense>

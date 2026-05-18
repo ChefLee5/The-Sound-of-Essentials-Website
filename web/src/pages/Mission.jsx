@@ -81,8 +81,8 @@ const AnimatedStat = ({ value, suffix = '', label, color }) => {
 
 /* ── Ambient Scene Gallery ── */
 const SCENES = [
-  { src: 'b-roll-boats.webp',          caption: 'On the Water',            land: 'Lexiconia' },
-  { src: 'b-roll-flowers.webp',        caption: 'Through the Fields',      land: 'Natura' },
+  { src: 'b-roll-boats.webp',          caption: 'On the Water',            land: 'Luminosity' },
+  { src: 'b-roll-flowers.webp',        caption: 'Through the Fields',      land: 'Terrasol' },
   { src: 'climb-numeria.webp',         caption: 'Climbing Numeria',        land: 'Numeria' },
   { src: 'donkey.webp',                caption: 'A Trusty Companion',      land: 'Animalia' },
   { src: 'drums.webp',                 caption: 'The Beat Goes On',        land: 'Harmonia' },
@@ -91,13 +91,13 @@ const SCENES = [
   { src: 'wave.webp',                  caption: 'Riding the Wave',         land: 'Aquaria' },
   // ── New scenes ──
   { src: 'excited-to-learn.webp',      caption: 'Excited to Learn',        land: 'All Lands' },
-  { src: 'floating-letters.webp',      caption: 'Floating Letters',        land: 'Lexiconia' },
+  { src: 'floating-letters.webp',      caption: 'Floating Letters',        land: 'Luminosity' },
   { src: 'counting-claps.webp',        caption: 'Counting Claps',          land: 'Numeria' },
-  { src: 'path-to-terrasol.webp',      caption: 'Path to TerraSol',        land: 'TerraSol' },
+  { src: 'path-to-terrasol.webp',      caption: 'Path to Terrasol',        land: 'Terrasol' },
   { src: 'living-food.webp',           caption: 'Living Food',             land: 'Vitalis' },
   { src: 'kwame-counting.webp',        caption: 'Kwame at Work',           land: 'Numeria' },
   { src: 'march-luminosity.webp',      caption: 'March of Luminosity',     land: 'Luminosity' },
-  { src: 'sundial-weather.webp',       caption: 'Reading the Sundial',     land: 'Chronia' },
+  { src: 'sundial-weather.webp',       caption: 'Reading the Sundial',     land: 'Celestia' },
 ];
 
 const MissionSceneGallery = () => {
@@ -252,6 +252,50 @@ const Mission = () => {
         .mission-page .reveal-block.revealed {
           opacity: 1;
           transform: translateY(0);
+        }
+
+        /* ── Ken Burns keyframes ── */
+        @keyframes kenBurnsMission {
+          0%   { transform: scale(1.0) translate(0, 0); }
+          25%  { transform: scale(1.07) translate(-1%, -0.8%); }
+          50%  { transform: scale(1.11) translate(0.5%, -1.5%); }
+          75%  { transform: scale(1.05) translate(1%, -0.3%); }
+          100% { transform: scale(1.0) translate(0, 0); }
+        }
+
+        /* ── Full-page wave background with Ken Burns ── */
+        .mission-page {
+          position: relative;
+          overflow: hidden;
+        }
+
+        .mission-page::before {
+          content: '';
+          position: fixed;
+          inset: -5%;
+          width: 110%;
+          height: 110%;
+          z-index: -1;
+          background:
+            url('${import.meta.env.BASE_URL}assets/scenes/wave.webp') center center / cover no-repeat;
+          animation: kenBurnsMission 38s ease-in-out infinite;
+          will-change: transform;
+        }
+
+        .mission-page::after {
+          content: '';
+          position: fixed;
+          inset: 0;
+          z-index: -1;
+          background: linear-gradient(
+            180deg,
+            rgba(220, 245, 250, 0.55) 0%,
+            rgba(230, 248, 252, 0.40) 25%,
+            rgba(240, 252, 255, 0.35) 50%,
+            rgba(235, 250, 253, 0.45) 75%,
+            rgba(225, 245, 248, 0.55) 100%
+          );
+          pointer-events: none;
         }
 
         .mission-hero {

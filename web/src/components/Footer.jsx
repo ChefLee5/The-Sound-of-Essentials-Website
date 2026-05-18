@@ -44,7 +44,7 @@ const Footer = () => {
             <Link to="/characters" className="footer__link">{t('navbar.heroes')}</Link>
             <Link to="/science" className="footer__link">{t('footer.sci_sound')}</Link>
             <Link to="/mission" className="footer__link">{t('navbar.mission')}</Link>
-            <Link to="/media" className="footer__link">{t('navbar.media')}</Link>
+            <Link to="/listen" className="footer__link">{t('navbar.media')}</Link>
           </div>
 
           {/* Get Involved */}

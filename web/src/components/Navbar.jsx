@@ -67,7 +67,7 @@ const Navbar = () => {
     { to: '/characters', label: t('navbar.heroes') },
     { to: '/science',    label: t('navbar.science') },
     { to: '/mission',    label: t('navbar.mission') },
-    { to: '/media',      label: t('navbar.media') },
+    { to: '/listen',    label: t('navbar.media') },
     { to: '/allies',     label: '🤝 Ally Annex' },
   ];
 
@@ -117,8 +117,8 @@ const Navbar = () => {
         ))}
 
         {/* CTA inside mobile drawer */}
-        <Link to="/join" className="navbar__cta-btn navbar__cta-btn--mobile">
-          {t('navbar.join')}
+        <Link to="/listen" className="navbar__cta-btn navbar__cta-btn--mobile">
+          🎧 Listen Free
         </Link>
       </div>
 
@@ -164,8 +164,8 @@ const Navbar = () => {
           )}
         </div>
 
-        <Link to="/join" className="navbar__cta-btn">
-          {t('navbar.join')}
+        <Link to="/listen" className="navbar__cta-btn">
+          🎧 Listen Free
         </Link>
 
         {/* Mobile hamburger */}

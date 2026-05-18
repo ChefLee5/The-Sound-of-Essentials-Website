@@ -224,7 +224,7 @@ const Characters = () => {
                             {t('heroes.cta_subtitle')}
                         </p>
                         <div style={{ marginTop: '2rem' }}>
-                            <Link to="/media" className="page-bottom-link">
+                            <Link to="/listen" className="page-bottom-link">
                                 {t('home.explore_media')}
                             </Link>
                         </div>
@@ -312,7 +312,7 @@ const Characters = () => {
                     height: 100%;
                     min-height: 500px;
                     object-fit: cover;
-                    object-position: top center;
+                    object-position: center top;
                     image-rendering: -webkit-optimize-contrast;
                 }
 
@@ -378,16 +378,16 @@ const Characters = () => {
 
                 .char-card__image--selfie {
                     width: 100%;
-                    height: 280px;
+                    height: 360px;
                     object-fit: cover;
-                    object-position: center 15%;
+                    object-position: center 35%;
                     display: block;
                     transition: transform 0.5s var(--ease-gentle);
                 }
 
                 .char-card--featured .char-card__image--selfie {
-                    height: 440px;
-                    object-position: center 10%;
+                    height: 480px;
+                    object-position: center 30%;
                 }
 
                 .char-card:hover .char-card__image--selfie {
@@ -562,16 +562,16 @@ const Characters = () => {
                         min-height: 250px;
                     }
                     .char-card--featured .char-card__image--selfie {
-                        height: 280px;
-                        object-position: center 20%;
+                        height: 340px;
+                        object-position: center 35%;
                     }
                     .char-grid {
                         grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
                         gap: 1.25rem;
                     }
                     .char-card__image--selfie {
-                        height: 240px;
-                        object-position: center 25%;
+                        height: 320px;
+                        object-position: center 35%;
                     }
                     .char-card__img-bg {
                         min-height: 200px;
@@ -591,8 +591,8 @@ const Characters = () => {
                         gap: 1rem;
                     }
                     .char-card__image--selfie {
-                        height: 220px;
-                        object-position: center 30%;
+                        height: 300px;
+                        object-position: center 35%;
                     }
                     .char-card__name {
                         font-size: 1.2rem;

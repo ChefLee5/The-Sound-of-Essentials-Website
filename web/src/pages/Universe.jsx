@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import ParallaxHero from '../components/ParallaxHero';
 import { useAnimeReveal } from '../hooks/useAnimeReveal';
@@ -54,23 +53,7 @@ const Universe = () => {
     desc: t(`universe.lands.${land.name}.desc`),
   }));
 
-  const pedagogyMethods = [
-    {
-      name: t('universe.pedagogy.Dalcroze.name'),
-      desc: t('universe.pedagogy.Dalcroze.desc'),
-      icon: '💃',
-    },
-    {
-      name: t('universe.pedagogy.Orff.name'),
-      desc: t('universe.pedagogy.Orff.desc'),
-      icon: '🥁',
-    },
-    {
-      name: t('universe.pedagogy.Kodaly.name'),
-      desc: t('universe.pedagogy.Kodaly.desc'),
-      icon: '🎶',
-    },
-  ];
+
 
   const [activeDuo, setActiveDuo] = useState(null);
   const duosGridRef = useRef(null);
@@ -277,40 +260,7 @@ const Universe = () => {
         </div>
       </section>
 
-      {/* ── Pedagogy ── */}
-      <section className="section">
-        <div className="container">
-          <RevealSection className="text-center">
-            <div className="section-label">{t('universe.science_label')}</div>
-            <h2 className="section-title">
-              {t('universe.science_title_1')} <span className="text-plum">{t('universe.science_title_2')}</span>
-            </h2>
-            <p className="section-subtitle" style={{ margin: '0 auto 3rem auto' }}>
-              {t('universe.science_subtitle')}
-            </p>
-          </RevealSection>
 
-          <div className="pedagogy-grid">
-            {pedagogyMethods.map((m, i) => (
-              <RevealSection key={m.name} delay={i * 0.15}>
-                <div className="glass-card pedagogy-card">
-                  <span className="pedagogy-card__icon">{m.icon}</span>
-                  <h3>{m.name}</h3>
-                  <p>{m.desc}</p>
-                </div>
-              </RevealSection>
-            ))}
-          </div>
-
-          <RevealSection className="text-center" delay={0.4}>
-            <div style={{ marginTop: '3rem' }}>
-              <Link to="/media" className="page-bottom-link">
-                {t('home.explore_media')}
-              </Link>
-            </div>
-          </RevealSection>
-        </div>
-      </section>
 
       <style>{`
         .universe-page .reveal-block {

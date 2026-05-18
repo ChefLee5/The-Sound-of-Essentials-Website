@@ -16,7 +16,7 @@
     "cover": "days-of-the-week.webp",
     "color": "#1E88E5",
     "domainIcon": "📅",
-    "landId": "chronia",
+    "landId": "celestia",
     "lyrics": "(Verse)\nSeven days of a week I'll sing my song.\nCreation speaks to me all day long.\nHow I enjoy looking at those big white fluffy clouds.\nIn the daytime at night, I always look forward\nto the bright stars sparkling in the sky.\n\n(Chorus)\nSunday, Monday, Tuesday, Wednesday,\nThursday, Friday, Saturday.\nSunday, Monday, Tuesday, Wednesday,\nThursday, Friday, Saturday."
   },
   {
@@ -36,7 +36,7 @@
     "cover": "horses-interlude.png",
     "color": "#9C27B0",
     "domainIcon": "🎨",
-    "landId": "natura",
+    "landId": "terrasol",
     "lyrics": "(Spoken / Dialogue)\nHorses. Horses.\nThat's not a horse. That's a donkey.\nHorses. Horses.\nWait a minute. That's not a horse. That's a pig.\nHorses. Horses.\nGuys, did someone let the dogs out? That's a sheep.\nThat's not a horse.\n\nOh, can someone please get that cat out of here?\nWe're looking for a horse.\nAn elephant is certainly not a horse.\nLove those chickens, but I still need a horse.\nMonkeys. We need a horse.\nHorses. Now that's a horse."
   },
   {
@@ -46,7 +46,7 @@
     "cover": "le-cheval.png",
     "color": "#1E88E5",
     "domainIcon": "🇫🇷",
-    "landId": "lexiconia",
+    "landId": "luminosity",
     "lyrics": "(Verse — Sung in French)\nDeux accrets le cheval, fort et puissant\nDeux accrets le cheval, fort et puissant\nDeux accrets le cheval, fort et puissant\n\nOh, I can almost see the horses now grazing,\nEating up grass and apples, which they love so much.\nThe horse has strength and power,\nable to see almost all the way around its body.\nAfraid of nothing in the time of war,\nThe horse walks, trots, canter, and gallops.\nWhat an amazing creation."
   },
   {
@@ -86,7 +86,7 @@
     "cover": "my-body.png",
     "color": "#9C27B0",
     "domainIcon": "🔬",
-    "landId": "natura",
+    "landId": "terrasol",
     "lyrics": "(Verse 1: Face)\nWhat's on your face?\nEyes, nose, mouth, chin.\nDon't forget about your forehead, cheeks, and two ears.\n\n(Verse 2: Upper Body)\nMy body is strong.\nNeck, shoulders, back, arms.\nDon't forget about your hands and tip fingers.\n\n(Verse 3: Lower Body)\nMy body is strong.\nHip, thighs, knees, legs.\nDon't forget about your ankles, feet, and ten toes.\n\n(Bridge)\nWe are going to keep our body strong\nby eating right and staying healthy.\nConsuming living foods, stretching,\nand keeping our hearts right."
   },
   {
@@ -106,7 +106,7 @@
     "cover": "time.png",
     "color": "#FF6F00",
     "domainIcon": "⏰",
-    "landId": "chronia",
+    "landId": "celestia",
     "lyrics": "Do you know? Do you know? Do you know what time it is?\nIs it 1:00, 2:00, 3:00, 4:00, 5:00, 6:00, 7:00, 8:00, 9:00, 10:00, 11:00, 12:00?\nDo you know? Do you know? Do you know what time it is?\nIs it 1:30, 2:30, 3:30, 4:30, 5:30, 6:30, 7:30, 8:30, 9:30, 10:30, 11:30, 12:30?\nDo you know? Do you know? Do you know what time it is?\nIs it in the morning when you just wake up?\nIs it in the afternoon and you're eating some lunch?\nIs it in the evening and you're getting ready for bed?\nDo you know what time it is?\nIs it 1:00? Is it 1:30?\nIs it in the morning when you just wake up?\nIs it in the afternoon and you're eating some lunch?\nIs it in the evening and you're getting ready for bed?\nDo you know? Do you know? Do you know what time it is?"
   },
   {
@@ -116,7 +116,7 @@
     "cover": "changes.webp",
     "color": "#4CAF50",
     "domainIcon": "🦋",
-    "landId": "natura",
+    "landId": "terrasol",
     "lyrics": "(Verse)\nIt's sunny outside. Yesterday it rained.\nOh! Somewhere it might snow tomorrow.\nThat's the weather, it changes.\nBut not love from above.\nTrue love is unchanging, always the same.\nYesterday, today, and forever."
   },
   {
@@ -136,7 +136,7 @@
     "cover": "the-ocean.webp",
     "color": "#1E88E5",
     "domainIcon": "🌊",
-    "landId": "natura",
+    "landId": "terrasol",
     "lyrics": null
   },
   {
@@ -146,7 +146,7 @@
     "cover": "hard-words.webp",
     "color": "#FF6F00",
     "domainIcon": "📖",
-    "landId": "lexiconia",
+    "landId": "luminosity",
     "lyrics": "(Intro)\nSometimes you may hear a word that's hard to say,\nbut don't worry. Slow down and say...\n\n(Word Drill)\nBalloon. Hawaii. Oklahoma.\nLouisiana. Octopus. Vegetables.\nSpaghetti. Macaroni.\nAlaska. Nevada. Colorado."
   },
   {
@@ -166,7 +166,7 @@
     "cover": "months-of-the-year.webp",
     "color": "#9C27B0",
     "domainIcon": "🗓️",
-    "landId": "chronia",
+    "landId": "celestia",
     "lyrics": "(Intro)\nTime. Seconds, minutes, hours, days, weeks, months.\nIt's time for the months of the year song.\n\n(Chorus)\nJanuary, February, March,\nApril, May, June,\nJuly, August, September,\nOctober, November, December."
   },
   {
@@ -176,7 +176,7 @@
     "cover": "rain.webp",
     "color": "#1E88E5",
     "domainIcon": "🌧️",
-    "landId": "natura",
+    "landId": "terrasol",
     "lyrics": "(Chant)\nWatching raindrops falling down,\ncleaning the atmosphere.\nWatching raindrops falling down,\ncleaning the atmosphere."
   },
   {

@@ -36,8 +36,8 @@
     "groupShot": null
   },
   {
-    "id": "chronia",
-    "name": "Chronia",
+    "id": "celestia",
+    "name": "Celestia",
     "icon": "⏰",
     "color": "#9678c4",
     "focus": "Time & Seasons",
@@ -48,8 +48,8 @@
     "groupShot": "Celestia_Elias_Selene.webp"
   },
   {
-    "id": "lexiconia",
-    "name": "Lexiconia",
+    "id": "luminosity",
+    "name": "Luminosity",
     "icon": "📖",
     "color": "#d4897a",
     "focus": "Advanced Language",
@@ -72,8 +72,8 @@
     "groupShot": null
   },
   {
-    "id": "natura",
-    "name": "Natura",
+    "id": "terrasol",
+    "name": "Terrasol",
     "icon": "🌊",
     "color": "#5ba4c9",
     "focus": "Science & Nature",

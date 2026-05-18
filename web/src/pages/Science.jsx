@@ -23,6 +23,38 @@ const Science = () => {
                 </div>
             </header>
 
+            {/* ── Pedagogical Methods (moved from Universe) ── */}
+            <section className="section">
+                <div className="container">
+                    <RevealSection className="text-center">
+                        <div className="section-label">{t('universe.science_label')}</div>
+                        <h2 className="section-title">
+                            {t('universe.science_title_1')} <span className="text-plum">{t('universe.science_title_2')}</span>
+                        </h2>
+                        <p className="section-subtitle" style={{ margin: '0 auto 3rem auto' }}>
+                            {t('universe.science_subtitle')}
+                        </p>
+                    </RevealSection>
+
+                    <div className="pedagogy-grid">
+                        {[
+                            { name: t('universe.pedagogy.Dalcroze.name'), desc: t('universe.pedagogy.Dalcroze.desc'), icon: '💃' },
+                            { name: t('universe.pedagogy.Orff.name'), desc: t('universe.pedagogy.Orff.desc'), icon: '🥁' },
+                            { name: t('universe.pedagogy.Kodaly.name'), desc: t('universe.pedagogy.Kodaly.desc'), icon: '🎶' },
+                        ].map((m, i) => (
+                            <RevealSection key={m.name} delay={i * 0.15}>
+                                <div className="glass-card pedagogy-card">
+                                    <span className="pedagogy-card__icon">{m.icon}</span>
+                                    <h3>{m.name}</h3>
+                                    <p>{m.desc}</p>
+                                </div>
+                            </RevealSection>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+
             {/* ── Lyrics Section ── */}
             <section className="section glow-sage">
                 <div className="container">
@@ -48,7 +80,7 @@ const Science = () => {
                                     <p>Do you know? Do you know? Do you know what time it is?</p>
                                 </div>
                                 <div style={{ marginTop: '2rem' }}>
-                                    <Link to="/media" className="btn btn-outline">
+                                    <Link to="/listen" className="btn btn-outline">
                                         Listen to the Tracks →
                                     </Link>
                                 </div>
@@ -156,7 +188,7 @@ const Science = () => {
                             {t('science.cta_subtitle')}
                         </p>
                         <div style={{ marginTop: '3rem' }}>
-                            <Link to="/media" className="page-bottom-link">
+                            <Link to="/listen" className="page-bottom-link">
                                 {t('home.explore_media')}
                             </Link>
                         </div>
@@ -175,6 +207,66 @@ const Science = () => {
                     transform: translateY(0);
                 }
 
+                /* ── Ken Burns keyframes ── */
+                @keyframes kenBurnsSci {
+                    0%   { transform: scale(1.0) translate(0, 0); }
+                    25%  { transform: scale(1.06) translate(1%, -0.5%); }
+                    50%  { transform: scale(1.10) translate(0.5%, -1.5%); }
+                    75%  { transform: scale(1.04) translate(-1%, -0.5%); }
+                    100% { transform: scale(1.0) translate(0, 0); }
+                }
+
+                /* ── Full-page celestia sky background with Ken Burns ── */
+                .science-page {
+                    position: relative;
+                    overflow: hidden;
+                    color: #fff;
+                }
+
+                .science-page::before {
+                    content: '';
+                    position: fixed;
+                    inset: -5%;
+                    width: 110%;
+                    height: 110%;
+                    z-index: -1;
+                    background:
+                        url('${assetPath('/assets/scenes/celestia-sky-bg.png')}') center top / cover no-repeat;
+                    animation: kenBurnsSci 40s ease-in-out infinite;
+                    will-change: transform;
+                }
+
+                .science-page::after {
+                    content: '';
+                    position: fixed;
+                    inset: 0;
+                    z-index: -1;
+                    background: linear-gradient(
+                        180deg,
+                        rgba(15, 15, 45, 0.45) 0%,
+                        rgba(25, 25, 60, 0.30) 30%,
+                        rgba(30, 30, 70, 0.25) 60%,
+                        rgba(200, 210, 235, 0.40) 100%
+                    );
+                    pointer-events: none;
+                }
+
+                .science-page h1,
+                .science-page h2,
+                .science-page h3,
+                .science-page .section-title {
+                    color: #fff;
+                }
+
+                .science-page .section-subtitle,
+                .science-page p {
+                    color: rgba(255, 255, 255, 0.88);
+                }
+
+                .science-page .section-label {
+                    color: rgba(255, 255, 255, 0.95);
+                }
+
                 .science-hero {
                     padding: 10rem 0 4rem;
                 }
@@ -186,7 +278,15 @@ const Science = () => {
                 .lyrics-content p {
                     margin-bottom: 0.5rem;
                     font-size: 1rem;
-                    color: var(--color-text-primary);
+                    color: rgba(255, 255, 255, 0.9);
+                }
+
+                /* ── Dark theme glass cards ── */
+                .science-page .glass-card {
+                    background: rgba(255, 255, 255, 0.08);
+                    backdrop-filter: blur(12px);
+                    -webkit-backdrop-filter: blur(12px);
+                    border: 1px solid rgba(255, 255, 255, 0.15);
                 }
 
                 .science-card {
@@ -203,12 +303,45 @@ const Science = () => {
 
                 .science-card h3 {
                     font-size: 1.3rem;
-                    color: var(--color-text-primary);
+                    color: #fff;
                 }
 
                 .science-card p {
                     font-size: 0.95rem;
                     line-height: 1.7;
+                }
+
+                /* ── Pedagogy grid (from Universe) ── */
+                .pedagogy-grid {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    gap: 2rem;
+                }
+
+                .pedagogy-card {
+                    text-align: center;
+                    padding: 2.5rem 2rem;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 0.75rem;
+                }
+
+                .pedagogy-card__icon {
+                    font-size: 2.5rem;
+                    margin-bottom: 0.5rem;
+                }
+
+                .pedagogy-card h3 {
+                    font-size: 1.2rem;
+                    color: #fff;
+                }
+
+                .pedagogy-card p {
+                    font-size: 0.95rem;
+                    line-height: 1.7;
+                    color: rgba(255, 255, 255, 0.8);
                 }
 
                 .implementation-block {
@@ -254,6 +387,9 @@ const Science = () => {
                     }
                     .science-hero {
                         padding: 7rem 0 3rem;
+                    }
+                    .pedagogy-grid {
+                        grid-template-columns: 1fr;
                     }
                 }
             `}</style>

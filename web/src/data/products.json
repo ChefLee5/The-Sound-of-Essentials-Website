@@ -6,6 +6,8 @@
     "type": "digital-book",
     "format": "EPUB",
     "price": 19.00,
+    "retailPrice": 79.00,
+    "listedPrice": 55.00,
     "currency": "USD",
     "description": "A 125-scene illustrated vocabulary journey through all 7 Lands of the SOE universe. Over 3,400 words organized by thematic scenes with phonetic guides, bilingual support, and character-driven narratives.",
     "features": [
@@ -59,7 +61,7 @@
     "shortName": "Full Quest Bundle",
     "type": "bundle",
     "format": "Digital Bundle",
-    "price": 49.00,
+    "price": 89.00,
     "currency": "USD",
     "description": "The complete Sound of Essentials learning experience. Includes the Rhythm Quest album (19 tracks), Essential Picture Dictionary, and Summer Stretch Workbook — everything a family needs for a full year of music-powered learning.",
     "features": [

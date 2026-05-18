@@ -130,21 +130,21 @@
                 "focus": "Habilidades Físicas y Motoras",
                 "desc": "Felix y Amara se mueven a través de Vitalis."
             },
-            "Chronia": {
+            "Celestia": {
                 "focus": "Tiempo y Estaciones",
-                "desc": "En Chronia, Elias y Selene aprenden los ritmos del tiempo."
+                "desc": "En Celestia, Elias y Selene aprenden los ritmos del tiempo."
             },
-            "Lexiconia": {
+            "Luminosity": {
                 "focus": "Lenguaje Avanzado",
-                "desc": "Ronan y Nerissa se enfrentan a palabras difíciles y sonidos complejos en Lexiconia."
+                "desc": "Ronan y Nerissa se enfrentan a palabras difíciles y sonidos complejos en Luminosity."
             },
             "Geometria": {
                 "focus": "Formas y Razonamiento Espacial",
                 "desc": "Silas y Vesta exploran los paisajes geométricos de Geometria."
             },
-            "Natura": {
+            "Terrasol": {
                 "focus": "Ciencia y Naturaleza",
-                "desc": "Ezra y Athena se sumergen en Natura."
+                "desc": "Ezra y Athena se sumergen en Terrasol."
             }
         },
         "pedagogy": {
@@ -328,10 +328,10 @@
             "Harmonia": "Harmonia",
             "Numeria": "Numeria",
             "Vitalis": "Vitalis",
-            "Chronia": "Chronia",
-            "Lexiconia": "Lexiconia",
+            "Celestia": "Celestia",
+            "Luminosity": "Luminosity",
             "Geometria": "Geometria",
-            "Natura": "Natura"
+            "Terrasol": "Terrasol"
         },
         "data": {
             "Seriphia": {
@@ -475,23 +475,23 @@
         "no_lyrics": "No hay letra disponible para esta pista.",
         "tracks": {
             "1":  { "title": "Día Soleado (Intro)",           "domain": "Introducción",              "desc": "Una suave melodía de amanecer que da la bienvenida al mundo de SOE." },
-            "2":  { "title": "Días de la Semana",             "domain": "Tiempo y Chronia",          "desc": "Elias y Selene cantan los siete días, desarrollando habilidades de secuenciación temporal." },
+            "2":  { "title": "Días de la Semana",             "domain": "Tiempo y Celestia",          "desc": "Elias y Selene cantan los siete días, desarrollando habilidades de secuenciación temporal." },
             "3":  { "title": "Remix del Abecedario",          "domain": "Lenguaje y Harmonia",       "desc": "Kenji y Aiko dan vida al abecedario con un remix rítmico de fonética." },
-            "4":  { "title": "Interludio de Caballos",        "domain": "Ciencia y Natura",          "desc": "Un divertido viaje hablado por el reino animal, guiado por el humor." },
-            "5":  { "title": "Le Cheval",                     "domain": "Lenguaje y Lexiconia",      "desc": "Un tributo bilingüe francés-inglés al poder y la gracia del caballo." },
+            "4":  { "title": "Interludio de Caballos",        "domain": "Ciencia y Terrasol",          "desc": "Un divertido viaje hablado por el reino animal, guiado por el humor." },
+            "5":  { "title": "Le Cheval",                     "domain": "Lenguaje y Luminosity",      "desc": "Un tributo bilingüe francés-inglés al poder y la gracia del caballo." },
             "6":  { "title": "Vamos a Estirarnos",            "domain": "Físico y Vitalis",          "desc": "Felix y Amara lideran una rutina completa de respiración y estiramiento." },
             "7":  { "title": "Hora de Ejercicio",             "domain": "Físico y Vitalis",          "desc": "Una marcha motivadora con respuesta rítmica al llamado." },
             "8":  { "title": "Números",                       "domain": "Matemáticas y Numeria",     "desc": "Kwame y Octavia cuentan hasta 10 con palmadas — numeración práctica en acción." },
-            "9":  { "title": "Mi Cuerpo",                     "domain": "Ciencia y Natura",          "desc": "Athena y Ezra guían a los aprendices por la anatomía del cuerpo humano." },
+            "9":  { "title": "Mi Cuerpo",                     "domain": "Ciencia y Terrasol",          "desc": "Athena y Ezra guían a los aprendices por la anatomía del cuerpo humano." },
             "10": { "title": "Modales",                       "domain": "Socio-Emocional",           "desc": "Aiko enseña el lenguaje de la cortesía — por favor, gracias, con permiso." },
-            "11": { "title": "¿Sabes Qué Hora Es?",           "domain": "Tiempo y Chronia",          "desc": "Elias y Selene introducen la lectura del reloj y las rutinas diarias." },
-            "12": { "title": "Cambios",                       "domain": "Ciencia y Natura",          "desc": "Nerissa reflexiona sobre el cambiante clima y la constancia del amor." },
+            "11": { "title": "¿Sabes Qué Hora Es?",           "domain": "Tiempo y Celestia",          "desc": "Elias y Selene introducen la lectura del reloj y las rutinas diarias." },
+            "12": { "title": "Cambios",                       "domain": "Ciencia y Terrasol",          "desc": "Nerissa reflexiona sobre el cambiante clima y la constancia del amor." },
             "13": { "title": "Cien",                          "domain": "Matemáticas y Numeria",     "desc": "Octavia cuenta hasta 100 — un hito en la numeración temprana." },
-            "14": { "title": "El Océano",                     "domain": "Ciencia y Natura",          "desc": "Un viaje sonoro inmersivo explorando las maravillas del océano." },
-            "15": { "title": "Palabras Difíciles",            "domain": "Lenguaje y Lexiconia",      "desc": "Ronan y Nerissa abordan vocabulario multi-silábico con ejercicios rítmicos." },
+            "14": { "title": "El Océano",                     "domain": "Ciencia y Terrasol",          "desc": "Un viaje sonoro inmersivo explorando las maravillas del océano." },
+            "15": { "title": "Palabras Difíciles",            "domain": "Lenguaje y Luminosity",      "desc": "Ronan y Nerissa abordan vocabulario multi-silábico con ejercicios rítmicos." },
             "16": { "title": "Formas",                        "domain": "Matemáticas y Geometria",   "desc": "Silas y Vesta cantan sobre círculos, cuadrados, triángulos y más." },
-            "17": { "title": "Los Meses del Año",             "domain": "Tiempo y Chronia",          "desc": "Elias guía una recitación completa del calendario con melodía memorable." },
-            "18": { "title": "Lluvia",                        "domain": "Ciencia y Natura",          "desc": "Athena y Ezra exploran el ciclo del agua y la belleza de la lluvia." },
+            "17": { "title": "Los Meses del Año",             "domain": "Tiempo y Celestia",          "desc": "Elias guía una recitación completa del calendario con melodía memorable." },
+            "18": { "title": "Lluvia",                        "domain": "Ciencia y Terrasol",          "desc": "Athena y Ezra exploran el ciclo del agua y la belleza de la lluvia." },
             "19": { "title": "Después de la Tormenta (Outro)", "domain": "Introducción",            "desc": "Una pista de cierre tranquila — la promesa de que la luz siempre sigue a la tormenta." }
         }
     }

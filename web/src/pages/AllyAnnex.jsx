@@ -238,7 +238,7 @@ const AllyAnnex = () => {
               <Link to="/join" className="btn btn--primary">
                 Join the Quest →
               </Link>
-              <Link to="/media" className="btn btn--outline">
+              <Link to="/listen" className="btn btn--outline">
                 Explore Media Room
               </Link>
             </div>

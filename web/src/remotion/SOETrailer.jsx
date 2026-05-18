@@ -174,10 +174,10 @@ const DuoShowcase = () => {
         { name: 'Kenji & Aiko', land: 'Harmonia', src: '/assets/duos/1_Kenji Aiko.jpg' },
         { name: 'Silas & Vesta', land: 'Geometria', src: '/assets/duos/2_Silas Vesta.jpg' },
         { name: 'Felix & Amara', land: 'Vitalis', src: '/assets/duos/3_Felix Amara.jpg' },
-        { name: 'Ezra & Athena', land: 'Natura', src: '/assets/duos/4_Ezra Athena.jpg' },
+        { name: 'Ezra & Athena', land: 'Terrasol', src: '/assets/duos/4_Ezra Athena.jpg' },
         { name: 'Kwame & Octavia', land: 'Numeria', src: '/assets/duos/5_Kwame Octavia.jpg' },
-        { name: 'Elias & Selene', land: 'Chronia', src: '/assets/duos/6_Elias Selene.jpg' },
-        { name: 'Ronan & Nerissa', land: 'Lexiconia', src: '/assets/duos/7_Ronan Nerissa.jpg' },
+        { name: 'Elias & Selene', land: 'Celestia', src: '/assets/duos/6_Elias Selene.jpg' },
+        { name: 'Ronan & Nerissa', land: 'Luminosity', src: '/assets/duos/7_Ronan Nerissa.jpg' },
         { name: 'Seriphia', land: 'The Celestial', src: '/assets/characters/ETERNAL LEARNING MOTHER.png' }
     ];
 

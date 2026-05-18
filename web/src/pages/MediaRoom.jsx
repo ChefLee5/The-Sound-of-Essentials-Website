@@ -11,7 +11,7 @@ import JsonLd from '../components/JsonLd';
 import { mediaRoomSchema } from '../utils/schema';
 
 /* ── Book Pages (Coloring) ── */
-const bookPages = [
+export const bookPages = [
   'CB_ABCjum.png',
   'CB_Aquaria.png',
   'CB_AquariaDuo.png',
@@ -53,17 +53,17 @@ const bookPages = [
 ].map(f => assetPath(`/assets/coloring-book/${f}`));
 
 /* ── SOE Book Pages (real assets) ── */
-const soeBookPages = Array.from({ length: 14 }, (_, i) =>
+export const soeBookPages = Array.from({ length: 14 }, (_, i) =>
   assetPath(`/assets/pages/page-${String(i + 1).padStart(2, '0')}.webp`)
 );
 
 /* ── Behind the Quest Photo Gallery ── */
-const galleryShots = Array.from({ length: 11 }, (_, i) =>
+export const galleryShots = Array.from({ length: 11 }, (_, i) =>
   assetPath(`/assets/media/shot-${String(i + 1).padStart(2, '0')}.webp`)
 );
 
 /* ── Gallery Grid Component ── */
-const GalleryGrid = ({ shots }) => {
+export const GalleryGrid = ({ shots }) => {
   const [lightbox, setLightbox] = useState(null);
   const gridRef = useAnimeReveal({ selector: '.gallery-shot', staggerMs: 60, translateY: [20, 0], scale: [0.95, 1] });
 
@@ -112,7 +112,7 @@ const GalleryGrid = ({ shots }) => {
 };
 
 /* ── Album Art Carousel ── */
-const AlbumCarousel = ({ tracks, currentTrack, onSelect }) => {
+export const AlbumCarousel = ({ tracks, currentTrack, onSelect }) => {
   return (
     <div className="album-carousel">
       <div className="album-carousel__track">
@@ -176,7 +176,7 @@ const AlbumCarousel = ({ tracks, currentTrack, onSelect }) => {
 };
 
 /* ── Audio Player Component ── */
-const AudioPlayer = ({ tracks }) => {
+export const AudioPlayer = ({ tracks }) => {
   const { t } = useTranslation();
   const [currentTrack, setCurrentTrack] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -470,7 +470,7 @@ const MediaRoom = () => {
                 <h3 className="video-feature__title">Le Cheval — Track 5</h3>
                 <p className="video-feature__desc">
                   Ronan &amp; Nerissa guide learners through the world of horses with rich French vocabulary,
-                  movement, and cross-cultural storytelling from the land of Lexiconia.
+                  movement, and cross-cultural storytelling from the land of Luminosity.
                 </p>
               </div>
             </div>
@@ -655,15 +655,15 @@ const MediaRoom = () => {
               { src: 'pond-aiko-kenji.webp',       caption: 'Aiko & Kenji at the Pond',       land: 'Harmonia' },
               { src: 'honeycomb-kwame-selene.webp',  caption: 'Kwame & Selene\'s Honeycomb',     land: 'Numeria' },
               { src: 'creek-felix-elias.webp',       caption: 'Felix & Elias at the Creek',      land: 'Vitalis' },
-              { src: 'tent-ezra-athena.webp',        caption: 'Ezra & Athena\'s Camp',           land: 'Natura' },
+              { src: 'tent-ezra-athena.webp',        caption: 'Ezra & Athena\'s Camp',           land: 'Terrasol' },
               { src: 'blanket-amara-octavia.webp',   caption: 'Amara & Octavia Resting',         land: 'Vitalis' },
-              { src: 'cubes-ronan-nerissa.webp',     caption: 'Ronan & Nerissa Build',           land: 'Lexiconia' },
+              { src: 'cubes-ronan-nerissa.webp',     caption: 'Ronan & Nerissa Build',           land: 'Luminosity' },
               { src: 'dance-harmonia-vitalis.webp',  caption: 'Dance of Two Lands',              land: 'Harmonia' },
-              { src: 'tulip-river-path.webp',        caption: 'The Tulip River Path',            land: 'Natura' },
+              { src: 'tulip-river-path.webp',        caption: 'The Tulip River Path',            land: 'Terrasol' },
               { src: 'seriphia-valley.webp',         caption: 'Seriphia\'s Valley',               land: 'Celestia' },
               { src: 'aquaria-shore.webp',           caption: 'Shores of Aquaria',               land: 'Aquaria' },
-              { src: 'path-to-terrasol.webp',        caption: 'Path to TerraSol',                land: 'TerraSol' },
-              { src: 'sundial-weather.webp',         caption: 'Reading the Sundial',             land: 'Chronia' },
+              { src: 'path-to-terrasol.webp',        caption: 'Path to Terrasol',                land: 'Terrasol' },
+              { src: 'sundial-weather.webp',         caption: 'Reading the Sundial',             land: 'Celestia' },
             ].map((s) => (
               <div key={s.src} className="masonry-gallery__item">
                 <img

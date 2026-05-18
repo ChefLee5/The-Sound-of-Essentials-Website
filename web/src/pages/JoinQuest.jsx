@@ -295,7 +295,7 @@ const JoinQuest = () => {
                             {t('join.mission_subtitle')}
                         </p>
                         <div style={{ marginTop: '3rem' }}>
-                            <Link to="/media" className="page-bottom-link">
+                            <Link to="/listen" className="page-bottom-link">
                                 {t('join.explore_media')}
                             </Link>
                         </div>

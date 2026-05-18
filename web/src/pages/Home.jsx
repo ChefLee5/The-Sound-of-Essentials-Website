@@ -165,16 +165,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ═══ SCENE STRIP 1 — World Break ═══ */}
-      <div className="scene-strip" aria-hidden="true">
-        <img
-          src={`${import.meta.env.BASE_URL}assets/lands/celestia.webp`}
-          alt=""
-          className="scene-strip__img"
-          loading="lazy"
-        />
-        <div className="scene-strip__overlay" />
-      </div>
+
 
       {/* ═══ APPROACH ═══ */}
       <section className="section features-section glow-sage">
@@ -202,17 +193,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ═══ SCENE STRIP 2 — World Break ═══ */}
-      <div className="scene-strip" aria-hidden="true">
-        <img
-          src={`${import.meta.env.BASE_URL}assets/lands/aquaria.webp`}
-          alt=""
-          className="scene-strip__img"
-          style={{ animationDirection: 'reverse' }}
-          loading="lazy"
-        />
-        <div className="scene-strip__overlay" />
-      </div>
+
 
       {/* ═══ 5 DOMAINS ═══ */}
       <section className="section domains-section">
@@ -294,16 +275,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ═══ SCENE STRIP 3 — TerraSol ═══ */}
-      <div className="scene-strip" aria-hidden="true">
-        <img
-          src={`${import.meta.env.BASE_URL}assets/lands/terrasol.webp`}
-          alt=""
-          className="scene-strip__img"
-          loading="lazy"
-        />
-        <div className="scene-strip__overlay" />
-      </div>
+
 
       {/* ═══ FINAL CTA ═══ */}
       <section className="section cta-section text-center">
@@ -321,7 +293,7 @@ const Home = () => {
                 <span style={{ color: 'var(--color-green)', fontWeight: 600 }}>Be part of the solution.</span>
               </p>
               <div className="cta-actions">
-                <Link to="/media" className="btn btn-gold">{t('home.explore_media')}</Link>
+                <Link to="/listen" className="btn btn-gold">{t('home.explore_media')}</Link>
                 <Link to="/join"  className="btn btn-sage">{t('hero.join_button')}</Link>
               </div>
             </div>
@@ -333,6 +305,51 @@ const Home = () => {
         /* ══════════════════════════════════════════
            Home Page — Styles
         ══════════════════════════════════════════ */
+
+        /* ── Ken Burns keyframes ── */
+        @keyframes kenBurns {
+          0%   { transform: scale(1.0) translate(0, 0); }
+          25%  { transform: scale(1.08) translate(-1.5%, -1%); }
+          50%  { transform: scale(1.12) translate(-0.5%, -2%); }
+          75%  { transform: scale(1.06) translate(1%, -0.5%); }
+          100% { transform: scale(1.0) translate(0, 0); }
+        }
+
+        /* ── Full-page background with Ken Burns ── */
+        .home-page {
+          position: relative;
+          overflow: hidden;
+          color: var(--color-text-primary);
+        }
+
+        .home-page::before {
+          content: '';
+          position: fixed;
+          inset: -5%;
+          width: 110%;
+          height: 110%;
+          z-index: -1;
+          background:
+            url('${BASE}assets/scenes/golden-path-bg.jpg') center center / cover no-repeat;
+          animation: kenBurns 35s ease-in-out infinite;
+          will-change: transform;
+        }
+
+        .home-page::after {
+          content: '';
+          position: fixed;
+          inset: 0;
+          z-index: -1;
+          background: linear-gradient(
+            180deg,
+            rgba(245, 248, 240, 0.50) 0%,
+            rgba(240, 245, 235, 0.30) 25%,
+            rgba(255, 250, 240, 0.25) 50%,
+            rgba(250, 245, 230, 0.40) 75%,
+            rgba(245, 240, 225, 0.55) 100%
+          );
+          pointer-events: none;
+        }
 
         /* ── Hero layout ── */
         .hero {
@@ -407,15 +424,15 @@ const Home = () => {
           position: relative;
           z-index: 1;
           width: 100%;
-          height: 450px; /* Space for the 3D rotating cylinder */
+          height: 480px; /* Space for the 3D rotating cylinder + name labels */
           perspective: 1200px;
           display: flex;
           align-items: center;
           justify-content: center;
           overflow: hidden;
-          background: rgba(255,255,255,0.7);
-          backdrop-filter: blur(10px);
-          -webkit-backdrop-filter: blur(10px);
+          background: rgba(255,255,255,0.3);
+          backdrop-filter: blur(8px);
+          -webkit-backdrop-filter: blur(8px);
           margin-top: 2rem;
           mask-image: linear-gradient(
             to right,
@@ -435,7 +452,7 @@ const Home = () => {
 
         .hero__carousel-spinner {
           width: 160px;
-          height: 300px;
+          height: 340px;
           position: relative;
           transform-style: preserve-3d;
           transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
@@ -479,7 +496,7 @@ const Home = () => {
           flex-direction: column;
           align-items: center;
           gap: 0.35rem;
-          backface-visibility: hidden;
+          backface-visibility: visible;
           cursor: pointer;
         }
         .hero__char-note {
@@ -691,8 +708,8 @@ const Home = () => {
 
         /* ── Responsive ── */
         @media (max-width: 768px) {
-          .hero__carousel-scene { height: 320px; perspective: 800px; }
-          .hero__carousel-spinner { width: 120px; height: 220px; }
+          .hero__carousel-scene { height: 360px; perspective: 800px; }
+          .hero__carousel-spinner { width: 120px; height: 260px; }
           .hero__char { width: 120px; }
           .hero__char-img { width: 120px; height: 180px; }
           .hero__char-label { font-size: 0.68rem; padding: 0.15rem 0.5rem; }
@@ -713,8 +730,8 @@ const Home = () => {
         @media (max-width: 640px) {
           .hero__content  { text-align: center; }
           .hero__actions  { justify-content: center; }
-          .hero__carousel-scene { height: 260px; perspective: 600px; margin-top: 1rem; }
-          .hero__carousel-spinner { width: 90px; height: 180px; }
+          .hero__carousel-scene { height: 290px; perspective: 600px; margin-top: 1rem; }
+          .hero__carousel-spinner { width: 90px; height: 210px; }
           .hero__char { width: 90px; }
           .hero__char-img { width: 90px; height: 135px; }
           .hero__char-label { font-size: 0.6rem; }
