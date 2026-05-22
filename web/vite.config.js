@@ -11,7 +11,7 @@ function serveEbookPlugin() {
     configureServer(server) {
       server.middlewares.use((req, res, next) => {
         // Strip the base prefix if present
-        const base = '/The-Sound-of-Essentials-Eco-System'
+        const base = '/SOE-Picture-Dictionary'
         let urlPath = req.url || ''
         if (urlPath.startsWith(base)) {
           urlPath = urlPath.slice(base.length)
@@ -51,7 +51,7 @@ function serveEbookPlugin() {
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), serveEbookPlugin()],
-  base: '/SOE-Website/',
+  base: '/SOE-Picture-Dictionary/',
   server: {
     fs: {
       allow: ['..'],

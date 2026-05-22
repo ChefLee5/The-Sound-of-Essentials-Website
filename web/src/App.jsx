@@ -16,7 +16,7 @@ const Universe   = lazy(() => import('./pages/Universe'));
 // MediaRoom is now merged into Listen — /media redirects to /listen
 const Mission    = lazy(() => import('./pages/Mission'));
 const JoinQuest  = lazy(() => import('./pages/JoinQuest'));
-const Characters = lazy(() => import('./pages/Heroes'));
+const Heroes     = lazy(() => import('./pages/Heroes'));
 const Science    = lazy(() => import('./pages/Science'));
 const AllyAnnex  = lazy(() => import('./pages/AllyAnnex'));
 const DictionarySale = lazy(() => import('./pages/DictionarySale'));
@@ -58,7 +58,8 @@ const App = () => {
               <Route path="/mission"    element={<AnimatedPage><Mission /></AnimatedPage>} />
               <Route path="/listen"    element={<AnimatedPage><Listen /></AnimatedPage>} />
               <Route path="/join"       element={<AnimatedPage><JoinQuest /></AnimatedPage>} />
-              <Route path="/characters" element={<AnimatedPage><Characters /></AnimatedPage>} />
+              <Route path="/characters" element={<Navigate to="/heroes" replace />} />
+              <Route path="/heroes"     element={<AnimatedPage><Heroes /></AnimatedPage>} />
               <Route path="/science"    element={<AnimatedPage><Science /></AnimatedPage>} />
               <Route path="/allies"    element={<AnimatedPage><AllyAnnex /></AnimatedPage>} />
               <Route path="/dictionary" element={<AnimatedPage><DictionarySale /></AnimatedPage>} />

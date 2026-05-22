@@ -64,7 +64,7 @@ const Navbar = () => {
   const navLinks = [
     { to: '/',           label: t('navbar.home') },
     { to: '/universe',   label: t('navbar.universe') },
-    { to: '/characters', label: t('navbar.heroes') },
+    { to: '/heroes',     label: t('navbar.heroes') },
     { to: '/science',    label: t('navbar.science') },
     { to: '/mission',    label: t('navbar.mission') },
     { to: '/listen',    label: t('navbar.media') },

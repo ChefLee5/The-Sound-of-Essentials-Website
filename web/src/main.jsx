@@ -7,7 +7,7 @@ import './i18n/config'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter basename="/SOE-Website">
+    <BrowserRouter basename="/SOE-Picture-Dictionary">
       <App />
     </BrowserRouter>
   </StrictMode>,

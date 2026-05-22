@@ -10,7 +10,7 @@ import tracksData from '../data/tracks.json';
 import landsData  from '../data/lands.json';
 import productsData from '../data/products.json';
 
-const SITE_URL  = 'https://cheflee5.github.io/SOE-Website';
+const SITE_URL  = 'https://cheflee5.github.io/SOE-Picture-Dictionary';
 const SITE_NAME = 'The Sound of Essentials: Rhythm Quest';
 const ORG_LOGO  = `${SITE_URL}/assets/marketing/quest-collage.webp`;
 

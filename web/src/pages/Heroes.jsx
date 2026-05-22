@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import JsonLd from '../components/JsonLd';
 import { heroesSchema } from '../utils/schema';
+import { ShaderBackground } from '../components/ui/AnimatedShaderHero';
 
 /* ── Scene images for expanded character cards ── */
 const CHAR_SCENES = {
@@ -149,7 +150,15 @@ const CharacterCard = ({ char, index, isExpanded, onToggle }) => {
     );
 };
 
-/* ── Characters Page ── */
+/* ══════════════════════════════════════════════════════════
+   Characters Page
+   Text copy uses the design-system classes from index.css:
+   • .section-label  → solid pill badge (green→blue gradient)
+   • .section-title   → large bold orange heading
+   • .accent-text     → green Fredoka accent
+   • .divider-center  → blue/green gradient bar separator
+   • .section-subtitle → Dancing Script cursive in orange
+   ══════════════════════════════════════════════════════════ */
 const Characters = () => {
     const { t } = useTranslation();
     const [expandedId, setExpandedId] = useState(null);
@@ -160,21 +169,27 @@ const Characters = () => {
     const filtered = filter === 'All' ? characters : characters.filter(c => c.land === filter);
 
     return (
+        <ShaderBackground>
         <div className="characters-page">
             <JsonLd data={heroesSchema()} />
-            {/* ── Hero ── */}
-            <header className="char-hero" style={{ position: 'relative', overflow: 'hidden' }}>
-                <div className="scene-backdrop" aria-hidden="true">
-                    <img src={`${import.meta.env.BASE_URL}assets/marketing/quest-collage.webp`} alt="" className="scene-backdrop__img" />
-                    <div className="scene-backdrop__scrim" />
-                </div>
-                <div className="container text-center" style={{ position: 'relative', zIndex: 1 }}>
+
+            {/* ── Hero — uses design-system text pattern ── */}
+            <header className="char-hero">
+                <div className="container text-center">
                     <div className="animate-fade-up">
                         <div className="section-label">{t('heroes.hero_label')}</div>
-                        <h1>{t('heroes.hero_title_1')} <span className="text-gold">{t('heroes.hero_title_2')}</span></h1>
-                        <p className="section-subtitle" style={{ margin: '1rem auto' }}>
+                        <h1 className="section-title">
+                            {t('heroes.hero_title_1')}{' '}
+                            <span className="accent-text">{t('heroes.hero_title_2')}</span>
+                        </h1>
+                        <div className="divider divider-center" />
+                        <p className="section-subtitle">
                             {t('heroes.hero_subtitle')}
                         </p>
+                        <div className="char-hero__actions">
+                            <Link to="/join" className="btn btn-gold">{t('hero.join_button')}</Link>
+                            <Link to="/universe" className="btn btn-outline">{t('navbar.universe')} →</Link>
+                        </div>
                     </div>
                 </div>
             </header>
@@ -215,36 +230,44 @@ const Characters = () => {
                 </div>
             </section>
 
-            {/* ── CTA ── */}
+            {/* ── CTA — design-system text pattern ── */}
             <section className="section text-center">
                 <div className="container">
                     <RevealSection>
-                        <h2 className="section-title">{t('heroes.cta_title_1')} <span className="text-gold">{t('heroes.cta_title_2')}</span>?</h2>
-                        <p className="section-subtitle" style={{ margin: '1rem auto 2rem' }}>
+                        <div className="section-label">Join the Movement</div>
+                        <h2 className="section-title">
+                            {t('heroes.cta_title_1')}{' '}
+                            <span className="accent-text">{t('heroes.cta_title_2')}</span>?
+                        </h2>
+                        <div className="divider divider-center" />
+                        <p className="section-subtitle">
                             {t('heroes.cta_subtitle')}
                         </p>
-                        <div style={{ marginTop: '2rem' }}>
-                            <Link to="/listen" className="page-bottom-link">
-                                {t('home.explore_media')}
-                            </Link>
+                        <div className="char-hero__actions" style={{ marginTop: '2rem' }}>
+                            <Link to="/listen" className="btn btn-gold">{t('home.explore_media')}</Link>
+                            <Link to="/join" className="btn btn-sage">{t('hero.join_button')}</Link>
                         </div>
                     </RevealSection>
                 </div>
             </section>
 
             <style>{`
-                .characters-page .reveal-block {
-                    opacity: 0;
-                    transform: translateY(25px);
-                    transition: opacity 0.8s var(--ease-gentle), transform 0.8s var(--ease-gentle);
-                }
-                .characters-page .reveal-block.revealed {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
-
+                /* ── Hero section ── */
                 .char-hero {
                     padding: 10rem 0 4rem;
+                    text-align: center;
+                    min-height: 100vh;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                .char-hero__actions {
+                    display: flex;
+                    gap: 1rem;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    margin-top: 2.5rem;
                 }
 
                 /* ── Filters ── */
@@ -256,14 +279,16 @@ const Characters = () => {
                 }
 
                 .char-filter-btn {
-                    background: var(--color-bg-card);
-                    border: 2px solid var(--color-border);
-                    border-radius: 999px;
+                    background: rgba(255, 255, 255, 0.55);
+                    backdrop-filter: blur(8px);
+                    -webkit-backdrop-filter: blur(8px);
+                    border: 2px solid rgba(255, 255, 255, 0.6);
+                    border-radius: var(--radius-xl);
                     padding: 0.5rem 1.25rem;
                     font-family: var(--font-heading);
                     font-size: 0.85rem;
                     font-weight: 500;
-                    color: var(--color-text-secondary);
+                    color: var(--color-text-primary);
                     cursor: pointer;
                     transition: all 0.25s ease;
                 }
@@ -271,11 +296,12 @@ const Characters = () => {
                 .char-filter-btn:hover {
                     border-color: var(--color-green);
                     color: var(--color-green);
+                    background: rgba(255, 255, 255, 0.75);
                 }
 
                 .char-filter-btn--active {
-                    background: var(--color-green);
-                    border-color: var(--color-green);
+                    background: linear-gradient(135deg, var(--color-green), var(--color-blue));
+                    border-color: transparent;
                     color: #fff;
                 }
 
@@ -286,11 +312,15 @@ const Characters = () => {
                     gap: 2rem;
                 }
 
-                /* ── Card ── */
+                /* ── Card — glass over shader ── */
                 .char-card {
                     padding: 0;
                     cursor: pointer;
                     transition: transform 0.35s var(--ease-gentle), box-shadow 0.35s var(--ease-gentle);
+                    background: rgba(255, 255, 255, 0.75) !important;
+                    backdrop-filter: blur(12px);
+                    -webkit-backdrop-filter: blur(12px);
+                    border: 1px solid rgba(255, 255, 255, 0.6) !important;
                 }
 
                 .char-card:hover {
@@ -334,7 +364,6 @@ const Characters = () => {
                     z-index: 1;
                 }
 
-                /* ── Image Container ── */
                 .char-card__img-bg {
                     width: 100%;
                     min-height: 220px;
@@ -369,9 +398,6 @@ const Characters = () => {
                     to { background-position: -200% 0; }
                 }
 
-                /* ── Land Gradients (legacy, kept for expansion) ── */
-
-                /* ── Selfie Image Style ── */
                 .char-card__img-bg--selfie {
                     background: linear-gradient(135deg, #f0f4f8 0%, #e8ecf0 100%);
                 }
@@ -403,7 +429,7 @@ const Characters = () => {
                     font-weight: 600;
                     color: #fff;
                     padding: 0.3rem 0.8rem;
-                    border-radius: 999px;
+                    border-radius: var(--radius-xl);
                     text-transform: uppercase;
                     letter-spacing: 0.05em;
                     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
@@ -455,7 +481,7 @@ const Characters = () => {
                     font-weight: 600;
                     padding: 0.2rem 0.65rem;
                     border: 1.5px solid;
-                    border-radius: 999px;
+                    border-radius: var(--radius-xl);
                     text-transform: uppercase;
                     letter-spacing: 0.05em;
                     cursor: pointer;
@@ -464,11 +490,11 @@ const Characters = () => {
                 }
 
                 .char-card__trait:hover {
-                    background: var(--color-bg-card);
+                    background: rgba(255, 255, 255, 0.6);
                 }
 
                 .char-card__trait--active {
-                    background: var(--color-bg-card);
+                    background: rgba(255, 255, 255, 0.6);
                     box-shadow: 0 2px 12px rgba(0,0,0,0.08);
                 }
 
@@ -479,7 +505,9 @@ const Characters = () => {
                     left: 50%;
                     transform: translateX(-50%);
                     width: clamp(200px, 80vw, 240px);
-                    background: var(--color-bg-card, #fff);
+                    background: rgba(255, 255, 255, 0.95);
+                    backdrop-filter: blur(12px);
+                    -webkit-backdrop-filter: blur(12px);
                     border: 1.5px solid;
                     border-radius: 12px;
                     padding: 0.75rem 1rem;
@@ -490,7 +518,7 @@ const Characters = () => {
                     font-weight: 400;
                     animation: traitTipIn 0.25s ease both;
                     cursor: default;
-                    pointer-events: none; /* Prevents sticky hover issues on mobile */
+                    pointer-events: none;
                 }
 
                 @media (max-width: 480px) {
@@ -512,7 +540,7 @@ const Characters = () => {
                     left: 50%;
                     transform: translateX(-50%);
                     border: 6px solid transparent;
-                    border-top-color: var(--color-bg-card, #fff);
+                    border-top-color: rgba(255, 255, 255, 0.95);
                 }
 
                 .trait-tooltip strong {
@@ -554,6 +582,7 @@ const Characters = () => {
                 @media (max-width: 768px) {
                     .char-hero {
                         padding: 7rem 0 2.5rem;
+                        min-height: auto;
                     }
                     .char-card--featured {
                         grid-template-columns: 1fr;
@@ -600,9 +629,14 @@ const Characters = () => {
                     .char-card__info {
                         padding: 1rem;
                     }
+                    .char-hero__actions {
+                        flex-direction: column;
+                        align-items: center;
+                    }
                 }
             `}</style>
         </div>
+        </ShaderBackground>
     );
 };
 

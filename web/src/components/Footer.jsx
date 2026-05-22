@@ -41,7 +41,7 @@ const Footer = () => {
             <h4 className="footer__heading">{t('footer.explore')}</h4>
             <Link to="/" className="footer__link">{t('navbar.home')}</Link>
             <Link to="/universe" className="footer__link">{t('navbar.universe')}</Link>
-            <Link to="/characters" className="footer__link">{t('navbar.heroes')}</Link>
+            <Link to="/heroes" className="footer__link">{t('navbar.heroes')}</Link>
             <Link to="/science" className="footer__link">{t('footer.sci_sound')}</Link>
             <Link to="/mission" className="footer__link">{t('navbar.mission')}</Link>
             <Link to="/listen" className="footer__link">{t('navbar.media')}</Link>
