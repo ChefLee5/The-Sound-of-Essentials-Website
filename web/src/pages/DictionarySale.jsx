@@ -110,7 +110,7 @@ const DictionarySale = () => {
               Every Word Has a
               <span className="dict-hero__title-accent">World Behind It</span>
             </h1>
-            <p className="dict-hero__subtitle">
+            <p className="section-subtitle dict-hero__subtitle">
               The most immersive picture dictionary ever designed for young learners.
               3,400+ words. 125 illustrated scenes. 7 magical lands.
               Powered by music, guided by 15 hero characters.

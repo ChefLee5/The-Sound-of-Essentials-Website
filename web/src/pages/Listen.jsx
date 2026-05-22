@@ -144,7 +144,7 @@ const Listen = () => {
           <h1 className="listen-hero__title">
             Hear What <em>Learning</em> Sounds Like
           </h1>
-          <p className="listen-hero__subtitle">
+          <p className="section-subtitle listen-hero__subtitle">
             Designed for the developing brain — not the algorithm.
           </p>
           <div className="listen-cover">

@@ -65,12 +65,8 @@
 }
 
 .listen-hero__subtitle {
-  font-family: var(--font-cursive);
-  font-size: clamp(1.2rem, 3vw, 1.6rem);
-  color: var(--color-orange);
   margin: 0 auto 2rem;
   max-width: 480px;
-  line-height: 1.5;
   animation: fadeInUp 0.6s 0.2s var(--ease-gentle) both;
 }
 

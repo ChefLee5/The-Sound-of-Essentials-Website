@@ -82,7 +82,7 @@ const Home = () => {
                 {t('home.hero_title_1')}{' '}
                 <span className="hero__title-accent">{t('home.hero_title_2')}</span>
               </h1>
-              <p className="hero__subtitle">{t('home.hero_subtitle')}</p>
+              <p className="section-subtitle hero__subtitle">{t('home.hero_subtitle')}</p>
               <div className="hero__actions">
                 <Link to="/join"     className="btn btn-gold hero__btn-primary">{t('hero.join_button')}</Link>
                 <Link to="/universe" className="btn btn-outline">{t('navbar.universe')} →</Link>
@@ -402,11 +402,9 @@ const Home = () => {
         }
 
         .hero__subtitle {
-          font-size: 1.1rem;
-          color: var(--color-text-secondary);
-          margin-bottom: 2rem;
+          margin: 0 0 2rem 0;
+          text-align: left;
           max-width: 520px;
-          line-height: 1.8;
         }
 
         .hero__actions {
@@ -740,7 +738,7 @@ const Home = () => {
           .cta-card       { padding: 3rem 1.5rem; }
           .book-covers-duo img { max-width: 200px !important; }
           .hero__title { font-size: clamp(1.8rem, 6vw, 2.4rem); }
-          .hero__subtitle { font-size: 0.95rem; }
+          .hero__subtitle { margin: 0 auto 2rem auto; text-align: center; }
         }
 
         /* ── Book Feature Section ── */

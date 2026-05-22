@@ -95,10 +95,8 @@
 }
 
 .dict-hero__subtitle {
-  font-size: 1.15rem;
-  color: var(--color-text-dark-secondary);
-  line-height: 1.8;
-  margin-bottom: 2rem;
+  margin: 0 0 2rem 0;
+  text-align: left;
   max-width: 480px;
   animation: fadeInUp 0.8s var(--ease-gentle) 0.2s both;
 }
@@ -782,8 +780,8 @@
   }
 
   .dict-hero__subtitle {
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto 2rem auto;
+    text-align: center;
   }
 
   .dict-hero__actions {
