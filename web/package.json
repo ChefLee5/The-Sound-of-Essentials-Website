@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.2",
     "@octokit/rest": "^22.0.1",
     "@remotion/player": "4.0.427",
     "@splinetool/react-spline": "^4.1.0",
@@ -17,6 +18,7 @@
     "axios": "^1.13.5",
     "dotenv": "^17.3.1",
     "framer-motion": "^12.34.3",
+    "gsap": "^3.15.0",
     "i18next": "^25.8.13",
     "i18next-browser-languagedetector": "^8.2.1",
     "react": "^19.2.0",

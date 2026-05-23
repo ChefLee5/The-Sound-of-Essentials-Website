@@ -2,6 +2,8 @@ import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useAnimeReveal } from '../hooks/useAnimeReveal';
+import GooeyMarquee from '../components/GooeyMarquee';
+import StoryScroll, { FlowSection } from '../components/StoryScroll';
 
 /* ── Reveal Hook ── */
 const useReveal = () => {
@@ -158,6 +160,16 @@ const Mission = () => {
                 </div>
             </header>
 
+            {/* ── Brand Proof Marquee ── */}
+            <section className="mission-marquee-section" aria-label="Brand statement">
+                <GooeyMarquee
+                    text='They called music "non-essential." We called it The Sound of Essentials.'
+                    speed={20}
+                    color="var(--color-gold)"
+                    fontSize="clamp(2rem, 6vw, 4.5rem)"
+                />
+            </section>
+
             {/* ── The Manifesto ── */}
             <section className="section glow-plum">
                 <div className="container">
@@ -228,6 +240,211 @@ const Mission = () => {
             </section>
 
 
+            {/* ══════════════════════════════════════════════════
+                 STORY SCROLL — The SOE Brand Story
+                 Five immersive sections told through scroll
+                 ══════════════════════════════════════════════════ */}
+            <StoryScroll aria-label="The Sound of Essentials — Our Story">
+
+              {/* ── 01: THE ORIGIN ── */}
+              <FlowSection aria-label="The Origin" style={{ backgroundColor: '#FF6F00', color: '#fff' }}>
+                <p className="flow-section__label">01 — The Origin</p>
+                <hr className="flow-section__divider" style={{ borderColor: 'rgba(0,0,0,0.3)' }} />
+                <div>
+                  <h2 className="flow-section__headline">
+                    They<br />
+                    Called It<br />
+                    Non-<br />
+                    Essential
+                  </h2>
+                </div>
+                <hr className="flow-section__divider" style={{ borderColor: 'rgba(0,0,0,0.3)' }} />
+                <p className="flow-section__body">
+                  When the world shut down, they told our children that music was "non-essential."
+                  That art could wait. That movement wasn't a priority.
+                  A father looked at his own children and knew — they were wrong.
+                  So he built the answer from scratch.
+                </p>
+              </FlowSection>
+
+              {/* ── 02: THE EMERGENCY ── */}
+              <FlowSection aria-label="The Emergency" style={{ backgroundColor: '#1a1a2e', color: '#fff' }}>
+                <p className="flow-section__label">02 — The Emergency</p>
+                <hr className="flow-section__divider" style={{ borderColor: 'rgba(255,255,255,0.25)' }} />
+                <div>
+                  <h2 className="flow-section__headline">
+                    300<br />
+                    Million<br />
+                    Children
+                  </h2>
+                </div>
+                <hr className="flow-section__divider" style={{ borderColor: 'rgba(255,255,255,0.25)' }} />
+                <p className="flow-section__body">
+                  Right now, 300 million children cannot read at a basic level.
+                  44 million teachers are absent from the classrooms that need them most.
+                  Their brains are forming 1 million neural connections every second —
+                  and that biological window does not wait for policy reforms.
+                </p>
+                <hr className="flow-section__divider" style={{ borderColor: 'rgba(255,255,255,0.25)' }} />
+                <div className="flow-columns">
+                  <div className="flow-column">
+                    <p className="flow-column__title">300M</p>
+                    <p className="flow-column__text">
+                      Children worldwide who lack basic literacy. Behind every number, a closing window.
+                    </p>
+                  </div>
+                  <div className="flow-column">
+                    <p className="flow-column__title">44M</p>
+                    <p className="flow-column__text">
+                      The global teacher deficit. Classrooms without educators. Communities without guides.
+                    </p>
+                  </div>
+                  <div className="flow-column">
+                    <p className="flow-column__title">1,000 Days</p>
+                    <p className="flow-column__text">
+                      The critical window of brain development. Biology doesn't wait for funding cycles.
+                    </p>
+                  </div>
+                </div>
+              </FlowSection>
+
+              {/* ── 03: THE RESPONSE ── */}
+              <FlowSection aria-label="The Response" style={{ backgroundColor: '#4CAF50', color: '#fff' }}>
+                <p className="flow-section__label">03 — The Response</p>
+                <hr className="flow-section__divider" style={{ borderColor: 'rgba(0,0,0,0.25)' }} />
+                <div>
+                  <h2 className="flow-section__headline">
+                    Handcrafted.<br />
+                    Not<br />
+                    Generated.
+                  </h2>
+                </div>
+                <hr className="flow-section__divider" style={{ borderColor: 'rgba(0,0,0,0.25)' }} />
+                <p className="flow-section__body">
+                  The Sound of Essentials wasn't designed by an algorithm.
+                  It was built the old way — by hand, by heart, by a father
+                  who measured his children's needs and cut the curriculum to fit.
+                </p>
+                <hr className="flow-section__divider" style={{ borderColor: 'rgba(0,0,0,0.25)' }} />
+                <div className="flow-columns">
+                  <div className="flow-column">
+                    <p className="flow-column__title">19 Songs</p>
+                    <p className="flow-column__text">
+                      Each one teaching multiple developmental domains simultaneously —
+                      phonics, math, science, movement, geography.
+                    </p>
+                  </div>
+                  <div className="flow-column">
+                    <p className="flow-column__title">7 Lands</p>
+                    <p className="flow-column__text">
+                      Luminosity, Numeria, Harmonia, Animalia, Kinesthia, Celestia, Vitalis —
+                      a complete learning universe.
+                    </p>
+                  </div>
+                  <div className="flow-column">
+                    <p className="flow-column__title">3 Languages</p>
+                    <p className="flow-column__text">
+                      English, Spanish, French — because the quest belongs to every child on earth.
+                    </p>
+                  </div>
+                </div>
+                <hr className="flow-section__divider" style={{ borderColor: 'rgba(0,0,0,0.25)' }} />
+                <div className="flow-columns">
+                  <div className="flow-column">
+                    <p className="flow-column__title">15 Heroes</p>
+                    <p className="flow-column__text">
+                      Seriphia, Kwame, Aiko, and more — characters who look like every child, from every culture.
+                    </p>
+                  </div>
+                  <div className="flow-column">
+                    <p className="flow-column__title">3,400+ Words</p>
+                    <p className="flow-column__text">
+                      A picture dictionary hand-illustrated across 125 scenes. Not stock. Not AI. Hand-drawn.
+                    </p>
+                  </div>
+                  <div className="flow-column">
+                    <p className="flow-column__title">$19</p>
+                    <p className="flow-column__text">
+                      Pay what you like, starting at $9. Fine arts education shouldn't require a trust fund.
+                    </p>
+                  </div>
+                </div>
+              </FlowSection>
+
+              {/* ── 04: THE PEOPLE ── */}
+              <FlowSection aria-label="The People" style={{ backgroundColor: '#faf9f7', color: '#1a1a2e' }}>
+                <p className="flow-section__label">04 — The People</p>
+                <hr className="flow-section__divider" style={{ borderColor: 'rgba(0,0,0,0.15)' }} />
+                <div>
+                  <h2 className="flow-section__headline">
+                    Dreamers.<br />
+                    Curators.<br />
+                    Creators.
+                  </h2>
+                </div>
+                <hr className="flow-section__divider" style={{ borderColor: 'rgba(0,0,0,0.15)' }} />
+                <p className="flow-section__body">
+                  This isn't a product. It's a community.
+                  Parents imagining a different path. Matriarchs who curate what enters the home.
+                  Artists and educators who want to contribute something real.
+                </p>
+                <hr className="flow-section__divider" style={{ borderColor: 'rgba(0,0,0,0.15)' }} />
+                <div className="flow-columns">
+                  <div className="flow-column">
+                    <p className="flow-column__title">Dreamers</p>
+                    <p className="flow-column__text">
+                      Parents who imagine a different path for their children. They enter the quest —
+                      they listen, explore, believe.
+                    </p>
+                  </div>
+                  <div className="flow-column">
+                    <p className="flow-column__title">Curators</p>
+                    <p className="flow-column__text">
+                      Matriarchs who select and champion what enters the home.
+                      They choose by hand, not by algorithm.
+                    </p>
+                  </div>
+                  <div className="flow-column">
+                    <p className="flow-column__title">Creators</p>
+                    <p className="flow-column__text">
+                      Artists, educators, and musicians who join the Concord —
+                      contributing music, art, and translation.
+                    </p>
+                  </div>
+                </div>
+                <hr className="flow-section__divider" style={{ borderColor: 'rgba(0,0,0,0.15)' }} />
+                <p className="flow-section__body flow-section__body--right">
+                  Crafted by a father's heart and a mother's love.
+                  Designed for the developing brain — not the algorithm.
+                </p>
+              </FlowSection>
+
+              {/* ── 05: THE INVITATION ── */}
+              <FlowSection aria-label="The Invitation" style={{ backgroundColor: '#7B1FA2', color: '#fff' }}>
+                <p className="flow-section__label">05 — The Invitation</p>
+                <hr className="flow-section__divider" style={{ borderColor: 'rgba(255,255,255,0.3)' }} />
+                <div>
+                  <h2 className="flow-section__headline">
+                    Join<br />
+                    The<br />
+                    Quest
+                  </h2>
+                </div>
+                <hr className="flow-section__divider" style={{ borderColor: 'rgba(255,255,255,0.3)' }} />
+                <p className="flow-section__body">
+                  Tailor-made education for your child's developing brain.
+                  Not mass-produced. Not algorithmic.
+                  Measured, cut, and stitched with love.
+                </p>
+                <hr className="flow-section__divider" style={{ borderColor: 'rgba(255,255,255,0.3)' }} />
+                <p className="flow-section__body flow-section__body--right">
+                  Listen free. See if it fits.
+                  Your child will know in one song.
+                </p>
+              </FlowSection>
+
+            </StoryScroll>
+
 
             {/* ── Scene Strip: Into the World ── */}
             <div className="scene-strip" aria-hidden="true">
@@ -242,6 +459,38 @@ const Mission = () => {
 
             {/* ── Ambient Scene Gallery ── */}
             <MissionSceneGallery />
+
+            {/* ── Concord CTA Marquee ── */}
+            <section className="mission-marquee-section mission-marquee-section--concord" aria-label="Join the movement">
+                <GooeyMarquee
+                    text="Calling all dreamers, curators, creators — the quest needs you."
+                    speed={22}
+                    color="var(--color-sage)"
+                    fontSize="clamp(1.8rem, 5vw, 3.5rem)"
+                />
+            </section>
+
+            {/* ── Tailor-Made CTA ── */}
+            <section className="section">
+                <div className="container">
+                    <RevealSection className="text-center">
+                        <div className="manifesto-cta">
+                            <h3 style={{ marginBottom: '1rem' }}>
+                                Tailor-Made for <span className="accent-text">Your Child</span>
+                            </h3>
+                            <p className="section-subtitle" style={{ margin: '1rem auto 0' }}>
+                                Tailor-made education for your child's developing brain.
+                                Not mass-produced. Not algorithmic. Measured, cut, and stitched with love.
+                            </p>
+                            <div style={{ marginTop: '2rem' }}>
+                                <Link to="/media" className="btn btn-gold">
+                                    Explore the Quest →
+                                </Link>
+                            </div>
+                        </div>
+                    </RevealSection>
+                </div>
+            </section>
 
             <style>{`
         .mission-page .reveal-block {
@@ -441,6 +690,17 @@ const Mission = () => {
           color: var(--color-text-primary);
           border: 1px solid var(--color-border);
           border-radius: var(--radius-lg);
+        }
+
+        /* ── Marquee Sections ── */
+        .mission-marquee-section {
+          padding: 2rem 0;
+          position: relative;
+          overflow: hidden;
+        }
+
+        .mission-marquee-section--concord {
+          padding: 3rem 0;
         }
 
         @media (max-width: 968px) {
