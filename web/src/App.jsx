@@ -21,6 +21,7 @@ const Science    = lazy(() => import('./pages/Science'));
 const AllyAnnex  = lazy(() => import('./pages/AllyAnnex'));
 const DictionarySale = lazy(() => import('./pages/DictionarySale'));
 const Listen     = lazy(() => import('./pages/Listen'));
+const Player     = lazy(() => import('./pages/Player'));
 
 // ── Minimal loading fallback ─────────────────────────────────────
 const PageLoader = () => (
@@ -63,6 +64,7 @@ const App = () => {
               <Route path="/science"    element={<AnimatedPage><Science /></AnimatedPage>} />
               <Route path="/allies"    element={<AnimatedPage><AllyAnnex /></AnimatedPage>} />
               <Route path="/dictionary" element={<AnimatedPage><DictionarySale /></AnimatedPage>} />
+              <Route path="/player"     element={<AnimatedPage><Player /></AnimatedPage>} />
             </Routes>
           </AnimatePresence>
         </Suspense>
