@@ -1,5 +1,5 @@
 The Sound of Essentials Website
-Public website and production source repository for The Sound of Essentials and the SOE Rhythm Quest learning ecosystem.
+private website and production source repository for The Sound of Essentials and the SOE Rhythm Quest learning ecosystem.
 
 The project brings together the React/Vite marketing site, multilingual learning pages, music and product data, ebook source files, workbook source files, and the shared visual system used across the brand.
 
