@@ -1,40 +1,43 @@
-# SOE Picture Dictionary
+The Sound of Essentials Website
+Public website and production source repository for The Sound of Essentials and the SOE Rhythm Quest learning ecosystem.
 
-Main repository for The Sound of Essentials picture dictionary, companion website, ebook source, workbook source, and supporting design system.
+The project brings together the React/Vite marketing site, multilingual learning pages, music and product data, ebook source files, workbook source files, and the shared visual system used across the brand.
 
-## What This Is
+What This Includes
+React + Vite website for the public SOE experience
+Rhythm Quest pages for the universe, heroes, listening experience, products, science, mission, join flow, and allies
+Product data for the Picture Dictionary, Summer Stretch Workbook, Full Quest Bundle, and Rhythm Quest album
+Ebook source content, generated XHTML pages, posters, and production scripts
+Workbook source data, generated XHTML pages, images, and production scripts
+Brand and design-system references for The Sound of Essentials
+Learning World
+The SOE ecosystem is organized around seven learning lands and 15 hero characters, guided by Seriphia.
 
-SOE Picture Dictionary is the public-facing home for the Rhythm Quest learning ecosystem and the source of the picture dictionary product. It combines a React/Vite website with ebook and workbook production assets.
+Harmonia: language and manners
+Numeria: numbers and mathematics
+Vitalis: physical and motor skills
+Celestia: time and seasons
+Luminosity: advanced language
+Geometria: shapes and spatial reasoning
+Terrasol: science and nature
+The website currently supports English, Spanish, and French locale files in web/src/i18n/locales/.
 
-By the numbers:
-
-- 7 lands spanning language, math, science, travel, health, community, and time
-- 15 heroes, including Seriphia as the guide
-- 3 active website languages: English, Spanish, and French
-- Website routes for Home, Universe, Heroes, Listen, Dictionary, Science, Mission, Join, and Allies
-- Ebook and workbook source content kept alongside the web experience
-
-## Project Structure
-
-```txt
+Project Structure
 .
 |-- design-system/        # Brand and visual system references
-|-- ebook/                # Picture dictionary EPUB/PDF source and generated pages
+|-- ebook/                # Picture Dictionary EPUB/PDF source and generated pages
 |-- web/                  # React + Vite website
-`-- workbook/             # Workbook source and generated EPUB content
-```
+`-- workbook/             # Workbook source, generated pages, and production assets
+The active website lives in web/.
 
-The active website lives in `web/`.
-
-## Web App Structure
-
-```txt
+Web App Structure
 web/
-|-- public/               # Static web assets requested by URL
+|-- public/               # Static assets served directly by URL
+|-- scripts/              # Content and Coda utility scripts
 |-- src/
 |   |-- assets/           # Media imported directly by React
 |   |-- components/       # Reusable UI components
-|   |-- data/             # Static structured app data
+|   |-- data/             # Static product, hero, land, track, and gallery data
 |   |-- hooks/            # Custom React hooks
 |   |-- i18n/             # i18next config and locale JSON
 |   |-- pages/            # Route-level pages
@@ -43,28 +46,81 @@ web/
 |-- index.html
 |-- package.json
 `-- vite.config.js
-```
+Website Routes
+/
+/universe
+/heroes
+/listen
+/dictionary
+/science
+/mission
+/join
+/allies
+/player
+Legacy routes redirect as needed. For example, /characters redirects to /heroes, and /media redirects to /listen.
 
-## Asset Organization
+Getting Started
+git clone https://github.com/ChefLee5/The-Sound-of-Essentials-Website.git
+cd The-Sound-of-Essentials-Website/web
+npm install
+npm run dev
+Local development starts on Vite's default port:
 
-Use `web/public/` for files that the browser requests directly by URL. Prefer this shape for new public assets:
+http://localhost:5173/SOE-Picture-Dictionary/
+Web Commands
+Run these from web/.
 
-```txt
-web/public/
-|-- favicon/
-|-- images/
-|   |-- heroes/
-|   |-- lands/
-|   |-- backgrounds/
-|   |-- logos/
-|   `-- ui/
-|-- audio/
-|   |-- music/
-|   |-- sfx/
-|   `-- voiceover/
-|-- video/
-|   |-- trailers/
-|   `-- loops/
+npm run dev      # Start the local Vite dev server
+npm run build    # Create a production build
+npm run preview  # Preview the production build locally
+npm run lint     # Run ESLint
+Deployment Notes
+The web app is currently configured for GitHub Pages under the /SOE-Picture-Dictionary/ base path.
+
+Vite base: /SOE-Picture-Dictionary/
+React Router basename: /SOE-Picture-Dictionary
+Vite config: web/vite.config.js
+Router entry point: web/src/main.jsx
+If the production repository name or GitHub Pages path changes, update both web/vite.config.js and web/src/main.jsx.
+
+Asset Organization
+Use web/public/ for files requested directly by URL. Existing public assets live primarily under web/public/assets/.
+
+web/public/assets/
+|-- backgrounds/
+|-- book/
+|-- characters/
+|-- coloring-book/
+|-- dictionary/
+|-- duos/
+|-- heroes/
+|-- lands/
+|-- marketing/
+|-- media/
+|-- scenes/
+|-- shapes/
+`-- track-art/
+Use web/src/assets/ only for media imported directly by React.
+
+Content Sources
+Product metadata: web/src/data/products.json
+Hero metadata: web/src/data/heroes.json
+Land metadata: web/src/data/lands.json
+Track metadata: web/src/data/tracks.json
+Locale files: web/src/i18n/locales/
+Ebook source markdown: ebook/content/
+Workbook source JSON: workbook/workbook_content.json
+Production Assets
+The repository includes generated ebook and workbook assets alongside source data. Keep generated files in sync with their source files when changing the Picture Dictionary or workbook content.
+
+Useful script entry points include:
+
+ebook/generate_pages.py
+ebook/build_epub.py
+ebook/make_pdf.py
+workbook/generate_workbook.py
+Related Repository
+The-Sound-of-Essentials-Eco-System|   `-- loops/
 `-- fonts/
 ```
 
