@@ -7,6 +7,7 @@ import { useAnimeReveal } from '../hooks/useAnimeReveal';
 import heroesData from '../data/heroes.json';
 import JsonLd from '../components/JsonLd';
 import { homeSchema } from '../utils/schema';
+import DictionaryCarousel from '../components/DictionaryCarousel';
 
 const Home = () => {
   const { t } = useTranslation();
@@ -222,7 +223,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ═══ BOOK FEATURE — Cover Reveal ═══ */}
+      {/* ═══ BOOK FEATURE — Dictionary Carousel ═══ */}
       <section className="section book-feature-section text-center">
         <div className="container">
           <RevealSection className="text-center">
@@ -238,25 +239,8 @@ const Home = () => {
 
           <RevealSection delay={0.2}>
             <div className="book-feature-layout">
-              <div className="book-covers-duo">
-                <div className="cover-tilt">
-                  <div className="cover-tilt__inner">
-                    <img
-                      src={`${import.meta.env.BASE_URL}assets/book/SOE_RQ_COVER.png`}
-                      alt="SOE Rhythm Quest Picture Dictionary — front cover"
-                      style={{ maxWidth: '280px' }}
-                    />
-                  </div>
-                </div>
-                <div className="cover-tilt">
-                  <div className="cover-tilt__inner">
-                    <img
-                      src={`${import.meta.env.BASE_URL}assets/marketing/back-cover.webp`}
-                      alt="SOE Rhythm Quest Picture Dictionary — back cover"
-                      style={{ maxWidth: '280px' }}
-                    />
-                  </div>
-                </div>
+              <div className="dict-carousel-home">
+                <DictionaryCarousel />
               </div>
 
               <div className="book-feature-copy">
@@ -720,8 +704,7 @@ const Home = () => {
           .features-grid  { grid-template-columns: 1fr; }
           .domains-grid   { grid-template-columns: repeat(2, 1fr); }
           .book-feature-layout { flex-direction: column; align-items: center; text-align: center; gap: 2rem; }
-          .book-covers-duo { justify-content: center; }
-          .book-covers-duo .cover-tilt:last-child { transform: translateY(0); }
+          .dict-carousel-home { width: 100%; height: 380px; }
           .book-feature-list { align-items: center; }
         }
 
@@ -736,7 +719,7 @@ const Home = () => {
           .hero__char-note { font-size: 0.85rem; height: 1.2rem; }
           .domains-grid   { grid-template-columns: 1fr; }
           .cta-card       { padding: 3rem 1.5rem; }
-          .book-covers-duo img { max-width: 200px !important; }
+          .dict-carousel-home { height: 320px; }
           .hero__title { font-size: clamp(1.8rem, 6vw, 2.4rem); }
           .hero__subtitle { margin: 0 auto 2rem auto; text-align: center; }
         }
@@ -750,14 +733,11 @@ const Home = () => {
           text-align: left;
         }
 
-        .book-covers-duo {
-          display: flex;
-          gap: 1.5rem;
-          align-items: flex-start;
-        }
-
-        .book-covers-duo .cover-tilt:last-child {
-          transform: translateY(2rem);
+        .dict-carousel-home {
+          position: relative;
+          width: 560px;
+          height: 420px;
+          flex-shrink: 0;
         }
 
         .book-feature-copy {
