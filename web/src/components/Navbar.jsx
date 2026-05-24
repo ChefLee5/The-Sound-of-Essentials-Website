@@ -85,14 +85,18 @@ const Navbar = () => {
     >
       {/* ── Logo ── */}
       <Link to="/" className="navbar__logo" aria-label={t('app_title')}>
-        <img
-          src={assetPath('/assets/soe-icon.png')}
-          alt="SOE Logo"
-          className="navbar__logo-img"
-        />
+        <div className="navbar__logo-icon-wrap">
+          <img
+            src={assetPath('/assets/soe-icon.png')}
+            alt="SOE Logo"
+            className="navbar__logo-img"
+          />
+          <div className="navbar__logo-sparkle" aria-hidden="true">✨</div>
+        </div>
         <span className="navbar__logo-wordmark">
           <span className="navbar__logo-soe">The Sound of Essentials</span>
           <span className="navbar__logo-sub">Rhythm Quest</span>
+          <span className="navbar__logo-shine" aria-hidden="true" />
         </span>
       </Link>
 
@@ -234,6 +238,13 @@ const Navbar = () => {
           flex-shrink: 0;
         }
 
+        .navbar__logo-icon-wrap {
+          position: relative;
+          width: 40px;
+          height: 40px;
+          flex-shrink: 0;
+        }
+
         .navbar__logo-img {
           width: 40px;
           height: 40px;
@@ -247,11 +258,32 @@ const Navbar = () => {
           transform: rotate(-4deg) scale(1.08);
         }
 
+        /* ── Sparkle on icon ── */
+        .navbar__logo-sparkle {
+          position: absolute;
+          top: -4px;
+          right: -4px;
+          font-size: 0.7rem;
+          opacity: 0;
+          transform: scale(0.3);
+          pointer-events: none;
+          animation: logoSparkle 4s ease-in-out infinite;
+          animation-delay: 1s;
+        }
+
+        @keyframes logoSparkle {
+          0%, 100% { opacity: 0; transform: scale(0.3) rotate(0deg); }
+          15% { opacity: 1; transform: scale(1.2) rotate(15deg); }
+          30% { opacity: 0; transform: scale(0.3) rotate(30deg); }
+        }
+
         .navbar__logo-wordmark {
           display: flex;
           flex-direction: column;
           line-height: 1;
           gap: 1px;
+          position: relative;
+          overflow: hidden;
         }
 
         .navbar__logo-soe {
@@ -276,6 +308,34 @@ const Navbar = () => {
           -webkit-text-fill-color: transparent;
           background-clip: text;
           text-transform: uppercase;
+        }
+
+        /* ── Shimmer sweep across wordmark ── */
+        .navbar__logo-shine {
+          position: absolute;
+          inset: 0;
+          pointer-events: none;
+          background: linear-gradient(
+            120deg,
+            transparent 0%,
+            transparent 35%,
+            rgba(255, 255, 255, 0.8) 45%,
+            rgba(255, 255, 255, 0.95) 50%,
+            rgba(255, 255, 255, 0.8) 55%,
+            transparent 65%,
+            transparent 100%
+          );
+          background-size: 250% 100%;
+          background-position: 200% center;
+          animation: logoShine 4s ease-in-out infinite;
+          animation-delay: 2s;
+          mix-blend-mode: overlay;
+        }
+
+        @keyframes logoShine {
+          0%   { background-position: 200% center; }
+          20%  { background-position: -50% center; }
+          100% { background-position: -50% center; }
         }
 
         /* ── Center nav links ── */
