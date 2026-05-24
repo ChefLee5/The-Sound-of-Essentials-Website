@@ -228,6 +228,20 @@ export default function DictionaryCarousel() {
     return () => window.removeEventListener('keydown', handler);
   }, [scrollPrev, scrollNext, lightboxIndex]);
 
+  /* ── Auto-rotation: advances every 3s, pauses on hover / lightbox ── */
+  useEffect(() => {
+    if (lightboxIndex !== null) return;
+    const interval = setInterval(() => {
+      if (isHovering.current) return;
+      setScrollOffset((prev) => {
+        const next = prev >= maxOffset ? 0 : prev + 1;
+        scrollX.set(-next * 18);
+        return next;
+      });
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [lightboxIndex, maxOffset, scrollX]);
+
   const handleMouseMove = useCallback((e) => {
     if (lightboxIndex !== null) return;
     const rect = containerRef.current?.getBoundingClientRect();
