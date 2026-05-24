@@ -296,7 +296,7 @@ const Universe = () => {
           height: 110%;
           z-index: -1;
           background:
-            url('${import.meta.env.BASE_URL}assets/scenes/universe-tree-bg.jpg') center center / cover no-repeat;
+            url('${import.meta.env.BASE_URL}assets/scenes/universe-tree-bg.png') center center / cover no-repeat;
           animation: universeBg 35s ease-in-out infinite;
           will-change: transform;
         }
