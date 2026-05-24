@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { assetPath } from '../utils/assetPath';
 
 // All SOE target languages — codes with locale files are fully active;
 // others fall back to English until translated.
@@ -84,9 +85,13 @@ const Navbar = () => {
     >
       {/* ── Logo ── */}
       <Link to="/" className="navbar__logo" aria-label={t('app_title')}>
-        <span className="navbar__logo-mark">♪</span>
+        <img
+          src={assetPath('/assets/soe-icon.png')}
+          alt="SOE Logo"
+          className="navbar__logo-img"
+        />
         <span className="navbar__logo-wordmark">
-          <span className="navbar__logo-soe">SOE</span>
+          <span className="navbar__logo-soe">The Sound of Essentials</span>
           <span className="navbar__logo-sub">Rhythm Quest</span>
         </span>
       </Link>
@@ -229,22 +234,17 @@ const Navbar = () => {
           flex-shrink: 0;
         }
 
-        .navbar__logo-mark {
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          width: 36px;
-          height: 36px;
-          background: linear-gradient(135deg, var(--color-green), var(--color-blue));
-          color: #fff;
-          border-radius: 10px;
-          font-size: 1.1rem;
+        .navbar__logo-img {
+          width: 40px;
+          height: 40px;
+          object-fit: contain;
           flex-shrink: 0;
+          border-radius: 8px;
           transition: transform 0.25s ease;
         }
 
-        .navbar__logo:hover .navbar__logo-mark {
-          transform: rotate(-8deg) scale(1.08);
+        .navbar__logo:hover .navbar__logo-img {
+          transform: rotate(-4deg) scale(1.08);
         }
 
         .navbar__logo-wordmark {
@@ -257,9 +257,12 @@ const Navbar = () => {
         .navbar__logo-soe {
           font-family: var(--font-display);
           font-weight: 800;
-          font-size: 0.95rem;
-          letter-spacing: 0.08em;
-          color: #0d0d1a;
+          font-size: 0.82rem;
+          letter-spacing: 0.04em;
+          background: linear-gradient(90deg, var(--color-orange), var(--color-green), var(--color-blue), var(--color-purple));
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
           text-transform: uppercase;
         }
 
@@ -268,7 +271,10 @@ const Navbar = () => {
           font-weight: 500;
           font-size: 0.65rem;
           letter-spacing: 0.04em;
-          color: #555;
+          background: linear-gradient(90deg, var(--color-green), var(--color-blue));
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
           text-transform: uppercase;
         }
 
@@ -290,7 +296,7 @@ const Navbar = () => {
           font-family: var(--font-display);
           font-weight: 600;
           font-size: 0.88rem;
-          color: #1a1a2e;
+          color: var(--color-orange);
           padding: 0.45rem 0.7rem;
           border-radius: 8px;
           text-decoration: none;
@@ -301,12 +307,12 @@ const Navbar = () => {
         }
 
         .navbar__link:hover {
-          color: #000;
-          background: rgba(0,0,0,0.05);
+          color: var(--color-green);
+          background: var(--color-green-soft);
         }
 
         .navbar__link--active {
-          color: #000;
+          color: var(--color-blue);
           font-weight: 700;
         }
 
