@@ -263,6 +263,50 @@ const Universe = () => {
 
 
       <style>{`
+        /* ── Page background — matches Home golden-path ── */
+        .universe-page {
+          position: relative;
+          overflow: hidden;
+          color: var(--color-text-primary);
+        }
+
+        .universe-page::before {
+          content: '';
+          position: fixed;
+          inset: -5%;
+          width: 110%;
+          height: 110%;
+          z-index: -1;
+          background:
+            url('${import.meta.env.BASE_URL}assets/scenes/golden-path-bg.jpg') center center / cover no-repeat;
+          animation: kenBurnsUni 40s ease-in-out infinite;
+          will-change: transform;
+        }
+
+        .universe-page::after {
+          content: '';
+          position: fixed;
+          inset: 0;
+          z-index: -1;
+          background: linear-gradient(
+            180deg,
+            rgba(245, 248, 240, 0.50) 0%,
+            rgba(240, 245, 235, 0.30) 25%,
+            rgba(255, 250, 240, 0.25) 50%,
+            rgba(250, 245, 230, 0.40) 75%,
+            rgba(245, 240, 225, 0.55) 100%
+          );
+          pointer-events: none;
+        }
+
+        @keyframes kenBurnsUni {
+          0%   { transform: scale(1.0) translate(0, 0); }
+          25%  { transform: scale(1.06) translate(-1%, -0.5%); }
+          50%  { transform: scale(1.10) translate(-0.5%, -1.5%); }
+          75%  { transform: scale(1.04) translate(0.5%, -0.3%); }
+          100% { transform: scale(1.0) translate(0, 0); }
+        }
+
         .universe-page .reveal-block {
           opacity: 0;
           transform: translateY(25px);
