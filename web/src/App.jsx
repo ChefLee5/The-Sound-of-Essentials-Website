@@ -6,6 +6,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import SplashScreen from './components/SplashScreen';
+import CubeLoader from './components/CubeLoader';
 import CanvasBackground from './components/SplineBackground';
 
 // ── Route-level code splitting ──────────────────────────────────
@@ -23,21 +24,6 @@ const DictionarySale = lazy(() => import('./pages/DictionarySale'));
 const Listen     = lazy(() => import('./pages/Listen'));
 const Player     = lazy(() => import('./pages/Player'));
 
-// ── Minimal loading fallback ─────────────────────────────────────
-const PageLoader = () => (
-  <div style={{
-    minHeight: '100vh',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    opacity: 0.4,
-    fontSize: '2rem',
-    animation: 'softPulse 1.5s ease-in-out infinite',
-  }}>
-    ♪
-  </div>
-);
-
 const App = () => {
   const [showSplash, setShowSplash] = useState(true);
   const handleSplashFinished = useCallback(() => setShowSplash(false), []);
@@ -50,7 +36,7 @@ const App = () => {
       <ScrollToTop />
       <Navbar />
       <main>
-        <Suspense fallback={<PageLoader />}>
+        <Suspense fallback={<CubeLoader compact />}>
           <AnimatePresence mode="wait">
             <Routes location={location} key={location.pathname}>
               <Route path="/"           element={<AnimatedPage><Home /></AnimatedPage>} />

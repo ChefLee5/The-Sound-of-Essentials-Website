@@ -118,8 +118,8 @@ const Player = () => {
           inset: 0;
           z-index: 1;
           background:
-            radial-gradient(ellipse at center, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.7) 100%),
-            linear-gradient(to top, rgba(10,6,4,0.85) 0%, rgba(10,6,4,0.3) 40%, rgba(10,6,4,0.15) 70%, rgba(10,6,4,0.5) 100%);
+            radial-gradient(ellipse at center, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.4) 100%),
+            linear-gradient(to top, rgba(10,6,4,0.55) 0%, rgba(10,6,4,0.15) 40%, rgba(10,6,4,0.05) 70%, rgba(10,6,4,0.25) 100%);
           pointer-events: none;
         }
 

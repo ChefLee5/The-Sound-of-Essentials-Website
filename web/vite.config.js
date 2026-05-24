@@ -10,12 +10,7 @@ function serveEbookPlugin() {
     name: 'serve-ebook',
     configureServer(server) {
       server.middlewares.use((req, res, next) => {
-        // Strip the base prefix if present
-        const base = '/SOE-Picture-Dictionary'
         let urlPath = req.url || ''
-        if (urlPath.startsWith(base)) {
-          urlPath = urlPath.slice(base.length)
-        }
         if (!urlPath.startsWith('/ebook/')) return next()
 
         const relPath = urlPath.replace('/ebook/', '')
@@ -51,7 +46,7 @@ function serveEbookPlugin() {
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), serveEbookPlugin()],
-  base: '/SOE-Picture-Dictionary/',
+  base: '/',
   server: {
     fs: {
       allow: ['..'],

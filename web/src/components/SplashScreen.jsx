@@ -54,11 +54,38 @@ const SplashScreen = ({ onFinished }) => {
 
       {/* Main content */}
       <div className="splash-screen__content">
-        <div className="splash-screen__icon">
-          <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="26" cy="26" r="26" fill="rgba(255,255,255,0.2)" />
-            <text x="26" y="36" textAnchor="middle" fontSize="28" fill="white">♪</text>
-          </svg>
+
+        {/* ── 3D Spinning Cube (replaces static SVG icon) ── */}
+        <div className="splash-cube-wrapper">
+          <div className="splash-cube-scene">
+            <div className="splash-cube">
+              {/* Internal Core */}
+              <div className="splash-cube__core" />
+              {/* Front / Back — green */}
+              <div className="splash-side splash-side--front">
+                <div className="splash-face splash-face--green" />
+              </div>
+              <div className="splash-side splash-side--back">
+                <div className="splash-face splash-face--green" />
+              </div>
+              {/* Right / Left — purple */}
+              <div className="splash-side splash-side--right">
+                <div className="splash-face splash-face--purple" />
+              </div>
+              <div className="splash-side splash-side--left">
+                <div className="splash-face splash-face--purple" />
+              </div>
+              {/* Top / Bottom — orange */}
+              <div className="splash-side splash-side--top">
+                <div className="splash-face splash-face--orange" />
+              </div>
+              <div className="splash-side splash-side--bottom">
+                <div className="splash-face splash-face--orange" />
+              </div>
+            </div>
+            {/* Floor Shadow */}
+            <div className="splash-cube__shadow" />
+          </div>
         </div>
 
         <h1 className="splash-screen__title">
@@ -228,16 +255,9 @@ const SplashScreen = ({ onFinished }) => {
           text-align: center;
         }
 
-        .splash-screen__icon {
-          width: 96px;
-          height: 96px;
-          border-radius: 26px;
-          background: linear-gradient(135deg, var(--color-green), var(--color-blue));
-          display: flex;
-          align-items: center;
-          justify-content: center;
+        /* ── 3D Cube ── */
+        .splash-cube-wrapper {
           margin: 0 auto 2rem;
-          box-shadow: 0 8px 32px rgba(76,175,80,0.3), 0 2px 8px rgba(0,0,0,0.1);
           animation: splash-icon-enter 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) both;
         }
 
@@ -246,6 +266,117 @@ const SplashScreen = ({ onFinished }) => {
           to   { transform: scale(1) rotate(0deg); opacity: 1; }
         }
 
+        .splash-cube-scene {
+          position: relative;
+          width: 80px;
+          height: 80px;
+          margin: 0 auto;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transform-style: preserve-3d;
+          perspective: 1200px;
+        }
+
+        .splash-cube {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          transform-style: preserve-3d;
+          animation: splashCubeSpin 8s linear infinite;
+        }
+
+        .splash-cube__core {
+          position: absolute;
+          inset: 0;
+          margin: auto;
+          width: 24px;
+          height: 24px;
+          background: var(--color-orange, #FF6F00);
+          border-radius: 50%;
+          filter: blur(10px);
+          box-shadow:
+            0 0 25px rgba(255, 111, 0, 0.6),
+            0 0 50px rgba(255, 111, 0, 0.3);
+          animation: splashCorePulse 2s ease-in-out infinite;
+        }
+
+        .splash-side {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transform-style: preserve-3d;
+        }
+
+        .splash-side--front  { transform: rotateY(0deg); }
+        .splash-side--back   { transform: rotateY(180deg); }
+        .splash-side--right  { transform: rotateY(90deg); }
+        .splash-side--left   { transform: rotateY(-90deg); }
+        .splash-side--top    { transform: rotateX(90deg); }
+        .splash-side--bottom { transform: rotateX(-90deg); }
+
+        .splash-face {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          animation: splashCubeBreathe 3s ease-in-out infinite;
+          backdrop-filter: blur(2px);
+          border-radius: 3px;
+        }
+
+        .splash-face--green {
+          background: rgba(76, 175, 80, 0.10);
+          border: 2px solid var(--color-green, #4CAF50);
+          box-shadow: 0 0 12px rgba(76, 175, 80, 0.35);
+        }
+
+        .splash-face--purple {
+          background: rgba(123, 31, 162, 0.10);
+          border: 2px solid var(--color-purple, #7B1FA2);
+          box-shadow: 0 0 12px rgba(123, 31, 162, 0.35);
+        }
+
+        .splash-face--orange {
+          background: rgba(255, 111, 0, 0.10);
+          border: 2px solid var(--color-orange, #FF6F00);
+          box-shadow: 0 0 12px rgba(255, 111, 0, 0.35);
+        }
+
+        .splash-cube__shadow {
+          position: absolute;
+          bottom: -60px;
+          width: 80px;
+          height: 24px;
+          background: rgba(0, 0, 0, 0.12);
+          filter: blur(16px);
+          border-radius: 100%;
+          animation: splashShadowBreathe 3s ease-in-out infinite;
+        }
+
+        @keyframes splashCubeSpin {
+          0%   { transform: rotateX(0deg) rotateY(0deg); }
+          100% { transform: rotateX(360deg) rotateY(360deg); }
+        }
+
+        @keyframes splashCubeBreathe {
+          0%, 100% { transform: translateZ(40px); opacity: 0.8; }
+          50%      { transform: translateZ(65px); opacity: 0.4; border-color: rgba(255, 255, 255, 0.6); }
+        }
+
+        @keyframes splashCorePulse {
+          0%, 100% { transform: scale(0.8); opacity: 0.5; }
+          50%      { transform: scale(1.2); opacity: 1; }
+        }
+
+        @keyframes splashShadowBreathe {
+          0%, 100% { transform: scale(1);   opacity: 0.25; }
+          50%      { transform: scale(1.4); opacity: 0.1; }
+        }
+
+        /* ── Title / Subtitle / Tagline ── */
         .splash-screen__title { margin: 0; line-height: 1.1; }
 
         .splash-screen__title-line1 {
@@ -265,7 +396,6 @@ const SplashScreen = ({ onFinished }) => {
           font-family: 'Fredoka', sans-serif;
           font-size: 3.8rem;
           font-weight: 700;
-          /* Gradient text on bright background */
           background: linear-gradient(135deg, var(--color-green), var(--color-blue));
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
@@ -361,7 +491,9 @@ const SplashScreen = ({ onFinished }) => {
         @media (max-width: 600px) {
           .splash-screen__title-line2 { font-size: 2.6rem; }
           .splash-screen__subtitle    { font-size: 1.2rem; }
-          .splash-screen__icon        { width: 76px; height: 76px; border-radius: 20px; }
+          .splash-cube-scene          { width: 60px; height: 60px; }
+          .splash-cube__core          { width: 18px; height: 18px; }
+          .splash-cube__shadow        { width: 60px; bottom: -48px; }
           .splash-screen__ring--3     { display: none; }
           .splash-orb--3              { display: none; }
         }
