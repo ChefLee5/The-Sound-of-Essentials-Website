@@ -167,9 +167,9 @@ const StoryScroll = ({
         }
 
         .flow-section__headline {
-          font-family: var(--font-display);
+          font-family: var(--font-sugar);
           font-size: clamp(3rem, 10vw, 10rem);
-          font-weight: 700;
+          font-weight: 400;
           line-height: 0.88;
           text-transform: uppercase;
           letter-spacing: -0.03em;
