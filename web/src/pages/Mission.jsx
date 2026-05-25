@@ -198,46 +198,6 @@ const Mission = () => {
                 </div>
             </section>
 
-            {/* ── The Biological Window ── */}
-            <section className="section glow-sage">
-                <div className="container">
-                    <RevealSection>
-                        <div className="bio-window">
-                            <div className="bio-window__content">
-                                <div className="section-label">The Biological Imperative</div>
-                                <h2>
-                                    <span className="text-gold">1 million</span> neural connections.{' '}
-                                    <span className="text-sage">Every second.</span>
-                                </h2>
-                                <p style={{ maxWidth: '600px', margin: '1.5rem 0' }}>
-                                    In the first 1,000 days of life, a child's brain forms over one million
-                                    new neural connections every single second. This is the most explosive
-                                    period of cognitive development a human being will ever experience.
-                                </p>
-                                <p style={{ maxWidth: '600px' }}>
-                                    This window does not wait for policy reforms. It does not wait for
-                                    funding cycles. It does not wait for teacher training programs to
-                                    graduate their next cohort. Biology operates on its own timeline—and
-                                    right now, we are losing the race.
-                                </p>
-                            </div>
-                            <div className="bio-window__visual">
-                                <div className="neural-viz" aria-hidden="true">
-                                    <img
-                                        src={`${import.meta.env.BASE_URL}assets/marketing/busy-brain.webp`}
-                                        alt="Busy brain illustration"
-                                        className="neural-brain-img"
-                                    />
-                                    <div className="neural-overlay">
-                                        <span className="neural-number">1M</span>
-                                        <span className="neural-label">connections / second</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </RevealSection>
-                </div>
-            </section>
 
 
             {/* ══════════════════════════════════════════════════
@@ -285,6 +245,37 @@ const Mission = () => {
                   Their brains are forming 1 million neural connections every second —
                   and that biological window does not wait for policy reforms.
                 </p>
+                <hr className="flow-section__divider" style={{ borderColor: 'rgba(255,255,255,0.25)' }} />
+
+                {/* ── Biological Imperative — merged ── */}
+                <div className="flow-bio-block">
+                  <div className="flow-bio-block__visual">
+                    <div className="neural-viz" aria-hidden="true">
+                      <img
+                        src={`${import.meta.env.BASE_URL}assets/marketing/busy-brain.webp`}
+                        alt="Busy brain illustration"
+                        className="neural-brain-img"
+                      />
+                      <div className="neural-overlay">
+                        <span className="neural-number">1M</span>
+                        <span className="neural-label">connections / second</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flow-bio-block__text">
+                    <p className="flow-bio-block__title">The Biological Imperative</p>
+                    <p className="flow-bio-block__body">
+                      In the first 1,000 days of life, a child's brain forms over one million
+                      new neural connections every single second — the most explosive period of
+                      cognitive development a human will ever experience.
+                    </p>
+                    <p className="flow-bio-block__body" style={{ marginTop: '0.75rem', opacity: 0.8 }}>
+                      This window does not wait for policy reforms or funding cycles.
+                      Biology operates on its own timeline — and right now, we are losing the race.
+                    </p>
+                  </div>
+                </div>
+
                 <hr className="flow-section__divider" style={{ borderColor: 'rgba(255,255,255,0.25)' }} />
                 <div className="flow-columns">
                   <div className="flow-column">
@@ -648,6 +639,57 @@ const Mission = () => {
           position: relative;
           z-index: 1;
           text-shadow: 0 1px 6px rgba(0,0,0,0.3);
+        }
+
+        /* ── Biological Imperative block inside Emergency FlowSection ── */
+        .flow-bio-block {
+          display: flex;
+          align-items: center;
+          gap: 2rem;
+          padding: 1.5rem 0;
+        }
+
+        .flow-bio-block__visual {
+          flex-shrink: 0;
+        }
+
+        .flow-bio-block__visual .neural-viz {
+          width: 180px;
+          height: 180px;
+        }
+
+        .flow-bio-block__visual .neural-number {
+          font-size: 1.8rem;
+        }
+
+        .flow-bio-block__title {
+          font-family: var(--font-heading);
+          font-size: 0.7rem;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0.12em;
+          color: var(--color-gold);
+          margin-bottom: 0.5rem;
+        }
+
+        .flow-bio-block__body {
+          font-size: 0.95rem;
+          line-height: 1.7;
+          color: rgba(255, 255, 255, 0.88);
+        }
+
+        @media (max-width: 600px) {
+          .flow-bio-block {
+            flex-direction: column;
+            text-align: center;
+          }
+          .flow-bio-block__visual .neural-viz {
+            width: 140px;
+            height: 140px;
+          }
+          .flow-bio-block__visual .neural-number {
+            font-size: 1.4rem;
+          }
         }
 
         /* ── Solution Grid ── */
