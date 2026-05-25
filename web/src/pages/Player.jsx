@@ -8,6 +8,7 @@ import tracksData from '../data/tracks.json';
 const Player = () => {
   const { t } = useTranslation();
   const [activeTrack, setActiveTrack] = useState(0);
+  const [selectedTrack, setSelectedTrack] = useState(null);
 
   useEffect(() => {
     document.title = 'Now Playing — SOE Rhythm Quest';
@@ -25,7 +26,14 @@ const Player = () => {
     lyrics: track.lyrics || null,
   }));
 
+  // When the player changes tracks (next/prev/autoplay), sync the stack
+  const handleTrackChange = useCallback((index) => {
+    setActiveTrack(index);
+  }, []);
+
+  // When you click a track in the stack, tell the player to jump there
   const handleStackSelect = useCallback((index) => {
+    setSelectedTrack(index);
     setActiveTrack(index);
   }, []);
 
@@ -53,7 +61,11 @@ const Player = () => {
         <div className="player-page__layout">
           {/* Left: Vinyl Player */}
           <div className="player-page__player-col">
-            <MusicPlayerWidget tracks={tracks} />
+            <MusicPlayerWidget
+              tracks={tracks}
+              onTrackChange={handleTrackChange}
+              selectedTrack={selectedTrack}
+            />
           </div>
 
           {/* Right: Visual Track Browser */}

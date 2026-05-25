@@ -193,31 +193,33 @@ function useAudioPlayer(tracks) {
     else audio.pause();
   }, []);
 
-  const next = useCallback(() => {
+  const next = useCallback((forceAutoplay) => {
     const audio = audioRef.current;
     if (!audio) return;
+    const shouldPlay = forceAutoplay || !audio.paused;
     const pos = state.order.indexOf(state.currentIndex);
     const np = pos + 1;
     if (np >= state.order.length) {
-      if (state.loopMode === 'all') loadTrack(state.order[0], !audio.paused, 'next');
+      if (state.loopMode === 'all') loadTrack(state.order[0], shouldPlay, 'next');
       else { audio.pause(); audio.currentTime = 0; }
       return;
     }
-    loadTrack(state.order[np], !audio.paused, 'next');
+    loadTrack(state.order[np], shouldPlay, 'next');
   }, [state.order, state.currentIndex, state.loopMode, loadTrack]);
 
-  const prev = useCallback(() => {
+  const prev = useCallback((forceAutoplay) => {
     const audio = audioRef.current;
     if (!audio) return;
+    const shouldPlay = forceAutoplay || !audio.paused;
     if (audio.currentTime > 3) { audio.currentTime = 0; return; }
     const pos = state.order.indexOf(state.currentIndex);
     const pp = pos - 1;
     if (pp < 0) {
-      if (state.loopMode === 'all') loadTrack(state.order[state.order.length - 1], !audio.paused, 'prev');
+      if (state.loopMode === 'all') loadTrack(state.order[state.order.length - 1], shouldPlay, 'prev');
       else audio.currentTime = 0;
       return;
     }
-    loadTrack(state.order[pp], !audio.paused, 'prev');
+    loadTrack(state.order[pp], shouldPlay, 'prev');
   }, [state.order, state.currentIndex, state.loopMode, loadTrack]);
 
   const seek = useCallback((pct) => {
@@ -241,7 +243,7 @@ function useAudioPlayer(tracks) {
     const onTimeUpdate = () => { setCurrentTime(audio.currentTime); if (audio.duration) setDuration(audio.duration); };
     const onEnded = () => {
       if (state.loopMode === 'one') { audio.currentTime = 0; audio.play().catch(() => {}); }
-      else next();
+      else next(true);
     };
     audio.addEventListener('play', onPlay);
     audio.addEventListener('pause', onPause);
@@ -267,7 +269,7 @@ function useAudioPlayer(tracks) {
   return {
     audioRef, state, currentTime, duration,
     currentTrack: tracks[state.currentIndex],
-    toggle, next, prev, seek, toggleShuffle, cycleLoop, getFrequencyData,
+    toggle, next, prev, seek, toggleShuffle, cycleLoop, getFrequencyData, loadTrack,
   };
 }
 
@@ -534,7 +536,7 @@ function LyricsPanel({ lyrics, show }) {
 }
 
 /* ----------------------------------------------------- MusicPlayerWidget */
-export function MusicPlayerWidget({ tracks, crossOrigin }) {
+export function MusicPlayerWidget({ tracks, crossOrigin, onTrackChange, selectedTrack }) {
   const player = useAudioPlayer(tracks);
   const [isZoomed, setIsZoomed] = useState(false);
   const [showLyrics, setShowLyrics] = useState(false);
@@ -551,6 +553,21 @@ export function MusicPlayerWidget({ tracks, crossOrigin }) {
     const t = setTimeout(() => { setLayers(prev => prev.filter(l => l.id === id)); }, 760);
     return () => clearTimeout(t);
   }, [player.state.currentIndex, player.currentTrack, player.state.direction]);
+
+  // Report track changes to parent
+  useEffect(() => {
+    onTrackChange?.(player.state.currentIndex);
+  }, [player.state.currentIndex, onTrackChange]);
+
+  // Jump to track when parent sets selectedTrack
+  const prevSelectedRef = useRef(selectedTrack);
+  useEffect(() => {
+    if (selectedTrack != null && selectedTrack !== prevSelectedRef.current && selectedTrack !== player.state.currentIndex) {
+      const dir = selectedTrack > player.state.currentIndex ? 'next' : 'prev';
+      player.loadTrack(selectedTrack, true, dir);
+    }
+    prevSelectedRef.current = selectedTrack;
+  }, [selectedTrack, player.state.currentIndex, player.loadTrack]);
 
   // Close lyrics when track changes
   useEffect(() => { setShowLyrics(false); }, [player.state.currentIndex]);
