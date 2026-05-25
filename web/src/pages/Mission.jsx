@@ -242,12 +242,12 @@ const Mission = () => {
                 <p className="flow-section__body">
                   Right now, 300 million children cannot read at a basic level.
                   44 million teachers are absent from the classrooms that need them most.
-                  Their brains are forming 1 million neural connections every second —
-                  and that biological window does not wait for policy reforms.
+                  These are not projections. This is happening today — and the systems
+                  designed to help are overwhelmed, underfunded, and too slow.
                 </p>
                 <hr className="flow-section__divider" style={{ borderColor: 'rgba(255,255,255,0.25)' }} />
 
-                {/* ── Biological Imperative — merged ── */}
+                {/* ── Biological Imperative ── */}
                 <div className="flow-bio-block">
                   <div className="flow-bio-block__visual">
                     <div className="neural-viz" aria-hidden="true">
@@ -265,13 +265,14 @@ const Mission = () => {
                   <div className="flow-bio-block__text">
                     <p className="flow-bio-block__title">The Biological Imperative</p>
                     <p className="flow-bio-block__body">
-                      In the first 1,000 days of life, a child's brain forms over one million
-                      new neural connections every single second — the most explosive period of
+                      A child's brain doesn't wait for the world to catch up.
+                      In the first 1,000 days of life, it forms over one million new
+                      neural connections every single second — the most explosive period of
                       cognitive development a human will ever experience.
                     </p>
                     <p className="flow-bio-block__body" style={{ marginTop: '0.75rem', opacity: 0.8 }}>
-                      This window does not wait for policy reforms or funding cycles.
-                      Biology operates on its own timeline — and right now, we are losing the race.
+                      Miss this window and no curriculum, no policy, no funding can fully recover
+                      what was lost. Biology operates on its own timeline.
                     </p>
                   </div>
                 </div>
@@ -281,19 +282,19 @@ const Mission = () => {
                   <div className="flow-column">
                     <p className="flow-column__title">300M</p>
                     <p className="flow-column__text">
-                      Children worldwide who lack basic literacy. Behind every number, a closing window.
+                      Children who have never read a sentence. Each one a mind the world can't afford to lose.
                     </p>
                   </div>
                   <div className="flow-column">
                     <p className="flow-column__title">44M</p>
                     <p className="flow-column__text">
-                      The global teacher deficit. Classrooms without educators. Communities without guides.
+                      Empty desks where teachers should be. Entire communities raising children without guides.
                     </p>
                   </div>
                   <div className="flow-column">
                     <p className="flow-column__title">1,000 Days</p>
                     <p className="flow-column__text">
-                      The critical window of brain development. Biology doesn't wait for funding cycles.
+                      The non-negotiable window. After it closes, the architecture of the brain is set.
                     </p>
                   </div>
                 </div>
