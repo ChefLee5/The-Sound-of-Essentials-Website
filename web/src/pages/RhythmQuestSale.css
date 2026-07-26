@@ -1,14 +1,15 @@
 /* ========================================
-   Dictionary Sale Page — Premium Sales LP
+   Rhythm Quest Sale Page — Premium Sales LP
+   (cloned from DictionarySale.css, .dict- -> .rq-)
    ======================================== */
 
 /* ── Hero Section ── */
-.dict-sale {
+.rq-sale {
   position: relative;
   overflow: hidden;
 }
 
-.dict-hero {
+.rq-hero {
   position: relative;
   min-height: 100vh;
   display: flex;
@@ -18,18 +19,18 @@
   padding: 6rem 0 4rem;
 }
 
-.dict-hero__bg {
+.rq-hero__bg {
   position: absolute;
   inset: -5%;
   width: 110%;
   height: 110%;
   z-index: 0;
-  background: var(--dict-hero-bg) center center / cover no-repeat;
-  animation: dictKenBurns 30s ease-in-out infinite alternate;
+  background: var(--rq-hero-bg) center center / cover no-repeat;
+  animation: rqKenBurns 30s ease-in-out infinite alternate;
   will-change: transform;
 }
 
-.dict-hero__overlay {
+.rq-hero__overlay {
   position: absolute;
   inset: 0;
   z-index: 1;
@@ -42,13 +43,13 @@
   );
 }
 
-@keyframes dictKenBurns {
+@keyframes rqKenBurns {
   0%   { transform: scale(1.0) translate(0, 0); }
   50%  { transform: scale(1.10) translate(-1.5%, -1%); }
   100% { transform: scale(1.0) translate(0, 0); }
 }
 
-.dict-hero__inner {
+.rq-hero__inner {
   position: relative;
   z-index: 2;
   display: flex;
@@ -59,12 +60,12 @@
   padding: 0 2rem;
 }
 
-.dict-hero__copy {
+.rq-hero__copy {
   flex: 1;
   max-width: 560px;
 }
 
-.dict-hero__badge {
+.rq-hero__badge {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
@@ -80,7 +81,7 @@
   animation: fadeInUp 0.8s var(--ease-gentle) both;
 }
 
-.dict-hero__title {
+.rq-hero__title {
   font-size: clamp(2.2rem, 5vw, 3.6rem);
   line-height: 1.08;
   margin-bottom: 1.25rem;
@@ -89,26 +90,26 @@
   animation: fadeInUp 0.8s var(--ease-gentle) 0.1s both;
 }
 
-.dict-hero__title-accent {
+.rq-hero__title-accent {
   color: var(--color-orange);
   display: block;
 }
 
-.dict-hero__subtitle {
+.rq-hero__subtitle {
   margin: 0 0 2rem 0;
   text-align: left;
   max-width: 480px;
   animation: fadeInUp 0.8s var(--ease-gentle) 0.2s both;
 }
 
-.dict-hero__actions {
+.rq-hero__actions {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
   animation: fadeInUp 0.8s var(--ease-gentle) 0.3s both;
 }
 
-.dict-hero__price-tag {
+.rq-hero__price-tag {
   display: flex;
   align-items: baseline;
   gap: 0.5rem;
@@ -116,7 +117,7 @@
   animation: fadeInUp 0.8s var(--ease-gentle) 0.25s both;
 }
 
-.dict-hero__price-retail {
+.rq-hero__price-retail {
   font-family: var(--font-heading);
   font-size: 1.6rem;
   font-weight: 600;
@@ -126,7 +127,7 @@
   line-height: 1;
 }
 
-.dict-hero__price-listed {
+.rq-hero__price-listed {
   font-family: var(--font-heading);
   font-size: 1.8rem;
   font-weight: 700;
@@ -134,7 +135,7 @@
   line-height: 1;
 }
 
-.dict-hero__price {
+.rq-hero__price {
   font-family: var(--font-heading);
   font-size: 2.8rem;
   font-weight: 700;
@@ -142,26 +143,26 @@
   line-height: 1;
 }
 
-.dict-hero__price-note {
+.rq-hero__price-note {
   font-size: 0.85rem;
   color: var(--color-text-dark-secondary);
   font-weight: 500;
 }
 
 /* ── 3D Book Showcase ── */
-.dict-hero__book {
+.rq-hero__book {
   flex-shrink: 0;
   animation: fadeInUp 1s var(--ease-gentle) 0.4s both;
 }
 
-.dict-book-3d {
+.rq-book-3d {
   position: relative;
   perspective: 1200px;
   width: 320px;
   height: 420px;
 }
 
-.dict-book-3d__inner {
+.rq-book-3d__inner {
   position: relative;
   width: 100%;
   height: 100%;
@@ -171,11 +172,11 @@
   will-change: transform;
 }
 
-.dict-book-3d:hover .dict-book-3d__inner {
+.rq-book-3d:hover .rq-book-3d__inner {
   transform: rotateY(-6deg) rotateX(1deg) scale(1.03);
 }
 
-.dict-book-3d__cover {
+.rq-book-3d__cover {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -187,7 +188,7 @@
 }
 
 /* Spine effect */
-.dict-book-3d__inner::before {
+.rq-book-3d__inner::before {
   content: '';
   position: absolute;
   left: -8px;
@@ -202,7 +203,7 @@
 }
 
 /* Page edges */
-.dict-book-3d__inner::after {
+.rq-book-3d__inner::after {
   content: '';
   position: absolute;
   right: -4px;
@@ -220,7 +221,7 @@
 }
 
 /* Floating sparkles around book */
-.dict-book-3d .sparkle {
+.rq-book-3d .sparkle {
   position: absolute;
   width: 6px;
   height: 6px;
@@ -230,10 +231,10 @@
   opacity: 0;
 }
 
-.dict-book-3d .sparkle:nth-child(2) { top: 10%; right: -20px; animation-delay: 0.5s; }
-.dict-book-3d .sparkle:nth-child(3) { top: 40%; left: -25px; animation-delay: 1s; background: var(--color-green); }
-.dict-book-3d .sparkle:nth-child(4) { bottom: 15%; right: -15px; animation-delay: 1.5s; background: var(--color-purple); }
-.dict-book-3d .sparkle:nth-child(5) { top: 5%; left: -15px; animation-delay: 2s; background: var(--color-yellow); }
+.rq-book-3d .sparkle:nth-child(2) { top: 10%; right: -20px; animation-delay: 0.5s; }
+.rq-book-3d .sparkle:nth-child(3) { top: 40%; left: -25px; animation-delay: 1s; background: var(--color-green); }
+.rq-book-3d .sparkle:nth-child(4) { bottom: 15%; right: -15px; animation-delay: 1.5s; background: var(--color-purple); }
+.rq-book-3d .sparkle:nth-child(5) { top: 5%; left: -15px; animation-delay: 2s; background: var(--color-yellow); }
 
 @keyframes sparkleFloat {
   0%, 100% { opacity: 0; transform: scale(0.5) translateY(0); }
@@ -241,7 +242,7 @@
 }
 
 /* ── Social Proof Strip ── */
-.dict-proof-strip {
+.rq-proof-strip {
   background: rgba(255, 255, 255, 0.65);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -250,7 +251,7 @@
   padding: 1.5rem 0;
 }
 
-.dict-proof-strip__inner {
+.rq-proof-strip__inner {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -261,11 +262,11 @@
   padding: 0 2rem;
 }
 
-.dict-proof-item {
+.rq-proof-item {
   text-align: center;
 }
 
-.dict-proof-item__value {
+.rq-proof-item__value {
   font-family: var(--font-heading);
   font-size: 1.6rem;
   font-weight: 700;
@@ -274,7 +275,7 @@
   line-height: 1.2;
 }
 
-.dict-proof-item__label {
+.rq-proof-item__label {
   font-size: 0.78rem;
   color: var(--color-text-dark-secondary);
   text-transform: uppercase;
@@ -283,19 +284,19 @@
 }
 
 /* ── Features Grid ── */
-.dict-features {
+.rq-features {
   padding: 6rem 0;
   position: relative;
 }
 
-.dict-features__grid {
+.rq-features__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   margin-top: 3rem;
 }
 
-.dict-feature-card {
+.rq-feature-card {
   background: rgba(255, 255, 255, 0.75);
   backdrop-filter: blur(8px);
   border: 2px solid var(--color-border);
@@ -306,13 +307,13 @@
   cursor: default;
 }
 
-.dict-feature-card:hover {
+.rq-feature-card:hover {
   transform: translateY(-6px);
   border-color: var(--feat-color, var(--color-green));
   box-shadow: 0 16px 48px rgba(0, 0, 0, 0.08);
 }
 
-.dict-feature-card__icon {
+.rq-feature-card__icon {
   width: 56px;
   height: 56px;
   border-radius: 16px;
@@ -324,14 +325,14 @@
   background: color-mix(in srgb, var(--feat-color, var(--color-green)) 12%, transparent);
 }
 
-.dict-feature-card__title {
+.rq-feature-card__title {
   font-size: 1.1rem;
   font-weight: 600;
   color: var(--color-text-dark);
   margin-bottom: 0.5rem;
 }
 
-.dict-feature-card__desc {
+.rq-feature-card__desc {
   font-size: 0.88rem;
   color: var(--color-text-dark-secondary);
   line-height: 1.65;
@@ -339,12 +340,12 @@
 }
 
 /* ── Page Preview Section ── */
-.dict-preview {
+.rq-preview {
   padding: 6rem 0;
   background: linear-gradient(180deg, rgba(76,175,80,0.04) 0%, transparent 100%);
 }
 
-.dict-preview__scroll {
+.rq-preview__scroll {
   display: flex;
   gap: 1.5rem;
   overflow-x: auto;
@@ -355,9 +356,9 @@
   margin-top: 2rem;
 }
 
-.dict-preview__scroll::-webkit-scrollbar { display: none; }
+.rq-preview__scroll::-webkit-scrollbar { display: none; }
 
-.dict-preview__card {
+.rq-preview__card {
   flex: 0 0 280px;
   scroll-snap-align: center;
   border-radius: var(--radius-lg);
@@ -369,12 +370,12 @@
   background: #fff;
 }
 
-.dict-preview__card:hover {
+.rq-preview__card:hover {
   transform: translateY(-8px) scale(1.02);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
 }
 
-.dict-preview__card img {
+.rq-preview__card img {
   width: 100%;
   height: 380px;
   object-fit: cover;
@@ -382,11 +383,11 @@
   transition: transform 0.6s var(--ease-gentle);
 }
 
-.dict-preview__card:hover img {
+.rq-preview__card:hover img {
   transform: scale(1.04);
 }
 
-.dict-preview__card-label {
+.rq-preview__card-label {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -401,11 +402,11 @@
   transition: opacity 0.3s ease;
 }
 
-.dict-preview__card:hover .dict-preview__card-label {
+.rq-preview__card:hover .rq-preview__card-label {
   opacity: 1;
 }
 
-.dict-preview__hint {
+.rq-preview__hint {
   text-align: center;
   font-size: 0.82rem;
   color: var(--color-text-dark-secondary);
@@ -414,18 +415,18 @@
 }
 
 /* ── Lands Explorer ── */
-.dict-lands {
+.rq-lands {
   padding: 6rem 0;
 }
 
-.dict-lands__grid {
+.rq-lands__grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 1rem;
   margin-top: 3rem;
 }
 
-.dict-land-card {
+.rq-land-card {
   background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(6px);
   border: 2px solid var(--color-border);
@@ -438,7 +439,7 @@
   overflow: hidden;
 }
 
-.dict-land-card::before {
+.rq-land-card::before {
   content: '';
   position: absolute;
   top: 0;
@@ -448,19 +449,19 @@
   background: var(--land-color, var(--color-green));
 }
 
-.dict-land-card:hover {
+.rq-land-card:hover {
   transform: translateY(-6px);
   border-color: var(--land-color, var(--color-green));
   box-shadow: 0 12px 36px rgba(0, 0, 0, 0.08);
 }
 
-.dict-land-card__icon {
+.rq-land-card__icon {
   font-size: 2rem;
   display: block;
   margin-bottom: 0.5rem;
 }
 
-.dict-land-card__name {
+.rq-land-card__name {
   font-family: var(--font-heading);
   font-size: 0.9rem;
   font-weight: 700;
@@ -468,28 +469,28 @@
   margin-bottom: 0.25rem;
 }
 
-.dict-land-card__focus {
+.rq-land-card__focus {
   font-size: 0.7rem;
   color: var(--color-text-dark-secondary);
   line-height: 1.4;
   margin-bottom: 0.5rem;
 }
 
-.dict-land-card__stats {
+.rq-land-card__stats {
   font-family: var(--font-heading);
   font-size: 0.72rem;
   font-weight: 600;
   color: var(--land-color, var(--color-green));
 }
 
-.dict-land-card__heroes {
+.rq-land-card__heroes {
   display: flex;
   gap: 0.35rem;
   justify-content: center;
   margin-top: 0.75rem;
 }
 
-.dict-land-card__hero-img {
+.rq-land-card__hero-img {
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -500,19 +501,19 @@
 }
 
 /* ── Testimonials ── */
-.dict-testimonials {
+.rq-testimonials {
   padding: 6rem 0;
   background: linear-gradient(180deg, rgba(123,31,162,0.03) 0%, transparent 100%);
 }
 
-.dict-testimonials__grid {
+.rq-testimonials__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   margin-top: 3rem;
 }
 
-.dict-testimonial-card {
+.rq-testimonial-card {
   background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(6px);
   border: 2px solid var(--color-border);
@@ -521,19 +522,19 @@
   transition: all 0.3s var(--ease-gentle);
 }
 
-.dict-testimonial-card:hover {
+.rq-testimonial-card:hover {
   border-color: rgba(76, 175, 80, 0.25);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
 }
 
-.dict-testimonial-card__stars {
+.rq-testimonial-card__stars {
   color: var(--color-yellow);
   font-size: 1.1rem;
   margin-bottom: 1rem;
   letter-spacing: 2px;
 }
 
-.dict-testimonial-card__quote {
+.rq-testimonial-card__quote {
   font-size: 0.95rem;
   color: var(--color-text-dark-secondary);
   line-height: 1.7;
@@ -542,13 +543,13 @@
   max-width: 100%;
 }
 
-.dict-testimonial-card__author {
+.rq-testimonial-card__author {
   display: flex;
   align-items: center;
   gap: 0.75rem;
 }
 
-.dict-testimonial-card__avatar {
+.rq-testimonial-card__avatar {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -562,32 +563,32 @@
   font-size: 0.9rem;
 }
 
-.dict-testimonial-card__name {
+.rq-testimonial-card__name {
   font-family: var(--font-heading);
   font-weight: 600;
   font-size: 0.88rem;
   color: var(--color-text-dark);
 }
 
-.dict-testimonial-card__role {
+.rq-testimonial-card__role {
   font-size: 0.75rem;
   color: var(--color-text-dark-secondary);
 }
 
 /* ── Character Parade ── */
-.dict-characters {
+.rq-characters {
   padding: 4rem 0;
   overflow: hidden;
 }
 
-.dict-char-parade {
+.rq-char-parade {
   display: flex;
   gap: 2rem;
   animation: paradeScroll 40s linear infinite;
   width: max-content;
 }
 
-.dict-char-parade:hover {
+.rq-char-parade:hover {
   animation-play-state: paused;
 }
 
@@ -596,7 +597,7 @@
   100% { transform: translateX(-50%); }
 }
 
-.dict-char-item {
+.rq-char-item {
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
@@ -604,7 +605,7 @@
   gap: 0.5rem;
 }
 
-.dict-char-item__img {
+.rq-char-item__img {
   width: 80px;
   height: 110px;
   object-fit: contain;
@@ -612,11 +613,11 @@
   transition: transform 0.3s var(--ease-gentle);
 }
 
-.dict-char-item:hover .dict-char-item__img {
+.rq-char-item:hover .rq-char-item__img {
   transform: scale(1.15) translateY(-6px);
 }
 
-.dict-char-item__name {
+.rq-char-item__name {
   font-family: var(--font-heading);
   font-size: 0.72rem;
   font-weight: 600;
@@ -624,11 +625,11 @@
 }
 
 /* ── Final CTA ── */
-.dict-final-cta {
+.rq-final-cta {
   padding: 6rem 0 4rem;
 }
 
-.dict-cta-card {
+.rq-cta-card {
   position: relative;
   overflow: hidden;
   background: linear-gradient(135deg,
@@ -641,18 +642,18 @@
   text-align: center;
 }
 
-.dict-cta-card__icon {
+.rq-cta-card__icon {
   font-size: 3.5rem;
   display: block;
   margin-bottom: 1.5rem;
   animation: gentleFloat 4s ease-in-out infinite;
 }
 
-.dict-cta-card .section-subtitle {
+.rq-cta-card .section-subtitle {
   margin-top: 1rem;
 }
 
-.dict-cta-actions {
+.rq-cta-actions {
   display: flex;
   gap: 1rem;
   justify-content: center;
@@ -660,7 +661,7 @@
   margin-top: 2.5rem;
 }
 
-.dict-guarantee {
+.rq-guarantee {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -673,80 +674,171 @@
 
 /* ── Responsive ── */
 @media (max-width: 1024px) {
-  .dict-lands__grid {
+  .rq-lands__grid {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
 @media (max-width: 768px) {
-  .dict-hero__inner {
+  .rq-hero__inner {
     flex-direction: column;
     text-align: center;
     gap: 3rem;
   }
 
-  .dict-hero__subtitle {
+  .rq-hero__subtitle {
     margin: 0 auto 2rem auto;
     text-align: center;
   }
 
-  .dict-hero__actions {
+  .rq-hero__actions {
     justify-content: center;
   }
 
-  .dict-hero__price-tag {
+  .rq-hero__price-tag {
     justify-content: center;
   }
 
-  .dict-book-3d {
+  .rq-book-3d {
     width: 240px;
     height: 320px;
   }
 
-  .dict-features__grid {
+  .rq-features__grid {
     grid-template-columns: 1fr;
   }
 
-  .dict-lands__grid {
+  .rq-lands__grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .dict-testimonials__grid {
+  .rq-testimonials__grid {
     grid-template-columns: 1fr;
   }
 
-  .dict-cta-card {
+  .rq-cta-card {
     padding: 3rem 1.5rem;
   }
 }
 
 @media (max-width: 640px) {
-  .dict-hero {
+  .rq-hero {
     padding: 5rem 0 3rem;
   }
 
-  .dict-hero__title {
+  .rq-hero__title {
     font-size: clamp(1.8rem, 7vw, 2.4rem);
   }
 
-  .dict-proof-strip__inner {
+  .rq-proof-strip__inner {
     gap: 1.5rem;
   }
 
-  .dict-preview__card {
+  .rq-preview__card {
     flex: 0 0 220px;
   }
 
-  .dict-preview__card img {
+  .rq-preview__card img {
     height: 300px;
   }
 
-  .dict-lands__grid {
+  .rq-lands__grid {
     grid-template-columns: 1fr;
   }
 
-  .dict-book-3d {
+  .rq-book-3d {
     width: 200px;
     height: 270px;
+  }
+}
+
+/* ── Signature: Song-Stave Bridge ──────────────────────────────
+   "The songs become a universe." A golden 5-line music staff
+   (the site's canonical song-stave motif) carries notes in from
+   the left and hands off to letters on the right — the album's
+   music literally turning into the book's words. Unique to this
+   page: it's the one moment that visualizes what makes Rhythm
+   Quest different from either the free album or the Dictionary. */
+.rq-bridge {
+  position: relative;
+  padding: 3.5rem 0;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(255,111,0,0.05) 0%, rgba(76,175,80,0.05) 100%);
+}
+
+.rq-bridge__inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.rq-bridge__line {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: clamp(1.1rem, 2.4vw, 1.5rem);
+  color: var(--color-text-dark);
+  margin-bottom: 2rem;
+}
+
+.rq-staff {
+  position: relative;
+  height: 64px;
+  width: 100%;
+}
+
+.rq-staff__lines {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 6px 0;
+}
+
+.rq-staff__lines span {
+  display: block;
+  height: 1.5px;
+  width: 100%;
+  background: linear-gradient(90deg, transparent 0%, rgba(255,111,0,0.5) 15%, rgba(255,111,0,0.5) 60%, transparent 85%);
+}
+
+.rq-staff__glyphs {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4%;
+}
+
+.rq-staff__note {
+  font-size: 1.6rem;
+  color: var(--color-orange);
+  animation: rqNoteDrift 3.5s ease-in-out infinite;
+}
+
+.rq-staff__note:nth-child(2) { animation-delay: 0.4s; }
+.rq-staff__note:nth-child(3) { animation-delay: 0.8s; }
+
+.rq-staff__letter {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: var(--color-green);
+  animation: rqNoteDrift 3.5s ease-in-out infinite;
+}
+
+.rq-staff__letter:nth-child(4) { animation-delay: 1.2s; }
+.rq-staff__letter:nth-child(5) { animation-delay: 1.6s; }
+
+@keyframes rqNoteDrift {
+  0%, 100% { transform: translateY(0); opacity: 0.75; }
+  50% { transform: translateY(-6px); opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rq-staff__note, .rq-staff__letter {
+    animation: none;
   }
 }

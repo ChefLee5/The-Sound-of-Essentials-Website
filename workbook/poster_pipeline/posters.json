@@ -1,0 +1,9392 @@
+[
+ {
+  "basename": "land1_body-language-gestures.jpg",
+  "title": "Body Language Gestures",
+  "land": 1,
+  "land_name": "Harmonia",
+  "heroes": [
+   "Kenji",
+   "Aiko"
+  ],
+  "accent": "warm golden yellow",
+  "setting": "a warm, music-filled village classroom world of song, greetings and friendship",
+  "alt": "Understanding each other without words",
+  "vocab_source": "land1-body-language-gestures.xhtml",
+  "vocab_pool": [
+   "Nod",
+   "Shake head",
+   "Point",
+   "Shrug",
+   "Thumbs up",
+   "Thumbs down",
+   "Clap",
+   "Gesture",
+   "Eye contact",
+   "Facial expression",
+   "Frown",
+   "Wink",
+   "Yawn",
+   "Stretch",
+   "Cross arms",
+   "High five",
+   "Fist bump",
+   "Shake hands",
+   "Bow",
+   "Tone of voice",
+   "Whisper",
+   "Shout",
+   "Body language",
+   "Personal space",
+   "Posture"
+  ],
+  "words": [
+   "Point",
+   "Shrug",
+   "Thumbs up",
+   "Thumbs down",
+   "Clap",
+   "Yawn",
+   "Cross arms",
+   "High five",
+   "Shake hands",
+   "Bow"
+  ],
+  "scene_extra": "",
+  "status": "composed",
+  "job_id": "4dfc6793-71a4-45fd-9344-16cafa17bdfa",
+  "scene_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3601bQ63HBullpQ168ApWJtOp5D/hf_20260711_135023_4dfc6793-71a4-45fd-9344-16cafa17bdfa.png",
+  "anchors": {
+   "Point": [
+    0.32,
+    0.45
+   ],
+   "Shrug": [
+    0.24,
+    0.56
+   ],
+   "Thumbs up": [
+    0.176,
+    0.662
+   ],
+   "Thumbs down": [
+    0.68,
+    0.47
+   ],
+   "Clap": [
+    0.75,
+    0.64
+   ],
+   "Yawn": [
+    0.89,
+    0.64
+   ],
+   "Cross arms": [
+    0.22,
+    0.87
+   ],
+   "High five": [
+    0.5,
+    0.44
+   ],
+   "Shake hands": [
+    0.515,
+    0.9
+   ],
+   "Bow": [
+    0.685,
+    0.86
+   ]
+  },
+  "objects_desc": {
+   "Point": "a child pointing far into the distance with an outstretched arm",
+   "Shrug": "a child shrugging with both palms turned up and shoulders raised",
+   "Thumbs up": "a child giving a big thumbs-up",
+   "Thumbs down": "a child giving a clear thumbs-down",
+   "Clap": "a child clapping hands together",
+   "Frown": "a child with an exaggerated frowning face",
+   "Yawn": "a child yawning widely with a hand over the mouth",
+   "Stretch": "a child stretching both arms high overhead",
+   "Cross arms": "a child standing with arms firmly crossed",
+   "High five": "the two hero children giving each other a joyful high five",
+   "Shake hands": "two other children shaking hands",
+   "Bow": "a child bowing politely from the waist"
+  },
+  "people_rule": "The scene shows {heroes}, appearing exactly once as a pair giving each other a joyful high five, plus about ten OTHER diverse village children of varied appearance (none repeated, all clearly different from the two heroes), each frozen clearly performing exactly one different gesture from the object list. No adults anywhere.",
+  "qa_note": "clean; Frown/Stretch dropped (model merged them into Clap/Yawn children)",
+  "ordered_words": [
+   "Point",
+   "High five",
+   "Thumbs down",
+   "Thumbs up",
+   "Shrug",
+   "Clap",
+   "Yawn",
+   "Cross arms",
+   "Shake hands",
+   "Bow"
+  ]
+ },
+ {
+  "basename": "land1_celebrations-traditions.jpg",
+  "title": "Celebrations Traditions",
+  "land": 1,
+  "land_name": "Harmonia",
+  "heroes": [
+   "Kenji",
+   "Aiko"
+  ],
+  "accent": "warm golden yellow",
+  "setting": "a warm, music-filled village classroom world of song, greetings and friendship",
+  "alt": "Festivals and celebrations from different cultures in Harmonia",
+  "vocab_source": "land1-celebrations-traditions.xhtml",
+  "vocab_pool": [
+   "Holiday",
+   "Tradition",
+   "Celebration",
+   "Festival",
+   "Parade",
+   "Fireworks",
+   "Candle",
+   "Decoration",
+   "Costume",
+   "Gift",
+   "Wrap",
+   "Card",
+   "Feast",
+   "Toast",
+   "Reunion",
+   "Ceremony",
+   "Custom",
+   "Heritage",
+   "Feast day",
+   "Ancestor",
+   "Gathering",
+   "Potluck",
+   "Invitation",
+   "Guest",
+   "Host"
+  ],
+  "words": [
+   "Parade",
+   "Fireworks",
+   "Candle",
+   "Decoration",
+   "Costume",
+   "Gift",
+   "Wrap",
+   "Card",
+   "Feast",
+   "Toast",
+   "Invitation"
+  ],
+  "scene_extra": "Warm dusk lighting. Keep the very top center a calm dusk sky; the fireworks bursts sit lower, off to the sides.",
+  "status": "composed",
+  "job_id": "178fdedc-4cb0-4247-817f-9e170a894e3e",
+  "scene_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3601bQ63HBullpQ168ApWJtOp5D/hf_20260711_135110_178fdedc-4cb0-4247-817f-9e170a894e3e.png",
+  "anchors": {
+   "Parade": [
+    0.47,
+    0.515
+   ],
+   "Fireworks": [
+    0.57,
+    0.24
+   ],
+   "Candle": [
+    0.085,
+    0.3
+   ],
+   "Decoration": [
+    0.31,
+    0.19
+   ],
+   "Costume": [
+    0.595,
+    0.685
+   ],
+   "Gift": [
+    0.175,
+    0.725
+   ],
+   "Wrap": [
+    0.075,
+    0.875
+   ],
+   "Card": [
+    0.41,
+    0.83
+   ],
+   "Feast": [
+    0.79,
+    0.625
+   ],
+   "Toast": [
+    0.795,
+    0.475
+   ],
+   "Invitation": [
+    0.835,
+    0.86
+   ]
+  },
+  "objects_desc": {
+   "Parade": "a small festive parade of drummers marching down the background street",
+   "Fireworks": "colorful fireworks bursting in the evening sky at mid height",
+   "Candle": "a tall lit candle in a brass holder",
+   "Decoration": "colorful paper garlands and hanging lanterns strung overhead",
+   "Costume": "a small child wearing a bright festival dragon costume",
+   "Gift": "a wrapped gift box with a large ribbon bow",
+   "Wrap": "a roll of patterned wrapping paper with ribbon beside it",
+   "Card": "a folded greeting card standing open, decorated only with a drawn heart",
+   "Feast": "a long table covered with festive dishes and fruit platters",
+   "Toast": "two villagers raising their cups together in a cheerful toast",
+   "Invitation": "an envelope sealed with a red wax stamp resting on a small tray"
+  },
+  "people_rule": "The scene includes {heroes}, each appearing exactly once, celebrating among a handful of festive villagers as listed in the object list.",
+  "qa_note": "clean pass, all 11 present",
+  "ordered_words": [
+   "Candle",
+   "Decoration",
+   "Fireworks",
+   "Toast",
+   "Parade",
+   "Feast",
+   "Gift",
+   "Card",
+   "Costume",
+   "Wrap",
+   "Invitation"
+  ]
+ },
+ {
+  "basename": "land1_clothing-getting-dressed.jpg",
+  "title": "Clothing Getting Dressed",
+  "land": 1,
+  "land_name": "Harmonia",
+  "heroes": [
+   "Kenji",
+   "Aiko"
+  ],
+  "accent": "warm golden yellow",
+  "setting": "a warm, music-filled village classroom world of song, greetings and friendship",
+  "alt": "Clothing items for different seasons in Harmonia",
+  "vocab_source": "land1-clothing-getting-dressed.xhtml",
+  "vocab_pool": [
+   "Shirt",
+   "T-shirt",
+   "Blouse",
+   "Pants",
+   "Jeans",
+   "Shorts",
+   "Skirt",
+   "Dress",
+   "Sweater",
+   "Jacket",
+   "Coat",
+   "Raincoat",
+   "Hoodie",
+   "Vest",
+   "Suit",
+   "Tie",
+   "Uniform",
+   "Underwear",
+   "Socks",
+   "Shoes",
+   "Sneakers",
+   "Boots",
+   "Sandals",
+   "Slippers",
+   "Hat",
+   "Cap",
+   "Scarf",
+   "Gloves",
+   "Belt",
+   "Button",
+   "Zipper",
+   "Pocket",
+   "Sleeve",
+   "Collar",
+   "Laundry",
+   "Iron",
+   "Fold",
+   "Hanger",
+   "Size",
+   "Try on"
+  ],
+  "words": [
+   "Shirt",
+   "Pants",
+   "Shorts",
+   "Skirt",
+   "Dress",
+   "Sweater",
+   "Jacket",
+   "Tie",
+   "Shoes",
+   "Boots",
+   "Sandals",
+   "Slippers",
+   "Hat",
+   "Scarf",
+   "Gloves",
+   "Belt",
+   "Hanger",
+   "Iron"
+  ],
+  "scene_extra": "",
+  "status": "composed",
+  "job_id": "ddaf82c5-b768-46d3-b7a9-f53b6e36e982",
+  "scene_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3601bQ63HBullpQ168ApWJtOp5D/hf_20260711_135154_ddaf82c5-b768-46d3-b7a9-f53b6e36e982.png",
+  "anchors": {
+   "Shirt": [
+    0.16,
+    0.45
+   ],
+   "Pants": [
+    0.33,
+    0.36
+   ],
+   "Shorts": [
+    0.42,
+    0.36
+   ],
+   "Skirt": [
+    0.375,
+    0.52
+   ],
+   "Dress": [
+    0.6,
+    0.49
+   ],
+   "Sweater": [
+    0.685,
+    0.37
+   ],
+   "Jacket": [
+    0.855,
+    0.4
+   ],
+   "Tie": [
+    0.77,
+    0.455
+   ],
+   "Shoes": [
+    0.22,
+    0.63
+   ],
+   "Boots": [
+    0.83,
+    0.6
+   ],
+   "Sandals": [
+    0.87,
+    0.655
+   ],
+   "Slippers": [
+    0.29,
+    0.665
+   ],
+   "Hat": [
+    0.845,
+    0.21
+   ],
+   "Scarf": [
+    0.5,
+    0.6
+   ],
+   "Gloves": [
+    0.35,
+    0.87
+   ],
+   "Belt": [
+    0.22,
+    0.85
+   ],
+   "Hanger": [
+    0.72,
+    0.87
+   ],
+   "Iron": [
+    0.8,
+    0.79
+   ]
+  },
+  "objects_desc": {
+   "Shirt": "a collared button-up shirt displayed on a clothes rack",
+   "Pants": "a pair of long pants folded over a rail",
+   "Shorts": "a pair of shorts",
+   "Skirt": "a pleated skirt",
+   "Dress": "a pretty summer dress on a dress form",
+   "Sweater": "a knitted sweater folded on a shelf",
+   "Jacket": "a jacket on a coat hook",
+   "Tie": "a necktie draped on a stand",
+   "Socks": "a pair of rolled colorful socks",
+   "Shoes": "a pair of neat lace-up shoes",
+   "Boots": "a pair of tall rain boots",
+   "Sandals": "a pair of open sandals",
+   "Slippers": "a pair of fluffy bunny slippers",
+   "Hat": "a wide-brim sun hat",
+   "Scarf": "a long soft scarf",
+   "Gloves": "a pair of warm gloves",
+   "Belt": "a leather belt coiled on a shelf",
+   "Hanger": "an empty wooden clothes hanger",
+   "Iron": "a clothes iron resting upright on an ironing board"
+  },
+  "qa_note": "clean; Socks absent from scene, dropped (18 words)",
+  "ordered_words": [
+   "Hat",
+   "Shirt",
+   "Pants",
+   "Shorts",
+   "Dress",
+   "Sweater",
+   "Tie",
+   "Jacket",
+   "Shoes",
+   "Slippers",
+   "Skirt",
+   "Scarf",
+   "Boots",
+   "Sandals",
+   "Iron",
+   "Belt",
+   "Gloves",
+   "Hanger"
+  ]
+ },
+ {
+  "basename": "land1_colors-patterns.jpg",
+  "title": "Colors Patterns",
+  "land": 1,
+  "land_name": "Harmonia",
+  "heroes": [
+   "Kenji",
+   "Aiko"
+  ],
+  "accent": "warm golden yellow",
+  "setting": "a warm, music-filled village classroom world of song, greetings and friendship",
+  "alt": "Colorful patterns in Harmonia art class",
+  "vocab_source": "land1-colors-patterns.xhtml",
+  "vocab_pool": [
+   "Red",
+   "Blue",
+   "Yellow",
+   "Green",
+   "Orange",
+   "Purple",
+   "Pink",
+   "Brown",
+   "Black",
+   "White",
+   "Gray",
+   "Gold",
+   "Silver",
+   "Beige",
+   "Turquoise",
+   "Maroon",
+   "Navy",
+   "Light",
+   "Dark",
+   "Bright",
+   "Striped",
+   "Plaid",
+   "Polka dot",
+   "Solid",
+   "Pattern"
+  ],
+  "words": [
+   "Red",
+   "Blue",
+   "Yellow",
+   "Green",
+   "Orange",
+   "Purple",
+   "Pink",
+   "Brown",
+   "Black",
+   "White",
+   "Gray",
+   "Striped",
+   "Plaid",
+   "Polka dot"
+  ],
+  "scene_extra": "",
+  "status": "composed",
+  "job_id": "1cd0f10e-1524-4a83-a3a1-35b114746876",
+  "scene_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3601bQ63HBullpQ168ApWJtOp5D/hf_20260711_135241_1cd0f10e-1524-4a83-a3a1-35b114746876.png",
+  "anchors": {
+   "Red": [
+    0.28,
+    0.42
+   ],
+   "Blue": [
+    0.49,
+    0.755
+   ],
+   "Yellow": [
+    0.655,
+    0.32
+   ],
+   "Green": [
+    0.755,
+    0.36
+   ],
+   "Orange": [
+    0.13,
+    0.43
+   ],
+   "Purple": [
+    0.615,
+    0.44
+   ],
+   "Pink": [
+    0.055,
+    0.45
+   ],
+   "Brown": [
+    0.775,
+    0.51
+   ],
+   "Black": [
+    0.875,
+    0.53
+   ],
+   "White": [
+    0.845,
+    0.3
+   ],
+   "Gray": [
+    0.115,
+    0.72
+   ],
+   "Striped": [
+    0.315,
+    0.82
+   ],
+   "Plaid": [
+    0.44,
+    0.66
+   ],
+   "Polka dot": [
+    0.845,
+    0.77
+   ]
+  },
+  "objects_desc": {
+   "Red": "a bright red kite",
+   "Blue": "a solid blue bouncing ball",
+   "Yellow": "a tall yellow sunflower in a pot",
+   "Green": "a green watering can",
+   "Orange": "a plump orange pumpkin",
+   "Purple": "a purple butterfly resting on a fence",
+   "Pink": "a pink piggy bank",
+   "Brown": "a brown teddy bear sitting on a crate",
+   "Black": "a black cat sitting upright",
+   "White": "a white dove perched on a post",
+   "Gray": "a smooth gray stone garden statue of a rabbit",
+   "Striped": "a striped scarf draped over a chair",
+   "Plaid": "a plaid picnic blanket spread on the grass",
+   "Polka dot": "an open polka-dot umbrella leaning against a bench"
+  },
+  "qa_note": "clean pass; Red anchors the painted kite on the easel",
+  "ordered_words": [
+   "Yellow",
+   "White",
+   "Pink",
+   "Orange",
+   "Red",
+   "Purple",
+   "Green",
+   "Plaid",
+   "Brown",
+   "Black",
+   "Gray",
+   "Striped",
+   "Blue",
+   "Polka dot"
+  ]
+ },
+ {
+  "basename": "land1_communication-technology.jpg",
+  "title": "Communication Technology",
+  "land": 1,
+  "land_name": "Harmonia",
+  "heroes": [
+   "Kenji",
+   "Aiko"
+  ],
+  "accent": "warm golden yellow",
+  "setting": "a warm, music-filled village classroom world of song, greetings and friendship",
+  "alt": "Phones, computers and letters in Harmonia",
+  "vocab_source": "land1-communication-technology.xhtml",
+  "vocab_pool": [
+   "Phone",
+   "Cell phone",
+   "Call",
+   "Text message",
+   "Internet",
+   "Website",
+   "Password",
+   "Username",
+   "Download",
+   "Upload",
+   "Search",
+   "Type",
+   "Click",
+   "Screen",
+   "Keyboard",
+   "Mouse",
+   "Printer",
+   "Charger",
+   "Headphones",
+   "Speaker",
+   "Camera",
+   "Video",
+   "App",
+   "Wi-Fi",
+   "Letter",
+   "Envelope",
+   "Stamp",
+   "Post office",
+   "Newspaper",
+   "Magazine"
+  ],
+  "words": [
+   "Phone",
+   "Cell phone",
+   "Keyboard",
+   "Mouse",
+   "Printer",
+   "Charger",
+   "Headphones",
+   "Speaker",
+   "Camera",
+   "Screen",
+   "Letter",
+   "Envelope",
+   "Stamp",
+   "Newspaper",
+   "Magazine"
+  ],
+  "scene_extra": "",
+  "status": "composed",
+  "anchors": {
+   "Phone": [
+    0.115,
+    0.55
+   ],
+   "Cell phone": [
+    0.27,
+    0.5
+   ],
+   "Keyboard": [
+    0.8,
+    0.6
+   ],
+   "Mouse": [
+    0.895,
+    0.645
+   ],
+   "Printer": [
+    0.115,
+    0.68
+   ],
+   "Charger": [
+    0.475,
+    0.72
+   ],
+   "Headphones": [
+    0.35,
+    0.68
+   ],
+   "Speaker": [
+    0.62,
+    0.7
+   ],
+   "Camera": [
+    0.135,
+    0.845
+   ],
+   "Screen": [
+    0.91,
+    0.475
+   ],
+   "Letter": [
+    0.28,
+    0.83
+   ],
+   "Envelope": [
+    0.44,
+    0.875
+   ],
+   "Stamp": [
+    0.72,
+    0.77
+   ],
+   "Newspaper": [
+    0.6,
+    0.85
+   ],
+   "Magazine": [
+    0.83,
+    0.88
+   ]
+  },
+  "objects_desc": {
+   "Phone": "an old-fashioned red corded telephone",
+   "Cell phone": "a modern smartphone with a softly glowing blank screen",
+   "Keyboard": "a computer keyboard with blank keys",
+   "Mouse": "a computer mouse on a mouse pad",
+   "Printer": "a desktop printer with blank paper in its tray",
+   "Charger": "a charging cable coiled beside a wall plug",
+   "Headphones": "a pair of headphones on a stand",
+   "Speaker": "a small round speaker",
+   "Camera": "a camera on a neck strap",
+   "Screen": "a computer monitor showing only simple colorful shapes",
+   "Letter": "a letter written entirely in wavy squiggle lines",
+   "Envelope": "a plain envelope",
+   "Stamp": "an oversized postage stamp with a simple flower picture",
+   "Newspaper": "a folded newspaper showing only wavy squiggle lines and one simple picture, absolutely no letters",
+   "Magazine": "a glossy magazine whose cover is ONLY a big landscape picture with a plain solid-color masthead band containing no letters at all"
+  },
+  "people_rule": "Exactly TWO children and no other people anywhere: {heroes}, each appearing exactly once, actively doing something natural in the scene. The boy MUST wear his signature blue headband exactly as in his reference photo.",
+  "job_id": "e4484ff1-53e1-42c9-975f-6bbb02dea3ec",
+  "scene_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3601bQ63HBullpQ168ApWJtOp5D/hf_20260711_142717_e4484ff1-53e1-42c9-975f-6bbb02dea3ec.png",
+  "qa_note": "re-rolled 2x (magazine title text, then missing headband); final clean. Faint dial marks on rotary phone, not legible. Second printer present unlabeled.",
+  "ordered_words": [
+   "Screen",
+   "Phone",
+   "Cell phone",
+   "Keyboard",
+   "Mouse",
+   "Printer",
+   "Letter",
+   "Headphones",
+   "Charger",
+   "Speaker",
+   "Stamp",
+   "Camera",
+   "Envelope",
+   "Newspaper",
+   "Magazine"
+  ]
+ },
+ {
+  "basename": "land1_daily-routines.jpg",
+  "title": "Daily Routines",
+  "land": 1,
+  "land_name": "Harmonia",
+  "heroes": [
+   "Kenji",
+   "Aiko"
+  ],
+  "accent": "warm golden yellow",
+  "setting": "a warm, music-filled village classroom world of song, greetings and friendship",
+  "alt": "Morning routines in Harmonia homes",
+  "vocab_source": "land1-daily-routines.xhtml",
+  "vocab_pool": [
+   "Wake up",
+   "Get up",
+   "Brush teeth",
+   "Wash face",
+   "Comb hair",
+   "Get dressed",
+   "Eat breakfast",
+   "Pack lunch",
+   "Leave home",
+   "Walk to school",
+   "Arrive",
+   "Study",
+   "Take a break",
+   "Eat lunch",
+   "Come home",
+   "Do homework",
+   "Practice",
+   "Play",
+   "Eat dinner",
+   "Watch TV",
+   "Take a bath",
+   "Read a book",
+   "Say goodnight",
+   "Turn off the light",
+   "Go to sleep",
+   "Alarm clock",
+   "Routine",
+   "Schedule",
+   "On time",
+   "Late",
+   "Early",
+   "Habit",
+   "Chores",
+   "Make the bed",
+   "Set the table",
+   "Clean up",
+   "Take out trash",
+   "Feed the pet",
+   "Water plants",
+   "Bedtime"
+  ],
+  "words": [
+   "Alarm clock",
+   "Brush teeth",
+   "Wash face",
+   "Comb hair",
+   "Get dressed",
+   "Eat breakfast",
+   "Pack lunch",
+   "Do homework",
+   "Take a bath",
+   "Feed the pet",
+   "Water plants",
+   "Take out trash",
+   "Go to sleep"
+  ],
+  "scene_extra": "",
+  "status": "composed",
+  "anchors": {
+   "Alarm clock": [
+    0.375,
+    0.36
+   ],
+   "Brush teeth": [
+    0.63,
+    0.33
+   ],
+   "Wash face": [
+    0.16,
+    0.86
+   ],
+   "Comb hair": [
+    0.315,
+    0.93
+   ],
+   "Get dressed": [
+    0.34,
+    0.64
+   ],
+   "Eat breakfast": [
+    0.475,
+    0.61
+   ],
+   "Pack lunch": [
+    0.585,
+    0.655
+   ],
+   "Do homework": [
+    0.075,
+    0.53
+   ],
+   "Take a bath": [
+    0.475,
+    0.28
+   ],
+   "Feed the pet": [
+    0.71,
+    0.93
+   ],
+   "Water plants": [
+    0.755,
+    0.32
+   ],
+   "Take out trash": [
+    0.9,
+    0.63
+   ],
+   "Go to sleep": [
+    0.2,
+    0.34
+   ]
+  },
+  "objects_desc": {
+   "Alarm clock": "a simple ringing analog alarm clock with plain dot markings",
+   "Brush teeth": "a bathroom sink with a toothbrush and toothpaste in a cup",
+   "Wash face": "a wash basin with a soft towel and a bar of soap",
+   "Comb hair": "a comb resting beside a hand mirror",
+   "Get dressed": "school clothes laid out neatly on a chair",
+   "Eat breakfast": "a breakfast bowl and toast set on the kitchen table",
+   "Pack lunch": "an open lunchbox being filled with fruit",
+   "Do homework": "a small desk with an open blank notebook and a pencil",
+   "Read a book": "an open picture book resting on an armchair",
+   "Take a bath": "a bathtub with bubbles and a rubber duck",
+   "Feed the pet": "a puppy waiting eagerly at a full food bowl",
+   "Water plants": "a watering can beside potted plants on a windowsill",
+   "Take out trash": "a tied trash bag waiting beside the door",
+   "Go to sleep": "a cozy bed with a teddy bear under a crescent-moon window"
+  },
+  "people_rule": "Exactly TWO children and no other people anywhere: {heroes}, each appearing exactly once, actively doing one routine task. The boy MUST wear his orange hoodie and signature blue headband exactly as in his reference photo; the girl MUST have her two black pigtails with orange bows and green dress exactly as in her reference photo.",
+  "job_id": "b0f3dc73-c053-49bb-9c1f-fab09905e133",
+  "scene_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3601bQ63HBullpQ168ApWJtOp5D/hf_20260711_143029_b0f3dc73-c053-49bb-9c1f-fab09905e133.png",
+  "qa_note": "re-rolled 1x (both heroes off-model); soap pseudo-text patched out; \"Read a book\" dropped (not rendered)",
+  "ordered_words": [
+   "Take a bath",
+   "Brush teeth",
+   "Water plants",
+   "Go to sleep",
+   "Alarm clock",
+   "Do homework",
+   "Get dressed",
+   "Eat breakfast",
+   "Pack lunch",
+   "Take out trash",
+   "Wash face",
+   "Comb hair",
+   "Feed the pet"
+  ]
+ },
+ {
+  "basename": "land1_days-months-numbers.jpg",
+  "title": "Days Months Numbers",
+  "land": 1,
+  "land_name": "Harmonia",
+  "heroes": [
+   "Kenji",
+   "Aiko"
+  ],
+  "accent": "warm golden yellow",
+  "setting": "a warm, music-filled village classroom world of song, greetings and friendship",
+  "alt": "Calendar page and ordinal numbers in Harmonia",
+  "vocab_source": "land1-days-months-numbers.xhtml",
+  "vocab_pool": [
+   "Sunday",
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "January",
+   "February",
+   "March",
+   "April",
+   "May",
+   "June",
+   "July",
+   "August",
+   "September",
+   "October",
+   "November",
+   "December",
+   "Today",
+   "Tomorrow",
+   "Yesterday",
+   "Week",
+   "Month",
+   "Year",
+   "Calendar",
+   "Birthday",
+   "Holiday",
+   "Date",
+   "Season"
+  ],
+  "words": [
+   "Calendar",
+   "Birthday",
+   "Holiday",
+   "Season"
+  ],
+  "scene_extra": "",
+  "status": "composed",
+  "job_id": "e1292570-47dd-4d89-81e7-4b0e7417018c",
+  "scene_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3601bQ63HBullpQ168ApWJtOp5D/hf_20260711_135459_e1292570-47dd-4d89-81e7-4b0e7417018c.png",
+  "anchors": {
+   "Calendar": [
+    0.78,
+    0.37
+   ],
+   "Birthday": [
+    0.36,
+    0.615
+   ],
+   "Holiday": [
+    0.42,
+    0.2
+   ],
+   "Season": [
+    0.5,
+    0.42
+   ]
+  },
+  "objects_desc": {
+   "Calendar": "a large wall calendar with a completely blank grid",
+   "Birthday": "a birthday cake with lit candles",
+   "Holiday": "a string of small festive pennant flags",
+   "Season": "a magical tree with four quarters: spring blossoms, green summer leaves, orange autumn leaves and snowy winter branches"
+  },
+  "qa_note": "calendar weekday letters + digits painted in; wiped and grid redrawn blank in-style. Four-season tree excellent. Sparse page (4 words) - flagged.",
+  "ordered_words": [
+   "Holiday",
+   "Season",
+   "Calendar",
+   "Birthday"
+  ]
+ },
+ {
+  "basename": "land1_emotions-feelings.jpg",
+  "title": "Emotions Feelings",
+  "land": 1,
+  "land_name": "Harmonia",
+  "heroes": [
+   "Kenji",
+   "Aiko"
+  ],
+  "accent": "warm golden yellow",
+  "setting": "a warm, music-filled village classroom world of song, greetings and friendship",
+  "alt": "A child's mixed feelings shown in a Harmonia classroom",
+  "vocab_source": "land1-emotions-feelings.xhtml",
+  "vocab_pool": [
+   "Happy",
+   "Sad",
+   "Angry",
+   "Scared",
+   "Surprised",
+   "Excited",
+   "Nervous",
+   "Calm",
+   "Tired",
+   "Bored",
+   "Confused",
+   "Proud",
+   "Frustrated",
+   "Shy",
+   "Brave",
+   "Lonely",
+   "Grateful",
+   "Jealous",
+   "Worried",
+   "Hopeful",
+   "Disappointed",
+   "Embarrassed",
+   "Curious",
+   "Comfortable",
+   "Overwhelmed",
+   "Relaxed",
+   "Content",
+   "Anxious",
+   "Loved",
+   "Safe"
+  ],
+  "words": [
+   "Happy",
+   "Surprised",
+   "Sad",
+   "Angry",
+   "Excited",
+   "Tired",
+   "Shy",
+   "Proud",
+   "Confused",
+   "Calm",
+   "Bored"
+  ],
+  "scene_extra": "",
+  "status": "composed",
+  "job_id": "f2b1b28e-5fd7-4a8d-a63d-a234b740919a",
+  "scene_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3601bQ63HBullpQ168ApWJtOp5D/hf_20260711_135546_f2b1b28e-5fd7-4a8d-a63d-a234b740919a.png",
+  "anchors": {
+   "Happy": [
+    0.37,
+    0.475
+   ],
+   "Surprised": [
+    0.525,
+    0.49
+   ],
+   "Sad": [
+    0.245,
+    0.5
+   ],
+   "Angry": [
+    0.295,
+    0.72
+   ],
+   "Excited": [
+    0.66,
+    0.47
+   ],
+   "Tired": [
+    0.76,
+    0.5
+   ],
+   "Shy": [
+    0.925,
+    0.53
+   ],
+   "Proud": [
+    0.475,
+    0.72
+   ],
+   "Confused": [
+    0.615,
+    0.7
+   ],
+   "Calm": [
+    0.755,
+    0.77
+   ],
+   "Bored": [
+    0.89,
+    0.75
+   ]
+  },
+  "objects_desc": {
+   "Happy": "the laughing happy hero boy",
+   "Surprised": "the amazed hero girl with wide eyes and an open mouth",
+   "Sad": "a child with teary downcast eyes",
+   "Angry": "a child with furrowed brows and puffed red cheeks",
+   "Scared": "a child hiding behind their hands, peeking out",
+   "Excited": "a child jumping with both arms up in delight",
+   "Tired": "a drowsy child rubbing one eye",
+   "Shy": "a child peeking out from behind a tree",
+   "Proud": "a child standing tall holding a small gold medal",
+   "Confused": "a child scratching their head with a puzzled tilt",
+   "Calm": "a child sitting cross-legged peacefully under a tree",
+   "Bored": "a child slumped with chin in hands on a bench"
+  },
+  "people_rule": "The scene includes {heroes}, each appearing exactly once ({h1} laughing happily, {h2} looking amazed and surprised), plus ten OTHER diverse village children (all clearly different from the two heroes, none repeated), each clearly showing exactly one different feeling from the object list. No adults anywhere.",
+  "qa_note": "clean after erasing Zz + \"?\" marks; Scared dropped (no child staged it); extra unlabeled crying girl bottom-left",
+  "ordered_words": [
+   "Happy",
+   "Surprised",
+   "Excited",
+   "Sad",
+   "Tired",
+   "Shy",
+   "Angry",
+   "Proud",
+   "Confused",
+   "Calm",
+   "Bored"
+  ]
+ },
+ {
+  "basename": "land1_family-relationships.jpg",
+  "title": "Family Relationships",
+  "land": 1,
+  "land_name": "Harmonia",
+  "heroes": [
+   "Kenji",
+   "Aiko"
+  ],
+  "accent": "warm golden yellow",
+  "setting": "a warm, music-filled village classroom world of song, greetings and friendship",
+  "alt": "Families in Harmonia village square",
+  "vocab_source": "land1-family-relationships.xhtml",
+  "vocab_pool": [
+   "Family",
+   "Mother",
+   "Father",
+   "Parent",
+   "Son",
+   "Daughter",
+   "Brother",
+   "Sister",
+   "Grandmother",
+   "Grandfather",
+   "Grandparent",
+   "Aunt",
+   "Uncle",
+   "Cousin",
+   "Niece",
+   "Nephew",
+   "Husband",
+   "Wife",
+   "Baby",
+   "Toddler",
+   "Child",
+   "Teenager",
+   "Adult",
+   "Elder",
+   "Stepmother",
+   "Stepfather",
+   "Half-brother",
+   "Half-sister",
+   "Foster child",
+   "Adopted",
+   "Generation",
+   "Twin",
+   "Sibling",
+   "Relative",
+   "Gather"
+  ],
+  "words": [
+   "Mother",
+   "Father",
+   "Baby",
+   "Toddler",
+   "Teenager",
+   "Grandmother",
+   "Grandfather",
+   "Twin",
+   "Family"
+  ],
+  "scene_extra": "",
+  "status": "composed",
+  "job_id": "bcf235bf-e029-4054-80c5-9ebdb5780cd3",
+  "scene_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3601bQ63HBullpQ168ApWJtOp5D/hf_20260711_135633_bcf235bf-e029-4054-80c5-9ebdb5780cd3.png",
+  "anchors": {
+   "Mother": [
+    0.375,
+    0.53
+   ],
+   "Father": [
+    0.29,
+    0.475
+   ],
+   "Baby": [
+    0.315,
+    0.77
+   ],
+   "Toddler": [
+    0.49,
+    0.8
+   ],
+   "Teenager": [
+    0.595,
+    0.52
+   ],
+   "Grandmother": [
+    0.68,
+    0.565
+   ],
+   "Grandfather": [
+    0.875,
+    0.62
+   ],
+   "Twin": [
+    0.73,
+    0.8
+   ],
+   "Family": [
+    0.47,
+    0.615
+   ]
+  },
+  "objects_desc": {
+   "Mother": "a gentle mother pouring tea",
+   "Father": "a father carrying a picnic basket",
+   "Baby": "a baby asleep in a basket cradle",
+   "Toddler": "a toddler taking wobbly first steps",
+   "Teenager": "a tall teenager wearing headphones",
+   "Grandmother": "a silver-haired grandmother knitting in a chair",
+   "Grandfather": "a grandfather with a cane and a warm smile",
+   "Twin": "twin children in matching outfits standing together",
+   "Family": "the whole family gathered around a picnic table"
+  },
+  "people_rule": "The scene includes {heroes}, each appearing exactly once among the guests, plus ONE warm multi-generation village family exactly as listed in the object list - no other people anywhere.",
+  "qa_note": "stall price-card pseudo-text blanked. OWNER FLAG: Aiko rendered with braids (no bows) instead of twin-tails - unlabeled background figure; re-roll available on request",
+  "ordered_words": [
+   "Father",
+   "Mother",
+   "Family",
+   "Teenager",
+   "Grandmother",
+   "Grandfather",
+   "Baby",
+   "Toddler",
+   "Twin"
+  ]
+ },
+ {
+  "basename": "land1_greetings-introductions.jpg",
+  "title": "Greetings Introductions",
+  "land": 1,
+  "land_name": "Harmonia",
+  "heroes": [
+   "Kenji",
+   "Aiko"
+  ],
+  "accent": "warm golden yellow",
+  "setting": "a warm, music-filled village classroom world of song, greetings and friendship",
+  "alt": "Children waving hello in Harmonia village",
+  "vocab_source": "land1-greetings-introductions.xhtml",
+  "vocab_pool": [
+   "Hello",
+   "Goodbye",
+   "Good morning",
+   "Good afternoon",
+   "Good evening",
+   "Good night",
+   "Please",
+   "Thank you",
+   "You&#x27;re welcome",
+   "Excuse me",
+   "I&#x27;m sorry",
+   "Yes",
+   "No",
+   "Name",
+   "First name",
+   "Last name",
+   "Nice to meet you",
+   "How are you?",
+   "Fine",
+   "Friend",
+   "Handshake",
+   "Wave",
+   "Bow",
+   "Hug",
+   "Smile",
+   "Welcome",
+   "Introduce",
+   "Conversation",
+   "Polite",
+   "Respect"
+  ],
+  "words": [
+   "Handshake",
+   "Wave",
+   "Bow",
+   "Hug",
+   "Smile",
+   "Friend"
+  ],
+  "scene_extra": "",
+  "status": "composed",
+  "job_id": "da889a48-a223-4d99-8611-a3fd20153c75",
+  "scene_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3601bQ63HBullpQ168ApWJtOp5D/hf_20260711_135723_da889a48-a223-4d99-8611-a3fd20153c75.png",
+  "anchors": {
+   "Handshake": [
+    0.14,
+    0.53
+   ],
+   "Wave": [
+    0.095,
+    0.65
+   ],
+   "Bow": [
+    0.3,
+    0.8
+   ],
+   "Hug": [
+    0.71,
+    0.62
+   ],
+   "Smile": [
+    0.9,
+    0.52
+   ],
+   "Friend": [
+    0.5,
+    0.545
+   ]
+  },
+  "objects_desc": {
+   "Handshake": "two villagers shaking hands",
+   "Wave": "a child waving cheerfully",
+   "Bow": "two children bowing politely to each other",
+   "Hug": "two friends hugging warmly",
+   "Smile": "a villager with a big warm smile",
+   "Friend": "the two hero children walking arm in arm as friends"
+  },
+  "people_rule": "The scene includes {heroes}, appearing exactly once as a pair walking arm in arm as friends, plus a few pairs of friendly villagers greeting one another exactly as listed in the object list.",
+  "qa_note": "clean pass; heroes anchor Friend",
+  "ordered_words": [
+   "Wave",
+   "Handshake",
+   "Friend",
+   "Hug",
+   "Smile",
+   "Bow"
+  ]
+ },
+ {
+  "basename": "land1_hobbies-recreation.jpg",
+  "title": "Hobbies Recreation",
+  "land": 1,
+  "land_name": "Harmonia",
+  "heroes": [
+   "Kenji",
+   "Aiko"
+  ],
+  "accent": "warm golden yellow",
+  "setting": "a warm, music-filled village classroom world of song, greetings and friendship",
+  "alt": "Children enjoying hobbies in Harmonia park",
+  "vocab_source": "land1-hobbies-recreation.xhtml",
+  "vocab_pool": [
+   "Hobby",
+   "Read",
+   "Draw",
+   "Paint",
+   "Sing",
+   "Dance",
+   "Cook",
+   "Bake",
+   "Garden",
+   "Swim",
+   "Ride a bike",
+   "Skateboard",
+   "Soccer",
+   "Basketball",
+   "Baseball",
+   "Tennis",
+   "Board game",
+   "Video game",
+   "Puzzle",
+   "Collect",
+   "Photography",
+   "Sew",
+   "Knit",
+   "Camp",
+   "Hike",
+   "Fish",
+   "Instrument",
+   "Piano",
+   "Guitar",
+   "Drum",
+   "Yoga",
+   "Martial arts",
+   "Volunteer",
+   "Free time",
+   "Fun"
+  ],
+  "words": [
+   "Read",
+   "Draw",
+   "Paint",
+   "Bake",
+   "Garden",
+   "Ride a bike",
+   "Skateboard",
+   "Soccer",
+   "Basketball",
+   "Tennis",
+   "Board game",
+   "Puzzle",
+   "Knit",
+   "Camp",
+   "Fish",
+   "Photography"
+  ],
+  "scene_extra": "",
+  "status": "composed",
+  "job_id": "991beaf8-393d-4042-b4ac-dca56a10f163",
+  "scene_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3601bQ63HBullpQ168ApWJtOp5D/hf_20260711_135804_991beaf8-393d-4042-b4ac-dca56a10f163.png",
+  "anchors": {
+   "Read": [
+    0.135,
+    0.72
+   ],
+   "Draw": [
+    0.28,
+    0.82
+   ],
+   "Paint": [
+    0.71,
+    0.3
+   ],
+   "Bake": [
+    0.1,
+    0.86
+   ],
+   "Garden": [
+    0.13,
+    0.53
+   ],
+   "Ride a bike": [
+    0.51,
+    0.6
+   ],
+   "Skateboard": [
+    0.31,
+    0.44
+   ],
+   "Soccer": [
+    0.45,
+    0.42
+   ],
+   "Basketball": [
+    0.56,
+    0.35
+   ],
+   "Tennis": [
+    0.5,
+    0.77
+   ],
+   "Board game": [
+    0.66,
+    0.74
+   ],
+   "Puzzle": [
+    0.51,
+    0.88
+   ],
+   "Knit": [
+    0.7,
+    0.88
+   ],
+   "Camp": [
+    0.89,
+    0.6
+   ],
+   "Fish": [
+    0.8,
+    0.68
+   ],
+   "Photography": [
+    0.83,
+    0.85
+   ]
+  },
+  "objects_desc": {
+   "Read": "an open picture book on a blanket",
+   "Draw": "a sketchpad with a simple flower doodle and colored pencils",
+   "Paint": "an easel holding a colorful painting of simple shapes",
+   "Bake": "a tray of decorated cupcakes on a stand",
+   "Garden": "a trowel and flower pots on a small garden bed",
+   "Ride a bike": "a bright bicycle on its kickstand",
+   "Skateboard": "a skateboard",
+   "Soccer": "a soccer ball",
+   "Basketball": "a basketball beside a hoop",
+   "Tennis": "a tennis racket with a ball",
+   "Board game": "an open board game with dice and pawns, its board decorated only with colored squares",
+   "Puzzle": "a half-finished jigsaw puzzle",
+   "Knit": "a ball of yarn with knitting needles",
+   "Camp": "a small camping tent",
+   "Fish": "a fishing rod leaning on a bucket",
+   "Photography": "a camera resting on a folded tripod"
+  },
+  "qa_note": "clean pass, all 16 present",
+  "ordered_words": [
+   "Paint",
+   "Skateboard",
+   "Soccer",
+   "Basketball",
+   "Garden",
+   "Ride a bike",
+   "Camp",
+   "Read",
+   "Draw",
+   "Tennis",
+   "Board game",
+   "Fish",
+   "Bake",
+   "Puzzle",
+   "Knit",
+   "Photography"
+  ]
+ },
+ {
+  "basename": "land1_manners-politeness.jpg",
+  "title": "Manners Politeness",
+  "land": 1,
+  "land_name": "Harmonia",
+  "heroes": [
+   "Kenji",
+   "Aiko"
+  ],
+  "accent": "warm golden yellow",
+  "setting": "a warm, music-filled village classroom world of song, greetings and friendship",
+  "alt": "Children being polite in Harmonia market",
+  "vocab_source": "land1-manners-politeness.xhtml",
+  "vocab_pool": [
+   "Polite",
+   "Rude",
+   "Manners",
+   "May I",
+   "Pardon",
+   "After you",
+   "Bless you",
+   "Congratulations",
+   "I appreciate it",
+   "No problem",
+   "Certainly",
+   "Of course",
+   "Patience",
+   "Kind",
+   "Gentle",
+   "Share",
+   "Take turns",
+   "Interrupt",
+   "Listen",
+   "Apologize",
+   "Forgive",
+   "Compliment",
+   "Gratitude",
+   "Considerate",
+   "Courteous"
+  ],
+  "words": [
+   "Share",
+   "Take turns",
+   "Listen",
+   "Apologize",
+   "Kind",
+   "Gentle",
+   "Bless you",
+   "After you"
+  ],
+  "scene_extra": "",
+  "status": "composed",
+  "job_id": "faef022f-efc1-4679-b59c-977bcd8ef26d",
+  "scene_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3601bQ63HBullpQ168ApWJtOp5D/hf_20260711_135936_faef022f-efc1-4679-b59c-977bcd8ef26d.png",
+  "anchors": {
+   "Share": [
+    0.24,
+    0.71
+   ],
+   "Take turns": [
+    0.475,
+    0.36
+   ],
+   "Listen": [
+    0.225,
+    0.44
+   ],
+   "Apologize": [
+    0.505,
+    0.6
+   ],
+   "Kind": [
+    0.625,
+    0.63
+   ],
+   "Gentle": [
+    0.85,
+    0.63
+   ],
+   "Bless you": [
+    0.68,
+    0.83
+   ],
+   "After you": [
+    0.8,
+    0.42
+   ]
+  },
+  "objects_desc": {
+   "Share": "the two hero children sharing a plate of cookies",
+   "Take turns": "children waiting in a neat happy line to look through a telescope",
+   "Listen": "a child listening attentively with a hand cupped to one ear",
+   "Apologize": "a child with hands together apologizing to a friend over a dropped ice cream",
+   "Kind": "a child helping another child up from the ground",
+   "Gentle": "a child gently petting a small cat",
+   "Bless you": "a child sneezing into a tissue while a friend offers the tissue box",
+   "After you": "a kindly adult holding the door open as a child walks through"
+  },
+  "people_rule": "The scene includes {heroes}, appearing exactly once as the pair sharing a plate of cookies, plus a few OTHER polite village children in small scenes exactly as listed in the object list, and ONE kindly adult holding the door open.",
+  "qa_note": "clean pass; Kind anchors the friend helping clean up the dropped ice cream",
+  "ordered_words": [
+   "Listen",
+   "Take turns",
+   "After you",
+   "Apologize",
+   "Kind",
+   "Gentle",
+   "Share",
+   "Bless you"
+  ]
+ },
+ {
+  "basename": "land1_music-instruments.jpg",
+  "title": "Music Instruments",
+  "land": 1,
+  "land_name": "Harmonia",
+  "heroes": [
+   "Kenji",
+   "Aiko"
+  ],
+  "accent": "warm golden yellow",
+  "setting": "a warm, music-filled village classroom world of song, greetings and friendship",
+  "alt": "Musical instruments in a Harmonia classroom",
+  "vocab_source": "land1-music-instruments.xhtml",
+  "vocab_pool": [
+   "Piano",
+   "Guitar",
+   "Drum",
+   "Violin",
+   "Flute",
+   "Trumpet",
+   "Tambourine",
+   "Xylophone",
+   "Melody",
+   "Rhythm",
+   "Beat",
+   "Lyrics",
+   "Choir",
+   "Orchestra",
+   "Concert",
+   "Note",
+   "Tempo",
+   "Volume",
+   "Harmony",
+   "Microphone",
+   "Headphones",
+   "Record",
+   "Practice",
+   "Performer",
+   "Audience"
+  ],
+  "words": [
+   "Piano",
+   "Guitar",
+   "Drum",
+   "Violin",
+   "Flute",
+   "Trumpet",
+   "Tambourine",
+   "Xylophone",
+   "Microphone",
+   "Headphones",
+   "Note",
+   "Choir",
+   "Performer",
+   "Audience",
+   "Record"
+  ],
+  "scene_extra": "Open evening sky above the stage stays calm and clear.",
+  "status": "composed",
+  "job_id": "c4c18d02-dd4f-40cc-b297-57cebfcd8007",
+  "scene_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3601bQ63HBullpQ168ApWJtOp5D/hf_20260711_140347_c4c18d02-dd4f-40cc-b297-57cebfcd8007.png",
+  "anchors": {
+   "Piano": [
+    0.115,
+    0.55
+   ],
+   "Guitar": [
+    0.285,
+    0.565
+   ],
+   "Drum": [
+    0.79,
+    0.565
+   ],
+   "Violin": [
+    0.545,
+    0.545
+   ],
+   "Flute": [
+    0.635,
+    0.63
+   ],
+   "Trumpet": [
+    0.72,
+    0.68
+   ],
+   "Tambourine": [
+    0.6,
+    0.79
+   ],
+   "Xylophone": [
+    0.845,
+    0.7
+   ],
+   "Microphone": [
+    0.42,
+    0.62
+   ],
+   "Headphones": [
+    0.19,
+    0.66
+   ],
+   "Note": [
+    0.49,
+    0.2
+   ],
+   "Choir": [
+    0.52,
+    0.42
+   ],
+   "Performer": [
+    0.495,
+    0.64
+   ],
+   "Audience": [
+    0.35,
+    0.88
+   ],
+   "Record": [
+    0.935,
+    0.53
+   ]
+  },
+  "objects_desc": {
+   "Piano": "an upright piano",
+   "Guitar": "an acoustic guitar on a stand",
+   "Drum": "a big drum",
+   "Violin": "a violin resting on a chair",
+   "Flute": "a silver flute on a cushion",
+   "Trumpet": "a shining trumpet",
+   "Tambourine": "a tambourine",
+   "Xylophone": "a rainbow xylophone with mallets",
+   "Microphone": "a standing microphone",
+   "Headphones": "a pair of headphones resting on a stool",
+   "Note": "a large golden music-note decoration hanging above the stage",
+   "Choir": "a small choir of children singing on risers",
+   "Performer": "the hero girl performing at center stage",
+   "Audience": "rows of villagers seated watching the show",
+   "Record": "a vinyl record leaning beside a record player"
+  },
+  "people_rule": "The scene includes {heroes}, each appearing exactly once performing on stage, plus a small children's choir and a seated audience of villagers exactly as listed in the object list.",
+  "qa_note": "clean pass; Aiko is the Performer, Kenji plays guitar",
+  "ordered_words": [
+   "Note",
+   "Choir",
+   "Piano",
+   "Headphones",
+   "Guitar",
+   "Microphone",
+   "Performer",
+   "Violin",
+   "Flute",
+   "Drum",
+   "Record",
+   "Tambourine",
+   "Trumpet",
+   "Xylophone",
+   "Audience"
+  ]
+ },
+ {
+  "basename": "land1_personal-information.jpg",
+  "title": "Personal Information",
+  "land": 1,
+  "land_name": "Harmonia",
+  "heroes": [
+   "Kenji",
+   "Aiko"
+  ],
+  "accent": "warm golden yellow",
+  "setting": "a warm, music-filled village classroom world of song, greetings and friendship",
+  "alt": "A personal ID card in Harmonia",
+  "vocab_source": "land1-personal-information.xhtml",
+  "vocab_pool": [
+   "Address",
+   "Street",
+   "City",
+   "State",
+   "Zip code",
+   "Country",
+   "Phone number",
+   "Email",
+   "Date of birth",
+   "Age",
+   "Male",
+   "Female",
+   "Signature",
+   "Social Security number",
+   "Identification",
+   "Driver&#x27;s license",
+   "Passport",
+   "Apartment number",
+   "Marital status",
+   "Single",
+   "Married",
+   "Emergency contact",
+   "Form",
+   "Application",
+   "Print",
+   "Spell",
+   "Citizen",
+   "Resident",
+   "Birth certificate",
+   "Legal"
+  ],
+  "words": [
+   "Address",
+   "Form",
+   "Signature",
+   "Passport",
+   "Identification",
+   "Birth certificate"
+  ],
+  "scene_extra": "",
+  "status": "composed",
+  "anchors": {
+   "Address": [
+    0.79,
+    0.45
+   ],
+   "Form": [
+    0.33,
+    0.79
+   ],
+   "Signature": [
+    0.36,
+    0.875
+   ],
+   "Passport": [
+    0.3,
+    0.51
+   ],
+   "Identification": [
+    0.855,
+    0.83
+   ],
+   "Birth certificate": [
+    0.62,
+    0.83
+   ]
+  },
+  "objects_desc": {
+   "Address": "a model house with a blank oval plaque beside its door",
+   "Form": "a large paper form with empty checkboxes and wavy squiggle lines",
+   "Signature": "a pen resting on a flowing squiggle signature line",
+   "Passport": "a small dark passport booklet decorated ONLY with a plain gold globe emblem, absolutely no letters or words on the cover",
+   "Identification": "an identification card showing a simple portrait and squiggle lines",
+   "Birth certificate": "an ornate bordered certificate with a ribbon seal and squiggle lines"
+  },
+  "people_rule": "Exactly TWO children and no other people anywhere: {heroes}, each appearing exactly once, actively doing something natural in the scene. The boy MUST wear his signature blue headband exactly as in his reference photo.",
+  "job_id": "3f49dc3f-abb2-4088-8d49-b7146133b721",
+  "scene_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3601bQ63HBullpQ168ApWJtOp5D/hf_20260711_144940_3f49dc3f-abb2-4088-8d49-b7146133b721.png",
+  "qa_note": "re-rolled 1x (heroes off-model); model then painted PASSPORT/Forrm/Certificate labels - all three wiped flat. Sparse page (6 words) - flagged.",
+  "ordered_words": [
+   "Address",
+   "Passport",
+   "Form",
+   "Birth certificate",
+   "Identification",
+   "Signature"
+  ]
+ },
+ {
+  "basename": "land1_pets-at-home.jpg",
+  "title": "Pets at Home",
+  "land": 1,
+  "land_name": "Harmonia",
+  "heroes": [
+   "Kenji",
+   "Aiko"
+  ],
+  "accent": "warm golden yellow",
+  "setting": "a warm, music-filled village classroom world of song, greetings and friendship",
+  "alt": "Pets and owners in Harmonia homes",
+  "vocab_source": "land1-pets-at-home.xhtml",
+  "vocab_pool": [
+   "Pet",
+   "Dog",
+   "Cat",
+   "Fish",
+   "Bird",
+   "Hamster",
+   "Turtle",
+   "Rabbit",
+   "Collar",
+   "Leash",
+   "Bowl",
+   "Cage",
+   "Veterinarian",
+   "Feed",
+   "Groom",
+   "Train",
+   "Walk",
+   "Adopt",
+   "Shelter",
+   "Loyal",
+   "Playful",
+   "Bark",
+   "Purr",
+   "Fetch",
+   "Companion"
+  ],
+  "words": [
+   "Dog",
+   "Cat",
+   "Fish",
+   "Bird",
+   "Hamster",
+   "Turtle",
+   "Rabbit",
+   "Collar",
+   "Leash",
+   "Bowl",
+   "Cage",
+   "Veterinarian"
+  ],
+  "scene_extra": "",
+  "status": "composed",
+  "job_id": "1ea20ad4-09aa-45f0-bbe6-d003e576ba1b",
+  "scene_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3601bQ63HBullpQ168ApWJtOp5D/hf_20260711_140629_1ea20ad4-09aa-45f0-bbe6-d003e576ba1b.png",
+  "anchors": {
+   "Dog": [
+    0.645,
+    0.68
+   ],
+   "Cat": [
+    0.14,
+    0.79
+   ],
+   "Fish": [
+    0.525,
+    0.8
+   ],
+   "Bird": [
+    0.085,
+    0.585
+   ],
+   "Hamster": [
+    0.33,
+    0.87
+   ],
+   "Turtle": [
+    0.85,
+    0.85
+   ],
+   "Rabbit": [
+    0.4,
+    0.65
+   ],
+   "Collar": [
+    0.6,
+    0.9
+   ],
+   "Leash": [
+    0.8,
+    0.3
+   ],
+   "Bowl": [
+    0.925,
+    0.66
+   ],
+   "Cage": [
+    0.935,
+    0.35
+   ],
+   "Veterinarian": [
+    0.755,
+    0.52
+   ]
+  },
+  "objects_desc": {
+   "Dog": "a friendly dog sitting and wagging its tail",
+   "Cat": "a striped cat lounging on a cushion",
+   "Fish": "a goldfish in a round bowl",
+   "Bird": "a small blue bird perched on top of its cage",
+   "Hamster": "a hamster running in an exercise wheel",
+   "Turtle": "a small turtle on a flat rock",
+   "Rabbit": "a floppy-eared rabbit nibbling a carrot",
+   "Collar": "a red pet collar with a plain round tag on a low table",
+   "Leash": "a leash hanging on a wall hook",
+   "Bowl": "a full pet food bowl",
+   "Cage": "a tall birdcage",
+   "Veterinarian": "a kind adult veterinarian in a white coat gently examining the dog"
+  },
+  "people_rule": "The scene includes {heroes}, each appearing exactly once caring for the pets, plus ONE kind adult veterinarian in a white coat - no other people.",
+  "qa_note": "clean pass; second small cage + caged bird present unlabeled",
+  "ordered_words": [
+   "Leash",
+   "Cage",
+   "Bird",
+   "Rabbit",
+   "Veterinarian",
+   "Bowl",
+   "Cat",
+   "Fish",
+   "Dog",
+   "Hamster",
+   "Collar",
+   "Turtle"
+  ]
+ },
+ {
+  "basename": "land1_school-events-activities.jpg",
+  "title": "School Events Activities",
+  "land": 1,
+  "land_name": "Harmonia",
+  "heroes": [
+   "Kenji",
+   "Aiko"
+  ],
+  "accent": "warm golden yellow",
+  "setting": "a warm, music-filled village classroom world of song, greetings and friendship",
+  "alt": "School fair, science day and field trip in Harmonia",
+  "vocab_source": "land1-school-events-activities.xhtml",
+  "vocab_pool": [
+   "Assembly",
+   "Field trip",
+   "Science fair",
+   "Talent show",
+   "Picture day",
+   "Spirit week",
+   "Book fair",
+   "Fire drill",
+   "Pep rally",
+   "Graduation",
+   "Award",
+   "Certificate",
+   "Ceremony",
+   "Auditorium",
+   "Stage",
+   "Cafeteria",
+   "Gymnasium",
+   "Recess",
+   "Semester",
+   "Yearbook",
+   "Clubs",
+   "Team",
+   "Coach",
+   "Captain",
+   "Tryout"
+  ],
+  "words": [
+   "Science fair",
+   "Talent show",
+   "Picture day",
+   "Book fair",
+   "Fire drill",
+   "Graduation",
+   "Award",
+   "Certificate",
+   "Stage",
+   "Yearbook",
+   "Coach",
+   "Team"
+  ],
+  "scene_extra": "",
+  "status": "composed",
+  "anchors": {
+   "Science fair": [
+    0.2,
+    0.76
+   ],
+   "Talent show": [
+    0.475,
+    0.475
+   ],
+   "Picture day": [
+    0.72,
+    0.47
+   ],
+   "Book fair": [
+    0.79,
+    0.8
+   ],
+   "Fire drill": [
+    0.115,
+    0.22
+   ],
+   "Graduation": [
+    0.085,
+    0.38
+   ],
+   "Award": [
+    0.045,
+    0.525
+   ],
+   "Certificate": [
+    0.19,
+    0.375
+   ],
+   "Stage": [
+    0.27,
+    0.55
+   ],
+   "Yearbook": [
+    0.875,
+    0.615
+   ],
+   "Coach": [
+    0.61,
+    0.29
+   ],
+   "Team": [
+    0.68,
+    0.37
+   ]
+  },
+  "objects_desc": {
+   "Science fair": "a display table where a child's model volcano erupts beside colorful bubbling flasks - the table has NO sign or card on it",
+   "Talent show": "a child juggling colorful balls on the stage",
+   "Picture day": "a camera on a tripod facing a decorated photo backdrop",
+   "Book fair": "a wooden stall of small books, every single cover showing ONLY one big colorful picture - no letters or words on any cover",
+   "Fire drill": "a red alarm bell on the wall with children lining up neatly below it",
+   "Graduation": "a child proudly wearing a graduation cap and gown",
+   "Award": "a shining gold medal on a ribbon displayed on a stand",
+   "Certificate": "a framed award document on an easel, decorated only with a gold seal, ribbon and wavy squiggle lines - NO title word, NO letters",
+   "Stage": "a small wooden stage decorated with bunting",
+   "Yearbook": "an open book showing a grid of small painted portraits",
+   "Coach": "an adult coach with a cap and a whistle",
+   "Team": "a group of children in matching plain blue jerseys"
+  },
+  "people_rule": "The scene includes {heroes}, each appearing EXACTLY ONCE and never twice. The hero girl MUST have her two curly black twin-tail pigtails with orange bows and green dress exactly as in her reference photo; she is browsing the book stall. The hero boy MUST wear his blue headband and orange hoodie; he watches the volcano. Several OTHER schoolchildren staff the stations, all clearly different from the heroes, plus ONE adult coach. The child being photographed is a red-haired boy.",
+  "job_id": "d5310603-769b-4123-9c54-ad1a8c900c65",
+  "scene_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3601bQ63HBullpQ168ApWJtOp5D/hf_20260711_150006_d5310603-769b-4123-9c54-ad1a8c900c65.png",
+  "qa_note": "re-rolled 2x (text leaks + off-model/duplicate Aiko); final clean",
+  "ordered_words": [
+   "Fire drill",
+   "Coach",
+   "Graduation",
+   "Certificate",
+   "Talent show",
+   "Team",
+   "Picture day",
+   "Award",
+   "Stage",
+   "Yearbook",
+   "Science fair",
+   "Book fair"
+  ]
+ },
+ {
+  "basename": "land1_the-classroom.jpg",
+  "title": "The Classroom",
+  "land": 1,
+  "land_name": "Harmonia",
+  "heroes": [
+   "Kenji",
+   "Aiko"
+  ],
+  "accent": "warm golden yellow",
+  "setting": "a warm, music-filled village classroom world of song, greetings and friendship",
+  "alt": "Children writing at desks in Harmonia",
+  "vocab_source": "land1-the-classroom.xhtml",
+  "vocab_pool": [
+   "School",
+   "Classroom",
+   "Teacher",
+   "Student",
+   "Desk",
+   "Chair",
+   "Whiteboard",
+   "Marker",
+   "Eraser",
+   "Pencil",
+   "Pen",
+   "Notebook",
+   "Textbook",
+   "Paper",
+   "Folder",
+   "Backpack",
+   "Ruler",
+   "Scissors",
+   "Glue",
+   "Tape",
+   "Calculator",
+   "Computer",
+   "Laptop",
+   "Tablet",
+   "Projector",
+   "Globe",
+   "Map",
+   "Clock",
+   "Bell",
+   "Homework",
+   "Test",
+   "Quiz",
+   "Grade",
+   "Report card",
+   "Recess",
+   "Lunch period",
+   "Library",
+   "Gymnasium",
+   "Cafeteria",
+   "Principal",
+   "Counselor",
+   "Attendance",
+   "Absent",
+   "Present",
+   "Field trip"
+  ],
+  "words": [
+   "Desk",
+   "Chair",
+   "Whiteboard",
+   "Marker",
+   "Eraser",
+   "Pencil",
+   "Pen",
+   "Notebook",
+   "Textbook",
+   "Backpack",
+   "Ruler",
+   "Scissors",
+   "Glue",
+   "Calculator",
+   "Computer",
+   "Globe",
+   "Map",
+   "Clock",
+   "Bell"
+  ],
+  "scene_extra": "",
+  "status": "composed",
+  "job_id": "9798a599-2ece-4c65-8474-cfcc8b385977",
+  "scene_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3601bQ63HBullpQ168ApWJtOp5D/hf_20260709_080915_9798a599-2ece-4c65-8474-cfcc8b385977.png",
+  "anchors": {
+   "Desk": [
+    0.28,
+    0.75
+   ],
+   "Chair": [
+    0.875,
+    0.715
+   ],
+   "Whiteboard": [
+    0.645,
+    0.44
+   ],
+   "Marker": [
+    0.675,
+    0.545
+   ],
+   "Eraser": [
+    0.72,
+    0.544
+   ],
+   "Pencil": [
+    0.335,
+    0.762
+   ],
+   "Pen": [
+    0.419,
+    0.759
+   ],
+   "Notebook": [
+    0.376,
+    0.731
+   ],
+   "Textbook": [
+    0.392,
+    0.61
+   ],
+   "Backpack": [
+    0.916,
+    0.862
+   ],
+   "Ruler": [
+    0.735,
+    0.947
+   ],
+   "Scissors": [
+    0.739,
+    0.895
+   ],
+   "Glue": [
+    0.797,
+    0.879
+   ],
+   "Calculator": [
+    0.06,
+    0.85
+   ],
+   "Computer": [
+    0.9,
+    0.6
+   ],
+   "Globe": [
+    0.19,
+    0.5
+   ],
+   "Map": [
+    0.29,
+    0.4
+   ],
+   "Clock": [
+    0.3,
+    0.27
+   ],
+   "Bell": [
+    0.15,
+    0.35
+   ]
+  },
+  "ordered_words": [
+   "Clock",
+   "Bell",
+   "Map",
+   "Whiteboard",
+   "Globe",
+   "Textbook",
+   "Marker",
+   "Eraser",
+   "Computer",
+   "Desk",
+   "Pencil",
+   "Notebook",
+   "Pen",
+   "Chair",
+   "Calculator",
+   "Ruler",
+   "Scissors",
+   "Glue",
+   "Backpack"
+  ]
+ },
+ {
+  "basename": "land1_the-home.jpg",
+  "title": "The Home",
+  "land": 1,
+  "land_name": "Harmonia",
+  "heroes": [
+   "Kenji",
+   "Aiko"
+  ],
+  "accent": "warm golden yellow",
+  "setting": "a warm, music-filled village classroom world of song, greetings and friendship",
+  "alt": "Rooms and furniture inside a Harmonia home",
+  "vocab_source": "land1-the-home.xhtml",
+  "vocab_pool": [
+   "House",
+   "Apartment",
+   "Room",
+   "Kitchen",
+   "Living room",
+   "Bedroom",
+   "Bathroom",
+   "Dining room",
+   "Garage",
+   "Basement",
+   "Attic",
+   "Hallway",
+   "Door",
+   "Window",
+   "Roof",
+   "Floor",
+   "Ceiling",
+   "Wall",
+   "Stairs",
+   "Closet",
+   "Furniture",
+   "Sofa",
+   "Table",
+   "Bed",
+   "Pillow",
+   "Blanket",
+   "Lamp",
+   "Mirror",
+   "Curtains",
+   "Rug",
+   "Sink",
+   "Toilet",
+   "Bathtub",
+   "Shower",
+   "Refrigerator",
+   "Microwave",
+   "Dishwasher",
+   "Washing machine",
+   "Dryer",
+   "Key",
+   "Lock",
+   "Doorbell",
+   "Mailbox",
+   "Yard",
+   "Porch"
+  ],
+  "words": [
+   "Door",
+   "Window",
+   "Roof",
+   "Stairs",
+   "Sofa",
+   "Table",
+   "Bed",
+   "Pillow",
+   "Blanket",
+   "Lamp",
+   "Mirror",
+   "Curtains",
+   "Rug",
+   "Sink",
+   "Bathtub",
+   "Refrigerator",
+   "Key",
+   "Mailbox",
+   "Porch"
+  ],
+  "scene_extra": "",
+  "status": "composed",
+  "job_id": "1b671d48-d1e1-407f-9492-1fbe3213fdc3",
+  "scene_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3601bQ63HBullpQ168ApWJtOp5D/hf_20260711_140815_1b671d48-d1e1-407f-9492-1fbe3213fdc3.png",
+  "anchors": {
+   "Door": [
+    0.115,
+    0.44
+   ],
+   "Window": [
+    0.3,
+    0.31
+   ],
+   "Roof": [
+    0.07,
+    0.09
+   ],
+   "Stairs": [
+    0.53,
+    0.33
+   ],
+   "Sofa": [
+    0.655,
+    0.51
+   ],
+   "Table": [
+    0.42,
+    0.68
+   ],
+   "Bed": [
+    0.83,
+    0.7
+   ],
+   "Pillow": [
+    0.86,
+    0.615
+   ],
+   "Blanket": [
+    0.8,
+    0.75
+   ],
+   "Lamp": [
+    0.755,
+    0.42
+   ],
+   "Mirror": [
+    0.665,
+    0.34
+   ],
+   "Curtains": [
+    0.235,
+    0.33
+   ],
+   "Rug": [
+    0.685,
+    0.62
+   ],
+   "Sink": [
+    0.625,
+    0.86
+   ],
+   "Bathtub": [
+    0.925,
+    0.38
+   ],
+   "Refrigerator": [
+    0.79,
+    0.35
+   ],
+   "Key": [
+    0.03,
+    0.44
+   ],
+   "Mailbox": [
+    0.055,
+    0.63
+   ],
+   "Porch": [
+    0.18,
+    0.615
+   ]
+  },
+  "objects_desc": {
+   "Door": "a welcoming front door",
+   "Window": "a bright window with flower boxes",
+   "Roof": "a warm tiled roof",
+   "Stairs": "a wooden staircase",
+   "Sofa": "a comfy sofa",
+   "Table": "a round dining table",
+   "Bed": "a neatly made bed",
+   "Pillow": "a plump pillow at the head of the bed",
+   "Blanket": "a folded blanket at the foot of the bed",
+   "Lamp": "a glowing table lamp",
+   "Mirror": "an oval wall mirror",
+   "Curtains": "soft curtains framing a window",
+   "Rug": "a round patterned rug",
+   "Sink": "a kitchen sink",
+   "Bathtub": "a bathtub with claw feet",
+   "Refrigerator": "a tall refrigerator",
+   "Key": "an oversized golden key hanging on a hook by the door",
+   "Mailbox": "a front-yard mailbox on a post",
+   "Porch": "a front porch with a small bench"
+  },
+  "qa_note": "letter-like switch toggle redrawn plain. OWNER FLAG: Aiko rear view shows single ponytail (marginal); no marker on her",
+  "ordered_words": [
+   "Roof",
+   "Curtains",
+   "Window",
+   "Stairs",
+   "Key",
+   "Door",
+   "Mirror",
+   "Lamp",
+   "Refrigerator",
+   "Bathtub",
+   "Mailbox",
+   "Porch",
+   "Sofa",
+   "Rug",
+   "Pillow",
+   "Table",
+   "Blanket",
+   "Bed",
+   "Sink"
+  ]
+ },
+ {
+  "basename": "land1_the-neighborhood.jpg",
+  "title": "The Neighborhood",
+  "land": 1,
+  "land_name": "Harmonia",
+  "heroes": [
+   "Kenji",
+   "Aiko"
+  ],
+  "accent": "warm golden yellow",
+  "setting": "a warm, music-filled village classroom world of song, greetings and friendship",
+  "alt": "Streets, parks and shops in Harmonia neighborhood",
+  "vocab_source": "land1-the-neighborhood.xhtml",
+  "vocab_pool": [
+   "Neighbor",
+   "Block",
+   "Corner",
+   "Lane",
+   "Avenue",
+   "Apartment",
+   "Townhouse",
+   "Yard",
+   "Community",
+   "Park",
+   "Library",
+   "Church",
+   "Mosque",
+   "Temple",
+   "Grocery store",
+   "Laundromat",
+   "Pharmacy",
+   "Gas station",
+   "Barbershop",
+   "Salon",
+   "Daycare",
+   "Clinic",
+   "Senior center",
+   "Playground",
+   "Community garden"
+  ],
+  "words": [
+   "Park",
+   "Playground",
+   "Library",
+   "Grocery store",
+   "Pharmacy",
+   "Gas station",
+   "Barbershop",
+   "Laundromat",
+   "Clinic",
+   "Community garden",
+   "Church",
+   "Mosque",
+   "Temple"
+  ],
+  "scene_extra": "",
+  "status": "composed",
+  "job_id": "3f01f643-6d2e-4552-aae1-b7b9576d115b",
+  "scene_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3601bQ63HBullpQ168ApWJtOp5D/hf_20260711_140908_3f01f643-6d2e-4552-aae1-b7b9576d115b.png",
+  "anchors": {
+   "Park": [
+    0.15,
+    0.28
+   ],
+   "Playground": [
+    0.045,
+    0.72
+   ],
+   "Library": [
+    0.075,
+    0.55
+   ],
+   "Grocery store": [
+    0.35,
+    0.5
+   ],
+   "Pharmacy": [
+    0.53,
+    0.42
+   ],
+   "Gas station": [
+    0.575,
+    0.62
+   ],
+   "Barbershop": [
+    0.655,
+    0.63
+   ],
+   "Laundromat": [
+    0.87,
+    0.65
+   ],
+   "Clinic": [
+    0.895,
+    0.44
+   ],
+   "Community garden": [
+    0.63,
+    0.8
+   ],
+   "Church": [
+    0.72,
+    0.22
+   ],
+   "Mosque": [
+    0.645,
+    0.16
+   ],
+   "Temple": [
+    0.885,
+    0.22
+   ]
+  },
+  "objects_desc": {
+   "Park": "a small green park with trees and a winding path",
+   "Playground": "a corner playground with a little slide",
+   "Library": "a building with tall windows full of bookshelves",
+   "Grocery store": "a shopfront with fruit and vegetable stands outside",
+   "Pharmacy": "a shop with a green cross symbol above the door",
+   "Gas station": "a small fuel station with two pumps",
+   "Barbershop": "a shop with a red-and-white striped barber pole",
+   "Laundromat": "a shop window showing a row of round washing machines",
+   "Clinic": "a white building with a red cross symbol",
+   "Community garden": "raised garden beds with vegetables and flowers",
+   "Church": "a small chapel with a steeple",
+   "Mosque": "a small mosque with a dome and crescent",
+   "Temple": "a small temple with tiered eaves"
+  },
+  "qa_note": "all signage squiggle-only. Kenji generated without headband - painted one on (small figure, reads clean at print size); flag for owner",
+  "ordered_words": [
+   "Mosque",
+   "Park",
+   "Church",
+   "Temple",
+   "Pharmacy",
+   "Clinic",
+   "Library",
+   "Grocery store",
+   "Gas station",
+   "Barbershop",
+   "Laundromat",
+   "Playground",
+   "Community garden"
+  ]
+ },
+ {
+  "basename": "land1_the-playground-recess.jpg",
+  "title": "The Playground Recess",
+  "land": 1,
+  "land_name": "Harmonia",
+  "heroes": [
+   "Kenji",
+   "Aiko"
+  ],
+  "accent": "warm golden yellow",
+  "setting": "a warm, music-filled village classroom world of song, greetings and friendship",
+  "alt": "Playground equipment and children playing in Harmonia",
+  "vocab_source": "land1-the-playground-recess.xhtml",
+  "vocab_pool": [
+   "Playground",
+   "Swing",
+   "Slide",
+   "Seesaw",
+   "Monkey bars",
+   "Sandbox",
+   "Jump rope",
+   "Hopscotch",
+   "Tag",
+   "Hide and seek",
+   "Catch",
+   "Throw",
+   "Kick",
+   "Run",
+   "Jump",
+   "Climb",
+   "Skip",
+   "Race",
+   "Team",
+   "Fair",
+   "Winner",
+   "Loser",
+   "Score",
+   "Whistle",
+   "Line up",
+   "Bench",
+   "Shade",
+   "Water fountain",
+   "Recess",
+   "Outdoor"
+  ],
+  "words": [
+   "Swing",
+   "Slide",
+   "Seesaw",
+   "Monkey bars",
+   "Sandbox",
+   "Jump rope",
+   "Hopscotch",
+   "Bench",
+   "Shade",
+   "Water fountain",
+   "Kick",
+   "Catch",
+   "Race"
+  ],
+  "scene_extra": "",
+  "status": "composed",
+  "job_id": "6988a0f8-b5c5-4053-a7dc-5b8cb54d393c",
+  "scene_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3601bQ63HBullpQ168ApWJtOp5D/hf_20260711_140949_6988a0f8-b5c5-4053-a7dc-5b8cb54d393c.png",
+  "anchors": {
+   "Swing": [
+    0.42,
+    0.475
+   ],
+   "Slide": [
+    0.84,
+    0.52
+   ],
+   "Seesaw": [
+    0.26,
+    0.6
+   ],
+   "Monkey bars": [
+    0.635,
+    0.42
+   ],
+   "Sandbox": [
+    0.5,
+    0.68
+   ],
+   "Jump rope": [
+    0.1,
+    0.63
+   ],
+   "Hopscotch": [
+    0.2,
+    0.8
+   ],
+   "Bench": [
+    0.14,
+    0.55
+   ],
+   "Shade": [
+    0.13,
+    0.25
+   ],
+   "Water fountain": [
+    0.075,
+    0.815
+   ],
+   "Kick": [
+    0.38,
+    0.82
+   ],
+   "Catch": [
+    0.575,
+    0.82
+   ],
+   "Race": [
+    0.79,
+    0.78
+   ]
+  },
+  "objects_desc": {
+   "Swing": "a swing set",
+   "Slide": "a tall curvy slide",
+   "Seesaw": "a seesaw",
+   "Monkey bars": "a set of monkey bars",
+   "Sandbox": "a sandbox with little buckets",
+   "Jump rope": "a child skipping over a jump rope",
+   "Hopscotch": "a chalk hopscotch grid of blank squares",
+   "Bench": "a park bench",
+   "Shade": "a big leafy shade tree",
+   "Water fountain": "a small drinking fountain",
+   "Kick": "a child kicking a soccer ball",
+   "Catch": "a child catching a beach ball",
+   "Race": "two children racing side by side"
+  },
+  "people_rule": "The scene includes {heroes}, each appearing exactly once playing happily, plus several OTHER children at recess exactly as listed in the object list. No adults.",
+  "qa_note": "hopscotch digits 1-6 wiped (blank chalk squares now)",
+  "ordered_words": [
+   "Shade",
+   "Swing",
+   "Monkey bars",
+   "Jump rope",
+   "Bench",
+   "Seesaw",
+   "Slide",
+   "Water fountain",
+   "Hopscotch",
+   "Kick",
+   "Sandbox",
+   "Catch",
+   "Race"
+  ]
+ },
+ {
+  "basename": "land2_basic-math-operations.jpg",
+  "title": "Basic Math Operations",
+  "land": 2,
+  "land_name": "Numeria",
+  "heroes": [
+   "Octavia",
+   "Kwame"
+  ],
+  "accent": "soft sage green",
+  "setting": "a playful tidy market-town world of shapes, patterns and friendly trade",
+  "alt": "Addition, subtraction, multiplication and division in Numeria",
+  "vocab_source": "land2-basic-math-operations.xhtml",
+  "vocab_pool": [
+   "Add",
+   "Addition",
+   "Plus",
+   "Subtract",
+   "Subtraction",
+   "Minus",
+   "Multiply",
+   "Multiplication",
+   "Times",
+   "Divide",
+   "Division",
+   "Equals",
+   "Sum",
+   "Difference",
+   "Product",
+   "Quotient",
+   "Remainder",
+   "Fraction",
+   "Decimal",
+   "Percent",
+   "Equation",
+   "Problem",
+   "Answer",
+   "Estimate",
+   "Calculate",
+   "Greater than",
+   "Less than",
+   "Equal to",
+   "Average",
+   "Total"
+  ],
+  "words": [
+   "Add",
+   "Subtract",
+   "Plus",
+   "Minus",
+   "Equals",
+   "Calculate"
+  ],
+  "scene_extra": "",
+  "status": "composed",
+  "job_id": "5f508a16-bde6-4d89-8a88-465df252e2f4",
+  "scene_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3601bQ63HBullpQ168ApWJtOp5D/hf_20260711_151941_5f508a16-bde6-4d89-8a88-465df252e2f4.png",
+  "anchors": {
+   "Add": [
+    0.4,
+    0.54
+   ],
+   "Subtract": [
+    0.6,
+    0.5
+   ],
+   "Plus": [
+    0.22,
+    0.72
+   ],
+   "Minus": [
+    0.4,
+    0.74
+   ],
+   "Equals": [
+    0.585,
+    0.735
+   ],
+   "Calculate": [
+    0.78,
+    0.7
+   ]
+  },
+  "objects_desc": {
+   "Add": "the hero boy combining two small piles of apples into one basket",
+   "Subtract": "the hero girl taking two pears out of a full basket",
+   "Plus": "a large wooden plus-symbol block",
+   "Minus": "a large wooden minus-symbol block",
+   "Equals": "a large wooden equals-symbol block of two stacked bars",
+   "Calculate": "a wooden abacus with colorful beads"
+  }
+ },
+ {
+  "basename": "land2_budget-savings.jpg",
+  "title": "Budget Savings",
+  "land": 2,
+  "land_name": "Numeria",
+  "heroes": [
+   "Octavia",
+   "Kwame"
+  ],
+  "accent": "soft sage green",
+  "setting": "a playful tidy market-town world of shapes, patterns and friendly trade",
+  "alt": "A piggy bank and savings chart in Numeria",
+  "vocab_source": "land2-budget-savings.xhtml",
+  "vocab_pool": [
+   "Budget",
+   "Savings",
+   "Income",
+   "Expenses",
+   "Afford",
+   "Borrow",
+   "Lend",
+   "Owe",
+   "Debt",
+   "Interest",
+   "Invest",
+   "Profit",
+   "Loss",
+   "Tax",
+   "Tip",
+   "Discount",
+   "Free",
+   "Charge",
+   "Fee",
+   "Rent",
+   "Bill",
+   "Receipt",
+   "Wallet",
+   "Piggy bank",
+   "Goal"
+  ],
+  "words": [
+   "Piggy bank",
+   "Wallet",
+   "Savings",
+   "Goal",
+   "Receipt",
+   "Tip",
+   "Lend"
+  ],
+  "scene_extra": "",
+  "status": "composed",
+  "anchors": {
+   "Piggy bank": [
+    0.075,
+    0.455
+   ],
+   "Wallet": [
+    0.11,
+    0.715
+   ],
+   "Savings": [
+    0.205,
+    0.41
+   ],
+   "Goal": [
+    0.13,
+    0.175
+   ],
+   "Receipt": [
+    0.835,
+    0.88
+   ],
+   "Tip": [
+    0.635,
+    0.92
+   ],
+   "Lend": [
+    0.7,
+    0.575
+   ]
+  },
+  "objects_desc": {
+   "Piggy bank": "a pink piggy bank on a shelf",
+   "Wallet": "an open leather wallet",
+   "Savings": "a glass jar filled with gold coins",
+   "Goal": "a child's drawing of a red bicycle pinned above the savings jar",
+   "Receipt": "a long paper receipt covered only in wavy squiggle lines, completely blank header, NO letters or words anywhere on it",
+   "Tip": "a small dish holding a few coins beside a teacup",
+   "Lend": "the hero boy handing a toy truck to another child"
+  },
+  "people_rule": "The scene includes {heroes}, each appearing exactly once - the hero girl is a dark-skinned Black girl with a long side braid wearing her pink dress with a bow and pink shoes; the hero boy is a dark-skinned Black boy with short curly hair ALWAYS wearing his grey tech hoodie with glowing cyan hexagon panels and grey cargo pants, never a suit - plus ONE other village child receiving a lent toy; no other people.",
+  "v1_scene_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3601bQ63HBullpQ168ApWJtOp5D/hf_20260711_152026_fa3d619e-08cc-483c-bd6f-e8620c2afdac.png",
+  "job_id": "b1c01bbe-07f0-4d1e-8da0-07521f5fbdaa",
+  "scene_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3601bQ63HBullpQ168ApWJtOp5D/hf_20260711_194525_b1c01bbe-07f0-4d1e-8da0-07521f5fbdaa.png",
+  "qa_note": "re-rolled v2: heroes on-model, receipt blank; v1 had Kwame in suit + readable RECEIPT",
+  "ordered_words": [
+   "Goal",
+   "Piggy bank",
+   "Savings",
+   "Lend",
+   "Wallet",
+   "Tip",
+   "Receipt"
+  ]
+ },
+ {
+  "basename": "land2_calendar-math.jpg",
+  "title": "Calendar Math",
+  "land": 2,
+  "land_name": "Numeria",
+  "heroes": [
+   "Octavia",
+   "Kwame"
+  ],
+  "accent": "soft sage green",
+  "setting": "a playful tidy market-town world of shapes, patterns and friendly trade",
+  "alt": "A large calendar with numbers in Numeria",
+  "vocab_source": "land2-calendar-math.xhtml",
+  "vocab_pool": [
+   "Date",
+   "Day",
+   "Week",
+   "Month",
+   "Year",
+   "Decade",
+   "Century",
+   "Leap year",
+   "Quarter",
+   "Semester",
+   "Weekend",
+   "Weekday",
+   "Yesterday",
+   "Today",
+   "Tomorrow",
+   "Morning",
+   "Afternoon",
+   "Evening",
+   "Midnight",
+   "Noon",
+   "Dawn",
+   "Dusk",
+   "Annual",
+   "Biweekly",
+   "Schedule"
+  ],
+  "words": [
+   "Morning",
+   "Noon",
+   "Evening",
+   "Midnight",
+   "Schedule"
+  ],
+  "scene_extra": "A cozy room whose wall holds FOUR round windows in a row, each showing the same village at a different time of day.",
+  "status": "composed",
+  "job_id": "8e060530-95f3-4868-9af6-2e3de0f3f78b",
+  "scene_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3601bQ63HBullpQ168ApWJtOp5D/hf_20260711_152113_8e060530-95f3-4868-9af6-2e3de0f3f78b.png",
+  "anchors": {
+   "Morning": [
+    0.15,
+    0.42
+   ],
+   "Noon": [
+    0.37,
+    0.4
+   ],
+   "Evening": [
+    0.59,
+    0.4
+   ],
+   "Midnight": [
+    0.81,
+    0.4
+   ],
+   "Schedule": [
+    0.48,
+    0.65
+   ]
+  },
+  "objects_desc": {
+   "Morning": "a round window showing a golden sunrise over the village",
+   "Noon": "a round window showing the bright sun high in a blue sky",
+   "Evening": "a round window showing an orange dusk with a lit lantern",
+   "Midnight": "a round window showing a crescent moon and stars",
+   "Schedule": "a wall planner of blank squares decorated with small picture stickers"
+  }
+ },
+ {
+  "basename": "land2_charts-graphs.jpg",
+  "title": "Charts Graphs",
+  "land": 2,
+  "land_name": "Numeria",
+  "heroes": [
+   "Octavia",
+   "Kwame"
+  ],
+  "accent": "soft sage green",
+  "setting": "a playful tidy market-town world of shapes, patterns and friendly trade",
+  "alt": "Bar graphs and pie charts in Numeria",
+  "vocab_source": "land2-charts-graphs.xhtml",
+  "vocab_pool": [
+   "Graph",
+   "Bar graph",
+   "Pie chart",
+   "Line graph",
+   "Data",
+   "Table",
+   "Row",
+   "Column",
+   "Title",
+   "Label",
+   "Axis",
+   "Survey",
+   "Result",
+   "Compare",
+   "Increase",
+   "Decrease",
+   "Pattern",
+   "Predict",
+   "Tally",
+   "Chart"
+  ],
+  "words": [
+   "Bar graph",
+   "Pie chart",
+   "Line graph",
+   "Tally",
+   "Survey"
+  ],
+  "scene_extra": "",
+  "status": "composed",
+  "job_id": "808f811f-a25e-41d3-839e-112c13e29a67",
+  "scene_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3601bQ63HBullpQ168ApWJtOp5D/hf_20260711_152212_808f811f-a25e-41d3-839e-112c13e29a67.png",
+  "anchors": {
+   "Pie chart": [
+    0.29,
+    0.37
+   ],
+   "Bar graph": [
+    0.66,
+    0.53
+   ],
+   "Line graph": [
+    0.89,
+    0.39
+   ],
+   "Tally": [
+    0.87,
+    0.78
+   ],
+   "Survey": [
+    0.44,
+    0.56
+   ]
+  },
+  "objects_desc": {
+   "Bar graph": "a large easel poster with three plain colored bars of different heights, topped with small fruit pictures",
+   "Pie chart": "a round poster divided into plain colored slices",
+   "Line graph": "a poster with a single rising zigzag line",
+   "Tally": "a small chalkboard with neat groups of five chalk strokes",
+   "Survey": "the hero girl holding a clipboard of squiggle lines while asking two villagers questions"
+  },
+  "people_rule": "The scene includes {heroes}, each appearing exactly once, plus TWO villagers being surveyed - no other people."
+ },
+ {
+  "basename": "land2_cooking-measurements.jpg",
+  "title": "Cooking Measurements",
+  "land": 2,
+  "land_name": "Numeria",
+  "heroes": [
+   "Octavia",
+   "Kwame"
+  ],
+  "accent": "soft sage green",
+  "setting": "a playful tidy market-town world of shapes, patterns and friendly trade",
+  "alt": "Measuring cups and spoons in a Numeria kitchen",
+  "vocab_source": "land2-cooking-measurements.xhtml",
+  "vocab_pool": [
+   "Recipe",
+   "Ingredient",
+   "Measure",
+   "Cup",
+   "Tablespoon",
+   "Teaspoon",
+   "Pinch",
+   "Dash",
+   "Stir",
+   "Mix",
+   "Pour",
+   "Preheat",
+   "Bake",
+   "Cool",
+   "Serving",
+   "Serving size",
+   "Yield",
+   "Double",
+   "Halve",
+   "Level",
+   "Heaping",
+   "Sift",
+   "Whisk",
+   "Grease",
+   "Batch",
+   "Timer",
+   "Degrees",
+   "Measuring cup",
+   "Measuring spoon",
+   "Spatula"
+  ],
+  "words": [
+   "Recipe",
+   "Ingredient",
+   "Measuring cup",
+   "Measuring spoon",
+   "Whisk",
+   "Spatula",
+   "Sift",
+   "Stir",
+   "Mix",
+   "Pour",
+   "Bake",
+   "Timer"
+  ],
+  "scene_extra": "",
+  "status": "composed",
+  "job_id": "112f7443-84a4-4d01-824c-78b35192507b",
+  "scene_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3601bQ63HBullpQ168ApWJtOp5D/hf_20260711_152253_112f7443-84a4-4d01-824c-78b35192507b.png",
+  "anchors": {
+   "Recipe": [
+    0.17,
+    0.82
+   ],
+   "Ingredient": [
+    0.08,
+    0.72
+   ],
+   "Measuring cup": [
+    0.25,
+    0.78
+   ],
+   "Measuring spoon": [
+    0.31,
+    0.9
+   ],
+   "Whisk": [
+    0.43,
+    0.81
+   ],
+   "Spatula": [
+    0.55,
+    0.78
+   ],
+   "Sift": [
+    0.67,
+    0.81
+   ],
+   "Stir": [
+    0.575,
+    0.57
+   ],
+   "Mix": [
+    0.62,
+    0.65
+   ],
+   "Pour": [
+    0.3,
+    0.575
+   ],
+   "Bake": [
+    0.85,
+    0.6
+   ],
+   "Timer": [
+    0.895,
+    0.85
+   ]
+  },
+  "objects_desc": {
+   "Recipe": "a recipe card showing a cake picture and wavy squiggle lines",
+   "Ingredient": "a basket holding eggs, a flour sack and butter",
+   "Measuring cup": "a clear measuring cup with plain tick marks",
+   "Measuring spoon": "a ring of nested measuring spoons",
+   "Whisk": "a wire whisk",
+   "Spatula": "a rubber spatula",
+   "Sift": "a flour sifter dusting flour onto dough",
+   "Stir": "the hero boy stirring a big bowl with a wooden spoon",
+   "Mix": "a mixing bowl of swirled two-color batter",
+   "Pour": "the hero girl pouring milk from a jug into a bowl",
+   "Bake": "golden cookies on a baking tray beside a warm oven",
+   "Timer": "a rounded kitchen timer with a plain dial and no numbers"
+  },
+  "qa_note": "patched: 'Recipe card' title wiped from card"
+ },
+ {
+  "basename": "land2_data-statistics.jpg",
+  "title": "Data Statistics",
+  "land": 2,
+  "land_name": "Numeria",
+  "heroes": [
+   "Octavia",
+   "Kwame"
+  ],
+  "accent": "soft sage green",
+  "setting": "a playful tidy market-town world of shapes, patterns and friendly trade",
+  "alt": "Charts and graphs showing data in Numeria",
+  "vocab_source": "land2-data-statistics.xhtml",
+  "vocab_pool": [
+   "Data",
+   "Survey",
+   "Result",
+   "Percentage",
+   "Increase",
+   "Decrease",
+   "Average",
+   "Rank",
+   "Score",
+   "Total",
+   "Half",
+   "Double",
+   "Triple",
+   "Majority",
+   "Minority",
+   "Frequent",
+   "Rare",
+   "Compare",
+   "Predict",
+   "Trend",
+   "Chart",
+   "Graph",
+   "Table",
+   "Row",
+   "Column"
+  ],
+  "words": [
+   "Half",
+   "Double",
+   "Triple",
+   "Rank",
+   "Score"
+  ],
+  "scene_extra": "",
+  "status": "composed",
+  "job_id": "e0053d5f-8c84-4e3b-9805-bc1c17262a55",
+  "scene_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3601bQ63HBullpQ168ApWJtOp5D/hf_20260711_152350_e0053d5f-8c84-4e3b-9805-bc1c17262a55.png",
+  "anchors": {
+   "Half": [
+    0.55,
+    0.81
+   ],
+   "Double": [
+    0.7,
+    0.8
+   ],
+   "Triple": [
+    0.875,
+    0.67
+   ],
+   "Rank": [
+    0.53,
+    0.65
+   ],
+   "Score": [
+    0.12,
+    0.35
+   ]
+  },
+  "objects_desc": {
+   "Half": "an apple sliced into two equal halves on a board",
+   "Double": "a plate with two identical cupcakes beside a plate with one",
+   "Triple": "an ice-cream cone stacked with three scoops",
+   "Rank": "three blank podium steps of different heights with children on them",
+   "Score": "a chalkboard with two columns of tally strokes"
+  },
+  "people_rule": "The scene includes {heroes}, each appearing exactly once, plus THREE children standing on podium steps - no other people."
+ },
+ {
+  "basename": "land2_distance-speed.jpg",
+  "title": "Distance Speed",
+  "land": 2,
+  "land_name": "Numeria",
+  "heroes": [
+   "Octavia",
+   "Kwame"
+  ],
+  "accent": "soft sage green",
+  "setting": "a playful tidy market-town world of shapes, patterns and friendly trade",
+  "alt": "Race tracks and speed charts in Numeria",
+  "vocab_source": "land2-distance-speed.xhtml",
+  "vocab_pool": [
+   "Speed",
+   "Distance",
+   "Far",
+   "Near",
+   "Close",
+   "Fast",
+   "Slow",
+   "Rate",
+   "Per",
+   "Direction",
+   "Route",
+   "Map",
+   "GPS",
+   "Navigate",
+   "Step",
+   "Lap",
+   "Marathon",
+   "Accelerate",
+   "Brake",
+   "Timer",
+   "Stopwatch",
+   "Record",
+   "Average",
+   "Maximum",
+   "Minimum"
+  ],
+  "words": [
+   "Map",
+   "Route",
+   "Stopwatch",
+   "Step",
+   "Fast",
+   "Slow",
+   "Far",
+   "Near",
+   "Brake"
+  ],
+  "scene_extra": "",
+  "status": "composed",
+  "job_id": "e7e6a49e-93c5-418a-aa68-c08f3d013932",
+  "scene_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3601bQ63HBullpQ168ApWJtOp5D/hf_20260711_152431_e7e6a49e-93c5-418a-aa68-c08f3d013932.png",
+  "anchors": {
+   "Map": [
+    0.35,
+    0.3
+   ],
+   "Route": [
+    0.5,
+    0.55
+   ],
+   "Stopwatch": [
+    0.87,
+    0.65
+   ],
+   "Step": [
+    0.58,
+    0.81
+   ],
+   "Fast": [
+    0.58,
+    0.4
+   ],
+   "Slow": [
+    0.4,
+    0.9
+   ],
+   "Far": [
+    0.72,
+    0.27
+   ],
+   "Near": [
+    0.88,
+    0.89
+   ],
+   "Brake": [
+    0.195,
+    0.62
+   ]
+  },
+  "objects_desc": {
+   "Map": "a pictorial village map pinned to a post, no words on it",
+   "Route": "a winding dotted trail on the ground leading to a small flag",
+   "Stopwatch": "a stopwatch with a plain face and no numbers",
+   "Step": "a trail of footprints crossing a sandy patch",
+   "Fast": "the hero boy sprinting with speed lines behind him",
+   "Slow": "a small turtle walking calmly beside the path",
+   "Far": "a tiny house on the far horizon",
+   "Near": "a large flowerpot right at the front of the scene",
+   "Brake": "the hero girl braking her bicycle to a gentle stop"
+  }
+ },
+ {
+  "basename": "land2_estimation-comparison.jpg",
+  "title": "Estimation Comparison",
+  "land": 2,
+  "land_name": "Numeria",
+  "heroes": [
+   "Octavia",
+   "Kwame"
+  ],
+  "accent": "soft sage green",
+  "setting": "a playful tidy market-town world of shapes, patterns and friendly trade",
+  "alt": "Estimation jars and comparison problems",
+  "vocab_source": "land2-estimation-comparison.xhtml",
+  "vocab_pool": [
+   "Estimate",
+   "About",
+   "Approximately",
+   "Round",
+   "Nearest",
+   "More than",
+   "Less than",
+   "Equal to",
+   "Between",
+   "Close to",
+   "Exactly",
+   "Enough",
+   "Too many",
+   "Too few",
+   "Most",
+   "Least",
+   "Same",
+   "Different",
+   "Bigger",
+   "Smaller",
+   "Taller",
+   "Shorter",
+   "Heavier",
+   "Lighter",
+   "Reasonable"
+  ],
+  "words": [
+   "Bigger",
+   "Smaller",
+   "Taller",
+   "Shorter",
+   "Heavier",
+   "Lighter",
+   "More than",
+   "Less than",
+   "Most",
+   "Least",
+   "Same",
+   "Different"
+  ],
+  "scene_extra": "",
+  "status": "composed",
+  "job_id": "9cd8ecc3-2d55-4364-9e1f-74ffb6c819fc",
+  "scene_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3601bQ63HBullpQ168ApWJtOp5D/hf_20260711_152521_9cd8ecc3-2d55-4364-9e1f-74ffb6c819fc.png",
+  "anchors": {
+   "Bigger": [
+    0.115,
+    0.51
+   ],
+   "Smaller": [
+    0.255,
+    0.56
+   ],
+   "Taller": [
+    0.47,
+    0.22
+   ],
+   "Shorter": [
+    0.58,
+    0.34
+   ],
+   "Heavier": [
+    0.66,
+    0.5
+   ],
+   "Lighter": [
+    0.89,
+    0.44
+   ],
+   "More than": [
+    0.75,
+    0.58
+   ],
+   "Less than": [
+    0.93,
+    0.59
+   ],
+   "Most": [
+    0.66,
+    0.72
+   ],
+   "Least": [
+    0.8,
+    0.78
+   ],
+   "Same": [
+    0.33,
+    0.86
+   ],
+   "Different": [
+    0.56,
+    0.87
+   ]
+  },
+  "objects_desc": {
+   "Bigger": "a huge pumpkin",
+   "Smaller": "a tiny pumpkin beside it",
+   "Taller": "a very tall sunflower",
+   "Shorter": "a short sunflower next to it",
+   "Heavier": "the balance-scale pan sunk low holding a watermelon",
+   "Lighter": "the balance-scale pan risen high holding a single strawberry",
+   "More than": "a basket overflowing with apples",
+   "Less than": "a basket holding only two apples",
+   "Most": "the fullest of three marble jars",
+   "Least": "the emptiest of three marble jars",
+   "Same": "two perfectly identical striped kittens sitting together",
+   "Different": "one spotted puppy sitting among the kittens"
+  }
+ },
+ {
+  "basename": "land2_fractions-decimals.jpg",
+  "title": "Fractions Decimals",
+  "land": 2,
+  "land_name": "Numeria",
+  "heroes": [
+   "Octavia",
+   "Kwame"
+  ],
+  "accent": "soft sage green",
+  "setting": "a playful tidy market-town world of shapes, patterns and friendly trade",
+  "alt": "Fractions shown with shapes and food",
+  "vocab_source": "land2-fractions-decimals.xhtml",
+  "vocab_pool": [
+   "Fraction",
+   "Numerator",
+   "Denominator",
+   "One half",
+   "One third",
+   "One quarter",
+   "Three quarters",
+   "Whole",
+   "Part",
+   "Equal parts",
+   "Decimal",
+   "Decimal point",
+   "Tenth",
+   "Hundredth",
+   "Percent",
+   "Percentage",
+   "Equivalent",
+   "Mixed number",
+   "Improper fraction",
+   "Reduce",
+   "Simplify",
+   "Convert",
+   "Ratio",
+   "Proportion",
+   "Pie"
+  ],
+  "words": [
+   "Whole",
+   "Part",
+   "Equal parts",
+   "Fraction",
+   "Three quarters"
+  ],
+  "scene_extra": "",
+  "status": "composed",
+  "anchors": {
+   "Whole": [
+    0.235,
+    0.445
+   ],
+   "Part": [
+    0.415,
+    0.79
+   ],
+   "Equal parts": [
+    0.86,
+    0.865
+   ],
+   "Fraction": [
+    0.54,
+    0.875
+   ],
+   "Three quarters": [
+    0.145,
+    0.835
+   ]
+  },
+  "objects_desc": {
+   "Whole": "an uncut round golden pie",
+   "One half": "a berry pie cut into exactly TWO equal half-circle pieces, slightly separated",
+   "One third": "a round cake cut into exactly THREE equal wedges, one wedge lifted out",
+   "One quarter": "a pizza cut into exactly FOUR equal quarter slices, one slice pulled away",
+   "Three quarters": "a large round cookie with exactly one quarter missing, three quarters remaining",
+   "Part": "a single pie slice alone on a small plate",
+   "Equal parts": "a chocolate bar snapped into equal square pieces",
+   "Fraction": "a wooden toy circle of removable colored equal wedges"
+  },
+  "v1_scene_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3601bQ63HBullpQ168ApWJtOp5D/hf_20260711_152608_9dc2432f-dd06-4c61-8f88-14b670874e30.png",
+  "job_id": "1ee73a91-a84c-4429-b050-f837ce367836",
+  "scene_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3601bQ63HBullpQ168ApWJtOp5D/hf_20260711_194607_1ee73a91-a84c-4429-b050-f837ce367836.png",
+  "qa_note": "re-rolled v2: One half/One third/One quarter DROPPED - model failed exact-count cuts twice (pie not halved, cake ~7 wedges, pizza 6 separated slices); cookie quarter-bite OK; v1 backup kept",
+  "ordered_words": [
+   "Whole",
+   "Part",
+   "Three quarters",
+   "Fraction",
+   "Equal parts"
+  ]
+ },
+ {
+  "basename": "land2_measurement-at-home.jpg",
+  "title": "Measurement at Home",
+  "land": 2,
+  "land_name": "Numeria",
+  "heroes": [
+   "Octavia",
+   "Kwame"
+  ],
+  "accent": "soft sage green",
+  "setting": "a playful tidy market-town world of shapes, patterns and friendly trade",
+  "alt": "Rulers, cups, and scales in a Numeria home",
+  "vocab_source": "land2-measurement-at-home.xhtml",
+  "vocab_pool": [
+   "Tablespoon",
+   "Teaspoon",
+   "Cup",
+   "Pint",
+   "Quart",
+   "Gallon",
+   "Ounce",
+   "Pound",
+   "Gram",
+   "Kilogram",
+   "Liter",
+   "Milliliter",
+   "Inch",
+   "Foot",
+   "Yard",
+   "Mile",
+   "Centimeter",
+   "Meter",
+   "Kilometer",
+   "Temperature",
+   "Fahrenheit",
+   "Celsius",
+   "Ruler",
+   "Tape measure",
+   "Scale"
+  ],
+  "words": [
+   "Ruler",
+   "Tape measure",
+   "Scale",
+   "Temperature",
+   "Gallon",
+   "Pint"
+  ],
+  "scene_extra": "",
+  "status": "composed",
+  "job_id": "92d06262-d5f9-47a3-ab7a-aad9cf5a77ba",
+  "scene_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3601bQ63HBullpQ168ApWJtOp5D/hf_20260711_152658_92d06262-d5f9-47a3-ab7a-aad9cf5a77ba.png",
+  "anchors": {
+   "Ruler": [
+    0.735,
+    0.755
+   ],
+   "Tape measure": [
+    0.275,
+    0.83
+   ],
+   "Scale": [
+    0.25,
+    0.59
+   ],
+   "Temperature": [
+    0.065,
+    0.3
+   ],
+   "Gallon": [
+    0.065,
+    0.56
+   ],
+   "Pint": [
+    0.15,
+    0.63
+   ]
+  },
+  "objects_desc": {
+   "Ruler": "a wooden ruler with plain tick marks and no numbers",
+   "Tape measure": "a yellow tape measure partly pulled out, plain ticks only",
+   "Scale": "a kitchen scale with a plain dial",
+   "Temperature": "a wall thermometer with a red column and plain tick marks",
+   "Gallon": "a big round milk jug",
+   "Pint": "a small milk carton",
+   "Liter": "a tall slim juice bottle"
+  },
+  "qa_note": "patched: MILK wiped from carton; 'Liter' dropped (no juice bottle painted)"
+ },
+ {
+  "basename": "land2_money-currency.jpg",
+  "title": "Money Currency",
+  "land": 2,
+  "land_name": "Numeria",
+  "heroes": [
+   "Octavia",
+   "Kwame"
+  ],
+  "accent": "soft sage green",
+  "setting": "a playful tidy market-town world of shapes, patterns and friendly trade",
+  "alt": "Coins and bills in Numeria market stalls",
+  "vocab_source": "land2-money-currency.xhtml",
+  "vocab_pool": [
+   "Money",
+   "Dollar",
+   "Cent",
+   "Penny",
+   "Nickel",
+   "Dime",
+   "Quarter",
+   "Bill",
+   "Five-dollar bill",
+   "Ten-dollar bill",
+   "Twenty-dollar bill",
+   "Change",
+   "Wallet",
+   "Purse",
+   "Cash",
+   "Credit card",
+   "Debit card",
+   "Check",
+   "Coins",
+   "Price",
+   "Cost",
+   "Expensive",
+   "Cheap",
+   "Affordable",
+   "Budget",
+   "Save",
+   "Spend",
+   "Earn",
+   "Borrow",
+   "Owe",
+   "Tip",
+   "Receipt",
+   "Tax",
+   "Discount",
+   "Sale"
+  ],
+  "words": [
+   "Wallet",
+   "Purse",
+   "Coins",
+   "Bill",
+   "Credit card",
+   "Check",
+   "Receipt",
+   "Spend",
+   "Earn"
+  ],
+  "scene_extra": "",
+  "status": "composed",
+  "job_id": "f341e1be-f77a-44a4-b468-6aaf133e1069",
+  "scene_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3601bQ63HBullpQ168ApWJtOp5D/hf_20260711_152739_f341e1be-f77a-44a4-b468-6aaf133e1069.png",
+  "anchors": {
+   "Wallet": [
+    0.5,
+    0.785
+   ],
+   "Purse": [
+    0.755,
+    0.705
+   ],
+   "Coins": [
+    0.645,
+    0.775
+   ],
+   "Bill": [
+    0.605,
+    0.855
+   ],
+   "Credit card": [
+    0.805,
+    0.82
+   ],
+   "Check": [
+    0.755,
+    0.91
+   ],
+   "Receipt": [
+    0.915,
+    0.65
+   ],
+   "Spend": [
+    0.63,
+    0.44
+   ],
+   "Earn": [
+    0.245,
+    0.62
+   ]
+  },
+  "objects_desc": {
+   "Wallet": "an open leather wallet",
+   "Purse": "a small red coin purse with a clasp",
+   "Coins": "a neat pile of plain gold and silver coins with no markings",
+   "Bill": "paper banknotes decorated only with plain scroll patterns, no numbers",
+   "Credit card": "a plain blue bank card with a gold chip and no writing",
+   "Check": "a paper cheque covered only in wavy squiggle lines",
+   "Receipt": "a long till receipt of squiggle lines curling off the counter",
+   "Spend": "the hero girl handing a coin to the shopkeeper for a pear",
+   "Earn": "the hero boy receiving a coin after sweeping with his broom"
+  },
+  "people_rule": "The scene includes {heroes}, each appearing exactly once, plus ONE friendly adult shopkeeper - no other people.",
+  "qa_note": "patched: BANK (card) + CHEQUE (paper) lettering healed out via pixel-mask"
+ },
+ {
+  "basename": "land2_numbers-counting.jpg",
+  "title": "Numbers Counting",
+  "land": 2,
+  "land_name": "Numeria",
+  "heroes": [
+   "Octavia",
+   "Kwame"
+  ],
+  "accent": "soft sage green",
+  "setting": "a playful tidy market-town world of shapes, patterns and friendly trade",
+  "alt": "Number tiles and counting beads in Numeria",
+  "vocab_source": "land2-numbers-counting.xhtml",
+  "vocab_pool": [
+   "One",
+   "Two",
+   "Three",
+   "Four",
+   "Five",
+   "Six",
+   "Seven",
+   "Eight",
+   "Nine",
+   "Ten",
+   "Eleven",
+   "Twelve",
+   "Thirteen",
+   "Twenty",
+   "Thirty",
+   "Forty",
+   "Fifty",
+   "Hundred",
+   "Thousand",
+   "Million",
+   "First",
+   "Second",
+   "Third",
+   "Zero",
+   "Number",
+   "Count",
+   "Pair",
+   "Dozen",
+   "Half",
+   "Double",
+   "Even",
+   "Odd",
+   "Digit",
+   "Numeral",
+   "Sequence"
+  ],
+  "words": [
+   "One",
+   "Two",
+   "Three",
+   "Four",
+   "Five",
+   "Six",
+   "Seven",
+   "Eight",
+   "Nine",
+   "Ten",
+   "Zero",
+   "Pair",
+   "Count"
+  ],
+  "scene_extra": "",
+  "status": "composed",
+  "job_id": "c6214970-9422-44d8-9d97-3e80810ab306",
+  "scene_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3601bQ63HBullpQ168ApWJtOp5D/hf_20260711_152832_c6214970-9422-44d8-9d97-3e80810ab306.png",
+  "anchors": {
+   "One": [
+    0.1,
+    0.685
+   ],
+   "Two": [
+    0.265,
+    0.745
+   ],
+   "Three": [
+    0.075,
+    0.835
+   ],
+   "Four": [
+    0.545,
+    0.785
+   ],
+   "Five": [
+    0.45,
+    0.73
+   ],
+   "Six": [
+    0.715,
+    0.75
+   ],
+   "Seven": [
+    0.305,
+    0.89
+   ],
+   "Eight": [
+    0.89,
+    0.915
+   ],
+   "Nine": [
+    0.105,
+    0.93
+   ],
+   "Ten": [
+    0.935,
+    0.445
+   ],
+   "Zero": [
+    0.52,
+    0.89
+   ],
+   "Pair": [
+    0.66,
+    0.89
+   ],
+   "Count": [
+    0.55,
+    0.455
+   ]
+  },
+  "objects_desc": {
+   "One": "one shiny red apple alone on a stool",
+   "Two": "two green pears side by side",
+   "Three": "three bananas in a bunch",
+   "Four": "four strawberries in a square tray",
+   "Five": "five cherries laid in a row",
+   "Six": "six oranges in a wooden bowl",
+   "Seven": "seven sunflowers standing in a row of pots",
+   "Eight": "eight large buttons in a line on a shelf",
+   "Nine": "nine marbles resting in a square grid tray",
+   "Ten": "ten candles standing on a rack",
+   "Zero": "a cozy bird nest that is completely empty",
+   "Pair": "a pair of red mittens pinned together",
+   "Dozen": "an egg carton holding twelve eggs",
+   "Count": "the hero boy counting on his fingers"
+  },
+  "qa_note": "patched: buttons 5->3, cherries 5->4, top egg tray 12->10, price-tag digits wiped; 'Dozen' dropped; anchors follow PAINTED groups, not objects_desc (Three=buttons, Four=cherries, Five=strawberries, Seven=candles, Eight=bottom carton, Ten=top tray; sunflowers x5 + second nest unlabeled surplus)"
+ },
+ {
+  "basename": "land2_patterns-sequences.jpg",
+  "title": "Patterns Sequences",
+  "land": 2,
+  "land_name": "Numeria",
+  "heroes": [
+   "Octavia",
+   "Kwame"
+  ],
+  "accent": "soft sage green",
+  "setting": "a playful tidy market-town world of shapes, patterns and friendly trade",
+  "alt": "Repeating patterns in Numeria tiles",
+  "vocab_source": "land2-patterns-sequences.xhtml",
+  "vocab_pool": [
+   "Pattern",
+   "Repeat",
+   "Sequence",
+   "Next",
+   "Predict",
+   "Sort",
+   "Classify",
+   "Arrange",
+   "Organize",
+   "Category",
+   "Rule",
+   "Skip count",
+   "Growing pattern",
+   "Shrinking pattern",
+   "Symmetry",
+   "Repeating",
+   "Core",
+   "Extend",
+   "Function",
+   "Input",
+   "Output",
+   "Table",
+   "Variable",
+   "Missing number",
+   "Algebra"
+  ],
+  "words": [
+   "Pattern",
+   "Repeat",
+   "Sort",
+   "Symmetry",
+   "Sequence",
+   "Growing pattern",
+   "Next"
+  ],
+  "scene_extra": "",
+  "status": "composed",
+  "job_id": "51644cca-f6e4-4198-a8c1-07fe45756952",
+  "scene_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3601bQ63HBullpQ168ApWJtOp5D/hf_20260711_152934_51644cca-f6e4-4198-a8c1-07fe45756952.png",
+  "anchors": {
+   "Pattern": [
+    0.1,
+    0.32
+   ],
+   "Repeat": [
+    0.165,
+    0.475
+   ],
+   "Sort": [
+    0.37,
+    0.81
+   ],
+   "Symmetry": [
+    0.12,
+    0.65
+   ],
+   "Sequence": [
+    0.86,
+    0.8
+   ],
+   "Growing pattern": [
+    0.605,
+    0.8
+   ],
+   "Next": [
+    0.64,
+    0.635
+   ]
+  },
+  "objects_desc": {
+   "Pattern": "a bead necklace with a strict red-blue-red-blue pattern",
+   "Repeat": "a wall border of hearts and stars repeating along the shelf",
+   "Sort": "the hero girl sorting red and green apples into two baskets",
+   "Symmetry": "a butterfly with perfectly mirrored wings resting on a flower",
+   "Sequence": "a line of nesting dolls arranged from biggest to smallest",
+   "Growing pattern": "stacked blocks forming stairs: one, then two, then three",
+   "Next": "a bead string with one empty space and the matching bead waiting beside it"
+  }
+ },
+ {
+  "basename": "land2_problem-solving-logic.jpg",
+  "title": "Problem Solving Logic",
+  "land": 2,
+  "land_name": "Numeria",
+  "heroes": [
+   "Octavia",
+   "Kwame"
+  ],
+  "accent": "soft sage green",
+  "setting": "a playful tidy market-town world of shapes, patterns and friendly trade",
+  "alt": "Logic puzzles in Numeria classroom",
+  "vocab_source": "land2-problem-solving-logic.xhtml",
+  "vocab_pool": [
+   "Problem",
+   "Solution",
+   "Strategy",
+   "Step",
+   "Clue",
+   "Pattern",
+   "Sort",
+   "Group",
+   "Order",
+   "Classify",
+   "Compare",
+   "Contrast",
+   "Cause",
+   "Effect",
+   "Puzzle",
+   "Reason",
+   "Evidence",
+   "Conclusion",
+   "Hypothesis",
+   "Experiment"
+  ],
+  "words": [
+   "Puzzle",
+   "Clue",
+   "Group",
+   "Order",
+   "Cause",
+   "Effect",
+   "Experiment",
+   "Evidence"
+  ],
+  "scene_extra": "",
+  "status": "composed",
+  "job_id": "eef89c37-3883-4136-a30a-a707101ad2cd",
+  "scene_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3601bQ63HBullpQ168ApWJtOp5D/hf_20260711_153018_eef89c37-3883-4136-a30a-a707101ad2cd.png",
+  "anchors": {
+   "Puzzle": [
+    0.825,
+    0.875
+   ],
+   "Clue": [
+    0.625,
+    0.78
+   ],
+   "Group": [
+    0.215,
+    0.7
+   ],
+   "Order": [
+    0.505,
+    0.475
+   ],
+   "Cause": [
+    0.12,
+    0.85
+   ],
+   "Effect": [
+    0.24,
+    0.9
+   ],
+   "Experiment": [
+    0.08,
+    0.43
+   ],
+   "Evidence": [
+    0.225,
+    0.525
+   ]
+  },
+  "objects_desc": {
+   "Puzzle": "a half-finished jigsaw puzzle on a table",
+   "Clue": "a magnifying glass held over a single muddy paw print",
+   "Group": "toys sorted into two hoops - balls in one, blocks in the other",
+   "Order": "three children lined up neatly from shortest to tallest",
+   "Cause": "a tipped-over watering can",
+   "Effect": "the puddle spreading from the tipped can",
+   "Experiment": "two potted plants side by side - one tall in sunlight, one small in shade",
+   "Evidence": "a trail of muddy paw prints leading to a happy dog"
+  },
+  "people_rule": "The scene includes {heroes}, each appearing exactly once as young detectives, plus THREE other children lined up by height - no other people.",
+  "qa_note": "patched: '800' wiped from easel board"
+ },
+ {
+  "basename": "land2_shapes-geometry.jpg",
+  "title": "Shapes Geometry",
+  "land": 2,
+  "land_name": "Numeria",
+  "heroes": [
+   "Octavia",
+   "Kwame"
+  ],
+  "accent": "soft sage green",
+  "setting": "a playful tidy market-town world of shapes, patterns and friendly trade",
+  "alt": "Geometric shapes in Numeria marketplace",
+  "vocab_source": "land2-shapes-geometry.xhtml",
+  "vocab_pool": [
+   "Circle",
+   "Square",
+   "Rectangle",
+   "Triangle",
+   "Oval",
+   "Diamond",
+   "Star",
+   "Heart",
+   "Pentagon",
+   "Hexagon",
+   "Octagon",
+   "Sphere",
+   "Cube",
+   "Cylinder",
+   "Cone",
+   "Pyramid",
+   "Angle",
+   "Right angle",
+   "Line",
+   "Point",
+   "Parallel",
+   "Perpendicular",
+   "Symmetry",
+   "Radius",
+   "Diameter",
+   "Circumference",
+   "Side",
+   "Corner",
+   "Face",
+   "Edge"
+  ],
+  "words": [
+   "Circle",
+   "Square",
+   "Rectangle",
+   "Triangle",
+   "Oval",
+   "Diamond",
+   "Star",
+   "Heart",
+   "Sphere",
+   "Cube",
+   "Cylinder",
+   "Cone",
+   "Pyramid"
+  ],
+  "scene_extra": "",
+  "status": "composed",
+  "job_id": "7b39aaee-4d81-4a65-a2c3-3903b6aa0450",
+  "scene_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3601bQ63HBullpQ168ApWJtOp5D/hf_20260711_153108_7b39aaee-4d81-4a65-a2c3-3903b6aa0450.png",
+  "anchors": {
+   "Circle": [
+    0.31,
+    0.73
+   ],
+   "Square": [
+    0.22,
+    0.16
+   ],
+   "Rectangle": [
+    0.17,
+    0.79
+   ],
+   "Triangle": [
+    0.2525,
+    0.515
+   ],
+   "Oval": [
+    0.34,
+    0.54
+   ],
+   "Diamond": [
+    0.51,
+    0.495
+   ],
+   "Star": [
+    0.545,
+    0.3525
+   ],
+   "Heart": [
+    0.515,
+    0.6175
+   ],
+   "Sphere": [
+    0.665,
+    0.7475
+   ],
+   "Cube": [
+    0.7825,
+    0.735
+   ],
+   "Cylinder": [
+    0.9475,
+    0.78
+   ],
+   "Cone": [
+    0.9025,
+    0.8925
+   ],
+   "Pyramid": [
+    0.8125,
+    0.885
+   ]
+  },
+  "objects_desc": {
+   "Circle": "a round blue wooden hoop",
+   "Square": "a square orange picture frame",
+   "Rectangle": "a rectangular red door mat",
+   "Triangle": "a silver triangle instrument hanging from a stand",
+   "Oval": "an oval mirror",
+   "Diamond": "a diamond-shaped kite leaning on the wall",
+   "Star": "a golden star ornament",
+   "Heart": "a heart-shaped red cushion",
+   "Sphere": "a striped beach ball",
+   "Cube": "a large plain wooden toy block",
+   "Cylinder": "a tall cylindrical drum",
+   "Cone": "an orange traffic cone",
+   "Pyramid": "a small wooden pyramid toy"
+  }
+ },
+ {
+  "basename": "land2_the-bank.jpg",
+  "title": "The Bank",
+  "land": 2,
+  "land_name": "Numeria",
+  "heroes": [
+   "Octavia",
+   "Kwame"
+  ],
+  "accent": "soft sage green",
+  "setting": "a playful tidy market-town world of shapes, patterns and friendly trade",
+  "alt": "A bank and financial services in Numeria",
+  "vocab_source": "land2-the-bank.xhtml",
+  "vocab_pool": [
+   "Bank",
+   "Account",
+   "Savings account",
+   "Checking account",
+   "Deposit",
+   "Withdraw",
+   "ATM",
+   "Balance",
+   "Interest",
+   "Loan",
+   "Payment",
+   "Transfer",
+   "Statement",
+   "PIN",
+   "Direct deposit",
+   "Wire transfer",
+   "Online banking",
+   "Teller",
+   "Safe",
+   "Mortgage"
+  ],
+  "words": [
+   "Bank",
+   "Teller",
+   "ATM",
+   "Safe",
+   "Deposit",
+   "Withdraw"
+  ],
+  "scene_extra": "",
+  "status": "composed",
+  "job_id": "7b186bf6-916a-4b17-aaf3-6afba927e006",
+  "scene_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3601bQ63HBullpQ168ApWJtOp5D/hf_20260711_153155_7b186bf6-916a-4b17-aaf3-6afba927e006.png",
+  "anchors": {
+   "Bank": [
+    0.5,
+    0.28
+   ],
+   "Teller": [
+    0.585,
+    0.5
+   ],
+   "ATM": [
+    0.86,
+    0.53
+   ],
+   "Safe": [
+    0.115,
+    0.53
+   ],
+   "Deposit": [
+    0.395,
+    0.585
+   ],
+   "Withdraw": [
+    0.55,
+    0.605
+   ]
+  },
+  "objects_desc": {
+   "Bank": "the grand wooden counter hall of a small village bank with columns",
+   "Teller": "a friendly adult teller smiling behind the counter window",
+   "ATM": "a wall machine with a softly glowing blank screen and a card slot",
+   "Safe": "a big round steel vault door standing ajar",
+   "Deposit": "the hero girl handing a jar of coins across the counter",
+   "Withdraw": "the teller handing plain banknotes to the hero boy"
+  },
+  "people_rule": "The scene includes {heroes}, each appearing exactly once, plus ONE friendly adult bank teller behind the counter - no other people."
+ },
+ {
+  "basename": "land2_the-grocery-store-shopping.jpg",
+  "title": "The Grocery Store Shopping",
+  "land": 2,
+  "land_name": "Numeria",
+  "heroes": [
+   "Octavia",
+   "Kwame"
+  ],
+  "accent": "soft sage green",
+  "setting": "a playful tidy market-town world of shapes, patterns and friendly trade",
+  "alt": "Shopping at a busy Numeria market",
+  "vocab_source": "land2-the-grocery-store-shopping.xhtml",
+  "vocab_pool": [
+   "Store",
+   "Supermarket",
+   "Aisle",
+   "Cart",
+   "Basket",
+   "Cashier",
+   "Register",
+   "Receipt",
+   "Coupon",
+   "Shopping list",
+   "Bag",
+   "Brand",
+   "Label",
+   "Expiration date",
+   "Organic",
+   "Frozen",
+   "Dairy",
+   "Bakery",
+   "Deli",
+   "Produce",
+   "Checkout",
+   "Self-checkout",
+   "Return",
+   "Exchange",
+   "Refund",
+   "Sale",
+   "Price tag",
+   "Customer",
+   "Employee",
+   "Manager"
+  ],
+  "words": [
+   "Cart",
+   "Basket",
+   "Register",
+   "Receipt",
+   "Bag",
+   "Shopping list",
+   "Price tag",
+   "Aisle",
+   "Produce",
+   "Bakery",
+   "Dairy",
+   "Frozen",
+   "Deli",
+   "Checkout",
+   "Coupon"
+  ],
+  "scene_extra": "",
+  "status": "composed",
+  "job_id": "9b9b9865-f95a-4772-9cd8-9d0cb223a857",
+  "scene_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3601bQ63HBullpQ168ApWJtOp5D/hf_20260709_222229_9b9b9865-f95a-4772-9cd8-9d0cb223a857.png",
+  "anchors": {
+   "Produce": [
+    0.135,
+    0.475
+   ],
+   "Bakery": [
+    0.385,
+    0.345
+   ],
+   "Dairy": [
+    0.615,
+    0.4
+   ],
+   "Frozen": [
+    0.675,
+    0.515
+   ],
+   "Deli": [
+    0.875,
+    0.65
+   ],
+   "Checkout": [
+    0.225,
+    0.8
+   ],
+   "Register": [
+    0.175,
+    0.65
+   ],
+   "Receipt": [
+    0.09,
+    0.775
+   ],
+   "Shopping list": [
+    0.76,
+    0.655
+   ],
+   "Price tag": [
+    0.415,
+    0.835
+   ],
+   "Coupon": [
+    0.295,
+    0.78
+   ],
+   "Cart": [
+    0.495,
+    0.65
+   ],
+   "Basket": [
+    0.645,
+    0.76
+   ],
+   "Bag": [
+    0.06,
+    0.625
+   ],
+   "Aisle": [
+    0.52,
+    0.47
+   ]
+  },
+  "objects_desc": {
+   "Aisle": "a clear walkway between market stalls",
+   "Produce": "wooden crates piled with colorful fruits and vegetables",
+   "Bakery": "a stall displaying loaves of bread, baguettes and pastries",
+   "Dairy": "a cooler stall with milk bottles, cheese wheels and yogurt cups",
+   "Frozen": "an open freezer chest filled with ice",
+   "Deli": "a glass counter with hanging hams and sliced meats",
+   "Checkout": "a wooden checkout counter",
+   "Register": "an old-fashioned cash register",
+   "Receipt": "a long curling paper receipt with squiggle lines",
+   "Shopping list": "a small handheld paper list with squiggle lines",
+   "Price tag": "a small blank swing tag on a string",
+   "Coupon": "a small dotted-edge paper slip",
+   "Cart": "a wooden shopping cart on wheels",
+   "Basket": "a woven shopping basket",
+   "Bag": "a paper shopping bag"
+  },
+  "ordered_words": [
+   "Produce",
+   "Bakery",
+   "Aisle",
+   "Dairy",
+   "Bag",
+   "Register",
+   "Cart",
+   "Frozen",
+   "Shopping list",
+   "Deli",
+   "Receipt",
+   "Checkout",
+   "Coupon",
+   "Basket",
+   "Price tag"
+  ]
+ },
+ {
+  "basename": "land2_time-clocks.jpg",
+  "title": "Time Clocks",
+  "land": 2,
+  "land_name": "Numeria",
+  "heroes": [
+   "Octavia",
+   "Kwame"
+  ],
+  "accent": "soft sage green",
+  "setting": "a playful tidy market-town world of shapes, patterns and friendly trade",
+  "alt": "Analog and digital clocks in Numeria",
+  "vocab_source": "land2-time-clocks.xhtml",
+  "vocab_pool": [
+   "Clock",
+   "Watch",
+   "Hour",
+   "Minute",
+   "Second",
+   "Noon",
+   "Midnight",
+   "A.M.",
+   "P.M.",
+   "O&#x27;clock",
+   "Half past",
+   "Quarter past",
+   "Quarter to",
+   "Hour hand",
+   "Minute hand",
+   "Alarm",
+   "Timer",
+   "Stopwatch",
+   "Schedule",
+   "On time",
+   "Late",
+   "Early",
+   "Duration",
+   "Sunrise",
+   "Sunset"
+  ],
+  "words": [
+   "Clock",
+   "Watch",
+   "Hour hand",
+   "Minute hand",
+   "Alarm",
+   "Timer",
+   "Stopwatch",
+   "Sunrise",
+   "Sunset"
+  ],
+  "scene_extra": "Strictly NO digital clocks, digital timers, segment displays or number readouts anywhere - every clock face uses plain dot markers only.",
+  "status": "composed",
+  "anchors": {
+   "Clock": [
+    0.515,
+    0.355
+   ],
+   "Watch": [
+    0.29,
+    0.63
+   ],
+   "Hour hand": [
+    0.169,
+    0.847
+   ],
+   "Minute hand": [
+    0.099,
+    0.918
+   ],
+   "Alarm": [
+    0.12,
+    0.555
+   ],
+   "Timer": [
+    0.535,
+    0.875
+   ],
+   "Stopwatch": [
+    0.915,
+    0.55
+   ],
+   "Sunrise": [
+    0.095,
+    0.2
+   ],
+   "Sunset": [
+    0.9,
+    0.155
+   ]
+  },
+  "objects_desc": {
+   "Clock": "a huge analog wall clock with plain dot markers and no numbers",
+   "Watch": "a wristwatch displayed on a stand",
+   "Hour hand": "the short thick hand of the huge wall clock",
+   "Minute hand": "the long thin hand of the huge wall clock",
+   "Alarm": "a twin-bell alarm clock",
+   "Timer": "an hourglass with golden sand flowing",
+   "Stopwatch": "a stopwatch with a plain face",
+   "Sunrise": "a window showing the sun rising golden over hills",
+   "Sunset": "a window showing an orange sun setting"
+  },
+  "v1_scene_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3601bQ63HBullpQ168ApWJtOp5D/hf_20260711_153239_b9805530-6c2e-404e-8b6a-87e097c831db.png",
+  "people_rule": "The scene includes {heroes}, each appearing exactly once - the hero girl is a dark-skinned Black girl with a long side braid wearing her pink dress with a bow and pink shoes; the hero boy is a dark-skinned Black boy with short curly hair ALWAYS wearing his grey tech hoodie with glowing cyan hexagon panels and grey cargo pants, never a suit - no other people.",
+  "job_id": "94d2c533-95a5-49d4-9bba-bc38a7432acc",
+  "scene_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3601bQ63HBullpQ168ApWJtOp5D/hf_20260711_194647_94d2c533-95a5-49d4-9bba-bc38a7432acc.png",
+  "qa_note": "re-rolled v2: both heroes on-model, all faces dot-markers, no digital displays; v1 had generic girl + Kwame in suit + digit timer",
+  "ordered_words": [
+   "Sunset",
+   "Sunrise",
+   "Clock",
+   "Alarm",
+   "Watch",
+   "Stopwatch",
+   "Minute hand",
+   "Hour hand",
+   "Timer"
+  ]
+ },
+ {
+  "basename": "land2_weights-measures.jpg",
+  "title": "Weights Measures",
+  "land": 2,
+  "land_name": "Numeria",
+  "heroes": [
+   "Octavia",
+   "Kwame"
+  ],
+  "accent": "soft sage green",
+  "setting": "a playful tidy market-town world of shapes, patterns and friendly trade",
+  "alt": "Scales and metric units in Numeria workshop",
+  "vocab_source": "land2-weights-measures.xhtml",
+  "vocab_pool": [
+   "Inch",
+   "Foot",
+   "Yard",
+   "Mile",
+   "Centimeter",
+   "Meter",
+   "Kilometer",
+   "Ounce",
+   "Pound",
+   "Ton",
+   "Gram",
+   "Kilogram",
+   "Cup",
+   "Pint",
+   "Quart",
+   "Gallon",
+   "Liter",
+   "Tablespoon",
+   "Teaspoon",
+   "Temperature",
+   "Fahrenheit",
+   "Celsius",
+   "Scale",
+   "Ruler",
+   "Tape measure",
+   "Length",
+   "Width",
+   "Height",
+   "Weight",
+   "Volume",
+   "Distance",
+   "Area",
+   "Perimeter",
+   "Speed",
+   "Measure"
+  ],
+  "words": [
+   "Scale",
+   "Length",
+   "Height",
+   "Weight",
+   "Volume",
+   "Ton",
+   "Pound",
+   "Area",
+   "Perimeter"
+  ],
+  "scene_extra": "",
+  "status": "composed",
+  "job_id": "68d1cf11-36b1-4feb-98e0-4afe865f51dc",
+  "scene_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3601bQ63HBullpQ168ApWJtOp5D/hf_20260711_153324_68d1cf11-36b1-4feb-98e0-4afe865f51dc.png",
+  "anchors": {
+   "Scale": [
+    0.86,
+    0.36
+   ],
+   "Length": [
+    0.25,
+    0.565
+   ],
+   "Height": [
+    0.25,
+    0.3
+   ],
+   "Weight": [
+    0.475,
+    0.425
+   ],
+   "Volume": [
+    0.0725,
+    0.565
+   ],
+   "Ton": [
+    0.75,
+    0.615
+   ],
+   "Pound": [
+    0.665,
+    0.425
+   ],
+   "Area": [
+    0.5,
+    0.85
+   ],
+   "Perimeter": [
+    0.13,
+    0.82
+   ]
+  },
+  "objects_desc": {
+   "Scale": "a tall standing balance scale with two brass pans",
+   "Length": "a long ribbon stretched out flat along a table edge",
+   "Height": "the hero girl being measured against a wall growth chart of plain tick marks",
+   "Weight": "the hero boy placing a pumpkin onto one scale pan",
+   "Volume": "a glass pitcher half full of orange juice",
+   "Ton": "a cartoon elephant statue standing on a huge platform scale",
+   "Pound": "a plain small sack of sugar resting on a scale pan",
+   "Area": "a checkered picnic blanket made of clear square patches",
+   "Perimeter": "a low wooden fence running all the way around a flower bed"
+  }
+ },
+ {
+  "basename": "land3_camping-hiking.jpg",
+  "title": "Camping Hiking",
+  "land": 3,
+  "land_name": "Terrasol",
+  "heroes": [
+   "Vesta",
+   "Silas"
+  ],
+  "accent": "fresh spring green",
+  "setting": "a lush garden-and-farm world of plants, animals and nature discovery",
+  "alt": "Campers with gear in the Terrasol wilderness",
+  "vocab_source": "land3-camping-hiking.xhtml",
+  "vocab_pool": [
+   "Tent",
+   "Sleeping bag",
+   "Campfire",
+   "Flashlight",
+   "Backpack",
+   "Trail",
+   "Hike",
+   "Compass",
+   "Binoculars",
+   "Firewood",
+   "Marshmallow",
+   "Canoe",
+   "Cliff",
+   "Cabin",
+   "Wildlife",
+   "Map",
+   "Boots",
+   "Insect repellent",
+   "First aid kit",
+   "Constellation",
+   "Bear",
+   "Deer",
+   "Owl",
+   "Nature",
+   "Wilderness"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land3_desert-dry-lands.jpg",
+  "title": "Desert Dry Lands",
+  "land": 3,
+  "land_name": "Terrasol",
+  "heroes": [
+   "Vesta",
+   "Silas"
+  ],
+  "accent": "fresh spring green",
+  "setting": "a lush garden-and-farm world of plants, animals and nature discovery",
+  "alt": "Cacti and desert animals in a Terrasol dry zone",
+  "vocab_source": "land3-desert-dry-lands.xhtml",
+  "vocab_pool": [
+   "Desert",
+   "Cactus",
+   "Sand dune",
+   "Oasis",
+   "Drought",
+   "Scorpion",
+   "Lizard",
+   "Rattlesnake",
+   "Vulture",
+   "Tumbleweed",
+   "Canyon",
+   "Mesa",
+   "Mirage",
+   "Arid",
+   "Shade",
+   "Canteen",
+   "Compass",
+   "Fossil",
+   "Erosion",
+   "Sandstorm",
+   "Sunrise",
+   "Sunset",
+   "Stars",
+   "Heat",
+   "Survive"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land3_farm-to-table.jpg",
+  "title": "Farm to Table",
+  "land": 3,
+  "land_name": "Terrasol",
+  "heroes": [
+   "Vesta",
+   "Silas"
+  ],
+  "accent": "fresh spring green",
+  "setting": "a lush garden-and-farm world of plants, animals and nature discovery",
+  "alt": "Crops being harvested and brought to market",
+  "vocab_source": "land3-farm-to-table.xhtml",
+  "vocab_pool": [
+   "Plow",
+   "Plant",
+   "Harvest",
+   "Irrigation",
+   "Orchard",
+   "Grain",
+   "Wheat",
+   "Corn",
+   "Rice",
+   "Cotton",
+   "Soybean",
+   "Crop",
+   "Field",
+   "Barn",
+   "Sickle",
+   "Scythe",
+   "Basket",
+   "Crate",
+   "Market",
+   "Season",
+   "Spring planting",
+   "Summer growing",
+   "Fall harvest",
+   "Winter rest",
+   "Organic",
+   "Compost",
+   "Drought",
+   "Fertile",
+   "Livestock",
+   "Beekeeper",
+   "Pollination",
+   "Sprinkler",
+   "Tiller",
+   "Sow",
+   "Reap"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land3_fruits-vegetables.jpg",
+  "title": "Fruits Vegetables",
+  "land": 3,
+  "land_name": "Terrasol",
+  "heroes": [
+   "Vesta",
+   "Silas"
+  ],
+  "accent": "fresh spring green",
+  "setting": "a lush garden-and-farm world of plants, animals and nature discovery",
+  "alt": "Colorful produce in a Terrasol farmer's market",
+  "vocab_source": "land3-fruits-vegetables.xhtml",
+  "vocab_pool": [
+   "Apple",
+   "Banana",
+   "Orange",
+   "Grape",
+   "Strawberry",
+   "Watermelon",
+   "Peach",
+   "Pear",
+   "Lemon",
+   "Tomato",
+   "Carrot",
+   "Potato",
+   "Onion",
+   "Broccoli",
+   "Lettuce",
+   "Cucumber",
+   "Corn",
+   "Pepper",
+   "Bean",
+   "Pea",
+   "Spinach",
+   "Celery",
+   "Pumpkin",
+   "Mushroom",
+   "Garlic",
+   "Avocado",
+   "Mango",
+   "Pineapple",
+   "Cherry",
+   "Blueberry"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land3_insects-bugs.jpg",
+  "title": "Insects Bugs",
+  "land": 3,
+  "land_name": "Terrasol",
+  "heroes": [
+   "Vesta",
+   "Silas"
+  ],
+  "accent": "fresh spring green",
+  "setting": "a lush garden-and-farm world of plants, animals and nature discovery",
+  "alt": "Colorful insects illustrated in Terrasol meadow",
+  "vocab_source": "land3-insects-bugs.xhtml",
+  "vocab_pool": [
+   "Insect",
+   "Ant",
+   "Bee",
+   "Butterfly",
+   "Caterpillar",
+   "Ladybug",
+   "Dragonfly",
+   "Grasshopper",
+   "Cricket",
+   "Spider",
+   "Web",
+   "Mosquito",
+   "Fly",
+   "Beetle",
+   "Worm",
+   "Cocoon",
+   "Hive",
+   "Honey",
+   "Colony",
+   "Pest",
+   "Pollinate",
+   "Larvae",
+   "Antenna",
+   "Wing",
+   "Magnifying glass"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land3_inside-the-home.jpg",
+  "title": "Inside the Home",
+  "land": 3,
+  "land_name": "Terrasol",
+  "heroes": [
+   "Vesta",
+   "Silas"
+  ],
+  "accent": "fresh spring green",
+  "setting": "a lush garden-and-farm world of plants, animals and nature discovery",
+  "alt": "Rooms inside a cozy Terrasol home",
+  "vocab_source": "land3-inside-the-home.xhtml",
+  "vocab_pool": [
+   "Kitchen",
+   "Living room",
+   "Bedroom",
+   "Bathroom",
+   "Dining room",
+   "Hallway",
+   "Stairs",
+   "Attic",
+   "Basement",
+   "Table",
+   "Chair",
+   "Sofa",
+   "Bookshelf",
+   "Lamp",
+   "Rug",
+   "Curtain",
+   "Clock",
+   "Mirror",
+   "Pillow",
+   "Blanket",
+   "Bed",
+   "Dresser",
+   "Closet",
+   "Sink",
+   "Stove",
+   "Oven",
+   "Refrigerator",
+   "Microwave",
+   "Dishwasher",
+   "Cabinet",
+   "Counter",
+   "Faucet",
+   "Bathtub",
+   "Shower",
+   "Toilet",
+   "Towel",
+   "Soap",
+   "Toothbrush",
+   "Ceiling",
+   "Floor",
+   "Light switch",
+   "Outlet",
+   "Fireplace",
+   "Mantel",
+   "Vase"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land3_pets-companions.jpg",
+  "title": "Pets Companions",
+  "land": 3,
+  "land_name": "Terrasol",
+  "heroes": [
+   "Vesta",
+   "Silas"
+  ],
+  "accent": "fresh spring green",
+  "setting": "a lush garden-and-farm world of plants, animals and nature discovery",
+  "alt": "Animals as pets in Terrasol setting",
+  "vocab_source": "land3-pets-companions.xhtml",
+  "vocab_pool": [
+   "Dog",
+   "Puppy",
+   "Cat",
+   "Kitten",
+   "Goldfish",
+   "Hamster",
+   "Guinea pig",
+   "Rabbit",
+   "Parakeet",
+   "Canary",
+   "Turtle",
+   "Iguana",
+   "Gerbil",
+   "Ferret",
+   "Hermit crab",
+   "Leash",
+   "Collar",
+   "Bowl",
+   "Cage",
+   "Aquarium",
+   "Pet food",
+   "Veterinarian",
+   "Toy",
+   "Bed",
+   "Grooming"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land3_recycling-sustainability.jpg",
+  "title": "Recycling Sustainability",
+  "land": 3,
+  "land_name": "Terrasol",
+  "heroes": [
+   "Vesta",
+   "Silas"
+  ],
+  "accent": "fresh spring green",
+  "setting": "a lush garden-and-farm world of plants, animals and nature discovery",
+  "alt": "Recycling bins and sorting in Terrasol",
+  "vocab_source": "land3-recycling-sustainability.xhtml",
+  "vocab_pool": [
+   "Recycle",
+   "Reuse",
+   "Reduce",
+   "Trash",
+   "Garbage",
+   "Litter",
+   "Bin",
+   "Compost",
+   "Landfill",
+   "Pollution",
+   "Clean energy",
+   "Solar panel",
+   "Wind turbine",
+   "Water bottle",
+   "Plastic",
+   "Paper",
+   "Glass",
+   "Aluminum",
+   "Conserve",
+   "Protect"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land3_rivers-lakes.jpg",
+  "title": "Rivers Lakes",
+  "land": 3,
+  "land_name": "Terrasol",
+  "heroes": [
+   "Vesta",
+   "Silas"
+  ],
+  "accent": "fresh spring green",
+  "setting": "a lush garden-and-farm world of plants, animals and nature discovery",
+  "alt": "River systems and lake ecology in Terrasol",
+  "vocab_source": "land3-rivers-lakes.xhtml",
+  "vocab_pool": [
+   "River",
+   "Stream",
+   "Creek",
+   "Lake",
+   "Pond",
+   "Waterfall",
+   "Dam",
+   "Bridge",
+   "Bank",
+   "Current",
+   "Upstream",
+   "Downstream",
+   "Canal",
+   "Rapids",
+   "Kayak",
+   "Canoe",
+   "Fishing rod",
+   "Trout",
+   "Frog",
+   "Turtle",
+   "Beaver",
+   "Marsh",
+   "Swamp",
+   "Flood",
+   "Fresh water"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land3_rocks-minerals.jpg",
+  "title": "Rocks Minerals",
+  "land": 3,
+  "land_name": "Terrasol",
+  "heroes": [
+   "Vesta",
+   "Silas"
+  ],
+  "accent": "fresh spring green",
+  "setting": "a lush garden-and-farm world of plants, animals and nature discovery",
+  "alt": "A collection of rocks and minerals in Terrasol",
+  "vocab_source": "land3-rocks-minerals.xhtml",
+  "vocab_pool": [
+   "Rock",
+   "Stone",
+   "Pebble",
+   "Boulder",
+   "Sand",
+   "Gravel",
+   "Clay",
+   "Crystal",
+   "Mineral",
+   "Fossil",
+   "Gem",
+   "Quartz",
+   "Marble",
+   "Granite",
+   "Limestone",
+   "Lava",
+   "Magma",
+   "Erosion",
+   "Sediment",
+   "Stalactite"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land3_seeds-growing.jpg",
+  "title": "Seeds Growing",
+  "land": 3,
+  "land_name": "Terrasol",
+  "heroes": [
+   "Vesta",
+   "Silas"
+  ],
+  "accent": "fresh spring green",
+  "setting": "a lush garden-and-farm world of plants, animals and nature discovery",
+  "alt": "Seeds sprouting in Terrasol garden",
+  "vocab_source": "land3-seeds-growing.xhtml",
+  "vocab_pool": [
+   "Seed",
+   "Sprout",
+   "Seedling",
+   "Root",
+   "Stem",
+   "Leaf",
+   "Bud",
+   "Bloom",
+   "Petal",
+   "Pollen",
+   "Compost",
+   "Fertilizer",
+   "Greenhouse",
+   "Water",
+   "Sunlight",
+   "Soil",
+   "Pot",
+   "Planter",
+   "Weed",
+   "Harvest",
+   "Vine",
+   "Branch",
+   "Trunk",
+   "Bark",
+   "Growth"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land3_shapes-in-the-world.jpg",
+  "title": "Shapes in the World",
+  "land": 3,
+  "land_name": "Terrasol",
+  "heroes": [
+   "Vesta",
+   "Silas"
+  ],
+  "accent": "fresh spring green",
+  "setting": "a lush garden-and-farm world of plants, animals and nature discovery",
+  "alt": "Geometric shapes found in nature and buildings",
+  "vocab_source": "land3-shapes-in-the-world.xhtml",
+  "vocab_pool": [
+   "Circle",
+   "Square",
+   "Triangle",
+   "Rectangle",
+   "Oval",
+   "Diamond",
+   "Star",
+   "Heart",
+   "Pentagon",
+   "Hexagon",
+   "Octagon",
+   "Cube",
+   "Sphere",
+   "Cylinder",
+   "Cone",
+   "Pyramid",
+   "Spiral",
+   "Crescent",
+   "Trapezoid",
+   "Parallelogram",
+   "Line",
+   "Curve",
+   "Angle",
+   "Edge",
+   "Corner",
+   "Side",
+   "Pattern",
+   "Symmetry",
+   "Parallel",
+   "Perpendicular"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land3_silas-vestas-cottage-outside.jpg",
+  "title": "Silas Vestas Cottage Outside",
+  "land": 3,
+  "land_name": "Terrasol",
+  "heroes": [
+   "Vesta",
+   "Silas"
+  ],
+  "accent": "fresh spring green",
+  "setting": "a lush garden-and-farm world of plants, animals and nature discovery",
+  "alt": "The outside of Silas and Vesta's cottage in Terrasol",
+  "vocab_source": "land3-silas-vestas-cottage-outside.xhtml",
+  "vocab_pool": [
+   "Roof",
+   "Chimney",
+   "Door",
+   "Doorknob",
+   "Window",
+   "Shutters",
+   "Porch",
+   "Steps",
+   "Walkway",
+   "Mailbox",
+   "Gate",
+   "Driveway",
+   "Garage",
+   "Gutter",
+   "Wall",
+   "Foundation",
+   "Yard",
+   "Garden",
+   "Flower box",
+   "Deck",
+   "Awning",
+   "Antenna",
+   "Drainpipe",
+   "Doorbell",
+   "Welcome mat"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land3_the-barnyard.jpg",
+  "title": "The Barnyard",
+  "land": 3,
+  "land_name": "Terrasol",
+  "heroes": [
+   "Vesta",
+   "Silas"
+  ],
+  "accent": "fresh spring green",
+  "setting": "a lush garden-and-farm world of plants, animals and nature discovery",
+  "alt": "Farm animals in the Terrasol barnyard",
+  "vocab_source": "land3-the-barnyard.xhtml",
+  "vocab_pool": [
+   "Barn",
+   "Tractor",
+   "Hay",
+   "Silo",
+   "Fence",
+   "Rooster",
+   "Cow",
+   "Calf",
+   "Goat",
+   "Pig",
+   "Piglet",
+   "Horse",
+   "Pony",
+   "Donkey",
+   "Sheep",
+   "Lamb",
+   "Hen",
+   "Chick",
+   "Duck",
+   "Duckling",
+   "Turkey",
+   "Goose",
+   "Stable",
+   "Pen",
+   "Coop",
+   "Trough",
+   "Feed",
+   "Saddle",
+   "Bridle",
+   "Pasture",
+   "Corral",
+   "Hoof",
+   "Mane",
+   "Tail",
+   "Wool",
+   "Egg",
+   "Milk",
+   "Hay bale",
+   "Scarecrow",
+   "Windmill"
+  ],
+  "words": [
+   "Barn",
+   "Tractor",
+   "Hay bale",
+   "Silo",
+   "Fence",
+   "Rooster",
+   "Cow",
+   "Goat",
+   "Pig",
+   "Horse",
+   "Sheep",
+   "Chick",
+   "Duck",
+   "Turkey",
+   "Goose",
+   "Coop",
+   "Trough",
+   "Scarecrow",
+   "Windmill"
+  ],
+  "scene_extra": "",
+  "status": "composed",
+  "job_id": "078dddba-86ec-4ae0-99a3-1f53a5524952",
+  "scene_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3601bQ63HBullpQ168ApWJtOp5D/hf_20260709_081133_078dddba-86ec-4ae0-99a3-1f53a5524952.png",
+  "anchors": {
+   "Barn": [
+    0.3,
+    0.2
+   ],
+   "Tractor": [
+    0.175,
+    0.475
+   ],
+   "Hay bale": [
+    0.295,
+    0.365
+   ],
+   "Silo": [
+    0.08,
+    0.14
+   ],
+   "Fence": [
+    0.525,
+    0.56
+   ],
+   "Rooster": [
+    0.45,
+    0.465
+   ],
+   "Cow": [
+    0.655,
+    0.415
+   ],
+   "Goat": [
+    0.905,
+    0.505
+   ],
+   "Pig": [
+    0.725,
+    0.54
+   ],
+   "Horse": [
+    0.865,
+    0.395
+   ],
+   "Sheep": [
+    0.565,
+    0.49
+   ],
+   "Chick": [
+    0.645,
+    0.78
+   ],
+   "Duck": [
+    0.48,
+    0.65
+   ],
+   "Turkey": [
+    0.75,
+    0.72
+   ],
+   "Goose": [
+    0.585,
+    0.875
+   ],
+   "Coop": [
+    0.875,
+    0.675
+   ],
+   "Trough": [
+    0.565,
+    0.635
+   ],
+   "Scarecrow": [
+    0.66,
+    0.275
+   ],
+   "Windmill": [
+    0.86,
+    0.15
+   ]
+  },
+  "ordered_words": [
+   "Silo",
+   "Windmill",
+   "Barn",
+   "Scarecrow",
+   "Tractor",
+   "Hay bale",
+   "Rooster",
+   "Sheep",
+   "Cow",
+   "Horse",
+   "Duck",
+   "Fence",
+   "Trough",
+   "Pig",
+   "Goat",
+   "Chick",
+   "Turkey",
+   "Coop",
+   "Goose"
+  ]
+ },
+ {
+  "basename": "land3_the-environment.jpg",
+  "title": "The Environment",
+  "land": 3,
+  "land_name": "Terrasol",
+  "heroes": [
+   "Vesta",
+   "Silas"
+  ],
+  "accent": "fresh spring green",
+  "setting": "a lush garden-and-farm world of plants, animals and nature discovery",
+  "alt": "Clean rivers and forests in Terrasol",
+  "vocab_source": "land3-the-environment.xhtml",
+  "vocab_pool": [
+   "Meadow",
+   "Desert",
+   "Wetland",
+   "Pond",
+   "Stream",
+   "Hill",
+   "Valley",
+   "Cliff",
+   "Cave",
+   "Prairie",
+   "Marsh",
+   "Jungle",
+   "Rainforest",
+   "Tundra",
+   "Coral reef",
+   "Volcano",
+   "Island",
+   "Peninsula",
+   "Canyon",
+   "Glacier",
+   "Ecosystem",
+   "Habitat",
+   "Conservation",
+   "Pollution",
+   "Recycle",
+   "Endangered",
+   "Extinct",
+   "Biodiversity",
+   "Renewable",
+   "Climate"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land3_the-garden.jpg",
+  "title": "The Garden",
+  "land": 3,
+  "land_name": "Terrasol",
+  "heroes": [
+   "Vesta",
+   "Silas"
+  ],
+  "accent": "fresh spring green",
+  "setting": "a lush garden-and-farm world of plants, animals and nature discovery",
+  "alt": "A community garden growing in Terrasol",
+  "vocab_source": "land3-the-garden.xhtml",
+  "vocab_pool": [
+   "Soil",
+   "Rake",
+   "Hoe",
+   "Shovel",
+   "Watering can",
+   "Hose",
+   "Compost",
+   "Wheelbarrow",
+   "Seed",
+   "Seedling",
+   "Sprout",
+   "Root",
+   "Stem",
+   "Leaf",
+   "Bud",
+   "Bloom",
+   "Petal",
+   "Thorn",
+   "Vine",
+   "Weed",
+   "Mulch",
+   "Fertilizer",
+   "Garden bed",
+   "Row",
+   "Trellis",
+   "Pot",
+   "Planter",
+   "Greenhouse",
+   "Pruning shears",
+   "Gloves",
+   "Bucket",
+   "Sunflower",
+   "Rose",
+   "Tulip",
+   "Daisy"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land3_the-ocean-beach.jpg",
+  "title": "The Ocean Beach",
+  "land": 3,
+  "land_name": "Terrasol",
+  "heroes": [
+   "Vesta",
+   "Silas"
+  ],
+  "accent": "fresh spring green",
+  "setting": "a lush garden-and-farm world of plants, animals and nature discovery",
+  "alt": "Tide pools and beach life in Terrasol coast",
+  "vocab_source": "land3-the-ocean-beach.xhtml",
+  "vocab_pool": [
+   "Ocean",
+   "Wave",
+   "Sand",
+   "Shell",
+   "Tide",
+   "Seaweed",
+   "Coral",
+   "Starfish",
+   "Jellyfish",
+   "Crab",
+   "Dolphin",
+   "Whale",
+   "Lighthouse",
+   "Pier",
+   "Surfboard",
+   "Lifeguard",
+   "Sunscreen",
+   "Towel",
+   "Sandcastle",
+   "Seagull",
+   "Horizon",
+   "Current",
+   "Anchor",
+   "Shore",
+   "Reef"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land3_trees-the-forest.jpg",
+  "title": "Trees the Forest",
+  "land": 3,
+  "land_name": "Terrasol",
+  "heroes": [
+   "Vesta",
+   "Silas"
+  ],
+  "accent": "fresh spring green",
+  "setting": "a lush garden-and-farm world of plants, animals and nature discovery",
+  "alt": "Tall trees and forest floor in Terrasol",
+  "vocab_source": "land3-trees-the-forest.xhtml",
+  "vocab_pool": [
+   "Oak",
+   "Pine",
+   "Maple",
+   "Willow",
+   "Birch",
+   "Cedar",
+   "Elm",
+   "Palm",
+   "Trunk",
+   "Branch",
+   "Bark",
+   "Root",
+   "Canopy",
+   "Stump",
+   "Log",
+   "Moss",
+   "Fern",
+   "Mushroom",
+   "Acorn",
+   "Pinecone",
+   "Sap",
+   "Forest",
+   "Grove",
+   "Path",
+   "Clearing",
+   "Underbrush",
+   "Ivy",
+   "Bush",
+   "Hedge",
+   "Timber"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land3_weather-seasons.jpg",
+  "title": "Weather Seasons",
+  "land": 3,
+  "land_name": "Terrasol",
+  "heroes": [
+   "Vesta",
+   "Silas"
+  ],
+  "accent": "fresh spring green",
+  "setting": "a lush garden-and-farm world of plants, animals and nature discovery",
+  "alt": "Four seasons shown in Terrasol landscape",
+  "vocab_source": "land3-weather-seasons.xhtml",
+  "vocab_pool": [
+   "Sunny",
+   "Cloudy",
+   "Rainy",
+   "Windy",
+   "Snowy",
+   "Stormy",
+   "Hot",
+   "Cold",
+   "Warm",
+   "Cool",
+   "Fog",
+   "Hail",
+   "Thunder",
+   "Lightning",
+   "Rainbow",
+   "Umbrella",
+   "Thermometer",
+   "Forecast",
+   "Spring",
+   "Summer",
+   "Fall",
+   "Winter",
+   "Breeze",
+   "Frost",
+   "Humidity"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land3_wild-animals.jpg",
+  "title": "Wild Animals",
+  "land": 3,
+  "land_name": "Terrasol",
+  "heroes": [
+   "Vesta",
+   "Silas"
+  ],
+  "accent": "fresh spring green",
+  "setting": "a lush garden-and-farm world of plants, animals and nature discovery",
+  "alt": "Wild animals in the Terrasol forest",
+  "vocab_source": "land3-wild-animals.xhtml",
+  "vocab_pool": [
+   "Lion",
+   "Tiger",
+   "Bear",
+   "Wolf",
+   "Fox",
+   "Deer",
+   "Elk",
+   "Moose",
+   "Zebra",
+   "Giraffe",
+   "Elephant",
+   "Rhinoceros",
+   "Hippopotamus",
+   "Gorilla",
+   "Monkey",
+   "Chimpanzee",
+   "Kangaroo",
+   "Koala",
+   "Panda",
+   "Leopard",
+   "Cheetah",
+   "Hyena",
+   "Crocodile",
+   "Alligator",
+   "Snake",
+   "Lizard",
+   "Frog",
+   "Toad",
+   "Turtle",
+   "Eagle",
+   "Hawk",
+   "Owl",
+   "Parrot",
+   "Penguin",
+   "Flamingo",
+   "Bat",
+   "Squirrel",
+   "Raccoon",
+   "Skunk",
+   "Beaver",
+   "Otter",
+   "Whale",
+   "Dolphin",
+   "Shark",
+   "Seal"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land4_bicycle-walking.jpg",
+  "title": "Bicycle Walking",
+  "land": 4,
+  "land_name": "Aquaria",
+  "heroes": [
+   "Nerissa",
+   "Ronan"
+  ],
+  "accent": "calm sky blue",
+  "setting": "a bright coastal harbor world of water, boats, maps and travel",
+  "alt": "Walking paths and cycling routes in Aquaria",
+  "vocab_source": "land4-bicycle-walking.xhtml",
+  "vocab_pool": [
+   "Bicycle",
+   "Helmet",
+   "Pedal",
+   "Chain",
+   "Tire",
+   "Handlebar",
+   "Brake",
+   "Kickstand",
+   "Bike lane",
+   "Lock",
+   "Sidewalk",
+   "Crosswalk",
+   "Pedestrian",
+   "Jogging",
+   "Stroller",
+   "Wheelchair",
+   "Scooter",
+   "Skateboard",
+   "Path",
+   "Trail",
+   "Ramp",
+   "Stairs",
+   "Elevator",
+   "Escalator",
+   "Shortcut"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land4_community-places.jpg",
+  "title": "Community Places",
+  "land": 4,
+  "land_name": "Aquaria",
+  "heroes": [
+   "Nerissa",
+   "Ronan"
+  ],
+  "accent": "calm sky blue",
+  "setting": "a bright coastal harbor world of water, boats, maps and travel",
+  "alt": "Community buildings from a bird's eye view in Aquaria",
+  "vocab_source": "land4-community-places.xhtml",
+  "vocab_pool": [
+   "School",
+   "Library",
+   "Hospital",
+   "Fire station",
+   "Police station",
+   "Post office",
+   "Bank",
+   "Grocery store",
+   "Restaurant",
+   "Pharmacy",
+   "Gas station",
+   "Laundromat",
+   "Park",
+   "Playground",
+   "Community center",
+   "Place of worship",
+   "City hall",
+   "Courthouse",
+   "Museum",
+   "Movie theater"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land4_directions-navigation.jpg",
+  "title": "Directions Navigation",
+  "land": 4,
+  "land_name": "Aquaria",
+  "heroes": [
+   "Nerissa",
+   "Ronan"
+  ],
+  "accent": "calm sky blue",
+  "setting": "a bright coastal harbor world of water, boats, maps and travel",
+  "alt": "Street signs and direction arrows in Aquaria city",
+  "vocab_source": "land4-directions-navigation.xhtml",
+  "vocab_pool": [
+   "Left",
+   "Right",
+   "Straight",
+   "Turn",
+   "Block",
+   "Corner",
+   "Across from",
+   "Next to",
+   "Between",
+   "Behind",
+   "In front of",
+   "Near",
+   "Far",
+   "Above",
+   "Below",
+   "Inside",
+   "Outside",
+   "Upstairs",
+   "Downstairs",
+   "GPS",
+   "Landmark",
+   "Location",
+   "Lost",
+   "Detour",
+   "Dead end"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land4_emergency-services.jpg",
+  "title": "Emergency Services",
+  "land": 4,
+  "land_name": "Aquaria",
+  "heroes": [
+   "Nerissa",
+   "Ronan"
+  ],
+  "accent": "calm sky blue",
+  "setting": "a bright coastal harbor world of water, boats, maps and travel",
+  "alt": "Emergency vehicles and services in Aquaria city",
+  "vocab_source": "land4-emergency-services.xhtml",
+  "vocab_pool": [
+   "Emergency",
+   "911",
+   "Firefighter",
+   "Paramedic",
+   "Police officer",
+   "First aid",
+   "Bandage",
+   "Fire extinguisher",
+   "Smoke detector",
+   "Escape route",
+   "CPR",
+   "Stretcher",
+   "Siren",
+   "Safety",
+   "Hazard",
+   "Evacuate",
+   "Alarm",
+   "Rescue",
+   "Dispatcher",
+   "Safe place"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land4_freshwater-life.jpg",
+  "title": "Freshwater Life",
+  "land": 4,
+  "land_name": "Aquaria",
+  "heroes": [
+   "Nerissa",
+   "Ronan"
+  ],
+  "accent": "calm sky blue",
+  "setting": "a bright coastal harbor world of water, boats, maps and travel",
+  "alt": "Life along the rivers of Aquaria",
+  "vocab_source": "land4-freshwater-life.xhtml",
+  "vocab_pool": [
+   "Freshwater",
+   "Trout",
+   "Bass",
+   "Catfish",
+   "Salmon",
+   "Tadpole",
+   "Crayfish",
+   "Pond weed",
+   "Lily pad",
+   "Cattail",
+   "Dragonfly",
+   "Heron",
+   "Beaver dam",
+   "Minnow",
+   "Algae",
+   "Fishing rod",
+   "Bait",
+   "Hook",
+   "Net",
+   "Dock"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land4_geography-landforms.jpg",
+  "title": "Geography Landforms",
+  "land": 4,
+  "land_name": "Aquaria",
+  "heroes": [
+   "Nerissa",
+   "Ronan"
+  ],
+  "accent": "calm sky blue",
+  "setting": "a bright coastal harbor world of water, boats, maps and travel",
+  "alt": "Mountains, rivers, and plains on an Aquaria map",
+  "vocab_source": "land4-geography-landforms.xhtml",
+  "vocab_pool": [
+   "Continent",
+   "Country",
+   "Island",
+   "Peninsula",
+   "Mountain",
+   "Valley",
+   "Hill",
+   "Plain",
+   "Plateau",
+   "Desert",
+   "Forest",
+   "Jungle",
+   "River",
+   "Lake",
+   "Pond",
+   "Waterfall",
+   "Stream",
+   "Canal",
+   "Bay",
+   "Coast",
+   "Beach",
+   "Cliff",
+   "Cave",
+   "Volcano",
+   "Glacier",
+   "Iceberg",
+   "North",
+   "South",
+   "East",
+   "West",
+   "Equator",
+   "Hemisphere",
+   "Map",
+   "Compass",
+   "Border",
+   "Capital",
+   "Population",
+   "Region",
+   "Terrain",
+   "Globe"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land4_hotels-lodging.jpg",
+  "title": "Hotels Lodging",
+  "land": 4,
+  "land_name": "Aquaria",
+  "heroes": [
+   "Nerissa",
+   "Ronan"
+  ],
+  "accent": "calm sky blue",
+  "setting": "a bright coastal harbor world of water, boats, maps and travel",
+  "alt": "Hotel lobby and travel expenses in Aquaria",
+  "vocab_source": "land4-hotels-lodging.xhtml",
+  "vocab_pool": [
+   "Hotel",
+   "Motel",
+   "Room",
+   "Reservation",
+   "Check-in",
+   "Check-out",
+   "Front desk",
+   "Lobby",
+   "Elevator",
+   "Room key",
+   "Housekeeping",
+   "Room service",
+   "Suite",
+   "Single room",
+   "Double room",
+   "Vacancy",
+   "No vacancy",
+   "Swimming pool",
+   "Luggage rack",
+   "Complimentary"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land4_mail-postal-services.jpg",
+  "title": "Mail Postal Services",
+  "land": 4,
+  "land_name": "Aquaria",
+  "heroes": [
+   "Nerissa",
+   "Ronan"
+  ],
+  "accent": "calm sky blue",
+  "setting": "a bright coastal harbor world of water, boats, maps and travel",
+  "alt": "Cursive envelope addressing in Aquaria post office",
+  "vocab_source": "land4-mail-postal-services.xhtml",
+  "vocab_pool": [
+   "Letter",
+   "Envelope",
+   "Stamp",
+   "Address",
+   "Return address",
+   "Zip code",
+   "Package",
+   "Mail carrier",
+   "Post office",
+   "Mailbox",
+   "Postcard",
+   "Delivery",
+   "Tracking number",
+   "Fragile",
+   "Priority mail",
+   "Express",
+   "Scale",
+   "Certified mail",
+   "P.O. Box",
+   "Sort"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land4_map-reading-gps.jpg",
+  "title": "Map Reading GPS",
+  "land": 4,
+  "land_name": "Aquaria",
+  "heroes": [
+   "Nerissa",
+   "Ronan"
+  ],
+  "accent": "calm sky blue",
+  "setting": "a bright coastal harbor world of water, boats, maps and travel",
+  "alt": "A treasure map in the Aquaria jungle",
+  "vocab_source": "land4-map-reading-gps.xhtml",
+  "vocab_pool": [
+   "Map",
+   "GPS",
+   "North",
+   "South",
+   "East",
+   "West",
+   "Landmark",
+   "Navigate",
+   "Compass",
+   "Legend",
+   "Scale",
+   "Coordinate",
+   "Latitude",
+   "Longitude",
+   "Destination",
+   "Intersection",
+   "Highway",
+   "Exit",
+   "Detour",
+   "U-turn",
+   "Roundabout",
+   "One-way",
+   "Dead end",
+   "Scenic route",
+   "Satellite"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land4_public-transportation.jpg",
+  "title": "Public Transportation",
+  "land": 4,
+  "land_name": "Aquaria",
+  "heroes": [
+   "Nerissa",
+   "Ronan"
+  ],
+  "accent": "calm sky blue",
+  "setting": "a bright coastal harbor world of water, boats, maps and travel",
+  "alt": "Buses, trains and subways in Aquaria city",
+  "vocab_source": "land4-public-transportation.xhtml",
+  "vocab_pool": [
+   "Bus",
+   "Subway",
+   "Train",
+   "Station",
+   "Platform",
+   "Ticket",
+   "Fare",
+   "Transfer",
+   "Schedule",
+   "Route",
+   "Stop",
+   "Driver",
+   "Passenger",
+   "Seat",
+   "Standing room",
+   "Rush hour",
+   "Commute",
+   "Metro",
+   "Trolley",
+   "Ferry",
+   "Terminal",
+   "Pass",
+   "Delay",
+   "On time",
+   "Accessible"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land4_road-signs-safety.jpg",
+  "title": "Road Signs Safety",
+  "land": 4,
+  "land_name": "Aquaria",
+  "heroes": [
+   "Nerissa",
+   "Ronan"
+  ],
+  "accent": "calm sky blue",
+  "setting": "a bright coastal harbor world of water, boats, maps and travel",
+  "alt": "Traffic signs and pedestrian safety in Aquaria streets",
+  "vocab_source": "land4-road-signs-safety.xhtml",
+  "vocab_pool": [
+   "Stop",
+   "Yield",
+   "One way",
+   "Do not enter",
+   "Speed limit",
+   "School zone",
+   "Crosswalk",
+   "Pedestrian crossing",
+   "Railroad crossing",
+   "Merge",
+   "Exit",
+   "Detour",
+   "No parking",
+   "Handicapped parking",
+   "Caution",
+   "Construction zone",
+   "Dead end",
+   "U-turn",
+   "Curve",
+   "Warning sign"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land4_seasons-nature-cycles.jpg",
+  "title": "Seasons Nature Cycles",
+  "land": 4,
+  "land_name": "Aquaria",
+  "heroes": [
+   "Nerissa",
+   "Ronan"
+  ],
+  "accent": "calm sky blue",
+  "setting": "a bright coastal harbor world of water, boats, maps and travel",
+  "alt": "The four seasons shown in Aquaria landscape",
+  "vocab_source": "land4-seasons-nature-cycles.xhtml",
+  "vocab_pool": [
+   "Spring",
+   "Summer",
+   "Fall",
+   "Autumn",
+   "Winter",
+   "Bloom",
+   "Harvest",
+   "Migrate",
+   "Hibernate",
+   "Bud",
+   "Leaf",
+   "Branch",
+   "Root",
+   "Seed",
+   "Soil",
+   "Dew",
+   "Frost",
+   "Thaw",
+   "Breeze",
+   "Sunshine"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land4_the-airport-travel.jpg",
+  "title": "The Airport Travel",
+  "land": 4,
+  "land_name": "Aquaria",
+  "heroes": [
+   "Nerissa",
+   "Ronan"
+  ],
+  "accent": "calm sky blue",
+  "setting": "a bright coastal harbor world of water, boats, maps and travel",
+  "alt": "Travelers heading out to see the world",
+  "vocab_source": "land4-the-airport-travel.xhtml",
+  "vocab_pool": [
+   "Airport",
+   "Terminal",
+   "Gate",
+   "Ticket",
+   "Boarding pass",
+   "Passport",
+   "Visa",
+   "Customs",
+   "Immigration",
+   "Luggage",
+   "Suitcase",
+   "Carry-on",
+   "Baggage claim",
+   "Security",
+   "Check-in",
+   "Departure",
+   "Arrival",
+   "Delay",
+   "Flight",
+   "Pilot",
+   "Flight attendant",
+   "Runway",
+   "Takeoff",
+   "Landing",
+   "Seat belt",
+   "Overhead bin",
+   "Aisle seat",
+   "Window seat",
+   "Destination",
+   "Round trip",
+   "One-way",
+   "Connecting flight",
+   "Layover",
+   "Turbulence",
+   "International"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land4_the-ocean-marine-life.jpg",
+  "title": "The Ocean Marine Life",
+  "land": 4,
+  "land_name": "Aquaria",
+  "heroes": [
+   "Nerissa",
+   "Ronan"
+  ],
+  "accent": "calm sky blue",
+  "setting": "a bright coastal harbor world of water, boats, maps and travel",
+  "alt": "Colorful sea creatures in the Aquaria ocean",
+  "vocab_source": "land4-the-ocean-marine-life.xhtml",
+  "vocab_pool": [
+   "Ocean",
+   "Sea",
+   "Wave",
+   "Tide",
+   "Current",
+   "Coral",
+   "Coral reef",
+   "Fish",
+   "Shark",
+   "Dolphin",
+   "Whale",
+   "Octopus",
+   "Jellyfish",
+   "Sea turtle",
+   "Seahorse",
+   "Starfish",
+   "Crab",
+   "Lobster",
+   "Shrimp",
+   "Clam",
+   "Oyster",
+   "Seaweed",
+   "Sand",
+   "Shell",
+   "Anchor",
+   "Submarine",
+   "Scuba diver",
+   "Snorkel",
+   "Wetsuit",
+   "Plankton",
+   "Trench",
+   "Shipwreck",
+   "Reef",
+   "Saltwater",
+   "Marine"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land4_transportation.jpg",
+  "title": "Transportation",
+  "land": 4,
+  "land_name": "Aquaria",
+  "heroes": [
+   "Nerissa",
+   "Ronan"
+  ],
+  "accent": "calm sky blue",
+  "setting": "a bright coastal harbor world of water, boats, maps and travel",
+  "alt": "Trains, planes, and ships in the Aquaria world",
+  "vocab_source": "land4-transportation.xhtml",
+  "vocab_pool": [
+   "Car",
+   "Truck",
+   "Bus",
+   "Van",
+   "Taxi",
+   "Motorcycle",
+   "Bicycle",
+   "Scooter",
+   "Train",
+   "Subway",
+   "Airplane",
+   "Helicopter",
+   "Boat",
+   "Ship",
+   "Ferry",
+   "Sailboat",
+   "Canoe",
+   "Kayak",
+   "Ambulance",
+   "Fire truck",
+   "Police car",
+   "Tow truck",
+   "Crosswalk",
+   "Traffic light",
+   "Stop sign",
+   "Speed limit",
+   "Parking lot",
+   "Gas station",
+   "Highway",
+   "Intersection",
+   "Pedestrian",
+   "Sidewalk",
+   "Bridge",
+   "Tunnel",
+   "Route"
+  ],
+  "words": [
+   "Car",
+   "Truck",
+   "Bus",
+   "Taxi",
+   "Motorcycle",
+   "Bicycle",
+   "Scooter",
+   "Train",
+   "Airplane",
+   "Helicopter",
+   "Boat",
+   "Ferry",
+   "Sailboat",
+   "Ambulance",
+   "Fire truck",
+   "Traffic light",
+   "Crosswalk",
+   "Bridge"
+  ],
+  "scene_extra": "",
+  "status": "composed",
+  "job_id": "05e37c7b-9f84-4b65-9a96-d24d2d127012",
+  "scene_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3601bQ63HBullpQ168ApWJtOp5D/hf_20260709_081217_05e37c7b-9f84-4b65-9a96-d24d2d127012.png",
+  "anchors": {
+   "Car": [
+    0.42,
+    0.35
+   ],
+   "Truck": [
+    0.165,
+    0.54
+   ],
+   "Bus": [
+    0.49,
+    0.54
+   ],
+   "Taxi": [
+    0.665,
+    0.505
+   ],
+   "Motorcycle": [
+    0.56,
+    0.79
+   ],
+   "Bicycle": [
+    0.32,
+    0.87
+   ],
+   "Scooter": [
+    0.44,
+    0.75
+   ],
+   "Train": [
+    0.8,
+    0.265
+   ],
+   "Airplane": [
+    0.195,
+    0.115
+   ],
+   "Helicopter": [
+    0.795,
+    0.12
+   ],
+   "Boat": [
+    0.8,
+    0.65
+   ],
+   "Ferry": [
+    0.3,
+    0.38
+   ],
+   "Sailboat": [
+    0.505,
+    0.235
+   ],
+   "Ambulance": [
+    0.81,
+    0.395
+   ],
+   "Fire truck": [
+    0.265,
+    0.52
+   ],
+   "Traffic light": [
+    0.35,
+    0.615
+   ],
+   "Crosswalk": [
+    0.225,
+    0.65
+   ],
+   "Bridge": [
+    0.585,
+    0.615
+   ]
+  },
+  "ordered_words": [
+   "Airplane",
+   "Helicopter",
+   "Sailboat",
+   "Train",
+   "Ferry",
+   "Car",
+   "Ambulance",
+   "Truck",
+   "Crosswalk",
+   "Fire truck",
+   "Traffic light",
+   "Bus",
+   "Bridge",
+   "Taxi",
+   "Boat",
+   "Scooter",
+   "Motorcycle",
+   "Bicycle"
+  ]
+ },
+ {
+  "basename": "land4_travel-documents.jpg",
+  "title": "Travel Documents",
+  "land": 4,
+  "land_name": "Aquaria",
+  "heroes": [
+   "Nerissa",
+   "Ronan"
+  ],
+  "accent": "calm sky blue",
+  "setting": "a bright coastal harbor world of water, boats, maps and travel",
+  "alt": "Passports, visas and travel papers in Luminosity embassy",
+  "vocab_source": "land4-travel-documents.xhtml",
+  "vocab_pool": [
+   "Passport",
+   "Visa",
+   "ID",
+   "Birth certificate",
+   "Social Security",
+   "Green card",
+   "Citizenship",
+   "Application",
+   "Form",
+   "Photo",
+   "Signature",
+   "Expiration",
+   "Renewal",
+   "Embassy",
+   "Consulate",
+   "Customs",
+   "Immigration",
+   "Boarding pass",
+   "Luggage",
+   "Declaration",
+   "Stamp",
+   "Arrival",
+   "Departure",
+   "International",
+   "Domestic"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land4_tricky-english-words.jpg",
+  "title": "Tricky English Words",
+  "land": 4,
+  "land_name": "Aquaria",
+  "heroes": [
+   "Nerissa",
+   "Ronan"
+  ],
+  "accent": "calm sky blue",
+  "setting": "a bright coastal harbor world of water, boats, maps and travel",
+  "alt": "Tricky words waiting to be conquered",
+  "vocab_source": "land4-tricky-english-words.xhtml",
+  "vocab_pool": [
+   "Their / There / They&#x27;re",
+   "Your / You&#x27;re",
+   "Its / It&#x27;s",
+   "To / Too / Two",
+   "Here / Hear",
+   "Right / Write",
+   "No / Know",
+   "Buy / By / Bye",
+   "Ate / Eight",
+   "See / Sea",
+   "Weather / Whether",
+   "Accept / Except",
+   "Affect / Effect",
+   "Then / Than",
+   "Loose / Lose",
+   "Quiet / Quite",
+   "Advice / Advise",
+   "Borrow / Lend",
+   "Bring / Take",
+   "Learn / Teach"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land4_weather-climate.jpg",
+  "title": "Weather Climate",
+  "land": 4,
+  "land_name": "Aquaria",
+  "heroes": [
+   "Nerissa",
+   "Ronan"
+  ],
+  "accent": "calm sky blue",
+  "setting": "a bright coastal harbor world of water, boats, maps and travel",
+  "alt": "Climate zones shown on a world map",
+  "vocab_source": "land4-weather-climate.xhtml",
+  "vocab_pool": [
+   "Weather",
+   "Sunny",
+   "Cloudy",
+   "Rainy",
+   "Windy",
+   "Snowy",
+   "Foggy",
+   "Stormy",
+   "Thunder",
+   "Lightning",
+   "Rain",
+   "Snow",
+   "Hail",
+   "Ice",
+   "Frost",
+   "Humidity",
+   "Temperature",
+   "Forecast",
+   "Umbrella",
+   "Rainbow",
+   "Drought",
+   "Flood",
+   "Hurricane",
+   "Tornado",
+   "Earthquake",
+   "Breeze",
+   "Cloud",
+   "Sunshine",
+   "Overcast",
+   "Climate"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land5_exercise-movement.jpg",
+  "title": "Exercise Movement",
+  "land": 5,
+  "land_name": "Vitalis",
+  "heroes": [
+   "Amara",
+   "Felix"
+  ],
+  "accent": "warm terracotta",
+  "setting": "a sunny park-and-playground world of movement, health and good food",
+  "alt": "Children stretching in Vitalis",
+  "vocab_source": "land5-exercise-movement.xhtml",
+  "vocab_pool": [
+   "Exercise",
+   "Stretch",
+   "Warm-up",
+   "Cool-down",
+   "Jump",
+   "Run",
+   "Walk",
+   "Skip",
+   "Hop",
+   "Crawl",
+   "Climb",
+   "Bend",
+   "Twist",
+   "Kick",
+   "Throw",
+   "Catch",
+   "Push",
+   "Pull",
+   "Lift",
+   "Squat",
+   "Balance",
+   "Dance",
+   "Yoga",
+   "Breathe",
+   "Inhale",
+   "Exhale",
+   "Flexibility",
+   "Strength",
+   "Endurance",
+   "Coordination"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land5_eye-care-vision.jpg",
+  "title": "Eye Care Vision",
+  "land": 5,
+  "land_name": "Vitalis",
+  "heroes": [
+   "Amara",
+   "Felix"
+  ],
+  "accent": "warm terracotta",
+  "setting": "a sunny park-and-playground world of movement, health and good food",
+  "alt": "Eye health and vision care in Vitalis clinic",
+  "vocab_source": "land5-eye-care-vision.xhtml",
+  "vocab_pool": [
+   "Eye",
+   "Vision",
+   "Glasses",
+   "Contacts",
+   "Sunglasses",
+   "Eye exam",
+   "Optometrist",
+   "Prescription",
+   "Lens",
+   "Frame",
+   "Pupil",
+   "Iris",
+   "Retina",
+   "Eyelid",
+   "Eyelash",
+   "Eyebrow",
+   "Tear",
+   "Blurry",
+   "Focus",
+   "Nearsighted",
+   "Farsighted",
+   "Blind",
+   "Color blind",
+   "Reading glasses",
+   "Eye drops"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land5_first-aid-injuries.jpg",
+  "title": "First Aid Injuries",
+  "land": 5,
+  "land_name": "Vitalis",
+  "heroes": [
+   "Amara",
+   "Felix"
+  ],
+  "accent": "warm terracotta",
+  "setting": "a sunny park-and-playground world of movement, health and good food",
+  "alt": "First aid kit and basic injury care in Vitalis",
+  "vocab_source": "land5-first-aid-injuries.xhtml",
+  "vocab_pool": [
+   "Bandage",
+   "Cut",
+   "Bruise",
+   "Burn",
+   "Blister",
+   "Sprain",
+   "Fracture",
+   "Swelling",
+   "Ice pack",
+   "Splint",
+   "Wound",
+   "Sting",
+   "Rash",
+   "Fever",
+   "Cough",
+   "Sneeze",
+   "Dizzy",
+   "Nausea",
+   "CPR",
+   "Poison",
+   "Allergic reaction",
+   "Ambulance",
+   "Emergency room",
+   "Stretcher",
+   "Recover"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land5_healthy-habits-hygiene.jpg",
+  "title": "Healthy Habits Hygiene",
+  "land": 5,
+  "land_name": "Vitalis",
+  "heroes": [
+   "Amara",
+   "Felix"
+  ],
+  "accent": "warm terracotta",
+  "setting": "a sunny park-and-playground world of movement, health and good food",
+  "alt": "Good hygiene habits in Vitalis",
+  "vocab_source": "land5-healthy-habits-hygiene.xhtml",
+  "vocab_pool": [
+   "Hygiene",
+   "Wash",
+   "Soap",
+   "Shampoo",
+   "Conditioner",
+   "Shower",
+   "Bath",
+   "Towel",
+   "Deodorant",
+   "Toothbrush",
+   "Toothpaste",
+   "Floss",
+   "Comb",
+   "Brush",
+   "Nail clipper",
+   "Sunscreen",
+   "Lotion",
+   "Tissue",
+   "Hand sanitizer",
+   "Sleep",
+   "Rest",
+   "Stretch",
+   "Posture",
+   "Hydrate",
+   "Germs",
+   "Immune system",
+   "Wellness",
+   "Routine",
+   "Laundry",
+   "Clean"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land5_inside-the-body.jpg",
+  "title": "Inside the Body",
+  "land": 5,
+  "land_name": "Vitalis",
+  "heroes": [
+   "Amara",
+   "Felix"
+  ],
+  "accent": "warm terracotta",
+  "setting": "a sunny park-and-playground world of movement, health and good food",
+  "alt": "Diagram of the body in a Vitalis health class",
+  "vocab_source": "land5-inside-the-body.xhtml",
+  "vocab_pool": [
+   "Brain",
+   "Heart",
+   "Lungs",
+   "Stomach",
+   "Liver",
+   "Kidneys",
+   "Intestines",
+   "Bone",
+   "Skeleton",
+   "Muscle",
+   "Tendon",
+   "Ligament",
+   "Joint",
+   "Blood",
+   "Blood vessel",
+   "Artery",
+   "Vein",
+   "Nerve",
+   "Skull",
+   "Rib cage",
+   "Pelvis",
+   "Cartilage",
+   "Diaphragm",
+   "Spleen",
+   "Bladder",
+   "Oxygen",
+   "Cell",
+   "Tissue",
+   "Organ",
+   "Pulse"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land5_meal-time.jpg",
+  "title": "Meal Time",
+  "land": 5,
+  "land_name": "Vitalis",
+  "heroes": [
+   "Amara",
+   "Felix"
+  ],
+  "accent": "warm terracotta",
+  "setting": "a sunny park-and-playground world of movement, health and good food",
+  "alt": "Family eating a healthy meal in Vitalis dining room",
+  "vocab_source": "land5-meal-time.xhtml",
+  "vocab_pool": [
+   "Breakfast",
+   "Lunch",
+   "Dinner",
+   "Snack",
+   "Plate",
+   "Bowl",
+   "Cup",
+   "Glass",
+   "Mug",
+   "Fork",
+   "Knife",
+   "Spoon",
+   "Chopsticks",
+   "Napkin",
+   "Placemat",
+   "Bread",
+   "Rice",
+   "Pasta",
+   "Soup",
+   "Salad",
+   "Sandwich",
+   "Eggs",
+   "Cheese",
+   "Chicken",
+   "Fish",
+   "Beef",
+   "Beans",
+   "Tortilla",
+   "Cereal",
+   "Yogurt",
+   "Juice",
+   "Water",
+   "Milk",
+   "Tea",
+   "Dessert"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land5_mental-health-emotions.jpg",
+  "title": "Mental Health Emotions",
+  "land": 5,
+  "land_name": "Vitalis",
+  "heroes": [
+   "Amara",
+   "Felix"
+  ],
+  "accent": "warm terracotta",
+  "setting": "a sunny park-and-playground world of movement, health and good food",
+  "alt": "Children breathing and being mindful in Vitalis",
+  "vocab_source": "land5-mental-health-emotions.xhtml",
+  "vocab_pool": [
+   "Stress",
+   "Anxiety",
+   "Calm",
+   "Relax",
+   "Mindfulness",
+   "Self-care",
+   "Therapy",
+   "Counselor",
+   "Support",
+   "Resilience",
+   "Gratitude",
+   "Confidence",
+   "Overwhelmed",
+   "Meditation",
+   "Well-being",
+   "Cope",
+   "Journal",
+   "Patience",
+   "Self-esteem",
+   "Rest"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land5_nutrition-food-groups.jpg",
+  "title": "Nutrition Food Groups",
+  "land": 5,
+  "land_name": "Vitalis",
+  "heroes": [
+   "Amara",
+   "Felix"
+  ],
+  "accent": "warm terracotta",
+  "setting": "a sunny park-and-playground world of movement, health and good food",
+  "alt": "A healthy plate with food groups in Vitalis",
+  "vocab_source": "land5-nutrition-food-groups.xhtml",
+  "vocab_pool": [
+   "Nutrition",
+   "Protein",
+   "Carbohydrate",
+   "Fiber",
+   "Calcium",
+   "Iron",
+   "Vitamin",
+   "Calorie",
+   "Sugar",
+   "Fat",
+   "Dairy",
+   "Grain",
+   "Whole grain",
+   "Serving size",
+   "Balanced meal",
+   "Sodium",
+   "Organic",
+   "Portion",
+   "Nutrient",
+   "Food label"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land5_personal-care-products.jpg",
+  "title": "Personal Care Products",
+  "land": 5,
+  "land_name": "Vitalis",
+  "heroes": [
+   "Amara",
+   "Felix"
+  ],
+  "accent": "warm terracotta",
+  "setting": "a sunny park-and-playground world of movement, health and good food",
+  "alt": "Personal care products laid out in Vitalis bathroom",
+  "vocab_source": "land5-personal-care-products.xhtml",
+  "vocab_pool": [
+   "Shampoo",
+   "Conditioner",
+   "Soap",
+   "Body wash",
+   "Toothpaste",
+   "Toothbrush",
+   "Floss",
+   "Mouthwash",
+   "Deodorant",
+   "Lotion",
+   "Sunscreen",
+   "Razor",
+   "Comb",
+   "Brush",
+   "Hair dryer",
+   "Cotton ball",
+   "Band-Aid",
+   "Tissues",
+   "Hand sanitizer",
+   "Nail clipper",
+   "Mirror",
+   "Towel",
+   "Washcloth",
+   "Tweezers",
+   "Q-tip"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land5_sleep-rest.jpg",
+  "title": "Sleep Rest",
+  "land": 5,
+  "land_name": "Vitalis",
+  "heroes": [
+   "Amara",
+   "Felix"
+  ],
+  "accent": "warm terracotta",
+  "setting": "a sunny park-and-playground world of movement, health and good food",
+  "alt": "Healthy sleep habits and rest in Vitalis",
+  "vocab_source": "land5-sleep-rest.xhtml",
+  "vocab_pool": [
+   "Sleep",
+   "Bed",
+   "Pillow",
+   "Blanket",
+   "Mattress",
+   "Alarm clock",
+   "Nap",
+   "Dream",
+   "Nightmare",
+   "Rest",
+   "Yawn",
+   "Snore",
+   "Drowsy",
+   "Insomnia",
+   "Pajamas",
+   "Lullaby",
+   "Bedtime",
+   "Wake up",
+   "Stretch",
+   "Rested",
+   "Toss and turn",
+   "Night light",
+   "Sleepy",
+   "Relax",
+   "Routine"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land5_sports-fitness.jpg",
+  "title": "Sports Fitness",
+  "land": 5,
+  "land_name": "Vitalis",
+  "heroes": [
+   "Amara",
+   "Felix"
+  ],
+  "accent": "warm terracotta",
+  "setting": "a sunny park-and-playground world of movement, health and good food",
+  "alt": "Children playing different sports in Vitalis",
+  "vocab_source": "land5-sports-fitness.xhtml",
+  "vocab_pool": [
+   "Soccer",
+   "Basketball",
+   "Baseball",
+   "Football",
+   "Tennis",
+   "Swimming",
+   "Running",
+   "Volleyball",
+   "Golf",
+   "Gymnastics",
+   "Referee",
+   "Score",
+   "Champion",
+   "Trophy",
+   "Medal",
+   "Stadium",
+   "Court",
+   "Field",
+   "Pool",
+   "Track",
+   "Uniform",
+   "Coach",
+   "Warm up",
+   "Cool down",
+   "Sportsmanship"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land5_the-dentist.jpg",
+  "title": "The Dentist",
+  "land": 5,
+  "land_name": "Vitalis",
+  "heroes": [
+   "Amara",
+   "Felix"
+  ],
+  "accent": "warm terracotta",
+  "setting": "a sunny park-and-playground world of movement, health and good food",
+  "alt": "A dentist visit and dental tools in Vitalis clinic",
+  "vocab_source": "land5-the-dentist.xhtml",
+  "vocab_pool": [
+   "Dentist",
+   "Dental hygienist",
+   "Dental chair",
+   "Tooth",
+   "Molar",
+   "Canine",
+   "Incisor",
+   "Gum",
+   "Cavity",
+   "Filling",
+   "Crown",
+   "Braces",
+   "Retainer",
+   "Dental X-ray",
+   "Fluoride",
+   "Plaque",
+   "Floss",
+   "Toothbrush",
+   "Toothpaste",
+   "Mouthwash",
+   "Dental mirror",
+   "Drill",
+   "Numbing gel",
+   "Rinse",
+   "Wisdom tooth"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land5_the-doctors-office.jpg",
+  "title": "The Doctors Office",
+  "land": 5,
+  "land_name": "Vitalis",
+  "heroes": [
+   "Amara",
+   "Felix"
+  ],
+  "accent": "warm terracotta",
+  "setting": "a sunny park-and-playground world of movement, health and good food",
+  "alt": "A friendly doctor's office in Vitalis medical center",
+  "vocab_source": "land5-the-doctors-office.xhtml",
+  "vocab_pool": [
+   "Doctor",
+   "Nurse",
+   "Patient",
+   "Waiting room",
+   "Appointment",
+   "Examination room",
+   "Stethoscope",
+   "Thermometer",
+   "Blood pressure cuff",
+   "Scale",
+   "Height chart",
+   "Syringe",
+   "Bandage",
+   "Cotton ball",
+   "Latex gloves",
+   "Tongue depressor",
+   "Eye chart",
+   "Reflex hammer",
+   "Otoscope",
+   "X-ray",
+   "Prescription",
+   "Diagnosis",
+   "Symptom",
+   "Fever",
+   "Allergy",
+   "Vaccine",
+   "Check-up",
+   "Insurance card",
+   "Referral",
+   "Vital signs",
+   "Blood test",
+   "Cast",
+   "Crutches",
+   "Wheelchair",
+   "First aid kit",
+   "Emergency",
+   "Ambulance",
+   "Hospital",
+   "Surgery",
+   "Recovery"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land5_the-kitchen.jpg",
+  "title": "The Kitchen",
+  "land": 5,
+  "land_name": "Vitalis",
+  "heroes": [
+   "Amara",
+   "Felix"
+  ],
+  "accent": "warm terracotta",
+  "setting": "a sunny park-and-playground world of movement, health and good food",
+  "alt": "A well-organized kitchen in Vitalis home",
+  "vocab_source": "land5-the-kitchen.xhtml",
+  "vocab_pool": [
+   "Stove",
+   "Oven",
+   "Pot",
+   "Pan",
+   "Skillet",
+   "Spatula",
+   "Whisk",
+   "Ladle",
+   "Tongs",
+   "Cutting board",
+   "Knife",
+   "Peeler",
+   "Grater",
+   "Colander",
+   "Measuring cup",
+   "Measuring spoon",
+   "Mixing bowl",
+   "Blender",
+   "Toaster",
+   "Can opener",
+   "Rolling pin",
+   "Baking sheet",
+   "Pot holder",
+   "Apron",
+   "Timer",
+   "Recipe",
+   "Ingredient",
+   "Boil",
+   "Simmer",
+   "Stir",
+   "Chop",
+   "Dice",
+   "Slice",
+   "Grill",
+   "Bake",
+   "Fry",
+   "Steam",
+   "Roast",
+   "Season",
+   "Serve"
+  ],
+  "words": [
+   "Stove",
+   "Oven",
+   "Pot",
+   "Pan",
+   "Spatula",
+   "Whisk",
+   "Ladle",
+   "Cutting board",
+   "Knife",
+   "Grater",
+   "Colander",
+   "Measuring cup",
+   "Mixing bowl",
+   "Blender",
+   "Toaster",
+   "Rolling pin",
+   "Apron",
+   "Timer"
+  ],
+  "scene_extra": "",
+  "status": "composed",
+  "job_id": "825369ff-4e93-468a-8a57-033cee8b36b1",
+  "scene_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3601bQ63HBullpQ168ApWJtOp5D/hf_20260709_081310_825369ff-4e93-468a-8a57-033cee8b36b1.png",
+  "anchors": {
+   "Stove": [
+    0.175,
+    0.64
+   ],
+   "Oven": [
+    0.4275,
+    0.39
+   ],
+   "Pot": [
+    0.265,
+    0.58
+   ],
+   "Pan": [
+    0.115,
+    0.62
+   ],
+   "Spatula": [
+    0.118,
+    0.5
+   ],
+   "Whisk": [
+    0.175,
+    0.5
+   ],
+   "Ladle": [
+    0.215,
+    0.495
+   ],
+   "Cutting board": [
+    0.665,
+    0.775
+   ],
+   "Knife": [
+    0.59,
+    0.81
+   ],
+   "Grater": [
+    0.058,
+    0.255
+   ],
+   "Colander": [
+    0.148,
+    0.27
+   ],
+   "Measuring cup": [
+    0.228,
+    0.265
+   ],
+   "Mixing bowl": [
+    0.78,
+    0.675
+   ],
+   "Blender": [
+    0.915,
+    0.635
+   ],
+   "Toaster": [
+    0.925,
+    0.81
+   ],
+   "Rolling pin": [
+    0.083,
+    0.78
+   ],
+   "Apron": [
+    0.94,
+    0.47
+   ],
+   "Timer": [
+    0.928,
+    0.283
+   ]
+  },
+  "ordered_words": [
+   "Grater",
+   "Colander",
+   "Measuring cup",
+   "Timer",
+   "Ladle",
+   "Oven",
+   "Apron",
+   "Pan",
+   "Spatula",
+   "Stove",
+   "Whisk",
+   "Pot",
+   "Blender",
+   "Rolling pin",
+   "Knife",
+   "Cutting board",
+   "Mixing bowl",
+   "Toaster"
+  ]
+ },
+ {
+  "basename": "land5_the-pharmacy.jpg",
+  "title": "The Pharmacy",
+  "land": 5,
+  "land_name": "Vitalis",
+  "heroes": [
+   "Amara",
+   "Felix"
+  ],
+  "accent": "warm terracotta",
+  "setting": "a sunny park-and-playground world of movement, health and good food",
+  "alt": "Medicine bottles and pharmacy in Vitalis",
+  "vocab_source": "land5-the-pharmacy.xhtml",
+  "vocab_pool": [
+   "Pharmacy",
+   "Pharmacist",
+   "Prescription",
+   "Medicine",
+   "Pill",
+   "Tablet",
+   "Capsule",
+   "Liquid medicine",
+   "Dosage",
+   "Side effect",
+   "Vitamins",
+   "Bandage",
+   "Adhesive tape",
+   "Gauze",
+   "Antiseptic",
+   "Ointment",
+   "Cough syrup",
+   "Eye drops",
+   "Inhaler",
+   "Thermometer",
+   "Ice pack",
+   "Heating pad",
+   "Sling",
+   "Over-the-counter",
+   "Refill"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land5_the-produce-market.jpg",
+  "title": "The Produce Market",
+  "land": 5,
+  "land_name": "Vitalis",
+  "heroes": [
+   "Amara",
+   "Felix"
+  ],
+  "accent": "warm terracotta",
+  "setting": "a sunny park-and-playground world of movement, health and good food",
+  "alt": "Colorful fruit and vegetable stands in Vitalis market",
+  "vocab_source": "land5-the-produce-market.xhtml",
+  "vocab_pool": [
+   "Apple",
+   "Banana",
+   "Orange",
+   "Grape",
+   "Strawberry",
+   "Blueberry",
+   "Watermelon",
+   "Pineapple",
+   "Mango",
+   "Peach",
+   "Pear",
+   "Cherry",
+   "Lemon",
+   "Lime",
+   "Avocado",
+   "Tomato",
+   "Carrot",
+   "Broccoli",
+   "Spinach",
+   "Lettuce",
+   "Cucumber",
+   "Onion",
+   "Garlic",
+   "Potato",
+   "Sweet potato",
+   "Bell pepper",
+   "Corn",
+   "Green beans",
+   "Celery",
+   "Mushroom",
+   "Zucchini",
+   "Eggplant",
+   "Cauliflower",
+   "Cabbage",
+   "Radish",
+   "Beet",
+   "Squash",
+   "Peas",
+   "Herbs",
+   "Basil",
+   "Cilantro",
+   "Mint",
+   "Parsley",
+   "Ginger",
+   "Coconut",
+   "Plantain",
+   "Vendor",
+   "Bag",
+   "Scale",
+   "Price"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land6_banking-online-services.jpg",
+  "title": "Banking Online Services",
+  "land": 6,
+  "land_name": "Luminosity",
+  "heroes": [
+   "Athena",
+   "Ezra"
+  ],
+  "accent": "soft coral",
+  "setting": "a friendly town-square world of helpers, workshops, tools and community",
+  "alt": "Online banking and ATMs in Luminosity financial district",
+  "vocab_source": "land6-banking-online-services.xhtml",
+  "vocab_pool": [
+   "Account",
+   "Deposit",
+   "Withdraw",
+   "Transfer",
+   "Balance",
+   "Statement",
+   "ATM",
+   "PIN",
+   "Password",
+   "Mobile app",
+   "Direct deposit",
+   "Check",
+   "Wire transfer",
+   "Savings account",
+   "Checking account",
+   "Credit card",
+   "Debit card",
+   "Loan",
+   "Mortgage",
+   "Payment",
+   "Due date",
+   "Overdue",
+   "Late fee",
+   "Fraud",
+   "Security"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land6_childcare-parenting.jpg",
+  "title": "Childcare Parenting",
+  "land": 6,
+  "land_name": "Luminosity",
+  "heroes": [
+   "Athena",
+   "Ezra"
+  ],
+  "accent": "soft coral",
+  "setting": "a friendly town-square world of helpers, workshops, tools and community",
+  "alt": "Parents, children, and caregivers in Luminosity community",
+  "vocab_source": "land6-childcare-parenting.xhtml",
+  "vocab_pool": [
+   "Daycare",
+   "Babysitter",
+   "Diaper",
+   "Bottle",
+   "Formula",
+   "Crib",
+   "Stroller",
+   "Pacifier",
+   "Car seat",
+   "Highchair",
+   "Sippy cup",
+   "Teething",
+   "Lullaby",
+   "Nap",
+   "Potty training",
+   "Pediatrician",
+   "Immunization",
+   "Play date",
+   "Preschool",
+   "Bedtime"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land6_community-helpers-services.jpg",
+  "title": "Community Helpers Services",
+  "land": 6,
+  "land_name": "Luminosity",
+  "heroes": [
+   "Athena",
+   "Ezra"
+  ],
+  "accent": "soft coral",
+  "setting": "a friendly town-square world of helpers, workshops, tools and community",
+  "alt": "Police officers, firefighters, and doctors serving in Luminosity",
+  "vocab_source": "land6-community-helpers-services.xhtml",
+  "vocab_pool": [
+   "Firefighter",
+   "Paramedic",
+   "Police officer",
+   "Mail carrier",
+   "Garbage collector",
+   "Crossing guard",
+   "Librarian",
+   "Coach",
+   "Tutor",
+   "Counselor",
+   "Interpreter",
+   "Case worker",
+   "Dispatcher",
+   "Lifeguard",
+   "Security guard"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land6_forms-documents.jpg",
+  "title": "Forms Documents",
+  "land": 6,
+  "land_name": "Luminosity",
+  "heroes": [
+   "Athena",
+   "Ezra"
+  ],
+  "accent": "soft coral",
+  "setting": "a friendly town-square world of helpers, workshops, tools and community",
+  "alt": "Official forms and documents in Luminosity city hall",
+  "vocab_source": "land6-forms-documents.xhtml",
+  "vocab_pool": [
+   "Form",
+   "Signature",
+   "Social Security number",
+   "Birth certificate",
+   "Driver&#x27;s license",
+   "State ID",
+   "Passport",
+   "Green card",
+   "Work permit",
+   "Tax return",
+   "W-2 form",
+   "Application",
+   "Notary",
+   "Photocopy",
+   "Translate",
+   "Print",
+   "Date of birth",
+   "Marital status",
+   "Emergency contact",
+   "Legal name"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land6_government-civics.jpg",
+  "title": "Government Civics",
+  "land": 6,
+  "land_name": "Luminosity",
+  "heroes": [
+   "Athena",
+   "Ezra"
+  ],
+  "accent": "soft coral",
+  "setting": "a friendly town-square world of helpers, workshops, tools and community",
+  "alt": "Leaders and government buildings in Luminosity",
+  "vocab_source": "land6-government-civics.xhtml",
+  "vocab_pool": [
+   "Government",
+   "President",
+   "Governor",
+   "Mayor",
+   "Law",
+   "Right",
+   "Vote",
+   "Election",
+   "Constitution",
+   "Amendment",
+   "Court",
+   "Judge",
+   "Jury",
+   "Trial",
+   "Citizen",
+   "Tax",
+   "Community",
+   "Neighborhood",
+   "Democracy",
+   "Freedom",
+   "Justice",
+   "Liberty",
+   "Flag",
+   "Pledge",
+   "National anthem"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land6_job-interview-skills.jpg",
+  "title": "Job Interview Skills",
+  "land": 6,
+  "land_name": "Luminosity",
+  "heroes": [
+   "Athena",
+   "Ezra"
+  ],
+  "accent": "soft coral",
+  "setting": "a friendly town-square world of helpers, workshops, tools and community",
+  "alt": "A job interview scene in Luminosity workplace",
+  "vocab_source": "land6-job-interview-skills.xhtml",
+  "vocab_pool": [
+   "Interview",
+   "Resume",
+   "Qualifications",
+   "Experience",
+   "Reference",
+   "Strengths",
+   "Weakness",
+   "Punctual",
+   "Professional",
+   "Handshake",
+   "Eye contact",
+   "Confident",
+   "Nervous",
+   "Hire",
+   "Position",
+   "Salary",
+   "Benefits",
+   "Full-time",
+   "Part-time",
+   "Shift",
+   "Background check",
+   "Follow up",
+   "Offer",
+   "Accept",
+   "Decline"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land6_legal-court-terms.jpg",
+  "title": "Legal Court Terms",
+  "land": 6,
+  "land_name": "Luminosity",
+  "heroes": [
+   "Athena",
+   "Ezra"
+  ],
+  "accent": "soft coral",
+  "setting": "a friendly town-square world of helpers, workshops, tools and community",
+  "alt": "Simple legal concepts shown in Luminosity justice building",
+  "vocab_source": "land6-legal-court-terms.xhtml",
+  "vocab_pool": [
+   "Attorney",
+   "Plaintiff",
+   "Defendant",
+   "Evidence",
+   "Witness",
+   "Testimony",
+   "Verdict",
+   "Sentence",
+   "Fine",
+   "Bail",
+   "Guilty",
+   "Not guilty",
+   "Oath",
+   "Summons",
+   "Subpoena",
+   "Arraignment",
+   "Misdemeanor",
+   "Felony",
+   "Probation",
+   "Legal aid"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land6_money-management-bills.jpg",
+  "title": "Money Management Bills",
+  "land": 6,
+  "land_name": "Luminosity",
+  "heroes": [
+   "Athena",
+   "Ezra"
+  ],
+  "accent": "soft coral",
+  "setting": "a friendly town-square world of helpers, workshops, tools and community",
+  "alt": "Bills and money management worksheets in Luminosity",
+  "vocab_source": "land6-money-management-bills.xhtml",
+  "vocab_pool": [
+   "Bill",
+   "Rent",
+   "Mortgage",
+   "Utilities",
+   "Electricity",
+   "Water bill",
+   "Gas bill",
+   "Insurance",
+   "Car insurance",
+   "Due date",
+   "Late fee",
+   "Income",
+   "Expense",
+   "Budget",
+   "Debt",
+   "Credit score",
+   "Minimum payment",
+   "Paycheck",
+   "Direct deposit",
+   "Savings"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land6_occupations-careers.jpg",
+  "title": "Occupations Careers",
+  "land": 6,
+  "land_name": "Luminosity",
+  "heroes": [
+   "Athena",
+   "Ezra"
+  ],
+  "accent": "soft coral",
+  "setting": "a friendly town-square world of helpers, workshops, tools and community",
+  "alt": "Workers in different careers in Luminosity",
+  "vocab_source": "land6-occupations-careers.xhtml",
+  "vocab_pool": [
+   "Job",
+   "Career",
+   "Boss",
+   "Employee",
+   "Employer",
+   "Salary",
+   "Wages",
+   "Benefits",
+   "Resume",
+   "Interview",
+   "Application",
+   "Hire",
+   "Promotion",
+   "Part-time",
+   "Full-time",
+   "Shift",
+   "Overtime",
+   "Coworker",
+   "Manager",
+   "Retire",
+   "Volunteer",
+   "Skill",
+   "Experience",
+   "Qualification",
+   "Deadline"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land6_resume-applications.jpg",
+  "title": "Resume Applications",
+  "land": 6,
+  "land_name": "Luminosity",
+  "heroes": [
+   "Athena",
+   "Ezra"
+  ],
+  "accent": "soft coral",
+  "setting": "a friendly town-square world of helpers, workshops, tools and community",
+  "alt": "A resume template in Luminosity career center",
+  "vocab_source": "land6-resume-applications.xhtml",
+  "vocab_pool": [
+   "Application",
+   "Cover letter",
+   "Objective",
+   "Education",
+   "Degree",
+   "Certificate",
+   "Skills",
+   "Achievement",
+   "Employer",
+   "Employee",
+   "Deadline",
+   "Online",
+   "Upload",
+   "Contact info",
+   "Work history",
+   "Volunteer",
+   "Training",
+   "Certification",
+   "Licensed",
+   "Bilingual",
+   "Proofread",
+   "Font",
+   "Format",
+   "Summary",
+   "Portfolio"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land6_rights-responsibilities.jpg",
+  "title": "Rights Responsibilities",
+  "land": 6,
+  "land_name": "Luminosity",
+  "heroes": [
+   "Athena",
+   "Ezra"
+  ],
+  "accent": "soft coral",
+  "setting": "a friendly town-square world of helpers, workshops, tools and community",
+  "alt": "Community members working together in Luminosity",
+  "vocab_source": "land6-rights-responsibilities.xhtml",
+  "vocab_pool": [
+   "Right",
+   "Responsibility",
+   "Duty",
+   "Respect",
+   "Equal",
+   "Fair",
+   "Obey",
+   "Protect",
+   "Serve",
+   "Cooperate",
+   "Participate",
+   "Honest",
+   "Tolerance",
+   "Diversity",
+   "Inclusion"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land6_safety-emergencies.jpg",
+  "title": "Safety Emergencies",
+  "land": 6,
+  "land_name": "Luminosity",
+  "heroes": [
+   "Athena",
+   "Ezra"
+  ],
+  "accent": "soft coral",
+  "setting": "a friendly town-square world of helpers, workshops, tools and community",
+  "alt": "Emergency procedures and safety signs in Luminosity",
+  "vocab_source": "land6-safety-emergencies.xhtml",
+  "vocab_pool": [
+   "Emergency",
+   "Danger",
+   "Caution",
+   "Warning",
+   "Exit",
+   "Fire escape",
+   "Fire extinguisher",
+   "Smoke detector",
+   "First aid",
+   "CPR",
+   "Poison",
+   "Hazard",
+   "Evacuate",
+   "Rescue",
+   "Safe",
+   "Helmet",
+   "Seat belt",
+   "Life jacket",
+   "Crosswalk",
+   "Stop, drop, and roll"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land6_school-subjects-education.jpg",
+  "title": "School Subjects Education",
+  "land": 6,
+  "land_name": "Luminosity",
+  "heroes": [
+   "Athena",
+   "Ezra"
+  ],
+  "accent": "soft coral",
+  "setting": "a friendly town-square world of helpers, workshops, tools and community",
+  "alt": "Students learning side by side",
+  "vocab_source": "land6-school-subjects-education.xhtml",
+  "vocab_pool": [
+   "Math",
+   "Science",
+   "History",
+   "English",
+   "Reading",
+   "Writing",
+   "Art",
+   "Music",
+   "Physical education",
+   "Geography",
+   "Social studies",
+   "Computer science",
+   "Foreign language",
+   "Health",
+   "Diploma",
+   "Degree",
+   "GED",
+   "Certificate",
+   "Tutor",
+   "Scholarship"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land6_tools-construction.jpg",
+  "title": "Tools Construction",
+  "land": 6,
+  "land_name": "Luminosity",
+  "heroes": [
+   "Athena",
+   "Ezra"
+  ],
+  "accent": "soft coral",
+  "setting": "a friendly town-square world of helpers, workshops, tools and community",
+  "alt": "Tools and building projects underway",
+  "vocab_source": "land6-tools-construction.xhtml",
+  "vocab_pool": [
+   "Hammer",
+   "Nail",
+   "Screw",
+   "Screwdriver",
+   "Wrench",
+   "Pliers",
+   "Drill",
+   "Saw",
+   "Level",
+   "Tape measure",
+   "Ladder",
+   "Paint roller",
+   "Paintbrush",
+   "Bucket",
+   "Shovel",
+   "Rake",
+   "Wheelbarrow",
+   "Hard hat",
+   "Safety goggles",
+   "Work gloves",
+   "Blueprint",
+   "Cement",
+   "Brick",
+   "Lumber",
+   "Wire",
+   "Pipe",
+   "Bolt",
+   "Nut",
+   "Sandpaper",
+   "Toolbox"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land6_types-of-workers.jpg",
+  "title": "Types of Workers",
+  "land": 6,
+  "land_name": "Luminosity",
+  "heroes": [
+   "Athena",
+   "Ezra"
+  ],
+  "accent": "soft coral",
+  "setting": "a friendly town-square world of helpers, workshops, tools and community",
+  "alt": "Many occupations illustrated in Luminosity city",
+  "vocab_source": "land6-types-of-workers.xhtml",
+  "vocab_pool": [
+   "Doctor",
+   "Nurse",
+   "Teacher",
+   "Firefighter",
+   "Police officer",
+   "Lawyer",
+   "Chef",
+   "Mechanic",
+   "Electrician",
+   "Plumber",
+   "Carpenter",
+   "Painter",
+   "Farmer",
+   "Bus driver",
+   "Postal worker",
+   "Cashier",
+   "Janitor",
+   "Accountant",
+   "Pharmacist",
+   "Dentist",
+   "Veterinarian",
+   "Engineer",
+   "Architect",
+   "Programmer",
+   "Artist",
+   "Journalist",
+   "Translator",
+   "Social worker",
+   "Paramedic",
+   "Scientist"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land6_voting-elections.jpg",
+  "title": "Voting Elections",
+  "land": 6,
+  "land_name": "Luminosity",
+  "heroes": [
+   "Athena",
+   "Ezra"
+  ],
+  "accent": "soft coral",
+  "setting": "a friendly town-square world of helpers, workshops, tools and community",
+  "alt": "Voting booths and ballot boxes in Luminosity democracy hall",
+  "vocab_source": "land6-voting-elections.xhtml",
+  "vocab_pool": [
+   "Vote",
+   "Ballot",
+   "Candidate",
+   "Election",
+   "Register",
+   "Polling place",
+   "Campaign",
+   "Debate",
+   "Platform",
+   "Democrat",
+   "Republican",
+   "Independent",
+   "Issue",
+   "Polling",
+   "Absentee ballot",
+   "Primary",
+   "General election",
+   "Inauguration",
+   "Governor",
+   "Mayor",
+   "Senator",
+   "Representative",
+   "Amendment",
+   "Democracy",
+   "Civic duty"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land7_ages-life-stages.jpg",
+  "title": "Ages Life Stages",
+  "land": 7,
+  "land_name": "Celestia",
+  "heroes": [
+   "Selene",
+   "Elias"
+  ],
+  "accent": "gentle violet",
+  "setting": "a dreamy starlit observatory world of clocks, seasons and night sky",
+  "alt": "Human life stages from baby to elder in Celestia",
+  "vocab_source": "land7-ages-life-stages.xhtml",
+  "vocab_pool": [
+   "Baby",
+   "Toddler",
+   "Child",
+   "Teenager",
+   "Adult",
+   "Senior",
+   "Age",
+   "Birthday",
+   "Anniversary",
+   "Generation",
+   "Youth",
+   "Elderly",
+   "Grow up",
+   "Milestone",
+   "Lifespan",
+   "Mature",
+   "Infant",
+   "Middle-aged",
+   "Aging",
+   "Memory"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land7_digital-time-screens.jpg",
+  "title": "Digital Time Screens",
+  "land": 7,
+  "land_name": "Celestia",
+  "heroes": [
+   "Selene",
+   "Elias"
+  ],
+  "accent": "gentle violet",
+  "setting": "a dreamy starlit observatory world of clocks, seasons and night sky",
+  "alt": "Screen time balance and digital wellness in Celestia",
+  "vocab_source": "land7-digital-time-screens.xhtml",
+  "vocab_pool": [
+   "Digital clock",
+   "Timer",
+   "Alarm",
+   "Countdown",
+   "Stopwatch",
+   "Snooze",
+   "Reminder",
+   "Calendar app",
+   "Notification",
+   "Screen time",
+   "Streaming",
+   "Loading",
+   "Buffering",
+   "Download",
+   "Upload",
+   "Update",
+   "Real-time",
+   "Instant",
+   "Lag",
+   "Sync",
+   "Timestamp",
+   "Log in",
+   "Schedule",
+   "Time zone",
+   "24-hour clock"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land7_energy-forces.jpg",
+  "title": "Energy Forces",
+  "land": 7,
+  "land_name": "Celestia",
+  "heroes": [
+   "Selene",
+   "Elias"
+  ],
+  "accent": "gentle violet",
+  "setting": "a dreamy starlit observatory world of clocks, seasons and night sky",
+  "alt": "Solar, wind, and water energy in Celestia",
+  "vocab_source": "land7-energy-forces.xhtml",
+  "vocab_pool": [
+   "Energy",
+   "Heat",
+   "Light",
+   "Sound",
+   "Electricity",
+   "Solar energy",
+   "Wind energy",
+   "Battery",
+   "Magnet",
+   "Force",
+   "Friction",
+   "Motion",
+   "Speed",
+   "Acceleration",
+   "Weight",
+   "Mass",
+   "Matter",
+   "Solid",
+   "Liquid",
+   "Gas",
+   "Evaporation",
+   "Condensation",
+   "Precipitation",
+   "Water cycle",
+   "Temperature"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land7_environment-sustainability.jpg",
+  "title": "Environment Sustainability",
+  "land": 7,
+  "land_name": "Celestia",
+  "heroes": [
+   "Selene",
+   "Elias"
+  ],
+  "accent": "gentle violet",
+  "setting": "a dreamy starlit observatory world of clocks, seasons and night sky",
+  "alt": "Sustainable living practices in Celestia",
+  "vocab_source": "land7-environment-sustainability.xhtml",
+  "vocab_pool": [
+   "Environment",
+   "Climate change",
+   "Global warming",
+   "Greenhouse gas",
+   "Carbon footprint",
+   "Recycle",
+   "Reuse",
+   "Reduce",
+   "Compost",
+   "Biodegradable",
+   "Endangered",
+   "Extinct",
+   "Deforestation",
+   "Renewable energy",
+   "Sustainability",
+   "Organic",
+   "Pollution",
+   "Clean energy",
+   "Conservation",
+   "Ecosystem"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land7_historical-timekeeping.jpg",
+  "title": "Historical Timekeeping",
+  "land": 7,
+  "land_name": "Celestia",
+  "heroes": [
+   "Selene",
+   "Elias"
+  ],
+  "accent": "gentle violet",
+  "setting": "a dreamy starlit observatory world of clocks, seasons and night sky",
+  "alt": "Sundials, hourglasses, and ancient clocks in Celestia museum",
+  "vocab_source": "land7-historical-timekeeping.xhtml",
+  "vocab_pool": [
+   "Sundial",
+   "Hourglass",
+   "Pendulum",
+   "Candle clock",
+   "Water clock",
+   "Pocket watch",
+   "Wristwatch",
+   "Grandfather clock",
+   "Cuckoo clock",
+   "Clocktower",
+   "Timekeeper",
+   "Chronometer",
+   "Dial",
+   "Hands",
+   "Tick",
+   "Chime",
+   "Ancient",
+   "Modern",
+   "Invention",
+   "Accurate",
+   "Timezone",
+   "Greenwich",
+   "AM",
+   "PM",
+   "Era"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land7_inventions-discoveries.jpg",
+  "title": "Inventions Discoveries",
+  "land": 7,
+  "land_name": "Celestia",
+  "heroes": [
+   "Selene",
+   "Elias"
+  ],
+  "accent": "gentle violet",
+  "setting": "a dreamy starlit observatory world of clocks, seasons and night sky",
+  "alt": "Illuminated letters in Celestia manuscript room",
+  "vocab_source": "land7-inventions-discoveries.xhtml",
+  "vocab_pool": [
+   "Invention",
+   "Discovery",
+   "Inventor",
+   "Scientist",
+   "Experiment",
+   "Hypothesis",
+   "Laboratory",
+   "Microscope",
+   "Telescope",
+   "Electricity",
+   "Light bulb",
+   "Telephone",
+   "Airplane",
+   "Computer",
+   "Internet",
+   "Printing press",
+   "Vaccine",
+   "Wheel",
+   "Steam engine",
+   "Solar panel"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land7_planet-earth.jpg",
+  "title": "Planet Earth",
+  "land": 7,
+  "land_name": "Celestia",
+  "heroes": [
+   "Selene",
+   "Elias"
+  ],
+  "accent": "gentle violet",
+  "setting": "a dreamy starlit observatory world of clocks, seasons and night sky",
+  "alt": "Planet Earth from space shown in Celestia observatory",
+  "vocab_source": "land7-planet-earth.xhtml",
+  "vocab_pool": [
+   "Earth",
+   "Core",
+   "Crust",
+   "Mantle",
+   "Tectonic plate",
+   "Continent",
+   "Ocean",
+   "Mountain",
+   "Volcano",
+   "Earthquake",
+   "Lava",
+   "Magma",
+   "Fossil",
+   "Mineral",
+   "Rock",
+   "Erosion",
+   "Soil",
+   "Natural resource",
+   "Renewable",
+   "Nonrenewable",
+   "Pollution",
+   "Recycle",
+   "Conservation",
+   "Ecosystem",
+   "Habitat"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land7_seasons-time-in-nature.jpg",
+  "title": "Seasons Time in Nature",
+  "land": 7,
+  "land_name": "Celestia",
+  "heroes": [
+   "Selene",
+   "Elias"
+  ],
+  "accent": "gentle violet",
+  "setting": "a dreamy starlit observatory world of clocks, seasons and night sky",
+  "alt": "Nature transforming through the seasons",
+  "vocab_source": "land7-seasons-time-in-nature.xhtml",
+  "vocab_pool": [
+   "Spring",
+   "Summer",
+   "Fall",
+   "Winter",
+   "Season",
+   "Harvest",
+   "Bloom",
+   "Migrate",
+   "Hibernate",
+   "Sunrise",
+   "Sunset",
+   "Annual",
+   "Monthly",
+   "Weekly",
+   "Daily",
+   "Hourly",
+   "Cycle",
+   "Change",
+   "Rhythm",
+   "Eternal"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land7_telling-time-clocks.jpg",
+  "title": "Telling Time Clocks",
+  "land": 7,
+  "land_name": "Celestia",
+  "heroes": [
+   "Selene",
+   "Elias"
+  ],
+  "accent": "gentle violet",
+  "setting": "a dreamy starlit observatory world of clocks, seasons and night sky",
+  "alt": "Clocks of every kind in Celestia",
+  "vocab_source": "land7-telling-time-clocks.xhtml",
+  "vocab_pool": [
+   "Clock",
+   "Watch",
+   "Hour",
+   "Minute",
+   "Second",
+   "Quarter past",
+   "Half past",
+   "Quarter to",
+   "Noon",
+   "A.M.",
+   "P.M.",
+   "Alarm",
+   "Timer",
+   "Stopwatch",
+   "Sundial",
+   "Hourglass",
+   "Time zone",
+   "On time",
+   "Late",
+   "Early"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land7_the-calendar-cycles.jpg",
+  "title": "The Calendar Cycles",
+  "land": 7,
+  "land_name": "Celestia",
+  "heroes": [
+   "Selene",
+   "Elias"
+  ],
+  "accent": "gentle violet",
+  "setting": "a dreamy starlit observatory world of clocks, seasons and night sky",
+  "alt": "A weekly calendar wheel in Celestia",
+  "vocab_source": "land7-the-calendar-cycles.xhtml",
+  "vocab_pool": [
+   "Day",
+   "Night",
+   "Dawn",
+   "Dusk",
+   "Morning",
+   "Afternoon",
+   "Evening",
+   "Midnight",
+   "Leap year",
+   "Solstice",
+   "Equinox",
+   "Phase",
+   "New moon",
+   "Full moon",
+   "Crescent"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land7_the-future-dreams.jpg",
+  "title": "The Future Dreams",
+  "land": 7,
+  "land_name": "Celestia",
+  "heroes": [
+   "Selene",
+   "Elias"
+  ],
+  "accent": "gentle violet",
+  "setting": "a dreamy starlit observatory world of clocks, seasons and night sky",
+  "alt": "Children dreaming about the future in Celestia",
+  "vocab_source": "land7-the-future-dreams.xhtml",
+  "vocab_pool": [
+   "Dream",
+   "Goal",
+   "Plan",
+   "Hope",
+   "Imagine",
+   "Create",
+   "Inspire",
+   "Believe",
+   "Achieve",
+   "Grow",
+   "Change",
+   "Courage",
+   "Persevere",
+   "Succeed",
+   "Together"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land7_the-scientific-method.jpg",
+  "title": "The Scientific Method",
+  "land": 7,
+  "land_name": "Celestia",
+  "heroes": [
+   "Selene",
+   "Elias"
+  ],
+  "accent": "gentle violet",
+  "setting": "a dreamy starlit observatory world of clocks, seasons and night sky",
+  "alt": "Science steps diagram in Celestia",
+  "vocab_source": "land7-the-scientific-method.xhtml",
+  "vocab_pool": [
+   "Observe",
+   "Question",
+   "Hypothesis",
+   "Experiment",
+   "Variable",
+   "Control",
+   "Data",
+   "Results",
+   "Conclusion",
+   "Theory",
+   "Fact",
+   "Opinion",
+   "Evidence",
+   "Measure",
+   "Record"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land7_the-solar-system.jpg",
+  "title": "The Solar System",
+  "land": 7,
+  "land_name": "Celestia",
+  "heroes": [
+   "Selene",
+   "Elias"
+  ],
+  "accent": "gentle violet",
+  "setting": "a dreamy starlit observatory world of clocks, seasons and night sky",
+  "alt": "Cursive poetry writing under Celestia stars",
+  "vocab_source": "land7-the-solar-system.xhtml",
+  "vocab_pool": [
+   "Sun",
+   "Moon",
+   "Star",
+   "Planet",
+   "Mercury",
+   "Venus",
+   "Earth",
+   "Mars",
+   "Jupiter",
+   "Saturn",
+   "Uranus",
+   "Neptune",
+   "Orbit",
+   "Rotate",
+   "Galaxy",
+   "Constellation",
+   "Comet",
+   "Asteroid",
+   "Meteor",
+   "Telescope",
+   "Astronaut",
+   "Rocket",
+   "Space station",
+   "Gravity",
+   "Lunar",
+   "Solar",
+   "Satellite",
+   "Light-year",
+   "Universe",
+   "Atmosphere"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land7_the-water-cycle-weather-systems.jpg",
+  "title": "The Water Cycle Weather Systems",
+  "land": 7,
+  "land_name": "Celestia",
+  "heroes": [
+   "Selene",
+   "Elias"
+  ],
+  "accent": "gentle violet",
+  "setting": "a dreamy starlit observatory world of clocks, seasons and night sky",
+  "alt": "The full water cycle shown in Celestia",
+  "vocab_source": "land7-the-water-cycle-weather-systems.xhtml",
+  "vocab_pool": [
+   "Water cycle",
+   "Evaporation",
+   "Condensation",
+   "Precipitation",
+   "Collection",
+   "Cloud",
+   "Cumulus",
+   "Stratus",
+   "Cirrus",
+   "Thunderstorm",
+   "Blizzard",
+   "Hurricane",
+   "Tornado",
+   "Drought",
+   "Flood",
+   "Barometer",
+   "Wind vane",
+   "Anemometer",
+   "Rain gauge",
+   "Meteorologist"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land7_time-concepts-history.jpg",
+  "title": "Time Concepts History",
+  "land": 7,
+  "land_name": "Celestia",
+  "heroes": [
+   "Selene",
+   "Elias"
+  ],
+  "accent": "gentle violet",
+  "setting": "a dreamy starlit observatory world of clocks, seasons and night sky",
+  "alt": "A historical timeline in Celestia archive",
+  "vocab_source": "land7-time-concepts-history.xhtml",
+  "vocab_pool": [
+   "Past",
+   "Present",
+   "Future",
+   "Ancient",
+   "Modern",
+   "Century",
+   "Decade",
+   "Era",
+   "Timeline",
+   "Cause",
+   "Effect",
+   "Revolution",
+   "Independence",
+   "War",
+   "Peace",
+   "Treaty",
+   "Culture",
+   "Civilization",
+   "Heritage",
+   "Legacy"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ },
+ {
+  "basename": "land7_time-in-music-rhythm.jpg",
+  "title": "Time in Music Rhythm",
+  "land": 7,
+  "land_name": "Celestia",
+  "heroes": [
+   "Selene",
+   "Elias"
+  ],
+  "accent": "gentle violet",
+  "setting": "a dreamy starlit observatory world of clocks, seasons and night sky",
+  "alt": "Musical notation and rhythm patterns in Celestia",
+  "vocab_source": "land7-time-in-music-rhythm.xhtml",
+  "vocab_pool": [
+   "Beat",
+   "Tempo",
+   "Measure",
+   "Rest",
+   "Duration",
+   "Whole note",
+   "Half note",
+   "Quarter note",
+   "Eighth note",
+   "Time signature",
+   "Metronome",
+   "Rhythm",
+   "Syncopation",
+   "Upbeat",
+   "Downbeat",
+   "Repeat",
+   "Verse",
+   "Chorus",
+   "Bridge",
+   "Finale",
+   "Encore",
+   "Crescendo",
+   "Pause",
+   "Timing",
+   "Countdown"
+  ],
+  "words": [],
+  "scene_extra": "",
+  "status": "pending",
+  "job_id": null,
+  "scene_url": null,
+  "anchors": {}
+ }
+]

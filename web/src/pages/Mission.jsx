@@ -348,7 +348,7 @@ const Mission = () => {
                     </p>
                   </div>
                   <div className="flow-column">
-                    <p className="flow-column__title">3,400+ Words</p>
+                    <p className="flow-column__title">4,000+ Words</p>
                     <p className="flow-column__text">
                       A picture dictionary hand-illustrated across 125 scenes. Not stock. Not AI. Hand-drawn.
                     </p>
@@ -356,7 +356,7 @@ const Mission = () => {
                   <div className="flow-column">
                     <p className="flow-column__title">$19</p>
                     <p className="flow-column__text">
-                      Pay what you like, starting at $9. Fine arts education shouldn't require a trust fund.
+                      One time. Yours to keep. Fine arts education shouldn't require a trust fund.
                     </p>
                   </div>
                 </div>

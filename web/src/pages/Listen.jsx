@@ -142,7 +142,7 @@ const Listen = () => {
               <div className="listen-proof__label">Learning Domains</div>
             </div>
             <div className="listen-proof__stat">
-              <div className="listen-proof__number">3,400+</div>
+              <div className="listen-proof__number">4,000+</div>
               <div className="listen-proof__label">Words in the Dictionary</div>
             </div>
           </div>
@@ -362,7 +362,7 @@ const Listen = () => {
                         disabled={soeBookIndex === soeBookPages.length - 1} aria-label="Next page">{t('media.next')}</button>
                     </div>
                     <div className="text-center" style={{ marginTop: '1.5rem' }}>
-                      <Link to="/join" className="btn btn-gold">{t('media.pre_order_book')}</Link>
+                      <Link to="/rhythm-quest" className="btn btn-gold">{t('media.pre_order_book')}</Link>
                     </div>
                   </div>
                 </RevealSection>

@@ -1,17 +1,17 @@
 [
   {
     "id": "picture-dictionary",
-    "name": "SOE Rhythm Quest: Essential Picture Dictionary",
+    "name": "The Sound of Essentials: Essential Picture Dictionary",
     "shortName": "Picture Dictionary",
     "type": "digital-book",
     "format": "EPUB",
-    "price": 19.00,
+    "price": 55.00,
     "retailPrice": 79.00,
     "listedPrice": 55.00,
     "currency": "USD",
-    "description": "A 125-scene illustrated vocabulary journey through all 7 Lands of the SOE universe. Over 3,400 words organized by thematic scenes with phonetic guides, bilingual support, and character-driven narratives.",
+    "description": "A 125-scene illustrated vocabulary journey through all 7 Lands of the SOE universe. Over 4,000 words organized by thematic scenes with phonetic guides, bilingual support, and character-driven narratives.",
     "features": [
-      "3,400+ vocabulary words",
+      "4,000+ vocabulary words",
       "125 illustrated scenes",
       "7 Lands coverage",
       "Phonetic pronunciation guides",
@@ -25,7 +25,7 @@
     "cover": "/assets/marketing/picture-dictionary-cover.webp",
     "category": "education",
     "tags": ["vocabulary", "literacy", "picture-book", "bilingual", "phonics"],
-    "status": "available",
+    "status": "pre-sale",
     "storeUrl": null
   },
   {
@@ -83,13 +83,13 @@
   },
   {
     "id": "rhythm-quest-album",
-    "name": "The Sound of Essentials: Rhythm Quest",
+    "name": "The Sound of Essentials Deluxe: A Musical Learning Experience",
     "shortName": "Rhythm Quest Album",
     "type": "music-album",
     "format": "Digital Audio",
-    "price": 19.00,
+    "price": 0.00,
     "currency": "USD",
-    "description": "19 original tracks designed for the developing brain. Each song targets a specific developmental domain — from phonics and counting to movement, time concepts, and scientific curiosity — all through the power of rhythm and melody.",
+    "description": "19 original tracks designed for the developing brain. Each song targets a specific developmental domain — from phonics and counting to movement, time concepts, and scientific curiosity — all through the power of rhythm and melody. Free with signup at /listen.",
     "features": [
       "19 original educational tracks",
       "7 developmental domains covered",
@@ -103,7 +103,32 @@
     "isbn": null,
     "cover": "/assets/marketing/quest-collage.webp",
     "category": "music",
-    "tags": ["album", "music", "educational", "rhythm", "developmental"],
+    "tags": ["album", "music", "educational", "rhythm", "developmental", "free", "lead-magnet"],
+    "status": "available",
+    "storeUrl": null
+  },
+  {
+    "id": "rhythm-quest-ebook",
+    "name": "The Sound of Essentials: Rhythm Quest",
+    "shortName": "Rhythm Quest",
+    "type": "digital-book",
+    "format": "EPUB",
+    "price": 19.00,
+    "currency": "USD",
+    "description": "The 66-page illustrated ebook companion to the free Rhythm Quest album. Seriphia guides Kenji, Aiko, and the rest of the heroes through all 7 Lands, with a \"My Word Quest Glossary\" vocabulary backmatter. $19, one time.",
+    "features": [
+      "66 fully illustrated pages",
+      "Journey through all 7 Lands with Seriphia and the heroes",
+      "\"My Word Quest Glossary\" vocabulary backmatter",
+      "Designed for the developing brain, not the algorithm",
+      "Immediate digital download, EPUB format"
+    ],
+    "ageRange": "Pre-K through Grade 3",
+    "gradeRange": "K-3",
+    "isbn": null,
+    "cover": null,
+    "category": "education",
+    "tags": ["ebook", "storybook", "lead-offering", "rhythm-quest"],
     "status": "available",
     "storeUrl": null
   }

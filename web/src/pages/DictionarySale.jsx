@@ -29,36 +29,12 @@ const dictLandNames = {
 };
 
 const features = [
-  { icon: '📖', title: '3,400+ Words', desc: 'Organized across 125 illustrated scenes spanning the full Oxford Picture Dictionary scope.', color: '#FF6F00' },
+  { icon: '📖', title: '4,000+ Words', desc: 'Organized across 125 illustrated scenes spanning the full Oxford Picture Dictionary scope.', color: '#FF6F00' },
   { icon: '🔤', title: 'Phonetic Guides', desc: 'Every word includes pronunciation support — Sound Before Symbol, always.', color: '#4CAF50' },
   { icon: '🌍', title: 'Bilingual EN/ES', desc: 'Built-in bilingual framework with space for home language equity.', color: '#1E88E5' },
   { icon: '🗺️', title: '7 Lands', desc: 'From Harmonia to Celestia — vocabulary embedded in a living, character-driven world.', color: '#7B1FA2' },
   { icon: '👨‍👩‍👧', title: 'Parent/Teacher Guide', desc: 'Includes pedagogical tips, activity ideas, and a complete A-Z visual glossary.', color: '#c4785a' },
   { icon: '🧠', title: 'Neuro-Affirming', desc: 'Designed for developing brains — not algorithms. Calm, rich, no overstimulation.', color: '#FFB300' },
-];
-
-const testimonials = [
-  {
-    stars: 5,
-    quote: "My daughter carries this book everywhere. She points at things and says 'That's from Harmonia!' — the worlds feel real to her.",
-    name: 'Mariana S.',
-    role: 'Homeschool Mom, Texas',
-    initials: 'MS',
-  },
-  {
-    stars: 5,
-    quote: "As an ESL teacher, I've never seen a picture dictionary this culturally rich. The bilingual support is genuine, not an afterthought.",
-    name: 'David K.',
-    role: 'ESL Educator, Toronto',
-    initials: 'DK',
-  },
-  {
-    stars: 5,
-    quote: "The art quality rivals anything from Pixar. My kids actually WANT to read this. That alone is worth 10x the price.",
-    name: 'Jasmine R.',
-    role: 'Parent of 3, Atlanta',
-    initials: 'JR',
-  },
 ];
 
 /* ── Dictionary scene preview data (2 per land, from EPUB source) ── */
@@ -83,7 +59,7 @@ const DictionarySale = () => {
   const scrollRef = useRef(null);
 
   useEffect(() => {
-    document.title = 'SOE Rhythm Quest: Essential Picture Dictionary — 3,400+ Words Across 7 Lands';
+    document.title = 'SOE Rhythm Quest: Essential Picture Dictionary — 4,000+ Words Across 7 Lands';
   }, []);
 
   /* Build the character parade — double the array for seamless loop */
@@ -113,27 +89,23 @@ const DictionarySale = () => {
 
         <div className="dict-hero__inner">
           <div className="dict-hero__copy">
-            <span className="dict-hero__badge">📖 Available Now — Digital EPUB</span>
+            <span className="dict-hero__badge">📖 Pre-Sale — Digital EPUB</span>
             <h1 className="dict-hero__title">
               Every Word Has a
               <span className="dict-hero__title-accent">World Behind It</span>
             </h1>
             <p className="section-subtitle dict-hero__subtitle">
               The most immersive picture dictionary ever designed for young learners.
-              3,400+ words. 125 illustrated scenes. 7 magical lands.
+              4,000+ words. 125 illustrated scenes. 7 magical lands.
               Powered by music, guided by 15 hero characters.
             </p>
             <div className="dict-hero__price-tag">
               <span className="dict-hero__price-retail">$79</span>
               <span className="dict-hero__price-listed">$55</span>
-              <span className="dict-hero__price-note">listed price</span>
-            </div>
-            <div className="dict-hero__price-tag">
-              <span className="dict-hero__price">$19</span>
-              <span className="dict-hero__price-note">ebook · pay what you like</span>
+              <span className="dict-hero__price-note">pre-sale price</span>
             </div>
             <div className="dict-hero__actions">
-              <Link to="/join" className="btn btn-gold">Get Your Copy</Link>
+              <Link to="/join" className="btn btn-gold">Reserve Your Copy</Link>
               <a href="#preview" className="btn btn-outline">Preview Pages ↓</a>
             </div>
           </div>
@@ -160,7 +132,7 @@ const DictionarySale = () => {
       <div className="dict-proof-strip">
         <div className="dict-proof-strip__inner">
           <div className="dict-proof-item">
-            <span className="dict-proof-item__value">3,400+</span>
+            <span className="dict-proof-item__value">4,000+</span>
             <span className="dict-proof-item__label">Vocabulary Words</span>
           </div>
           <div className="dict-proof-item">
@@ -305,87 +277,18 @@ const DictionarySale = () => {
         </div>
       </section>
 
-      {/* ═══ TESTIMONIALS ═══ */}
+      {/* ═══ FOUNDER STORY (no fabricated proof pre-launch — see brand-voice rules) ═══ */}
       <section className="dict-testimonials section">
         <div className="container">
           <RevealSection className="text-center">
-            <div className="section-label">What Families Say</div>
+            <div className="section-label">Why It Exists</div>
             <h2 className="section-title" style={{ color: 'var(--color-text-dark)' }}>
-              Loved by <span className="text-gold">Real Families</span>
+              Built by <span className="text-gold">a Father, Not a Company</span>
             </h2>
-          </RevealSection>
-
-          <div className="dict-testimonials__grid">
-            {testimonials.map((t, i) => (
-              <RevealSection key={t.name} delay={i * 0.12}>
-                <div className="dict-testimonial-card">
-                  <div className="dict-testimonial-card__stars">
-                    {'★'.repeat(t.stars)}
-                  </div>
-                  <p className="dict-testimonial-card__quote">"{t.quote}"</p>
-                  <div className="dict-testimonial-card__author">
-                    <div className="dict-testimonial-card__avatar">{t.initials}</div>
-                    <div>
-                      <div className="dict-testimonial-card__name">{t.name}</div>
-                      <div className="dict-testimonial-card__role">{t.role}</div>
-                    </div>
-                  </div>
-                </div>
-              </RevealSection>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ═══ PAY WHAT YOU LIKE ═══ */}
-      <section className="dict-pricing section">
-        <div className="container text-center">
-          <RevealSection>
-            <div className="section-label">Pay What You Like</div>
-            <h2 className="section-title" style={{ color: 'var(--color-text-dark)' }}>
-              Choose Your <span className="text-sage">Path</span>
-            </h2>
-            <p className="section-subtitle">
-              Fine arts education shouldn't require a trust fund.
+            <p className="section-subtitle" style={{ maxWidth: '640px', margin: '0 auto' }}>
+              Not a corporation chasing a market. A father, drawing characters and writing this
+              world by hand, for his own child first. Now for yours.
             </p>
-          </RevealSection>
-
-          <RevealSection delay={0.15}>
-            <div className="dict-pricing__grid">
-              {/* Tier 1 */}
-              <div className="dict-price-card">
-                <span className="dict-price-card__emoji">🎁</span>
-                <div className="dict-price-card__label">Gift a Copy</div>
-                <div className="dict-price-card__price">$9</div>
-                <p className="dict-price-card__hook">
-                  Support a family who can't afford it. Your generosity plants a seed.
-                </p>
-                <Link to="/join" className="btn btn-outline">Gift a Copy</Link>
-              </div>
-
-              {/* Tier 2 — Featured */}
-              <div className="dict-price-card dict-price-card--featured">
-                <span className="dict-price-card__badge">Most Popular</span>
-                <span className="dict-price-card__emoji">📖</span>
-                <div className="dict-price-card__label">Get Your Copy</div>
-                <div className="dict-price-card__price">$19</div>
-                <p className="dict-price-card__hook">
-                  The full 125-scene dictionary. $79 retail value — yours as an ebook.
-                </p>
-                <Link to="/join" className="btn btn-gold">Get Your Copy</Link>
-              </div>
-
-              {/* Tier 3 */}
-              <div className="dict-price-card">
-                <span className="dict-price-card__emoji">🌟</span>
-                <div className="dict-price-card__label">Founding Supporter</div>
-                <div className="dict-price-card__price">$29+</div>
-                <p className="dict-price-card__hook">
-                  Join the founding circle. Your name goes in the next edition.
-                </p>
-                <Link to="/join" className="btn btn-sage">Become a Founder</Link>
-              </div>
-            </div>
           </RevealSection>
         </div>
       </section>
@@ -408,19 +311,25 @@ const DictionarySale = () => {
                 Start the Quest Today
               </h2>
               <p className="section-subtitle" style={{ marginTop: '1rem' }}>
-                3,400 words. 7 Lands. 15 heroes. One incredible journey.
+                4,000+ words. 7 Lands. 15 heroes. One incredible journey.
                 <br />
                 <span style={{ color: 'var(--color-green)', fontWeight: 600 }}>
                   Crafted by a father's heart and mother's love.
                 </span>
               </p>
               <div className="dict-cta-actions">
-                <Link to="/join" className="btn btn-gold">Get the Dictionary — $19</Link>
+                <Link to="/join" className="btn btn-gold">Reserve the Dictionary — $55</Link>
                 <Link to="/join" className="btn btn-sage">Full Quest Bundle — $89</Link>
               </div>
               <div className="dict-guarantee">
                 <span>🔒</span> Instant digital delivery · EPUB format · Read on any device
               </div>
+              <p style={{ marginTop: '1.5rem', fontSize: '0.85rem', color: 'var(--color-text-dark-secondary)' }}>
+                Looking for the $19 storybook instead?{' '}
+                <Link to="/rhythm-quest" style={{ color: 'var(--color-orange)', fontWeight: 600 }}>
+                  Explore the Rhythm Quest ebook →
+                </Link>
+              </p>
             </div>
           </RevealSection>
         </div>

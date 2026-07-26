@@ -23,12 +23,12 @@ The curriculum spans 5 Core Domains of Essential Learning (Language, Cognitive, 
 *Note: Gabriel (Lil G, "The Keeper") is the 16th character, kept intentionally unreleased as a scarcity incentive for early sign-ups.*
 
 ## Product Catalog & Funnel
-SOE uses a pay-what-you-want and discounted value ladder:
-- **Rhythm Quest Album (19 Tracks):** Free stream / $19 download (lead magnet).
+SOE uses a free-to-premium value ladder:
+- **Rhythm Quest Album (19 Tracks):** Free stream, unlocked at `/listen` (lead magnet).
 - **Free Coloring Book:** Free digital lead magnet.
-- **Rhythm Quest eBook:** $19 conversion offer (funnel entry).
+- **Rhythm Quest eBook:** $19, one time (funnel entry / lead sales offering).
 - **Summer Stretch Workbook:** $35 print / $21 digital (8-week activity book).
-- **Essential Picture Dictionary:** $55 discounted / $79 retail (4,232 words, 157 scenes).
+- **Essential Picture Dictionary:** $55 discounted / $79 retail, pre-sale (4,232 words, 157 scenes).
 - **The Full Quest Bundle:** Digital bundle of the Dictionary, Album, and eBook.
 
 ## Website Routes & Pages
@@ -37,7 +37,8 @@ SOE uses a pay-what-you-want and discounted value ladder:
 - **`/heroes`:** Character catalog with land-based filtering.
 - **`/listen`:** Music streaming hub and conversion gate.
 - **`/player`:** Persistent multi-track media player.
-- **`/dictionary`:** Sales page for the Essential Picture Dictionary.
+- **`/rhythm-quest`:** Sales page for the $19 Rhythm Quest eBook.
+- **`/dictionary`:** Sales page for the Essential Picture Dictionary (pre-sale).
 - **`/science`:** Academic research (Dalcroze, Orff, Kodaly methods, phonology science).
 - **`/mission`:** Mission statement and the founder's story.
 - **`/join`:** Newsletter signup and partnership forms.
