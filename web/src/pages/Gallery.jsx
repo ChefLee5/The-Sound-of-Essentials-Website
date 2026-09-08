@@ -8,15 +8,7 @@ export default function Gallery() {
   }, []);
 
   return (
-    <div 
-      className="gallery-page" 
-      style={{ 
-        position: 'relative', 
-        minHeight: '100vh', 
-        background: 'radial-gradient(ellipse at 50% 0%, #FFF3E0 0%, #FFF8F0 45%, #FFFDF9 100%)',
-        color: 'var(--color-text-primary, #E65100)'
-      }}
-    >
+    <div className="gallery-page" style={{ position: 'relative', minHeight: '100vh' }}>
       {/* Kinetic Scroll Gallery Component */}
       <KineticScrollGallery />
     </div>
