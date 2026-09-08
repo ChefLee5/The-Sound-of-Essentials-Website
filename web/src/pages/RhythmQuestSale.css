@@ -26,8 +26,8 @@
   height: 100%;
   z-index: 0;
   background: 
-    var(--rq-hero-bg) right center / cover no-repeat,
-    radial-gradient(ellipse at 70% 35%, #BFE7FB 0%, #FFF3E0 50%, #FAF9F7 100%);
+    var(--rq-hero-bg) center bottom / cover no-repeat,
+    linear-gradient(180deg, #B18EB9 0%, #D8A5B8 25%, #F4C4A0 55%, #FFF8EE 100%);
 }
 
 .rq-hero__overlay {
