@@ -73,8 +73,8 @@ interface KineticScrollGalleryProps {
 
 export default function KineticScrollGallery({
   items = bookGalleryImages,
-  title = "The Official Companion Storybook to The Sound of Essentials",
-  subtitle = "Explore the 66-page multi-sensory curriculum, 7 developmental lands, 15 heroic guides, and back-of-the-book pedagogical glossary."
+  title = "Rhythm Quest Storybook",
+  subtitle = "Explore selected sample pages from the 66-page multi-sensory storybook and curriculum across the 7 developmental lands, featuring our 15 heroic guides."
 }: KineticScrollGalleryProps) {
   const { scrollYProgress } = useScroll();
 
@@ -89,11 +89,23 @@ export default function KineticScrollGallery({
     <div className="kinetic-gallery-wrapper">
       <div className="kinetic-gallery-container">
         <div className="kinetic-gallery-header">
-          <div className="kinetic-gallery-badge-top">
-            📖 The Sound of Essentials: Rhythm Quest
+          <div className="kinetic-gallery-badge-wrap">
+            <div className="kinetic-gallery-badge-top">
+              📖 The Sound of Essentials: Companion Storybook
+            </div>
           </div>
           <h1 className="kinetic-gallery-title">
-            {title}
+            <span className="kinetic-gallery-title-text">{title}</span>
+            <span className="gallery__sticker-wrap" title="Sample Pages!">
+              <img
+                src={assetPath('/assets/stickers/sample-pages-sticker.webp')}
+                alt="Sample Pages!"
+                className="gallery__sticker-img"
+                width="190"
+                height="150"
+                loading="eager"
+              />
+            </span>
           </h1>
           <p className="kinetic-gallery-subtitle">
             {subtitle}
