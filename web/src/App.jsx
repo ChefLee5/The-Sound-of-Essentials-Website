@@ -21,7 +21,8 @@ const Mission    = lazy(() => import('./pages/Mission'));
 const JoinQuest  = lazy(() => import('./pages/JoinQuest'));
 const Heroes     = lazy(() => import('./pages/Heroes'));
 const Science    = lazy(() => import('./pages/Science'));
-const AllyAnnex  = lazy(() => import('./pages/AllyAnnex'));
+// Ally Annex shelved for now (preserved in ./pages/AllyAnnex.jsx)
+// const AllyAnnex  = lazy(() => import('./pages/AllyAnnex'));
 const DictionarySale = lazy(() => import('./pages/DictionarySale'));
 const RhythmQuestSale = lazy(() => import('./pages/RhythmQuestSale'));
 const Listen     = lazy(() => import('./pages/Listen'));
@@ -80,7 +81,8 @@ const App = () => {
                 <Route path="/characters" element={<Navigate to="/heroes" replace />} />
                 <Route path="/heroes"     element={<AnimatedPage><Heroes /></AnimatedPage>} />
                 <Route path="/science"    element={<AnimatedPage><Science /></AnimatedPage>} />
-                <Route path="/allies"    element={<AnimatedPage><AllyAnnex /></AnimatedPage>} />
+                {/* Ally Annex shelved for now — redirect to home */}
+                <Route path="/allies"     element={<Navigate to="/" replace />} />
                 <Route path="/dictionary" element={<Navigate to="/workbook#dictionary-presale" replace />} />
                 <Route path="/workbook" element={<AnimatedPage><RhythmQuestSale /></AnimatedPage>} />
                 <Route path="/curriculum" element={<AnimatedPage><RhythmQuestSale /></AnimatedPage>} />

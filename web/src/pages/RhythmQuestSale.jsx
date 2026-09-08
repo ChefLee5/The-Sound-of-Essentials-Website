@@ -241,8 +241,8 @@ const RhythmReadyHero = () => {
             </p>
 
             <p className="rq-hero__lede">
-              An 8-week cross-curricular learning journey for grades K–3 (ages 4–8). Six bite-sized
-              daily blocks (~16 minutes total) spanning phonics, math, science, somatic movement,
+              An 8-week cross-curricular learning journey for Pre-K through 2nd Grade (ages 2 to 7). Ten bite-sized
+              daily blocks spanning phonics, math, science, somatic movement,
               geography/civics, and reflection. Sound before symbol. Handcrafted for the developing brain.
             </p>
 
@@ -266,7 +266,7 @@ const RhythmReadyHero = () => {
               <ul className="rq-hero__assure">
                 <li>30-day 100% money back guarantee</li>
                 <li>Instant printable PDF &amp; tablet-ready</li>
-                <li>Built for Grades K–3 (Ages 4 to 8)</li>
+                <li>Built for Ages 2–7 (Pre-K to Grade 2)</li>
               </ul>
 
               <p className="rq-hero__free-note">
@@ -399,7 +399,7 @@ const proofEvidence = [
 const makerChips = [
   '8 Weeks · 40 Day-by-Day Lessons',
   '240+ Core Activity Blocks',
-  'Grades K–3 (Ages 4 to 8)',
+  'Ages 2–7 (Pre-K to Grade 2)',
   'Sound Before Symbol Phonetics',
   'Full-Color & Printable',
 ];
@@ -633,7 +633,7 @@ const RhythmReadyWhatsInside = () => {
               <div className="rq-ledger-row">
                 <span className="rq-ledger-row__k">Grade Range</span>
                 <span className="rq-ledger-row__v">
-                  Designed for Kindergarten through 3rd Grade (Ages 4 to 8). Progressive difficulty that grows with your child.
+                  Designed for Pre-K through 2nd Grade (Ages 2 to 7). Progressive difficulty that grows with your child.
                 </span>
               </div>
               <div className="rq-ledger-row">

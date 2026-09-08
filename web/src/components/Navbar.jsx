@@ -36,7 +36,6 @@ const Navbar = () => {
     { to: '/mission',    label: t('navbar.mission') },
     { to: '/listen',     label: t('navbar.media') },
     { to: '/gallery',    label: '📖 Gallery' },
-    { to: '/allies',     label: '🤝 Ally Annex' },
     { to: '/join',       label: '✉️ ' + t('navbar.contact', 'Contact') },
   ];
 

@@ -20,6 +20,8 @@ import crypto from 'crypto';
 const SHOPIFY_WEBHOOK_SECRET = process.env.SHOPIFY_WEBHOOK_SECRET || '';
 const BEEHIIV_API_KEY = process.env.BEEHIIV_API_KEY || '';
 const BEEHIIV_PUBLICATION_ID = process.env.BEEHIIV_PUBLICATION_ID || '';
+const BREVO_API_KEY = process.env.BREVO_API_KEY || '';
+const BREVO_BUYERS_LIST_ID = Number(process.env.BREVO_BUYERS_LIST_ID) || 3;
 const STORE_DOMAIN = 'thesoundofessentials.com';
 
 /**
@@ -104,6 +106,40 @@ export async function handleShopifyOrderPaid(order) {
       console.log('[Shopify Fulfillment] Beehiiv subscriber updated:', beehiivData);
     } catch (err) {
       console.error('[Shopify Fulfillment] Error syncing with Beehiiv:', err);
+    }
+  }
+
+  // 2. Sync & Tag in Brevo (Unlimited Contacts CRM)
+  if (BREVO_API_KEY) {
+    try {
+      const customerFirstName = order.customer?.first_name || '';
+      const customerLastName = order.customer?.last_name || '';
+      const brevoRes = await fetch('https://api.brevo.com/v3/contacts', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'api-key': BREVO_API_KEY,
+        },
+        body: JSON.stringify({
+          email: customerEmail,
+          attributes: {
+            FIRSTNAME: customerFirstName || 'Explorer',
+            LASTNAME: customerLastName,
+            LAST_ORDER_ID: String(orderId),
+            ORDER_ACCESS_URL: `https://${STORE_DOMAIN}/order-success?order_id=${orderId}&email=${encodeURIComponent(customerEmail)}`,
+            PURCHASED_EBOOK: isRhythmQuest,
+            PURCHASED_RHYTHM_READY: isWorkbook,
+            PURCHASED_BUNDLE: isBundle,
+            LIFECYCLE_STAGE: 'customer',
+          },
+          listIds: [BREVO_BUYERS_LIST_ID],
+          updateEnabled: true,
+        }),
+      });
+      const brevoData = await brevoRes.json();
+      console.log('[Shopify Fulfillment] Brevo buyer contact synced:', brevoData);
+    } catch (brevoErr) {
+      console.error('[Shopify Fulfillment] Error syncing with Brevo:', brevoErr);
     }
   }
 

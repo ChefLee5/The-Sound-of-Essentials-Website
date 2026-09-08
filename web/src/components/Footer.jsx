@@ -60,7 +60,6 @@ const Footer = () => {
             <Link to="/gallery" className="footer__link">📖 Storybook Gallery</Link>
             <Link to="/science" className="footer__link">{t('footer.sci_sound')}</Link>
             <Link to="/mission" className="footer__link">{t('navbar.mission')}</Link>
-            <Link to="/allies" className="footer__link">🤝 Ally Annex</Link>
             <Link to="/join" className="footer__link">✉️ {t('navbar.contact', 'Contact Us')}</Link>
           </div>
 

@@ -5,7 +5,7 @@ import { assetPath } from '../utils/assetPath';
 import FullSection from '../components-v2/FullSection';
 import CharSplitText from '../components-v2/CharSplitText';
 import { RevealV2 } from '../hooks/useScrollReveal';
-import BeehiivSubscribeForm from '../components/BeehiivSubscribeForm';
+import BrevoSubscribeForm from '../components/BrevoSubscribeForm';
 import tracksData from '../data/tracks.json';
 import { audioUrl } from '../utils/audioUrl';
 
@@ -92,7 +92,11 @@ const ListenV2 = () => {
               <p className="v2-body v2-body--lg" style={{ maxWidth: '480px', margin: '1rem auto 2rem' }}>
                 Enter your email to unlock all 19 tracks and start a free 5-day learning journey.
               </p>
-              <BeehiivSubscribeForm className="v2-email-capture" />
+              <BrevoSubscribeForm
+                className="v2-email-capture"
+                sourcePath="/listen-v2"
+                onSuccess={() => unlock()}
+              />
               <p className="v2-email-meta">No spam, ever. Unsubscribe anytime.</p>
             </RevealV2>
           </div>

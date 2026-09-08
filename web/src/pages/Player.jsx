@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import MusicPlayerWidget from '../components/MusicPlayerWidget';
 import TrackStack from '../components/TrackStack';
-import BeehiivSubscribeForm from '../components/BeehiivSubscribeForm';
+import BrevoSubscribeForm from '../components/BrevoSubscribeForm';
 import { assetPath } from '../utils/assetPath';
 import { audioUrl } from '../utils/audioUrl';
 import tracksData from '../data/tracks.json';
@@ -191,43 +191,16 @@ const Player = () => {
                 </p>
 
                 <div style={{ maxWidth: '480px', margin: '1.5rem auto 0 auto' }}>
-                  {directError && (
-                    <div style={{ background: '#FEF2F2', border: '1px solid #F87171', color: '#DC2626', padding: '0.6rem 0.8rem', borderRadius: '8px', fontSize: '0.85rem', marginBottom: '0.8rem' }}>
-                      ⚠️ {directError}
-                    </div>
-                  )}
-                  <form onSubmit={handleDirectUnlock} style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem', marginBottom: '1.2rem' }}>
-                    <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
-                      <input
-                        type="text"
-                        placeholder="Your Name (Optional)"
-                        value={directName}
-                        onChange={(e) => setDirectName(e.target.value)}
-                        style={{ flex: '1 1 140px', padding: '0.8rem 1rem', borderRadius: '50px', border: '1.5px solid #CBD5E1', outline: 'none', fontSize: '0.95rem' }}
-                      />
-                      <input
-                        type="email"
-                        required
-                        placeholder="Enter your best email..."
-                        value={directEmail}
-                        onChange={(e) => setDirectEmail(e.target.value)}
-                        style={{ flex: '2 1 200px', padding: '0.8rem 1rem', borderRadius: '50px', border: '1.5px solid #CBD5E1', outline: 'none', fontSize: '0.95rem' }}
-                      />
-                    </div>
-                    <button
-                      type="submit"
-                      disabled={isSubmittingDirect}
-                      className="btn btn-gold btn-shimmer"
-                      style={{ width: '100%', padding: '0.9rem 1.5rem', fontSize: '1.05rem', borderRadius: '50px', border: 'none', cursor: 'pointer', fontWeight: 600 }}
-                    >
-                      {isSubmittingDirect ? '⏳ Unlocking Player...' : '🎧 Unlock All 19 Tracks Free →'}
-                    </button>
-                  </form>
-
-                  <div style={{ borderTop: '1px dashed rgba(255, 111, 0, 0.25)', paddingTop: '1rem', marginTop: '0.5rem' }}>
-                    <p style={{ fontSize: '0.78rem', color: '#94A3B8', marginBottom: '0.6rem' }}>Or subscribe via Beehiiv:</p>
-                    <BeehiivSubscribeForm />
-                  </div>
+                  <BrevoSubscribeForm
+                    buttonText="🎧 Unlock All 19 Tracks Free →"
+                    placeholder="Enter your best email..."
+                    sourcePath="/player"
+                    showNameInput={true}
+                    onSuccess={({ email }) => {
+                      trackLead({ formName: 'player_brevo_unlock', email, source: 'player_gate' });
+                      unlock();
+                    }}
+                  />
                 </div>
 
 

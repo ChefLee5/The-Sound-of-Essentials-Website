@@ -1,9 +1,9 @@
-# The Sound of Essentials: Rhythm Quest — Canonical NotebookLM Master Source (August 2026)
+﻿# The Sound of Essentials: Rhythm Quest — Canonical NotebookLM Master Source (August 2026)
 
 > **Document Type:** Master Enterprise Source & Canonical Knowledge Base  
 > **Brand:** The Sound of Essentials: Rhythm Quest  
 > **Primary URL:** https://thesoundofessentials.com (Deployment: https://soe-website-b7j.pages.dev)  
-> **Target Audience:** Parents, Homeschool Families, Montessori / Waldorf / Early Learning Educators, School Districts (Ages 2–8 / Pre-K to Grade 3)  
+> **Target Audience:** Parents, Homeschool Families, Montessori / Waldorf / Early Learning Educators, School Districts (Ages 2–7 / Pre-K to Grade 2)  
 > **Mission:** "Designed for the developing brain — not the algorithm."
 
 ---

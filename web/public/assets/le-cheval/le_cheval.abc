@@ -1,0 +1,27 @@
+X: 1
+T: Le Cheval
+C: The Sound of Essentials: Rhythm Quest
+M: 4/4
+L: 1/8
+Q: 1/4=96 "Moderato, Gallop Cadence"
+K: Em
+V: 1 clef=treble
+%%MIDI program 53
+%%score ( 1 )
+% --- Acoustic Intro ---
+"Em" z8 | "C" z8 | "G" z8 | "D" z8 |
+% --- French Refrain ---
+"Em" BB GA B2 E2 | "C" G2 GA "D" B4 |
+w: Deux ac-crets le che-val, fort et puis-sant
+"Em" BB GA B2 E2 | "C" G2 GA "D" B4 |
+w: Deux ac-crets le che-val, fort et puis-sant
+"Em" BB GA B2 E2 | "C" G2 GA "Em" E4 |]
+w: Deux ac-crets le che-val, fort et puis-sant.
+% --- Spoken Narrative Interlude (Guitar: Em - C - G - D) ---
+% "Oh, I can almost see the horses now grazing,"
+% "Eating up grass and apples, which they love so much."
+% "The horse has strength and power,"
+% "able to see almost all the way around its body."
+% "Afraid of nothing in the time of war,"
+% "The horse walks, trots, canter, and gallops."
+% "What an amazing creation."

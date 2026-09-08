@@ -8,7 +8,7 @@ import tracksData from '../data/tracks.json';
 import { audioUrl } from '../utils/audioUrl';
 import JsonLd from '../components/JsonLd';
 import { mediaRoomSchema } from '../utils/schema';
-import BeehiivSubscribeForm from '../components/BeehiivSubscribeForm';
+import BrevoSubscribeForm from '../components/BrevoSubscribeForm';
 import {
   GalleryGrid,
   galleryShots,
@@ -350,45 +350,20 @@ const Listen = () => {
                 printable coloring book, and start a free 5-day sensory learning journey.
               </p>
 
-              <form onSubmit={handleDirectOptin} className="listen-direct-form" style={{ maxWidth: '460px', margin: '1.5rem auto 1rem auto', display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
-                <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
-                  <input
-                    type="email"
-                    required
-                    placeholder="Enter your best email..."
-                    value={directEmail}
-                    onChange={(e) => setDirectEmail(e.target.value)}
-                    style={{
-                      flex: 1,
-                      minWidth: '220px',
-                      padding: '0.85rem 1.25rem',
-                      borderRadius: '50px',
-                      border: '2px solid rgba(255, 111, 0, 0.35)',
-                      background: '#ffffff',
-                      fontSize: '1rem',
-                      outline: 'none',
-                    }}
-                  />
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="btn btn-gold btn-shimmer"
-                    style={{ padding: '0.85rem 1.8rem', borderRadius: '50px', whiteSpace: 'nowrap' }}
-                  >
-                    {isSubmitting ? 'Unlocking...' : '🎧 Unlock 19 Tracks →'}
-                  </button>
-                </div>
-                {optinError && <p style={{ color: '#E11D48', fontSize: '0.9rem', margin: '0.25rem 0' }}>{optinError}</p>}
-              </form>
+              <BrevoSubscribeForm
+                className="listen-optin__form"
+                buttonText="🎧 Unlock 19 Tracks Free →"
+                placeholder="Enter your best email..."
+                sourcePath="/listen"
+                onSuccess={({ email }) => {
+                  trackLead({ formName: 'listen_brevo_optin', email, source: 'listen_page' });
+                  unlock();
+                }}
+              />
 
-              <ProofInThePause variant="quote" />
-
-              <div style={{ marginTop: '1.5rem', borderTop: '1px solid rgba(0,0,0,0.06)', paddingTop: '1rem' }}>
-                <BeehiivSubscribeForm className="listen-optin__form" />
+              <div style={{ marginTop: '1.5rem' }}>
+                <ProofInThePause variant="quote" />
               </div>
-              <p className="listen-optin__disclaimer" style={{ marginTop: '0.75rem' }}>
-                No spam, ever. Unsubscribe anytime. We respect your family's inbox.
-              </p>
             </div>
           </div>
         </section>

@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Le Cheval — Lead Sheet & Sheet Music | The Sound of Essentials</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #4F46E5;
+      --primary-dark: #312E81;
+      --accent-green: #22C55E;
+      --accent-blue: #1E88E5;
+      --bg: #FAFAF9;
+      --card-bg: #FFFFFF;
+      --ink: #1C1917;
+      --muted: #57534E;
+      --staff-line: #292524;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Comic Neue', cursive, sans-serif;
+      background-color: var(--bg);
+      color: var(--ink);
+      line-height: 1.5;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      padding: 2.5rem;
+      border-radius: 24px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+      border: 3px solid #E2E8F0;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 2px solid #E2E8F0;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .title-group h1 {
+      font-family: 'Baloo 2', cursive, sans-serif;
+      font-size: 2.5rem;
+      color: var(--primary);
+      line-height: 1.1;
+      margin-bottom: 0.25rem;
+    }
+
+    .title-group .sub {
+      font-size: 1.1rem;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .meta-group {
+      text-align: right;
+      font-size: 0.95rem;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #EEF2FF;
+      color: var(--primary);
+      padding: 0.3rem 0.8rem;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      margin-bottom: 0.5rem;
+      border: 1px solid #C7D2FE;
+    }
+
+    .tempo-strip {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      background: #F8FAFC;
+      padding: 0.75rem 1.25rem;
+      border-radius: 12px;
+      margin-bottom: 2rem;
+      border: 1px solid #E2E8F0;
+      font-size: 0.95rem;
+    }
+
+    .tempo-strip strong { color: var(--primary-dark); }
+
+    /* Chord diagram strip */
+    .chords-legend {
+      display: flex;
+      gap: 2rem;
+      margin-bottom: 2rem;
+      background: #FEF3C7;
+      padding: 1rem 1.5rem;
+      border-radius: 16px;
+      border: 2px solid #FDE68A;
+      align-items: center;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .chord-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    .chord-item span {
+      font-family: 'Baloo 2', cursive;
+      font-weight: 800;
+      font-size: 1.25rem;
+      color: #92400E;
+    }
+
+    .chord-box-svg {
+      width: 54px;
+      height: 60px;
+    }
+
+    /* Notation Section */
+    .section-title {
+      font-family: 'Baloo 2', cursive;
+      font-size: 1.35rem;
+      color: var(--primary-dark);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .staff-container {
+      margin-bottom: 2.5rem;
+    }
+
+    .music-svg {
+      width: 100%;
+      height: auto;
+      filter: drop-shadow(0 1px 1px rgba(0,0,0,0.05));
+    }
+
+    /* Spoken Section */
+    .recitative-box {
+      background: #F0FDF4;
+      border: 2px solid #BBF7D0;
+      border-radius: 16px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .recitative-box h3 {
+      font-family: 'Baloo 2', cursive;
+      color: #166534;
+      margin-bottom: 0.75rem;
+      font-size: 1.2rem;
+    }
+
+    .spoken-verse {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+      font-size: 1.05rem;
+    }
+
+    .chord-tag {
+      display: inline-block;
+      background: #DCFCE7;
+      color: #15803D;
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 0.1rem 0.4rem;
+      border-radius: 4px;
+      margin-right: 0.4rem;
+      vertical-align: baseline;
+    }
+
+    /* Classroom Guide */
+    .classroom-notes {
+      background: #F1F5F9;
+      border-radius: 16px;
+      padding: 1.25rem 1.5rem;
+      border-left: 5px solid var(--primary);
+      font-size: 0.95rem;
+    }
+
+    .classroom-notes h4 {
+      font-family: 'Baloo 2', cursive;
+      color: var(--primary-dark);
+      font-size: 1.1rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .btn-bar {
+      display: flex;
+      justify-content: flex-end;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.6rem 1.2rem;
+      border-radius: 999px;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 0.9rem;
+      border: none;
+      transition: all 0.2s;
+    }
+
+    .btn-primary { background: var(--primary); color: white; }
+    .btn-primary:hover { background: var(--primary-dark); }
+    .btn-outline { background: white; border: 2px solid #CBD5E1; color: var(--ink); }
+    .btn-outline:hover { background: #F8FAFC; }
+
+    @media print {
+      body { padding: 0; background: white; }
+      .container { border: none; box-shadow: none; padding: 0; }
+      .btn-bar { display: none; }
+      .tempo-strip { border: 1px solid #999; }
+      .recitative-box { border: 1px solid #999; background: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="btn-bar">
+      <button class="btn btn-outline" onclick="window.print()">🖨️ Print Sheet Music</button>
+      <a class="btn btn-primary" href="le_cheval_lead_sheet.musicxml" download>🎼 Download MusicXML</a>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+      <div class="title-group">
+        <span class="badge">Track 5 · Luminosity · Bilingual Immersion</span>
+        <h1>Le Cheval</h1>
+        <div class="sub">Lead Sheet with Melodic Notation &amp; Guitar Chords</div>
+      </div>
+      <div class="meta-group">
+        <div><strong>Album:</strong> Rhythm Quest (Deluxe)</div>
+        <div><strong>Artist:</strong> The Sound of Essentials</div>
+        <div><strong>Ages:</strong> 2–7 (Pre-K to Grade 3)</div>
+      </div>
+    </header>
+
+    <!-- Tempo & Key Strip -->
+    <div class="tempo-strip">
+      <div><strong>Key:</strong> E Minor (1 Sharp · F#)</div>
+      <div><strong>Meter:</strong> 4/4 Time</div>
+      <div><strong>Tempo:</strong> Moderato Gallop (♩ = 96 BPM)</div>
+      <div><strong>Domain:</strong> Language &amp; Bilateral Rhythm</div>
+    </div>
+
+    <!-- Guitar Chord Boxes -->
+    <div class="chords-legend">
+      <div style="font-weight: 700; font-size: 0.9rem; color: #78350F; max-width: 120px;">
+        Acoustic Guitar Voicings:
+      </div>
+      <!-- Em Chord -->
+      <div class="chord-item">
+        <span>Em</span>
+        <svg class="chord-box-svg" viewBox="0 0 60 70">
+          <text x="30" y="10" text-anchor="middle" font-size="10" font-family="sans-serif">o o o o</text>
+          <line x1="10" y1="15" x2="50" y2="15" stroke="#78350F" stroke-width="3"/>
+          <line x1="10" y1="15" x2="10" y2="65" stroke="#78350F" stroke-width="1.2"/>
+          <line x1="18" y1="15" x2="18" y2="65" stroke="#78350F" stroke-width="1.2"/>
+          <line x1="26" y1="15" x2="26" y2="65" stroke="#78350F" stroke-width="1.2"/>
+          <line x1="34" y1="15" x2="34" y2="65" stroke="#78350F" stroke-width="1.2"/>
+          <line x1="42" y1="15" x2="42" y2="65" stroke="#78350F" stroke-width="1.2"/>
+          <line x1="50" y1="15" x2="50" y2="65" stroke="#78350F" stroke-width="1.2"/>
+          <line x1="10" y1="28" x2="50" y2="28" stroke="#D97706" stroke-width="1"/>
+          <line x1="10" y1="41" x2="50" y2="41" stroke="#D97706" stroke-width="1"/>
+          <line x1="10" y1="54" x2="50" y2="54" stroke="#D97706" stroke-width="1"/>
+          <circle cx="18" cy="35" r="4" fill="#B45309"/>
+          <circle cx="26" cy="35" r="4" fill="#B45309"/>
+        </svg>
+      </div>
+      <!-- C Chord -->
+      <div class="chord-item">
+        <span>C</span>
+        <svg class="chord-box-svg" viewBox="0 0 60 70">
+          <text x="30" y="10" text-anchor="middle" font-size="10" font-family="sans-serif">x   o o</text>
+          <line x1="10" y1="15" x2="50" y2="15" stroke="#78350F" stroke-width="3"/>
+          <line x1="10" y1="15" x2="10" y2="65" stroke="#78350F" stroke-width="1.2"/>
+          <line x1="18" y1="15" x2="18" y2="65" stroke="#78350F" stroke-width="1.2"/>
+          <line x1="26" y1="15" x2="26" y2="65" stroke="#78350F" stroke-width="1.2"/>
+          <line x1="34" y1="15" x2="34" y2="65" stroke="#78350F" stroke-width="1.2"/>
+          <line x1="42" y1="15" x2="42" y2="65" stroke="#78350F" stroke-width="1.2"/>
+          <line x1="50" y1="15" x2="50" y2="65" stroke="#78350F" stroke-width="1.2"/>
+          <line x1="10" y1="28" x2="50" y2="28" stroke="#D97706" stroke-width="1"/>
+          <line x1="10" y1="41" x2="50" y2="41" stroke="#D97706" stroke-width="1"/>
+          <line x1="10" y1="54" x2="50" y2="54" stroke="#D97706" stroke-width="1"/>
+          <circle cx="18" cy="48" r="4" fill="#B45309"/>
+          <circle cx="26" cy="35" r="4" fill="#B45309"/>
+          <circle cx="42" cy="22" r="4" fill="#B45309"/>
+        </svg>
+      </div>
+      <!-- G Chord -->
+      <div class="chord-item">
+        <span>G</span>
+        <svg class="chord-box-svg" viewBox="0 0 60 70">
+          <text x="30" y="10" text-anchor="middle" font-size="10" font-family="sans-serif">  o o  </text>
+          <line x1="10" y1="15" x2="50" y2="15" stroke="#78350F" stroke-width="3"/>
+          <line x1="10" y1="15" x2="10" y2="65" stroke="#78350F" stroke-width="1.2"/>
+          <line x1="18" y1="15" x2="18" y2="65" stroke="#78350F" stroke-width="1.2"/>
+          <line x1="26" y1="15" x2="26" y2="65" stroke="#78350F" stroke-width="1.2"/>
+          <line x1="34" y1="15" x2="34" y2="65" stroke="#78350F" stroke-width="1.2"/>
+          <line x1="42" y1="15" x2="42" y2="65" stroke="#78350F" stroke-width="1.2"/>
+          <line x1="50" y1="15" x2="50" y2="65" stroke="#78350F" stroke-width="1.2"/>
+          <line x1="10" y1="28" x2="50" y2="28" stroke="#D97706" stroke-width="1"/>
+          <line x1="10" y1="41" x2="50" y2="41" stroke="#D97706" stroke-width="1"/>
+          <line x1="10" y1="54" x2="50" y2="54" stroke="#D97706" stroke-width="1"/>
+          <circle cx="10" cy="48" r="4" fill="#B45309"/>
+          <circle cx="18" cy="35" r="4" fill="#B45309"/>
+          <circle cx="50" cy="48" r="4" fill="#B45309"/>
+        </svg>
+      </div>
+      <!-- D Chord -->
+      <div class="chord-item">
+        <span>D</span>
+        <svg class="chord-box-svg" viewBox="0 0 60 70">
+          <text x="30" y="10" text-anchor="middle" font-size="10" font-family="sans-serif">x x o   </text>
+          <line x1="10" y1="15" x2="50" y2="15" stroke="#78350F" stroke-width="3"/>
+          <line x1="10" y1="15" x2="10" y2="65" stroke="#78350F" stroke-width="1.2"/>
+          <line x1="18" y1="15" x2="18" y2="65" stroke="#78350F" stroke-width="1.2"/>
+          <line x1="26" y1="15" x2="26" y2="65" stroke="#78350F" stroke-width="1.2"/>
+          <line x1="34" y1="15" x2="34" y2="65" stroke="#78350F" stroke-width="1.2"/>
+          <line x1="42" y1="15" x2="42" y2="65" stroke="#78350F" stroke-width="1.2"/>
+          <line x1="50" y1="15" x2="50" y2="65" stroke="#78350F" stroke-width="1.2"/>
+          <line x1="10" y1="28" x2="50" y2="28" stroke="#D97706" stroke-width="1"/>
+          <line x1="10" y1="41" x2="50" y2="41" stroke="#D97706" stroke-width="1"/>
+          <line x1="10" y1="54" x2="50" y2="54" stroke="#D97706" stroke-width="1"/>
+          <circle cx="34" cy="35" r="4" fill="#B45309"/>
+          <circle cx="42" cy="48" r="4" fill="#B45309"/>
+          <circle cx="50" cy="35" r="4" fill="#B45309"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Musical Staff 1: French Refrain Line 1 -->
+    <div class="staff-container">
+      <div class="section-title">🎵 1. French Melodic Refrain (Lead Vocal)</div>
+      
+      <svg class="music-svg" viewBox="0 0 800 130" xmlns="http://www.w3.org/2000/svg">
+        <!-- 5 Staff Lines -->
+        <line x1="20" y1="40" x2="780" y2="40" stroke="#292524" stroke-width="1.5"/>
+        <line x1="20" y1="52" x2="780" y2="52" stroke="#292524" stroke-width="1.5"/>
+        <line x1="20" y1="64" x2="780" y2="64" stroke="#292524" stroke-width="1.5"/>
+        <line x1="20" y1="76" x2="780" y2="76" stroke="#292524" stroke-width="1.5"/>
+        <line x1="20" y1="88" x2="780" y2="88" stroke="#292524" stroke-width="1.5"/>
+
+        <!-- Start Barline & Treble Clef -->
+        <line x1="20" y1="40" x2="20" y2="88" stroke="#292524" stroke-width="2"/>
+        <text x="25" y="82" font-family="'Times New Roman', serif" font-size="52" fill="#292524">𝄞</text>
+        <!-- Key Signature: F# on top line -->
+        <text x="65" y="46" font-family="'Times New Roman', serif" font-size="28" fill="#292524">♯</text>
+        <!-- Time Signature: 4/4 -->
+        <text x="85" y="60" font-family="'Baloo 2', cursive" font-weight="700" font-size="22" fill="#292524">4</text>
+        <text x="85" y="82" font-family="'Baloo 2', cursive" font-weight="700" font-size="22" fill="#292524">4</text>
+
+        <!-- Chord Em -->
+        <text x="140" y="24" font-family="'Baloo 2', cursive" font-weight="800" font-size="20" fill="#4F46E5">Em</text>
+        
+        <!-- Notes Measure 1: B4 B4 (Deux ac-), G4 A4 (crets le), B4 (che-), E4 (-val) -->
+        <!-- Note 1: B4 (middle line, y=64) -->
+        <ellipse cx="150" cy="64" rx="6" ry="4.5" transform="rotate(-20 150 64)" fill="#1C1917"/>
+        <line x1="156" y1="64" x2="156" y2="28" stroke="#1C1917" stroke-width="1.5"/>
+        <!-- Note 2: B4 -->
+        <ellipse cx="190" cy="64" rx="6" ry="4.5" transform="rotate(-20 190 64)" fill="#1C1917"/>
+        <line x1="196" y1="64" x2="196" y2="28" stroke="#1C1917" stroke-width="1.5"/>
+        <line x1="156" y1="28" x2="196" y2="28" stroke="#1C1917" stroke-width="3"/> <!-- Beam -->
+
+        <!-- Note 3: G4 (y=76) -->
+        <ellipse cx="230" cy="76" rx="6" ry="4.5" transform="rotate(-20 230 76)" fill="#1C1917"/>
+        <line x1="236" y1="76" x2="236" y2="40" stroke="#1C1917" stroke-width="1.5"/>
+        <!-- Note 4: A4 (y=70) -->
+        <ellipse cx="270" cy="70" rx="6" ry="4.5" transform="rotate(-20 270 70)" fill="#1C1917"/>
+        <line x1="276" y1="70" x2="276" y2="34" stroke="#1C1917" stroke-width="1.5"/>
+        <line x1="236" y1="40" x2="276" y2="34" stroke="#1C1917" stroke-width="3"/> <!-- Beam -->
+
+        <!-- Note 5: B4 (quarter note, y=64) -->
+        <ellipse cx="320" cy="64" rx="6.5" ry="5" transform="rotate(-20 320 64)" fill="#1C1917"/>
+        <line x1="326" y1="64" x2="326" y2="25" stroke="#1C1917" stroke-width="1.5"/>
+
+        <!-- Note 6: E4 (quarter note, y=88) -->
+        <ellipse cx="370" cy="88" rx="6.5" ry="5" transform="rotate(-20 370 88)" fill="#1C1917"/>
+        <line x1="376" y1="88" x2="376" y2="48" stroke="#1C1917" stroke-width="1.5"/>
+
+        <!-- Barline Measure 1 / 2 -->
+        <line x1="420" y1="40" x2="420" y2="88" stroke="#292524" stroke-width="1.5"/>
+
+        <!-- Measure 2: C chord & D chord -->
+        <text x="450" y="24" font-family="'Baloo 2', cursive" font-weight="800" font-size="20" fill="#4F46E5">C</text>
+        <text x="610" y="24" font-family="'Baloo 2', cursive" font-weight="800" font-size="20" fill="#4F46E5">D</text>
+
+        <!-- Note 7: G4 (quarter, "fort") -->
+        <ellipse cx="460" cy="76" rx="6.5" ry="5" transform="rotate(-20 460 76)" fill="#1C1917"/>
+        <line x1="466" y1="76" x2="466" y2="38" stroke="#1C1917" stroke-width="1.5"/>
+
+        <!-- Note 8: G4 (eighth, "et") -->
+        <ellipse cx="510" cy="76" rx="6" ry="4.5" transform="rotate(-20 510 76)" fill="#1C1917"/>
+        <line x1="516" y1="76" x2="516" y2="38" stroke="#1C1917" stroke-width="1.5"/>
+
+        <!-- Note 9: A4 (eighth, "puis-") -->
+        <ellipse cx="550" cy="70" rx="6" ry="4.5" transform="rotate(-20 550 70)" fill="#1C1917"/>
+        <line x1="556" y1="70" x2="556" y2="32" stroke="#1C1917" stroke-width="1.5"/>
+        <line x1="516" y1="38" x2="556" y2="32" stroke="#1C1917" stroke-width="3"/> <!-- Beam -->
+
+        <!-- Note 10: B4 (half note, hollow, "sant") -->
+        <ellipse cx="630" cy="64" rx="7" ry="5" transform="rotate(-20 630 64)" fill="none" stroke="#1C1917" stroke-width="2.5"/>
+        <line x1="636" y1="64" x2="636" y2="25" stroke="#1C1917" stroke-width="1.5"/>
+
+        <!-- End Barline -->
+        <line x1="775" y1="40" x2="775" y2="88" stroke="#292524" stroke-width="1.5"/>
+        <line x1="780" y1="40" x2="780" y2="88" stroke="#292524" stroke-width="3"/>
+
+        <!-- Lyrics under staff -->
+        <text x="145" y="112" font-family="'Comic Neue', cursive" font-size="16" font-weight="700" fill="#1C1917">Deux</text>
+        <text x="185" y="112" font-family="'Comic Neue', cursive" font-size="16" font-weight="700" fill="#1C1917">ac-</text>
+        <text x="225" y="112" font-family="'Comic Neue', cursive" font-size="16" font-weight="700" fill="#1C1917">crets</text>
+        <text x="268" y="112" font-family="'Comic Neue', cursive" font-size="16" font-weight="700" fill="#1C1917">le</text>
+        <text x="312" y="112" font-family="'Comic Neue', cursive" font-size="16" font-weight="700" fill="#1C1917">che-</text>
+        <text x="362" y="112" font-family="'Comic Neue', cursive" font-size="16" font-weight="700" fill="#1C1917">val,</text>
+
+        <text x="455" y="112" font-family="'Comic Neue', cursive" font-size="16" font-weight="700" fill="#1C1917">fort</text>
+        <text x="507" y="112" font-family="'Comic Neue', cursive" font-size="16" font-weight="700" fill="#1C1917">et</text>
+        <text x="542" y="112" font-family="'Comic Neue', cursive" font-size="16" font-weight="700" fill="#1C1917">puis-</text>
+        <text x="625" y="112" font-family="'Comic Neue', cursive" font-size="16" font-weight="700" fill="#1C1917">sant.</text>
+      </svg>
+    </div>
+
+    <!-- Musical Staff 2: French Refrain Cadence (Resolution to Em) -->
+    <div class="staff-container">
+      <svg class="music-svg" viewBox="0 0 800 130" xmlns="http://www.w3.org/2000/svg">
+        <!-- 5 Staff Lines -->
+        <line x1="20" y1="40" x2="780" y2="40" stroke="#292524" stroke-width="1.5"/>
+        <line x1="20" y1="52" x2="780" y2="52" stroke="#292524" stroke-width="1.5"/>
+        <line x1="20" y1="64" x2="780" y2="64" stroke="#292524" stroke-width="1.5"/>
+        <line x1="20" y1="76" x2="780" y2="76" stroke="#292524" stroke-width="1.5"/>
+        <line x1="20" y1="88" x2="780" y2="88" stroke="#292524" stroke-width="1.5"/>
+
+        <!-- Start Barline & Treble Clef -->
+        <line x1="20" y1="40" x2="20" y2="88" stroke="#292524" stroke-width="2"/>
+        <text x="25" y="82" font-family="'Times New Roman', serif" font-size="52" fill="#292524">𝄞</text>
+        <text x="65" y="46" font-family="'Times New Roman', serif" font-size="28" fill="#292524">♯</text>
+
+        <!-- Repeat Mark -->
+        <circle cx="85" cy="58" r="2.5" fill="#292524"/>
+        <circle cx="85" cy="70" r="2.5" fill="#292524"/>
+
+        <!-- Chord Em -->
+        <text x="140" y="24" font-family="'Baloo 2', cursive" font-weight="800" font-size="20" fill="#4F46E5">Em</text>
+        
+        <!-- Notes: B4 B4 G4 A4 B4 E4 -->
+        <ellipse cx="150" cy="64" rx="6" ry="4.5" transform="rotate(-20 150 64)" fill="#1C1917"/>
+        <line x1="156" y1="64" x2="156" y2="28" stroke="#1C1917" stroke-width="1.5"/>
+        <ellipse cx="190" cy="64" rx="6" ry="4.5" transform="rotate(-20 190 64)" fill="#1C1917"/>
+        <line x1="196" y1="64" x2="196" y2="28" stroke="#1C1917" stroke-width="1.5"/>
+        <line x1="156" y1="28" x2="196" y2="28" stroke="#1C1917" stroke-width="3"/>
+
+        <ellipse cx="230" cy="76" rx="6" ry="4.5" transform="rotate(-20 230 76)" fill="#1C1917"/>
+        <line x1="236" y1="76" x2="236" y2="40" stroke="#1C1917" stroke-width="1.5"/>
+        <ellipse cx="270" cy="70" rx="6" ry="4.5" transform="rotate(-20 270 70)" fill="#1C1917"/>
+        <line x1="276" y1="70" x2="276" y2="34" stroke="#1C1917" stroke-width="1.5"/>
+        <line x1="236" y1="40" x2="276" y2="34" stroke="#1C1917" stroke-width="3"/>
+
+        <ellipse cx="320" cy="64" rx="6.5" ry="5" transform="rotate(-20 320 64)" fill="#1C1917"/>
+        <line x1="326" y1="64" x2="326" y2="25" stroke="#1C1917" stroke-width="1.5"/>
+        <ellipse cx="370" cy="88" rx="6.5" ry="5" transform="rotate(-20 370 88)" fill="#1C1917"/>
+        <line x1="376" y1="88" x2="376" y2="48" stroke="#1C1917" stroke-width="1.5"/>
+
+        <line x1="420" y1="40" x2="420" y2="88" stroke="#292524" stroke-width="1.5"/>
+
+        <!-- Measure 4 Final Cadence to Em -->
+        <text x="450" y="24" font-family="'Baloo 2', cursive" font-weight="800" font-size="20" fill="#4F46E5">C</text>
+        <text x="610" y="24" font-family="'Baloo 2', cursive" font-weight="800" font-size="20" fill="#4F46E5">Em</text>
+
+        <ellipse cx="460" cy="76" rx="6.5" ry="5" transform="rotate(-20 460 76)" fill="#1C1917"/>
+        <line x1="466" y1="76" x2="466" y2="38" stroke="#1C1917" stroke-width="1.5"/>
+
+        <ellipse cx="510" cy="76" rx="6" ry="4.5" transform="rotate(-20 510 76)" fill="#1C1917"/>
+        <line x1="516" y1="76" x2="516" y2="38" stroke="#1C1917" stroke-width="1.5"/>
+
+        <ellipse cx="550" cy="70" rx="6" ry="4.5" transform="rotate(-20 550 70)" fill="#1C1917"/>
+        <line x1="556" y1="70" x2="556" y2="32" stroke="#1C1917" stroke-width="1.5"/>
+        <line x1="516" y1="38" x2="556" y2="32" stroke="#1C1917" stroke-width="3"/>
+
+        <!-- Note E4 (half note, resolving on root) -->
+        <ellipse cx="630" cy="88" rx="7" ry="5" transform="rotate(-20 630 88)" fill="none" stroke="#1C1917" stroke-width="2.5"/>
+        <line x1="636" y1="88" x2="636" y2="48" stroke="#1C1917" stroke-width="1.5"/>
+
+        <!-- Double Barline with fermata -->
+        <line x1="775" y1="40" x2="775" y2="88" stroke="#292524" stroke-width="1.5"/>
+        <line x1="780" y1="40" x2="780" y2="88" stroke="#292524" stroke-width="3.5"/>
+
+        <!-- Lyrics -->
+        <text x="145" y="112" font-family="'Comic Neue', cursive" font-size="16" font-weight="700" fill="#1C1917">Deux</text>
+        <text x="185" y="112" font-family="'Comic Neue', cursive" font-size="16" font-weight="700" fill="#1C1917">ac-</text>
+        <text x="225" y="112" font-family="'Comic Neue', cursive" font-size="16" font-weight="700" fill="#1C1917">crets</text>
+        <text x="268" y="112" font-family="'Comic Neue', cursive" font-size="16" font-weight="700" fill="#1C1917">le</text>
+        <text x="312" y="112" font-family="'Comic Neue', cursive" font-size="16" font-weight="700" fill="#1C1917">che-</text>
+        <text x="362" y="112" font-family="'Comic Neue', cursive" font-size="16" font-weight="700" fill="#1C1917">val,</text>
+
+        <text x="455" y="112" font-family="'Comic Neue', cursive" font-size="16" font-weight="700" fill="#1C1917">fort</text>
+        <text x="507" y="112" font-family="'Comic Neue', cursive" font-size="16" font-weight="700" fill="#1C1917">et</text>
+        <text x="542" y="112" font-family="'Comic Neue', cursive" font-size="16" font-weight="700" fill="#1C1917">puis-</text>
+        <text x="625" y="112" font-family="'Comic Neue', cursive" font-size="16" font-weight="700" fill="#1C1917">sant.</text>
+      </svg>
+    </div>
+
+    <!-- Spoken Recitative / Narrative English Bridge -->
+    <div class="recitative-box">
+      <h3>🗣️ 2. English Narrative Storytelling (Spoken over Acoustic Guitar Cadence)</h3>
+      <p style="color: #065F46; font-size: 0.9rem; margin-bottom: 0.75rem; font-weight: 700;">
+        Continuous rhythmic gallop strumming: <span class="chord-tag">Em</span> <span class="chord-tag">C</span> <span class="chord-tag">G</span> <span class="chord-tag">D</span> (repeat every 4 bars)
+      </p>
+      
+      <div class="spoken-verse">
+        <span class="chord-tag">Em</span> Oh, I can almost see the horses now grazing,<br>
+        <span class="chord-tag">C</span> Eating up grass and apples, which they love so much.<br>
+        <span class="chord-tag">G</span> The horse has strength and power,<br>
+        <span class="chord-tag">D</span> able to see almost all the way around its body.<br>
+        <span class="chord-tag">Em</span> Afraid of nothing in the time of war,<br>
+        <span class="chord-tag">C</span> The horse walks, trots, canter, and gallops...<br>
+        <span class="chord-tag">D</span> What an amazing creation.<br>
+        <span class="chord-tag">Em</span> <em>[Return to French Refrain with Vocal Harmonies]</em>
+      </div>
+    </div>
+
+    <!-- Classroom & Early Childhood Performance Notes -->
+    <div class="classroom-notes">
+      <h4>🧠 Early Childhood Rhythm &amp; Movement Integration:</h4>
+      <ul style="padding-left: 1.25rem; line-height: 1.7;">
+        <li><strong>Vagal Tone Cadence:</strong> Keep acoustic accompaniment locked at <strong>96 BPM</strong>. This mimics natural resting heart rate, calming active classroom transitions.</li>
+        <li><strong>Bilateral Gallop Tap:</strong> Have children tap knees in alternating triplet rhythms (<em>pat-pat-clap, pat-pat-clap</em>) during the French refrain to stimulate cross-midline neurological integration.</li>
+        <li><strong>Phonemic Target:</strong> Emphasize the soft French "ch" in <em>cheval</em> (/ʃə.val/) and the open rounded vowel in <em>puissant</em> (/pɥi.sɑ̃/).</li>
+      </ul>
+    </div>
+
+  </div>
+
+</body>
+</html>

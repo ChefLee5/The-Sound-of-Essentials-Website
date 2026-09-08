@@ -41,10 +41,9 @@
     "format": "EPUB",
     "price": 19.0,
     "currency": "USD",
-    "description": "The 66-page illustrated companion to the free album. Seriphia guides Kenji, Aiko and the heroes through all 7 Lands, with a My Word Quest Glossary in the backmatter. One land a week, seven weeks.",
+    "description": "The 66-page illustrated companion story to the free 19-track album. Seriphia guides Kenji, Aiko, and the heroes through all 7 Lands, unlocking emotional regulation, phonics, and curiosity.",
     "features": [
-      "66 illustrated pages",
-      "All 7 Lands, one per week",
+      "66 illustrated story pages",
       "Seriphia and the 15 heroes",
       "My Word Quest Glossary backmatter",
       "Paired to the 19-track album",
@@ -62,7 +61,7 @@
       "seven-lands",
       "literacy"
     ],
-    "funnelStage": "tripwire",
+    "funnelStage": "lead-offer",
     "status": "available",
     "storeUrl": "https://the-sound-of-essentials.myshopify.com/cart/53204514799932:1"
   },
@@ -71,18 +70,17 @@
     "name": "SOE Rhythm Quest: Rhythm Ready Workbook",
     "shortName": "Rhythm Ready Workbook",
     "type": "digital-workbook",
-    "format": "PDF",
+    "format": "PDF / Physical Print",
     "price": 21.0,
     "printPrice": 35.0,
     "currency": "USD",
-    "description": "An 8-week cross-curricular readiness workbook spanning all 7 Lands. 40 days, 10 activity blocks a day — 400 activities in about 30 minutes a day, building bedrock skills and learning momentum with progressive difficulty and character rotation.",
+    "description": "The 7-week cross-curricular readiness workbook spanning all 7 Lands (1 Land per week). ~400 activities across 10 daily blocks building bedrock skills, sensory phonics, motor coordination, and learning momentum.",
     "features": [
-      "8 weeks of structured activities",
-      "400 activities across 40 days",
-      "10 activity blocks per day",
+      "7-week structured framing curriculum (1 Land per week)",
+      "~400 activities across 10 daily blocks",
       "Progressive difficulty scaling",
       "All 15 hero characters featured",
-      "Movement and mindfulness breaks"
+      "Physical print anchor ($35) or instant digital ($21)"
     ],
     "ageRange": "Ages 2–7",
     "gradeRange": "Pre-K to Grade 2",
@@ -94,7 +92,8 @@
       "school-readiness",
       "cross-curricular",
       "activities",
-      "STEM"
+      "STEM",
+      "curriculum"
     ],
     "funnelStage": "core-offer",
     "status": "pre-sale",

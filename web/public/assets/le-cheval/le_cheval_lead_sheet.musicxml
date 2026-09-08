@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE score-partwise PUBLIC "-//Recordare//DTD MusicXML 4.0 Partwise//EN" "http://www.musicxml.org/dtds/partwise.dtd">
+<score-partwise version="4.0">
+  <work>
+    <work-title>Le Cheval</work-title>
+  </work>
+  <identification>
+    <creator type="composer">The Sound of Essentials</creator>
+    <creator type="lyricist">The Sound of Essentials</creator>
+    <creator type="arranger">Artist Collective</creator>
+    <rights>Copyright © 2026 The Sound of Essentials</rights>
+    <encoding>
+      <software>Antigravity Music Engine / SOE</software>
+      <encoding-date>2026-09-05</encoding-date>
+    </encoding>
+  </identification>
+  <defaults>
+    <scaling>
+      <millimeters>7.05556</millimeters>
+      <tenths>40</tenths>
+    </scaling>
+  </defaults>
+  <part-list>
+    <score-part id="P1">
+      <part-name>Lead Vocal &amp; Melody</part-name>
+      <part-abbreviation>Vox.</part-abbreviation>
+      <score-instrument id="P1-I1">
+        <instrument-name>Voice</instrument-name>
+      </score-instrument>
+      <midi-instrument id="P1-I1">
+        <midi-channel>1</midi-channel>
+        <midi-program>53</midi-program>
+      </midi-instrument>
+    </score-part>
+  </part-list>
+  
+  <part id="P1">
+    <!-- Measure 1: Intro (Em) -->
+    <measure number="1">
+      <attributes>
+        <divisions>4</divisions>
+        <key>
+          <fifths>1</fifths>
+          <mode>minor</mode>
+        </key>
+        <time>
+          <beats>4</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <clef>
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+      </attributes>
+      <direction placement="above">
+        <direction-type>
+          <metronome parentheses="no">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>96</per-minute>
+          </metronome>
+        </direction-type>
+        <direction-type>
+          <words font-weight="bold" font-size="12">Moderato, Gallop Cadence (♩ = 96)</words>
+        </direction-type>
+        <sound tempo="96"/>
+      </direction>
+      <harmony default-y="30">
+        <root><root-step>E</root-step></root>
+        <kind>minor</kind>
+      </harmony>
+      <note>
+        <rest/>
+        <duration>16</duration>
+        <voice>1</voice>
+        <type>whole</type>
+      </note>
+    </measure>
+
+    <!-- Measure 2: Intro (C) -->
+    <measure number="2">
+      <harmony default-y="30">
+        <root><root-step>C</root-step></root>
+        <kind>major</kind>
+      </harmony>
+      <note>
+        <rest/>
+        <duration>16</duration>
+        <voice>1</voice>
+        <type>whole</type>
+      </note>
+    </measure>
+
+    <!-- Measure 3: Intro (G) -->
+    <measure number="3">
+      <harmony default-y="30">
+        <root><root-step>G</root-step></root>
+        <kind>major</kind>
+      </harmony>
+      <note>
+        <rest/>
+        <duration>16</duration>
+        <voice>1</voice>
+        <type>whole</type>
+      </note>
+    </measure>
+
+    <!-- Measure 4: Intro (D) -->
+    <measure number="4">
+      <harmony default-y="30">
+        <root><root-step>D</root-step></root>
+        <kind>major</kind>
+      </harmony>
+      <note>
+        <rest/>
+        <duration>16</duration>
+        <voice>1</voice>
+        <type>whole</type>
+      </note>
+    </measure>
+
+    <!-- Measure 5: French Verse Refrain (Em) -->
+    <measure number="5">
+      <harmony default-y="30">
+        <root><root-step>E</root-step></root>
+        <kind>minor</kind>
+      </harmony>
+      <!-- "Deux ac-" -->
+      <note>
+        <pitch><step>B</step><octave>4</octave></pitch>
+        <duration>2</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <lyric number="1"><syllabic>begin</syllabic><text>Deux</text></lyric>
+      </note>
+      <note>
+        <pitch><step>B</step><octave>4</octave></pitch>
+        <duration>2</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <lyric number="1"><syllabic>middle</syllabic><text>ac-</text></lyric>
+      </note>
+      <!-- "-crets le che-" -->
+      <note>
+        <pitch><step>G</step><octave>4</octave></pitch>
+        <duration>2</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <lyric number="1"><syllabic>end</syllabic><text>crets</text></lyric>
+      </note>
+      <note>
+        <pitch><step>A</step><octave>4</octave></pitch>
+        <duration>2</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <lyric number="1"><syllabic>single</syllabic><text>le</text></lyric>
+      </note>
+      <note>
+        <pitch><step>B</step><octave>4</octave></pitch>
+        <duration>4</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <lyric number="1"><syllabic>begin</syllabic><text>che-</text></lyric>
+      </note>
+      <note>
+        <pitch><step>E</step><octave>4</octave></pitch>
+        <duration>4</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <lyric number="1"><syllabic>end</syllabic><text>val,</text></lyric>
+      </note>
+    </measure>
+
+    <!-- Measure 6: "fort et puissant" (C - D) -->
+    <measure number="6">
+      <harmony default-y="30">
+        <root><root-step>C</root-step></root>
+        <kind>major</kind>
+      </harmony>
+      <note>
+        <pitch><step>G</step><octave>4</octave></pitch>
+        <duration>4</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <lyric number="1"><syllabic>single</syllabic><text>fort</text></lyric>
+      </note>
+      <note>
+        <pitch><step>G</step><octave>4</octave></pitch>
+        <duration>2</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <lyric number="1"><syllabic>single</syllabic><text>et</text></lyric>
+      </note>
+      <note>
+        <pitch><step>A</step><octave>4</octave></pitch>
+        <duration>2</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <lyric number="1"><syllabic>begin</syllabic><text>puis-</text></lyric>
+      </note>
+      <harmony default-y="30">
+        <root><root-step>D</root-step></root>
+        <kind>major</kind>
+      </harmony>
+      <note>
+        <pitch><step>B</step><octave>4</octave></pitch>
+        <duration>8</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <lyric number="1"><syllabic>end</syllabic><text>sant</text></lyric>
+      </note>
+    </measure>
+
+    <!-- Measure 7: Repeat Line 2 (Em - C) -->
+    <measure number="7">
+      <harmony default-y="30">
+        <root><root-step>E</root-step></root>
+        <kind>minor</kind>
+      </harmony>
+      <note>
+        <pitch><step>B</step><octave>4</octave></pitch>
+        <duration>2</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <lyric number="1"><syllabic>begin</syllabic><text>Deux</text></lyric>
+      </note>
+      <note>
+        <pitch><step>B</step><octave>4</octave></pitch>
+        <duration>2</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <lyric number="1"><syllabic>middle</syllabic><text>ac-</text></lyric>
+      </note>
+      <note>
+        <pitch><step>G</step><octave>4</octave></pitch>
+        <duration>2</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <lyric number="1"><syllabic>end</syllabic><text>crets</text></lyric>
+      </note>
+      <note>
+        <pitch><step>A</step><octave>4</octave></pitch>
+        <duration>2</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <lyric number="1"><syllabic>single</syllabic><text>le</text></lyric>
+      </note>
+      <note>
+        <pitch><step>B</step><octave>4</octave></pitch>
+        <duration>4</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <lyric number="1"><syllabic>begin</syllabic><text>che-</text></lyric>
+      </note>
+      <note>
+        <pitch><step>E</step><octave>4</octave></pitch>
+        <duration>4</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <lyric number="1"><syllabic>end</syllabic><text>val,</text></lyric>
+      </note>
+    </measure>
+
+    <!-- Measure 8: Line 2 resolution (G - D) -->
+    <measure number="8">
+      <harmony default-y="30">
+        <root><root-step>C</root-step></root>
+        <kind>major</kind>
+      </harmony>
+      <note>
+        <pitch><step>G</step><octave>4</octave></pitch>
+        <duration>4</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <lyric number="1"><syllabic>single</syllabic><text>fort</text></lyric>
+      </note>
+      <note>
+        <pitch><step>G</step><octave>4</octave></pitch>
+        <duration>2</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <lyric number="1"><syllabic>single</syllabic><text>et</text></lyric>
+      </note>
+      <note>
+        <pitch><step>A</step><octave>4</octave></pitch>
+        <duration>2</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <lyric number="1"><syllabic>begin</syllabic><text>puis-</text></lyric>
+      </note>
+      <harmony default-y="30">
+        <root><root-step>D</root-step></root>
+        <kind>major</kind>
+      </harmony>
+      <note>
+        <pitch><step>B</step><octave>4</octave></pitch>
+        <duration>8</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <lyric number="1"><syllabic>end</syllabic><text>sant</text></lyric>
+      </note>
+    </measure>
+
+    <!-- Measure 9: Line 3 (Em - C) -->
+    <measure number="9">
+      <harmony default-y="30">
+        <root><root-step>E</root-step></root>
+        <kind>minor</kind>
+      </harmony>
+      <note>
+        <pitch><step>B</step><octave>4</octave></pitch>
+        <duration>2</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <lyric number="1"><syllabic>begin</syllabic><text>Deux</text></lyric>
+      </note>
+      <note>
+        <pitch><step>B</step><octave>4</octave></pitch>
+        <duration>2</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <lyric number="1"><syllabic>middle</syllabic><text>ac-</text></lyric>
+      </note>
+      <note>
+        <pitch><step>G</step><octave>4</octave></pitch>
+        <duration>2</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <lyric number="1"><syllabic>end</syllabic><text>crets</text></lyric>
+      </note>
+      <note>
+        <pitch><step>A</step><octave>4</octave></pitch>
+        <duration>2</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <lyric number="1"><syllabic>single</syllabic><text>le</text></lyric>
+      </note>
+      <note>
+        <pitch><step>B</step><octave>4</octave></pitch>
+        <duration>4</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <lyric number="1"><syllabic>begin</syllabic><text>che-</text></lyric>
+      </note>
+      <note>
+        <pitch><step>E</step><octave>4</octave></pitch>
+        <duration>4</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <lyric number="1"><syllabic>end</syllabic><text>val,</text></lyric>
+      </note>
+    </measure>
+
+    <!-- Measure 10: Line 3 cadence (C - D - Em) -->
+    <measure number="10">
+      <harmony default-y="30">
+        <root><root-step>C</root-step></root>
+        <kind>major</kind>
+      </harmony>
+      <note>
+        <pitch><step>G</step><octave>4</octave></pitch>
+        <duration>4</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <lyric number="1"><syllabic>single</syllabic><text>fort</text></lyric>
+      </note>
+      <note>
+        <pitch><step>G</step><octave>4</octave></pitch>
+        <duration>2</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <lyric number="1"><syllabic>single</syllabic><text>et</text></lyric>
+      </note>
+      <note>
+        <pitch><step>A</step><octave>4</octave></pitch>
+        <duration>2</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <lyric number="1"><syllabic>begin</syllabic><text>puis-</text></lyric>
+      </note>
+      <harmony default-y="30">
+        <root><root-step>E</root-step></root>
+        <kind>minor</kind>
+      </harmony>
+      <note>
+        <pitch><step>E</step><octave>4</octave></pitch>
+        <duration>8</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <lyric number="1"><syllabic>end</syllabic><text>sant.</text></lyric>
+      </note>
+      <barline location="right">
+        <bar-style>light-heavy</bar-style>
+      </barline>
+    </measure>
+  </part>
+</score-partwise>

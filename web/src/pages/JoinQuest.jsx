@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { RevealSection } from '../hooks/useReveal';
 import { assetPath } from '../utils/assetPath';
-import BeehiivSubscribeForm from '../components/BeehiivSubscribeForm';
+import BrevoSubscribeForm from '../components/BrevoSubscribeForm';
 import { submitSoeInterest } from '../services/soeSubmissions';
 
 const JoinQuest = () => {
@@ -73,12 +73,16 @@ const JoinQuest = () => {
                             <div className="newsletter-block__content">
                                 <span className="newsletter-block__icon">📬</span>
                                 <h2>{t('join.stay_connected')}</h2>
-                                <p>
-                                    {t('join.newsletter_desc')}
-                                </p>
+                                <p>{t('join.newsletter_desc')}</p>
                             </div>
 
-                            <BeehiivSubscribeForm className="newsletter-form" />
+                            <BrevoSubscribeForm
+                                className="newsletter-form"
+                                buttonText="✨ Join the Movement →"
+                                placeholder="Enter your email..."
+                                sourcePath="/join-quest"
+                                kind="newsletter"
+                            />
                         </div>
                     </RevealSection>
                 </div>

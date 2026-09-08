@@ -1,0 +1,148 @@
+/* Brevo Subscribe Form Styling — Claymorphic & Responsive */
+
+.brevo-subscribe-wrapper {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.brevo-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.brevo-input-group {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.brevo-input {
+  flex: 1;
+  min-width: 220px;
+  padding: 0.85rem 1.35rem;
+  border-radius: 50px;
+  border: 2px solid rgba(255, 111, 0, 0.35);
+  background: #ffffff;
+  color: #1e293b;
+  font-family: inherit;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.brevo-input:focus {
+  border-color: #ff6f00;
+  box-shadow: 0 0 0 4px rgba(255, 111, 0, 0.15), inset 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.brevo-input::placeholder {
+  color: #94a3b8;
+}
+
+.brevo-submit-btn {
+  padding: 0.85rem 1.75rem;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  white-space: nowrap;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.15s ease, filter 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brevo-submit-btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.brevo-submit-btn:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.brevo-submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.brevo-error-text {
+  color: #e11d48;
+  font-size: 0.88rem;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 0.25rem;
+}
+
+.brevo-disclaimer {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  text-align: center;
+  margin-top: 0.5rem;
+  line-height: 1.4;
+}
+
+.brevo-success-message {
+  text-align: center;
+  padding: 1.5rem;
+  background: rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  border-radius: 16px;
+  color: #15803d;
+}
+
+.brevo-success-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.brevo-success-message h4 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.brevo-success-message p {
+  font-size: 0.9rem;
+  color: #166534;
+}
+
+.brevo-loading-dots span {
+  animation: brevoBlink 1.4s infinite both;
+  font-size: 1.2rem;
+  line-height: 0;
+}
+
+.brevo-loading-dots span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.brevo-loading-dots span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes brevoBlink {
+  0% { opacity: 0.2; }
+  20% { opacity: 1; }
+  100% { opacity: 0.2; }
+}
+
+@media (max-width: 480px) {
+  .brevo-input-group {
+    flex-direction: column;
+    width: 100%;
+  }
+  .brevo-input {
+    width: 100%;
+    min-width: unset;
+  }
+  .brevo-submit-btn {
+    width: 100%;
+  }
+}

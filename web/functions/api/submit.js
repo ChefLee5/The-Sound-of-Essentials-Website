@@ -164,8 +164,30 @@ export async function onRequestPost(context) {
           }),
         });
       }
-    } catch (crmErr) {
-      console.warn('CRM Sync notice (non-blocking):', crmErr);
+    // Background Brevo Contact Synchronization (Unlimited Contacts)
+    if (env.BREVO_API_KEY) {
+      try {
+        const brevoListId = Number(env.BREVO_LIST_ID) || 2;
+        await fetch('https://api.brevo.com/v3/contacts', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'api-key': env.BREVO_API_KEY,
+          },
+          body: JSON.stringify({
+            email: normalizedEmail,
+            attributes: {
+              FIRSTNAME: normalizedName || 'Rhythm Explorer',
+              SOURCE: sourcePath || '/listen',
+              PERSONA: persona,
+            },
+            listIds: [brevoListId],
+            updateEnabled: true,
+          }),
+        });
+      } catch (brevoErr) {
+        console.warn('Brevo Sync notice (non-blocking):', brevoErr);
+      }
     }
 
     return new Response(
