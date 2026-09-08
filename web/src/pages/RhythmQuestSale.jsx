@@ -286,7 +286,7 @@ const RhythmReadyHero = () => {
               <div className="rq-book-3d">
                 <div className="rq-book-3d__inner" ref={innerRef}>
                   <img
-                    src={assetPath('/assets/workbook/soe-summer-stretch-cover.webp')}
+                    src={assetPath('/assets/workbook/rhythm-ready-workbook-cover.webp')}
                     alt="The Sound of Essentials: Rhythm Ready Workbook Official Cover"
                     className="rq-book-3d__cover"
                   />
