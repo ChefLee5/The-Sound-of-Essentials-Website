@@ -291,7 +291,7 @@ All primary text hooks are strictly engineered to front-load the punchline withi
   >
   > 40 days of open-and-go morning lessons in phonics, math, science, and somatic movement.
   >
-  > Just $21 for the complete digital curriculum (about 52¢ a day). 30-day guarantee.
+  > Just $21 for the complete digital curriculum (about 52¢ a day). Instant digital access.
 
 ---
 

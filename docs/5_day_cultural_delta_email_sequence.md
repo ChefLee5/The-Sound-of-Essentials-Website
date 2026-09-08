@@ -209,7 +209,7 @@ Here is the exact daily rhythm inside the **Rhythm Ready Workbook**:
 
 At just **$21 for the complete digital curriculum**, that's about **52¢ a day** for a routine that eliminates morning chaos and replaces screen addiction with real, joyful capability.
 
-Plus, you're backed by our **30-Day 100% Money-Back Guarantee**. If your child doesn't love the quest, just email us for an instant refund.
+You receive immediate digital delivery upon checkout with lifetime family access to download, print, or load onto any tablet.
 
 👉 **[Start the 8-Week Quest Today for $21 →](https://thesoundofessentials.com/rhythm-ready?utm_source=email&utm_medium=nurture&utm_campaign=day5_close)**
 

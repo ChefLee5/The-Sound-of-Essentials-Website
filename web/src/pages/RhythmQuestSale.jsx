@@ -264,9 +264,9 @@ const RhythmReadyHero = () => {
               </div>
 
               <ul className="rq-hero__assure">
-                <li>30-day 100% money back guarantee</li>
                 <li>Instant printable PDF &amp; tablet-ready</li>
                 <li>Built for Ages 2–7 (Pre-K to Grade 2)</li>
+                <li>Lifetime family access &amp; instant delivery</li>
               </ul>
 
               <p className="rq-hero__free-note">
@@ -646,7 +646,7 @@ const RhythmReadyWhatsInside = () => {
 
             <RqBuyLink className="btn btn-gold">Get the Workbook &amp; Curriculum · $21</RqBuyLink>
             <p className="rq-inside__cta-note">
-              Instant PDF Download · 30-Day Money Back Guarantee · Ready to Print Today
+              Instant PDF Download · Ready to Print Today · Read on Any Device
             </p>
           </div>
         </RevealSection>
@@ -781,7 +781,7 @@ const RhythmReadyRoadmap = () => {
                   <div className="rq-qmap__cta">
                     <RqBuyLink className="btn btn-gold">Get the Workbook &amp; Curriculum · $21</RqBuyLink>
                     <span className="rq-qmap__guarantee">
-                      Instant digital delivery · 30-day money-back guarantee
+                      Instant digital delivery · Print or tablet-ready · Lifetime access
                     </span>
                   </div>
                 </div>
@@ -879,11 +879,10 @@ const RhythmReadyOffer = () => (
             <p className="rq-offer__nudge">Instant digital delivery · Ready to start today.</p>
 
             <div className="rq-offer__guarantee">
-              <span className="rq-offer__seal" aria-hidden="true">🛡</span>
+              <span className="rq-offer__seal" aria-hidden="true">⚡</span>
               <span>
-                <strong className="rq-offer__seal-title">30-Day Money Back Guarantee</strong>
-                Try the curriculum with your child. If it does not fit your family, email us within
-                30 days for a full, prompt refund.
+                <strong className="rq-offer__seal-title">Instant Digital Delivery</strong>
+                Immediate access to your complete printable workbook &amp; curriculum PDF upon checkout. Tablet-ready with lifetime family access.
               </span>
             </div>
           </aside>
@@ -1005,10 +1004,10 @@ const DictionaryPreSaleOffer = () => {
               <p className="rq-offer__nudge">Priority fulfillment queue · Reserved digital edition.</p>
 
               <div className="rq-offer__guarantee">
-                <span className="rq-offer__seal" aria-hidden="true">🛡</span>
+                <span className="rq-offer__seal" aria-hidden="true">📖</span>
                 <span>
-                  <strong className="rq-offer__seal-title">100% Satisfaction Guarantee</strong>
-                  Honest, risk-free pre-sale reservation. Cancel or request a full refund anytime before or within 30 days of release.
+                  <strong className="rq-offer__seal-title">Priority Digital Edition</strong>
+                  Direct priority delivery to your inbox upon release, including all 125 illustrated scenes and companion updates.
                 </span>
               </div>
             </aside>
@@ -1030,7 +1029,7 @@ const faqs = [
     a: [
       'The Essential Picture Dictionary is currently in pre-sale at a special price of $55 (compare at $79 retail — save 30%).',
       'By reserving your pre-sale copy today, you secure priority access to the complete 4,000+ word, 125-scene digital EPUB edition as soon as the final release is live, along with all companion bonuses and future updates.',
-      'Your pre-sale is backed by our full 30-day money-back guarantee upon delivery.',
+      'By pre-ordering today, you lock in the exclusive $55 price and receive immediate priority delivery upon official release.',
     ],
     chips: ['$55 Pre-Sale (Save 30%)', '4,000+ Words', 'Priority Access'],
   },
@@ -1085,14 +1084,14 @@ const faqs = [
     chips: ['Free companion album', 'Phonics songs', 'Multi-sensory'],
   },
   {
-    id: 'refund',
+    id: 'digital-delivery',
     color: 'var(--color-green)',
-    q: 'What is your refund policy?',
+    q: 'How do I access my digital files?',
     a: [
-      'We offer a 30-day 100% money-back guarantee.',
-      'If the Workbook & Curriculum is not a great fit for your child, simply send us an email within 30 days and we will refund your purchase completely.',
+      'Immediately upon checkout, you will receive an instant download link on your confirmation page and via email.',
+      'Your files include high-resolution printable PDFs optimized for home printing or loading directly onto tablets for lifetime family use.',
     ],
-    chips: ['30-day guarantee', 'One email refund', 'Zero risk'],
+    chips: ['Instant download', 'Print & tablet-ready', 'Lifetime family access'],
   },
 ];
 
@@ -1166,7 +1165,7 @@ const RhythmReadyFaq = () => (
               Get the Workbook &amp; Curriculum · $21
             </RqBuyLink>
             <p className="rq-faq__cta-fine">
-              30-day money-back guarantee · Instant PDF download
+              Instant PDF download · Print or use on tablet · Lifetime access
             </p>
           </div>
         </RevealSection>
@@ -1264,7 +1263,7 @@ const RhythmQuestSale = () => {
                 <Link to="/listen" className="btn btn-sage">Get the Free Album First</Link>
               </div>
               <div className="rq-guarantee">
-                <span>🔒</span> Instant digital PDF delivery · Print or use on tablet · 30-day guarantee
+                <span>🔒</span> Instant digital PDF delivery · Print or use on tablet · Lifetime family access
               </div>
             </div>
           </RevealSection>
