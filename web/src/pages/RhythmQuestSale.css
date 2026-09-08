@@ -26,7 +26,7 @@
   height: 100%;
   z-index: 0;
   background: 
-    var(--rq-hero-bg) right 8% center / contain no-repeat,
+    var(--rq-hero-bg) right center / cover no-repeat,
     radial-gradient(ellipse at 70% 35%, #BFE7FB 0%, #FFF3E0 50%, #FAF9F7 100%);
 }
 

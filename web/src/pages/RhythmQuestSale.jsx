@@ -1195,7 +1195,7 @@ const RhythmQuestSale = () => {
   const paradeChars = [...allChars, ...allChars];
 
   return (
-    <div className="rq-sale" style={{ '--rq-hero-bg': `url('${assetPath('/assets/scenes/seriphia-seven-lands-path.webp')}')` }}>
+    <div className="rq-sale" style={{ '--rq-hero-bg': `url('${assetPath('/assets/backgrounds/rhythm-ready-meadow-bg.webp')}')` }}>
       {/* ═══ HERO ═══ */}
       <RhythmReadyHero />
 

@@ -87,16 +87,6 @@ export default function KineticScrollGallery({
 
   return (
     <div className="kinetic-gallery-wrapper">
-      {/* Scenic Meadow Background Backdrop */}
-      <div className="kinetic-gallery-scenic-bg" aria-hidden="true">
-        <img
-          src={assetPath('/assets/backgrounds/gallery-meadow-bg.webp')}
-          alt=""
-          className="kinetic-gallery-scenic-img"
-        />
-        <div className="kinetic-gallery-scenic-scrim" />
-      </div>
-
       <div className="kinetic-gallery-container">
         <div className="kinetic-gallery-header">
           <div className="kinetic-gallery-badge-wrap">
