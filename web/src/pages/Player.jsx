@@ -11,9 +11,7 @@ import tracksData from '../data/tracks.json';
 import { trackLead } from '../utils/analytics';
 import { submitSoeInterest } from '../services/soeSubmissions';
 import { triggerQuestCelebration, TiltCard } from '../components/ui/DesignSpells';
-
-
-const STORAGE_KEY = 'soe_listen_unlocked';
+import { isGateUnlocked, setGateUnlocked, getCapturedEmail, isValidEmail } from '../utils/gateAuth';
 
 const Player = () => {
   const { t } = useTranslation();
@@ -21,25 +19,8 @@ const Player = () => {
   const [activeTrack, setActiveTrack] = useState(0);
   const [selectedTrack, setSelectedTrack] = useState(null);
 
-  // ── Gate State ──────────────────────────────────────────────
-  const [isUnlocked, setIsUnlocked] = useState(() => {
-    try {
-      const urlParams = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : null;
-      const isParamUnlocked = urlParams && (
-        urlParams.get('unlocked') === 'true' ||
-        urlParams.get('_bhref') === 'subscribe-forms' ||
-        urlParams.has('email') ||
-        urlParams.has('subscriber_id')
-      );
-      if (isParamUnlocked) {
-        localStorage.setItem(STORAGE_KEY, '1');
-        return true;
-      }
-      return localStorage.getItem(STORAGE_KEY) === '1';
-    } catch {
-      return false;
-    }
-  });
+  // ── Gate State (strictly verified against captured email) ────
+  const [isUnlocked, setIsUnlocked] = useState(() => isGateUnlocked());
 
   // ── 19 Canonical Tracks Data ────────────────────────────────
   const tracks = useMemo(() => {
@@ -64,35 +45,32 @@ const Player = () => {
   }, [isUnlocked]);
 
   // ── Unlock Handler ──────────────────────────────────────────
-  const unlock = useCallback(() => {
-    try {
-      localStorage.setItem(STORAGE_KEY, '1');
-    } catch { /* ignore */ }
+  const unlock = useCallback((email = '') => {
+    const validEmail = email || getCapturedEmail();
+    if (validEmail) {
+      setGateUnlocked(validEmail);
+    }
     setIsUnlocked(true);
     triggerQuestCelebration();
   }, []);
 
-  // ── Beehiiv Redirect Detection ──────────────────────────────
+  // ── Email Query Parameter Verification ──────────────────────
   useEffect(() => {
-    const isBeehiivRedirect =
-      searchParams.get('unlocked') === 'true' ||
-      searchParams.get('_bhref') === 'subscribe-forms' ||
-      searchParams.has('email') ||
-      searchParams.has('subscriber_id');
+    const emailParam = searchParams.get('email');
+    if (emailParam && isValidEmail(emailParam)) {
+      setGateUnlocked(emailParam);
+      trackLead({ formName: 'player_optin_url', email: emailParam, source: 'player_page' });
+      unlock(emailParam);
 
-    if (!isBeehiivRedirect) return;
-
-    trackLead({ formName: 'player_optin', source: 'player_page' });
-    unlock();
-
-    setSearchParams((prev) => {
-      const next = new URLSearchParams(prev);
-      next.delete('unlocked');
-      next.delete('_bhref');
-      next.delete('email');
-      next.delete('subscriber_id');
-      return next;
-    }, { replace: true });
+      setSearchParams((prev) => {
+        const next = new URLSearchParams(prev);
+        next.delete('unlocked');
+        next.delete('_bhref');
+        next.delete('email');
+        next.delete('subscriber_id');
+        return next;
+      }, { replace: true });
+    }
   }, [searchParams, setSearchParams, unlock]);
 
   const [directEmail, setDirectEmail] = useState('');
@@ -103,12 +81,12 @@ const Player = () => {
   const handleDirectUnlock = async (e) => {
     e.preventDefault();
     setDirectError('');
-    if (!directEmail.trim() || !directEmail.includes('@')) {
+    const cleanEmail = directEmail.trim().toLowerCase();
+    if (!isValidEmail(cleanEmail)) {
       setDirectError('Please enter a valid email address.');
       return;
     }
     setIsSubmittingDirect(true);
-    const cleanEmail = directEmail.trim().toLowerCase();
     const cleanName = directName.trim() || 'Rhythm Explorer';
     try {
       await submitSoeInterest({
@@ -123,13 +101,9 @@ const Player = () => {
       console.warn('Direct unlock edge sync notice:', err);
     }
 
-    try {
-      localStorage.setItem('soe_user_email', cleanEmail);
-      localStorage.setItem('soe_user_name', cleanName);
-    } catch { /* ignore */ }
-
+    setGateUnlocked(cleanEmail, cleanName);
     trackLead({ formName: 'player_direct_optin', email: cleanEmail, name: cleanName, source: 'player_page' });
-    unlock();
+    unlock(cleanEmail);
     setIsSubmittingDirect(false);
   };
 
@@ -198,7 +172,7 @@ const Player = () => {
                     showNameInput={true}
                     onSuccess={({ email }) => {
                       trackLead({ formName: 'player_brevo_unlock', email, source: 'player_gate' });
-                      unlock();
+                      unlock(email);
                     }}
                   />
                 </div>
@@ -240,7 +214,7 @@ const Player = () => {
                   <div className="player-hero-headliner__top-row">
                     <span className="player-hero-headliner__badge">🌟 The Official Headliner Album</span>
                     <Link
-                      to="/listen?unlocked=true"
+                      to="/listen"
                       className="player-hero-headliner__back-link"
                     >
                       ← Media Room &amp; Gallery

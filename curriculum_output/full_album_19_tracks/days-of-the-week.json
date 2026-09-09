@@ -1,0 +1,44 @@
+{
+  "track_id": 2,
+  "track_slug": "days-of-the-week",
+  "title": "Days Of The Week",
+  "land_name": "Celestia",
+  "land_id": "celestia",
+  "land_color": "#9678c4",
+  "domain_icon": "📅",
+  "hero_guides": "Elias & Selene",
+  "age_group": "Ages 2–7 (Pre-K to Grade 1)",
+  "duration": "10–15 Minutes",
+  "materials": [
+    "7 wooden rings, colored clothespins, or ribbon strips per table",
+    "A circular tray or plate"
+  ],
+  "quest_mission": "Ascend the Starlight Observatories of Celestia with Elias and Selene to weave the 7 Days of Creation into time rings.",
+  "rhythm_ignition": "Rhythmic finger-clicking and knee-slapping cadence singing the 7-day chorus:\n• 'Sunday, Monday, Tuesday, Wednesday... Thursday, Friday, Saturday!'\n• Alternate clicking fingers on right hand for daytime, left hand for nighttime.",
+  "tactile_ritual": "The 7-Day Sun Wheel:\n1. Place a circular paper plate or tray representing the sun in the center.\n2. Children take 7 clothespins or ribbon pieces representing the 7 days.\n3. As each day of the week is sung, clip one pin onto the rim moving clockwise.\n4. Identify 'Today' by placing a golden star sticker or yellow leaf on the active day's pin.\n5. Whisper the days that came before, and cheer for the days that lie ahead.",
+  "domain_spider": {
+    "language": "Temporal sequencing vocabulary ('yesterday', 'today', 'tomorrow') and ordinal temporal order.",
+    "cognitive": "Understanding circular, cyclical time patterns versus linear progression.",
+    "physical": "Hand-eye coordination and bilateral pincer pinch strength when attaching clothespins.",
+    "science_sensory": "Solar diurnal cycles (daylight, sunsets, starry night sky observation).",
+    "social_emotional": "Predictability and security—grounding young children in the soothing rhythm of consistent daily routines."
+  },
+  "teacher_whisper": "Cyclical physical sequencing rituals anchor episodic memory in the hippocampus, giving children internal temporal stability that drastically reduces transition anxiety.",
+  "standards": {
+    "elof_codes": [
+      "P-SCI 4 (Cycles & Predictable Patterns)",
+      "P-LC 4 (Vocabulary & Sequence)",
+      "P-MATH 6 (Temporal Relations)"
+    ],
+    "elof_domains": [
+      "Cognition: Scientific Inquiry",
+      "Language and Communication",
+      "Cognition: Mathematics"
+    ],
+    "naeyc_standards": [
+      "2.G.02 (Time Cycles & Seasons)",
+      "2.D.03 (Sequencing Language)"
+    ],
+    "kindergarten_readiness": "Recalls temporal calendar sequence through melodic memory; articulates days in forward ordinal order."
+  }
+}

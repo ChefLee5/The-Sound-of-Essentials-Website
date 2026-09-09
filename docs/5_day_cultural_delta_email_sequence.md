@@ -82,7 +82,7 @@ Algorithms are engineered to capture **visual fixation** through 2-second scene 
 
 **Rhythm Quest is built on the exact opposite principle: Sensory Stewardship.**
 
-1. **Acoustic Warmth & Real Instruments:** Natural brass, warm acoustic piano, orchestral strings, and grounded percussion.
+1. **Acoustic Warmth & Seasoned Musical Craft:** Warm acoustic pianos, rich melodic arrangements, grounded percussion, and authentic live vocal recordings.
 2. **ASMR-Paced Phonetics:** We leave space between sounds so developing neural pathways can process, decode, and echo the words naturally.
 3. **Sound-Before-Symbol Pedagogy:** Children decode phonemes with their ears long before their fingers grip a pencil.
 

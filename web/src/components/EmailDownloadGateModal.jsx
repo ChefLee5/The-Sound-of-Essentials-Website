@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { submitSoeInterest } from '../services/soeSubmissions';
 import { triggerBrowserDownload } from '../utils/deliveryUrl';
 import { trackLead } from '../utils/analytics';
+import { setGateUnlocked, isValidEmail } from '../utils/gateAuth';
 import './EmailDownloadGateModal.css';
 
 /**
@@ -38,7 +39,7 @@ export const EmailDownloadGateModal = ({
       setErrorMessage('Please enter your name.');
       return;
     }
-    if (!email.trim() || !email.includes('@')) {
+    if (!isValidEmail(email.trim())) {
       setErrorMessage('Please enter a valid email address.');
       return;
     }
@@ -62,12 +63,9 @@ export const EmailDownloadGateModal = ({
     }
 
     // 2. Guarantee local client storage & backup (Zero data loss)
-    try {
-      localStorage.setItem('soe_user_email', email.trim().toLowerCase());
-      localStorage.setItem('soe_user_name', name.trim());
-      localStorage.setItem('soe_user_persona', persona);
-      localStorage.setItem('soe_listen_unlocked', '1');
+    setGateUnlocked(email.trim().toLowerCase(), name.trim(), persona);
 
+    try {
       const existingLeads = JSON.parse(localStorage.getItem('soe_captured_leads') || '[]');
       existingLeads.push({
         ...submissionPayload,

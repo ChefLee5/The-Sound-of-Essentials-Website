@@ -1,0 +1,2 @@
+[console_scripts]
+soe-curriculum-cli = soe_curriculum.cli:main

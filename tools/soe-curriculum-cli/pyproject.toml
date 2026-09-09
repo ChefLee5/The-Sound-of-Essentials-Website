@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "soe-curriculum-cli"
+version = "1.0.0"
+description = "SOE Curriculum CLI: Screen-Free Early Childhood Lesson Extender & Multi-Institutional Standards Crosswalk"
+authors = [{ name = "The Sound of Essentials" }]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "click>=8.1.0",
+    "pydantic>=2.0.0",
+    "colorama>=0.4.6",
+]
+
+[project.scripts]
+soe-curriculum-cli = "soe_curriculum.cli:main"

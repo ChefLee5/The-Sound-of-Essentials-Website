@@ -51,7 +51,7 @@ $35 Summer Stretch Print Workbook          (Ascension to $55 Dictionary & $89 Bu
 * **Audience Stacking:**
   - Stacked Lookalikes (1%–5% Leads + Purchasers).
   - Open Broad Targeting (Meta AI demographic matching based on post-engagement signals).
-  - Geographic expansion: US, Canada, UK, Australia, plus dedicated bilingual parent targeting for Spanish (`es.json`) and French (`fr.json`) markets.
+  - Geographic expansion: US, Canada, UK, Australia, plus dedicated bilingual parent targeting for French (`fr.json`) and international markets.
 
 ---
 

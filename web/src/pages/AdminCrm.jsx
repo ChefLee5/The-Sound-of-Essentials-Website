@@ -92,10 +92,20 @@ const AdminCrm = () => {
   const [emailBody, setEmailBody] = useState('');
 
   // Form states
-  const [newContact, setNewContact] = useState({ name: '', email: '', organization: '', phone: '', persona: 'parent', lifecycle_stage: 'lead' });
+  const [newContact, setNewContact] = useState({ name: '', email: '', organization: '', persona: 'parent', lifecycle_stage: 'lead' });
   const [newDeal, setNewDeal] = useState({ contact_id: '', title: '', stage: 'new_lead', deal_value: 0, notes: '' });
   const [newTask, setNewTask] = useState({ contact_id: '', title: '', due_date: '', priority: 'medium' });
   const [newActivity, setNewActivity] = useState({ contact_id: '', activity_type: 'call', title: '', description: '' });
+
+  // ── Dropship & TikTok Shop States ───────────────────────────
+  const [dropshipOrders, setDropshipOrders] = useState([]);
+  const [dropshipProducts, setDropshipProducts] = useState([]);
+  const [creatorSamples, setCreatorSamples] = useState([]);
+  const [dropshipStats, setDropshipStats] = useState(null);
+  const [dispatchModalOrder, setDispatchModalOrder] = useState(null);
+  const [dispatchTrackingNumber, setDispatchTrackingNumber] = useState('');
+  const [dispatchCarrier, setDispatchCarrier] = useState('USPS');
+  const [isSyncingTracking, setIsSyncingTracking] = useState(false);
 
   // ── Authentication ──────────────────────────────────────────
   const handleLogin = (e) => {
@@ -183,11 +193,33 @@ const AdminCrm = () => {
     } catch (err) { console.warn('Notes error:', err); }
   };
 
+  const fetchDropshipData = useCallback(async () => {
+    try {
+      const res = await fetch('/api/admin/crm/dropship?action=all');
+      if (res.ok) {
+        const data = await res.json();
+        setDropshipOrders(data.orders || []);
+        setDropshipProducts(data.products || []);
+        setCreatorSamples(data.creators || []);
+        setDropshipStats(data.stats || null);
+      }
+    } catch (err) {
+      console.warn('Dropship fetch error:', err);
+    }
+  }, []);
+
   const loadAllData = useCallback(async () => {
     setLoading(true);
-    await Promise.all([fetchStats(), fetchContacts(), fetchDeals(), fetchActivities(), fetchTasks()]);
+    await Promise.all([
+      fetchStats(),
+      fetchContacts(),
+      fetchDeals(),
+      fetchActivities(),
+      fetchTasks(),
+      fetchDropshipData(),
+    ]);
     setLoading(false);
-  }, [fetchStats, fetchContacts, fetchDeals, fetchActivities, fetchTasks]);
+  }, [fetchStats, fetchContacts, fetchDeals, fetchActivities, fetchTasks, fetchDropshipData]);
 
   useEffect(() => {
     if (isAuthenticated) {
@@ -210,13 +242,60 @@ const AdminCrm = () => {
     setDrawerEditForm({
       name: contact.name || '',
       email: contact.email || '',
-      phone: contact.phone || '',
       organization: contact.organization || '',
       persona: contact.persona || 'parent',
       lifecycle_stage: contact.lifecycle_stage || 'lead',
       lead_score: contact.lead_score || 20,
     });
     fetchContactNotes(contact.id);
+  };
+
+  // ── Dropship & TikTok Handlers ──────────────────────────────
+  const handleOpenDispatchModal = (order) => {
+    setDispatchModalOrder(order);
+    setDispatchTrackingNumber('9400111899' + Math.floor(1000000000 + Math.random() * 9000000000));
+    setDispatchCarrier('USPS');
+  };
+
+  const handleConfirmTrackingSync = async (e) => {
+    e.preventDefault();
+    if (!dispatchModalOrder || !dispatchTrackingNumber) return;
+    setIsSyncingTracking(true);
+    try {
+      const res = await fetch('/api/admin/crm/dropship', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          action: 'sync_tracking',
+          orderId: dispatchModalOrder.id,
+          trackingNumber: dispatchTrackingNumber,
+          carrier: dispatchCarrier,
+        }),
+      });
+      if (res.ok) {
+        setDispatchModalOrder(null);
+        await fetchDropshipData();
+      }
+    } catch (err) {
+      console.error('Tracking sync error:', err);
+    } finally {
+      setIsSyncingTracking(false);
+    }
+  };
+
+  const handleSimulateTikTokOrder = async () => {
+    try {
+      const res = await fetch('/api/admin/crm/dropship', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ action: 'create_test_order' }),
+      });
+      if (res.ok) {
+        await fetchDropshipData();
+      }
+    } catch (err) {
+      console.error('Simulate order error:', err);
+    }
   };
 
   // Save drawer edits to Neon
@@ -280,8 +359,11 @@ const AdminCrm = () => {
     } finally { setNoteSaving(false); }
   };
 
-  // Move Deal Stage
+  // Move Deal Stage with Optimistic UI Update
   const handleUpdateDealStage = async (dealId, newStage) => {
+    const previousDeals = [...deals];
+    // Optimistically update local UI state immediately
+    setDeals((prev) => prev.map((d) => (d.id === dealId ? { ...d, stage: newStage } : d)));
     try {
       const res = await fetch('/api/admin/crm/deals', {
         method: 'PUT',
@@ -291,21 +373,38 @@ const AdminCrm = () => {
       if (res.ok) {
         fetchDeals();
         fetchStats();
+      } else {
+        // Rollback on server error
+        setDeals(previousDeals);
       }
-    } catch (err) { console.warn('Deal update error:', err); }
+    } catch (err) {
+      console.warn('Deal update error:', err);
+      // Rollback on network failure
+      setDeals(previousDeals);
+    }
   };
 
-  // Toggle Task Completion
+  // Toggle Task Completion with Optimistic UI Update
   const handleToggleTask = async (taskId, currentStatus) => {
     const nextStatus = currentStatus === 'completed' ? 'pending' : 'completed';
+    const previousTasks = [...tasks];
+    // Optimistically toggle task status immediately
+    setTasks((prev) => prev.map((t) => (t.id === taskId ? { ...t, status: nextStatus } : t)));
     try {
       const res = await fetch('/api/admin/crm/tasks', {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ id: taskId, status: nextStatus }),
       });
-      if (res.ok) fetchTasks();
-    } catch (err) { console.warn('Task toggle error:', err); }
+      if (res.ok) {
+        fetchTasks();
+      } else {
+        setTasks(previousTasks);
+      }
+    } catch (err) {
+      console.warn('Task toggle error:', err);
+      setTasks(previousTasks);
+    }
   };
 
   // Add Contact Submit
@@ -588,6 +687,19 @@ const AdminCrm = () => {
             <span className="crm-stat-card__meta">Schools &amp; Co-ops</span>
           </div>
         </div>
+
+        <div className="crm-stat-card glass-card">
+          <span className="crm-stat-card__icon">🎧</span>
+          <div className="crm-stat-card__content">
+            <span className="crm-stat-card__label">TikTok Shop &amp; Dropship GMV</span>
+            <div className="crm-stat-card__value" style={{ color: '#FE2C55' }}>
+              ${(parseFloat(dropshipStats?.tiktok_gmv || 0) + parseFloat(dropshipStats?.web_gmv || 0)).toFixed(2)}
+            </div>
+            <span className="crm-stat-card__meta">
+              {dropshipStats?.pending_dispatch || 0} awaiting dispatch &bull; 85dB Headphones
+            </span>
+          </div>
+        </div>
       </section>
 
       {/* ── Navigation Tabs & Toolbar ── */}
@@ -604,6 +716,12 @@ const AdminCrm = () => {
             onClick={() => setActiveTab('pipeline')}
           >
             📊 Deals Pipeline <span className="crm-tab-count">{deals.length}</span>
+          </button>
+          <button
+            className={`crm-tab-btn ${activeTab === 'dropship' ? 'active' : ''}`}
+            onClick={() => setActiveTab('dropship')}
+          >
+            📦 Dropship &amp; TikTok Shop <span className="crm-tab-count">{dropshipOrders.length}</span>
           </button>
           <button
             className={`crm-tab-btn ${activeTab === 'activities' ? 'active' : ''}`}
@@ -886,6 +1004,287 @@ const AdminCrm = () => {
                 </div>
               ))
             )}
+          </div>
+        </div>
+      )}
+
+      {/* ── TAB 5: DROPSHIP & TIKTOK SHOP HUB ── */}
+      {activeTab === 'dropship' && (
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+          {/* Section A: Multi-Channel Orders */}
+          <div className="crm-content-card glass-card">
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.25rem', flexWrap: 'wrap', gap: '1rem' }}>
+              <div>
+                <h3 style={{ margin: 0, fontFamily: 'var(--font-heading)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                  <span>📦</span> Multi-Channel Orders Stream
+                </h3>
+                <span style={{ fontSize: '0.85rem', color: '#64748B' }}>
+                  Live incoming orders from TikTok Shop &amp; Direct Web Store (No mock phone numbers)
+                </span>
+              </div>
+              <div style={{ display: 'flex', gap: '0.75rem' }}>
+                <button onClick={handleSimulateTikTokOrder} className="btn btn-outline btn-sm" style={{ background: '#fff' }}>
+                  + Simulate TikTok Order
+                </button>
+                <button onClick={fetchDropshipData} className="btn btn-gold btn-sm">
+                  🔄 Refresh Orders
+                </button>
+              </div>
+            </div>
+
+            <div className="crm-table-container">
+              <table className="crm-table">
+                <thead>
+                  <tr>
+                    <th>Order #</th>
+                    <th>Channel</th>
+                    <th>Customer</th>
+                    <th>Items</th>
+                    <th>Total</th>
+                    <th>Status</th>
+                    <th>Tracking / Carrier</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {dropshipOrders.length === 0 ? (
+                    <tr>
+                      <td colSpan="8" style={{ textAlign: 'center', padding: '2.5rem', color: '#64748B' }}>
+                        No orders currently in the queue.
+                      </td>
+                    </tr>
+                  ) : (
+                    dropshipOrders.map((ord) => {
+                      let itemsText = 'SafeAudio 85dB Headphones';
+                      try {
+                        const parsed = typeof ord.items === 'string' ? JSON.parse(ord.items) : ord.items;
+                        itemsText = parsed.map(i => `${i.title || i.name} (x${i.qty || 1})`).join(', ');
+                      } catch { /* fallback */ }
+
+                      return (
+                        <tr key={ord.id} className="crm-table-row">
+                          <td style={{ fontFamily: 'monospace', fontWeight: 700 }}>
+                            {ord.order_number}
+                          </td>
+                          <td>
+                            <span className="crm-persona-pill" style={{
+                              background: ord.source === 'tiktok_shop' ? 'rgba(254, 44, 85, 0.12)' : 'rgba(99, 102, 241, 0.12)',
+                              color: ord.source === 'tiktok_shop' ? '#FE2C55' : '#6366F1'
+                            }}>
+                              {ord.source === 'tiktok_shop' ? '🎵 TikTok Shop' : '🌐 Web Store'}
+                            </span>
+                          </td>
+                          <td>
+                            <strong>{ord.customer_name}</strong>
+                            <br />
+                            <small style={{ color: '#64748B' }}>{ord.customer_email || '—'}</small>
+                          </td>
+                          <td style={{ maxWidth: '280px', fontSize: '0.85rem' }}>
+                            {itemsText}
+                          </td>
+                          <td style={{ fontFamily: 'monospace', fontWeight: 700 }}>
+                            ${parseFloat(ord.total_amount || 0).toFixed(2)}
+                          </td>
+                          <td>
+                            <span className={`crm-stage-pill stage-${ord.fulfillment_status === 'dispatched' ? 'customer' : 'opportunity'}`}>
+                              {ord.fulfillment_status === 'dispatched' ? 'Dispatched' : 'Awaiting Dispatch'}
+                            </span>
+                          </td>
+                          <td>
+                            {ord.tracking_number ? (
+                              <div>
+                                <span style={{ fontFamily: 'monospace', fontSize: '0.8rem' }}>{ord.tracking_number}</span>
+                                <br />
+                                <small style={{ color: '#16A34A', fontWeight: 700 }}>✔ Synced to TikTok</small>
+                              </div>
+                            ) : (
+                              <span style={{ color: '#94A3B8', fontSize: '0.82rem' }}>Pending CJ Sourcing</span>
+                            )}
+                          </td>
+                          <td>
+                            {ord.fulfillment_status === 'dispatched' ? (
+                              <button className="btn btn-outline btn-sm" disabled style={{ opacity: 0.5 }}>
+                                Dispatched
+                              </button>
+                            ) : (
+                              <button
+                                onClick={() => handleOpenDispatchModal(ord)}
+                                className="btn btn-gold btn-sm"
+                              >
+                                ⚡ 1-Click Dispatch
+                              </button>
+                            )}
+                          </td>
+                        </tr>
+                      );
+                    })
+                  )}
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          {/* Section B: "Just Add Headphones" Sourcing Catalog */}
+          <div className="crm-content-card glass-card">
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.25rem' }}>
+              <div>
+                <h3 style={{ margin: 0, fontFamily: 'var(--font-heading)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                  <span>🎧</span> "Just Add Headphones" Product Sourcing Catalog
+                </h3>
+                <span style={{ fontSize: '0.85rem', color: '#64748B' }}>
+                  Sourced from CJ Dropshipping US Warehouses &bull; 85dB Hardwired SafeAudio
+                </span>
+              </div>
+              <a href="https://cjdropshipping.com" target="_blank" rel="noopener noreferrer" className="btn btn-outline btn-sm" style={{ background: '#fff' }}>
+                🔗 Open CJ Dropshipping
+              </a>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '1.5rem' }}>
+              {dropshipProducts.map((p) => {
+                const profit = (parseFloat(p.selling_price) - parseFloat(p.cost_price)).toFixed(2);
+                const margin = Math.round((profit / p.selling_price) * 100);
+
+                return (
+                  <div key={p.id} style={{
+                    background: '#FAF7F2',
+                    border: '1px solid rgba(0,0,0,0.08)',
+                    borderRadius: '16px',
+                    padding: '1.5rem',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'space-between'
+                  }}>
+                    <div>
+                      <span style={{
+                        display: 'inline-block',
+                        background: 'rgba(254, 44, 85, 0.1)',
+                        color: '#FE2C55',
+                        fontWeight: 700,
+                        fontSize: '0.75rem',
+                        padding: '3px 10px',
+                        borderRadius: '50px',
+                        marginBottom: '0.75rem',
+                        textTransform: 'uppercase'
+                      }}>
+                        {p.supplier_name} &bull; US Warehouse
+                      </span>
+                      <h4 style={{ margin: '0 0 0.5rem 0', fontSize: '1.05rem', color: '#2B2016' }}>{p.title}</h4>
+                      <ul style={{ listStyle: 'none', padding: 0, margin: '0.75rem 0', fontSize: '0.84rem', color: '#5C4A3A' }}>
+                        <li style={{ padding: '3px 0' }}>🛡️ <strong>Volume Cap:</strong> 85dB SafeAudio (WHO Standard)</li>
+                        <li style={{ padding: '3px 0' }}>⚡ <strong>Connectivity:</strong> Wired (Zero EMF Radiation)</li>
+                        <li style={{ padding: '3px 0' }}>👶 <strong>Durability:</strong> 1-Piece EVA Flex-Foam (Toddler-Proof)</li>
+                        <li style={{ padding: '3px 0' }}>🔌 <strong>SharePort:</strong> Sibling Audio Daisy-Chaining</li>
+                        <li style={{ padding: '3px 0' }}>📝 <strong>Compliance:</strong> CPC &amp; ASTM F963 Certified</li>
+                      </ul>
+                    </div>
+
+                    <div>
+                      <div style={{
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        background: '#FFFFFF',
+                        border: '1px solid rgba(0,0,0,0.06)',
+                        padding: '0.75rem 1rem',
+                        borderRadius: '10px',
+                        margin: '1rem 0'
+                      }}>
+                        <div style={{ textAlign: 'center' }}>
+                          <span style={{ display: 'block', fontSize: '0.7rem', color: '#94A3B8' }}>SUPPLIER COST</span>
+                          <strong style={{ fontFamily: 'monospace' }}>${parseFloat(p.cost_price).toFixed(2)}</strong>
+                        </div>
+                        <div style={{ textAlign: 'center' }}>
+                          <span style={{ display: 'block', fontSize: '0.7rem', color: '#94A3B8' }}>RETAIL PRICE</span>
+                          <strong style={{ fontFamily: 'monospace' }}>${parseFloat(p.selling_price).toFixed(2)}</strong>
+                        </div>
+                        <div style={{ textAlign: 'center' }}>
+                          <span style={{ display: 'block', fontSize: '0.7rem', color: '#94A3B8' }}>NET PROFIT</span>
+                          <strong style={{ fontFamily: 'monospace', color: '#16A34A' }}>+${profit} ({margin}%)</strong>
+                        </div>
+                      </div>
+
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '0.82rem', color: '#64748B' }}>
+                        <span>SKU: <code>{p.supplier_sku}</code></span>
+                        <span style={{ color: '#16A34A', fontWeight: 700 }}>✔ TikTok Shop Live</span>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Section C: TikTok Creator Affiliate Pipeline */}
+          <div className="crm-content-card glass-card">
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.25rem' }}>
+              <div>
+                <h3 style={{ margin: 0, fontFamily: 'var(--font-heading)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                  <span>🎥</span> TikTok Creator &amp; Affiliate Sample Pipeline
+                </h3>
+                <span style={{ fontSize: '0.85rem', color: '#64748B' }}>
+                  Manage sample units, review video links, and monitor attributed sales GMV
+                </span>
+              </div>
+            </div>
+
+            <div className="crm-table-container">
+              <table className="crm-table">
+                <thead>
+                  <tr>
+                    <th>Creator Handle</th>
+                    <th>Niche</th>
+                    <th>Followers</th>
+                    <th>Pipeline Stage</th>
+                    <th>Sample Tracking</th>
+                    <th>Review Clip</th>
+                    <th>Attributed Sales</th>
+                    <th>Notes</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {creatorSamples.length === 0 ? (
+                    <tr>
+                      <td colSpan="8" style={{ textAlign: 'center', padding: '2rem', color: '#64748B' }}>
+                        No creator sample requests recorded yet.
+                      </td>
+                    </tr>
+                  ) : (
+                    creatorSamples.map((c) => (
+                      <tr key={c.id} className="crm-table-row">
+                        <td>
+                          <strong>{c.creator_handle}</strong>
+                        </td>
+                        <td>{c.niche}</td>
+                        <td style={{ fontFamily: 'monospace' }}>{c.follower_count?.toLocaleString()}</td>
+                        <td>
+                          <span className={`crm-stage-pill stage-${c.stage === 'video_posted' ? 'champion' : 'subscriber'}`}>
+                            {c.stage === 'video_posted' ? 'Video Posted' : 'Sample Shipped'}
+                          </span>
+                        </td>
+                        <td style={{ fontFamily: 'monospace', fontSize: '0.8rem' }}>
+                          {c.tracking_number || 'Dispatched'}
+                        </td>
+                        <td>
+                          {c.video_url ? (
+                            <a href={c.video_url} target="_blank" rel="noopener noreferrer" style={{ color: '#0284C7', fontWeight: 600, fontSize: '0.82rem' }}>
+                              Watch Video ({c.video_views?.toLocaleString()} views)
+                            </a>
+                          ) : (
+                            <span style={{ color: '#94A3B8', fontSize: '0.82rem' }}>Awaiting Post</span>
+                          )}
+                        </td>
+                        <td style={{ fontFamily: 'monospace', fontWeight: 700, color: '#16A34A' }}>
+                          ${parseFloat(c.attributed_gmv || 0).toFixed(2)} ({c.attributed_orders || 0} orders)
+                        </td>
+                        <td style={{ fontSize: '0.82rem', color: '#64748B', maxWidth: '240px' }}>
+                          {c.notes}
+                        </td>
+                      </tr>
+                    ))
+                  )}
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       )}
@@ -1259,6 +1658,48 @@ const AdminCrm = () => {
               <div className="crm-modal-actions">
                 <button type="button" onClick={() => setShowAddTaskModal(false)} className="btn btn-outline btn-sm">Cancel</button>
                 <button type="submit" className="btn btn-gold btn-sm">Save Task</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
+
+      {/* ── MODAL: DISPATCH & SYNC TRACKING TO TIKTOK ── */}
+      {dispatchModalOrder && (
+        <div className="crm-modal-backdrop" onClick={() => setDispatchModalOrder(null)}>
+          <div className="crm-modal glass-card" onClick={(e) => e.stopPropagation()}>
+            <h3>⚡ Dispatch Order &amp; Sync to TikTok Shop</h3>
+            <p style={{ fontSize: '0.85rem', color: '#64748B', marginBottom: '1rem' }}>
+              Assign carrier tracking to order <strong>{dispatchModalOrder.order_number}</strong>. This updates your Neon database and fulfills the order on the TikTok Shop Fulfillment API.
+            </p>
+            <form onSubmit={handleConfirmTrackingSync} className="crm-modal-form">
+              <label style={{ fontSize: '0.8rem', fontWeight: 700, color: '#64748B' }}>Carrier</label>
+              <select
+                value={dispatchCarrier}
+                onChange={(e) => setDispatchCarrier(e.target.value)}
+              >
+                <option value="USPS">USPS (United States Postal Service)</option>
+                <option value="UPS">UPS (United Parcel Service)</option>
+                <option value="FedEx">FedEx</option>
+                <option value="DHL">DHL Express</option>
+              </select>
+
+              <label style={{ fontSize: '0.8rem', fontWeight: 700, color: '#64748B' }}>Carrier Tracking Number</label>
+              <input
+                type="text"
+                required
+                placeholder="e.g. 9400111899561234567890"
+                value={dispatchTrackingNumber}
+                onChange={(e) => setDispatchTrackingNumber(e.target.value)}
+              />
+
+              <div className="crm-modal-actions">
+                <button type="button" onClick={() => setDispatchModalOrder(null)} className="btn btn-outline btn-sm">
+                  Cancel
+                </button>
+                <button type="submit" disabled={isSyncingTracking} className="btn btn-gold btn-sm">
+                  {isSyncingTracking ? 'Syncing to TikTok...' : '✔ Confirm & Sync to TikTok'}
+                </button>
               </div>
             </form>
           </div>

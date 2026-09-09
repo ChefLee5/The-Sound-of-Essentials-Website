@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Sound of Essentials: Franchise Prospectus & Concord Master Blueprint</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Comic+Neue:wght@400;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #4F46E5;
+      --primary-dark: #3730A3;
+      --primary-light: #EEF2FF;
+      --accent: #22C55E;
+      --accent-dark: #16A34A;
+      --copper: #B87333;
+      --copper-glow: #DA8A45;
+      --copper-dark: #78350F;
+      --amber: #D97706;
+      --bg: #F8FAFC;
+      --card-bg: #FFFFFF;
+      --text: #1E293B;
+      --text-muted: #64748B;
+      --border: #E2E8F0;
+      --shadow-sm: 0 2px 4px rgba(0,0,0,0.04);
+      --shadow-md: 0 10px 25px -5px rgba(0,0,0,0.06), 0 8px 10px -6px rgba(0,0,0,0.04);
+      --shadow-lg: 0 20px 35px -10px rgba(79, 70, 229, 0.12);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 40px 20px;
+    }
+
+    .prospectus-container {
+      max-width: 1060px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      border-radius: 24px;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+
+    /* Top Hero Header */
+    .prospectus-hero {
+      background: linear-gradient(135deg, #1E1B4B 0%, #312E81 50%, #4338CA 100%);
+      color: #FFFFFF;
+      padding: 60px 50px 50px 50px;
+      position: relative;
+    }
+
+    .badge-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .badge-concord {
+      background: rgba(184, 115, 51, 0.25);
+      color: #FBBF24;
+      border: 1px solid rgba(251, 191, 36, 0.4);
+    }
+
+    .badge-stage {
+      background: rgba(34, 197, 94, 0.2);
+      color: #4ADE80;
+      border: 1px solid rgba(74, 222, 128, 0.4);
+    }
+
+    .badge-lit {
+      background: rgba(234, 179, 8, 0.2);
+      color: #FEF08A;
+      border: 1px solid rgba(250, 204, 21, 0.4);
+    }
+
+    .badge-ip {
+      background: rgba(255, 255, 255, 0.15);
+      color: #FFFFFF;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .hero-title {
+      font-family: 'Baloo 2', cursive, sans-serif;
+      font-size: 44px;
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 12px;
+      letter-spacing: -0.5px;
+    }
+
+    .hero-subtitle {
+      font-size: 18px;
+      color: #C7D2FE;
+      max-width: 860px;
+      margin-bottom: 24px;
+      font-weight: 400;
+    }
+
+    .hero-quote {
+      font-style: italic;
+      background: rgba(255, 255, 255, 0.08);
+      border-left: 4px solid #FBBF24;
+      padding: 12px 20px;
+      border-radius: 0 12px 12px 0;
+      font-size: 15px;
+      color: #E0E7FF;
+    }
+
+    /* Main Body Content */
+    .prospectus-content {
+      padding: 50px;
+    }
+
+    .section-title {
+      font-family: 'Baloo 2', cursive, sans-serif;
+      font-size: 28px;
+      font-weight: 800;
+      color: #1E1B4B;
+      margin-top: 44px;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-bottom: 2px solid #EEF2FF;
+      padding-bottom: 8px;
+    }
+
+    .section-title:first-of-type {
+      margin-top: 0;
+    }
+
+    p {
+      margin-bottom: 16px;
+      color: #334155;
+      font-size: 15px;
+    }
+
+    /* Grid Layouts */
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+      margin: 24px 0;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin: 24px 0;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
+      gap: 24px;
+      margin: 24px 0;
+    }
+
+    .feature-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      position: relative;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .card-copper {
+      border-top: 4px solid var(--copper);
+      background: linear-gradient(180deg, #FFFDFB 0%, #FFFFFF 100%);
+    }
+
+    .card-primary {
+      border-top: 4px solid var(--primary);
+    }
+
+    .card-accent {
+      border-top: 4px solid var(--accent);
+    }
+
+    .card-amber {
+      border-top: 4px solid var(--amber);
+      background: linear-gradient(180deg, #FFFDF7 0%, #FFFFFF 100%);
+    }
+
+    .card-header-tag {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    .card-title {
+      font-family: 'Baloo 2', cursive, sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: #0F172A;
+      margin-bottom: 10px;
+    }
+
+    .card-metric {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--primary-dark);
+      margin-bottom: 6px;
+    }
+
+    .card-metric.copper {
+      color: var(--copper-dark);
+    }
+
+    .card-metric.amber {
+      color: #B45309;
+    }
+
+    /* Tables */
+    .prospectus-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 14px;
+      background: #FFFFFF;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    .prospectus-table th {
+      background: #F1F5F9;
+      color: #1E293B;
+      text-align: left;
+      padding: 12px 16px;
+      font-weight: 700;
+      border-bottom: 2px solid var(--border);
+    }
+
+    .prospectus-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border);
+      color: #334155;
+    }
+
+    .prospectus-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .prospectus-table tr:hover td {
+      background: #F8FAFC;
+    }
+
+    /* Showcase Banners */
+    .showcase-banner {
+      border-radius: 20px;
+      padding: 36px;
+      margin: 30px 0;
+      position: relative;
+    }
+
+    .banner-copper {
+      background: linear-gradient(135deg, #78350F 0%, #B87333 50%, #D97706 100%);
+      color: white;
+      box-shadow: 0 14px 28px rgba(184, 115, 51, 0.2);
+    }
+
+    .banner-copper h3 {
+      font-family: 'Baloo 2', cursive, sans-serif;
+      font-size: 28px;
+      font-weight: 800;
+      margin-bottom: 10px;
+      color: #FEF3C7;
+    }
+
+    .banner-copper p {
+      color: #FDE68A;
+      font-size: 15px;
+      max-width: 840px;
+    }
+
+    .banner-literature {
+      background: linear-gradient(135deg, #1E1B4B 0%, #312E81 60%, #4F46E5 100%);
+      color: white;
+      box-shadow: 0 14px 28px rgba(79, 70, 229, 0.2);
+    }
+
+    .banner-literature h3 {
+      font-family: 'Baloo 2', cursive, sans-serif;
+      font-size: 28px;
+      font-weight: 800;
+      margin-bottom: 10px;
+      color: #C7D2FE;
+    }
+
+    .banner-literature p {
+      color: #E0E7FF;
+      font-size: 15px;
+      max-width: 840px;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .pill {
+      background: rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      color: #FFFFFF;
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    /* Callout Boxes */
+    .callout {
+      background: #EEF2FF;
+      border-left: 4px solid var(--primary);
+      padding: 18px 24px;
+      border-radius: 0 12px 12px 0;
+      margin: 20px 0;
+    }
+
+    .callout p {
+      color: #1E1B4B;
+      margin: 0;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .callout-amber {
+      background: #FEF3C7;
+      border-left: 4px solid var(--amber);
+    }
+
+    .callout-amber p {
+      color: #78350F;
+    }
+
+    /* Footer */
+    .prospectus-footer {
+      background: #0F172A;
+      color: #94A3B8;
+      padding: 40px 50px;
+      border-top: 1px solid #334155;
+      font-size: 13px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-brand {
+      font-family: 'Baloo 2', cursive, sans-serif;
+      font-size: 20px;
+      color: #FFFFFF;
+      font-weight: 700;
+    }
+
+    @media (max-width: 768px) {
+      .prospectus-hero { padding: 40px 24px; }
+      .hero-title { font-size: 32px; }
+      .prospectus-content { padding: 30px 20px; }
+      .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+      .prospectus-footer { padding: 30px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="prospectus-container">
+    
+    <!-- Hero Banner -->
+    <header class="prospectus-hero">
+      <div class="badge-bar">
+        <span class="badge badge-concord">The Education Concord</span>
+        <span class="badge badge-lit">Enduring Literature Franchise</span>
+        <span class="badge badge-stage">Stage 3 Enterprise Scaling</span>
+        <span class="badge badge-ip">Tokenized Master Catalog IP</span>
+      </div>
+      <h1 class="hero-title">The Sound of Essentials</h1>
+      <div class="hero-subtitle">Franchise Prospectus & Concord Master Blueprint: Tactile Literature Canon, Decentralized Cloud Academy, Album Tokenization, Phygital Copper Vinyl, and Institutional State Procurement.</div>
+      <div class="hero-quote">
+        "Designed for the developing brain, not the algorithm. Returning rhythm, tactile literature, and parental mentorship to early learning."
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="prospectus-content">
+
+      <!-- Executive Overview -->
+      <section>
+        <h2 class="section-title">1. Executive Summary: The Sovereignty of Early Learning</h2>
+        <p>Over the past decade, early learning has been compromised by hyper-stimulating digital screens, algorithmic video loops, and gamified apps. The pedagogical fallout in classrooms and homes is severe: widespread speech delays, sensory dysregulation, attention deficits, and motor coordination lag. Mainstream EdTech responded with more screens.</p>
+        <p><strong>The Sound of Essentials (SOE)</strong> stands for <strong>Responsibility with Technology</strong>. We deliver screen-free, music-powered learning grounded in acoustic rhythm (90 to 110 BPM vagal regulation), physical workbooks, and adult mentorship. For our future Concord members, SOE represents a rare convergence: an unassailable intellectual property universe paired with scalable SaaS classroom infrastructure, tokenized music royalties, and heirloom physical media.</p>
+      </section>
+
+      <!-- The 4 Core Growth Engines -->
+      <section>
+        <h2 class="section-title">2. The Four Pillars of the SOE Franchise Moat</h2>
+        <div class="grid-4">
+          
+          <div class="feature-card card-amber">
+            <div class="card-header-tag">Tactile Literature Canon</div>
+            <h3 class="card-title">15 Hero Hardcovers</h3>
+            <div class="card-metric amber">70–78% Margin</div>
+            <p>14 individual hero storybooks + Seriphia master chronicle, plus the Eternal Learning Fathers & Mothers bedtime volumes. Built to endure as multi-generational family heirlooms.</p>
+          </div>
+
+          <div class="feature-card card-primary">
+            <div class="card-header-tag">Decentralized Delivery</div>
+            <h3 class="card-title">The Cloud Academy</h3>
+            <div class="card-metric">$199–$499/yr</div>
+            <p>Classroom Pods, Clinical Therapy Centers, and State DOE early learning licensing. Delivers turnkey 10-15 minute screen-free tactile modules, circle-time chord charts, and ELOF/NAEYC compliance.</p>
+          </div>
+
+          <div class="feature-card card-accent">
+            <div class="card-header-tag">Web3 Catalog Commons</div>
+            <h3 class="card-title">Album Tokenization</h3>
+            <div class="card-metric">Master Rights IP</div>
+            <p>Smart contracts tokenizing the 19-track master acoustic catalog. Grants Concord members transparent royalty distributions from streaming, sync, institutional licensing, and educator node staking.</p>
+          </div>
+
+          <div class="feature-card card-copper">
+            <div class="card-header-tag">Phygital Sanctuary</div>
+            <h3 class="card-title">Deluxe Copper Record</h3>
+            <div class="card-metric copper">180g Audiophile</div>
+            <p>Limited 1,000-unit collector's edition pressed in metallic copper wax with foil-stamped gatefold. Features embedded NFC chip unlocking lossless 24-bit masters and Genesis Concord tokens.</p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Literature Franchise Banner & Deep Dive -->
+      <section>
+        <div class="showcase-banner banner-literature">
+          <h3>The Literature Franchise: An Evergreen Tactile Moat</h3>
+          <p>Educational apps and software stacks face rapid obsolescence; children's literature lasts for generations. SOE is anchored in tactile, physical books crafted from heavy FSC-certified paper, gold-stamped linen cloth spines, and rich matte illustrations. Books designed to sit on bedside tables and classroom bookshelves for decades.</p>
+          <div class="pill-row">
+            <span class="pill">15 Standalone Hero Hardcovers</span>
+            <span class="pill">Eternal Learning Fathers & Mothers</span>
+            <span class="pill">Hardwood Sensory Claves</span>
+            <span class="pill">Embroidered Quest Passports</span>
+            <span class="pill">Sovereign Master Slipcase</span>
+          </div>
+        </div>
+
+        <h3 style="font-family: 'Baloo 2', cursive; font-size: 22px; color: #1E1B4B; margin-top: 24px; margin-bottom: 12px;">The Lineage of Mentorship: Eternal Learning Fathers & Mothers</h3>
+        <p>In contemporary children's entertainment, parents are frequently portrayed as passive or irrelevant. SOE restores the dignity of parental mentorship at the core of the storytelling universe:</p>
+
+        <div class="grid-2">
+          <div class="feature-card card-primary">
+            <h4 class="card-title">The Eternal Learning Fathers</h4>
+            <p>Embodying the virtues of acoustic direction, rhythm, boundary, and courage. The Father teaches the young hero to keep time, walk with a steady stride, carve wood, tune instruments, and face unfamiliar frontiers with quiet confidence.</p>
+            <div class="callout">
+              <p>Key Title: <em>The Father's Stride: Tales of Courage from the Seven Lands</em> (Heirloom Family Edition).</p>
+            </div>
+          </div>
+
+          <div class="feature-card card-accent">
+            <h4 class="card-title">The Eternal Learning Mothers</h4>
+            <p>Embodying emotional sanctuary, attunement, intuitive observation, and somatic peace. The Mother provides the restorative harbor where the child's nervous system settles, teaching deep phonological lullabies, empathy, and listening.</p>
+            <div class="callout">
+              <p>Key Title: <em>The Mother's Song: Melodies of Peace, Grace, and Sanctuary</em> (Heirloom Family Edition).</p>
+            </div>
+          </div>
+        </div>
+
+        <h3 style="font-family: 'Baloo 2', cursive; font-size: 22px; color: #1E1B4B; margin-top: 24px; margin-bottom: 12px;">The Tactile Physical Sensory Moat</h3>
+        <table class="prospectus-table">
+          <thead>
+            <tr>
+              <th>Physical Artifact</th>
+              <th>Sensory & Pedagogical Function</th>
+              <th>Craftsmanship & Materials</th>
+              <th>Commercial Role</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>15 Hero Hardcovers</strong></td>
+              <td>Standalone character arcs across the 7 Lands teaching domain mastery and perseverance.</td>
+              <td>Case-bound with gold/copper foil stamped cloth spines, dense 150gsm wood-free art paper.</td>
+              <td>$18–$24 individual books / $280 full library set. 72% gross margin.</td>
+            </tr>
+            <tr>
+              <td><strong>Harmonia Claves & Copper Chimes</strong></td>
+              <td>Tactile rhythm-matching and 432 Hz auditory down-regulation during transition rituals.</td>
+              <td>Hand-turned American rock maple and resonant solid copper bars.</td>
+              <td>Classroom Pod add-on & D2C physical upsell ($28–$45).</td>
+            </tr>
+            <tr>
+              <td><strong>Hero Quest Passport & Seals</strong></td>
+              <td>Screen-free accomplishment tracking celebrating phonics, math, and movement quests.</td>
+              <td>Heavy parchment passport booklet with custom embroidered domain patches.</td>
+              <td>D2C engagement anchor & classroom incentive pack.</td>
+            </tr>
+            <tr>
+              <td><strong>Sovereign Master Slipcase</strong></td>
+              <td>Comprehensive heirloom treasure chest holding all books, Copper record, and instruments.</td>
+              <td>Bespoke walnut trunk with debossed copper corner brackets and linen lining.</td>
+              <td>Patron & high-end collector tier ($450–$2,500).</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Deluxe Copper Vinyl Feature -->
+      <section>
+        <div class="showcase-banner banner-copper">
+          <h3>The Limited Edition 19-Track Copper Vinyl</h3>
+          <p>Crafted for conscious homes, audiophiles, and institutional patrons who cherish permanence. Encased in a heavyweight 24-point tip-on gatefold jacket featuring copper foil debossing, a 24-page full-color pedagogical story and lyric booklet, and a solid copper-plated bookmark.</p>
+          <div class="pill-row">
+            <span class="pill">180g Metallic Copper Wax</span>
+            <span class="pill">Embedded NFC Phygital Chip</span>
+            <span class="pill">24-Page Story & Chord Book</span>
+            <span class="pill">Made in the Land of America</span>
+            <span class="pill">Includes Concord Genesis Mint</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Cloud Academy Tier Matrix -->
+      <section>
+        <h2 class="section-title">4. The SOE Cloud Academy (Institutional Licensing)</h2>
+        <p>The Cloud Academy translates the 7 Lands and 5 Core Domains into modular classroom execution engines for teachers, homeschool pod leaders, and pediatric speech and occupational therapists.</p>
+        
+        <table class="prospectus-table">
+          <thead>
+            <tr>
+              <th>Licensing Tier</th>
+              <th>Target Market</th>
+              <th>Price Point</th>
+              <th>Core Inclusions & Deliverables</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Classroom Pod</strong></td>
+              <td>Single classrooms, micro-schools, homeschool co-op pods</td>
+              <td><strong>$199 / yr</strong></td>
+              <td>Full 19-track acoustic streaming license (up to 30 students), 40-Day Readiness printable activity pack, circle-time guides.</td>
+            </tr>
+            <tr>
+              <td><strong>School & Clinical Center</strong></td>
+              <td>Private preschools, Head Start, Pediatric Speech & OT clinics</td>
+              <td><strong>$499 / yr</strong></td>
+              <td>Multi-classroom site license (up to 15 educators), 4,232-word Picture Dictionary digital suite, SLP/OT clinical somatic intervention guides.</td>
+            </tr>
+            <tr>
+              <td><strong>Charter & State District</strong></td>
+              <td>Public charter networks, County DOEs, State Pre-K consortia</td>
+              <td><strong>$5,000–$50,000+</strong></td>
+              <td>State standards crosswalk (DRDP, TEKS, ELOF), accredited educator PD workshops, bulk physical workbook fulfillment, LMS integration.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Web3 & Tokenization -->
+      <section>
+        <h2 class="section-title">5. Master Catalog Tokenization & Governance</h2>
+        <div class="grid-2">
+          
+          <div class="feature-card">
+            <h3 class="card-title">Transparent Royalty Distribution</h3>
+            <p>The 19 master acoustic tracks are codified via smart contracts. 25% of net revenues from institutional school licensing, commercial sync placements, and streaming royalties flow automatically to Concord Treasury token holders on a quarterly schedule.</p>
+            <div class="callout">
+              <p>On-chain settlement ensures zero publisher opacity. Educators and patrons directly participate in the economic ascent of the catalog.</p>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <h3 class="card-title">Territory Staking Nodes</h3>
+            <p>Certified SOE Education Evangelists and regional directors stake Concord Tokens to secure exclusive territorial rights. Node operators receive 15% to 25% recurring yields on all Cloud Academy subscriptions and physical book deliveries generated within their territory.</p>
+            <div class="callout">
+              <p>Aligns regional community growth with sovereign decentralized rewards.</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Financial Pro Forma -->
+      <section>
+        <h2 class="section-title">6. Three-Year Pro Forma Financial Projections</h2>
+        <p>The SOE economic engine scales across five synchronized channels: D2C customer acquisition, tactile literature publishing, recurring Cloud Academy subscriptions, high-margin physical collector artifacts, and state institutional contracts.</p>
+
+        <table class="prospectus-table">
+          <thead>
+            <tr>
+              <th>Revenue Channel</th>
+              <th>Year 1 (Launch & Seed)</th>
+              <th>Year 2 (B2B & Literature)</th>
+              <th>Year 3 (State Scale & Global)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>D2C Funnel & Rhythm Pass Subscriptions</td>
+              <td>$320,000</td>
+              <td>$1,150,000</td>
+              <td>$2,800,000</td>
+            </tr>
+            <tr>
+              <td>Tactile Literature & Heirloom Box Sets</td>
+              <td>$180,000</td>
+              <td>$720,000</td>
+              <td>$2,100,000</td>
+            </tr>
+            <tr>
+              <td>Cloud Academy Pod & School Licenses</td>
+              <td>$145,000</td>
+              <td>$890,000</td>
+              <td>$3,400,000</td>
+            </tr>
+            <tr>
+              <td>Deluxe Copper Vinyl & Phygital Merch</td>
+              <td>$110,000</td>
+              <td>$280,000</td>
+              <td>$650,000</td>
+            </tr>
+            <tr>
+              <td>State DOE & District Adoptions</td>
+              <td>$75,000</td>
+              <td>$650,000</td>
+              <td>$2,900,000</td>
+            </tr>
+            <tr>
+              <td>Web3 Catalog Licensing & Node Staking</td>
+              <td>$50,000</td>
+              <td>$320,000</td>
+              <td>$1,250,000</td>
+            </tr>
+            <tr style="background: #F8FAFC; font-weight: 700;">
+              <td>Total Gross Revenue</td>
+              <td>$880,000</td>
+              <td>$4,010,000</td>
+              <td>$13,100,000</td>
+            </tr>
+            <tr style="background: #FEF3C7; color: #92400E; font-weight: 800;">
+              <td>Concord Treasury Allocation (15%)</td>
+              <td>$132,000</td>
+              <td>$601,500</td>
+              <td>$1,965,000</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Roadmap -->
+      <section>
+        <h2 class="section-title">7. Strategic Concord Roadmap (2026–2029)</h2>
+        <div class="grid-2">
+          
+          <div class="feature-card card-primary">
+            <div class="card-header-tag">Phase 1: Q3–Q4 2026</div>
+            <h3 class="card-title">D2C Ignition & Core Proof</h3>
+            <p>Deploy Shopify card-vaulting funnel with $0 front door, $7 bump, and $35 physical workbook. Complete automated standards crosswalk generator for all 19 tracks across ELOF and NAEYC. Finalize first 4 Hero Hardcover manuscripts.</p>
+          </div>
+
+          <div class="feature-card card-copper">
+            <div class="card-header-tag">Phase 2: Q1–Q2 2027</div>
+            <h3 class="card-title">Copper Vinyl & Token Genesis</h3>
+            <p>Manufacture 1,000-unit Deluxe 180g Copper Vinyl run. Deploy Concord Smart Contract suite on Ethereum / Arbitrum. Activate NFC phygital verification. Release <em>The Father's Stride</em> and <em>The Mother's Song</em> heirloom volumes.</p>
+          </div>
+
+          <div class="feature-card card-accent">
+            <div class="card-header-tag">Phase 3: Q3–Q4 2027</div>
+            <h3 class="card-title">Cloud Academy & Literature Rollout</h3>
+            <p>Release first 7 Hero Hardcovers with tactile clave sticks. Onboard first 100 preschool networks and clinical centers. Submit formal curriculum adoption bids to California (DRDP) and Texas (TEKS) early learning committees.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="card-header-tag">Phase 4: 2028–2029</div>
+            <h3 class="card-title">Complete Slipcase & Global Assembly</h3>
+            <p>Release the full 15-Volume Sovereign Slipcase Library. Execute multi-district statewide curriculum contracts. Release French, Portuguese, and global multilingual editions. Convene the First Annual Sovereign Concord Assembly.</p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Closing Callout -->
+      <section style="margin-top: 40px; text-align: center; padding: 40px; background: #F8FAFC; border-radius: 18px; border: 1px solid var(--border);">
+        <h3 style="font-family: 'Baloo 2', cursive; font-size: 26px; color: #1E1B4B; margin-bottom: 8px;">Claim Your Stewardship in The Concord</h3>
+        <p style="max-width: 650px; margin: 0 auto 20px auto; color: #64748B;">You are not merely buying a curriculum or backing a venture. You are handing a child their quest map and securing the future of human development.</p>
+        <div style="display: inline-flex; gap: 12px;">
+          <span style="background: var(--primary); color: white; padding: 10px 24px; border-radius: 30px; font-weight: 700; font-size: 14px;">thesoundofessentials.com</span>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="prospectus-footer">
+      <div>
+        <div class="footer-brand">The Sound of Essentials</div>
+        <div>Confidential Concord Master Prospectus · Stage 3 Enterprise Blueprint</div>
+      </div>
+      <div>
+        <div>Founded by Lee Murray</div>
+        <div>Made in the land of America</div>
+      </div>
+    </footer>
+
+  </div>
+
+</body>
+</html>

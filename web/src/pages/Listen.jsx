@@ -21,39 +21,21 @@ import EmailDownloadGateModal from '../components/EmailDownloadGateModal';
 import { trackLead } from '../utils/analytics';
 import { submitSoeInterest } from '../services/soeSubmissions';
 import { getDeliveryUrl, triggerBrowserDownload } from '../utils/deliveryUrl';
+import { isGateUnlocked, setGateUnlocked, getCapturedEmail, isValidEmail } from '../utils/gateAuth';
 import './MediaRoom.css';
 import './Listen.css';
-
-
-const STORAGE_KEY = 'soe_listen_unlocked';
 
 const Listen = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
 
-  // ── Gate State (persisted) ──────────────────────────────────
-  const [isUnlocked, setIsUnlocked] = useState(() => {
-    try {
-      const urlParams = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : null;
-      const isParamUnlocked = urlParams && (
-        urlParams.get('unlocked') === 'true' ||
-        urlParams.get('_bhref') === 'subscribe-forms' ||
-        urlParams.has('email') ||
-        urlParams.has('subscriber_id')
-      );
-      if (isParamUnlocked) {
-        localStorage.setItem(STORAGE_KEY, '1');
-        return true;
-      }
-      return localStorage.getItem(STORAGE_KEY) === '1';
-    } catch { return false; }
-  });
+  // ── Gate State (strictly verified against stored email) ─────
+  const [isUnlocked, setIsUnlocked] = useState(() => isGateUnlocked());
 
   const [searchParams, setSearchParams] = useSearchParams();
   const [justUnlocked, setJustUnlocked] = useState(false);
   const [isGiftModalOpen, setIsGiftModalOpen] = useState(false);
   const [giftLand, setGiftLand] = useState('Harmonia');
-
   const [copied, setCopied] = useState(false);
 
   // Direct email capture state
@@ -61,10 +43,48 @@ const Listen = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [optinError, setOptinError] = useState('');
 
+  // Universal Gate Modal State
+  const [isDownloadGateOpen, setIsDownloadGateOpen] = useState(false);
+  const [gateDownloadItem, setGateDownloadItem] = useState({
+    title: 'SOE Rhythm Quest: Full 19-Track Album Experience',
+    filename: 'SOE_Rhythm_Quest_Coloring_Book.pdf',
+    url: getDeliveryUrl('coloring-book'),
+    kind: 'interest',
+  });
+
+  const openAlbumUnlockGate = (customTitle) => {
+    setGateDownloadItem({
+      title: customTitle || 'SOE Rhythm Quest: Full 19-Track Album Experience',
+      filename: 'SOE_Rhythm_Quest_Coloring_Book.pdf',
+      url: getDeliveryUrl('coloring-book'),
+      kind: 'interest',
+    });
+    setIsDownloadGateOpen(true);
+  };
+
+  const handleLaunchPlayerClick = (e) => {
+    if (e) e.preventDefault();
+    if (isGateUnlocked()) {
+      navigate('/player');
+    } else {
+      setIsUnlocked(false);
+      openAlbumUnlockGate();
+    }
+  };
+
+  const handleTrackCardClick = (track, i) => {
+    if (isGateUnlocked()) {
+      navigate('/player');
+    } else {
+      openAlbumUnlockGate(`Unlock Track #${i + 1}: ${track.title} & 19 Full Songs`);
+    }
+  };
+
   const handleDirectOptin = async (e) => {
     e.preventDefault();
     setOptinError('');
-    if (!directEmail || !directEmail.includes('@')) {
+    const cleanEmail = directEmail.trim().toLowerCase();
+    if (!isValidEmail(cleanEmail)) {
       setOptinError('Please enter a valid email address.');
       return;
     }
@@ -73,33 +93,39 @@ const Listen = () => {
     try {
       await submitSoeInterest({
         kind: 'interest',
-        email: directEmail,
+        email: cleanEmail,
         name: 'Rhythm Explorer',
         sourcePath: window.location.pathname,
       });
-      trackLead({ formName: 'listen_direct_optin', email: directEmail, source: 'listen_page' });
-      unlock();
-      navigate('/player?unlocked=true');
+      trackLead({ formName: 'listen_direct_optin', email: cleanEmail, source: 'listen_page' });
+      setGateUnlocked(cleanEmail);
+      unlock(cleanEmail);
+      navigate('/player');
     } catch (err) {
       console.warn('Direct optin notice:', err);
-      trackLead({ formName: 'listen_direct_optin', email: directEmail, source: 'listen_page' });
-      unlock();
-      navigate('/player?unlocked=true');
+      trackLead({ formName: 'listen_direct_optin', email: cleanEmail, source: 'listen_page' });
+      setGateUnlocked(cleanEmail);
+      unlock(cleanEmail);
+      navigate('/player');
     } finally {
       setIsSubmitting(false);
     }
   };
 
-  const [isDownloadGateOpen, setIsDownloadGateOpen] = useState(false);
-
   const handleColoringBookDownloadClick = (e) => {
     if (e) e.preventDefault();
-    const storedEmail = typeof window !== 'undefined' ? localStorage.getItem('soe_user_email') : null;
-    if (storedEmail && storedEmail.includes('@')) {
+    const storedEmail = getCapturedEmail();
+    if (storedEmail) {
       // Already captured email: deliver directly
       triggerBrowserDownload(getDeliveryUrl('coloring-book'), 'SOE_Rhythm_Quest_Coloring_Book.pdf');
     } else {
       // Gate download: require email capture first
+      setGateDownloadItem({
+        title: 'SOE Rhythm Quest: 40-Page Coloring Book',
+        filename: 'SOE_Rhythm_Quest_Coloring_Book.pdf',
+        url: getDeliveryUrl('coloring-book'),
+        kind: 'interest',
+      });
       setIsDownloadGateOpen(true);
     }
   };
@@ -107,7 +133,6 @@ const Listen = () => {
   const handleCopyShareLink = () => {
     setIsGiftModalOpen(true);
   };
-
 
   // ── Track data (for AudioPlayer + JSON-LD) ──────────────────
   const tracks = tracksData.map(track => ({
@@ -138,39 +163,33 @@ const Listen = () => {
   }, []);
 
   // ── Unlock handler ──────────────────────────────────────────
-  const unlock = () => {
-    try { localStorage.setItem(STORAGE_KEY, '1'); } catch { /* ignore localStorage error */ }
+  const unlock = (email = '') => {
+    const validEmail = email || getCapturedEmail();
+    if (validEmail) {
+      setGateUnlocked(validEmail);
+    }
     setIsUnlocked(true);
     setJustUnlocked(true);
     triggerQuestCelebration();
   };
 
-  // ── Beehiiv subscribe success detection ─────────────────────
-  // Beehiiv's embed widget has no JS success callback — the form's Beehiiv
-  // dashboard config redirects back here with ?unlocked=true (or ?_bhref=subscribe-forms / ?email=...) on a real signup.
+  // ── Email Query Parameter Verification ──────────────────────
   useEffect(() => {
-    const isBeehiivRedirect =
-      searchParams.get('unlocked') === 'true' ||
-      searchParams.get('_bhref') === 'subscribe-forms' ||
-      searchParams.has('email') ||
-      searchParams.has('subscriber_id');
-
-    if (!isBeehiivRedirect) return;
-
-    // Dispatch unified Lead event
-    trackLead({ formName: 'listen_optin', source: 'listen_page' });
-
-    unlock();
-    setSearchParams((prev) => {
-      const next = new URLSearchParams(prev);
-      next.delete('unlocked');
-      next.delete('_bhref');
-      next.delete('email');
-      next.delete('subscriber_id');
-      return next;
-    }, { replace: true });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [searchParams]);
+    const emailParam = searchParams.get('email');
+    if (emailParam && isValidEmail(emailParam)) {
+      setGateUnlocked(emailParam);
+      trackLead({ formName: 'listen_optin_url', email: emailParam, source: 'listen_page' });
+      unlock(emailParam);
+      setSearchParams((prev) => {
+        const next = new URLSearchParams(prev);
+        next.delete('unlocked');
+        next.delete('_bhref');
+        next.delete('email');
+        next.delete('subscriber_id');
+        return next;
+      }, { replace: true });
+    }
+  }, [searchParams, setSearchParams]);
 
   // ──────────────────────────────────────────────────────────────
   // RENDER
@@ -193,9 +212,14 @@ const Listen = () => {
           {isUnlocked ? (
             <div style={{ margin: '1.5rem auto 1rem auto', display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap', alignItems: 'center' }}>
               <MagneticPill intensity={0.25}>
-                <Link to="/player" className="btn btn-gold btn-shimmer" style={{ fontSize: '1.05rem', padding: '0.9rem 2.5rem' }}>
+                <button
+                  type="button"
+                  onClick={handleLaunchPlayerClick}
+                  className="btn btn-gold btn-shimmer"
+                  style={{ fontSize: '1.05rem', padding: '0.9rem 2.5rem', cursor: 'pointer', border: 'none' }}
+                >
                   🎧 Launch 19-Track Player →
-                </Link>
+                </button>
               </MagneticPill>
               <button
                 type="button"
@@ -214,10 +238,23 @@ const Listen = () => {
             <>
               <div style={{ margin: '1.5rem auto 1rem auto', display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap', alignItems: 'center' }}>
                 <MagneticPill intensity={0.25}>
-                  <a href="#optin" className="btn btn-gold btn-shimmer" style={{ fontSize: '1.05rem', padding: '0.9rem 2.5rem' }}>
+                  <button
+                    type="button"
+                    onClick={() => openAlbumUnlockGate()}
+                    className="btn btn-gold btn-shimmer"
+                    style={{ fontSize: '1.05rem', padding: '0.9rem 2.5rem', cursor: 'pointer', border: 'none' }}
+                  >
                     🎧 Unlock All 19 Tracks Free →
-                  </a>
+                  </button>
                 </MagneticPill>
+                <button
+                  type="button"
+                  onClick={handleColoringBookDownloadClick}
+                  className="btn btn-outline"
+                  style={{ fontSize: '1rem', padding: '0.85rem 1.8rem', background: 'rgba(255, 255, 255, 0.8)', cursor: 'pointer' }}
+                >
+                  🎨 Download Free Coloring Book (PDF) ↓
+                </button>
                 <Link to="/rhythm-ready" className="btn btn-outline" style={{ fontSize: '1rem', padding: '0.85rem 1.8rem', background: 'rgba(255, 255, 255, 0.8)' }}>
                   📚 Rhythm Ready Workbook ($21) →
                 </Link>
@@ -289,7 +326,12 @@ const Listen = () => {
               >
                 <div
                   className="listen-preview__card"
-                  style={{ '--card-accent': track.color }}
+                  style={{ '--card-accent': track.color, cursor: 'pointer' }}
+                  onClick={() => handleTrackCardClick(track, i)}
+                  role="button"
+                  tabIndex={0}
+                  onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') handleTrackCardClick(track, i); }}
+                  aria-label={`${track.title} - ${isUnlocked ? 'Play Track' : 'Locked, enter email to unlock'}`}
                 >
                   <div className="listen-preview__art-wrap">
                     <img
@@ -300,7 +342,7 @@ const Listen = () => {
                     />
                     <span className="listen-preview__number">{String(i + 1).padStart(2, '0')}</span>
                     {!isUnlocked && (
-                      <span className="listen-preview__lock">🔒</span>
+                      <span className="listen-preview__lock" title="Enter email to unlock full audio">🔒</span>
                     )}
                   </div>
                   <div className="listen-preview__info">
@@ -321,17 +363,27 @@ const Listen = () => {
           {!isUnlocked ? (
             <div className="listen-preview__cta text-center" style={{ marginTop: '2.5rem' }}>
               <MagneticPill intensity={0.25}>
-                <a href="#optin" className="btn btn-gold btn-shimmer" style={{ fontSize: '1rem', padding: '0.85rem 2.5rem' }}>
+                <button
+                  type="button"
+                  onClick={() => openAlbumUnlockGate()}
+                  className="btn btn-gold btn-shimmer"
+                  style={{ fontSize: '1rem', padding: '0.85rem 2.5rem', cursor: 'pointer', border: 'none' }}
+                >
                   🎧 Unlock All 19 Tracks Free →
-                </a>
+                </button>
               </MagneticPill>
             </div>
           ) : (
             <div className="listen-preview__cta text-center" style={{ marginTop: '2.5rem' }}>
               <MagneticPill intensity={0.25}>
-                <Link to="/player" className="btn btn-gold btn-shimmer" style={{ fontSize: '1rem', padding: '0.85rem 2.5rem' }}>
+                <button
+                  type="button"
+                  onClick={handleLaunchPlayerClick}
+                  className="btn btn-gold btn-shimmer"
+                  style={{ fontSize: '1rem', padding: '0.85rem 2.5rem', cursor: 'pointer', border: 'none' }}
+                >
                   🎧 Launch 19-Track Player →
-                </Link>
+                </button>
               </MagneticPill>
             </div>
           )}
@@ -533,14 +585,12 @@ const Listen = () => {
       <EmailDownloadGateModal
         isOpen={isDownloadGateOpen}
         onClose={() => setIsDownloadGateOpen(false)}
-        downloadItem={{
-          title: 'SOE Rhythm Quest: 40-Page Coloring Book',
-          filename: 'SOE_Rhythm_Quest_Coloring_Book.pdf',
-          url: getDeliveryUrl('coloring-book'),
-          kind: 'interest',
-        }}
-        onSuccess={() => {
-          unlock();
+        downloadItem={gateDownloadItem}
+        onSuccess={(capturedEmail) => {
+          unlock(capturedEmail);
+          if (gateDownloadItem.title?.includes('Track') || gateDownloadItem.title?.includes('Album') || gateDownloadItem.title?.includes('Player')) {
+            navigate('/player');
+          }
         }}
       />
     </div>

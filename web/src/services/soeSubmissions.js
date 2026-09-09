@@ -1,6 +1,57 @@
 import { supabase } from '../lib/supabase';
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const BACKUP_LEADS_KEY = 'soe_backup_leads';
+
+function saveLeadToBackup(payload) {
+  try {
+    const raw = localStorage.getItem(BACKUP_LEADS_KEY);
+    const existing = raw ? JSON.parse(raw) : [];
+    existing.push({ ...payload, timestamp: new Date().toISOString() });
+    localStorage.setItem(BACKUP_LEADS_KEY, JSON.stringify(existing.slice(-50)));
+  } catch (err) {
+    console.warn('Could not persist lead backup:', err);
+  }
+}
+
+export async function flushBackupLeads() {
+  try {
+    const raw = localStorage.getItem(BACKUP_LEADS_KEY);
+    if (!raw) return;
+    const leads = JSON.parse(raw);
+    if (!Array.isArray(leads) || leads.length === 0) return;
+
+    const remaining = [];
+    for (const lead of leads) {
+      try {
+        const res = await fetch('/api/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(lead),
+        });
+        if (!res.ok) {
+          remaining.push(lead);
+        }
+      } catch {
+        remaining.push(lead);
+      }
+    }
+    if (remaining.length === 0) {
+      localStorage.removeItem(BACKUP_LEADS_KEY);
+    } else {
+      localStorage.setItem(BACKUP_LEADS_KEY, JSON.stringify(remaining));
+    }
+  } catch {
+    // Ignore backup sync errors
+  }
+}
+
+// Auto-flush when browser comes back online
+if (typeof window !== 'undefined') {
+  window.addEventListener('online', () => {
+    flushBackupLeads().catch(() => {});
+  });
+}
 
 export async function submitSoeInterest({
   kind,
@@ -21,23 +72,26 @@ export async function submitSoeInterest({
     throw new Error('Please enter a valid email address.');
   }
 
+  const payload = {
+    kind,
+    name: normalizedName,
+    email: normalizedEmail,
+    organizationName: organizationName?.trim() || null,
+    message: message?.trim() || null,
+    sourcePath: sourcePath?.slice(0, 500) || null,
+    honeypot,
+  };
+
   try {
     const response = await fetch('/api/submit', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        kind,
-        name: normalizedName,
-        email: normalizedEmail,
-        organizationName: organizationName?.trim() || null,
-        message: message?.trim() || null,
-        sourcePath: sourcePath?.slice(0, 500) || null,
-        honeypot,
-      }),
+      body: JSON.stringify(payload),
     });
 
     if (response.ok) {
       const data = await response.json();
+      flushBackupLeads().catch(() => {});
       return data;
     }
   } catch (e) {
@@ -45,19 +99,28 @@ export async function submitSoeInterest({
   }
 
   // Fallback to Supabase RPC if edge API is unreachable
-  const { data, error } = await supabase.rpc('submit_soe_interest', {
-    p_kind: kind,
-    p_name: normalizedName,
-    p_email: normalizedEmail,
-    p_organization_name: organizationName?.trim() || null,
-    p_message: message?.trim() || null,
-    p_source_path: sourcePath?.slice(0, 500) || null,
-    p_honeypot: honeypot,
-  });
+  try {
+    const { data, error } = await supabase.rpc('submit_soe_interest', {
+      p_kind: kind,
+      p_name: normalizedName,
+      p_email: normalizedEmail,
+      p_organization_name: organizationName?.trim() || null,
+      p_message: message?.trim() || null,
+      p_source_path: sourcePath?.slice(0, 500) || null,
+      p_honeypot: honeypot,
+    });
 
-  if (error) {
-    throw new Error('We could not send your message right now. Please try again.');
+    if (!error) {
+      flushBackupLeads().catch(() => {});
+      return data;
+    }
+    console.warn('Supabase RPC failed:', error);
+  } catch (rpcErr) {
+    console.warn('Supabase RPC exception:', rpcErr);
   }
 
-  return data;
+  // Resilient offline fallback: never lose a captured lead
+  saveLeadToBackup(payload);
+  return { success: true, buffered: true, message: 'Saved offline backup.' };
 }
+

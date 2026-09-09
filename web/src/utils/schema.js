@@ -32,7 +32,7 @@ export function homeSchema() {
         '@type': 'ContactPoint',
         email: 'info@soelearn.com',
         contactType: 'Customer Support',
-        availableLanguage: ['English', 'Spanish', 'French'],
+        availableLanguage: ['English', 'French'],
       },
       areaServed: {
         '@type': 'Place',

@@ -8,16 +8,13 @@ import { RevealV2 } from '../hooks/useScrollReveal';
 import BrevoSubscribeForm from '../components/BrevoSubscribeForm';
 import tracksData from '../data/tracks.json';
 import { audioUrl } from '../utils/audioUrl';
-
-const STORAGE_KEY = 'soe_listen_unlocked';
+import { isGateUnlocked, setGateUnlocked, getCapturedEmail, isValidEmail } from '../utils/gateAuth';
 
 const ListenV2 = () => {
   const { t } = useTranslation();
   const [searchParams, setSearchParams] = useSearchParams();
 
-  const [isUnlocked, setIsUnlocked] = useState(() => {
-    try { return localStorage.getItem(STORAGE_KEY) === '1'; } catch { return false; }
-  });
+  const [isUnlocked, setIsUnlocked] = useState(() => isGateUnlocked());
   const [justUnlocked, setJustUnlocked] = useState(false);
 
   useEffect(() => {
@@ -34,28 +31,35 @@ const ListenV2 = () => {
     src: audioUrl(track.audioFile),
   }));
 
-  const unlock = () => {
-    try { localStorage.setItem(STORAGE_KEY, '1'); } catch { /* ignore */ }
+  const unlock = (email = '') => {
+    const validEmail = email || getCapturedEmail();
+    if (validEmail) {
+      setGateUnlocked(validEmail);
+    }
     setIsUnlocked(true);
     setJustUnlocked(true);
   };
 
-  // Beehiiv's embed widget has no JS success callback — the form's Beehiiv
-  // dashboard config redirects back here with ?unlocked=true on a real signup.
+  // ── Email Query Parameter Verification ──────────────────────
   useEffect(() => {
-    if (searchParams.get('unlocked') !== 'true') return;
+    const emailParam = searchParams.get('email');
+    if (emailParam && isValidEmail(emailParam)) {
+      setGateUnlocked(emailParam);
+      if (typeof window !== 'undefined') {
+        window.gtag?.('event', 'generate_lead', { event_category: 'funnel', event_label: 'listen_optin_v2', value: 1 });
+        window.fbq?.('track', 'Lead', { content_name: 'listen_optin_v2', content_category: 'email_funnel' });
+      }
 
-    if (typeof window !== 'undefined') {
-      window.gtag?.('event', 'generate_lead', { event_category: 'funnel', event_label: 'listen_optin_v2', value: 1 });
-      window.fbq?.('track', 'Lead', { content_name: 'listen_optin_v2', content_category: 'email_funnel' });
+      unlock(emailParam);
+      setSearchParams((prev) => {
+        const next = new URLSearchParams(prev);
+        next.delete('unlocked');
+        next.delete('_bhref');
+        next.delete('email');
+        next.delete('subscriber_id');
+        return next;
+      }, { replace: true });
     }
-
-    unlock();
-    setSearchParams((prev) => {
-      const next = new URLSearchParams(prev);
-      next.delete('unlocked');
-      return next;
-    }, { replace: true });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchParams]);
 
@@ -95,7 +99,7 @@ const ListenV2 = () => {
               <BrevoSubscribeForm
                 className="v2-email-capture"
                 sourcePath="/listen-v2"
-                onSuccess={() => unlock()}
+                onSuccess={({ email }) => unlock(email)}
               />
               <p className="v2-email-meta">No spam, ever. Unsubscribe anytime.</p>
             </RevealV2>

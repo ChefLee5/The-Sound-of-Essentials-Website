@@ -1,0 +1,44 @@
+{
+  "track_id": 8,
+  "track_slug": "numbers",
+  "title": "Numbers",
+  "land_name": "Numeria",
+  "land_id": "numeria",
+  "land_color": "#7fb685",
+  "domain_icon": "🔢",
+  "hero_guides": "Kwame & Octavia",
+  "age_group": "Ages 2–7 (Pre-K to Grade 1)",
+  "duration": "10–15 Minutes",
+  "materials": [
+    "10 wooden blocks, counting stones, or dried large pasta shells per pair",
+    "Two wooden spoons or hands"
+  ],
+  "quest_mission": "Step through the Golden Gates of Numeria with Kwame and Octavia to build tactile towers using the Sacred Count.",
+  "rhythm_ignition": "Call-and-response clapping percussion:\n• Teacher: 'One clap. Follow me!' ➔ [CLAP!]\n• Children: 'ONE!' ➔ [CLAP!]\n• Increment through the track up to 10 claps with steady crescendo and group cheering.",
+  "tactile_ritual": "The Tactile Stone Pyramid:\n1. Children work in pairs with 10 physical stones or blocks on a cloth mat.\n2. As the track counts each number, children place exactly one physical stone down with an audible 'tap'.\n3. On 'One' tap one stone. On 'Two' add a stone. At 'Ten' assemble the stones into a complete pyramid (4-3-2-1 base).\n4. Stand up and deliver a triumphant 10-beat group drumroll on knees.",
+  "domain_spider": {
+    "language": "Cardinal number words articulated clearly with precise 1-to-1 phonemic emphasis.",
+    "cognitive": "One-to-one correspondence and spatial conservation of quantity (10 items remain 10 regardless of arrangement).",
+    "physical": "Pincer grasp tactile placement (fine motor) coordinated with auditory rhythm timing.",
+    "science_sensory": "Acoustic resonance contrast—comparing the sound of wood-on-wood tapping versus stone-on-cloth.",
+    "social_emotional": "Turn-taking collaboration in pairs, celebrating shared completion of the 10-stone pyramid."
+  },
+  "teacher_whisper": "Pairing physical tactile resistance (placing an object) with an auditory percussion beat anchors numerical cardinality into the parietal cortex far deeper than visual flashcards ever can.",
+  "standards": {
+    "elof_codes": [
+      "P-MATH 1 (Number Words & Counting)",
+      "P-MATH 2 (Cardinality)",
+      "P-ATL 4 (Auditory Pattern Following)"
+    ],
+    "elof_domains": [
+      "Cognition: Mathematics",
+      "Approaches to Learning"
+    ],
+    "naeyc_standards": [
+      "2.F.01 (Number Sense & Quantity)",
+      "2.F.03 (1-to-1 Correspondence)",
+      "2.J.03 (Rhythmic Cadence)"
+    ],
+    "kindergarten_readiness": "Accurately pairs physical percussion (claps/foot taps) 1-to-1 with spoken numeral sequence from 1 to 10."
+  }
+}

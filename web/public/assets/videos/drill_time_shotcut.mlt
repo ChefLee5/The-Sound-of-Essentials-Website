@@ -1,0 +1,87 @@
+<?xml version="1.0" standalone="no"?>
+<mlt LC_NUMERIC="C" version="7.24.0" title="SOE ECE Video Recipe" producer="main_bin">
+  <profile description="Vertical 9:16 (1080x1920 30fps)" width="1080" height="1920" progressive="1" sample_aspect_num="1" sample_aspect_den="1" display_aspect_num="9" display_aspect_den="16" frame_rate_num="30" frame_rate_den="1" colorspace="709"/>
+
+  <producer id="producer_audio" in="00:00:00.000" out="00:00:33.000">
+    <property name="resource">C:/Users/ldmur/.gemini/antigravity-ide/brain/a54da94e-b5db-462c-ac66-67f7ca400f9d/scratch/drill_time_33s.mp3</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="audio_index">0</property>
+    <property name="video_index">-1</property>
+  </producer>
+
+  <producer id="producer_cover" in="00:00:00.000" out="00:00:24.000">
+    <property name="resource">C:/Users/ldmur/Downloads/The Sound of Essentials Image Assets/Site Photos/Drill Time.png</property>
+    <property name="mlt_service">qimage</property>
+    <property name="ttl">25</property>
+    <property name="aspect_ratio">1</property>
+    <filter id="zoom_cover">
+      <property name="mlt_service">affine</property>
+      <property name="background">color:0x00000000</property>
+      <property name="transition.fill">1</property>
+      <property name="transition.distort">0</property>
+      <property name="transition.geometry">0=0,0:1080x1920:100;720=-20,-35:1120x1990:100</property>
+    </filter>
+  </producer>
+
+  <producer id="producer_seriphia" in="00:00:00.000" out="00:00:09.000">
+    <property name="resource">C:/Users/ldmur/.gemini/antigravity-ide/brain/a54da94e-b5db-462c-ac66-67f7ca400f9d/scratch/drill_time_wisdom.png</property>
+    <property name="mlt_service">qimage</property>
+    <property name="ttl">25</property>
+    <property name="aspect_ratio">1</property>
+    <filter id="fadein_seriphia">
+      <property name="mlt_service">brightness</property>
+      <property name="start">0</property>
+      <property name="end">1</property>
+      <property name="in">0</property>
+      <property name="out">30</property>
+    </filter>
+  </producer>
+
+  <producer id="producer_hook" in="00:00:00.000" out="00:00:04.500">
+    <property name="resource">C:/Users/ldmur/.gemini/antigravity-ide/brain/a54da94e-b5db-462c-ac66-67f7ca400f9d/scratch/drill_time_hook.png</property>
+    <property name="mlt_service">qimage</property>
+    <property name="ttl">25</property>
+    <filter id="fadeout_hook">
+      <property name="mlt_service">brightness</property>
+      <property name="start">1</property>
+      <property name="end">0</property>
+      <property name="in">105</property>
+      <property name="out">135</property>
+    </filter>
+  </producer>
+
+  <playlist id="playlist_bg">
+    <entry producer="producer_cover" in="00:00:00.000" out="00:00:24.000"/>
+    <entry producer="producer_seriphia" in="00:00:00.000" out="00:00:09.000"/>
+  </playlist>
+
+  <playlist id="playlist_overlay">
+    <entry producer="producer_hook" in="00:00:00.000" out="00:00:04.500"/>
+    <blank length="00:00:28.500"/>
+  </playlist>
+
+  <playlist id="playlist_audio">
+    <entry producer="producer_audio" in="00:00:00.000" out="00:00:33.000"/>
+  </playlist>
+
+  <tractor id="tractor_main" in="00:00:00.000" out="00:00:33.000">
+    <multitrack>
+      <track producer="playlist_bg"/>
+      <track producer="playlist_overlay"/>
+      <track producer="playlist_audio" hide="video"/>
+    </multitrack>
+    <transition id="transition_composite">
+      <property name="mlt_service">composite</property>
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="geometry">0,0:1080x1920:100</property>
+      <property name="halign">center</property>
+      <property name="valign">middle</property>
+    </transition>
+  </tractor>
+
+  <playlist id="main_bin">
+    <property name="xml_retain">1</property>
+    <entry producer="tractor_main"/>
+  </playlist>
+</mlt>

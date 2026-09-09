@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { assetPath } from '../utils/assetPath';
 import { triggerQuestCelebration, TiltCard, MagneticPill } from '../components/ui/DesignSpells';
 import { FULFILLMENT_FILES, getDeliveryUrl, triggerBrowserDownload } from '../utils/deliveryUrl';
+import { setGateUnlocked, isValidEmail } from '../utils/gateAuth';
 import './OrderSuccess.css';
 
 const OrderSuccess = () => {
@@ -23,7 +24,10 @@ const OrderSuccess = () => {
     document.title = 'Your Quest Has Begun! — Sound of Essentials';
     window.scrollTo({ top: 0, behavior: 'smooth' });
     triggerQuestCelebration();
-  }, []);
+    if (customerEmail && isValidEmail(customerEmail)) {
+      setGateUnlocked(customerEmail);
+    }
+  }, [customerEmail]);
 
   const handleDownload = () => {
     setDownloading(true);

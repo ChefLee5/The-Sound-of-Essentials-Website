@@ -340,9 +340,9 @@ const Mission = () => {
                     </p>
                   </div>
                   <div className="flow-column">
-                    <p className="flow-column__title">3 Languages</p>
+                    <p className="flow-column__title">2 Languages</p>
                     <p className="flow-column__text">
-                      English, Spanish, French — because the quest belongs to every child on earth.
+                      English and French — because the quest belongs to every child on earth.
                     </p>
                   </div>
                 </div>

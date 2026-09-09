@@ -121,7 +121,7 @@ All primary text hooks are strictly engineered to front-load the punchline withi
 * **Hook B (Sensory Focus):**
   > When the screen turns off, does your child melt down? That’s algorithmic overstimulation. (89 chars)
   >
-  > Rhythm Quest uses acoustic tempo, real instruments, and sound-before-symbol phonics to ground early learners.
+  > Rhythm Quest uses acoustic tempo, seasoned musical craft, and sound-before-symbol phonics to ground early learners.
   >
   > Free instant access for your family below.
 

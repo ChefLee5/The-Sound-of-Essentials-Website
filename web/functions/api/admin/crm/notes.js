@@ -52,7 +52,7 @@ export async function onRequestGet(context) {
 export async function onRequestPost(context) {
   try {
     const { request, env } = context;
-    const databaseUrl = env.NEON_DATABASE_URL || env.DATABASE_URL;
+    const databaseUrl = env?.NEON_DATABASE_URL || env?.DATABASE_URL || FALLBACK_DB_URL;
     const body = await request.json();
 
     const { contact_id, author, content, pinned } = body;

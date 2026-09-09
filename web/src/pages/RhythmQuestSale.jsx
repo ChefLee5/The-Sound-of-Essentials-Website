@@ -952,7 +952,7 @@ const DictionaryPreSaleOffer = () => {
                 <li className="rq-offer__item">
                   <span className="rq-offer__tick" aria-hidden="true">✓</span>
                   <span>
-                    <strong>Bilingual English &amp; Spanish (EN/ES).</strong> Culturally rich, home-language affirming design.
+                    <strong>Dual-Language Foundations (English &amp; French).</strong> Culturally rich, phonetic language-affirming design.
                   </span>
                 </li>
                 <li className="rq-offer__item">

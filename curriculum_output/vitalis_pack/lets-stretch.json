@@ -1,0 +1,43 @@
+{
+  "track_id": 6,
+  "track_slug": "lets-stretch",
+  "title": "Lets Stretch",
+  "land_name": "Vitalis",
+  "land_id": "vitalis",
+  "land_color": "#c4785a",
+  "domain_icon": "🤸",
+  "hero_guides": "Felix & Amara",
+  "age_group": "Ages 2–7 (Pre-K to Grade 1)",
+  "duration": "10–15 Minutes",
+  "materials": [
+    "A washcloth, silk scarf, or bare hands",
+    "Soft carpet or floor mat"
+  ],
+  "quest_mission": "Travel with Amara and Felix to the Canopy of Vitalis to breathe like great ancient trees and awaken our somatic awareness.",
+  "rhythm_ignition": "Teacher models the 4-count Ocean Inhale:\n• 'Breathe in through your nose (1, 2, 3, 4)... Breathe out through your mouth (wooosh!).'\n• Children hold their hands in front of their mouths to feel the warm tactile rush of their own breath.",
+  "tactile_ritual": "Canopy Rise & Root Grounding:\n1. Children place a scarf or washcloth on their heads.\n2. Reach both arms high into the sky on tiptoes—stretching toward the sun without letting the scarf fall (proprioceptive control).\n3. Slowly bend at the waist without bending the knees to touch toes, letting the scarf drift gently to the floor.\n4. Pick up the scarf with toes of the left foot, then the right foot, testing balance and plantar fine motor grip.",
+  "domain_spider": {
+    "language": "Verbalize somatic sensations ('tight', 'soft', 'rooted', 'reaching') matching physical movement.",
+    "cognitive": "Spatial awareness of body boundaries (kinesphere) and vertical/horizontal body axis orientation.",
+    "physical": "Spinal elongation, hamstring flexibility, and intrinsic toe-muscle grasping mechanics.",
+    "science_sensory": "Airflow thermodynamics (feeling exhaled air temperature) and vestibular balance fluid equilibrium.",
+    "social_emotional": "Autonomous somatic regulation—learning that intentional breathing is a lifelong tool for emotional self-soothing."
+  },
+  "teacher_whisper": "Intentional exhalations longer than inhalations stimulate the parasympathetic brake via the vagus nerve, dropping child heart rates into optimal readiness before cognitive work begins.",
+  "standards": {
+    "elof_codes": [
+      "P-PMP 2 (Body Awareness/Proprioception)",
+      "P-ATL 1 (Attention and Persistence)",
+      "IT-PMP 3 (Spatial Relations)"
+    ],
+    "elof_domains": [
+      "Perceptual, Motor, and Physical Development",
+      "Approaches to Learning"
+    ],
+    "naeyc_standards": [
+      "2.C.02 (Body Awareness & Flexibility)",
+      "2.K.01 (Health & Respiration Practices)"
+    ],
+    "kindergarten_readiness": "Executes intentional deep diaphragmatic breathing and multi-plane stretching to down-regulate sympathetic nervous arousal."
+  }
+}

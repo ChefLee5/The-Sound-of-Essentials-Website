@@ -1,0 +1,44 @@
+{
+  "track_id": 9,
+  "track_slug": "my-body",
+  "title": "My Body",
+  "land_name": "Terrasol",
+  "land_id": "terrasol",
+  "land_color": "#5fb685",
+  "domain_icon": "🔬",
+  "hero_guides": "Vesta & Silas",
+  "age_group": "Ages 2–7 (Pre-K to Grade 1)",
+  "duration": "10–15 Minutes",
+  "materials": [
+    "A hand mirror or partner",
+    "Stickers or soft felt dots"
+  ],
+  "quest_mission": "Team up with Vesta and Silas in Terrasol to map the living architecture of our strong, healthy bodies.",
+  "rhythm_ignition": "Rhythmic Body Tapping Chant:\n• 'What’s on your face? Eyes, nose, mouth, chin!' [Tap each feature with fingertip]\n• 'Don’t forget about your forehead, cheeks, and two ears!' [Gentle cup over ears]",
+  "tactile_ritual": "The Head-to-Toe Somatosensory Scan:\n1. Verse 1 (Face): Children look in mirror or pair with a buddy, touching each facial feature.\n2. Verse 2 (Upper Body): Cross arms over chest to tap shoulders ('butterfly tap'), slide down to elbows, wrists, and wiggle all 10 fingertips.\n3. Verse 3 (Lower Body): Tap hips, thighs, pat knees, grasp ankles, and stomp 10 individual toes.\n4. Bridge (Living Vitality): Inhale deeply, placing right hand on heart to feel the physical cardiac pulse.",
+  "domain_spider": {
+    "language": "Accurate anatomical vocabulary (chin, forehead, neck, ankles, thighs, living foods).",
+    "cognitive": "Spatial top-to-bottom ordering and bilateral bodily symmetry (left ear vs. right ear).",
+    "physical": "Proprioceptive tactile mapping and bilateral butterfly self-soothing cross-taps.",
+    "science_sensory": "Biological sensory perception (heartbeat rhythm, respiratory movement, joint articulation).",
+    "social_emotional": "Positive somatic self-image, bodily autonomy, and gratitude for one’s physical temple."
+  },
+  "teacher_whisper": "Cross-body tapping (the butterfly hug) directly calms the amygdala by activating bilateral sensory pathways, reinforcing a grounded and secure internal somatic body schema.",
+  "standards": {
+    "elof_codes": [
+      "P-PMP 2 (Anatomical Body Awareness)",
+      "P-SCI 3 (Human Body & Nutrition)",
+      "P-LC 4 (Specific Anatomical Lexicon)"
+    ],
+    "elof_domains": [
+      "Perceptual, Motor, and Physical Development",
+      "Cognition: Science",
+      "Language"
+    ],
+    "naeyc_standards": [
+      "2.K.02 (Human Body Structures)",
+      "2.C.02 (Somatosensory Mapping)"
+    ],
+    "kindergarten_readiness": "Locates and names major anatomical joints and sensory organs; connects physical nutrition to energy and body vitality."
+  }
+}

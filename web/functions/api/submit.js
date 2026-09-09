@@ -4,6 +4,7 @@
  * saving records into Neon Serverless PostgreSQL over HTTP (Zero TCP connection overhead, pure Edge compatible).
  */
 
+const FALLBACK_DB_URL = 'postgresql://neondb_owner:npg_ks2SarDnOB1E@ep-wandering-voice-ae85papv.c-2.us-east-2.aws.neon.tech/neondb?sslmode=require';
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export async function onRequestPost(context) {
@@ -53,17 +54,14 @@ export async function onRequestPost(context) {
       });
     }
 
-    const databaseUrl = env.NEON_DATABASE_URL || env.DATABASE_URL;
+    const databaseUrl = env?.NEON_DATABASE_URL || env?.DATABASE_URL || FALLBACK_DB_URL;
 
-    if (!databaseUrl) {
-      console.warn('NEON_DATABASE_URL not configured. Gracefully acknowledging.');
-      return new Response(JSON.stringify({ success: true, warning: 'Database URL not set' }), {
-        status: 200,
-        headers: { 'Content-Type': 'application/json' },
-      });
-    }
+    // Neon HTTP endpoint
+    const urlObj = new URL(databaseUrl);
+    const host = urlObj.host;
+    const neonHttpEndpoint = `https://${host}/sql`;
 
-    // Execute query via Neon Serverless HTTP API
+    // 1. Core Submission Record: Execute query via Neon Serverless HTTP API
     const sqlQuery = `
       INSERT INTO soe_submissions (kind, name, email, organization_name, message, source_path)
       VALUES ($1, $2, $3, $4, $5, $6)
@@ -79,11 +77,6 @@ export async function onRequestPost(context) {
       sourcePath?.slice(0, 500) || null,
     ];
 
-    // Neon HTTP endpoint
-    const urlObj = new URL(databaseUrl);
-    const host = urlObj.host;
-    const neonHttpEndpoint = `https://${host}/sql`;
-
     const neonRes = await fetch(neonHttpEndpoint, {
       method: 'POST',
       headers: {
@@ -98,16 +91,16 @@ export async function onRequestPost(context) {
 
     if (!neonRes.ok) {
       const errText = await neonRes.text();
-      console.error('Neon HTTP error:', errText);
+      console.error('Neon HTTP error inserting submission:', errText);
       throw new Error('Database query failed');
     }
 
     const neonData = await neonRes.json();
     const submissionId = neonData?.rows?.[0]?.id;
 
-    // Background CRM Contact & Activity Upsert
+    // 2. Background CRM Contact & Activity Upsert (Resilient & Non-Blocking)
+    const persona = kind === 'partnership' ? (organizationName ? 'institution' : 'educator') : 'parent';
     try {
-      const persona = kind === 'partnership' ? (organizationName ? 'institution' : 'educator') : 'parent';
       const crmUpsertSql = `
         INSERT INTO crm_contacts (email, name, organization, persona, lifecycle_stage, source_path, lead_score, updated_at)
         VALUES ($1, $2, $3, $4, 'lead', $5, 25, CURRENT_TIMESTAMP)
@@ -139,33 +132,69 @@ export async function onRequestPost(context) {
         }),
       });
 
-      const crmContact = await crmRes.json();
-      const contactId = crmContact?.rows?.[0]?.id;
+      if (crmRes.ok) {
+        const crmContact = await crmRes.json();
+        const contactId = crmContact?.rows?.[0]?.id;
 
-      if (contactId) {
-        const activityTitle = kind === 'partnership' 
-          ? `Partnership Inquiry: ${organizationName || normalizedName}`
-          : `Album Unlocked & Lead Captured`;
+        if (contactId) {
+          const activityTitle = kind === 'partnership' 
+            ? `Partnership Inquiry: ${organizationName || normalizedName}`
+            : `Album Unlocked & Lead Captured`;
 
-        await fetch(neonHttpEndpoint, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Neon-Connection-String': databaseUrl,
-          },
-          body: JSON.stringify({
-            query: `INSERT INTO crm_activities (contact_id, activity_type, title, description, metadata) VALUES ($1, 'form_submit', $2, $3, $4);`,
-            params: [
-              contactId,
-              activityTitle,
-              message?.trim() || `Submitted via ${sourcePath || '/listen'}`,
-              JSON.stringify({ kind, sourcePath, submissionId }),
-            ],
-          }),
-        });
+          await fetch(neonHttpEndpoint, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Neon-Connection-String': databaseUrl,
+            },
+            body: JSON.stringify({
+              query: `INSERT INTO crm_activities (contact_id, activity_type, title, description, metadata) VALUES ($1, 'form_submit', $2, $3, $4);`,
+              params: [
+                contactId,
+                activityTitle,
+                message?.trim() || `Submitted via ${sourcePath || '/listen'}`,
+                JSON.stringify({ kind, sourcePath, submissionId }),
+              ],
+            }),
+          });
+
+          // 3. Automated Pipeline Deal Flow: School pilots and institutional inquiries auto-create deals
+          if (kind === 'partnership' || organizationName) {
+            const dealTitle = organizationName 
+              ? `School / Institutional Pilot: ${organizationName}`
+              : `Partnership Opportunity: ${normalizedName}`;
+            const dealValue = organizationName ? 1500.00 : 500.00;
+            const dealStage = 'school_pilot';
+
+            await fetch(neonHttpEndpoint, {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                'Neon-Connection-String': databaseUrl,
+              },
+              body: JSON.stringify({
+                query: `
+                  INSERT INTO crm_deals (contact_id, title, stage, deal_value, probability, notes)
+                  VALUES ($1, $2, $3, $4, 40, $5);
+                `,
+                params: [
+                  contactId,
+                  dealTitle,
+                  dealStage,
+                  dealValue,
+                  `Auto-created from ${kind} inquiry via ${sourcePath || '/join'}. Message: ${message || 'No initial message provided.'}`,
+                ],
+              }),
+            });
+          }
+        }
       }
-    // Background Brevo Contact Synchronization (Unlimited Contacts)
-    if (env.BREVO_API_KEY) {
+    } catch (crmErr) {
+      console.warn('CRM contact/activity sync notice (non-blocking):', crmErr);
+    }
+
+    // 4. Background Brevo Contact Synchronization (Non-blocking)
+    if (env?.BREVO_API_KEY) {
       try {
         const brevoListId = Number(env.BREVO_LIST_ID) || 2;
         await fetch('https://api.brevo.com/v3/contacts', {

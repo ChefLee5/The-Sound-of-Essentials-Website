@@ -1,0 +1,43 @@
+{
+  "track_id": 3,
+  "track_slug": "alphabet-song-remix",
+  "title": "Alphabet Song Remix",
+  "land_name": "Harmonia",
+  "land_id": "harmonia",
+  "land_color": "#d4a843",
+  "domain_icon": "🗣️",
+  "hero_guides": "Kenji & Aiko",
+  "age_group": "Ages 2–7 (Pre-K to Grade 1)",
+  "duration": "10–15 Minutes",
+  "materials": [
+    "Sand trays, sensory salt bins, or sandpaper letter cards",
+    "Smooth river pebbles"
+  ],
+  "quest_mission": "Explore the Echoing Caves of Harmonia with Kenji and Aiko to discover the hidden beat inside every letter of the alphabet.",
+  "rhythm_ignition": "The Syncopated Phonics Beat:\n• Instead of rushing L-M-N-O-P, follow the Remix syncopated drumbreak:\n• 'A A A... B B B... C C C... D... E E F F... G G!'\n• Children bounce on their heels to the triple-pulse rhythm.",
+  "tactile_ritual": "Sensory Letter Sculpting:\n1. Provide a shallow tray filled with colored cornmeal or beach sand.\n2. As the remix repeats letter clusters, children trace the letter with their index finger in the sand.\n3. Shake the tray gently left-to-right (tactile reset) on the beat drop.\n4. Place a pebble at the starting point of the letter stroke to anchor proper top-to-bottom stroke direction.",
+  "domain_spider": {
+    "language": "Phonemic isolation and distinct letter-name articulation without melodic slur.",
+    "cognitive": "Pattern recognition between auditory rhythm breaks and visual grapheme shapes.",
+    "physical": "Fine motor tactile finger tracing, wrist stabilization, and pre-writing grip control.",
+    "science_sensory": "Somatosensory granular friction of sand against fingertips, activating sensory nerve endings.",
+    "social_emotional": "Joy in phonological mastery; cheering when friends complete the full 26-letter circuit."
+  },
+  "teacher_whisper": "Tracing graphemes in textured mediums while chanting rhythmic phonemes binds the visual occipital cortex, motor cortex, and auditory temporal lobe into a unified reading circuit.",
+  "standards": {
+    "elof_codes": [
+      "P-LIT 1 (Phonological Awareness)",
+      "P-LIT 3 (Letter Knowledge)",
+      "P-LC 2 (Expressive Auditory Phonics)"
+    ],
+    "elof_domains": [
+      "Literacy",
+      "Language and Communication"
+    ],
+    "naeyc_standards": [
+      "2.D.04 (Alphabet Knowledge)",
+      "2.B.02 (Phoneme Segmentation)"
+    ],
+    "kindergarten_readiness": "Segments letter sounds with distinct rhythmic phrasing; identifies letter name-sound associations through syncopated beat."
+  }
+}

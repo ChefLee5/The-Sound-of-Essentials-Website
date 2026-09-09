@@ -1,0 +1,44 @@
+{
+  "track_id": 5,
+  "track_slug": "le-cheval",
+  "title": "Le Cheval",
+  "land_name": "Luminosity",
+  "land_id": "luminosity",
+  "land_color": "#d4897a",
+  "domain_icon": "🇫🇷",
+  "hero_guides": "Athena & Ezra",
+  "age_group": "Ages 2–7 (Pre-K to Grade 1)",
+  "duration": "10–15 Minutes",
+  "materials": [
+    "Two clean plastic cups or coconut halves per child (for hooves)",
+    "A wide open circle rug"
+  ],
+  "quest_mission": "Ride with Athena and Ezra across the Plains of Luminosity to study the majestic strength of the horse in French and English.",
+  "rhythm_ignition": "French Call-and-Response Trotting Rhythm:\n• Chant: 'Deux accrets le cheval, fort et puissant!'\n• Tap coconut halves or cups together on floor: [Clip-clop, clip-clop, clip-clop!]",
+  "tactile_ritual": "Equine Gaits Exploration:\n1. Children hold two cups facing downward on the floor.\n2. Gait 1 (Walk - Slow): Four distinct beats [1 - 2 - 3 - 4] on the carpet.\n3. Gait 2 (Trot - Two-beat): Alternating diagonal taps [1-2, 1-2, 1-2].\n4. Gait 3 (Gallop - Three-beat syncopation): [Ba-da-BUM! Ba-da-BUM!].\n5. Test equine panoramic vision: Stand tall and turn eyes left and right without moving head (peripheral vision challenge).",
+  "domain_spider": {
+    "language": "French vocabulary acquisition ('le cheval', 'fort', 'puissant') and equine gait terminology.",
+    "cognitive": "Auditory tempo discrimination (accelerando from 4-beat walk to 3-beat syncopated gallop).",
+    "physical": "Bilateral forearm and wrist coordination using cups as percussion tools; locomotor balance during gallop.",
+    "science_sensory": "Equine anatomy (panoramic 350-degree vision, herbivore grazing, hooves) and acoustic percussive resonance.",
+    "social_emotional": "Empathy and respect for animal nobility and courage in service of others."
+  },
+  "teacher_whisper": "Mimicking equine gaits with percussive handheld instruments forces the brain to calculate complex polyrhythms, building cerebellar synaptic density crucial for higher-order mathematics.",
+  "standards": {
+    "elof_codes": [
+      "P-LC 7 (Dual Language / Global Phonemes)",
+      "P-SCI 1 (Animal Observation)",
+      "P-PMP 1 (Locomotor Trot/Gallop)"
+    ],
+    "elof_domains": [
+      "Language and Communication",
+      "Cognition: Science",
+      "Physical Development"
+    ],
+    "naeyc_standards": [
+      "2.B.07 (World Languages & Cultural Soundscapes)",
+      "2.C.04 (Galloping & Locomotor Rhythm)"
+    ],
+    "kindergarten_readiness": "Discriminates non-native phonemic sound patterns (French vocabulary); mimics equine gait (trot, canter, gallop) with physical coordination."
+  }
+}

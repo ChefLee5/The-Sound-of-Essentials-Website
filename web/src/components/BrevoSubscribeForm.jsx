@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { submitSoeInterest } from '../services/soeSubmissions';
 import { trackLead } from '../utils/analytics';
+import { setGateUnlocked, isValidEmail } from '../utils/gateAuth';
 import './BrevoSubscribeForm.css';
 
 /**
@@ -27,7 +28,7 @@ const BrevoSubscribeForm = ({
     setErrorMsg('');
 
     const cleanEmail = email.trim().toLowerCase();
-    if (!cleanEmail || !cleanEmail.includes('@') || !cleanEmail.includes('.')) {
+    if (!isValidEmail(cleanEmail)) {
       setErrorMsg('Please enter a valid email address.');
       return;
     }
@@ -44,12 +45,7 @@ const BrevoSubscribeForm = ({
       });
 
       // 2. Local persistence for instant gate unlock
-      try {
-        localStorage.setItem('soe_user_email', cleanEmail);
-        localStorage.setItem('soe_listen_unlocked', '1');
-      } catch (storageErr) {
-        console.warn('LocalStorage unavailable:', storageErr);
-      }
+      setGateUnlocked(cleanEmail, name.trim());
 
       // 3. Analytics event
       trackLead({
@@ -67,10 +63,7 @@ const BrevoSubscribeForm = ({
     } catch (err) {
       console.warn('Subscription notice (unlocking locally):', err);
       // Graceful degradation: unlock locally even if network hiccups
-      try {
-        localStorage.setItem('soe_user_email', cleanEmail);
-        localStorage.setItem('soe_listen_unlocked', '1');
-      } catch {}
+      setGateUnlocked(cleanEmail, name.trim());
 
       trackLead({
         formName: 'brevo_subscribe_form_fallback',

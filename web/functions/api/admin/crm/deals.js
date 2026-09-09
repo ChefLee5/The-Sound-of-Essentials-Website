@@ -50,7 +50,7 @@ export async function onRequestGet(context) {
 export async function onRequestPut(context) {
   try {
     const { request, env } = context;
-    const databaseUrl = env.NEON_DATABASE_URL || env.DATABASE_URL;
+    const databaseUrl = env?.NEON_DATABASE_URL || env?.DATABASE_URL || FALLBACK_DB_URL;
     const body = await request.json();
 
     const { id, stage, deal_value, notes, probability } = body;
@@ -82,7 +82,7 @@ export async function onRequestPut(context) {
 export async function onRequestPost(context) {
   try {
     const { request, env } = context;
-    const databaseUrl = env.NEON_DATABASE_URL || env.DATABASE_URL;
+    const databaseUrl = env?.NEON_DATABASE_URL || env?.DATABASE_URL || FALLBACK_DB_URL;
     const body = await request.json();
 
     const { contact_id, title, stage, deal_value, probability, notes } = body;

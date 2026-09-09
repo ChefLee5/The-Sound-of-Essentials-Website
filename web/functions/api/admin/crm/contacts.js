@@ -83,7 +83,7 @@ export async function onRequestGet(context) {
 export async function onRequestPost(context) {
   try {
     const { request, env } = context;
-    const databaseUrl = env.NEON_DATABASE_URL || env.DATABASE_URL;
+    const databaseUrl = env?.NEON_DATABASE_URL || env?.DATABASE_URL || FALLBACK_DB_URL;
     const body = await request.json();
 
     const { email, name, phone, organization, persona, lifecycle_stage, tags, lead_score } = body;
