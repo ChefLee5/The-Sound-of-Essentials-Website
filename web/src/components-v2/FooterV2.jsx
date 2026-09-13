@@ -17,7 +17,7 @@ const FooterV2 = () => {
             <div className="v2-footer__col-title">Social</div>
             <a href="https://www.instagram.com/thesoundofessentials" target="_blank" rel="noopener noreferrer" className="v2-footer__link">Instagram</a>
             <a href="https://www.youtube.com/@TheSoundofEssentials" target="_blank" rel="noopener noreferrer" className="v2-footer__link">YouTube</a>
-            <a href="https://www.tiktok.com/@thesoundofessentials" target="_blank" rel="noopener noreferrer" className="v2-footer__link">TikTok</a>
+            <a href="https://www.tiktok.com/@soe.learn" target="_blank" rel="noopener noreferrer" className="v2-footer__link">TikTok</a>
           </div>
 
           {/* Column 2: Pages */}

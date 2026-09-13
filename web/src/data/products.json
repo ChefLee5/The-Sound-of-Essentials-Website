@@ -63,7 +63,7 @@
     ],
     "funnelStage": "lead-offer",
     "status": "available",
-    "storeUrl": "https://the-sound-of-essentials.myshopify.com/cart/53204514799932:1"
+    "storeUrl": "https://buy.stripe.com/test_7sYcN5cO04S168uc706Vq00"
   },
   {
     "id": "rhythmready-workbook",
@@ -96,8 +96,9 @@
       "curriculum"
     ],
     "funnelStage": "core-offer",
-    "status": "pre-sale",
-    "storeUrl": null
+    "status": "available",
+    "storeUrl": "https://buy.stripe.com/test_eVqbJ18xKcktbsOfjc6Vq02",
+    "printStoreUrl": "https://buy.stripe.com/test_3cI9ATeW8dox2Wi0oi6Vq03"
   },
   {
     "id": "picture-dictionary",
@@ -132,7 +133,7 @@
     ],
     "funnelStage": "premium-offer",
     "status": "pre-sale",
-    "storeUrl": null
+    "storeUrl": "https://buy.stripe.com/test_14AfZhcO02JT40m9YS6Vq06"
   },
   {
     "id": "full-quest-bundle",
@@ -140,7 +141,8 @@
     "shortName": "Full Quest Bundle",
     "type": "bundle",
     "format": "Digital Bundle",
-    "price": 89.0,
+    "price": 49.0,
+    "retailPrice": 89.0,
     "currency": "USD",
     "description": "The complete Sound of Essentials learning experience. Includes the Rhythm Quest album (19 tracks), Essential Picture Dictionary, Rhythm Quest Storybook, and Rhythm Ready Workbook — everything a family needs for a full year of music-powered learning.",
     "features": [
@@ -171,7 +173,78 @@
       "dictionary"
     ],
     "funnelStage": "bundle-offer",
-    "status": "pre-sale",
-    "storeUrl": null
+    "status": "available",
+    "storeUrl": "https://buy.stripe.com/test_5kQ9AT4hubgp0Oafjc6Vq04"
+  },
+  {
+    "id": "soe-sensory-headphones",
+    "name": "SOE \"Just Add Headphones\" Safe Sensory Kids Headphones",
+    "shortName": "Sensory Kids Headphones",
+    "type": "hardware-headphones",
+    "format": "Physical Dropshipped Hardware",
+    "price": 24.99,
+    "retailPrice": 34.99,
+    "currency": "USD",
+    "description": "Safe, volume-limited (85dB max WHO standard), wired zero-radiation sensory headphones for children. Indestructible toddler-proof EVA flex-foam, hypoallergenic breathable ear pillows, and dual SharePort co-listening daisy-chain jack.",
+    "features": [
+      "85dB Volume-Limiter (WHO Safe Hearing Standard)",
+      "Indestructible Toddler-Proof EVA Flex-Foam (Twistable & Drop-Proof)",
+      "Zero-Radiation Wired 3.5mm Jack (No batteries, no EMF)",
+      "Dual SharePort Audio Jack (Siblings listen together on 1 device)",
+      "Hypoallergenic Breathable Comfort Cushions",
+      "Compatible with iPad, Tablets, Phones, Chromebooks"
+    ],
+    "ageRange": "Ages 2–7",
+    "gradeRange": "Toddler, Pre-K to Grade 2",
+    "isbn": null,
+    "cover": "/assets/marketing/sensory-kids-headphones.jpg",
+    "category": "sensory-hardware",
+    "tags": [
+      "headphones",
+      "sensory",
+      "audio",
+      "hardware",
+      "dropship",
+      "tiktok-shop"
+    ],
+    "funnelStage": "hardware-offer",
+    "status": "available",
+    "storeUrl": "https://buy.stripe.com/test_cNi6oH01eacl8gC5IC6Vq07",
+    "tiktokShopUrl": "https://www.tiktok.com/@soe.learn"
+  },
+  {
+    "id": "soe-headphones-workbook-bundle",
+    "name": "SOE Sensory Listening & 8-Week Readiness Bundle",
+    "shortName": "Headphones + Workbook Bundle",
+    "type": "hardware-curriculum-bundle",
+    "format": "Physical Bundle (Hardware + Curriculum)",
+    "price": 39.0,
+    "retailPrice": 59.99,
+    "currency": "USD",
+    "description": "The ultimate hands-on early learning bundle: Safe 85dB Sensory Kids Headphones + Complete 8-Week Rhythm Ready Physical Workbook shipped directly to your home.",
+    "features": [
+      "85dB Safe Sensory Kids Headphones (Physical)",
+      "8-Week Rhythm Ready Full-Color Physical Workbook",
+      "19-Track Free Rhythm Quest Album Access",
+      "Dual SharePort Co-Listening Cable",
+      "Fast Free Shipping (US & Canada)"
+    ],
+    "ageRange": "Ages 2–7",
+    "gradeRange": "Pre-K to Grade 2",
+    "isbn": null,
+    "cover": "/assets/marketing/rhythm-ready-workbook-cover.webp",
+    "category": "bundle",
+    "tags": [
+      "bundle",
+      "headphones",
+      "workbook",
+      "dropship",
+      "starter-pack"
+    ],
+    "funnelStage": "hardware-bundle-offer",
+    "status": "available",
+    "storeUrl": "https://buy.stripe.com/test_28E00j9BOacldAWc706Vq08",
+    "tiktokShopUrl": "https://www.tiktok.com/@soe.learn"
   }
 ]
+

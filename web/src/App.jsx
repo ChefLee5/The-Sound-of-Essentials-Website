@@ -25,6 +25,7 @@ const Science    = lazy(() => import('./pages/Science'));
 // const AllyAnnex  = lazy(() => import('./pages/AllyAnnex'));
 const DictionarySale = lazy(() => import('./pages/DictionarySale'));
 const RhythmQuestSale = lazy(() => import('./pages/RhythmQuestSale'));
+const HeadphonesSale = lazy(() => import('./pages/HeadphonesSale'));
 const Listen     = lazy(() => import('./pages/Listen'));
 const Player     = lazy(() => import('./pages/Player'));
 const OrderSuccess = lazy(() => import('./pages/OrderSuccess'));
@@ -88,8 +89,9 @@ const App = () => {
                 <Route path="/curriculum" element={<AnimatedPage><RhythmQuestSale /></AnimatedPage>} />
                 <Route path="/rhythmready" element={<AnimatedPage><RhythmQuestSale /></AnimatedPage>} />
                 <Route path="/rhythm-ready" element={<AnimatedPage><RhythmQuestSale /></AnimatedPage>} />
-                <Route path="/summer-stretch" element={<AnimatedPage><RhythmQuestSale /></AnimatedPage>} />
-                <Route path="/rhythm-quest" element={<AnimatedPage><RhythmQuestSale /></AnimatedPage>} />
+                <Route path="/headphones" element={<AnimatedPage><HeadphonesSale /></AnimatedPage>} />
+                <Route path="/shop"       element={<AnimatedPage><HeadphonesSale /></AnimatedPage>} />
+                <Route path="/sensory-headphones" element={<AnimatedPage><HeadphonesSale /></AnimatedPage>} />
                 <Route path="/gallery"    element={<AnimatedPage><Gallery /></AnimatedPage>} />
                 <Route path="/player"     element={<AnimatedPage><Player /></AnimatedPage>} />
                 <Route path="/ads"        element={<AnimatedPage><AdsShowcase /></AnimatedPage>} />

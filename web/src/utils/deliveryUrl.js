@@ -48,6 +48,30 @@ export const FULFILLMENT_FILES = {
     pages: 80,
     cover: '/assets/marketing/rhythm-ready-workbook-cover.webp',
   },
+  'picture-dictionary': {
+    title: 'SOE Rhythm Quest: Essential Picture Dictionary (Pre-Sale Reserved)',
+    filename: 'SOE_Picture_Dictionary_Sampler.pdf',
+    format: 'EPUB / PDF',
+    size: '48.2 MB',
+    pages: 125,
+    cover: '/assets/marketing/picture-dictionary-cover.webp',
+  },
+  'full-quest-bundle': {
+    title: 'The Full Quest Bundle (Complete Learning Experience)',
+    filename: 'SOE_Rhythm_Quest_Storybook_2026-08.pdf',
+    format: 'Complete Digital Suite',
+    size: '120 MB',
+    pages: 200,
+    cover: '/assets/marketing/full-quest-bundle-cover.webp',
+  },
+  'soe-sensory-headphones': {
+    title: 'SOE "Just Add Headphones" Safe Sensory Kids Headphones',
+    filename: 'SOE_Rhythm_Quest_Storybook_2026-08.pdf',
+    format: 'Physical Order + Digital Companion',
+    size: 'Physical Hardware',
+    pages: 66,
+    cover: '/assets/marketing/sensory-kids-headphones.jpg',
+  },
 };
 
 /**

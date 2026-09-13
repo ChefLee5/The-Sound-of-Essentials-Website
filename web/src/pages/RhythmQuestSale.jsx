@@ -10,10 +10,10 @@ import { trackInitiateCheckout, appendUtmsToUrl } from '../utils/analytics';
 import './RhythmQuestSale.css';
 
 /**
- * Single source of truth for every buy CTA on this page.
- * Shopify cart permalink for The Rhythm Ready Workbook ($21 Digital / $35 Print).
+ * Single source of truth for primary buy CTAs on this page.
+ * Stripe Payment Link for The Rhythm Ready Workbook ($21 Digital).
  */
-const CHECKOUT_URL = 'https://the-sound-of-essentials.myshopify.com/cart/53204514799932:1';
+const CHECKOUT_URL = 'https://buy.stripe.com/test_eVqbJ18xKcktbsOfjc6Vq02';
 const CHECKOUT_IS_ABSOLUTE = /^https?:\/\//i.test(CHECKOUT_URL);
 
 /** The page's only buy control. Every CTA goes through it. */
@@ -992,14 +992,15 @@ const DictionaryPreSaleOffer = () => {
                 Over 4,000 words &amp; 125 scenes = <strong>~1.3¢ per illustrated word</strong>.
               </p>
 
-              <Link
-                to="/join#contact"
+              <a
+                href="https://buy.stripe.com/test_14AfZhcO02JT40m9YS6Vq06"
+                rel="noopener"
                 className="btn btn-gold btn-shimmer rq-offer__buy"
                 onClick={handleDictCheckout}
               >
                 <span>Reserve Pre-Sale Order</span>
                 <span className="rq-offer__buy-price">$55</span>
-              </Link>
+              </a>
 
               <p className="rq-offer__nudge">Priority fulfillment queue · Reserved digital edition.</p>
 

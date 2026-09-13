@@ -1,0 +1,74 @@
+{
+  "sound-of-essentials-rhythm-quest-storybook": {
+    "productId": "prod_VFTRkZZR5OIr6i",
+    "priceId": "price_1UEyUcDeDquNmfDqUlyIoJef",
+    "url": "https://buy.stripe.com/test_7sYcN5cO04S168uc706Vq00",
+    "name": "The Sound of Essentials: Rhythm Quest (Storybook)",
+    "price": 19,
+    "sku": "SOE-RQ-EBOOK"
+  },
+  "quest-starter-pack": {
+    "productId": "prod_VFTRgNZdqqIQAZ",
+    "priceId": "price_1UEyUcDeDquNmfDqIysBUHnf",
+    "url": "https://buy.stripe.com/test_8x2aEXbJW0BLcwS0oi6Vq01",
+    "name": "The Quest Starter Pack",
+    "price": 7,
+    "sku": "SOE-STARTER-PACK"
+  },
+  "rhythm-ready-workbook-digital": {
+    "productId": "prod_VFTRhFQqbr0pJZ",
+    "priceId": "price_1UEyUdDeDquNmfDqExlTK2Tk",
+    "url": "https://buy.stripe.com/test_eVqbJ18xKcktbsOfjc6Vq02",
+    "name": "SOE Rhythm Quest: Rhythm Ready Workbook (Digital)",
+    "price": 21,
+    "sku": "SOE-RR-DIGITAL"
+  },
+  "rhythm-ready-workbook-print": {
+    "productId": "prod_VFTRv5vdsLymbq",
+    "priceId": "price_1UEyUeDeDquNmfDqzPVNbxsV",
+    "url": "https://buy.stripe.com/test_3cI9ATeW8dox2Wi0oi6Vq03",
+    "name": "SOE Rhythm Quest: Rhythm Ready Workbook (Physical Print)",
+    "price": 35,
+    "sku": "SOE-RR-PRINT"
+  },
+  "complete-quest-pack": {
+    "productId": "prod_VFTRUlZq6NCo8X",
+    "priceId": "price_1UEyUeDeDquNmfDqruPWiaRE",
+    "url": "https://buy.stripe.com/test_5kQ9AT4hubgp0Oafjc6Vq04",
+    "name": "The Complete Quest Pack",
+    "price": 49,
+    "sku": "SOE-QUEST-PACK"
+  },
+  "the-rhythm-pass": {
+    "productId": "prod_VFTRoOhz9SIWHF",
+    "priceId": "price_1UEyUfDeDquNmfDqwRHSaZog",
+    "url": "https://buy.stripe.com/test_aFa28r5lyaclbsOgng6Vq05",
+    "name": "The Rhythm Pass (Monthly Membership)",
+    "price": 14.99,
+    "sku": "SOE-RHYTHM-PASS"
+  },
+  "essential-picture-dictionary-presale": {
+    "productId": "prod_VFTRKfg0hTZqe4",
+    "priceId": "price_1UEyUfDeDquNmfDqXP7iaP5U",
+    "url": "https://buy.stripe.com/test_14AfZhcO02JT40m9YS6Vq06",
+    "name": "SOE Rhythm Quest: Essential Picture Dictionary (Pre-Sale)",
+    "price": 55,
+    "sku": "SOE-DICT-PRESALE"
+  },
+  "soe-sensory-headphones": {
+    "productId": "prod_VFTehqD35PkIKt",
+    "priceId": "price_1UEygyDeDquNmfDqBQLy89WV",
+    "url": "https://buy.stripe.com/test_cNi6oH01eacl8gC5IC6Vq07",
+    "name": "SOE \"Just Add Headphones\" Safe Sensory Kids Headphones (85dB Max)",
+    "price": 24.99,
+    "sku": "SOE-HP-85DB"
+  },
+  "soe-headphones-workbook-bundle": {
+    "productId": "prod_VFTeKVacl5OPrl",
+    "priceId": "price_1UEygzDeDquNmfDqTajSX6Gi",
+    "url": "https://buy.stripe.com/test_28E00j9BOacldAWc706Vq08",
+    "name": "SOE Sensory Listening & Workbook Bundle (Headphones + 8-Week Workbook)",
+    "price": 39,
+    "sku": "SOE-HP-WB-BUNDLE"
+  }
+}

@@ -9,7 +9,8 @@ import './OrderSuccess.css';
 
 const OrderSuccess = () => {
   const [searchParams] = useSearchParams();
-  const orderId = searchParams.get('order_id') || searchParams.get('id') || 'SOE-' + Math.floor(100000 + Math.random() * 900000);
+  const rawSessionId = searchParams.get('session_id');
+  const orderId = searchParams.get('order_id') || searchParams.get('id') || (rawSessionId ? `STRIPE-${rawSessionId.slice(-8).toUpperCase()}` : `SOE-${Math.floor(100000 + Math.random() * 900000)}`);
   const customerEmail = searchParams.get('email') || '';
   const productKey = searchParams.get('product') || 'rhythm-quest-storybook';
 

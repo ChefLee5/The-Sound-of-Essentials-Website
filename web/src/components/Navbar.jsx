@@ -33,8 +33,9 @@ const Navbar = () => {
     { to: '/',           label: t('navbar.home') },
     { to: '/heroes',     label: t('navbar.heroes') },
     { to: '/science',    label: t('navbar.science') },
-    { to: '/mission',    label: t('navbar.mission') },
     { to: '/listen',     label: t('navbar.media') },
+    { to: '/workbook',   label: '📘 Workbook' },
+    { to: '/headphones', label: '🎧 Headphones' },
     { to: '/gallery',    label: '📖 Gallery' },
     { to: '/join',       label: '✉️ ' + t('navbar.contact', 'Contact') },
   ];

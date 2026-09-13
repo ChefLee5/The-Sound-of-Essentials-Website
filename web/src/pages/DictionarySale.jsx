@@ -371,13 +371,14 @@ const DictionarySale = () => {
                   <li>✓ Phonetic pronunciation guides</li>
                   <li>✓ Bilingual EN/ES support</li>
                 </ul>
-                <Link
-                  to="/join"
+                <a
+                  href="https://buy.stripe.com/test_14AfZhcO02JT40m9YS6Vq06"
+                  rel="noopener"
                   className="btn btn-gold"
                   onClick={() => trackInitiateCheckout({ sku: 'SOE-DICTIONARY', name: 'Essential Picture Dictionary', price: 55.00 })}
                 >
                   Pre-Order Dictionary ($55) →
-                </Link>
+                </a>
               </div>
 
               {/* Tier 2: The Full Quest Bundle — Featured */}
@@ -387,8 +388,8 @@ const DictionarySale = () => {
                 <div className="dict-price-card__label">The Full Quest Bundle</div>
                 <div className="dict-price-card__price-wrap">
                   <span className="dict-price-card__retail">$148</span>
-                  <span className="dict-price-card__price">$89</span>
-                  <span className="dict-price-card__discount-badge">SAVE 40%</span>
+                  <span className="dict-price-card__price">$49</span>
+                  <span className="dict-price-card__discount-badge">SAVE 65%</span>
                 </div>
                 <p className="dict-price-card__hook">
                   Everything for a full year of music-powered learning. Complete digital access across all core and premium products.
@@ -400,13 +401,14 @@ const DictionarySale = () => {
                   <li>✓ Rhythm Ready Workbook Digital ($21 value)</li>
                   <li>✓ Bonus printable activity sheets &amp; parent guide</li>
                 </ul>
-                <Link
-                  to="/join"
+                <a
+                  href="https://buy.stripe.com/test_5kQ9AT4hubgp0Oafjc6Vq04"
+                  rel="noopener"
                   className="btn btn-gold btn-shimmer"
-                  onClick={() => trackInitiateCheckout({ sku: 'SOE-QUEST-PACK', name: 'The Full Quest Bundle', price: 89.00 })}
+                  onClick={() => trackInitiateCheckout({ sku: 'SOE-QUEST-PACK', name: 'The Full Quest Bundle', price: 49.00 })}
                 >
-                  Get Full Bundle ($89) →
-                </Link>
+                  Get Full Bundle ($49) →
+                </a>
               </div>
             </div>
           </RevealSection>

@@ -1,0 +1,452 @@
+.hp-page {
+  padding-top: 5rem;
+  padding-bottom: 6rem;
+  color: var(--color-ink, #2B2016);
+  background-color: var(--color-cream, #FFF8F0);
+  min-height: 100vh;
+}
+
+.hp-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ── Hero Grid ── */
+.hp-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+@media (max-width: 900px) {
+  .hp-hero {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.hp-badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.hp-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(255, 111, 0, 0.12);
+  color: #FF6F00;
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 0.35rem 0.9rem;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 111, 0, 0.25);
+}
+
+.hp-badge--tiktok {
+  background: rgba(254, 44, 85, 0.1);
+  color: #FE2C55;
+  border-color: rgba(254, 44, 85, 0.25);
+}
+
+.hp-badge--safety {
+  background: rgba(34, 197, 94, 0.1);
+  color: #16A34A;
+  border-color: rgba(34, 197, 94, 0.25);
+}
+
+.hp-title {
+  font-family: 'Fredoka', sans-serif;
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: #2B2016;
+  margin-bottom: 1rem;
+}
+
+.hp-title-highlight {
+  color: #FF6F00;
+}
+
+.hp-subtitle {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: #5C4A3A;
+  margin-bottom: 1.75rem;
+}
+
+/* Visual Card */
+.hp-visual-card {
+  background: #FFFFFF;
+  border-radius: 28px;
+  padding: 2.5rem;
+  border: 2px solid #F0E4D3;
+  box-shadow: 0 12px 35px rgba(255, 111, 0, 0.08);
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hp-visual-glow {
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(255, 111, 0, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hp-art-wrap {
+  width: 100%;
+  max-width: 380px;
+  margin: 0 auto 1.5rem auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.hp-art-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.hp-art-wrap:hover .hp-art-img {
+  transform: scale(1.03);
+}
+
+/* Color Variant Pills */
+.hp-variants {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.hp-color-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.9rem;
+  border-radius: 50px;
+  background: #FAF7F2;
+  border: 1px solid #E5D5C5;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #5C4A3A;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.hp-color-pill.active {
+  background: #2B2016;
+  color: #FFFFFF;
+  border-color: #2B2016;
+}
+
+.hp-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+/* Pricing Box */
+.hp-pricing-box {
+  background: #FAF7F2;
+  border-radius: 20px;
+  padding: 1.75rem;
+  border: 1px solid #E5D5C5;
+  margin-bottom: 2rem;
+}
+
+.hp-price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.hp-price-current {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2B2016;
+}
+
+.hp-price-compare {
+  font-size: 1.25rem;
+  color: #9CA3AF;
+  text-decoration: line-through;
+}
+
+.hp-price-savings {
+  background: #22C55E;
+  color: #FFFFFF;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: 50px;
+  letter-spacing: 0.03em;
+}
+
+.hp-shipping-note {
+  font-size: 0.9rem;
+  color: #16A34A;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 1.25rem;
+}
+
+/* Action Buttons */
+.hp-cta-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.btn-stripe-pay {
+  background: #FF6F00;
+  color: #FFFFFF;
+  padding: 1rem 1.75rem;
+  border-radius: 50px;
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  box-shadow: 0 6px 18px rgba(255, 111, 0, 0.35);
+  transition: all 0.25s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-stripe-pay:hover {
+  background: #E66400;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(255, 111, 0, 0.45);
+}
+
+.btn-tiktok-shop {
+  background: #000000;
+  color: #FFFFFF;
+  padding: 0.95rem 1.75rem;
+  border-radius: 50px;
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  border: 1px solid #333333;
+  transition: all 0.25s ease;
+}
+
+.btn-tiktok-shop:hover {
+  background: #181818;
+  border-color: #FE2C55;
+  box-shadow: 0 0 15px rgba(254, 44, 85, 0.3);
+  transform: translateY(-2px);
+}
+
+.tiktok-icon {
+  display: inline-block;
+  font-size: 1.2rem;
+}
+
+/* ── Sensory Highlights Grid ── */
+.hp-grid-section {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.hp-section-title {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #2B2016;
+  margin-bottom: 0.5rem;
+}
+
+.hp-section-subtitle {
+  font-size: 1.1rem;
+  color: #5C4A3A;
+  max-width: 650px;
+  margin: 0 auto 3rem auto;
+}
+
+.hp-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  text-align: left;
+}
+
+.hp-feature-card {
+  background: #FFFFFF;
+  border-radius: 20px;
+  padding: 2rem;
+  border: 1px solid #F0E4D3;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.hp-feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(255, 111, 0, 0.08);
+  border-color: #FF6F00;
+}
+
+.hp-feature-icon {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+.hp-feature-title {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #2B2016;
+  margin-bottom: 0.5rem;
+}
+
+.hp-feature-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #5C4A3A;
+}
+
+/* ── Bundle Callout ── */
+.hp-bundle-banner {
+  margin-top: 5rem;
+  background: linear-gradient(135deg, #FFF0E0 0%, #FFE4CC 100%);
+  border: 2px solid #FFD0A6;
+  border-radius: 28px;
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+@media (max-width: 850px) {
+  .hp-bundle-banner {
+    grid-template-columns: 1fr;
+    padding: 2rem;
+  }
+}
+
+.hp-bundle-badge {
+  display: inline-block;
+  background: #FF6F00;
+  color: #FFFFFF;
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.3rem 0.9rem;
+  border-radius: 50px;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.hp-bundle-title {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2B2016;
+  margin-bottom: 0.75rem;
+}
+
+.hp-bundle-desc {
+  font-size: 1.05rem;
+  color: #5C4A3A;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.hp-bundle-card {
+  background: #FFFFFF;
+  border-radius: 24px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(255, 111, 0, 0.12);
+  border: 1px solid #F0E4D3;
+}
+
+.hp-bundle-price {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #2B2016;
+}
+
+.hp-bundle-retail {
+  font-size: 1.15rem;
+  color: #9CA3AF;
+  text-decoration: line-through;
+  margin-left: 0.5rem;
+}
+
+/* Creator Box */
+.hp-creator-box {
+  margin-top: 5rem;
+  background: #111827;
+  color: #F9FAFB;
+  border-radius: 24px;
+  padding: 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  border: 1px solid #374151;
+}
+
+.hp-creator-text h3 {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1.6rem;
+  color: #FFFFFF;
+  margin-bottom: 0.5rem;
+}
+
+.hp-creator-text p {
+  color: #9CA3AF;
+  font-size: 1rem;
+  max-width: 600px;
+}
+
+.btn-creator-sample {
+  background: linear-gradient(135deg, #FE2C55, #FF6F00);
+  color: #FFFFFF;
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 700;
+  padding: 0.85rem 1.75rem;
+  border-radius: 50px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-creator-sample:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(254, 44, 85, 0.4);
+}

@@ -662,7 +662,7 @@ const AdminCrm = () => {
             <div className="crm-stat-card__value" style={{ color: '#16A34A' }}>
               ${(stats?.totalLtv || 0).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
             </div>
-            <span className="crm-stat-card__meta">Shopify + Direct</span>
+            <span className="crm-stat-card__meta">Stripe + Direct</span>
           </div>
         </div>
 
@@ -954,7 +954,7 @@ const AdminCrm = () => {
               activities.map((act) => (
                 <div key={act.id} className="crm-activity-item">
                   <div className="crm-activity-icon">
-                    {act.activity_type === 'shopify_order' ? '💳' : act.activity_type === 'form_submit' ? '📝' : act.activity_type === 'email_outreach' ? '✉️' : '🎵'}
+                    {act.activity_type === 'stripe_checkout' || act.activity_type === 'shopify_order' ? '💳' : act.activity_type === 'form_submit' ? '📝' : act.activity_type === 'email_outreach' ? '✉️' : '🎵'}
                   </div>
                   <div className="crm-activity-body">
                     <div className="crm-activity-header">
