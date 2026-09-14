@@ -462,7 +462,7 @@ const Home = () => {
           </RevealSection>
 
           <RevealSection delay={0.4} className="text-center" style={{ marginTop: '2.5rem' }}>
-            <Link to="/rhythm-quest" className="btn btn-gold btn-shimmer btn-lg">
+            <Link to="/rhythm-ready" className="btn btn-gold btn-shimmer btn-lg">
               {t('home.quest_offer.cta')}
             </Link>
           </RevealSection>
