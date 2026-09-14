@@ -61,6 +61,12 @@
   border-color: rgba(34, 197, 94, 0.25);
 }
 
+.hp-badge--certified {
+  background: rgba(37, 99, 235, 0.1);
+  color: #2563EB;
+  border-color: rgba(37, 99, 235, 0.25);
+}
+
 .hp-title {
   font-family: 'Fredoka', sans-serif;
   font-size: clamp(2.2rem, 4vw, 3.2rem);
@@ -124,12 +130,67 @@
   transform: scale(1.03);
 }
 
-/* Color Variant Pills */
-.hp-variants {
+/* Gallery Thumbnails */
+.hp-gallery-thumbs {
   display: flex;
   justify-content: center;
-  gap: 0.75rem;
-  margin-bottom: 1.5rem;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+  overflow-x: auto;
+  padding: 0.25rem 0;
+}
+
+.hp-thumb-btn {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  border: 2px solid #E5D5C5;
+  background: #FAF7F2;
+  padding: 2px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.hp-thumb-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.hp-thumb-btn:hover {
+  border-color: #FF6F00;
+  transform: translateY(-2px);
+}
+
+.hp-thumb-btn.active {
+  border-color: #FF6F00;
+  box-shadow: 0 0 0 2px rgba(255, 111, 0, 0.25);
+  background: #FFFFFF;
+}
+
+/* Color Variant Pills */
+.hp-variants-wrap {
+  margin-bottom: 1.25rem;
+}
+
+.hp-variants-label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #786454;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.hp-variants {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
 }
 
 .hp-color-pill {
@@ -450,3 +511,78 @@
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(254, 44, 85, 0.4);
 }
+
+/* ── Sourcing Transparency Banner ── */
+.hp-sourcing-banner {
+  margin-top: 1.5rem;
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 1.25rem;
+  border: 1px dashed #CBD5E1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.hp-rating-tag {
+  background: #FEF08A;
+  color: #854D0E;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 50px;
+  margin-left: auto;
+}
+
+/* ── Technical Specifications Section ── */
+.hp-specs-section {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.hp-specs-table-wrap {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #FFFFFF;
+  border-radius: 20px;
+  padding: 1.5rem 2rem;
+  border: 1px solid #F0E4D3;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.04);
+}
+
+.hp-specs-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.hp-specs-table tr {
+  border-bottom: 1px solid #F3EDE4;
+}
+
+.hp-specs-table tr:last-child {
+  border-bottom: none;
+}
+
+.hp-spec-key {
+  padding: 0.85rem 1rem 0.85rem 0;
+  font-weight: 700;
+  color: #2B2016;
+  font-size: 0.95rem;
+  width: 35%;
+}
+
+.hp-spec-val {
+  padding: 0.85rem 0;
+  color: #5C4A3A;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 600px) {
+  .hp-spec-key {
+    width: 45%;
+    font-size: 0.85rem;
+  }
+  .hp-spec-val {
+    font-size: 0.85rem;
+  }
+}
+

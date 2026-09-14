@@ -65,12 +65,12 @@ export const FULFILLMENT_FILES = {
     cover: '/assets/marketing/full-quest-bundle-cover.webp',
   },
   'soe-sensory-headphones': {
-    title: 'SOE "Just Add Headphones" Safe Sensory Kids Headphones',
+    title: 'AWATRUE HK05 Safe Sensory Kids Headphones (74/85dB)',
     filename: 'SOE_Rhythm_Quest_Storybook_2026-08.pdf',
     format: 'Physical Order + Digital Companion',
     size: 'Physical Hardware',
     pages: 66,
-    cover: '/assets/marketing/sensory-kids-headphones.jpg',
+    cover: '/assets/marketing/headphones/hero.jpg',
   },
 };
 
