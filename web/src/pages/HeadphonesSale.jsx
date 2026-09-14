@@ -59,8 +59,8 @@ const GALLERY_THUMBNAILS = [
   { id: 'hero', label: 'Overview', image: '/assets/marketing/headphones/hero.jpg' },
   { id: 'angle', label: 'Ergonomic Fit', image: '/assets/marketing/headphones/angle.jpg' },
   { id: 'cushion', label: 'Protein Cushions', image: '/assets/marketing/headphones/cushion.jpg' },
-  { id: 'headband', label: 'Adjustable Band', image: '/assets/marketing/headphones/headband.jpg' },
-  { id: 'detail', label: 'Compact Storage', image: '/assets/marketing/headphones/detail.jpg' },
+  { id: 'headband', label: 'Kids-Safe Volume Limiter (74/85dB)', image: '/assets/marketing/headphones/headband.jpg' },
+  { id: 'detail', label: 'Multiple Scenario Adaptation', image: '/assets/marketing/headphones/detail.jpg' },
   { id: 'lineup', label: 'All 6 Editions', image: '/assets/marketing/headphones/lineup.jpg' },
 ];
 
