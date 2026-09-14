@@ -198,9 +198,6 @@ const Home = () => {
                     <Link to="/listen" className="btn btn-gold btn-shimmer hero__btn-primary">
                       {t('home.hero_offer.cta_primary')}
                     </Link>
-                    <Link to="/rhythm-quest" className="btn btn-outline hero__btn-secondary">
-                      {t('home.hero_offer.cta_secondary')}
-                    </Link>
                   </div>
 
                   <div className="hero__guarantee">
