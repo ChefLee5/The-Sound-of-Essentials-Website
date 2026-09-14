@@ -28,11 +28,46 @@
   }
 }
 
+.hp-details-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.hp-corner-logo-wrap {
+  flex-shrink: 0;
+}
+
+.hp-corner-logo {
+  width: 96px;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.1));
+  transition: transform 0.3s ease;
+}
+
+.hp-corner-logo:hover {
+  transform: scale(1.05) rotate(1deg);
+}
+
 .hp-badge-row {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+  .hp-details-topbar {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .hp-corner-logo {
+    width: 76px;
+  }
 }
 
 .hp-badge {

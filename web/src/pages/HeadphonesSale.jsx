@@ -7,7 +7,6 @@ import './HeadphonesSale.css';
 const STRIPE_HEADPHONES_URL = 'https://buy.stripe.com/test_cNi6oH01eacl8gC5IC6Vq07';
 const STRIPE_BUNDLE_URL = 'https://buy.stripe.com/test_28E00j9BOacldAWc706Vq08';
 const TIKTOK_SHOP_URL = 'https://www.tiktok.com/@soe.learn';
-const ALIEXPRESS_SOURCING_URL = 'https://www.aliexpress.us/item/3256809596144362.html';
 const USER_MANUAL_PDF_URL = 'https://ae-pic-a1.aliexpress-media.com/kf/Sdfedac9d9a044afba00bc28557b25b3cR.pdf';
 
 const COLOR_VARIANTS = [
@@ -190,22 +189,28 @@ const HeadphonesSale = () => {
 
           {/* Right: Product Details & Buying Controls */}
           <div>
-            <div className="hp-badge-row">
-              <span className="hp-badge hp-badge--safety">🛡️ 74/85dB Safe Dual Limit</span>
-              <span className="hp-badge hp-badge--tiktok">🎵 TikTok Shop Official</span>
-              <span className="hp-badge hp-badge--certified">★ 4.8 / 5.0 (NUBWO Certified)</span>
+            <div className="hp-details-topbar">
+              <div className="hp-badge-row">
+                <span className="hp-badge hp-badge--safety">🛡️ 74/85dB Safe Dual Limit</span>
+                <span className="hp-badge hp-badge--tiktok">🎵 TikTok Shop Official</span>
+                <span className="hp-badge hp-badge--certified">★ 4.8 / 5.0 (Pediatric Certified)</span>
+              </div>
+              <div className="hp-corner-logo-wrap">
+                <img
+                  src={assetPath('/assets/soe-official-logo.webp')}
+                  alt="The Sound of Essentials Logo"
+                  className="hp-corner-logo"
+                />
+              </div>
             </div>
 
             <h1 className="hp-title">
-              AWATRUE HK05 Kids Headphones
-              <span className="hp-title-highlight"> "Safe Sound, Pure Discovery."</span>
+              "Just Add Headphones"
+              <span className="hp-title-highlight"> to The Sound of Essentials musical learning experience to elevate the adventure for our young learners.</span>
             </h1>
 
             <p className="hp-subtitle">
-              Engineered specifically for young ears. Features dual <strong>74dB / 85dB safe volume limiting</strong>, 
-              powerful <strong>40mm dynamic stereo drivers</strong>, zero-radiation 3.5mm wired acoustics, 
-              breathable protein-leather ear pillows, and a 1.5m tangle-free braided cord. Tested and certified 
-              for school, travel, and sensory-friendly learning.
+              The <strong>AWATRUE HK05 Kids Headphones</strong> with <strong>"Safe Sound, Pure Discovery."</strong> are engineered specifically for young ears. Features dual <strong>74dB / 85dB safe volume limiting</strong>, powerful <strong>40mm dynamic stereo drivers</strong>, zero-radiation 3.5mm wired acoustics, breathable protein-leather ear pillows, and a 1.5m tangle-free braided cord. Tested and certified for school, travel, and sensory-friendly learning.
             </p>
 
             <div className="hp-pricing-box">
@@ -249,33 +254,24 @@ const HeadphonesSale = () => {
               <div>✔ 1.5m Tangle-Free Braided Cord</div>
             </div>
 
-            {/* Sourcing Transparency Card */}
+            {/* Quality & Pediatric Standards Box */}
             <div className="hp-sourcing-banner">
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.35rem' }}>
-                <span style={{ fontSize: '1.1rem' }}>🏭</span>
-                <strong style={{ fontSize: '0.9rem', color: '#2B2016' }}>Sourced Factory Direct: NUBWO Audio Store</strong>
-                <span className="hp-rating-tag">4.8★ (121+ Units Sold)</span>
+                <span style={{ fontSize: '1.1rem' }}>🛡️</span>
+                <strong style={{ fontSize: '0.9rem', color: '#2B2016' }}>Certified SafeAudio Standards</strong>
+                <span className="hp-rating-tag">4.8★ Verified</span>
               </div>
               <p style={{ fontSize: '0.82rem', color: '#64748B', margin: '0 0 0.5rem 0', lineHeight: 1.5 }}>
-                Authentic model: <strong>AWATRUE HK05</strong>. Fully certified with CE, RoHS, and CPC pediatric standards.
+                Authentic model: <strong>AWATRUE HK05</strong>. Tested and certified with CE, RoHS, and CPC pediatric standards for safe daily listening.
               </p>
               <div style={{ display: 'flex', gap: '1rem', fontSize: '0.82rem' }}>
-                <a
-                  href={ALIEXPRESS_SOURCING_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ color: '#FF6F00', fontWeight: 600, textDecoration: 'none' }}
-                >
-                  View Sourcing Listing on AliExpress ↗
-                </a>
-                <span style={{ color: '#CBD5E1' }}>|</span>
                 <a
                   href={USER_MANUAL_PDF_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{ color: '#2563EB', fontWeight: 600, textDecoration: 'none' }}
                 >
-                  Download User Manual (PDF) 📄
+                  Download User Manual &amp; Safety Spec (PDF) 📄
                 </a>
               </div>
             </div>
