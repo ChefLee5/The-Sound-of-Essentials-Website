@@ -5,6 +5,7 @@
  */
 
 const FALLBACK_DB_URL = 'postgresql://neondb_owner:npg_ks2SarDnOB1E@ep-wandering-voice-ae85papv.c-2.us-east-2.aws.neon.tech/neondb?sslmode=require';
+const DEFAULT_BREVO_LIST_ID = 2; // SOE_Album_Listeners
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export async function onRequestPost(context) {
@@ -194,14 +195,15 @@ export async function onRequestPost(context) {
     }
 
     // 4. Background Brevo Contact Synchronization (Non-blocking)
-    if (env?.BREVO_API_KEY) {
+    const brevoApiKey = env?.BREVO_API_KEY;
+    const brevoListId = Number(env?.BREVO_LIST_ID) || DEFAULT_BREVO_LIST_ID;
+    if (brevoApiKey) {
       try {
-        const brevoListId = Number(env.BREVO_LIST_ID) || 2;
-        await fetch('https://api.brevo.com/v3/contacts', {
+        const brevoRes = await fetch('https://api.brevo.com/v3/contacts', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
-            'api-key': env.BREVO_API_KEY,
+            'api-key': brevoApiKey,
           },
           body: JSON.stringify({
             email: normalizedEmail,
@@ -214,6 +216,10 @@ export async function onRequestPost(context) {
             updateEnabled: true,
           }),
         });
+        if (!brevoRes.ok) {
+          const brevoErrText = await brevoRes.text();
+          console.warn('Brevo Sync non-OK status:', brevoRes.status, brevoErrText);
+        }
       } catch (brevoErr) {
         console.warn('Brevo Sync notice (non-blocking):', brevoErr);
       }

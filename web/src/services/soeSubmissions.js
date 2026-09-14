@@ -82,6 +82,7 @@ export async function submitSoeInterest({
     honeypot,
   };
 
+  // 1. Primary: Try relative /api/submit (Vercel & Cloudflare native)
   try {
     const response = await fetch('/api/submit', {
       method: 'POST',
@@ -95,7 +96,26 @@ export async function submitSoeInterest({
       return data;
     }
   } catch (e) {
-    console.warn('Edge submission failed, trying fallback...', e);
+    console.warn('Relative /api/submit failed, trying edge fallback...', e);
+  }
+
+  // 2. Secondary: Try live edge endpoint (ensures GitHub Pages / static previews sync to Brevo & Neon)
+  try {
+    if (typeof window !== 'undefined' && !window.location.hostname.includes('soe-website-b7j.pages.dev')) {
+      const edgeRes = await fetch('https://soe-website-b7j.pages.dev/api/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+
+      if (edgeRes.ok) {
+        const edgeData = await edgeRes.json();
+        flushBackupLeads().catch(() => {});
+        return edgeData;
+      }
+    }
+  } catch (edgeErr) {
+    console.warn('Edge fallback unreachable, trying Supabase RPC...', edgeErr);
   }
 
   // Fallback to Supabase RPC if edge API is unreachable

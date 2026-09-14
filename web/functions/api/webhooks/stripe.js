@@ -4,6 +4,7 @@
  */
 
 const FALLBACK_DB_URL = 'postgresql://neondb_owner:npg_ks2SarDnOB1E@ep-wandering-voice-ae85papv.c-2.us-east-2.aws.neon.tech/neondb?sslmode=require';
+const DEFAULT_BREVO_BUYERS_LIST_ID = 3; // SOE_Buyers
 
 async function queryNeon(databaseUrl, sql, params = []) {
   const finalUrl = databaseUrl || FALLBACK_DB_URL;
@@ -60,7 +61,7 @@ export async function onRequestPost(context) {
     const { request, env } = context;
     const databaseUrl = env?.NEON_DATABASE_URL || env?.DATABASE_URL || FALLBACK_DB_URL;
     const brevoApiKey = env?.BREVO_API_KEY;
-    const brevoBuyersListId = env?.BREVO_BUYERS_LIST_ID || 3;
+    const brevoBuyersListId = Number(env?.BREVO_BUYERS_LIST_ID) || DEFAULT_BREVO_BUYERS_LIST_ID;
 
     const event = await request.json();
 
