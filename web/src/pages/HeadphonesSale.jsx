@@ -205,8 +205,8 @@ const HeadphonesSale = () => {
             </div>
 
             <h1 className="hp-title">
-              "Just Add Headphones"
-              <span className="hp-title-highlight"> to The Sound of Essentials musical learning experience to elevate the adventure for our young learners.</span>
+              <span className="hp-title-highlight">"Just Add Headphones"</span>
+              <span className="hp-title-lead"> to The Sound of Essentials musical learning experience to elevate the adventure for our young learners.</span>
             </h1>
 
             <p className="hp-subtitle">
@@ -258,7 +258,7 @@ const HeadphonesSale = () => {
             <div className="hp-sourcing-banner">
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.35rem' }}>
                 <span style={{ fontSize: '1.1rem' }}>🛡️</span>
-                <strong style={{ fontSize: '0.9rem', color: '#2B2016' }}>Certified SafeAudio Standards</strong>
+                <strong style={{ fontSize: '0.9rem', color: 'var(--color-text-primary, #E65100)' }}>Certified SafeAudio Standards</strong>
                 <span className="hp-rating-tag">4.8★ Verified</span>
               </div>
               <p style={{ fontSize: '0.82rem', color: '#64748B', margin: '0 0 0.5rem 0', lineHeight: 1.5 }}>
