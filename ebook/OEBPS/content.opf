@@ -8,7 +8,7 @@
     <dc:language>en</dc:language>
     <dc:description>A 4,162-word picture dictionary mapped to the Oxford Picture Dictionary scope, contextualized in the 7 Lands of the SOE Rhythm Quest universe.</dc:description>
     <dc:rights>© 2026 The Sound of Essentials. All rights reserved.</dc:rights>
-    <meta property="dcterms:modified">2026-03-22T20:50:56Z</meta>
+    <meta property="dcterms:modified">2026-09-14T21:41:39Z</meta>
   </metadata>
 
   <manifest>
@@ -289,7 +289,6 @@
     <item id="img_land5_sports_fitness" href="images/land5-sports-fitness.png" media-type="image/png"/>
     <item id="img_land5_the_dentist" href="images/land5-the-dentist.png" media-type="image/png"/>
     <item id="img_land5_the_doctors_office" href="images/land5-the-doctors-office.png" media-type="image/png"/>
-    <item id="img_land5_the_human_body" href="images/land5-the-human-body.png" media-type="image/png"/>
     <item id="img_land5_the_kitchen" href="images/land5-the-kitchen.png" media-type="image/png"/>
     <item id="img_land5_the_pharmacy" href="images/land5-the-pharmacy.png" media-type="image/png"/>
     <item id="img_land5_the_produce_market" href="images/land5-the-produce-market.png" media-type="image/png"/>
