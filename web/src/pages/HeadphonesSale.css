@@ -114,6 +114,7 @@
 .hp-title-highlight {
   color: var(--color-orange, #FF6F00);
   display: inline;
+  font-style: italic;
 }
 
 .hp-title-lead {
