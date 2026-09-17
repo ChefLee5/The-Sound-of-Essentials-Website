@@ -104,10 +104,11 @@ export function mediaRoomSchema(trackTitles) {
     name: 'The Sound of Essentials: Rhythm Quest',
     description: '19 original educational tracks designed for the developing brain, covering language, math, movement, time, nature, and more.',
     numTracks: tracksData.length,
+    gtin12: '885000556098',
     genre: ['Children\'s Music', 'Educational'],
     byArtist: {
       '@type': 'MusicGroup',
-      name: 'Sound of Essentials',
+      name: 'The Sound of Essentials',
     },
     image: `${SITE_URL}/assets/marketing/quest-collage.webp`,
     track: tracksData.map((track, i) => ({
@@ -120,6 +121,7 @@ export function mediaRoomSchema(trackTitles) {
       inAlbum: {
         '@type': 'MusicAlbum',
         name: 'The Sound of Essentials: Rhythm Quest',
+        gtin12: '885000556098',
       },
     })),
   };
@@ -189,10 +191,11 @@ export function productsSchema() {
         : 'https://schema.org/PreOrder',
       seller: {
         '@type': 'Organization',
-        name: 'Sound of Essentials',
+        name: 'The Sound of Essentials',
       },
     },
     ...(product.isbn ? { isbn: product.isbn } : {}),
+    ...(product.gtin12 ? { gtin12: product.gtin12 } : {}),
     ...(product.features ? {
       additionalProperty: product.features.map(f => ({
         '@type': 'PropertyValue',

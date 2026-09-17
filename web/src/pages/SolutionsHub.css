@@ -1,0 +1,192 @@
+/* ── Solutions Hub Styles (Bright & Playful Design System) ── */
+
+.solutions-hub {
+  background-color: #FFF8F0;
+  color: #2B2016;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  padding-bottom: 80px;
+}
+
+.hub-container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.hub-hero {
+  padding: 60px 0 40px;
+  text-align: center;
+}
+
+.hub-eyebrow {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #FF6F00;
+  background: #FFFFFF;
+  border: 1px solid #F0E4D3;
+  padding: 6px 18px;
+  border-radius: 50px;
+  margin-bottom: 20px;
+}
+
+.hub-title {
+  font-family: 'Fredoka', 'Bricolage Grotesque', sans-serif;
+  font-size: 44px;
+  font-weight: 700;
+  color: #2B2016;
+  margin: 0 auto 16px;
+  max-width: 800px;
+  letter-spacing: -0.01em;
+}
+
+@media (max-width: 768px) {
+  .hub-title {
+    font-size: 30px;
+  }
+}
+
+.hub-subtitle {
+  font-size: 18px;
+  color: #5C4A3A;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.hub-section {
+  padding: 40px 0 20px;
+}
+
+.hub-section-header {
+  margin-bottom: 28px;
+}
+
+.hub-section-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #FF6F00;
+  margin-bottom: 6px;
+}
+
+.hub-section-header h2 {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #2B2016;
+  margin: 0 0 6px;
+}
+
+.hub-section-header p {
+  font-size: 15px;
+  color: #5C4A3A;
+  margin: 0;
+}
+
+.hub-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 960px) {
+  .hub-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .hub-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.hub-card {
+  background: #FFFFFF;
+  border-radius: 20px;
+  border: 1px solid #F0E4D3;
+  padding: 24px;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 14px rgba(43, 32, 22, 0.03);
+  transition: all 0.25s ease;
+}
+
+.hub-card:hover {
+  border-color: #FF6F00;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(255, 111, 0, 0.12);
+}
+
+.hub-card-badge {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #FF6F00;
+  margin-bottom: 10px;
+}
+
+.hub-card-title {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #2B2016;
+  margin: 0 0 10px;
+  line-height: 1.35;
+}
+
+.hub-card-desc {
+  font-size: 13px;
+  color: #5C4A3A;
+  line-height: 1.55;
+  margin: 0 0 16px;
+  flex-grow: 1;
+}
+
+.hub-card-link {
+  font-size: 13px;
+  font-weight: 600;
+  color: #FF6F00;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.hub-bottom-cta {
+  margin-top: 60px;
+  background: #FFFFFF;
+  border: 1px solid #F0E4D3;
+  border-radius: 28px;
+  padding: 48px 32px;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(43, 32, 22, 0.04);
+}
+
+.hub-bottom-cta h2 {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 32px;
+  color: #2B2016;
+  margin: 0 0 12px;
+}
+
+.hub-bottom-cta p {
+  font-size: 16px;
+  color: #5C4A3A;
+  max-width: 600px;
+  margin: 0 auto 28px;
+}
+
+.hub-cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}

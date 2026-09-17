@@ -32,6 +32,9 @@ const OrderSuccess = lazy(() => import('./pages/OrderSuccess'));
 const Gallery    = lazy(() => import('./pages/Gallery'));
 const AdsShowcase = lazy(() => import('./pages/AdsShowcase'));
 const AdminCrm   = lazy(() => import('./pages/AdminCrm'));
+const ProgrammaticPersonaPage = lazy(() => import('./pages/ProgrammaticPersonaPage'));
+const SolutionsHub = lazy(() => import('./pages/SolutionsHub'));
+const AdvertorialStory = lazy(() => import('./pages/AdvertorialStory'));
 
 // ── V2 Redesign Routes (parallel, isolated under /v2) ───────────
 const HomeV2      = lazy(() => import('./pages-v2/HomeV2'));
@@ -101,6 +104,15 @@ const App = () => {
                 <Route path="/campaigns"  element={<AnimatedPage><AdsShowcase /></AnimatedPage>} />
                 <Route path="/order-success" element={<AnimatedPage><OrderSuccess /></AnimatedPage>} />
                 <Route path="/download"   element={<AnimatedPage><OrderSuccess /></AnimatedPage>} />
+                {/* Programmatic SEO Solutions Engine */}
+                <Route path="/solutions" element={<AnimatedPage><SolutionsHub /></AnimatedPage>} />
+                <Route path="/for/:slug" element={<AnimatedPage><ProgrammaticPersonaPage /></AnimatedPage>} />
+                <Route path="/solutions/:slug" element={<AnimatedPage><ProgrammaticPersonaPage /></AnimatedPage>} />
+                <Route path="/guides/:slug" element={<AnimatedPage><ProgrammaticPersonaPage /></AnimatedPage>} />
+                {/* Native Advertorial & Pre-sell Bridge Pages */}
+                <Route path="/story" element={<AnimatedPage><AdvertorialStory /></AnimatedPage>} />
+                <Route path="/quieter-way" element={<AnimatedPage><AdvertorialStory /></AnimatedPage>} />
+                <Route path="/advertorial" element={<AnimatedPage><AdvertorialStory /></AnimatedPage>} />
                 <Route path="/admin/crm"  element={<AnimatedPage><AdminCrm /></AnimatedPage>} />
                 <Route path="/admin/crm/*" element={<AnimatedPage><AdminCrm /></AnimatedPage>} />
                 <Route path="/admin"      element={<Navigate to="/admin/crm" replace />} />
