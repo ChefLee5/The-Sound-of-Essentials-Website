@@ -176,38 +176,8 @@ const Mission = () => {
                 />
             </section>
 
-            {/* ── The Manifesto ── */}
-            <section className="section glow-plum">
-                <div className="container">
-                    <RevealSection>
-                        <div className="manifesto-block text-center">
-                            <h2 style={{ fontSize: 'clamp(1.8rem, 3.5vw, 2.6rem)', maxWidth: '800px', margin: '0 auto 2rem' }}>
-                                "Right now, 300 million children on this planet cannot read at a basic level.
-                                44 million teachers are absent from classrooms that need them most."
-                            </h2>
-                            <div className="divider divider-center"></div>
-                            <p className="section-subtitle" style={{ margin: '0 auto' }}>
-                                These are not just statistics. Behind every number is a child whose neurological
-                                window of opportunity is closing. The systems designed to help them are
-                                overwhelmed, underfunded, and too slow.
-                            </p>
-                        </div>
-                    </RevealSection>
-
-                    <RevealSection>
-                        <div className="manifesto-stats">
-                            <AnimatedStat value="300" suffix="M" label="Children lack basic literacy worldwide" color="var(--color-gold)" />
-                            <AnimatedStat value="44" suffix="M" label="Global teacher deficit — classrooms without educators" color="var(--color-sage)" />
-                            <AnimatedStat value="1000" suffix="" label="Critical days of brain development — the biological window" color="var(--color-plum-light)" />
-                        </div>
-                    </RevealSection>
-                </div>
-            </section>
-
-
-
             {/* ══════════════════════════════════════════════════
-                 STORY SCROLL — The SOE Brand Story
+                 STORY SCROLL — The SOE Brand Story & Manifesto
                  Five immersive sections told through scroll
                  ══════════════════════════════════════════════════ */}
             <StoryScroll aria-label="The Sound of Essentials — Our Story">
@@ -218,203 +188,159 @@ const Mission = () => {
                 <hr className="flow-section__divider" style={{ borderColor: 'rgba(255, 255, 255, 0.35)' }} />
                 <div>
                   <h2 className="flow-section__headline">
-                    They<br />
-                    Called It<br />
-                    Non-<br />
-                    Essential
+                    A Solution.<br />
+                    Not<br />
+                    A Sale.
                   </h2>
                 </div>
                 <hr className="flow-section__divider" style={{ borderColor: 'rgba(255, 255, 255, 0.35)' }} />
                 <p className="flow-section__body">
-                  When the world shut down, they told our children that music was "non-essential."
-                  That art could wait. That movement wasn't a priority.
-                  Guided by a father's heart and a mother's love, they looked at their own children and knew — they were wrong.
-                  So they built the answer from scratch.
+                  I am not here to sell you on music. I am bringing an enduring solution to your problem.
+                  Our front door is a complete, 19-track album of originally created children&apos;s music,
+                  gifted 100% free to every family. Foundational sensory learning is a birthright, not a luxury.
+                  We do not ask parents to trust a promise; we give them the living proof first.
                 </p>
+                <hr className="flow-section__divider" style={{ borderColor: 'rgba(255, 255, 255, 0.35)' }} />
+                <div className="flow-columns">
+                  <div className="flow-column">
+                    <p className="flow-column__title">19 Free Tracks</p>
+                    <p className="flow-column__text">
+                      A complete original studio album gifted without paywalls, subscriptions, or credit cards.
+                    </p>
+                  </div>
+                  <div className="flow-column">
+                    <p className="flow-column__title">The Living Solution</p>
+                    <p className="flow-column__text">
+                      An acoustic antidote to screen fatigue, sensory overload, and fractured childhood attention.
+                    </p>
+                  </div>
+                  <div className="flow-column">
+                    <p className="flow-column__title">Ages 2–7 Sanctuary</p>
+                    <p className="flow-column__text">
+                      Targeted early immersion during the most critical neural development window of a child&apos;s life.
+                    </p>
+                  </div>
+                </div>
               </FlowSection>
 
-              {/* ── 02: THE EMERGENCY ── */}
-              <FlowSection aria-label="The Emergency" style={{ backgroundColor: '#1a1a2e', color: '#fff' }}>
-                <p className="flow-section__label">02 — The Emergency</p>
+              {/* ── 02: THE EQUITABLE EXCHANGE ── */}
+              <FlowSection aria-label="The Equitable Exchange" style={{ backgroundColor: '#1a1a2e', color: '#fff' }}>
+                <p className="flow-section__label">02 — The Equitable Exchange</p>
                 <hr className="flow-section__divider" style={{ borderColor: 'rgba(255,255,255,0.25)' }} />
                 <div>
                   <h2 className="flow-section__headline">
-                    300<br />
-                    Million<br />
-                    Children
+                    An<br />
+                    Equitable<br />
+                    Exchange
                   </h2>
                 </div>
                 <hr className="flow-section__divider" style={{ borderColor: 'rgba(255,255,255,0.25)' }} />
                 <p className="flow-section__body">
-                  Right now, 300 million children cannot read at a basic level.
-                  44 million teachers are absent from the classrooms that need them most.
-                  These are not projections. This is happening today — and the systems
-                  designed to help are overwhelmed, underfunded, and too slow.
+                  When families choose our physical workbooks, illustrated picture dictionaries, and learning tools,
+                  it is never an extraction. It is an equitable exchange: a willing investment made by parents
+                  for the profound calm, focus, and cognitive transformation we bring into their home sanctuary.
                 </p>
-                <hr className="flow-section__divider" style={{ borderColor: 'rgba(255,255,255,0.25)' }} />
-
-                {/* ── Biological Imperative ── */}
-                <div className="flow-bio-block">
-                  <div className="flow-bio-block__visual">
-                    <div className="neural-viz" aria-hidden="true">
-                      <img
-                        src={assetPath('/assets/marketing/busy-brain.webp')}
-                        alt="Busy brain illustration"
-                        className="neural-brain-img"
-                      />
-                      <div className="neural-overlay">
-                        <span className="neural-number">1M</span>
-                        <span className="neural-label">connections / second</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flow-bio-block__text">
-                    <p className="flow-bio-block__title">The Biological Imperative</p>
-                    <p className="flow-bio-block__body">
-                      A child's brain doesn't wait for the world to catch up.
-                      In the first 1,000 days of life, it forms over one million new
-                      neural connections every single second — the most explosive period of
-                      cognitive development a human will ever experience.
-                    </p>
-                    <p className="flow-bio-block__body" style={{ marginTop: '0.75rem', opacity: 0.8 }}>
-                      Miss this window and no curriculum, no policy, no funding can fully recover
-                      what was lost. Biology operates on its own timeline.
-                    </p>
-                  </div>
-                </div>
-
                 <hr className="flow-section__divider" style={{ borderColor: 'rgba(255,255,255,0.25)' }} />
                 <div className="flow-columns">
                   <div className="flow-column">
-                    <p className="flow-column__title">300M</p>
+                    <p className="flow-column__title">A Willing Investment</p>
                     <p className="flow-column__text">
-                      Children who have never read a sentence. Each one a mind the world can't afford to lose.
+                      Parents invest willingly in tangible, screen-free mastery their children can hold, turn, and master.
                     </p>
                   </div>
                   <div className="flow-column">
-                    <p className="flow-column__title">44M</p>
+                    <p className="flow-column__title">Home Sanctuary</p>
                     <p className="flow-column__text">
-                      Empty desks where teachers should be. Entire communities raising children without guides.
+                      Restoring peace to family life by replacing overstimulating digital noise with focused acoustic presence.
                     </p>
                   </div>
                   <div className="flow-column">
-                    <p className="flow-column__title">1,000 Days</p>
+                    <p className="flow-column__title">Profound Equity</p>
                     <p className="flow-column__text">
-                      The non-negotiable window. After it closes, the architecture of the brain is set.
+                      Transformative early literacy, numeracy, and motor foundations that level the playing field for life.
                     </p>
                   </div>
                 </div>
               </FlowSection>
 
-              {/* ── 03: THE RESPONSE ── */}
-              <FlowSection aria-label="The Response" style={{ backgroundColor: '#4CAF50', color: '#fff' }}>
-                <p className="flow-section__label">03 — The Response</p>
+              {/* ── 03: THE NEW STANDARD ── */}
+              <FlowSection aria-label="The New Standard" style={{ backgroundColor: '#2E7D32', color: '#fff' }}>
+                <p className="flow-section__label">03 — The New Standard</p>
                 <hr className="flow-section__divider" style={{ borderColor: 'rgba(255, 255, 255, 0.3)' }} />
                 <div>
                   <h2 className="flow-section__headline">
-                    Handcrafted.<br />
+                    Integrity.<br />
                     Not<br />
-                    Generated.
+                    Extraction.
                   </h2>
                 </div>
                 <hr className="flow-section__divider" style={{ borderColor: 'rgba(255, 255, 255, 0.3)' }} />
                 <p className="flow-section__body">
-                  The Sound of Essentials wasn't designed by an algorithm.
-                  It was built the old way — by hand, by heart, crafted by a father's heart and a mother's love,
-                  measuring their children's needs and cutting the curriculum to fit.
+                  We did not enter this market as another corporate pillager or cold proprietor peddling screen addiction
+                  and dopamine loops. We are establishing an uncompromising standard of integrity, beauty, and presence
+                  in early childhood development.
                 </p>
                 <hr className="flow-section__divider" style={{ borderColor: 'rgba(255, 255, 255, 0.3)' }} />
                 <div className="flow-columns">
                   <div className="flow-column">
-                    <p className="flow-column__title">19 Songs</p>
+                    <p className="flow-column__title">No Dopamine Loops</p>
                     <p className="flow-column__text">
-                      Each one teaching multiple developmental domains simultaneously —
-                      phonics, math, science, movement, geography.
+                      Zero dark patterns, flashing visual hooks, or watch-time traps designed to keep children glued to screens.
                     </p>
                   </div>
                   <div className="flow-column">
-                    <p className="flow-column__title">7 Lands</p>
+                    <p className="flow-column__title">7 Lands Universe</p>
                     <p className="flow-column__text">
-                      Luminosity, Numeria, Harmonia, Animalia, Kinesthia, Celestia, Vitalis —
-                      a complete learning universe.
+                      15 diverse heroes across 5 core developmental domains, hand-drawn and scored with live instruments.
                     </p>
                   </div>
                   <div className="flow-column">
-                    <p className="flow-column__title">2 Languages</p>
+                    <p className="flow-column__title">Uncompromising Presence</p>
                     <p className="flow-column__text">
-                      English and French — because the quest belongs to every child on earth.
-                    </p>
-                  </div>
-                </div>
-                <hr className="flow-section__divider" style={{ borderColor: 'rgba(255, 255, 255, 0.3)' }} />
-                <div className="flow-columns">
-                  <div className="flow-column">
-                    <p className="flow-column__title">15 Heroes</p>
-                    <p className="flow-column__text">
-                      Seriphia, Kwame, Aiko, and more — characters who look like every child, from every culture.
-                    </p>
-                  </div>
-                  <div className="flow-column">
-                    <p className="flow-column__title">4,000+ Words</p>
-                    <p className="flow-column__text">
-                      A picture dictionary hand-illustrated across 125 scenes. Not stock. Not AI. Hand-drawn.
-                    </p>
-                  </div>
-                  <div className="flow-column">
-                    <p className="flow-column__title">$19</p>
-                    <p className="flow-column__text">
-                      Pay what you like, starting at $9. Fine arts education shouldn't require a trust fund.
+                      Every artifact is crafted to deepen parent-child connection and protect the sanctuary of childhood.
                     </p>
                   </div>
                 </div>
               </FlowSection>
 
-              {/* ── 04: THE PEOPLE ── */}
-              <FlowSection aria-label="The People" style={{ backgroundColor: '#faf9f7', color: '#1a1a2e' }}>
-                <p className="flow-section__label">04 — The People</p>
+              {/* ── 04: TRUE TITANS ── */}
+              <FlowSection aria-label="True Titans" style={{ backgroundColor: '#faf9f7', color: '#1a1a2e' }}>
+                <p className="flow-section__label">04 — True Titans</p>
                 <hr className="flow-section__divider" style={{ borderColor: 'rgba(0,0,0,0.15)' }} />
                 <div>
                   <h2 className="flow-section__headline">
-                    Dreamers.<br />
-                    Curators.<br />
-                    Creators.
+                    Apps Fade.<br />
+                    Truth<br />
+                    Endures.
                   </h2>
                 </div>
                 <hr className="flow-section__divider" style={{ borderColor: 'rgba(0,0,0,0.15)' }} />
                 <p className="flow-section__body">
-                  This isn't a product. It's a community.
-                  Parents imagining a different path. Matriarchs who curate what enters the home.
-                  Artists and educators who want to contribute something real.
+                  As true Titans in the realm of learning and education, we understand what the digital industry ignores:
+                  apps fade, algorithms shift, and digital gadgets rot. But acoustic harmony, language, and human connection
+                  do not decompose. <strong>The Sound of Essentials is an evergreen and eternal sound.</strong>
                 </p>
                 <hr className="flow-section__divider" style={{ borderColor: 'rgba(0,0,0,0.15)' }} />
                 <div className="flow-columns">
                   <div className="flow-column">
-                    <p className="flow-column__title">Dreamers</p>
+                    <p className="flow-column__title">Apps Fade</p>
                     <p className="flow-column__text">
-                      Parents who imagine a different path for their children. They enter the quest —
-                      they listen, explore, believe.
+                      Software becomes obsolete, operating systems change, and screens dull sensory sensitivity.
                     </p>
                   </div>
                   <div className="flow-column">
-                    <p className="flow-column__title">Curators</p>
+                    <p className="flow-column__title">Algorithms Shift</p>
                     <p className="flow-column__text">
-                      Matriarchs who select and champion what enters the home.
-                      They choose by hand, not by algorithm.
+                      Tech platforms optimize for ad impressions; foundational developmental needs never change.
                     </p>
                   </div>
                   <div className="flow-column">
-                    <p className="flow-column__title">Creators</p>
+                    <p className="flow-column__title">The Eternal Sound</p>
                     <p className="flow-column__text">
-                      Artists, educators, and musicians who join the Concord —
-                      contributing music, art, and translation.
+                      Acoustic rhythms, poetic lyrics, and bodily movement woven permanently into a child&apos;s mind.
                     </p>
                   </div>
                 </div>
-                <hr className="flow-section__divider" style={{ borderColor: 'rgba(0,0,0,0.15)' }} />
-                <p className="flow-section__body flow-section__body--right">
-                  Crafted by a father's heart and a mother's love.
-                  Designed for the developing brain — not the algorithm.
-                </p>
               </FlowSection>
 
               {/* ── 05: THE INVITATION ── */}
@@ -430,7 +356,7 @@ const Mission = () => {
                 </div>
                 <hr className="flow-section__divider" style={{ borderColor: 'rgba(255,255,255,0.3)' }} />
                 <p className="flow-section__body">
-                  Tailor-made education for your child's developing brain.
+                  Tailor-made education for your child&apos;s developing brain.
                   Not mass-produced. Not algorithmic.
                   Measured, cut, and stitched with love.
                 </p>
@@ -439,6 +365,12 @@ const Mission = () => {
                   Listen free. See if it fits.
                   Your child will know in one song.
                 </p>
+                <div style={{ marginTop: '2.5rem', textAlign: 'right' }}>
+                  <p style={{ fontWeight: 700, fontSize: '1.2rem', margin: 0 }}>— The Founders</p>
+                  <p style={{ fontSize: '0.95rem', opacity: 0.9, margin: '0.35rem 0 0', fontStyle: 'italic' }}>
+                    Crafted by a father&apos;s heart and a mother&apos;s love
+                  </p>
+                </div>
               </FlowSection>
 
             </StoryScroll>
