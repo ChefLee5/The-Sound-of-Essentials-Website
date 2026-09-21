@@ -754,7 +754,7 @@ const MediaRoom = () => {
               Interactive <span className="text-plum">Shape Gallery</span>
             </h2>
             <p className="section-subtitle" style={{ margin: '0 auto 2.5rem auto' }}>
-              Beautiful hand-drawn shapes from the land of Terrasol.
+              Artistic visual shapes from the land of Terrasol.
             </p>
           </RevealSection>
 

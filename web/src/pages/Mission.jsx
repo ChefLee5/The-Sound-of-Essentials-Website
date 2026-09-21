@@ -205,7 +205,7 @@ const Mission = () => {
                   <div className="flow-column">
                     <p className="flow-column__title">19 Free Tracks</p>
                     <p className="flow-column__text">
-                      A complete original studio album gifted without paywalls, subscriptions, or credit cards.
+                      A complete original studio album gifted freely to every home, without subscription gates or paywalls.
                     </p>
                   </div>
                   <div className="flow-column">
@@ -291,7 +291,7 @@ const Mission = () => {
                   <div className="flow-column">
                     <p className="flow-column__title">7 Lands Universe</p>
                     <p className="flow-column__text">
-                      15 diverse heroes across 5 core developmental domains, hand-drawn and scored with live instruments.
+                      15 diverse heroes across 5 core developmental domains, brought to life through visionary generative AI artistry and scored with live acoustic instruments.
                     </p>
                   </div>
                   <div className="flow-column">
