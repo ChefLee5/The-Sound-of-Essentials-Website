@@ -195,7 +195,7 @@ const Mission = () => {
                 </div>
                 <hr className="flow-section__divider" style={{ borderColor: 'rgba(255, 255, 255, 0.35)' }} />
                 <p className="flow-section__body">
-                  I am not here to sell you on music. I am bringing an enduring solution to your problem.
+                  Created in love. We are bringing an enduring solution to your problem.
                   Our front door is a complete, 19-track album of originally created children&apos;s music,
                   gifted 100% free to every family. Foundational sensory learning is a birthright, not a luxury.
                   We do not ask parents to trust a promise; we give them the living proof first.
