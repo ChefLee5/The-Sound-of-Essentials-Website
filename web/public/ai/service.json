@@ -1,0 +1,17 @@
+{
+  "name": "The Sound of Essentials Learning Ecosystem",
+  "description": "A scientifically grounded, music-driven early learning curriculum, classroom tactile materials, and audio streaming for children ages 2 to 7.",
+  "serviceType": "Early Childhood Educational Curriculum & Media",
+  "provider": {
+    "name": "The Sound of Essentials",
+    "url": "https://thesoundofessentials.com"
+  },
+  "capabilities": [
+    "Auditory phonological training through 19 master acoustic music tracks",
+    "Screen-free tactile workbook activities across 5 core developmental domains",
+    "Essential Picture Dictionary covering 4,232 vocabulary words across 125 scenes",
+    "Classroom lesson extensions crosswalked to Head Start ELOF and NAEYC standards",
+    "Multi-sensory emotional self-regulation and somatic movement training"
+  ],
+  "url": "https://thesoundofessentials.com"
+}

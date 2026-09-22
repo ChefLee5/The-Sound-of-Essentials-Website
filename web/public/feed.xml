@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>The Sound of Essentials: Rhythm Quest Updates &amp; Pedagogy</title>
+    <link>https://thesoundofessentials.com/</link>
+    <description>Latest early learning curriculum releases, auditory neuroscience insights, and updates from The Sound of Essentials: Rhythm Quest.</description>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 21 Sep 2026 20:00:00 GMT</lastBuildDate>
+    <atom:link href="https://thesoundofessentials.com/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sound Before Symbol: The Neuro-Affirming Music Pedagogy of Rhythm Quest</title>
+      <link>https://thesoundofessentials.com/science</link>
+      <guid>https://thesoundofessentials.com/science#sound-before-symbol</guid>
+      <pubDate>Mon, 21 Sep 2026 12:00:00 GMT</pubDate>
+      <description>Why auditory phonological discrimination must precede visual symbol decoding in early childhood development across ages 2 to 7.</description>
+    </item>
+    <item>
+      <title>The 7 Lands Global Sound Map &amp; 15 Hero Mentors</title>
+      <link>https://thesoundofessentials.com/universe</link>
+      <guid>https://thesoundofessentials.com/universe#sound-map</guid>
+      <pubDate>Sun, 20 Sep 2026 12:00:00 GMT</pubDate>
+      <description>Exploring the 19 original acoustic tracks mapped to 5 Core Developmental Domains across Harmonia, Numeria, Vitalis, Luminosity, Aquaria, Terrasol, and Celestia.</description>
+    </item>
+  </channel>
+</rss>

@@ -5,6 +5,7 @@
   "canonicalUrl": "https://thesoundofessentials.com",
   "secondaryUrl": "https://soelearn.com",
   "tagline": "Staying on the path, always learning",
+  "description": "A scientifically grounded, music-driven early childhood learning ecosystem designed for the developing brain across ages 2 to 7 (Pre-K to Grade 2).",
   "positioning": "Designed for the developing brain — not the algorithm.",
   "targetAudience": {
     "ageRange": "2-7",
@@ -108,5 +109,18 @@
       "price": "$14.99/mo",
       "type": "Recurring Subscription"
     }
-  ]
+  ],
+  "webmcp": {
+    "available": true,
+    "tools": [
+      {
+        "name": "explore_land",
+        "description": "Explore the 7 Lands of Rhythm Quest"
+      },
+      {
+        "name": "stream_track",
+        "description": "Stream 19 original educational audio tracks"
+      }
+    ]
+  }
 }
