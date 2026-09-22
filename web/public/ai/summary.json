@@ -1,0 +1,112 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "name": "The Sound of Essentials: Rhythm Quest",
+  "alternateNames": ["SOE", "SOE Rhythm Quest", "The Sound of Essentials"],
+  "canonicalUrl": "https://thesoundofessentials.com",
+  "secondaryUrl": "https://soelearn.com",
+  "tagline": "Staying on the path, always learning",
+  "positioning": "Designed for the developing brain — not the algorithm.",
+  "targetAudience": {
+    "ageRange": "2-7",
+    "grades": ["Pre-K", "Kindergarten", "Grade 1", "Grade 2"],
+    "personas": ["Parents", "Early Childhood Educators", "Homeschoolers"]
+  },
+  "leadership": {
+    "founder": "L.D. Murray (Strategic background)",
+    "leadMarketerAndGuide": "Seriphia (Wisdom guide and lead marketer)"
+  },
+  "corePedagogy": {
+    "principle": "Sound Before Symbol",
+    "neuroscienceFoundation": "Auditory phonological discrimination precedes symbol decoding",
+    "methodologies": ["Dalcroze Eurhythmics", "Orff Schulwerk", "Kodály Method"]
+  },
+  "fiveCoreDomains": [
+    "Language, Phonics & Manners",
+    "Numbers, Shapes & Mathematics",
+    "Physical Movement & Body Awareness",
+    "Science, Nature & Ecosystems",
+    "Social-Emotional Regulation & Time"
+  ],
+  "sevenLands": [
+    {
+      "name": "Harmonia",
+      "domain": "Language & Manners",
+      "heroes": ["Kenji", "Aiko"],
+      "accentColor": "#d4a843"
+    },
+    {
+      "name": "Numeria",
+      "domain": "Numbers & Mathematics",
+      "heroes": ["Kwame", "Octavia"],
+      "accentColor": "#7fb685"
+    },
+    {
+      "name": "Vitalis",
+      "domain": "Physical & Motor Skills",
+      "heroes": ["Amara", "Felix"],
+      "accentColor": "#c4785a"
+    },
+    {
+      "name": "Luminosity",
+      "domain": "Advanced Language & Civics",
+      "heroes": ["Athena", "Ezra"],
+      "accentColor": "#d4897a"
+    },
+    {
+      "name": "Aquaria",
+      "domain": "Water & Emotional Regulation",
+      "heroes": ["Nerissa", "Ronan"],
+      "accentColor": "#5ba4c9"
+    },
+    {
+      "name": "Terrasol",
+      "domain": "Science & Nature",
+      "heroes": ["Vesta", "Silas"],
+      "accentColor": "#5fb685"
+    },
+    {
+      "name": "Celestia",
+      "domain": "Time, Clocks & Seasons",
+      "heroes": ["Selene", "Elias"],
+      "accentColor": "#9678c4"
+    }
+  ],
+  "productLadder": [
+    {
+      "product": "Deluxe 19-Track Album & Coloring Book",
+      "price": "$0",
+      "type": "Lead Magnet",
+      "url": "https://thesoundofessentials.com/listen"
+    },
+    {
+      "product": "The Quest Starter Pack",
+      "price": "$7",
+      "type": "In-Cart Bump",
+      "description": "7-Land printable flashcards, lyric sheets, character badges"
+    },
+    {
+      "product": "Rhythm Quest Illustrated Ebook",
+      "price": "$19",
+      "type": "Digital Companion",
+      "pages": 66
+    },
+    {
+      "product": "Rhythm Ready Workbook",
+      "price": "$21 Digital / $35 Print",
+      "type": "8-Week Readiness Quest",
+      "url": "https://thesoundofessentials.com/rhythm-ready"
+    },
+    {
+      "product": "The Essential Picture Dictionary",
+      "price": "$55 Pre-Sale / $79 compare-at",
+      "type": "Physical & Digital Dictionary",
+      "scope": "4,000+ words across 125 scenes",
+      "url": "https://thesoundofessentials.com/workbook#dictionary-presale"
+    },
+    {
+      "product": "The Rhythm Pass",
+      "price": "$14.99/mo",
+      "type": "Recurring Subscription"
+    }
+  ]
+}
