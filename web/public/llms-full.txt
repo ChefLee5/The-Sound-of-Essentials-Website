@@ -35,27 +35,27 @@
 
 ---
 
-## 3. The 19-Track Album Music Catalog
+## 3. The 19-Track Album Music Catalog (Canonical)
 
-1. **The Sound of Essentials** (Land: Terrasol) — Domain: Sound & Nature Awareness
-2. **Harmonia Welcome** (Land: Harmonia) — Domain: Phonics & Linguistic Melody
-3. **Phonics Hop** (Land: Harmonia) — Domain: Consonant-Vowel Segmentation
-4. **Numbers in Rhythm** (Land: Numeria) — Domain: Rhythmic Counting & Subitizing
-5. **Shape Dance** (Land: Numeria) — Domain: Spatial Geometry
-6. **Move Your Body** (Land: Vitalis) — Domain: Gross Motor Coordination
-7. **Breathe & Balance** (Land: Vitalis) — Domain: Somatic Regulation & Proprioception
-8. **Words of Wonder** (Land: Luminosity) — Domain: Vocabulary Expansion
-9. **The Community Song** (Land: Luminosity) — Domain: Social Roles & Civics
-10. **Gentle River** (Land: Aquaria) — Domain: Emotional Calming & ASMR Pacing
-11. **Ocean Waves** (Land: Aquaria) — Domain: Deep Breath Control
-12. **Nature's Chorus** (Land: Terrasol) — Domain: Ecological Science
-13. **Growing Strong** (Land: Terrasol) — Domain: Plant Biology & Nutrition
-14. **Tick Tock Time** (Land: Celestia) — Domain: Clock Reading & Temporal Processing
-15. **Four Seasons** (Land: Celestia) — Domain: Annual Earth Cycles
-16. **Le Cheval** (Land: Harmonia) — Domain: Multilingual French Phonology
-17. **Let's Stretch** (Land: Vitalis) — Domain: Physical Flexibility & Mindfulness
-18. **Drill Time** (Land: Numeria) — Domain: Fast-Paced Rhythmic Addition
-19. **Quest Complete (Celebration)** (Land: Terrasol) — Domain: Integrative Review & Joy
+1. **Sunny Day (intro)** (Land: Terrasol) — Domain: Sound & Nature Awareness
+2. **Days of the Week** (Land: Celestia) — Domain: Temporal Processing & Calendar Rhythms
+3. **Alphabet Song Remix** (Land: Harmonia) — Domain: Phonics & Linguistic Melody
+4. **Horses Interlude** (Land: Terrasol) — Domain: Nature Exploration & Creative Dialogue
+5. **Le Cheval** (Land: Luminosity) — Domain: Multilingual French Phonology & Expression
+6. **Lets Stretch** (Land: Vitalis) — Domain: Somatic Regulation & Body Awareness
+7. **Drill Time** (Land: Vitalis) — Domain: Bilateral Coordination & Gross Motor March
+8. **Numbers** (Land: Numeria) — Domain: Rhythmic Counting & Call-and-Response (1 to 10)
+9. **My Body** (Land: Terrasol) — Domain: Biological Awareness & Healthy Living
+10. **Manners** (Land: Harmonia) — Domain: Respectful Manners & Social Graces
+11. **Time** (Land: Celestia) — Domain: Clock Reading & Daily Routine Temporal Processing
+12. **Changes** (Land: Terrasol) — Domain: Weather Systems & Emotional Consistency
+13. **One Hundred** (Land: Numeria) — Domain: Centesimal Counting & Number Fluency
+14. **The Ocean** (Land: Terrasol) — Domain: Aquatic Ecology & Deep Listening
+15. **Hard Words** (Land: Aquaria) — Domain: Articulation & Complex Phonemic Mastery
+16. **Shapes** (Land: Terrasol) — Domain: Geometric Spatial Perception
+17. **Months of the Year** (Land: Celestia) — Domain: Annual Temporal Cycles & Calendars
+18. **Rain** (Land: Terrasol) — Domain: Atmospheric Science & Earth Cycles
+19. **After the Storm (outro)** (Land: Terrasol) — Domain: Joyful Resolution & Integrative Harmony
 
 ---
 
@@ -65,8 +65,8 @@
 - **In-Cart Bump ($7):** The Quest Starter Pack (7-Land Flashcards, Lyric Sheets & Character Badge Kit).
 - **Gate 2 Tripwire ($19):** SOE Rhythm Quest Illustrated Ebook (66-page storybook).
 - **Core Curriculum ($21 Digital / $35 Print):** SOE Rhythm Quest: Rhythm Ready Workbook (8 weeks, 40 days, ~400 activities).
-- **High-Value Bundle ($49):** The Complete Quest Pack (Ebook + Picture Dictionary Digital + Masters).
-- **Flagship Reference ($55 Sale / $79 Compare-at):** The Essential Picture Dictionary (4,000+ words, 125 scenes, ASL descriptions).
+- **High-Value Bundle ($49 / $89):** The Complete Quest Pack (Ebook + Picture Dictionary Digital + Masters).
+- **Flagship Reference ($55 Sale / $79 Compare-at):** The Essential Picture Dictionary (4,232 words, 125 scenes, ASL descriptions).
 - **Membership ($14.99/mo):** The Rhythm Pass (Monthly quest drops & live sing-alongs).
 
 ---
@@ -76,16 +76,38 @@
 1. **Dalcroze Eurhythmics:** Uses physical body motion to internalize musical rhythm and language cadence.
 2. **Orff Schulwerk:** Integrates rhythm, speech, movement, and play-based improvisation.
 3. **Kodály Method:** Sequential sound-before-symbol music literacy and solfège ear training.
-4. **Neuroscience of Rhythm in Literacy:**
+4. **National Standards Alignment:**
+   - Head Start Early Learning Outcomes Framework (ELOF) across all infant/toddler and preschool domains.
+   - NAEYC Developmentally Appropriate Practice (DAP) standards.
+   - State Early Childhood Education (ECE) alignment for the 28 State-Approved Curriculum States.
+5. **Neuroscience of Rhythm in Literacy:**
    - *Nature Scientific Reports (2020):* Neural entrainment to linguistic rhythm predicts phonological awareness and reading readiness.
    - *Auditory Processing in Early Childhood:* Temporal jitter discrimination in the auditory cortex directly correlates with phonemic segmentation ability.
 
 ---
 
-## 6. Machine-Readable API Endpoints
+## 6. Website Routes & Canonical Gateways
+
+- **Home:** `https://thesoundofessentials.com/` (Core overview, 5 domains, hero mentors, primary entry)
+- **Free Album Experience:** `https://thesoundofessentials.com/listen` (Lead magnet delivery, streaming player)
+- **Rhythm Ready Workbook:** `https://thesoundofessentials.com/rhythm-ready` (8-week readiness quest)
+- **Essential Picture Dictionary:** `https://thesoundofessentials.com/workbook#dictionary-presale` (4,232 words, 125 scenes)
+- **Editorial Pre-Sell Bridge:** `https://thesoundofessentials.com/story` (Direct-response advertorial: "A Quieter Way to Learn: Starting with Sound, Not Screens")
+- **Seven Lands Sound Map:** `https://thesoundofessentials.com/universe` (Interactive 7-Land auditory world map)
+- **15 Hero Mentors:** `https://thesoundofessentials.com/heroes` (Character guides and land alignments)
+- **Science & Pedagogy:** `https://thesoundofessentials.com/science` (Dalcroze, Orff, Kodály, and neuroscience)
+- **School & Institutional Solutions:** `https://thesoundofessentials.com/solutions` (ECE licensing, Head Start, Title I)
+- **About & Mission:** `https://thesoundofessentials.com/about` (Founder story, vision)
+
+---
+
+## 7. Machine-Readable API Endpoints
 
 - **Products Data:** `https://thesoundofessentials.com/src/data/products.json`
 - **Tracks Data:** `https://thesoundofessentials.com/src/data/tracks.json`
 - **Heroes Data:** `https://thesoundofessentials.com/src/data/heroes.json`
 - **Lands Data:** `https://thesoundofessentials.com/src/data/lands.json`
 - **Sitemap XML:** `https://thesoundofessentials.com/sitemap.xml`
+- **AI Summary Endpoint:** `https://thesoundofessentials.com/ai/summary.json`
+- **AI FAQ Endpoint:** `https://thesoundofessentials.com/ai/faq.json`
+- **AI Discovery:** `https://thesoundofessentials.com/.well-known/ai.txt`
