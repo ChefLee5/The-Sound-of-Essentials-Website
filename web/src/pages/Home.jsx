@@ -1020,6 +1020,32 @@ const Home = () => {
           }
         }
 
+        @media (max-width: 991px) {
+          .hero__copy-wrap {
+            padding: 1.25rem 0 1.5rem;
+          }
+          .hero__grid {
+            gap: 1.75rem;
+          }
+          .hero__visual {
+            order: -1;
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+          }
+          .hero__3d-book-container {
+            padding: 0.5rem 0.5rem 0.75rem;
+          }
+          .hero__3d-book-img {
+            max-width: min(290px, 78vw);
+          }
+          .hero__3d-book-badge {
+            padding: 0.45rem 1.1rem;
+          }
+          .hero__3d-badge-text {
+            font-size: 0.86rem;
+          }
+        }
+
         .hero__content {
           max-width: 680px;
         }
@@ -2469,6 +2495,7 @@ const Home = () => {
           .emergency-stats-grid { grid-template-columns: 1fr; }
           .emergency-stat-card { padding: 1.75rem 1.25rem; }
           .hero__content { text-align: center; }
+          .hero__title { justify-content: center; }
           .hero__subtitle { margin: 0 auto 1.5rem; text-align: center; }
           .hero__price-line { justify-content: center; }
           .hero__actions { justify-content: center; }

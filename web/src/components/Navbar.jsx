@@ -123,24 +123,6 @@ const Navbar = () => {
         <Link to="/listen" className="navbar__cta-btn navbar__cta-btn--mobile">
           🎧 Listen Free
         </Link>
-
-        {/* Mobile Language Switcher */}
-        <div className="navbar__mobile-lang">
-          <span className="navbar__mobile-lang-title">{t('navbar.lang_select', 'Language')}</span>
-          <div className="navbar__mobile-lang-pills">
-            {languages.map((l) => (
-              <button
-                key={l.code}
-                type="button"
-                className={`navbar__mobile-lang-pill ${l.code === currentLang ? 'navbar__mobile-lang-pill--active' : ''}`}
-                onClick={() => handleSelectLang(l.code)}
-              >
-                <span>{l.flag}</span>
-                <span>{l.label}</span>
-              </button>
-            ))}
-          </div>
-        </div>
       </div>
 
       {/* ── Right controls ── */}
@@ -777,57 +759,6 @@ const Navbar = () => {
           font-weight: 900;
         }
 
-        /* ── Mobile Language Switcher ── */
-        .navbar__mobile-lang {
-          margin-top: 1.25rem;
-          padding-top: 1.25rem;
-          border-top: 1px solid rgba(0, 0, 0, 0.08);
-          display: flex;
-          flex-direction: column;
-          gap: 0.6rem;
-        }
-
-        .navbar__mobile-lang-title {
-          font-size: 0.75rem;
-          font-weight: 700;
-          text-transform: uppercase;
-          letter-spacing: 0.08em;
-          color: #718096;
-        }
-
-        .navbar__mobile-lang-pills {
-          display: flex;
-          gap: 0.5rem;
-          flex-wrap: wrap;
-        }
-
-        .navbar__mobile-lang-pill {
-          flex: 1;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 0.4rem;
-          padding: 0.55rem 0.75rem;
-          border: 1.5px solid rgba(0, 0, 0, 0.08);
-          background: #FFFFFF;
-          border-radius: 50px;
-          font-size: 0.8rem;
-          font-weight: 700;
-          color: #2D3748;
-          cursor: pointer;
-          transition: all 0.2s ease;
-        }
-
-        .navbar__mobile-lang-pill:hover {
-          border-color: #FF6F00;
-          color: #FF6F00;
-        }
-
-        .navbar__mobile-lang-pill--active {
-          background: #FF6F00;
-          border-color: #FF6F00;
-          color: #FFFFFF;
-        }
       `}</style>
     </nav>
   );
