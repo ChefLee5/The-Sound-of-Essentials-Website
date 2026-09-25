@@ -119,9 +119,6 @@ const Home = () => {
             <span className="announcement-pill__tag">{t('home.announcement.tag')}</span>
           </div>
           <span className="announcement-text">{t('home.announcement.text')}</span>
-          <Link to="/listen" className="announcement-cta">
-            {t('home.announcement.action')}
-          </Link>
         </div>
       </div>
 
@@ -977,17 +974,6 @@ const Home = () => {
           letter-spacing: 0.01em;
         }
 
-        .announcement-cta {
-          color: #ffffff;
-          text-decoration: underline;
-          text-underline-offset: 3px;
-          font-weight: 700;
-          transition: opacity 0.2s ease;
-        }
-
-        .announcement-cta:hover {
-          opacity: 0.85;
-        }
 
         /* ── SECTION 2: Hero Layout ── */
         .hero {
