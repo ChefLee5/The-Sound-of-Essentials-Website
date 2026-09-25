@@ -109,18 +109,6 @@ const Home = () => {
     <div className="home-page">
       <JsonLd data={homeSchema()} />
 
-      {/* ═══════════════════════════════════════════════════════
-          SECTION 1: TOP ANNOUNCEMENT / URGENCY BAR
-      ═══════════════════════════════════════════════════════ */}
-      <div className="home-announcement-bar" role="region" aria-label="Special Offer">
-        <div className="container announcement-content">
-          <div className="announcement-pill">
-            <span className="announcement-pill__dot" aria-hidden="true" />
-            <span className="announcement-pill__tag">{t('home.announcement.tag')}</span>
-          </div>
-          <span className="announcement-text">{t('home.announcement.text')}</span>
-        </div>
-      </div>
 
       {/* ═══════════════════════════════════════════════════════
           SECTION 2: HERO DELUXE CONVERSION OFFER ($0 LEAD MAGNET)
@@ -929,51 +917,6 @@ const Home = () => {
           );
           pointer-events: none;
         }
-
-        /* ── SECTION 1: Top Announcement Bar ── */
-        .home-announcement-bar {
-          background: linear-gradient(90deg, #FF6F00 0%, #FFA000 50%, #FF6F00 100%);
-          color: #ffffff;
-          padding: 0.65rem 1rem;
-          font-size: 0.88rem;
-          font-weight: 600;
-          box-shadow: 0 2px 10px rgba(255, 111, 0, 0.25);
-          position: relative;
-          z-index: 10;
-        }
-
-        .announcement-content {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 1rem;
-          flex-wrap: wrap;
-        }
-
-        .announcement-pill {
-          display: inline-flex;
-          align-items: center;
-          gap: 0.4rem;
-          background: rgba(0, 0, 0, 0.2);
-          padding: 0.2rem 0.65rem;
-          border-radius: var(--radius-full);
-          font-size: 0.75rem;
-          letter-spacing: 0.05em;
-          text-transform: uppercase;
-        }
-
-        .announcement-pill__dot {
-          width: 7px;
-          height: 7px;
-          background: #5fb685;
-          border-radius: 50%;
-          animation: pulseDot 2s ease-in-out infinite;
-        }
-
-        .announcement-text {
-          letter-spacing: 0.01em;
-        }
-
 
         /* ── SECTION 2: Hero Layout ── */
         .hero {
