@@ -36,11 +36,7 @@
         "weekly_activities": "Activités hebdomadaires neuro-affirmantes et sorties musicales."
     },
     "home": {
-        "announcement": {
-            "tag": "ÉVEIL TRILINGUE",
-            "text": "Éveil acoustique en anglais, espagnol et français · Offert aux familles fondatrices",
-            "action": "Écouter dans votre Langue →"
-        },
+
         "hero_offer": {
             "eyebrow": "THE SOUND OF ESSENTIALS DELUXE · ÂGES 2–7",
             "title_main": "Une Expérience d'Apprentissage Musicale",
@@ -224,31 +220,6 @@
             "btn_free": "Commencer l'Expérience Gratuite →",
             "btn_quest": "Explorer La Quête des 7 Contrées (19 $) →",
             "badge": "Accès Numérique Immédiat · Sans Surcharge d'Écran · 100 % Gratuit pour Commencer"
-        },
-        "trilingual": {
-            "tag": "ÉVEIL TRILINGUE DE LA PETITE ENFANCE",
-            "title_1": "Un Univers. Trois Langues.",
-            "title_2": "Zéro Écran.",
-            "subtitle": "Le cerveau de l'enfant s'approprie les langues grâce au rythme, au tempo et à la mélodie acoustique. Rhythm Quest stimule l'éveil verbal et le vocabulaire en anglais, espagnol et français sans surstimulation numérique.",
-            "en_title": "Parcours Anglais",
-            "en_tag": "Fondations Phonémiques",
-            "en_track": "Piste 04 · Let's Stretch",
-            "en_desc": "La contrebasse boisée et les guitares douces accompagnent les rimes d'éveil, la clarté des voyelles et la pulsation régulière.",
-            "en_quote": "Le tempo acoustique posé offre à l'oreille l'espace d'isoler les consonnes.",
-            "es_title": "Parcours Espagnol",
-            "es_tag": "Rythme et Numération",
-            "es_track": "Piste 11 · Numbers & Los Números",
-            "es_desc": "Des percussions en appel et réponse qui associent le comptage, le rythme et la motricité sur une pulsation entraînante.",
-            "es_quote": "Des chants participatifs reliant la numération bilingue au mouvement naturel.",
-            "fr_title": "Parcours Français",
-            "fr_tag": "Éveil et Articulation",
-            "fr_track": "Piste 08 · Le Cheval",
-            "fr_desc": "Le pas du cheval en musique et le conte mélodique guident l'articulation phonétique naturelle et la diction poétique.",
-            "fr_quote": "Une promenade sonore au pas équestre favorisant l'écoute attentive.",
-            "dictionary_title": "Relié à l'Imagier Illustré de plus de 4 000 Mots",
-            "dictionary_desc": "Chaque morceau résonne avec des planches illustrées imprimées à travers les 7 Contrées, offrant un apprentissage sensoriel dans les trois langues.",
-            "cta_listen": "🎧 Écouter les Morceaux Trilingues →",
-            "cta_dictionary": "📚 Découvrir l'Imagier Illustré (Prévente 55$) →"
         }
     },
     "universe": {

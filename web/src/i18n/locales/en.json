@@ -36,11 +36,7 @@
         "weekly_activities": "Weekly neuro-affirming activities and music drops."
     },
     "home": {
-        "announcement": {
-            "tag": "TRILINGUAL RELEASE",
-            "text": "Acoustic learning in English, Español & Français · Free for founding families",
-            "action": "Listen in Your Language →"
-        },
+
         "hero_offer": {
             "eyebrow": "THE SOUND OF ESSENTIALS DELUXE · AGES 2–7",
             "title_main": "A Musical Learning Experience",
@@ -224,31 +220,6 @@
             "btn_free": "Start the Free Experience →",
             "btn_quest": "Explore The 7-Land Quest ($19) →",
             "badge": "Instant Digital Access · Zero Screen Overwhelm · 100% Free to Start"
-        },
-        "trilingual": {
-            "tag": "TRILINGUAL EARLY LEARNING",
-            "title_1": "One Universe. Three Languages.",
-            "title_2": "Zero Screens.",
-            "subtitle": "Young brains absorb language through rhythm, meter, and living acoustic melody. Rhythm Quest nurtures natural speech cadence and vocabulary across English, Spanish, and French without digital overstimulation.",
-            "en_title": "English Pathway",
-            "en_tag": "Phonemic Foundations",
-            "en_track": "Track 04 · Let's Stretch",
-            "en_desc": "Upright bass and gentle rhythm guitars ground foundational rhymes, vowel clarity, and steady beat-keeping for early counting.",
-            "en_quote": "Acoustic tempo gives little ears the space to isolate consonants cleanly.",
-            "es_title": "Español Pathway",
-            "es_tag": "Ritmo y Conteo",
-            "es_track": "Pista 11 · Numbers & Los Números",
-            "es_desc": "Bilingual call-and-response percussion connects counting, rhythm, and active movement with natural Latin American cadence.",
-            "es_quote": "Participatory songs pairing early bilingual numeracy with joyful movement.",
-            "fr_title": "Français Pathway",
-            "fr_tag": "Éveil et Articulation",
-            "fr_track": "Piste 08 · Le Cheval",
-            "fr_desc": "Acoustic walking cadences and melodic storytelling nurture authentic French phonemic articulation and speech rhythm.",
-            "fr_quote": "A melodic horseback journey guiding ear training and natural phonetics.",
-            "dictionary_title": "Bridged by the 4,000+ Word Picture Dictionary",
-            "dictionary_desc": "Every track connects directly to hands-on illustrated scenes across all 7 Lands, giving toddlers and early learners tactile mastery across all three languages.",
-            "cta_listen": "🎧 Listen to Trilingual Audio Free →",
-            "cta_dictionary": "📚 Explore the Picture Dictionary ($55 Pre-Sale) →"
         }
     },
     "universe": {

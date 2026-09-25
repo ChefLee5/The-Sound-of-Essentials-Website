@@ -111,7 +111,7 @@ The entire ecosystem operates on a **$0 fixed monthly overhead** serverless stac
 
 ---
 
-## 7. The Trilingual Learning System (English · Español · Français)
+## 7. The Multilingual Learning System (English · Español · Français)
 
 ### 7.1 Acoustic Language Acquisition Without Screen Fatigue
 Early childhood language acquisition relies on acoustic phonemic discrimination. Young learners absorb vocabulary and speech cadence by hearing melodic intervals paired with steady rhythmic pulses between 60 and 80 beats per minute. The Sound of Essentials: Rhythm Quest integrates three foundational language pathways directly into its acoustic catalog, tactile workbooks, and picture dictionary:
@@ -138,7 +138,7 @@ The audio tracks anchor into physical reality through The Essential Picture Dict
 - **Screen-Free Physical Permanence:** Families explore pages together in calm, screen-free focus.
 
 ### 7.3 Institutional & Regulatory Compliance (Head Start & Title III)
-The trilingual system directly meets the procurement mandates of institutional early childhood providers:
+The multilingual system directly meets the procurement mandates of institutional early childhood providers:
 - **Head Start Dual Language Learners (DLLs):** Over 32% of Head Start children speak a home language other than English. The Spanish and French tracks support home language maintenance while building English literacy.
 - **Every Student Succeeds Act (ESSA Title III):** Title III grants fund supplemental programs that assist English learners in attaining English proficiency and academic achievement. Rhythm Quest provides school districts with certified screen-free materials aligned with these funding guidelines.
 - **Global Expansion:** Provides immediate curriculum readiness across North America, Latin America, and Francophone regions.

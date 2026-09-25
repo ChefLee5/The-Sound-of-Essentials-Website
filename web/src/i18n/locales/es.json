@@ -36,11 +36,7 @@
         "weekly_activities": "Actividades neuro-afirmativas semanales y lanzamientos musicales."
     },
     "home": {
-        "announcement": {
-            "tag": "LANZAMIENTO TRILINGÜE",
-            "text": "Aprendizaje acústico en inglés, español y francés · Gratis para familias fundadoras",
-            "action": "Escuchar en tu Idioma →"
-        },
+
         "hero_offer": {
             "eyebrow": "THE SOUND OF ESSENTIALS DELUXE · EDADES 2–7",
             "title_main": "Una Experiencia de Aprendizaje Musical",
@@ -224,31 +220,6 @@
             "btn_free": "Comenzar la Experiencia Gratis →",
             "btn_quest": "Explorar La Aventura de 7 Tierras ($19) →",
             "badge": "Acceso Digital Instantáneo · Sin Sobrecarga de Pantallas · 100% Gratis para Empezar"
-        },
-        "trilingual": {
-            "tag": "APRENDIZAJE TRILINGÜE TEMPRANO",
-            "title_1": "Un Universo. Tres Idiomas.",
-            "title_2": "Cero Pantallas.",
-            "subtitle": "Los cerebros pequeños asimilan los idiomas mediante el ritmo natural y la melodía acústica. Rhythm Quest nutre la cadencia del habla y el vocabulario en inglés, español y francés sin saturación digital.",
-            "en_title": "Vía en Inglés",
-            "en_tag": "Bases Fonémicas",
-            "en_track": "Pista 04 · Let's Stretch",
-            "en_desc": "El contrabajo acústico y las guitarras suaves asientan rimas esenciales, claridad vocálica y compás constante para los números.",
-            "en_quote": "El tempo acústico pausado permite aislar consonantes con total claridad.",
-            "es_title": "Vía en Español",
-            "es_tag": "Ritmo y Conteo",
-            "es_track": "Pista 11 · Numbers & Los Números",
-            "es_desc": "Percusión participativa bilingüe de llamada y respuesta que enlaza los números, el ritmo y el movimiento con cadencia viva.",
-            "es_quote": "Canciones activas que unen el conteo bilingüe con la alegría del cuerpo.",
-            "fr_title": "Vía en Francés",
-            "fr_tag": "Éveil y Articulación",
-            "fr_track": "Pista 08 · Le Cheval",
-            "fr_desc": "El trote rítmico acústico y la narración melódica despiertan la pronunciación nativa francesa y el ritmo de la palabra.",
-            "fr_quote": "Un viaje a caballo acústico que entrena el oído con fonética natural.",
-            "dictionary_title": "Conectado con el Diccionario Visual de más de 4.000 Palabras",
-            "dictionary_desc": "Cada canción se acompaña de escenas ilustradas físicas en las 7 Tierras, facilitando a los pequeños el aprendizaje táctil en los tres idiomas.",
-            "cta_listen": "🎧 Escuchar Pistas Trilingües Gratis →",
-            "cta_dictionary": "📚 Ver el Diccionario Visual (Preventa $55) →"
         }
     },
     "universe": {

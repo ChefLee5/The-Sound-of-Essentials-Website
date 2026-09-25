@@ -40,7 +40,7 @@ export const pseoPages = [
         "desc": "Give prospective families a proprietary, premium arts-integrated cognitive system they will talk about at pickup."
       },
       {
-        "title": "Trilingual Language Scaffolding",
+        "title": "Phonetic Language Scaffolding",
         "desc": "Built on phonetic foundations across English and French today, with Spanish and global dialects in development."
       }
     ],
@@ -543,7 +543,7 @@ export const pseoPages = [
     "trackTitle": "Le Cheval",
     "trackNumber": "Track 05",
     "trackAudio": "05. Le Cheval.mp3",
-    "trackFocus": "Trilingual Language Modeling (French/English) & Poetic Phrasing",
+    "trackFocus": "Acoustic Language Modeling (French/English) & Poetic Phrasing",
     "benefits": [
       {
         "title": "Rhythmic Language Scaffolding",
@@ -558,7 +558,7 @@ export const pseoPages = [
         "desc": "Choral singing and group chanting remove the social fear of mispronunciation, building confident spoken fluency."
       },
       {
-        "title": "Trilingual Framework",
+        "title": "Multilingual Framework",
         "desc": "Designed with English and French foundations today, with Spanish, Arabic, and Mandarin integrations in the roadmap."
       }
     ],
@@ -855,7 +855,7 @@ export const pseoPages = [
       },
       {
         "title": "Globally Minded Framework",
-        "desc": "Trilingual foundations (English, French, Spanish) ideal for international school communities and diplomatic families."
+        "desc": "Multilingual foundations (English, French, Spanish) ideal for international school communities and diplomatic families."
       }
     ],
     "features": [
