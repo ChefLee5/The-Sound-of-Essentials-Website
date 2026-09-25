@@ -4,10 +4,36 @@ import { useTranslation } from 'react-i18next';
 import { assetPath } from '../utils/assetPath';
 
 const Navbar = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [langOpen, setLangOpen] = useState(false);
   const location = useLocation();
+
+  const currentLang = (i18n.language || 'en').slice(0, 2);
+  const languages = [
+    { code: 'en', label: 'English', flag: '🇺🇸', short: 'EN' },
+    { code: 'es', label: 'Español', flag: '🇪🇸', short: 'ES' },
+    { code: 'fr', label: 'Français', flag: '🇫🇷', short: 'FR' },
+  ];
+  const currentLangObj = languages.find(l => l.code === currentLang) || languages[0];
+
+  const handleSelectLang = (code) => {
+    i18n.changeLanguage(code);
+    setLangOpen(false);
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (!e.target.closest('.navbar__lang-wrapper')) {
+        setLangOpen(false);
+      }
+    };
+    if (langOpen) {
+      document.addEventListener('click', handleClickOutside);
+    }
+    return () => document.removeEventListener('click', handleClickOutside);
+  }, [langOpen]);
 
   // Dark-background pages (none currently, player is now bright & playful)
   const isDark = false;
@@ -97,10 +123,61 @@ const Navbar = () => {
         <Link to="/listen" className="navbar__cta-btn navbar__cta-btn--mobile">
           🎧 Listen Free
         </Link>
+
+        {/* Mobile Language Switcher */}
+        <div className="navbar__mobile-lang">
+          <span className="navbar__mobile-lang-title">{t('navbar.lang_select', 'Language')}</span>
+          <div className="navbar__mobile-lang-pills">
+            {languages.map((l) => (
+              <button
+                key={l.code}
+                type="button"
+                className={`navbar__mobile-lang-pill ${l.code === currentLang ? 'navbar__mobile-lang-pill--active' : ''}`}
+                onClick={() => handleSelectLang(l.code)}
+              >
+                <span>{l.flag}</span>
+                <span>{l.label}</span>
+              </button>
+            ))}
+          </div>
+        </div>
       </div>
 
       {/* ── Right controls ── */}
       <div className="navbar__right">
+        {/* Language selector dropdown */}
+        <div className="navbar__lang-wrapper">
+          <button
+            type="button"
+            className="navbar__lang-btn"
+            onClick={() => setLangOpen(!langOpen)}
+            aria-label={t('navbar.toggle_lang', 'Select Language')}
+            aria-expanded={langOpen}
+          >
+            <span className="navbar__lang-flag">{currentLangObj.flag}</span>
+            <span className="navbar__lang-code">{currentLangObj.short}</span>
+            <span className={`navbar__lang-chevron ${langOpen ? 'navbar__lang-chevron--open' : ''}`}>▾</span>
+          </button>
+
+          {langOpen && (
+            <div className="navbar__lang-dropdown" role="menu">
+              {languages.map((l) => (
+                <button
+                  key={l.code}
+                  type="button"
+                  role="menuitem"
+                  className={`navbar__lang-option ${l.code === currentLang ? 'navbar__lang-option--active' : ''}`}
+                  onClick={() => handleSelectLang(l.code)}
+                >
+                  <span className="navbar__lang-option-flag">{l.flag}</span>
+                  <span className="navbar__lang-option-label">{l.label}</span>
+                  {l.code === currentLang && <span className="navbar__lang-option-check">✓</span>}
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
+
         <Link to="/listen" className="navbar__cta-btn">
           🎧 Listen Free
         </Link>
@@ -586,6 +663,170 @@ const Navbar = () => {
 
         .navbar--dark .navbar__hamburger:hover {
           background: rgba(255,200,120,0.1);
+        }
+
+        /* ── Language Switcher (Desktop) ── */
+        .navbar__lang-wrapper {
+          position: relative;
+        }
+
+        .navbar__lang-btn {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.4rem;
+          padding: 0.45rem 0.85rem;
+          background: rgba(255, 255, 255, 0.85);
+          border: 1.5px solid rgba(0, 0, 0, 0.08);
+          border-radius: 50px;
+          font-family: var(--font-heading, inherit);
+          font-weight: 700;
+          font-size: 0.82rem;
+          color: #2D3748;
+          cursor: pointer;
+          transition: all 0.2s ease;
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        .navbar__lang-btn:hover {
+          background: #FFFFFF;
+          border-color: #FF6F00;
+          color: #FF6F00;
+          transform: translateY(-1px);
+          box-shadow: 0 3px 8px rgba(255, 111, 0, 0.15);
+        }
+
+        .navbar__lang-flag {
+          font-size: 1rem;
+        }
+
+        .navbar__lang-code {
+          letter-spacing: 0.05em;
+        }
+
+        .navbar__lang-chevron {
+          font-size: 0.75rem;
+          transition: transform 0.2s ease;
+          color: #718096;
+        }
+
+        .navbar__lang-chevron--open {
+          transform: rotate(180deg);
+        }
+
+        .navbar__lang-dropdown {
+          position: absolute;
+          top: calc(100% + 8px);
+          right: 0;
+          min-width: 140px;
+          background: #FFFFFF;
+          border: 1.5px solid rgba(0, 0, 0, 0.08);
+          border-radius: 16px;
+          box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+          padding: 0.4rem;
+          z-index: 1001;
+          display: flex;
+          flex-direction: column;
+          gap: 0.2rem;
+          animation: langFadeIn 0.2s ease;
+        }
+
+        @keyframes langFadeIn {
+          from { opacity: 0; transform: translateY(-4px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+
+        .navbar__lang-option {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          width: 100%;
+          padding: 0.5rem 0.75rem;
+          border: none;
+          background: transparent;
+          border-radius: 10px;
+          font-family: inherit;
+          font-size: 0.85rem;
+          font-weight: 600;
+          color: #2D3748;
+          cursor: pointer;
+          transition: background 0.15s ease, color 0.15s ease;
+          text-align: left;
+        }
+
+        .navbar__lang-option:hover {
+          background: rgba(255, 111, 0, 0.08);
+          color: #FF6F00;
+        }
+
+        .navbar__lang-option--active {
+          background: rgba(255, 111, 0, 0.12);
+          color: #FF6F00;
+          font-weight: 700;
+        }
+
+        .navbar__lang-option-flag {
+          font-size: 1rem;
+        }
+
+        .navbar__lang-option-label {
+          flex: 1;
+        }
+
+        .navbar__lang-option-check {
+          color: #FF6F00;
+          font-weight: 900;
+        }
+
+        /* ── Mobile Language Switcher ── */
+        .navbar__mobile-lang {
+          margin-top: 1.25rem;
+          padding-top: 1.25rem;
+          border-top: 1px solid rgba(0, 0, 0, 0.08);
+          display: flex;
+          flex-direction: column;
+          gap: 0.6rem;
+        }
+
+        .navbar__mobile-lang-title {
+          font-size: 0.75rem;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0.08em;
+          color: #718096;
+        }
+
+        .navbar__mobile-lang-pills {
+          display: flex;
+          gap: 0.5rem;
+          flex-wrap: wrap;
+        }
+
+        .navbar__mobile-lang-pill {
+          flex: 1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 0.4rem;
+          padding: 0.55rem 0.75rem;
+          border: 1.5px solid rgba(0, 0, 0, 0.08);
+          background: #FFFFFF;
+          border-radius: 50px;
+          font-size: 0.8rem;
+          font-weight: 700;
+          color: #2D3748;
+          cursor: pointer;
+          transition: all 0.2s ease;
+        }
+
+        .navbar__mobile-lang-pill:hover {
+          border-color: #FF6F00;
+          color: #FF6F00;
+        }
+
+        .navbar__mobile-lang-pill--active {
+          background: #FF6F00;
+          border-color: #FF6F00;
+          color: #FFFFFF;
         }
       `}</style>
     </nav>

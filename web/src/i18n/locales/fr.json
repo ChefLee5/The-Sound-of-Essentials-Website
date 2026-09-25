@@ -10,7 +10,11 @@
         "join": "Rejoindre l'Aventure",
         "contact": "Contactez-nous",
         "toggle_menu": "Afficher le menu de navigation",
-        "toggle_lang": "Changer la langue"
+        "toggle_lang": "Changer la langue",
+        "lang_select": "Langue",
+        "lang_en": "English",
+        "lang_es": "Español",
+        "lang_fr": "Français"
     },
     "hero": {
         "title": "Conçu pour le cerveau en développement,",
@@ -33,9 +37,9 @@
     },
     "home": {
         "announcement": {
-            "tag": "OFFRE FAMILLES FONDATRICES",
-            "text": "Gratuit en ce moment pour les familles fondatrices · Rejoignez l'aventure",
-            "action": "Accéder Gratuitement →"
+            "tag": "ÉVEIL TRILINGUE",
+            "text": "Éveil acoustique en anglais, espagnol et français · Offert aux familles fondatrices",
+            "action": "Écouter dans votre Langue →"
         },
         "hero_offer": {
             "eyebrow": "THE SOUND OF ESSENTIALS DELUXE · ÂGES 2–7",
@@ -220,6 +224,31 @@
             "btn_free": "Commencer l'Expérience Gratuite →",
             "btn_quest": "Explorer La Quête des 7 Contrées (19 $) →",
             "badge": "Accès Numérique Immédiat · Sans Surcharge d'Écran · 100 % Gratuit pour Commencer"
+        },
+        "trilingual": {
+            "tag": "ÉVEIL TRILINGUE DE LA PETITE ENFANCE",
+            "title_1": "Un Univers. Trois Langues.",
+            "title_2": "Zéro Écran.",
+            "subtitle": "Le cerveau de l'enfant s'approprie les langues grâce au rythme, au tempo et à la mélodie acoustique. Rhythm Quest stimule l'éveil verbal et le vocabulaire en anglais, espagnol et français sans surstimulation numérique.",
+            "en_title": "Parcours Anglais",
+            "en_tag": "Fondations Phonémiques",
+            "en_track": "Piste 04 · Let's Stretch",
+            "en_desc": "La contrebasse boisée et les guitares douces accompagnent les rimes d'éveil, la clarté des voyelles et la pulsation régulière.",
+            "en_quote": "Le tempo acoustique posé offre à l'oreille l'espace d'isoler les consonnes.",
+            "es_title": "Parcours Espagnol",
+            "es_tag": "Rythme et Numération",
+            "es_track": "Piste 11 · Numbers & Los Números",
+            "es_desc": "Des percussions en appel et réponse qui associent le comptage, le rythme et la motricité sur une pulsation entraînante.",
+            "es_quote": "Des chants participatifs reliant la numération bilingue au mouvement naturel.",
+            "fr_title": "Parcours Français",
+            "fr_tag": "Éveil et Articulation",
+            "fr_track": "Piste 08 · Le Cheval",
+            "fr_desc": "Le pas du cheval en musique et le conte mélodique guident l'articulation phonétique naturelle et la diction poétique.",
+            "fr_quote": "Une promenade sonore au pas équestre favorisant l'écoute attentive.",
+            "dictionary_title": "Relié à l'Imagier Illustré de plus de 4 000 Mots",
+            "dictionary_desc": "Chaque morceau résonne avec des planches illustrées imprimées à travers les 7 Contrées, offrant un apprentissage sensoriel dans les trois langues.",
+            "cta_listen": "🎧 Écouter les Morceaux Trilingues →",
+            "cta_dictionary": "📚 Découvrir l'Imagier Illustré (Prévente 55$) →"
         }
     },
     "universe": {
@@ -701,25 +730,101 @@
         "lyrics_btn": "Paroles",
         "no_lyrics": "Pas de paroles disponibles pour ce morceau.",
         "tracks": {
-            "1":  { "title": "Jour Ensoleillé (Intro)",         "domain": "Introduction",               "desc": "Une douce mélodie de lever de soleil qui accueille les apprenants." },
-            "2":  { "title": "Les Jours de la Semaine",         "domain": "Temps et Celestia",           "desc": "Elias et Selene chantent les sept jours, développant les compétences de séquençage." },
-            "3":  { "title": "Remix de l'Alphabet",             "domain": "Langage et Harmonia",        "desc": "Kenji et Aiko donnent vie à l'alphabet avec un remix phonétique rythmique." },
-            "4":  { "title": "Interlude des Chevaux",           "domain": "Science et Terrasol",          "desc": "Un voyage parlé et ludique à travers le règne animal." },
-            "5":  { "title": "Le Cheval",                       "domain": "Langage et Luminosity",       "desc": "Un hommage bilingue français-anglais à la puissance et la grâce du cheval." },
-            "6":  { "title": "Étirons-nous",                    "domain": "Physique et Vitalis",        "desc": "Felix et Amara guident une routine complète de respiration et d'étirement." },
-            "7":  { "title": "L'Heure de l'Exercice",           "domain": "Physique et Vitalis",        "desc": "Une marche stimulante avec des chants en appel et réponse rythmiques." },
-            "8":  { "title": "Les Nombres",                     "domain": "Mathématiques et Numeria",   "desc": "Kwame et Octavia comptent jusqu'à 10 avec des claquements de mains." },
-            "9":  { "title": "Mon Corps",                       "domain": "Science et Terrasol",          "desc": "Athena et Ezra guident les apprenants à travers l'anatomie du corps humain." },
-            "10": { "title": "Les Manières",                    "domain": "Socio-Émotionnel",           "desc": "Aiko enseigne le langage de la courtoisie — s'il vous plaît, merci, excusez-moi." },
-            "11": { "title": "Savez-vous Quelle Heure Il Est ?", "domain": "Temps et Celestia",         "desc": "Elias et Selene introduisent la lecture de l'horloge et les routines quotidiennes." },
-            "12": { "title": "Changements",                     "domain": "Science et Terrasol",          "desc": "Nerissa réfléchit sur les changements météorologiques et la constance de l'amour." },
-            "13": { "title": "Cent",                            "domain": "Mathématiques et Numeria",   "desc": "Octavia compte jusqu'à 100 — une étape importante en numératie." },
-            "14": { "title": "L'Océan",                         "domain": "Science et Terrasol",          "desc": "Un voyage sonore immersif explorant les merveilles de l'océan." },
-            "15": { "title": "Les Mots Difficiles",             "domain": "Langage et Aquaria",       "desc": "Ronan et Nerissa s'attaquent au vocabulaire polysyllabique avec des exercices rythmiques." },
-            "16": { "title": "Les Formes",                      "domain": "Mathématiques et Terrasol", "desc": "Silas et Vesta chantent les cercles, carrés, triangles et plus encore." },
-            "17": { "title": "Les Mois de l'Année",             "domain": "Temps et Celestia",           "desc": "Elias guide une récitation complète du calendrier sur une mélodie mémorable." },
-            "18": { "title": "La Pluie",                        "domain": "Science et Terrasol",          "desc": "Athena et Ezra explorent le cycle de l'eau et la beauté de la pluie." },
-            "19": { "title": "Après la Tempête (Outro)",       "domain": "Introduction",               "desc": "Une piste de clôture apaisante — la promesse que la lumière suit toujours la tempête." }
+            "1": {
+                "title": "Jour Ensoleillé (Intro)",
+                "domain": "Introduction",
+                "desc": "Une douce mélodie de lever de soleil qui accueille les apprenants."
+            },
+            "2": {
+                "title": "Les Jours de la Semaine",
+                "domain": "Temps et Celestia",
+                "desc": "Elias et Selene chantent les sept jours, développant les compétences de séquençage."
+            },
+            "3": {
+                "title": "Remix de l'Alphabet",
+                "domain": "Langage et Harmonia",
+                "desc": "Kenji et Aiko donnent vie à l'alphabet avec un remix phonétique rythmique."
+            },
+            "4": {
+                "title": "Interlude des Chevaux",
+                "domain": "Science et Terrasol",
+                "desc": "Un voyage parlé et ludique à travers le règne animal."
+            },
+            "5": {
+                "title": "Le Cheval",
+                "domain": "Langage et Luminosity",
+                "desc": "Un hommage bilingue français-anglais à la puissance et la grâce du cheval."
+            },
+            "6": {
+                "title": "Étirons-nous",
+                "domain": "Physique et Vitalis",
+                "desc": "Felix et Amara guident une routine complète de respiration et d'étirement."
+            },
+            "7": {
+                "title": "L'Heure de l'Exercice",
+                "domain": "Physique et Vitalis",
+                "desc": "Une marche stimulante avec des chants en appel et réponse rythmiques."
+            },
+            "8": {
+                "title": "Les Nombres",
+                "domain": "Mathématiques et Numeria",
+                "desc": "Kwame et Octavia comptent jusqu'à 10 avec des claquements de mains."
+            },
+            "9": {
+                "title": "Mon Corps",
+                "domain": "Science et Terrasol",
+                "desc": "Athena et Ezra guident les apprenants à travers l'anatomie du corps humain."
+            },
+            "10": {
+                "title": "Les Manières",
+                "domain": "Socio-Émotionnel",
+                "desc": "Aiko enseigne le langage de la courtoisie — s'il vous plaît, merci, excusez-moi."
+            },
+            "11": {
+                "title": "Savez-vous Quelle Heure Il Est ?",
+                "domain": "Temps et Celestia",
+                "desc": "Elias et Selene introduisent la lecture de l'horloge et les routines quotidiennes."
+            },
+            "12": {
+                "title": "Changements",
+                "domain": "Science et Terrasol",
+                "desc": "Nerissa réfléchit sur les changements météorologiques et la constance de l'amour."
+            },
+            "13": {
+                "title": "Cent",
+                "domain": "Mathématiques et Numeria",
+                "desc": "Octavia compte jusqu'à 100 — une étape importante en numératie."
+            },
+            "14": {
+                "title": "L'Océan",
+                "domain": "Science et Terrasol",
+                "desc": "Un voyage sonore immersif explorant les merveilles de l'océan."
+            },
+            "15": {
+                "title": "Les Mots Difficiles",
+                "domain": "Langage et Aquaria",
+                "desc": "Ronan et Nerissa s'attaquent au vocabulaire polysyllabique avec des exercices rythmiques."
+            },
+            "16": {
+                "title": "Les Formes",
+                "domain": "Mathématiques et Terrasol",
+                "desc": "Silas et Vesta chantent les cercles, carrés, triangles et plus encore."
+            },
+            "17": {
+                "title": "Les Mois de l'Année",
+                "domain": "Temps et Celestia",
+                "desc": "Elias guide une récitation complète du calendrier sur une mélodie mémorable."
+            },
+            "18": {
+                "title": "La Pluie",
+                "domain": "Science et Terrasol",
+                "desc": "Athena et Ezra explorent le cycle de l'eau et la beauté de la pluie."
+            },
+            "19": {
+                "title": "Après la Tempête (Outro)",
+                "domain": "Introduction",
+                "desc": "Une piste de clôture apaisante — la promesse que la lumière suit toujours la tempête."
+            }
         }
     }
 }

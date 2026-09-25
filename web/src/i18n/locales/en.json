@@ -10,7 +10,11 @@
         "join": "Join the Quest",
         "contact": "Contact Us",
         "toggle_menu": "Toggle navigation menu",
-        "toggle_lang": "Toggle Language"
+        "toggle_lang": "Toggle Language",
+        "lang_select": "Language",
+        "lang_en": "English",
+        "lang_es": "Español",
+        "lang_fr": "Français"
     },
     "hero": {
         "title": "Designed for the developing brain,",
@@ -33,9 +37,9 @@
     },
     "home": {
         "announcement": {
-            "tag": "FOUNDING FAMILIES OFFER",
-            "text": "Free right now for founding families · Get in before liftoff",
-            "action": "Claim Free Experience →"
+            "tag": "TRILINGUAL RELEASE",
+            "text": "Acoustic learning in English, Español & Français · Free for founding families",
+            "action": "Listen in Your Language →"
         },
         "hero_offer": {
             "eyebrow": "THE SOUND OF ESSENTIALS DELUXE · AGES 2–7",
@@ -220,6 +224,31 @@
             "btn_free": "Start the Free Experience →",
             "btn_quest": "Explore The 7-Land Quest ($19) →",
             "badge": "Instant Digital Access · Zero Screen Overwhelm · 100% Free to Start"
+        },
+        "trilingual": {
+            "tag": "TRILINGUAL EARLY LEARNING",
+            "title_1": "One Universe. Three Languages.",
+            "title_2": "Zero Screens.",
+            "subtitle": "Young brains absorb language through rhythm, meter, and living acoustic melody. Rhythm Quest nurtures natural speech cadence and vocabulary across English, Spanish, and French without digital overstimulation.",
+            "en_title": "English Pathway",
+            "en_tag": "Phonemic Foundations",
+            "en_track": "Track 04 · Let's Stretch",
+            "en_desc": "Upright bass and gentle rhythm guitars ground foundational rhymes, vowel clarity, and steady beat-keeping for early counting.",
+            "en_quote": "Acoustic tempo gives little ears the space to isolate consonants cleanly.",
+            "es_title": "Español Pathway",
+            "es_tag": "Ritmo y Conteo",
+            "es_track": "Pista 11 · Numbers & Los Números",
+            "es_desc": "Bilingual call-and-response percussion connects counting, rhythm, and active movement with natural Latin American cadence.",
+            "es_quote": "Participatory songs pairing early bilingual numeracy with joyful movement.",
+            "fr_title": "Français Pathway",
+            "fr_tag": "Éveil et Articulation",
+            "fr_track": "Piste 08 · Le Cheval",
+            "fr_desc": "Acoustic walking cadences and melodic storytelling nurture authentic French phonemic articulation and speech rhythm.",
+            "fr_quote": "A melodic horseback journey guiding ear training and natural phonetics.",
+            "dictionary_title": "Bridged by the 4,000+ Word Picture Dictionary",
+            "dictionary_desc": "Every track connects directly to hands-on illustrated scenes across all 7 Lands, giving toddlers and early learners tactile mastery across all three languages.",
+            "cta_listen": "🎧 Listen to Trilingual Audio Free →",
+            "cta_dictionary": "📚 Explore the Picture Dictionary ($55 Pre-Sale) →"
         }
     },
     "universe": {
@@ -701,25 +730,101 @@
         "lyrics_btn": "Lyrics",
         "no_lyrics": "No lyrics available for this track.",
         "tracks": {
-            "1":  { "title": "Sunny Day (Intro)",        "domain": "Introduction",           "desc": "A gentle sunrise melody that welcomes learners to the world of SOE." },
-            "2":  { "title": "Days of the Week",         "domain": "Time & Celestia",         "desc": "Elias & Selene sing the seven days, building temporal sequencing skills." },
-            "3":  { "title": "Alphabet Song Remix",      "domain": "Language & Harmonia",    "desc": "Kenji & Aiko bring the ABCs to life with a rhythmic phonics remix." },
-            "4":  { "title": "Horses Interlude",         "domain": "Science & Terrasol",       "desc": "A playful spoken-word journey through the animal kingdom, guided by humor." },
-            "5":  { "title": "Le Cheval",                "domain": "Language & Luminosity",   "desc": "A bilingual French-English tribute to the power and grace of the horse." },
-            "6":  { "title": "Let's Stretch",            "domain": "Physical & Vitalis",     "desc": "Felix & Amara lead a full-body breathing and stretching routine." },
-            "7":  { "title": "Drill Time",               "domain": "Physical & Vitalis",     "desc": "A motivating march and movement drill set to a rhythmic call-and-response chant." },
-            "8":  { "title": "Numbers",                  "domain": "Math & Numeria",         "desc": "Kwame & Octavia count to 10 with claps — hands-on numeracy in action." },
-            "9":  { "title": "My Body",                  "domain": "Science & Terrasol",       "desc": "Athena & Ezra guide learners through the anatomy of the human body." },
-            "10": { "title": "Manners",                  "domain": "Social-Emotional",       "desc": "Aiko teaches the language of courtesy — please, thank you, excuse me." },
-            "11": { "title": "Do You Know What Time It Is?", "domain": "Time & Celestia",    "desc": "Elias & Selene introduce clock-reading, half-hours, and daily routines." },
-            "12": { "title": "Changes",                  "domain": "Science & Terrasol",       "desc": "Nerissa reflects on the changing weather and the constancy of love." },
-            "13": { "title": "The One Hundred Song",      "domain": "Math & Numeria",         "desc": "Octavia counts all the way to 100 — a milestone in early numeracy." },
-            "14": { "title": "The Ocean",                "domain": "Science & Terrasol",       "desc": "An immersive sound journey exploring the wonders of the ocean." },
-            "15": { "title": "Hard Words",               "domain": "Language & Aquaria",   "desc": "Ronan & Nerissa tackle multi-syllabic vocabulary with rhythmic articulation drills." },
-            "16": { "title": "Shapes",                   "domain": "Math & Terrasol",       "desc": "Silas & Vesta sing about circles, squares, triangles, and beyond." },
-            "17": { "title": "Months of the Year",       "domain": "Time & Celestia",         "desc": "Elias guides a full calendar recitation set to a memorable melody." },
-            "18": { "title": "Rain",                     "domain": "Science & Terrasol",       "desc": "Athena & Ezra explore the water cycle and the beauty of rainfall." },
-            "19": { "title": "After the Storm (Outro)", "domain": "Introduction",           "desc": "A calm closing track — a promise that light always follows the storm." }
+            "1": {
+                "title": "Sunny Day (Intro)",
+                "domain": "Introduction",
+                "desc": "A gentle sunrise melody that welcomes learners to the world of SOE."
+            },
+            "2": {
+                "title": "Days of the Week",
+                "domain": "Time & Celestia",
+                "desc": "Elias & Selene sing the seven days, building temporal sequencing skills."
+            },
+            "3": {
+                "title": "Alphabet Song Remix",
+                "domain": "Language & Harmonia",
+                "desc": "Kenji & Aiko bring the ABCs to life with a rhythmic phonics remix."
+            },
+            "4": {
+                "title": "Horses Interlude",
+                "domain": "Science & Terrasol",
+                "desc": "A playful spoken-word journey through the animal kingdom, guided by humor."
+            },
+            "5": {
+                "title": "Le Cheval",
+                "domain": "Language & Luminosity",
+                "desc": "A bilingual French-English tribute to the power and grace of the horse."
+            },
+            "6": {
+                "title": "Let's Stretch",
+                "domain": "Physical & Vitalis",
+                "desc": "Felix & Amara lead a full-body breathing and stretching routine."
+            },
+            "7": {
+                "title": "Drill Time",
+                "domain": "Physical & Vitalis",
+                "desc": "A motivating march and movement drill set to a rhythmic call-and-response chant."
+            },
+            "8": {
+                "title": "Numbers",
+                "domain": "Math & Numeria",
+                "desc": "Kwame & Octavia count to 10 with claps — hands-on numeracy in action."
+            },
+            "9": {
+                "title": "My Body",
+                "domain": "Science & Terrasol",
+                "desc": "Athena & Ezra guide learners through the anatomy of the human body."
+            },
+            "10": {
+                "title": "Manners",
+                "domain": "Social-Emotional",
+                "desc": "Aiko teaches the language of courtesy — please, thank you, excuse me."
+            },
+            "11": {
+                "title": "Do You Know What Time It Is?",
+                "domain": "Time & Celestia",
+                "desc": "Elias & Selene introduce clock-reading, half-hours, and daily routines."
+            },
+            "12": {
+                "title": "Changes",
+                "domain": "Science & Terrasol",
+                "desc": "Nerissa reflects on the changing weather and the constancy of love."
+            },
+            "13": {
+                "title": "The One Hundred Song",
+                "domain": "Math & Numeria",
+                "desc": "Octavia counts all the way to 100 — a milestone in early numeracy."
+            },
+            "14": {
+                "title": "The Ocean",
+                "domain": "Science & Terrasol",
+                "desc": "An immersive sound journey exploring the wonders of the ocean."
+            },
+            "15": {
+                "title": "Hard Words",
+                "domain": "Language & Aquaria",
+                "desc": "Ronan & Nerissa tackle multi-syllabic vocabulary with rhythmic articulation drills."
+            },
+            "16": {
+                "title": "Shapes",
+                "domain": "Math & Terrasol",
+                "desc": "Silas & Vesta sing about circles, squares, triangles, and beyond."
+            },
+            "17": {
+                "title": "Months of the Year",
+                "domain": "Time & Celestia",
+                "desc": "Elias guides a full calendar recitation set to a memorable melody."
+            },
+            "18": {
+                "title": "Rain",
+                "domain": "Science & Terrasol",
+                "desc": "Athena & Ezra explore the water cycle and the beauty of rainfall."
+            },
+            "19": {
+                "title": "After the Storm (Outro)",
+                "domain": "Introduction",
+                "desc": "A calm closing track — a promise that light always follows the storm."
+            }
         }
     }
 }
