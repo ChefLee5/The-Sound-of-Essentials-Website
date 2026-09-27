@@ -208,7 +208,7 @@ const Home = () => {
         {/* 3D Character Cylinder Carousel */}
         <div className="hero__carousel-scene">
           <div className="hero__carousel-desktop-only">
-            <button className="carousel-btn prev-btn" onClick={rotateLeft} aria-label="Previous characters">
+            <button className="carousel-btn prev-btn" onClick={rotateLeft} aria-label="Previous heroes">
               &#10094;
             </button>
             <div 
@@ -236,7 +236,7 @@ const Home = () => {
                 </div>
               ))}
             </div>
-            <button className="carousel-btn next-btn" onClick={rotateRight} aria-label="Next characters">
+            <button className="carousel-btn next-btn" onClick={rotateRight} aria-label="Next heroes">
               &#10095;
             </button>
           </div>

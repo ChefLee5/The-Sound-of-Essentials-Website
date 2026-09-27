@@ -693,7 +693,7 @@ const MediaRoom = () => {
               A World <span className="text-sage">Brought to Life</span>
             </h2>
             <p className="section-subtitle" style={{ margin: '0 auto 2.5rem auto' }}>
-              Glimpses from the world of SOE — characters, scenes, and moments from the Seven Lands.
+              Glimpses from the world of SOE — heroes, scenes, and moments from the Seven Lands.
             </p>
           </RevealSection>
 

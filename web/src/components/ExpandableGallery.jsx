@@ -211,7 +211,7 @@ export default function ExpandableGallery() {
                   className="xg__copy"
                 >
                   <ul className="book-feature-list xg__features">
-                    <li>🎵 <strong>15 characters</strong>, each with a unique rhythm and learning style</li>
+                    <li>🎵 <strong>15 heroes</strong>, each with a unique rhythm and learning style</li>
                     <li>🌏 <strong>7 magical lands</strong> — from Harmonia to Celestia</li>
                     <li>📝 <strong>125 immersive scenes</strong> with full vocabulary context</li>
                     <li>🎯 <strong>5 core domains:</strong> Language, Numbers, Science, Music, Life Skills</li>

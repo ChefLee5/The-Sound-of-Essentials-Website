@@ -837,7 +837,7 @@ const RhythmReadyOffer = () => (
               <li className="rq-offer__item">
                 <span className="rq-offer__tick" aria-hidden="true">✓</span>
                 <span>
-                  <strong>15 Hero Guides &amp; Coaching Tips.</strong> Character mentorship for daily motivation.
+                  <strong>15 Hero Guides &amp; Coaching Tips.</strong> Hero mentorship for daily motivation.
                 </span>
               </li>
               <li className="rq-offer__item">
@@ -1079,7 +1079,7 @@ const faqs = [
     color: 'var(--color-red)',
     q: 'How does the music integrate with the workbook?',
     a: [
-      'Every week corresponds with themes and characters from the 19-track Sound of Essentials album (available 100% free on /listen).',
+      'Every week corresponds with themes and heroes from the 19-track Sound of Essentials album (available 100% free on /listen).',
       'The songs reinforce the phonics, numbers, and somatic movement exercises children practice on the page.',
     ],
     chips: ['Free companion album', 'Phonics songs', 'Multi-sensory'],
@@ -1210,7 +1210,7 @@ const RhythmQuestSale = () => {
 
       {/* ═══ 15 HEROES PARADE ═══ */}
       <section className="rq-characters">
-        <div className="rq-char-parade" aria-label="Character parade">
+        <div className="rq-char-parade" aria-label="Hero parade">
           {paradeChars.map((c, i) => (
             <div key={`${c.id}-${i}`} className="rq-char-item">
               <img

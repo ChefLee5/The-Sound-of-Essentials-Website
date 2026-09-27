@@ -61,7 +61,7 @@ After: A child journeying through 7 lands, learning language with Kenji and Aiko
 
 The turnaround starts with a simple choice: replacing passive video consumption with active acoustic songs.
 
-The Sound of Essentials: Rhythm Quest includes 19 original songs and 15 character guides led by Seriphia. Designed for the developing brain, not an algorithm.
+The Sound of Essentials: Rhythm Quest includes 19 original songs and 15 hero guides led by Seriphia. Designed for the developing brain, not an algorithm.
 
 Ages 2 to 7. Free 19-track album streaming today.
 
@@ -132,7 +132,7 @@ Then my four-year-old started skip-counting with Octavia and Kwame in Numeria.
 
 Soon after, she described animal habitats she learned from Silas and Vesta in Terrasol, followed by the French lyrics to Le Cheval from Harmonia.
 
-The Sound of Essentials spans 7 Lands, 15 hero characters, and 19 original songs built on early childhood neuroscience for ages 2 to 7. Crafted by a father's heart and a mother's love because existing children's media fell short.
+The Sound of Essentials spans 7 Lands, 15 heroes, and 19 original songs built on early childhood neuroscience for ages 2 to 7. Crafted by a father's heart and a mother's love because existing children's media fell short.
 
 It proved me wrong in the best way.
 
@@ -225,7 +225,7 @@ Built on Dalcroze, Orff, and Kodály music education methods, each track in The 
 Picture your four-year-old singing about skip-counting and anatomy with pure excitement, completely screen-free.
 
 Tap below to stream all 19 tracks immediately, with free printable coloring sheets included.`,
-    headline: '15 Characters. 7 Lands. 1 Quest.',
+    headline: '15 Heroes. 7 Lands. 1 Quest.',
     description: 'Start the adventure today.',
     cta: 'LISTEN_NOW',
     url: 'https://thesoundofessentials.com/listen?utm_source=meta&utm_medium=paid_social&utm_campaign=cold_delta5&utm_content=ad10_aida',
@@ -244,7 +244,7 @@ Tap below to stream all 19 tracks immediately, with free printable coloring shee
 
 I spent four years developing The Sound of Essentials from the ground up.
 
-Guided by Seriphia and 14 hero characters across 7 Lands, this 19-track audio curriculum covers 5 core developmental domains for children ages 2 to 7.
+Guided by Seriphia and 14 heroes across 7 Lands, this 19-track audio curriculum covers 5 core developmental domains for children ages 2 to 7.
 
 We provide the music freely because every child deserves a strong foundation.
 
@@ -316,7 +316,7 @@ Fifteen hero mentors guided by Seriphia adapt to every child's pace for ages 2 t
 Curiosity leads the way without tests or pressure.
 
 ✨ Explore the 7 Lands free below.`,
-    headline: 'Which Character Will They Love?',
+    headline: 'Which Hero Will They Love?',
     description: 'Kids choose their own path.',
     cta: 'LISTEN_NOW',
     url: 'https://thesoundofessentials.com/listen?utm_source=meta&utm_medium=paid_social&utm_campaign=cold_delta5&utm_content=ad14_dream_state',
@@ -378,7 +378,7 @@ The Sound of Essentials supports parents who choose active curiosity: 19 songs, 
 
 Step 2: When your child smiles, play a full track such as "Do You Know What Time It Is?" in Celestia.
 
-Step 3: Meet the 15 characters to see whether they connect with Kenji, Amara, Felix, or Octavia.
+Step 3: Meet the 15 heroes to see whether they connect with Kenji, Amara, Felix, or Octavia.
 
 Step 4: Download the companion coloring sheets.
 
@@ -403,7 +403,7 @@ Seven Lands, 19 songs, and free streaming for ages 2 to 7.
     image: '/assets/marketing/meta-ads/ad06_holographic_universe.jpg',
     primaryText: `Crafted by a father's heart and a mother's love over four years of devotion to create an early learning world that surprises parents when they first hear it.
 
-Seven Lands, 15 hero characters, 19 original songs in 3 languages, 125 illustrated scenes, and 4,000+ vocabulary words in the companion dictionary create a complete early curriculum for ages 2 to 7.
+Seven Lands, 15 heroes, 19 original songs in 3 languages, 125 illustrated scenes, and 4,000+ vocabulary words in the companion dictionary create a complete early curriculum for ages 2 to 7.
 
 Built independently for their own family, it is now shared freely with homes and classrooms worldwide.
 
@@ -426,7 +426,7 @@ Built independently for their own family, it is now shared freely with homes and
 
 The Sound of Essentials brings those elements together through early brain science.
 
-Children explore 7 Lands with 15 relatable characters while listening to West African drums, French lyrical cadences, and Latin percussion.
+Children explore 7 Lands with 15 relatable heroes while listening to West African drums, French lyrical cadences, and Latin percussion.
 
 Nineteen songs across 7 Lands, streaming free for ages 2 to 7.
 
@@ -489,7 +489,7 @@ The music stays free for every family.
     archetype: 'Nested Loop',
     wave: 'Wave 3',
     delta: 'Δ4: Institution vs. Sanctuary',
-    audience: 'Storytelling & Character Lovers',
+    audience: 'Storytelling & Hero Lovers',
     image: '/assets/marketing/meta-ads/ad10_aida_heroes_quest.jpg',
     primaryText: `Seriphia, the guardian learning mother, welcomes children at the entrance of the 7 Lands.
 
@@ -500,7 +500,7 @@ Through the 7 Lands, children build strong foundations in language, math, and co
 Nineteen songs, streaming free for ages 2 to 7.
 
 🎵 Step into the 7 Lands with the link below.`,
-    headline: 'Meet the Characters of Rhythm Quest',
+    headline: 'Meet the Heroes of Rhythm Quest',
     description: '15 guides. 19 songs. Free.',
     cta: 'LISTEN_NOW',
     url: 'https://thesoundofessentials.com/listen?utm_source=meta&utm_medium=paid_social&utm_campaign=cold_delta4&utm_content=ad22_nested_loop',
@@ -629,7 +629,7 @@ Nineteen songs across 7 Lands for ages 2 to 7. Free streaming today.
 
 The Sound of Essentials delivers a complete 19-track developmental music library free of charge.
 
-Fifteen character guides across 7 Lands apply Dalcroze and Kodály principles for ages 2 to 7.
+Fifteen hero guides across 7 Lands apply Dalcroze and Kodály principles for ages 2 to 7.
 
 No recurring subscriptions or mandatory upgrades, just wholesome acoustic education.
 

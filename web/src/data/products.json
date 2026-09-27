@@ -1,19 +1,19 @@
 [
   {
     "id": "rhythm-quest-album",
-    "name": "The Sound of Essentials Deluxe: A Musical Learning Experience",
-    "shortName": "The Sound of Essentials Deluxe",
+    "name": "The Sound of Essentials: A Musical Learning Experience",
+    "shortName": "A Musical Learning Experience",
     "type": "music-album",
     "format": "Digital Audio",
     "price": 0.0,
     "currency": "USD",
-    "description": "19 original tracks designed for the developing brain. Each song targets a specific developmental domain — from phonics and counting to movement, time concepts, and scientific curiosity — all through the power of rhythm and melody. Free, unlocked with your email.",
+    "description": "The complete 19-track foundational album gifted freely to founding families ($0). Recorded with live acoustic vocals and organic instruments to replace screen fatigue with calm co-regulation. Pairs with the Rhythm Quest companion storybook.",
     "features": [
-      "19 original educational tracks",
-      "7 developmental domains covered",
-      "Lyrics included",
-      "Streaming and download options",
-      "Curriculum-aligned content"
+      "19 original acoustic tracks with live organic instrumentation",
+      "Covers all 5 developmental domains (Language, Cognitive, Physical, Science, Social-Emotional)",
+      "Pairs with The Sound of Essentials: Rhythm Quest companion storybook",
+      "100% Ad-Free, zero algorithmic traps",
+      "Instant digital download + private audio player streaming"
     ],
     "trackCount": 19,
     "ageRange": "Ages 2–7",
@@ -37,18 +37,18 @@
   },
   {
     "id": "rhythm-quest-ebook",
-    "name": "The Sound of Essentials: Rhythm Quest",
-    "shortName": "Rhythm Quest",
+    "name": "The Sound of Essentials: Rhythm Quest (Companion Storybook)",
+    "shortName": "Rhythm Quest Companion Storybook",
     "type": "digital-book",
     "format": "EPUB",
     "price": 19.0,
     "currency": "USD",
-    "description": "The 66-page illustrated companion story to the free 19-track album. Seriphia guides Kenji, Aiko, and the heroes through all 7 Lands, unlocking emotional regulation, phonics, and curiosity.",
+    "description": "The official 66-page illustrated companion storybook that brings the 19-track album to life. Introduces all 15 heroes across 7 Lands, modeling phonemic awareness, kindness, and self-regulation on the page.",
     "features": [
-      "66 illustrated story pages",
-      "Seriphia and the 15 heroes",
-      "My Word Quest Glossary backmatter",
-      "Paired to the 19-track album",
+      "66 full-color illustrated storybook pages",
+      "Introduces Seriphia and all 15 heroes across the 7 Lands",
+      "My Word Quest Glossary backmatter & phonetic guides",
+      "Pairs with the 19-track album for read-along sing-alongs",
       "Instant digital download (PDF & EPUB)"
     ],
     "ageRange": "Ages 2–7",
@@ -81,7 +81,7 @@
       "7-week structured framing curriculum (1 Land per week)",
       "~400 activities across 10 daily blocks",
       "Progressive difficulty scaling",
-      "All 15 hero characters featured",
+      "All 15 heroes featured across 7 Lands",
       "Physical print anchor ($35) or instant digital ($21)"
     ],
     "ageRange": "Ages 2–7",
@@ -111,7 +111,7 @@
     "price": 55.0,
     "retailPrice": 79.0,
     "currency": "USD",
-    "description": "A 125-scene illustrated vocabulary journey through all 7 Lands of the SOE universe. Over 4,000 words organized by thematic scenes with phonetic guides, bilingual support, and character-driven narratives.",
+    "description": "A 125-scene illustrated vocabulary journey through all 7 Lands of the SOE universe. Over 4,000 words organized by thematic scenes with phonetic guides, bilingual support, and hero-driven narratives.",
     "features": [
       "4,000+ vocabulary words",
       "125 illustrated scenes",
@@ -146,13 +146,13 @@
     "price": 49.0,
     "retailPrice": 89.0,
     "currency": "USD",
-    "description": "The complete Sound of Essentials learning experience. Includes the Rhythm Quest album (19 tracks), Essential Picture Dictionary, Rhythm Quest Storybook, and Rhythm Ready Workbook — everything a family needs for a full year of music-powered learning.",
+    "description": "The complete Sound of Essentials learning experience. Includes the 19-track album (The Sound of Essentials: A Musical Learning Experience), the Rhythm Quest Companion Storybook, the Essential Picture Dictionary, and the Rhythm Ready Workbook — everything a family needs for a full year of music-powered learning.",
     "features": [
-      "19-track Rhythm Quest album",
+      "19-track album: The Sound of Essentials: A Musical Learning Experience",
+      "The Sound of Essentials: Rhythm Quest Companion Storybook (EPUB)",
       "Essential Picture Dictionary (EPUB)",
-      "66-page Rhythm Quest Storybook (EPUB)",
       "Rhythm Ready Workbook (PDF)",
-      "Bonus: printable activity sheets",
+      "Bonus: printable activity sheets & adventure maps",
       "Bonus: parent quick-start guide"
     ],
     "includes": [
@@ -197,8 +197,8 @@
       "Adjustable Flexible Headband (Toddlers, Kids & Pre-Teens)",
       "Universal Compatibility (iPads, Chromebooks, Tablets, PCs, Switch)"
     ],
-    "ageRange": "Ages 2–8",
-    "gradeRange": "Toddler, Pre-K to Grade 3",
+    "ageRange": "Ages 2–7",
+    "gradeRange": "Toddler, Pre-K to Grade 2",
     "isbn": null,
     "cover": "/assets/marketing/headphones/hero.jpg",
     "category": "sensory-hardware",
@@ -211,12 +211,48 @@
       "rating": "4.8/5.0 (121+ sold)"
     },
     "variants": [
-      { "id": "pink-purple", "name": "Pink & Purple", "land": "Celestia", "color": "#EC4899", "image": "/assets/marketing/headphones/variant-pink-purple.jpg" },
-      { "id": "white-orange", "name": "White & Orange", "land": "Ventura", "color": "#FF6F00", "image": "/assets/marketing/headphones/variant-white-orange.jpg" },
-      { "id": "blue-red", "name": "Ocean Blue & Red", "land": "Aquaria", "color": "#2563EB", "image": "/assets/marketing/headphones/variant-blue-red.jpg" },
-      { "id": "green-yellow", "name": "Sage Green & Yellow", "land": "Terrasol", "color": "#16A34A", "image": "/assets/marketing/headphones/variant-green-yellow.jpg" },
-      { "id": "yellow-blue", "name": "Sun Yellow & Blue", "land": "Solara", "color": "#EAB308", "image": "/assets/marketing/headphones/variant-yellow-blue.jpg" },
-      { "id": "ocean-blue", "name": "Deep Sea Cobalt", "land": "Harmonia", "color": "#1D4ED8", "image": "/assets/marketing/headphones/variant-ocean-blue.png" }
+      {
+        "id": "pink-purple",
+        "name": "Pink & Purple",
+        "land": "Celestia",
+        "color": "#EC4899",
+        "image": "/assets/marketing/headphones/variant-pink-purple.jpg"
+      },
+      {
+        "id": "white-orange",
+        "name": "White & Orange",
+        "land": "Ventura",
+        "color": "#FF6F00",
+        "image": "/assets/marketing/headphones/variant-white-orange.jpg"
+      },
+      {
+        "id": "blue-red",
+        "name": "Ocean Blue & Red",
+        "land": "Aquaria",
+        "color": "#2563EB",
+        "image": "/assets/marketing/headphones/variant-blue-red.jpg"
+      },
+      {
+        "id": "green-yellow",
+        "name": "Sage Green & Yellow",
+        "land": "Terrasol",
+        "color": "#16A34A",
+        "image": "/assets/marketing/headphones/variant-green-yellow.jpg"
+      },
+      {
+        "id": "yellow-blue",
+        "name": "Sun Yellow & Blue",
+        "land": "Solara",
+        "color": "#EAB308",
+        "image": "/assets/marketing/headphones/variant-yellow-blue.jpg"
+      },
+      {
+        "id": "ocean-blue",
+        "name": "Deep Sea Cobalt",
+        "land": "Harmonia",
+        "color": "#1D4ED8",
+        "image": "/assets/marketing/headphones/variant-ocean-blue.png"
+      }
     ],
     "tags": [
       "headphones",
@@ -265,6 +301,39 @@
     "status": "available",
     "storeUrl": "https://buy.stripe.com/test_28E00j9BOacldAWc706Vq08",
     "tiktokShopUrl": "https://www.tiktok.com/@soe.learn"
+  },
+  {
+    "id": "bronze-token-album",
+    "name": "The Sound of Essentials: Deluxe Bronze / Copper Token Album",
+    "shortName": "Bronze Token Album",
+    "type": "phygital-vinyl",
+    "format": "Heavyweight 180g Vinyl + Embedded NFC",
+    "price": 85.0,
+    "currency": "USD",
+    "description": "Collector's edition pressed in metallic copper/bronze wax. Features foil-stamped gatefold, 24-page score and storybook, and an embedded NFC chip that unlocks the private 24-bit lossless FLAC vault and triggers the on-chain minting of the owner's Genesis Concord Token.",
+    "features": [
+      "Heavyweight 180g virgin audiophile metallic wax pressing",
+      "Embedded NFC phygital verification chip (#001 to #1000 serial)",
+      "Instant access to 24-bit/96kHz lossless FLAC master vault",
+      "Genesis Concord Token on-chain minting",
+      "Solid copper-plated bookmark: 'Staying on the path, always learning'",
+      "Made in the land of America origin stamp"
+    ],
+    "trackCount": 19,
+    "ageRange": "Ages 2–7",
+    "gradeRange": "Pre-K to Grade 2",
+    "cover": "/assets/marketing/quest-collage.webp",
+    "category": "heirloom-phygital",
+    "tags": [
+      "vinyl",
+      "phygital",
+      "tokenized",
+      "heirloom",
+      "concord",
+      "nfc"
+    ],
+    "funnelStage": "heirloom-offer",
+    "status": "reserved",
+    "storeUrl": "/concord"
   }
 ]
-

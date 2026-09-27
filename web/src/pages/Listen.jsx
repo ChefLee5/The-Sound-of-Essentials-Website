@@ -206,7 +206,7 @@ const Listen = () => {
             Hear What <em>Learning</em> Sounds Like
           </h1>
           <p className="section-subtitle listen-hero__subtitle">
-            Designed for the developing brain — not the algorithm.
+            19 acoustic songs gifted freely ($0) to founding families. Experience the music first, then pair it with our 66-page companion storybook, <em>The Sound of Essentials: Rhythm Quest</em> ($19), to bring all 15 heroes into your child's hands.
           </p>
 
           {isUnlocked ? (
@@ -229,6 +229,10 @@ const Listen = () => {
               >
                 🎨 Download Free Coloring Book (PDF) ↓
               </button>
+
+              <Link to="/gallery" className="btn btn-outline" style={{ fontSize: '1rem', padding: '0.85rem 1.8rem', background: 'rgba(255, 255, 255, 0.8)' }}>
+                📖 Companion Storybook ($19) →
+              </Link>
 
               <Link to="/rhythm-ready" className="btn btn-outline" style={{ fontSize: '1rem', padding: '0.85rem 1.8rem', background: 'rgba(255, 255, 255, 0.8)' }}>
                 📚 Rhythm Ready Workbook ($21) →
@@ -255,6 +259,9 @@ const Listen = () => {
                 >
                   🎨 Download Free Coloring Book (PDF) ↓
                 </button>
+                <Link to="/gallery" className="btn btn-outline" style={{ fontSize: '1rem', padding: '0.85rem 1.8rem', background: 'rgba(255, 255, 255, 0.8)' }}>
+                  📖 Companion Storybook ($19) →
+                </Link>
                 <Link to="/rhythm-ready" className="btn btn-outline" style={{ fontSize: '1rem', padding: '0.85rem 1.8rem', background: 'rgba(255, 255, 255, 0.8)' }}>
                   📚 Rhythm Ready Workbook ($21) →
                 </Link>
@@ -501,7 +508,7 @@ const Listen = () => {
                   <div className="section-label">📸 Behind the Quest</div>
                   <h2 className="section-title">A World <span className="text-sage">Brought to Life</span></h2>
                   <p className="section-subtitle" style={{ margin: '0 auto 2.5rem auto' }}>
-                    Glimpses from the world of SOE — characters, scenes, and moments from the Seven Lands.
+                    Glimpses from the world of SOE — heroes, scenes, and moments from the Seven Lands.
                   </p>
                 </RevealSection>
                 <GalleryGrid shots={galleryShots} />

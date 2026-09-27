@@ -197,7 +197,7 @@ const HomeV2 = () => {
                 </p>
                 <p className="v2-body">
                   The Sound of Essentials began as lullabies and grew into an entire universe:
-                  characters, lands, songs, and stories, all stitched together by a single
+                  heroes, lands, songs, and stories, all stitched together by a single
                   belief — that early learning should feel like play, and sound like music.
                 </p>
                 <Link to="/v2/mission" className="v2-split__link">Our Mission →</Link>

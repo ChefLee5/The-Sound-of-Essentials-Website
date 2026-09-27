@@ -21,8 +21,8 @@ const CHAPTERS = [
   {
     n: '03',
     title: 'Multi-Sensory Encoding',
-    body: 'A concept met through sound, sight, and movement at once is encoded across multiple regions and recalled far more reliably than one met through a single channel. Each hero pairs a melody with a character, a color, and a gesture, so every idea arrives with more than one handle to hold it by.',
-    stat: { value: '15', label: 'character guides, one per concept cluster' },
+    body: 'A concept met through sound, sight, and movement at once is encoded across multiple regions and recalled far more reliably than one met through a single channel. Each hero pairs a melody with a story, a color, and a gesture, so every idea arrives with more than one handle to hold it by.',
+    stat: { value: '15', label: 'hero guides, one per concept cluster' },
   },
   {
     n: '04',

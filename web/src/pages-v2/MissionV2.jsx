@@ -10,7 +10,7 @@ const SECTIONS = [
     heading: 'Building a Sanctuary',
     paras: [
       'The Sound of Essentials was born from a simple refusal: children deserve better than content built to maximize watch-time. We set out to build a sanctuary instead — a calm, neuro-affirming world where learning is the point, not the bait.',
-      'Every song, character, and land exists to serve one child at one moment, learning one thing. Nothing is engineered to keep them scrolling. Everything is engineered to help them grow.',
+      'Every song, hero, and land exists to serve one child at one moment, learning one thing. Nothing is engineered to keep them scrolling. Everything is engineered to help them grow.',
     ],
   },
   {

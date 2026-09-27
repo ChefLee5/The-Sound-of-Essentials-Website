@@ -25,7 +25,7 @@ export function homeSchema() {
       url: SITE_URL,
       email: 'info@soelearn.com',
       logo: ORG_LOGO,
-      description: 'A music-powered educational experience designed for the developing brain. 19 original tracks, 15 hero characters, and 7 thematic lands guide children Pre-K through Grade 3 through language, math, movement, science, and more.',
+      description: 'A music-powered educational experience designed for the developing brain. 19 original tracks, 15 heroes, and 7 thematic lands guide children Ages 2–7 (Pre-K through Grade 2) through language, math, movement, science, and more.',
       foundingDate: '2024',
       sameAs: [],
       contactPoint: {
@@ -41,8 +41,8 @@ export function homeSchema() {
       audience: {
         '@type': 'EducationalAudience',
         educationalRole: 'student',
-        suggestedMinAge: 3,
-        suggestedMaxAge: 9,
+        suggestedMinAge: 2,
+        suggestedMaxAge: 7,
       },
     },
     {
@@ -67,7 +67,7 @@ export function heroesSchema() {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
     name: 'SOE Rhythm Quest Heroes',
-    description: '15 hero characters who guide children through music-powered learning across 7 thematic lands.',
+    description: '15 heroes who guide children through music-powered learning across 7 thematic lands.',
     numberOfItems: heroesData.length,
     itemListElement: heroesData.map((hero, i) => ({
       '@type': 'ListItem',
@@ -101,7 +101,7 @@ export function mediaRoomSchema(trackTitles) {
   return {
     '@context': 'https://schema.org',
     '@type': 'MusicAlbum',
-    name: 'The Sound of Essentials: Rhythm Quest',
+    name: 'The Sound of Essentials: A Musical Learning Experience',
     description: '19 original educational tracks designed for the developing brain, covering language, math, movement, time, nature, and more.',
     numTracks: tracksData.length,
     gtin12: '885000556098',
@@ -120,7 +120,7 @@ export function mediaRoomSchema(trackTitles) {
       genre: 'Educational',
       inAlbum: {
         '@type': 'MusicAlbum',
-        name: 'The Sound of Essentials: Rhythm Quest',
+        name: 'The Sound of Essentials: A Musical Learning Experience',
         gtin12: '885000556098',
       },
     })),
@@ -141,12 +141,12 @@ export function universeSchema() {
       name: SITE_NAME,
       url: SITE_URL,
     },
-    educationalLevel: 'Pre-K through Grade 3',
+    educationalLevel: 'Pre-K through Grade 2 (Ages 2–7)',
     audience: {
       '@type': 'EducationalAudience',
       educationalRole: 'student',
-      suggestedMinAge: 3,
-      suggestedMaxAge: 9,
+      suggestedMinAge: 2,
+      suggestedMaxAge: 7,
     },
     hasPart: landsData.map((land, i) => ({
       '@type': 'Course',
@@ -154,7 +154,7 @@ export function universeSchema() {
       name: land.name,
       description: `${land.focus} — guided by ${land.duoLabel}`,
       image: `${SITE_URL}/assets/lands/${land.panorama}`,
-      educationalLevel: 'Pre-K through Grade 3',
+      educationalLevel: 'Pre-K through Grade 2 (Ages 2–7)',
       teaches: land.focus,
     })),
   };
