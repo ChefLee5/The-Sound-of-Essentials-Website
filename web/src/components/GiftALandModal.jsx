@@ -70,6 +70,7 @@ export const GiftALandModal = ({ isOpen, onClose, triggerLand = 'Harmonia' }) =>
           exit={{ scale: 0.94, opacity: 0, y: 16 }}
           transition={{ type: 'spring', damping: 28, stiffness: 320, mass: 0.8 }}
         >
+          <div className="gift-modal-handle" aria-hidden="true" />
           <button className="gift-modal-close" onClick={onClose} aria-label="Close modal">
             ✕
           </button>

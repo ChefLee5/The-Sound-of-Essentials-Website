@@ -191,3 +191,76 @@
   border-radius: 8px;
   font-size: 0.85rem;
 }
+
+/* ── Mobile Native Bottom Sheet (Apple Fluid Interface) ── */
+.email-gate-handle {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .email-gate-backdrop {
+    align-items: flex-end;
+    padding: 0;
+  }
+
+  .email-gate-card {
+    max-width: 100%;
+    width: 100%;
+    border-radius: 28px 28px 0 0;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    border-top: 2px solid rgba(255, 111, 0, 0.35);
+    padding: 1.25rem 1.25rem calc(1.75rem + env(safe-area-inset-bottom, 0px)) 1.25rem;
+    max-height: 92vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    box-shadow: 
+      0 -8px 32px rgba(0, 0, 0, 0.22),
+      0 0 50px rgba(255, 111, 0, 0.18);
+  }
+
+  .email-gate-handle {
+    display: block;
+    width: 44px;
+    height: 5px;
+    background: rgba(0, 0, 0, 0.18);
+    border-radius: 9999px;
+    margin: -0.25rem auto 1.25rem auto;
+  }
+
+  .email-gate-close {
+    top: 1rem;
+    right: 1rem;
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+    font-size: 1.35rem;
+  }
+
+  .email-gate-title {
+    font-size: 1.45rem;
+    line-height: 1.2;
+  }
+
+  .email-gate-subtext {
+    font-size: 0.88rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .email-gate-input,
+  .email-gate-select {
+    font-size: 16px !important;
+    min-height: 48px;
+    padding: 0.75rem 1rem;
+  }
+
+  .email-gate-submit-btn {
+    min-height: 52px;
+    font-size: 1.05rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

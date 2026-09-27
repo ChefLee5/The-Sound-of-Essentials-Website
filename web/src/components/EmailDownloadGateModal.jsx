@@ -113,6 +113,7 @@ export const EmailDownloadGateModal = ({
           exit={{ scale: 0.93, opacity: 0, y: 16 }}
           transition={{ type: 'spring', damping: 28, stiffness: 320, mass: 0.8 }}
         >
+          <div className="email-gate-handle" aria-hidden="true" />
           <button className="email-gate-close" onClick={onClose} aria-label="Close modal">
             &times;
           </button>

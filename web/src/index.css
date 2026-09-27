@@ -337,9 +337,24 @@ img {
 .nav-link:active,
 .rq-hero__node:active,
 .shape-card:active,
-.track-card:active {
+.track-card:active,
+.land-mini-card:active,
+.hero__mobile-card:active,
+.sticky-thumb-cta__btn:active,
+.faq-question-btn:active {
   transform: scale(0.965);
   transition: transform 90ms cubic-bezier(0.2, 0.9, 0.4, 1.1) !important;
+}
+
+/* Touch devices direct manipulation response */
+@media (hover: none) and (pointer: coarse) {
+  button:active,
+  .btn:active,
+  a[role="button"]:active,
+  .glass-card:active {
+    transform: scale(0.97);
+    transition: transform 90ms cubic-bezier(0.2, 0.9, 0.4, 1.1) !important;
+  }
 }
 
 button,

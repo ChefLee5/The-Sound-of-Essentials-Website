@@ -10,6 +10,7 @@ import { homeSchema } from '../utils/schema';
 import ExpandableGallery from '../components/ExpandableGallery';
 import { assetCssUrl, assetPath } from '../utils/assetPath';
 import Floating3DBook from '../components/ui/Floating3DBook';
+import StickyThumbCta from '../components/ui/StickyThumbCta';
 
 const Home = () => {
   const { t } = useTranslation();
@@ -260,6 +261,9 @@ const Home = () => {
                 </div>
               ))}
             </div>
+            <div className="hero__mobile-swipe-hint">
+              <span>👆 Swipe to explore mentors →</span>
+            </div>
           </div>
         </div>
 
@@ -430,6 +434,9 @@ const Home = () => {
 
           {/* 7 Lands Mini Carousel/Grid */}
           <RevealSection delay={0.35}>
+            <div className="lands-preview-swipe-hint-wrap">
+              <span className="lands-preview-swipe-hint">👆 Swipe across the 7 Lands →</span>
+            </div>
             <div className="lands-preview-grid">
               {lands.map((land) => (
                 <div 
@@ -753,6 +760,15 @@ const Home = () => {
           </RevealSection>
         </div>
       </section>
+
+      {/* ── Mobile Sticky Thumb Zone CTA ── */}
+      <StickyThumbCta
+        targetUrl="/listen"
+        label="🎧 Unlock 19 Tracks Free →"
+        subtext="100% Free • Instant Access"
+        badge="⚡️ Free Instant Access"
+        showThreshold={450}
+      />
 
       {/* ═══════════════════════════════════════════════════════
           STYLES
@@ -2091,6 +2107,9 @@ const Home = () => {
         .hero__carousel-mobile-only {
           display: none;
         }
+        .lands-preview-swipe-hint-wrap {
+          display: none;
+        }
 
         @media (max-width: 992px) {
           .voices-grid { grid-template-columns: 1fr; }
@@ -2173,6 +2192,21 @@ const Home = () => {
             border: 1px solid color-mix(in srgb, var(--char-color) 25%, transparent);
             margin-top: 0.5rem;
           }
+          .hero__mobile-swipe-hint {
+            display: flex;
+            justify-content: center;
+            margin-top: 0.5rem;
+          }
+          .hero__mobile-swipe-hint span {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--color-orange);
+            background: rgba(255, 111, 0, 0.08);
+            border: 1px solid rgba(255, 111, 0, 0.2);
+            padding: 0.25rem 0.8rem;
+            border-radius: var(--radius-xl);
+            letter-spacing: 0.02em;
+          }
           .hero__checkmarks { grid-template-columns: 1fr; }
           .emergency-stats-grid { grid-template-columns: repeat(2, 1fr); }
           .emergency-callout { flex-direction: column; align-items: flex-start; padding: 2rem 1.75rem; }
@@ -2194,7 +2228,44 @@ const Home = () => {
           .hero__actions { justify-content: center; }
           .hero__guarantee { justify-content: center; }
           .domains-grid { grid-template-columns: 1fr; }
-          .lands-preview-grid { grid-template-columns: 1fr; }
+          .lands-preview-swipe-hint-wrap {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 0.75rem;
+          }
+          .lands-preview-swipe-hint {
+            font-size: 0.76rem;
+            font-weight: 600;
+            color: var(--color-orange);
+            background: rgba(255, 111, 0, 0.08);
+            border: 1px solid rgba(255, 111, 0, 0.2);
+            padding: 0.25rem 0.8rem;
+            border-radius: var(--radius-xl);
+          }
+          .lands-preview-grid {
+            display: flex;
+            gap: 0.85rem;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            overscroll-behavior-x: contain;
+            scroll-snap-type: x mandatory;
+            scroll-padding: 0 1rem;
+            padding: 0.5rem 1rem 1rem 1rem;
+            margin: 0.5rem -1.25rem 0 -1.25rem;
+            scrollbar-width: none;
+            mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+          }
+          .lands-preview-grid::-webkit-scrollbar {
+            display: none;
+          }
+          .land-mini-card {
+            flex: 0 0 148px;
+            scroll-snap-align: center;
+            padding: 1.15rem 0.75rem;
+            border-radius: var(--radius-md);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+          }
           .final-cta-card { padding: 3.5rem 1.5rem; }
         }
 
