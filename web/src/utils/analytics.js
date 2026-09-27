@@ -77,20 +77,56 @@ export const appendUtmsToUrl = (urlStr) => {
 };
 
 /**
- * Dispatches PageView to all configured platforms.
+ * Safely pushes an event and its parameters to Google Tag Manager's dataLayer
+ * and forwards to window.gtag if present.
+ */
+export const pushDataLayer = (eventName, params = {}) => {
+  if (typeof window === 'undefined') return;
+
+  // Initialize dataLayer if missing
+  window.dataLayer = window.dataLayer || [];
+
+  // 1. Google Tag Manager push
+  window.dataLayer.push({
+    event: eventName,
+    ...params,
+  });
+
+  // 2. Google Analytics 4 (gtag.js) direct forwarder
+  if (typeof window.gtag === 'function') {
+    try {
+      window.gtag('event', eventName, params);
+    } catch {
+      // Non-blocking
+    }
+  }
+
+  // 3. Dev mode console visibility
+  if (import.meta.env?.DEV) {
+    console.log(`📊 [GTM dataLayer] event: "${eventName}"`, params);
+  }
+};
+
+/**
+ * Dispatches PageView to all configured platforms (GTM dataLayer, GA4, Meta, Clarity).
  */
 export const trackPageView = (path, title = '') => {
   if (typeof window === 'undefined') return;
   const utms = getStoredUtms();
+  const pagePath = path || (window.location.pathname + window.location.search);
+  const pageTitle = title || document.title;
+  const pageLocation = window.location.href;
 
-  // Google Analytics 4
-  if (window.gtag) {
-    window.gtag('event', 'page_view', {
-      page_path: path || window.location.pathname,
-      page_title: title || document.title,
-      ...utms,
-    });
-  }
+  const pageData = {
+    page_path: pagePath,
+    page_title: pageTitle,
+    page_location: pageLocation,
+    ...utms,
+  };
+
+  // Google Tag Manager / GA4: Push virtual_pageview for SPA triggers and page_view
+  pushDataLayer('virtual_pageview', pageData);
+  pushDataLayer('page_view', pageData);
 
   // Meta Pixel
   if (window.fbq) {
@@ -98,27 +134,29 @@ export const trackPageView = (path, title = '') => {
   }
 
   // Microsoft Clarity Tagging
-  if (window.clarity && path) {
-    window.clarity('set', 'page_path', path);
+  if (window.clarity && pagePath) {
+    window.clarity('set', 'page_path', pagePath);
   }
 };
 
 /**
- * Dispatches Lead event (e.g. email capture on /listen).
+ * Dispatches Lead event (e.g. email capture on /listen or newsletter).
  */
-export const trackLead = ({ email = '', formName = 'gate1_listen', source = 'listen_page' } = {}) => {
+export const trackLead = ({ email = '', formName = 'gate1_listen', source = 'listen_page', ...rest } = {}) => {
   if (typeof window === 'undefined') return;
   const utms = getStoredUtms();
 
-  if (window.gtag) {
-    window.gtag('event', 'generate_lead', {
-      event_category: 'funnel',
-      event_label: formName,
-      form_source: source,
-      value: 1,
-      ...utms,
-    });
-  }
+  pushDataLayer('generate_lead', {
+    event_category: 'funnel',
+    event_label: formName,
+    form_name: formName,
+    form_source: source,
+    lead_type: 'email_optin',
+    value: 1,
+    currency: 'USD',
+    ...utms,
+    ...rest,
+  });
 
   if (window.fbq) {
     window.fbq('track', 'Lead', {
@@ -142,15 +180,23 @@ export const trackViewContent = ({ contentName, category = 'curriculum', id = ''
   if (typeof window === 'undefined') return;
   const utms = getStoredUtms();
 
-  if (window.gtag) {
-    window.gtag('event', 'view_item', {
-      item_name: contentName,
-      item_category: category,
-      item_id: id,
-      value,
-      ...utms,
-    });
-  }
+  pushDataLayer('view_item', {
+    event_category: category,
+    item_name: contentName,
+    item_category: category,
+    item_id: id,
+    value,
+    ecommerce: {
+      items: [{
+        item_id: id || contentName,
+        item_name: contentName,
+        item_category: category,
+        price: value,
+        quantity: 1,
+      }],
+    },
+    ...utms,
+  });
 
   if (window.fbq) {
     window.fbq('track', 'ViewContent', {
@@ -170,19 +216,25 @@ export const trackInitiateCheckout = ({ sku = 'SOE-RQ-WORKBOOK', name = 'Rhythm 
   if (typeof window === 'undefined') return;
   const utms = getStoredUtms();
 
-  if (window.gtag) {
-    window.gtag('event', 'begin_checkout', {
+  const checkoutItems = [{
+    item_id: sku,
+    item_name: name,
+    price,
+    quantity: 1,
+  }];
+
+  pushDataLayer('begin_checkout', {
+    event_category: 'ecommerce',
+    currency,
+    value: price,
+    items: checkoutItems,
+    ecommerce: {
       currency,
       value: price,
-      items: [{
-        item_id: sku,
-        item_name: name,
-        price,
-        quantity: 1,
-      }],
-      ...utms,
-    });
-  }
+      items: checkoutItems,
+    },
+    ...utms,
+  });
 
   if (window.fbq) {
     window.fbq('track', 'InitiateCheckout', {
@@ -206,14 +258,13 @@ export const trackInitiateCheckout = ({ sku = 'SOE-RQ-WORKBOOK', name = 'Rhythm 
 export const trackAudioPlay = ({ trackId, trackTitle, domain = '' } = {}) => {
   if (typeof window === 'undefined') return;
 
-  if (window.gtag) {
-    window.gtag('event', 'audio_play', {
-      event_category: 'audio',
-      event_label: trackTitle,
-      track_id: trackId,
-      domain,
-    });
-  }
+  pushDataLayer('audio_play', {
+    event_category: 'audio',
+    event_label: trackTitle,
+    track_id: trackId,
+    track_title: trackTitle,
+    domain,
+  });
 
   if (window.clarity) {
     window.clarity('event', `play_${trackId}`);
@@ -227,13 +278,14 @@ export const trackReferralShare = ({ channel = 'link_copy', target = 'gift_a_lan
   if (typeof window === 'undefined') return;
   const utms = getStoredUtms();
 
-  if (window.gtag) {
-    window.gtag('event', 'share', {
-      method: channel,
-      content_type: target,
-      ...utms,
-    });
-  }
+  pushDataLayer('share', {
+    event_category: 'engagement',
+    method: channel,
+    content_type: target,
+    share_channel: channel,
+    share_target: target,
+    ...utms,
+  });
 
   if (window.fbq) {
     window.fbq('trackCustom', 'ReferralShare', {
@@ -247,14 +299,73 @@ export const trackReferralShare = ({ channel = 'link_copy', target = 'gift_a_lan
   }
 };
 
+/**
+ * Dispatches CTA button or interaction click.
+ */
+export const trackCtaClick = ({ ctaText = '', ctaLocation = '', ctaUrl = '', ctaType = 'button' } = {}) => {
+  if (typeof window === 'undefined') return;
+  const utms = getStoredUtms();
+
+  pushDataLayer('cta_click', {
+    event_category: 'engagement',
+    cta_text: ctaText,
+    cta_location: ctaLocation,
+    cta_url: ctaUrl,
+    cta_type: ctaType,
+    page_path: window.location.pathname,
+    ...utms,
+  });
+};
+
+/**
+ * Automatically captures interactive CTAs and outbound links to ensure GTM triggers fire
+ * even without manual onClick handlers on every button.
+ */
+export const initAutoTracking = () => {
+  if (typeof window === 'undefined' || window._soeTrackingInitialized) return;
+  window._soeTrackingInitialized = true;
+
+  document.addEventListener('click', (e) => {
+    try {
+      const target = e.target.closest('button, a, [data-cta], [data-track]');
+      if (!target) return;
+
+      const isCtaButton = target.tagName === 'BUTTON' || target.classList.contains('btn') || target.hasAttribute('data-cta');
+      const href = target.getAttribute('href') || '';
+      const isExternal = href.startsWith('http') && !href.includes(window.location.hostname);
+      const text = (target.innerText || target.getAttribute('aria-label') || target.getAttribute('title') || '').trim().slice(0, 80);
+
+      if (isExternal) {
+        pushDataLayer('outbound_click', {
+          link_url: href,
+          link_text: text,
+          page_path: window.location.pathname,
+        });
+      } else if (isCtaButton && text) {
+        pushDataLayer('cta_click', {
+          cta_text: text,
+          cta_url: href,
+          cta_classes: target.className || '',
+          page_path: window.location.pathname,
+        });
+      }
+    } catch {
+      // Non-blocking
+    }
+  }, { passive: true });
+};
+
 export default {
   captureUtms,
   getStoredUtms,
   appendUtmsToUrl,
+  pushDataLayer,
   trackPageView,
   trackLead,
   trackViewContent,
   trackInitiateCheckout,
   trackAudioPlay,
   trackReferralShare,
+  trackCtaClick,
+  initAutoTracking,
 };

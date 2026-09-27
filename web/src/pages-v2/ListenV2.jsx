@@ -9,6 +9,7 @@ import BrevoSubscribeForm from '../components/BrevoSubscribeForm';
 import tracksData from '../data/tracks.json';
 import { audioUrl } from '../utils/audioUrl';
 import { isGateUnlocked, setGateUnlocked, getCapturedEmail, isValidEmail } from '../utils/gateAuth';
+import { trackLead } from '../utils/analytics';
 
 const ListenV2 = () => {
   const { t } = useTranslation();
@@ -45,10 +46,7 @@ const ListenV2 = () => {
     const emailParam = searchParams.get('email');
     if (emailParam && isValidEmail(emailParam)) {
       setGateUnlocked(emailParam);
-      if (typeof window !== 'undefined') {
-        window.gtag?.('event', 'generate_lead', { event_category: 'funnel', event_label: 'listen_optin_v2', value: 1 });
-        window.fbq?.('track', 'Lead', { content_name: 'listen_optin_v2', content_category: 'email_funnel' });
-      }
+      trackLead({ formName: 'listen_optin_v2', source: 'listen_v2_url' });
 
       unlock(emailParam);
       setSearchParams((prev) => {

@@ -10,6 +10,8 @@
 //   VITE_GA4_MEASUREMENT_ID=G-XXXXXXXXXX
 // Missing ID = that tag simply does not load. No placeholder ever ships.
 
+import { initAutoTracking } from '../utils/analytics';
+
 const META_PIXEL_ID = import.meta.env.VITE_META_PIXEL_ID;
 const GA4_ID = import.meta.env.VITE_GA4_MEASUREMENT_ID;
 
@@ -43,15 +45,27 @@ function loadGa4(id) {
 export function initAnalytics() {
   if (typeof window === 'undefined') return;
 
+  // 1. Always guarantee dataLayer exists for Google Tag Manager (GTM-N2NKDFW6)
+  window.dataLayer = window.dataLayer || [];
+
+  // 2. Safe gtag fallback if direct gtag calls are made anywhere
+  if (!window.gtag) {
+    window.gtag = function () { window.dataLayer.push(arguments); };
+  }
+
+  // 3. Initialize automatic click tracking for CTAs and outbound links
+  initAutoTracking();
+
   if (META_PIXEL_ID) {
     loadMetaPixel(META_PIXEL_ID);
   } else if (import.meta.env.DEV) {
-    console.info('[analytics] VITE_META_PIXEL_ID not set — Meta Pixel disabled.');
+    console.info('[analytics] VITE_META_PIXEL_ID not set — Meta Pixel direct loader skipped.');
   }
 
   if (GA4_ID) {
     loadGa4(GA4_ID);
   } else if (import.meta.env.DEV) {
-    console.info('[analytics] VITE_GA4_MEASUREMENT_ID not set — GA4 disabled.');
+    console.info('[analytics] VITE_GA4_MEASUREMENT_ID not set — GA4 can be configured via GTM container.');
   }
 }
+
