@@ -78,8 +78,8 @@ const HomeV2 = () => {
           </CharSplitText>
           <RevealV2 className="v2-reveal--delay-2">
             <p className="v2-body v2-body--lg" style={{ maxWidth: '560px', margin: '1.5rem auto 0' }}>
-              A cast of musical guides leads children through seven vibrant worlds —
-              each one a developmental domain set to rhythm.
+              Fifteen musical heroes guide children through seven distinct lands,
+              turning key early childhood milestones into songs they love to sing.
             </p>
             <Link to="/v2/heroes" className="v2-btn v2-btn--outline" style={{ marginTop: '2rem' }}>
               Meet the Heroes →

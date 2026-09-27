@@ -40,7 +40,7 @@
             "eyebrow": "FOUNDING FAMILY GIFT · AGES 2–7",
             "title_main": "The Sound of Essentials: A Musical Learning Experience",
             "title_highlight": "(Free Album)",
-            "subtitle": "Replace screen-time battles with 19 unhurried acoustic songs designed for the developing brain. Gifted freely to founding families—experience the music before pairing it with our companion storybook.",
+            "subtitle": "Replace screen-time battles with 19 unhurried acoustic songs designed for the developing brain. We gift this full album freely to founding families. Experience the music in your home first, then pair it with our companion storybook.",
             "price_strike": "$19 Value",
             "price_tag": "Free for Founding Families",
             "price_note": "Instant Digital Access · Yours to Keep",
@@ -55,7 +55,7 @@
         "hero_label": "Neuro-Affirming Media",
         "hero_title_1": "Designed for the developing brain,",
         "hero_title_2": "not the algorithm.",
-        "hero_subtitle": "Music is the beacon for all children to learn. A scientifically grounded, music-driven ecosystem for early childhood development. Calm. Focused. Essential.",
+        "hero_subtitle": "Music is the beacon for all children to learn. We built a calm, music-driven sanctuary to help young children focus and grow without screens.",
         "hero_note": "For children ages 2–7 · Grounded in neuroscience",
         "voices": {
             "label": "In-World Voices & Mission",
@@ -76,7 +76,7 @@
             "title_2": "Rhythm Quest ($19)",
             "subtitle": "Experience the music, then bring the story home. This full-color companion storybook introduces our 15 lovable heroes across 7 lands, turning your family's listening journey into an active, tactile quest on the page.",
             "feat_1_title": "All 7 Musical Lands",
-            "feat_1_desc": "Explore each world's unique story—from Harmonia's phonics to Celestia's rhythms of time.",
+            "feat_1_desc": "Explore each world's unique story, from Harmonia's phonics to Celestia's rhythms of time.",
             "feat_2_title": "Meet the 15 Heroes",
             "feat_2_desc": "Rich hand-crafted art and backstories for all 15 heroes, modeling kindness, patience, and phonics.",
             "feat_3_title": "Read-Along Sound-Before-Symbol Pedagogy",
@@ -134,7 +134,7 @@
             "subtitle": "Our pedagogy is grounded in peer-reviewed neuroscience, developmental cognitive psychology, and randomized controlled trials.",
             "card_1_tag": "Nature Scientific Reports (2022)",
             "card_1_title": "Rhythm Drives Reading",
-            "card_1_desc": "Research proves rhythm perception—not melody—directly mediates reading ability through phonological awareness and auditory memory (Sousa et al.).",
+            "card_1_desc": "Research shows that rhythm perception directly supports reading ability through phonological awareness and auditory memory (Sousa et al.).",
             "card_2_tag": "Nature Human Behaviour (2024)",
             "card_2_title": "16 Shared Genomic Regions",
             "card_2_desc": "Over 1 million genomes analyzed reveal deep genetic links between musical rhythm ability, language processing, and dyslexia risk (the DLAT gene).",
@@ -156,7 +156,7 @@
         },
         "comparison": {
             "label": "Why SOE?",
-            "title_1": "Designed for the Developing Brain —",
+            "title_1": "Designed for the Developing Brain,",
             "title_2": "Not the Algorithm",
             "subtitle": "A clear contrast between intentional sensory education and commercial screen distraction.",
             "col_feature": "Learning Vector",
@@ -189,7 +189,7 @@
             "q3": "What age group is this designed for?",
             "a3": "The Sound of Essentials is designed specifically for children ages 2–7 (Toddler, Pre-K, Kindergarten, 1st & 2nd Grade). It is structured for both home listening and early classroom environments.",
             "q4": "How does musical rhythm build reading skills?",
-            "a4": "Peer-reviewed research in Nature Scientific Reports confirms that rhythm discrimination trains the brain's temporal processing—the exact mechanism used to segment syllables and phonemes when learning to read.",
+            "a4": "Peer-reviewed research in Nature Scientific Reports confirms that rhythm discrimination trains temporal processing in the brain, the exact mechanism used to segment syllables and phonemes when learning to read.",
             "q5": "What is the Rhythm Quest Companion Storybook ($19)?",
             "a5": "The Sound of Essentials: Rhythm Quest is the official 66-page companion storybook that pairs with the album. It introduces our 15 heroes across all 7 Lands, provides read-along lyrics for all 19 tracks, and anchors early literacy through sound-before-symbol exploration."
         },
@@ -197,7 +197,7 @@
             "active": {
                 "title": "Active, Not Passive",
                 "subtitle": "Teacher-in-a-Box",
-                "desc": "Every episode is a structured lesson—not a distraction."
+                "desc": "Every episode provides an active musical lesson that invites children to move, sing, and practice."
             },
             "neuro": {
                 "title": "Neuro-Affirming",
@@ -292,7 +292,7 @@
         "hero_label": "Heroes",
         "hero_title_1": "Our",
         "hero_title_2": "Heroes",
-        "hero_subtitle": "15 heroes across 7 lands — each one a guide through a critical domain of early childhood learning. Every child finds themselves in at least one hero.",
+        "hero_subtitle": "15 heroes across 7 lands guide children through essential domains of early learning. Every child finds themselves in at least one hero.",
         "filter_all": "All",
         "read_more": "Read more ▼",
         "show_less": "Show less ▲",
@@ -314,7 +314,7 @@
             },
             "Creative": {
                 "name": "Creative",
-                "desc": "Thinking beyond the obvious — finding new connections between ideas, sounds, and stories."
+                "desc": "Thinking beyond the obvious to discover fresh connections between ideas, sounds, and stories."
             },
             "Curious": {
                 "name": "Curious",
@@ -610,9 +610,9 @@
         "hero_label": "Join the Quest",
         "hero_title_1": "Become Part of the ",
         "hero_title_2": "Ecosystem of Support",
-        "hero_subtitle": "Whether you're a parent, educator, community leader, or impact investor—there's a place for you in The Sound of Essentials: Rhythm Quest movement.",
+        "hero_subtitle": "Whether you are a parent, educator, community leader, or impact partner, there is a place for you in The Sound of Essentials movement.",
         "stay_connected": "Stay Connected",
-        "newsletter_desc": "Get weekly neuro-affirming activities, exclusive music drops, and updates on the Rhythm Quest journey—delivered straight to your inbox.",
+        "newsletter_desc": "Get weekly neuro-affirming activities, exclusive music drops, and updates on the Rhythm Quest journey delivered straight to your inbox.",
         "welcome_quest": "Welcome to the Quest!",
         "welcome_desc": "Thank you for joining. Your first drop is on its way.",
         "email_placeholder": "Enter your email address",
@@ -630,7 +630,7 @@
         "audience_2_title": "Educators & Community Leaders",
         "audience_2_desc": "Looking for a scalable curriculum? Our \"Teacher-in-a-Box\" model lets you deploy SOE in your classroom, community center, or micro-franchise with zero specialized training.",
         "audience_3_title": "Impact Investors & NGOs",
-        "audience_3_desc": "Funding solutions for the global early education crisis? SOE is built for impact at scale—music-driven intervention that works where traditional infrastructure cannot reach.",
+        "audience_3_desc": "Funding solutions for the global early education crisis? SOE delivers music-driven intervention that reaches communities where traditional infrastructure falls short.",
         "partnerships_label": "Contact & Partnerships",
         "direct_contact_label": "Direct Contact",
         "direct_contact_title": "Get in Touch With Our Team",
@@ -641,7 +641,7 @@
         "direct_response_time": "⚡ We typically respond within 24–48 business hours.",
         "build_together_1": "Let's Build ",
         "build_together_2": "Together",
-        "partnerships_subtitle": "Schools, NGOs, homeschool families, educators, and community organizations—reach out directly or send an inquiry below.",
+        "partnerships_subtitle": "Schools, NGOs, homeschool families, and educators: reach out directly or send an inquiry below.",
         "message_received": "Message Received!",
         "partnership_thank_you": "Thank you for your interest in partnering with SOE. Our team will respond within 48 hours.",
         "label_name": "Your Name",
@@ -684,15 +684,15 @@
         "audio_label": "The Soundtrack",
         "audio_title_1": "Listen to the",
         "audio_title_2": "Rhythm Quest Tracks",
-        "audio_subtitle": "Seven lands, seven sounds — each track a guided lesson in disguise.",
+        "audio_subtitle": "Seven lands, seven sounds, each track a guided lesson in disguise.",
         "coloring_label": "The Coloring Book",
         "coloring_title_1": "Color the",
         "coloring_title_2": "Quest",
-        "coloring_subtitle": "High-resolution pages from the SOE Coloring Book — print, color, and learn.",
+        "coloring_subtitle": "High-resolution pages from the SOE Coloring Book to print, color, and explore.",
         "read_label": "The Storybook",
         "read_title_1": "Read the",
         "read_title_2": "Storybook",
-        "read_subtitle": "Follow Seriphia and the heroes through the Rhythm Quest Storybook — page by page.",
+        "read_subtitle": "Follow Seriphia and the heroes through the Rhythm Quest Storybook, page by page.",
         "prev": "← Prev",
         "next": "Next →",
         "pre_order_coloring": "Pre-Order the Coloring Book",
@@ -738,7 +738,7 @@
             "8": {
                 "title": "Numbers",
                 "domain": "Math & Numeria",
-                "desc": "Kwame & Octavia count to 10 with claps — hands-on numeracy in action."
+                "desc": "Kwame & Octavia count to 10 with rhythmic claps, turning numbers into hands-on play."
             },
             "9": {
                 "title": "My Body",
@@ -748,7 +748,7 @@
             "10": {
                 "title": "Manners",
                 "domain": "Social-Emotional",
-                "desc": "Aiko teaches the language of courtesy — please, thank you, excuse me."
+                "desc": "Aiko teaches the language of courtesy: please, thank you, and excuse me."
             },
             "11": {
                 "title": "Do You Know What Time It Is?",
@@ -763,7 +763,7 @@
             "13": {
                 "title": "The One Hundred Song",
                 "domain": "Math & Numeria",
-                "desc": "Octavia counts all the way to 100 — a milestone in early numeracy."
+                "desc": "Octavia counts all the way to 100 in rhythmic sets of ten."
             },
             "14": {
                 "title": "The Ocean",
@@ -793,7 +793,7 @@
             "19": {
                 "title": "After the Storm (Outro)",
                 "domain": "Introduction",
-                "desc": "A calm closing track — a promise that light always follows the storm."
+                "desc": "A calm closing track that reminds every child that light always follows the storm."
             }
         }
     }

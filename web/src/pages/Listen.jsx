@@ -148,7 +148,7 @@ const Listen = () => {
   }));
 
   useEffect(() => {
-    document.title = 'Listen — SOE Rhythm Quest';
+    document.title = 'Listen | SOE Rhythm Quest';
 
     const onMilestone = (e) => {
       if (e?.detail?.land) {
@@ -280,7 +280,7 @@ const Listen = () => {
                   sizes="(max-width: 600px) 100vw, 600px"
                   width="1200"
                   height="1200"
-                  alt="The Sound of Essentials: A Musical Learning Experience — album cover. Seriphia holds a glowing open book, ringed by a golden staff of musical notes, with seven children gathered around her and a lit path winding into the hills behind."
+                  alt="The Sound of Essentials: A Musical Learning Experience album cover. Seriphia holds a glowing open book, ringed by a golden staff of musical notes, with seven children gathered around her and a lit path winding into the hills behind."
                   loading="eager"
                   fetchPriority="high"
                 />
@@ -319,7 +319,7 @@ const Listen = () => {
               19 Tracks. 7 Lands. <span className="text-gold">One Quest.</span>
             </h2>
             <p className="section-subtitle" style={{ margin: '0 auto 2.5rem auto', maxWidth: '560px' }}>
-              Every track is a structured lesson in disguise — spanning language, math, science,
+              Every track is a structured lesson in disguise, spanning language, math, science,
               movement, and social-emotional growth.
             </p>
           </RevealSection>
@@ -471,7 +471,7 @@ const Listen = () => {
                   <div className="section-label">🎨 World Art Gallery</div>
                   <h2 className="section-title">Scenes from <span className="text-gold">the Seven Lands</span></h2>
                   <p className="section-subtitle" style={{ margin: '0 auto 2.5rem auto' }}>
-                    Explore the vibrant illustrations that bring the Rhythm Quest universe to life.
+                    Explore the hand-drawn storybook scenes that bring the Rhythm Quest universe to life.
                   </p>
                 </RevealSection>
                 <div className="masonry-gallery">
@@ -508,7 +508,7 @@ const Listen = () => {
                   <div className="section-label">📸 Behind the Quest</div>
                   <h2 className="section-title">A World <span className="text-sage">Brought to Life</span></h2>
                   <p className="section-subtitle" style={{ margin: '0 auto 2.5rem auto' }}>
-                    Glimpses from the world of SOE — heroes, scenes, and moments from the Seven Lands.
+                    Glimpses from the world of SOE: heroes, scenes, and moments from the Seven Lands.
                   </p>
                 </RevealSection>
                 <GalleryGrid shots={galleryShots} />

@@ -23,7 +23,7 @@ const SolutionsHub = () => {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
     'name': 'The Sound of Essentials Solutions Hub',
-    'description': 'Comprehensive directory of sensory-rich, music-driven early learning solutions and frameworks.',
+    'description': 'Complete directory of sensory-rich, music-driven early learning solutions and frameworks.',
     'url': 'https://thesoundofessentials.com/solutions',
     'hasPart': pseoPages.map((p) => ({
       '@type': 'WebPage',

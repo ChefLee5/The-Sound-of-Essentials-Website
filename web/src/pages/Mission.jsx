@@ -195,8 +195,8 @@ const Mission = () => {
                 </div>
                 <hr className="flow-section__divider" style={{ borderColor: 'rgba(255, 255, 255, 0.35)' }} />
                 <p className="flow-section__body">
-                  Created in love. We are bringing an enduring solution to your problem.
-                  Our front door is a complete, 19-track album of originally created children&apos;s music,
+                  Created with devotion and care, offering an unhurried musical foundation your family can trust.
+                  Our front door is a complete, 19-track album of acoustic music,
                   gifted 100% free to every family. Foundational sensory learning is a birthright, not a luxury.
                   We do not ask parents to trust a promise; we give them the living proof first.
                 </p>
@@ -316,9 +316,9 @@ const Mission = () => {
                 </div>
                 <hr className="flow-section__divider" style={{ borderColor: 'rgba(0,0,0,0.15)' }} />
                 <p className="flow-section__body">
-                  As true Titans in the realm of learning and education, we understand what the digital industry ignores:
-                  apps fade, algorithms shift, and digital gadgets rot. But acoustic harmony, language, and human connection
-                  do not decompose. <strong>The Sound of Essentials is an evergreen and eternal sound.</strong>
+                  As parents and educators who lived through the early learning crisis, we understand what the digital industry ignores:
+                  apps fade, algorithms shift, and screens break attention spans. But acoustic harmony, spoken language, and human connection
+                  stay with a child for life. <strong>The Sound of Essentials is an evergreen sanctuary of sound.</strong>
                 </p>
                 <hr className="flow-section__divider" style={{ borderColor: 'rgba(0,0,0,0.15)' }} />
                 <div className="flow-columns">

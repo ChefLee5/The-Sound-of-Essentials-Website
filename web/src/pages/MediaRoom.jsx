@@ -693,7 +693,7 @@ const MediaRoom = () => {
               A World <span className="text-sage">Brought to Life</span>
             </h2>
             <p className="section-subtitle" style={{ margin: '0 auto 2.5rem auto' }}>
-              Glimpses from the world of SOE — heroes, scenes, and moments from the Seven Lands.
+              Glimpses from the world of SOE: heroes, scenes, and moments from the Seven Lands.
             </p>
           </RevealSection>
 
@@ -710,7 +710,7 @@ const MediaRoom = () => {
               Scenes from <span className="text-gold">the Seven Lands</span>
             </h2>
             <p className="section-subtitle" style={{ margin: '0 auto 2.5rem auto' }}>
-              Explore the vibrant illustrations that bring the Rhythm Quest universe to life.
+              Explore the hand-drawn storybook scenes that bring the Rhythm Quest universe to life.
             </p>
           </RevealSection>
 

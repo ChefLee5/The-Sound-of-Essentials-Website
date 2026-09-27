@@ -270,7 +270,7 @@ const RhythmReadyHero = () => {
               </ul>
 
               <p className="rq-hero__free-note">
-                Pairs seamlessly with the free 19-track album. Every day features hero coaching tips
+                Pairs directly with the free 19-track album. Every day features hero coaching tips
                 and phonetic pronunciation guides.
               </p>
             </div>
@@ -915,7 +915,7 @@ const DictionaryPreSaleOffer = () => {
             <span className="rq-offer__title-accent">4,000+ Words. 125 Scenes. $55 Pre-Sale.</span>
           </h2>
           <p className="section-subtitle" style={{ margin: '0 auto 2.25rem auto', maxWidth: '680px' }}>
-            The comprehensive visual companion to the Rhythm Quest universe. Built for early learners (Ages 2–7),
+            The complete illustrated companion to the Rhythm Quest universe. Built for early learners (Ages 2–7),
             homeschoolers, and ESL families to transform auditory rhythm into rich, lasting vocabulary mastery.
           </p>
         </RevealSection>
@@ -958,7 +958,7 @@ const DictionaryPreSaleOffer = () => {
                 <li className="rq-offer__item">
                   <span className="rq-offer__tick" aria-hidden="true">✓</span>
                   <span>
-                    <strong>Comprehensive Back Matter Mastery.</strong> Sight words, action verbs, adjectives, and ASL alphabet.
+                    <strong>Complete Back Matter Reference.</strong> Sight words, action verbs, adjectives, and ASL alphabet.
                   </span>
                 </li>
                 <li className="rq-offer__item">
@@ -976,7 +976,7 @@ const DictionaryPreSaleOffer = () => {
               </ul>
 
               <p className="rq-offer__free">
-                Designed to pair seamlessly with the <strong>Rhythm Ready Workbook</strong> and <strong>19-Track Free Album</strong>.
+                Designed to pair naturally with the <strong>Rhythm Ready Workbook</strong> and <strong>19-Track Free Album</strong>.
               </p>
             </div>
 
