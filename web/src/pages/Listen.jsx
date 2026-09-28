@@ -411,7 +411,7 @@ const Listen = () => {
 
               <BrevoSubscribeForm
                 className="listen-optin__form"
-                buttonText="🎧 Unlock 19 Tracks Free →"
+                buttonText="🎧 Unlock 19 tracks free"
                 placeholder="Enter your best email..."
                 sourcePath="/listen"
                 onSuccess={({ email }) => {
@@ -419,10 +419,6 @@ const Listen = () => {
                   unlock();
                 }}
               />
-
-              <div style={{ marginTop: '1.5rem' }}>
-                <ProofInThePause variant="quote" />
-              </div>
             </div>
           </div>
         </section>
