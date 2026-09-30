@@ -80,6 +80,27 @@ def render_day(week_num: int, day_data: dict, template: str) -> str:
     primary_land  = dd.get("primary_land", 1)
     primary_color = dd.get("primary_land_color", LAND_COLORS.get(primary_land, "#d4a843"))
 
+    land_hero_imgs = {
+        1: "land1_harmonia_hero.jpg",
+        2: "land2_numeria_hero.jpg",
+        3: "land3_terrasol_hero.jpg",
+        4: "land4_aquaria_hero.jpg",
+        5: "land5_vitalis_hero.jpg",
+        6: "land6_luminosity_hero.jpg",
+        7: "land7_celestia_hero.jpg",
+        8: "land8_grandquest_hero.jpg",
+    }
+    land_names = {
+        1: "Harmonia",
+        2: "Numeria",
+        3: "Terrasol",
+        4: "Aquaria",
+        5: "Vitalis",
+        6: "Luminosity",
+        7: "Celestia",
+        8: "The Grand Quest",
+    }
+
     # ── Header ──────────────────────────────────────────────────────────────
     substitutions = {
         "WEEK_NUM":            str(week_num),
@@ -87,9 +108,30 @@ def render_day(week_num: int, day_data: dict, template: str) -> str:
         "DAY_LABEL":           dd.get("day_label", ""),
         "DAY_TITLE":           dd.get("day_title", ""),
         "PRIMARY_LAND_COLOR":  primary_color,
-        "PRIMARY_CHAR_IMG":    dd.get("primary_char_img", "placeholder_avatar.png"),
+        "PRIMARY_CHAR_IMG":    dd.get("primary_char_img", "placeholder_avatar.png").lower(),
         "PRIMARY_CHAR_NAMES":  dd.get("primary_char_names", ""),
+        "LAND_HERO_IMG":       land_hero_imgs.get(week_num, "land1_harmonia_hero.jpg"),
+        "LAND_NAME":           land_names.get(week_num, "Harmonia"),
     }
+
+    day_num = int(dd.get("day", 1))
+    land_hero_img = land_hero_imgs.get(week_num, "land1_harmonia_hero.jpg")
+    land_name = land_names.get(week_num, "Harmonia")
+    primary_chars = dd.get("primary_char_names", "")
+    day_title = dd.get("day_title", "")
+
+    if day_num == 1:
+        launchpad_html = f'''  <figure class="day-hero-scene">
+    <img src="../../images/lands/{land_hero_img}"
+         alt="{_safe_xml(day_title)} — {_safe_xml(primary_chars)}" />
+    <figcaption class="hero-caption">🌟 Week {week_num} Expedition Launchpad: Explore {land_name} with {_safe_xml(primary_chars)}!</figcaption>
+  </figure>'''
+    else:
+        launchpad_html = f'''  <div class="day-quest-banner">
+    <p class="hero-caption">🌟 Today's Quest: Explore {land_name} with {_safe_xml(primary_chars)}!</p>
+  </div>'''
+
+    substitutions["HERO_LAUNCHPAD_HTML"] = launchpad_html
 
     # ── Activity blocks A–D ─────────────────────────────────────────────────
     for slot, num in [("A", "1"), ("B", "2"), ("C", "3"), ("D", "4"), ("G", "6"), ("H", "7"), ("I", "8")]:
@@ -98,7 +140,7 @@ def render_day(week_num: int, day_data: dict, template: str) -> str:
         substitutions[f"ACT{num}_TIME"]        = str(blk.get("time", 3))
         substitutions[f"ACT{num}_IMG"]         = blk.get("img", "placeholder.png")
         substitutions[f"ACT{num}_IMG_ALT"]     = blk.get("img_alt", "")
-        substitutions[f"ACT{num}_IMG_SOURCE"]  = blk.get("img_source", "SOE Picture Dictionary")
+        substitutions[f"ACT{num}_IMG_SOURCE"]  = blk.get("img_source", "")
         substitutions[f"ACT{num}_PHONETIC"]    = blk.get("phonetic", "")
         substitutions[f"ACT{num}_INSTRUCTIONS"] = blk.get("instructions", "")
         substitutions[f"ACT{num}_TIP"]         = blk.get("tip", "")
@@ -114,7 +156,7 @@ def render_day(week_num: int, day_data: dict, template: str) -> str:
     substitutions["ACT5_TIME"]        = str(e.get("time", 3))
     substitutions["ACT5_IMG"]         = e.get("img", "placeholder.png")
     substitutions["ACT5_IMG_ALT"]     = e.get("img_alt", "")
-    substitutions["ACT5_IMG_SOURCE"]  = e.get("img_source", "SOE Picture Dictionary")
+    substitutions["ACT5_IMG_SOURCE"]  = e.get("img_source", "")
     substitutions["ACT5_PHONETIC"]    = e.get("phonetic", "")
     substitutions["ACT5_INSTRUCTIONS"] = e.get("instructions", "")
     substitutions["ACT5_TIP"]         = e.get("tip", "")
@@ -123,7 +165,7 @@ def render_day(week_num: int, day_data: dict, template: str) -> str:
     substitutions["ACT5_LAND_NAME"]   = e.get("land_name", "")
     substitutions["ACT5_ICON"]        = e.get("icon", "📚")
     substitutions["ACT5_SUBJECT"]     = e.get("subject", "")
-    substitutions["ACT5_CHAR_IMG"]    = e.get("char_img", "placeholder_avatar.png")
+    substitutions["ACT5_CHAR_IMG"]    = e.get("char_img", "placeholder_avatar.png").lower()
     substitutions["ACT5_CHAR_NAMES"]  = e.get("char_names", "")
 
     # Block J (Hero Quest Moment — rotates through all 15 heroes)
@@ -132,13 +174,13 @@ def render_day(week_num: int, day_data: dict, template: str) -> str:
     substitutions["ACT9_TIME"]            = str(j.get("time", 5))
     substitutions["ACT9_IMG"]             = j.get("img", "placeholder.png")
     substitutions["ACT9_IMG_ALT"]         = j.get("img_alt", "")
-    substitutions["ACT9_IMG_SOURCE"]      = j.get("img_source", "SOE Picture Dictionary")
+    substitutions["ACT9_IMG_SOURCE"]      = j.get("img_source", "")
     substitutions["ACT9_HERO_NAME"]       = j.get("hero_name", "")
     substitutions["ACT9_HERO_LAND"]       = j.get("hero_land", "")
     substitutions["ACT9_STORY"]           = j.get("story_snippet", "")
     substitutions["ACT9_REFLECTION_Q"]    = j.get("reflection_question", "")
     substitutions["ACT9_TIP"]             = j.get("tip", "")
-    substitutions["ACT9_CHAR_IMG"]        = j.get("char_img", "placeholder_avatar.png")
+    substitutions["ACT9_CHAR_IMG"]        = j.get("char_img", "placeholder_avatar.png").lower()
 
     #── Reflection block F ──────────────────────────────────────────────────
     f_blk = b.get("F", {})
@@ -146,7 +188,10 @@ def render_day(week_num: int, day_data: dict, template: str) -> str:
 
     # ── Apply all substitutions ─────────────────────────────────────────────
     for token, value in substitutions.items():
-        tpl = tpl.replace(f"{{{{ {token} }}}}", _safe_xml(value))
+        if token == "HERO_LAUNCHPAD_HTML":
+            tpl = tpl.replace(f"{{{{ {token} }}}}", value)
+        else:
+            tpl = tpl.replace(f"{{{{ {token} }}}}", _safe_xml(value))
 
     return tpl
 
@@ -245,17 +290,29 @@ def sync_dictionary_images(all_weeks: list) -> int:
 # CONTENT.OPF GENERATOR
 # ─────────────────────────────────────────────────────────────────────────────
 def generate_opf(page_refs: list[str], title: str = "SOE Rhythm Quest: Rhythm Ready Workbook"):
-    """Dynamically build content.opf with a full manifest and spine."""
+    """Dynamically build content.opf with a full manifest and spine matching Lulu & W3C/EAA standards."""
 
-    # Static pages (always present)
-    static = ["nav.xhtml", "cover.xhtml", "frontmatter.xhtml", "weekly_overview.xhtml"]
-    backmatter = ["backmatter/bm_achievement.xhtml",
-                  "backmatter/bm_glossary.xhtml",
-                  "backmatter/bm_parent_guide.xhtml"]
+    # Static pages (always present in logical front-to-back reading order)
+    static = [
+        "cover.xhtml",
+        "title_page.xhtml",
+        "copyright.xhtml",
+        "nav.xhtml",
+        "frontmatter.xhtml",
+        "weekly_overview.xhtml"
+    ]
+    backmatter = [
+        "bm_achievement.xhtml",
+        "bm_glossary.xhtml",
+        "bm_parent_guide.xhtml"
+    ]
 
     manifest_lines = [
+        '    <!-- Core Stylesheet & Dual Navigation -->',
         '    <item id="css-workbook" href="styles/workbook.css" media-type="text/css"/>',
-        '    <item id="cover-img" href="images/ui/cover_art.png" media-type="image/png" properties="cover-image"/>',
+        '    <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>',
+        '    <!-- Official Cover Image (Lulu Ebook Spec: 612x792 @ 150 DPI) -->',
+        '    <item id="cover-image" href="images/cover.jpg" media-type="image/jpeg" properties="cover-image"/>',
     ]
     spine_lines = []
 
@@ -277,12 +334,37 @@ def generate_opf(page_refs: list[str], title: str = "SOE Rhythm Quest: Rhythm Re
     for bm in backmatter:
         add_page(bm)
 
-    # Add all dictionary images to manifest
-    for img_path in sorted(DICT_IMG_DEST.glob("*.png")):
-        img_id = "dict_" + img_path.stem.replace("-", "_")
-        manifest_lines.append(
-            f'    <item id="{img_id}" href="images/dictionary/{img_path.name}" media-type="image/png"/>'
-        )
+    # Add all dictionary scene images (.jpg and .png) to manifest
+    manifest_lines.append('    <!-- 125 Picture Dictionary Scenes -->')
+    for img_path in sorted(DICT_IMG_DEST.glob("*.*")):
+        if img_path.suffix.lower() in (".jpg", ".jpeg", ".png"):
+            mtype = "image/png" if img_path.suffix.lower() == ".png" else "image/jpeg"
+            img_id = "dict_" + img_path.stem.replace("-", "_").replace(".", "_")
+            manifest_lines.append(
+                f'    <item id="{img_id}" href="images/dictionary/{img_path.name}" media-type="{mtype}"/>'
+            )
+
+    # Add all character avatar images to manifest
+    manifest_lines.append('    <!-- 14 Hero Character Avatars -->')
+    for img_path in sorted(CHAR_IMG_DEST.glob("*.*")):
+        if img_path.suffix.lower() in (".jpg", ".jpeg", ".png"):
+            mtype = "image/png" if img_path.suffix.lower() == ".png" else "image/jpeg"
+            img_id = "char_" + img_path.stem.replace("-", "_").replace(".", "_")
+            manifest_lines.append(
+                f'    <item id="{img_id}" href="images/characters/{img_path.name}" media-type="{mtype}"/>'
+            )
+
+    # Add 8 Master Land Hero Artworks to manifest
+    manifest_lines.append('    <!-- 8 Master Land Hero Artworks -->')
+    lands_dir = BASE_DIR / "OEBPS" / "images" / "lands"
+    if lands_dir.exists():
+        for img_path in sorted(lands_dir.glob("*.*")):
+            if img_path.suffix.lower() in (".jpg", ".jpeg", ".png"):
+                mtype = "image/png" if img_path.suffix.lower() == ".png" else "image/jpeg"
+                img_id = "land_hero_" + img_path.stem.replace("-", "_").replace(".", "_")
+                manifest_lines.append(
+                    f'    <item id="{img_id}" href="images/lands/{img_path.name}" media-type="{mtype}"/>'
+                )
 
     date_str = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     opf_content = f"""<?xml version="1.0" encoding="UTF-8"?>
@@ -297,24 +379,35 @@ def generate_opf(page_refs: list[str], title: str = "SOE Rhythm Quest: Rhythm Re
     <dc:creator>The Sound of Essentials Team</dc:creator>
     <dc:language>en</dc:language>
     <dc:subject>Education; School Readiness; Foundation; Early Childhood; Elementary; Homeschool</dc:subject>
-    <dc:description>A neuro-affirming, bilingual-ready 8-week Rhythm Ready workbook set in the 7 Lands of the SOE universe. About 30 minutes of daily cross-curricular activities across 10 short activity blocks, for grades K–3.</dc:description>
-    <dc:rights>Copyright The Sound of Essentials Team. All rights reserved.</dc:rights>
+    <dc:description>A neuro-affirming, bilingual-ready 8-week Rhythm Ready workbook set in the 7 Lands of the SOE universe. About 30 minutes of daily cross-curricular activities across 10 short activity blocks, for ages 2–7 (Pre-K to Grade 2).</dc:description>
+    <dc:rights>Copyright © 2026 The Sound of Essentials. All rights reserved.</dc:rights>
     <meta property="dcterms:modified">{date_str}</meta>
-    <meta name="cover" content="cover-img"/>
+    <meta name="cover" content="cover-image"/>
+
+    <!-- W3C EPUB Accessibility 1.1 / EAA Compliance (Lulu Guide Page 11) -->
+    <meta property="schema:accessMode">textual</meta>
+    <meta property="schema:accessMode">visual</meta>
+    <meta property="schema:accessModeSufficient">textual</meta>
+    <meta property="schema:accessibilityFeature">structuralNavigation</meta>
+    <meta property="schema:accessibilityFeature">alternativeText</meta>
+    <meta property="schema:accessibilityFeature">readingOrder</meta>
+    <meta property="schema:accessibilityFeature">tableOfContents</meta>
+    <meta property="schema:accessibilityHazard">none</meta>
+    <meta property="schema:accessibilitySummary">A neuro-affirming early learning workbook featuring structured navigation, alternative text on all 125 illustrations and 14 hero cards, clear heading hierarchy, and accessible color contrast.</meta>
   </metadata>
 
   <manifest>
 {chr(10).join(manifest_lines)}
   </manifest>
 
-  <spine page-progression-direction="ltr">
+  <spine toc="ncx" page-progression-direction="ltr">
 {chr(10).join(spine_lines)}
   </spine>
 
 </package>
 """
     OPF_FILE.write_text(opf_content, encoding="utf-8")
-    print(f"[opf] content.opf written with {len(page_refs)} activity pages.")
+    print(f"[opf] content.opf written with {len(page_refs)} activity pages and full manifest.")
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -335,10 +428,10 @@ def build_epub():
         if META_INF_FILE.exists():
             zf.write(META_INF_FILE, "META-INF/container.xml")
 
-        # All OEBPS content
+        # All OEBPS content (excluding temporary backups)
         oebps_dir = BASE_DIR / "OEBPS"
         for fpath in sorted(oebps_dir.rglob("*")):
-            if fpath.is_file():
+            if fpath.is_file() and "images_fullres_backup" not in fpath.parts and "images_print" not in fpath.parts:
                 arcname = fpath.relative_to(BASE_DIR).as_posix()
                 zf.write(fpath, arcname)
 
@@ -347,59 +440,13 @@ def build_epub():
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# NAV.XHTML GENERATOR
+# NAV.XHTML & TOC.NCX GENERATOR
 # ─────────────────────────────────────────────────────────────────────────────
 def generate_nav(all_weeks: list, page_refs: list[str]):
-    """Create the EPUB 3 navigation document (Table of Contents)."""
-    toc_items = [
-        '      <li><a href="cover.xhtml">Cover</a></li>',
-        '      <li><a href="frontmatter.xhtml">How to Use This Workbook</a></li>',
-        '      <li><a href="weekly_overview.xhtml">Summer Quest Calendar</a></li>',
-    ]
-
-    day_labels = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
-    for week in all_weeks:
-        wn = week.get("week", 0)
-        theme = week.get("theme", f"Week {wn}")
-        day_list = "\n".join(
-            f'          <li><a href="week{wn}/day{dn+1}.xhtml">'
-            f'Day {dn+1} — {day_labels[dn]}</a></li>'
-            for dn in range(5)
-        )
-        toc_items.append(
-            f'      <li>\n        <a href="week{wn}/week{wn}_intro.xhtml">'
-            f'Week {wn}: {escape(theme)}</a>\n        <ol>\n{day_list}\n        </ol>\n      </li>'
-        )
-
-    toc_items += [
-        '      <li><a href="backmatter/bm_achievement.xhtml">Quest Achievement Chart</a></li>',
-        '      <li><a href="backmatter/bm_glossary.xhtml">Workbook Glossary</a></li>',
-        '      <li><a href="backmatter/bm_parent_guide.xhtml">Parent &amp; Educator Guide</a></li>',
-    ]
-
-    nav_content = f"""<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:epub="http://www.idpf.org/2007/ops"
-      lang="en" xml:lang="en">
-<head>
-  <meta charset="UTF-8"/>
-  <title>Table of Contents — SOE Rhythm Ready Workbook</title>
-  <link rel="stylesheet" type="text/css" href="../styles/workbook.css"/>
-</head>
-<body>
-  <nav epub:type="toc" id="toc" aria-label="Table of Contents">
-    <h1>Table of Contents</h1>
-    <ol>
-{chr(10).join(toc_items)}
-    </ol>
-  </nav>
-</body>
-</html>
-"""
-    nav_path = PAGES_DIR / "nav.xhtml"
-    nav_path.write_text(nav_content, encoding="utf-8")
-    print(f"[nav] nav.xhtml written with {len(all_weeks)} weeks.")
+    """Create the EPUB 3 navigation document (nav.xhtml) and EPUB 2 toc.ncx."""
+    import generate_nav_and_ncx
+    generate_nav_and_ncx.generate()
+    print(f"[nav] nav.xhtml & toc.ncx synchronized successfully.")
 
 
 # ─────────────────────────────────────────────────────────────────────────────

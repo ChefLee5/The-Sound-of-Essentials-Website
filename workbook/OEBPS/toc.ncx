@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1">
+  <head>
+    <meta name="dtb:uid" content="soe-rhythmready-workbook-2026"/>
+    <meta name="dtb:depth" content="2"/>
+    <meta name="dtb:totalPageCount" content="0"/>
+    <meta name="dtb:maxPageNumber" content="0"/>
+  </head>
+  <docTitle>
+    <text>SOE Rhythm Quest: Rhythm Ready Workbook</text>
+  </docTitle>
+  <docAuthor>
+    <text>The Sound of Essentials Team</text>
+  </docAuthor>
+  <navMap>
+    <navPoint id="num_1" playOrder="1">
+      <navLabel><text>Cover</text></navLabel>
+      <content src="pages/cover.xhtml"/>
+    </navPoint>
+    <navPoint id="num_2" playOrder="2">
+      <navLabel><text>Title Page</text></navLabel>
+      <content src="pages/title_page.xhtml"/>
+    </navPoint>
+    <navPoint id="num_3" playOrder="3">
+      <navLabel><text>Copyright</text></navLabel>
+      <content src="pages/copyright.xhtml"/>
+    </navPoint>
+    <navPoint id="num_4" playOrder="4">
+      <navLabel><text>How to Use This Workbook</text></navLabel>
+      <content src="pages/frontmatter.xhtml"/>
+    </navPoint>
+    <navPoint id="num_5" playOrder="5">
+      <navLabel><text>Rhythm Ready Quest Calendar</text></navLabel>
+      <content src="pages/weekly_overview.xhtml"/>
+    </navPoint>
+    <navPoint id="num_6" playOrder="6">
+      <navLabel><text>Week 1: Hello, 7 Lands!</text></navLabel>
+      <content src="pages/week1/day1.xhtml"/>
+      <navPoint id="num_7" playOrder="7">
+        <navLabel><text>Day 1 (Monday): Greetings from Harmonia</text></navLabel>
+        <content src="pages/week1/day1.xhtml"/>
+      </navPoint>
+      <navPoint id="num_8" playOrder="8">
+        <navLabel><text>Day 2 (Tuesday): Numbers Rule in Numeria</text></navLabel>
+        <content src="pages/week1/day2.xhtml"/>
+      </navPoint>
+      <navPoint id="num_9" playOrder="9">
+        <navLabel><text>Day 3 (Wednesday): Weather Watchers in Terrasol</text></navLabel>
+        <content src="pages/week1/day3.xhtml"/>
+      </navPoint>
+      <navPoint id="num_10" playOrder="10">
+        <navLabel><text>Day 4 (Thursday): Community Helpers in Luminosity</text></navLabel>
+        <content src="pages/week1/day4.xhtml"/>
+      </navPoint>
+      <navPoint id="num_11" playOrder="11">
+        <navLabel><text>Day 5 (Friday): Week 1 Celebration Quest</text></navLabel>
+        <content src="pages/week1/day5.xhtml"/>
+      </navPoint>
+    </navPoint>
+    <navPoint id="num_12" playOrder="12">
+      <navLabel><text>Week 2: Feelings &amp; Families</text></navLabel>
+      <content src="pages/week2/day1.xhtml"/>
+      <navPoint id="num_13" playOrder="13">
+        <navLabel><text>Day 1 (Monday): Family Ties in Harmonia</text></navLabel>
+        <content src="pages/week2/day1.xhtml"/>
+      </navPoint>
+      <navPoint id="num_14" playOrder="14">
+        <navLabel><text>Day 2 (Tuesday): Patterns &amp; Pets</text></navLabel>
+        <content src="pages/week2/day2.xhtml"/>
+      </navPoint>
+      <navPoint id="num_15" playOrder="15">
+        <navLabel><text>Day 3 (Wednesday): Color &amp; Creativity</text></navLabel>
+        <content src="pages/week2/day3.xhtml"/>
+      </navPoint>
+      <navPoint id="num_16" playOrder="16">
+        <navLabel><text>Day 4 (Thursday): Manners &amp; Money</text></navLabel>
+        <content src="pages/week2/day4.xhtml"/>
+      </navPoint>
+      <navPoint id="num_17" playOrder="17">
+        <navLabel><text>Day 5 (Friday): Week 2 Quest Complete!</text></navLabel>
+        <content src="pages/week2/day5.xhtml"/>
+      </navPoint>
+    </navPoint>
+    <navPoint id="num_18" playOrder="18">
+      <navLabel><text>Week 3: Community &amp; Cooperation</text></navLabel>
+      <content src="pages/week3/day1.xhtml"/>
+      <navPoint id="num_19" playOrder="19">
+        <navLabel><text>Day 1 (Monday): Neighborhood Explorers</text></navLabel>
+        <content src="pages/week3/day1.xhtml"/>
+      </navPoint>
+      <navPoint id="num_20" playOrder="20">
+        <navLabel><text>Day 2 (Tuesday): Jobs &amp; Journeys</text></navLabel>
+        <content src="pages/week3/day2.xhtml"/>
+      </navPoint>
+      <navPoint id="num_21" playOrder="21">
+        <navLabel><text>Day 3 (Wednesday): Music &amp; Movement</text></navLabel>
+        <content src="pages/week3/day3.xhtml"/>
+      </navPoint>
+      <navPoint id="num_22" playOrder="22">
+        <navLabel><text>Day 4 (Thursday): Safety &amp; Science</text></navLabel>
+        <content src="pages/week3/day4.xhtml"/>
+      </navPoint>
+      <navPoint id="num_23" playOrder="23">
+        <navLabel><text>Day 5 (Friday): Week 3 Celebration!</text></navLabel>
+        <content src="pages/week3/day5.xhtml"/>
+      </navPoint>
+    </navPoint>
+    <navPoint id="num_24" playOrder="24">
+      <navLabel><text>Week 4: Wonders of the World</text></navLabel>
+      <content src="pages/week4/day1.xhtml"/>
+      <navPoint id="num_25" playOrder="25">
+        <navLabel><text>Day 1 (Monday): Transportation Around the World</text></navLabel>
+        <content src="pages/week4/day1.xhtml"/>
+      </navPoint>
+      <navPoint id="num_26" playOrder="26">
+        <navLabel><text>Day 2 (Tuesday): Banking &amp; Borrowing</text></navLabel>
+        <content src="pages/week4/day2.xhtml"/>
+      </navPoint>
+      <navPoint id="num_27" playOrder="27">
+        <navLabel><text>Day 3 (Wednesday): Maps &amp; Modes of Travel</text></navLabel>
+        <content src="pages/week4/day3.xhtml"/>
+      </navPoint>
+      <navPoint id="num_28" playOrder="28">
+        <navLabel><text>Day 4 (Thursday): School Subjects Showcase</text></navLabel>
+        <content src="pages/week4/day4.xhtml"/>
+      </navPoint>
+      <navPoint id="num_29" playOrder="29">
+        <navLabel><text>Day 5 (Friday): Week 4 World Wonder Complete!</text></navLabel>
+        <content src="pages/week4/day5.xhtml"/>
+      </navPoint>
+    </navPoint>
+    <navPoint id="num_30" playOrder="30">
+      <navLabel><text>Week 5: Body, Mind &amp; Balance</text></navLabel>
+      <content src="pages/week5/day1.xhtml"/>
+      <navPoint id="num_31" playOrder="31">
+        <navLabel><text>Day 1 (Monday): Mind-Body Morning</text></navLabel>
+        <content src="pages/week5/day1.xhtml"/>
+      </navPoint>
+      <navPoint id="num_32" playOrder="32">
+        <navLabel><text>Day 2 (Tuesday): Kitchen Science</text></navLabel>
+        <content src="pages/week5/day2.xhtml"/>
+      </navPoint>
+      <navPoint id="num_33" playOrder="33">
+        <navLabel><text>Day 3 (Wednesday): Energy &amp; Rest</text></navLabel>
+        <content src="pages/week5/day3.xhtml"/>
+      </navPoint>
+      <navPoint id="num_34" playOrder="34">
+        <navLabel><text>Day 4 (Thursday): Strength &amp; Strategy</text></navLabel>
+        <content src="pages/week5/day4.xhtml"/>
+      </navPoint>
+      <navPoint id="num_35" playOrder="35">
+        <navLabel><text>Day 5 (Friday): Week 5 Balance Champion!</text></navLabel>
+        <content src="pages/week5/day5.xhtml"/>
+      </navPoint>
+    </navPoint>
+    <navPoint id="num_36" playOrder="36">
+      <navLabel><text>Week 6: Inventions &amp; Discoveries</text></navLabel>
+      <content src="pages/week6/day1.xhtml"/>
+      <navPoint id="num_37" playOrder="37">
+        <navLabel><text>Day 1 (Monday): Inventors &amp; Innovations</text></navLabel>
+        <content src="pages/week6/day1.xhtml"/>
+      </navPoint>
+      <navPoint id="num_38" playOrder="38">
+        <navLabel><text>Day 2 (Tuesday): Historical Timekeeping</text></navLabel>
+        <content src="pages/week6/day2.xhtml"/>
+      </navPoint>
+      <navPoint id="num_39" playOrder="39">
+        <navLabel><text>Day 3 (Wednesday): Rhythm &amp; Rhyme</text></navLabel>
+        <content src="pages/week6/day3.xhtml"/>
+      </navPoint>
+      <navPoint id="num_40" playOrder="40">
+        <navLabel><text>Day 4 (Thursday): Hotels, Hosting &amp; Hospitality</text></navLabel>
+        <content src="pages/week6/day4.xhtml"/>
+      </navPoint>
+      <navPoint id="num_41" playOrder="41">
+        <navLabel><text>Day 5 (Friday): Week 6 Discovery Day!</text></navLabel>
+        <content src="pages/week6/day5.xhtml"/>
+      </navPoint>
+    </navPoint>
+    <navPoint id="num_42" playOrder="42">
+      <navLabel><text>Week 7: Sound &amp; Story</text></navLabel>
+      <content src="pages/week7/day1.xhtml"/>
+      <navPoint id="num_43" playOrder="43">
+        <navLabel><text>Day 1 (Monday): Storytelling Masters</text></navLabel>
+        <content src="pages/week7/day1.xhtml"/>
+      </navPoint>
+      <navPoint id="num_44" playOrder="44">
+        <navLabel><text>Day 2 (Tuesday): Write Your World</text></navLabel>
+        <content src="pages/week7/day2.xhtml"/>
+      </navPoint>
+      <navPoint id="num_45" playOrder="45">
+        <navLabel><text>Day 3 (Wednesday): Sound Science</text></navLabel>
+        <content src="pages/week7/day3.xhtml"/>
+      </navPoint>
+      <navPoint id="num_46" playOrder="46">
+        <navLabel><text>Day 4 (Thursday): Read, Write, Perform!</text></navLabel>
+        <content src="pages/week7/day4.xhtml"/>
+      </navPoint>
+      <navPoint id="num_47" playOrder="47">
+        <navLabel><text>Day 5 (Friday): Week 7 Story Grand Finale!</text></navLabel>
+        <content src="pages/week7/day5.xhtml"/>
+      </navPoint>
+    </navPoint>
+    <navPoint id="num_48" playOrder="48">
+      <navLabel><text>Week 8: Grand Celebration &amp; Launch</text></navLabel>
+      <content src="pages/week8/day1.xhtml"/>
+      <navPoint id="num_49" playOrder="49">
+        <navLabel><text>Day 1 (Monday): All 7 Lands Recap</text></navLabel>
+        <content src="pages/week8/day1.xhtml"/>
+      </navPoint>
+      <navPoint id="num_50" playOrder="50">
+        <navLabel><text>Day 2 (Tuesday): Showcase Prep Day</text></navLabel>
+        <content src="pages/week8/day2.xhtml"/>
+      </navPoint>
+      <navPoint id="num_51" playOrder="51">
+        <navLabel><text>Day 3 (Wednesday): Quest Map Final Update</text></navLabel>
+        <content src="pages/week8/day3.xhtml"/>
+      </navPoint>
+      <navPoint id="num_52" playOrder="52">
+        <navLabel><text>Day 4 (Thursday): Letters &amp; Legacy</text></navLabel>
+        <content src="pages/week8/day4.xhtml"/>
+      </navPoint>
+      <navPoint id="num_53" playOrder="53">
+        <navLabel><text>Day 5 (Friday): 🎉 Grand Celebration Day!</text></navLabel>
+        <content src="pages/week8/day5.xhtml"/>
+      </navPoint>
+    </navPoint>
+    <navPoint id="num_54" playOrder="54">
+      <navLabel><text>Quest Achievement Chart</text></navLabel>
+      <content src="pages/bm_achievement.xhtml"/>
+    </navPoint>
+    <navPoint id="num_55" playOrder="55">
+      <navLabel><text>Workbook Glossary</text></navLabel>
+      <content src="pages/bm_glossary.xhtml"/>
+    </navPoint>
+    <navPoint id="num_56" playOrder="56">
+      <navLabel><text>Parent &amp; Educator Guide</text></navLabel>
+      <content src="pages/bm_parent_guide.xhtml"/>
+    </navPoint>
+  </navMap>
+</ncx>

@@ -25,7 +25,7 @@
       <!-- <p class="day-title-es" lang="es">{{ DAY_TITLE_ES }}</p> -->
     </div>
     <div class="character-badge">
-      <img src="../images/characters/{{ PRIMARY_CHAR_IMG }}"
+      <img src="../../images/characters/{{ PRIMARY_CHAR_IMG }}"
            alt="{{ PRIMARY_CHAR_NAMES }}"
            width="52" height="52"/>
       <span>{{ PRIMARY_CHAR_NAMES }}</span>
@@ -69,6 +69,9 @@
     </div>
   </nav>
 
+  <!-- ===== DAILY QUEST LAUNCHPAD SCENE / BANNER ===== -->
+{{ HERO_LAUNCHPAD_HTML }}
+
   <!-- ===================================================
        BLOCK A: READING &amp; PHONICS — Land 1: Harmonia
        Kenji &amp; Aiko · Every day
@@ -78,12 +81,11 @@
     <h2 class="block-title" id="act1-title">{{ ACT1_TITLE }}</h2>
     <p class="block-time">⏱ {{ ACT1_TIME }} minutes with Kenji &amp; Aiko</p>
 
-    <!-- Dictionary scene image from SOE Picture Dictionary -->
+    <!-- Activity scene image -->
     <figure class="dict-image-zone">
-      <img src="../images/dictionary/{{ ACT1_IMG }}"
+      <img src="../../images/dictionary/{{ ACT1_IMG }}"
            alt="{{ ACT1_IMG_ALT }}"
            width="360" height="200"/>
-      <figcaption>From the SOE Picture Dictionary · {{ ACT1_IMG_SOURCE }}</figcaption>
     </figure>
 
     <!-- ESOL/Spelling Panel: Word + Phonetic side by side -->
@@ -102,7 +104,7 @@
 
     <aside class="char-tip" aria-label="Kenji and Aiko's Tip">
       <img class="char-avatar"
-           src="../images/characters/kenji.png"
+           src="../../images/characters/kenji.png"
            alt="Kenji"
            width="44" height="44"/>
       <div class="tip-content">
@@ -124,10 +126,9 @@
     <p class="block-time">⏱ {{ ACT2_TIME }} minutes with Kwame &amp; Octavia</p>
 
     <figure class="dict-image-zone">
-      <img src="../images/dictionary/{{ ACT2_IMG }}"
+      <img src="../../images/dictionary/{{ ACT2_IMG }}"
            alt="{{ ACT2_IMG_ALT }}"
            width="360" height="200"/>
-      <figcaption>From the SOE Picture Dictionary · {{ ACT2_IMG_SOURCE }}</figcaption>
     </figure>
 
     <div class="block-body">
@@ -139,7 +140,7 @@
 
     <aside class="char-tip" aria-label="Kwame and Octavia's Tip">
       <img class="char-avatar"
-           src="../images/characters/kwame.png"
+           src="../../images/characters/kwame.png"
            alt="Kwame"
            width="44" height="44"/>
       <div class="tip-content">
@@ -161,10 +162,9 @@
     <p class="block-time">⏱ {{ ACT3_TIME }} minutes with Silas &amp; Vesta</p>
 
     <figure class="dict-image-zone">
-      <img src="../images/dictionary/{{ ACT3_IMG }}"
+      <img src="../../images/dictionary/{{ ACT3_IMG }}"
            alt="{{ ACT3_IMG_ALT }}"
            width="360" height="200"/>
-      <figcaption>From the SOE Picture Dictionary · {{ ACT3_IMG_SOURCE }}</figcaption>
     </figure>
 
     <!-- ESOL/Spelling Panel: Word + Phonetic side by side -->
@@ -185,7 +185,7 @@
 
     <aside class="char-tip" aria-label="Silas and Vesta's Tip">
       <img class="char-avatar"
-           src="../images/characters/silas.png"
+           src="../../images/characters/silas.png"
            alt="Silas"
            width="44" height="44"/>
       <div class="tip-content">
@@ -207,10 +207,9 @@
     <p class="block-time">⏱ {{ ACT4_TIME }} minutes with Felix &amp; Amara</p>
 
     <figure class="dict-image-zone">
-      <img src="../images/dictionary/{{ ACT4_IMG }}"
+      <img src="../../images/dictionary/{{ ACT4_IMG }}"
            alt="{{ ACT4_IMG_ALT }}"
            width="360" height="200"/>
-      <figcaption>From the SOE Picture Dictionary · {{ ACT4_IMG_SOURCE }}</figcaption>
     </figure>
 
     <div class="block-body">
@@ -222,7 +221,7 @@
 
     <aside class="char-tip" aria-label="Felix and Amara's Tip">
       <img class="char-avatar"
-           src="../images/characters/felix.png"
+           src="../../images/characters/felix.png"
            alt="Felix"
            width="44" height="44"/>
       <div class="tip-content">
@@ -243,12 +242,7 @@
     <h2 class="block-title" id="act6-title">{{ ACT6_TITLE }}</h2>
     <p class="block-time">⏱ {{ ACT6_TIME }} minutes with Kenji &amp; Aiko</p>
 
-    <figure class="dict-image-zone">
-      <img src="../images/dictionary/{{ ACT6_IMG }}"
-           alt="{{ ACT6_IMG_ALT }}"
-           width="360" height="200"/>
-      <figcaption>From the SOE Picture Dictionary · {{ ACT6_IMG_SOURCE }}</figcaption>
-    </figure>
+
 
     <div class="block-body">
       <p>{{ ACT6_INSTRUCTIONS }}</p>
@@ -259,7 +253,7 @@
 
     <aside class="char-tip" aria-label="Kenji and Aiko's Tip">
       <img class="char-avatar"
-           src="../images/characters/kenji.png"
+           src="../../images/characters/kenji.png"
            alt="Kenji"
            width="44" height="44"/>
       <div class="tip-content">
@@ -280,12 +274,7 @@
     <h2 class="block-title" id="act7-title">{{ ACT7_TITLE }}</h2>
     <p class="block-time">⏱ {{ ACT7_TIME }} minutes with Kenji &amp; Aiko</p>
 
-    <figure class="dict-image-zone">
-      <img src="../images/dictionary/{{ ACT7_IMG }}"
-           alt="{{ ACT7_IMG_ALT }}"
-           width="360" height="200"/>
-      <figcaption>From the SOE Picture Dictionary · {{ ACT7_IMG_SOURCE }}</figcaption>
-    </figure>
+
 
     <div class="block-body">
       <p>{{ ACT7_INSTRUCTIONS }}</p>
@@ -298,7 +287,7 @@
 
     <aside class="char-tip" aria-label="Kenji and Aiko's Tip">
       <img class="char-avatar"
-           src="../images/characters/aiko.png"
+           src="../../images/characters/aiko.png"
            alt="Aiko"
            width="44" height="44"/>
       <div class="tip-content">
@@ -320,12 +309,7 @@
     <h2 class="block-title" id="act8-title">{{ ACT8_TITLE }}</h2>
     <p class="block-time">⏱ {{ ACT8_TIME }} minutes with Kenji &amp; Aiko</p>
 
-    <figure class="dict-image-zone">
-      <img src="../images/dictionary/{{ ACT8_IMG }}"
-           alt="{{ ACT8_IMG_ALT }}"
-           width="360" height="200"/>
-      <figcaption>From the SOE Picture Dictionary · {{ ACT8_IMG_SOURCE }}</figcaption>
-    </figure>
+
 
     <div class="block-body">
       <p>{{ ACT8_INSTRUCTIONS }}</p>
@@ -336,7 +320,7 @@
 
     <aside class="char-tip" aria-label="Kenji and Aiko's Tip">
       <img class="char-avatar"
-           src="../images/characters/kenji.png"
+           src="../../images/characters/kenji.png"
            alt="Kenji"
            width="44" height="44"/>
       <div class="tip-content">
@@ -360,10 +344,9 @@
     <p class="block-time">⏱ {{ ACT5_TIME }} minutes with {{ ACT5_CHAR_NAMES }}</p>
 
     <figure class="dict-image-zone">
-      <img src="../images/dictionary/{{ ACT5_IMG }}"
+      <img src="../../images/dictionary/{{ ACT5_IMG }}"
            alt="{{ ACT5_IMG_ALT }}"
            width="360" height="200"/>
-      <figcaption>From the SOE Picture Dictionary · {{ ACT5_IMG_SOURCE }}</figcaption>
     </figure>
 
     <div class="block-body">
@@ -375,7 +358,7 @@
 
     <aside class="char-tip" aria-label="{{ ACT5_CHAR_NAMES }}'s Tip">
       <img class="char-avatar"
-           src="../images/characters/{{ ACT5_CHAR_IMG }}"
+           src="../../images/characters/{{ ACT5_CHAR_IMG }}"
            alt="{{ ACT5_CHAR_NAMES }}"
            width="44" height="44"/>
       <div class="tip-content">
@@ -396,12 +379,7 @@
     <h2 class="block-title" id="act9-title">{{ ACT9_TITLE }}</h2>
     <p class="block-time">⏱ {{ ACT9_TIME }} minutes with {{ ACT9_HERO_NAME }}</p>
 
-    <figure class="dict-image-zone">
-      <img src="../images/dictionary/{{ ACT9_IMG }}"
-           alt="{{ ACT9_IMG_ALT }}"
-           width="360" height="200"/>
-      <figcaption>From the SOE Picture Dictionary · {{ ACT9_IMG_SOURCE }}</figcaption>
-    </figure>
+
 
     <div class="block-body">
       <p>{{ ACT9_STORY }}</p>
@@ -413,7 +391,7 @@
 
     <aside class="char-tip" aria-label="{{ ACT9_HERO_NAME }}'s Tip">
       <img class="char-avatar"
-           src="../images/characters/{{ ACT9_CHAR_IMG }}"
+           src="../../images/characters/{{ ACT9_CHAR_IMG }}"
            alt="{{ ACT9_HERO_NAME }}"
            width="44" height="44"/>
       <div class="tip-content">
