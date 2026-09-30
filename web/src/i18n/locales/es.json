@@ -8,8 +8,13 @@
         "media": "Sala de Medios",
         "mission": "Nuestra Misión",
         "join": "Únete a la Búsqueda",
+        "contact": "Contáctanos",
         "toggle_menu": "Alternar menú de navegación",
-        "toggle_lang": "Cambiar idioma"
+        "toggle_lang": "Cambiar idioma",
+        "lang_select": "Idioma",
+        "lang_en": "English",
+        "lang_es": "Español",
+        "lang_fr": "Français"
     },
     "hero": {
         "title": "Diseñado para el cerebro en desarrollo,",
@@ -21,6 +26,8 @@
         "explore": "Explorar",
         "get_involved": "Involúcrate",
         "stay_connected": "Mantente Conectado",
+        "contact_us": "Contáctanos",
+        "contact_email": "info@soelearn.com",
         "subscribe": "Suscribirse",
         "all_rights_reserved": "Todos los derechos reservados.",
         "sci_sound": "Ciencia del Sonido",
@@ -29,21 +36,64 @@
         "weekly_activities": "Actividades neuro-afirmativas semanales y lanzamientos musicales."
     },
     "home": {
+
+        "hero_offer": {
+            "eyebrow": "THE SOUND OF ESSENTIALS DELUXE · EDADES 2–7",
+            "title_main": "Una Experiencia de Aprendizaje Musical",
+            "title_highlight": "(Gratis Hoy)",
+            "subtitle": "Un viaje sonoro inmersivo a través de la fonética, números, movimiento y el mundo natural. Creado para el cerebro en desarrollo, no para el algoritmo de pantalla.",
+            "price_strike": "Valor de $19",
+            "price_tag": "Gratis para Familias Fundadoras",
+            "price_note": "Acceso Digital Inmediato · Tuyo para Siempre",
+            "check_1": "19 canciones originales que enseñan fonética, matemáticas y ciencias",
+            "check_2": "Libro para colorear Rhythm Quest de 40 páginas e imprimibles incluidos",
+            "check_3": "Transmisión digital inmediata y descarga directa de audio MP3",
+            "check_4": "Acceso 100% Gratuito al Álbum · Entrega Inmediata por Correo",
+            "cta_primary": "Comenzar la Experiencia Gratis →",
+            "cta_secondary": "Explorar The Seven Land Quest ($19) →",
+            "guarantee_badge": "Gratis para siempre · Acceso digital inmediato · Sin envíos físicos"
+        },
         "hero_label": "Medios Neuro-Afirmativos",
         "hero_title_1": "Diseñado para el cerebro en desarrollo,",
         "hero_title_2": "no para el algoritmo.",
         "hero_subtitle": "Un ecosistema basado en la ciencia e impulsado por la música para el desarrollo de la primera infancia. Calma. Enfoque. Esencial.",
-        "hero_note": "Para niños de 2 a 8 años · Basado en la neurociencia",
+        "hero_note": "Para niños de 2 a 7 años · Basado en la neurociencia",
+        "voices": {
+            "label": "Voces del Mundo y Misión",
+            "title": "Guiados por Propósito e Historia",
+            "seriphia_quote": "Bienvenido, joven explorador. El sendero del sonido comienza aquí. Escucha con atención, muévete con el ritmo y observa cómo se revela el mundo.",
+            "seriphia_author": "Seriphia",
+            "seriphia_role": "Guardiana del Sonido",
+            "founder_quote": "Forjado por el corazón de un padre y el amor de una madre, nacido de vivir la crisis del aprendizaje temprano y creado con devoción total. 15 años de dedicación.",
+            "founder_author": "Lee Murphy",
+            "founder_role": "Fundador y Primer Oyente",
+            "hero_quote": "En Harmonia, cada ritmo es una palabra esperando a ser descubierta. El lenguaje comienza en el oído.",
+            "hero_author": "Kenji y Aiko",
+            "hero_role": "Héroes de Harmonia"
+        },
+        "quest_offer": {
+            "label": "El Libro de Cuentos Ilustrado",
+            "title_1": "Rhythm Quest",
+            "title_2": "Libro de Cuentos ($19)",
+            "subtitle": "El libro de cuentos ilustrado a todo color que da vida a la música. Viaja con Seriphia por las 7 Tierras, conoce a los 15 Héroes Mentores y lee junto con cada canción.",
+            "feat_1_title": "Las 7 Tierras Musicales",
+            "feat_1_desc": "Explora la historia de cada mundo, desde la fonética de Harmonia hasta los ritmos de Celestia.",
+            "feat_2_title": "Aventura Ilustrada a Todo Color",
+            "feat_2_desc": "Arte artesanal, historias de personajes y rica tradición narrativa para el aprendizaje.",
+            "feat_3_title": "Letras y Cuentos para Cantar",
+            "feat_3_desc": "Letras completas, guías fonéticas y diálogos para las 19 pistas del álbum musical.",
+            "cta": "Obtener el Libro de Cuentos ($19) →"
+        },
         "why_label": "La Doble Crisis",
         "why_title_1": "Estamos transformando un Estado de Emergencia",
         "why_title_2": "en El Sonido de lo Esencial: Rhythm Quest.",
         "why_subtitle": "300 millones de niños en todo el mundo no pueden leer con fluidez.",
         "stat_1_val": "300M",
-        "stat_1_lab": "Niños carecen de fluidez lectora",
+        "stat_1_lab": "Niños carecen de fluidez lectora en el mundo",
         "stat_2_val": "44M",
-        "stat_2_lab": "Déficit global de maestros",
+        "stat_2_lab": "Déficit global de maestros de educación temprana",
         "stat_3_val": "1M",
-        "stat_3_lab": "Conexiones neuronales formadas por segundo en los primeros 1,000 días",
+        "stat_3_lab": "Conexiones neuronales formadas por segundo en la infancia",
         "approach_label": "Nuestro Enfoque",
         "approach_title_1": "No es entretenimiento.",
         "approach_title_2": "Es intervención.",
@@ -52,36 +102,103 @@
         "curriculum_title_1": "Cinco Dominios de",
         "curriculum_title_2": "Aprendizaje Esencial",
         "curriculum_subtitle": "Cada lección se entrelaza a través de los cinco dominios del desarrollo.",
-        "cta_title": "La biología no espera a que los sistemas se arreglen solos.",
-        "cta_subtitle": "Únete al ecosistema de apoyo.",
-        "explore_media": "Explorar la Sala de Medios →",
         "domains": {
             "language": {
-                "title": "Lenguaje",
-                "desc": "Fonética, vocabulario y comunicación a través de la canción y el ritmo."
+                "title": "Lenguaje y Fonética",
+                "desc": "Conciencia fonémica, vocabulario y comunicación a través de la canción y el ritmo."
             },
             "cognitive": {
-                "title": "Cognitivo",
-                "desc": "Reconocimiento de patrones, memoria y resolución de problemas mediante el juego musical."
+                "title": "Cognitivo y Matemáticas",
+                "desc": "Reconocimiento de patrones, memoria espacial, cálculo y resolución de problemas."
             },
             "physical": {
-                "title": "Físico",
-                "desc": "Habilidades motoras y conciencia corporal a través del movimiento y el baile."
+                "title": "Físico y Motor",
+                "desc": "Habilidades motoras, coordinación bilateral y conciencia corporal con ritmo activo."
             },
             "science": {
-                "title": "Ciencia",
-                "desc": "Naturaleza, anatomía y descubrimiento a través de la exploración sensorial."
+                "title": "Ciencia y Naturaleza",
+                "desc": "Observación natural, anatomía, astronomía y exploración sensorial."
             },
             "social_emotional": {
                 "title": "Socio-Emocional",
-                "desc": "Modales, empatía y autorregulación a través de la música colaborativa."
+                "desc": "Empatía, cooperación, modales y autorregulación con música colaborativa."
             }
+        },
+        "credibility": {
+            "quote": "Forjado por el corazón de un padre y el amor de una madre. Respaldado por la ciencia de cómo aprenden realmente los niños.",
+            "sub": "Sin capital de riesgo. Sin trampas algorítmicas de dopamina. Solo bellas artes artesanales y ciencia cognitiva verificada."
+        },
+        "science_trust": {
+            "label": "Basado en la Ciencia",
+            "title_1": "La Ciencia de Por Qué",
+            "title_2": "El Ritmo Desarrolla Lectores",
+            "subtitle": "Nuestra pedagogía se basa en neurociencia revisada por pares, psicología cognitiva del desarrollo y ensayos controlados aleatorios.",
+            "card_1_tag": "Nature Scientific Reports (2022)",
+            "card_1_title": "El Ritmo Impulsa la Lectura",
+            "card_1_desc": "La investigación demuestra que la percepción del ritmo (no la melodía) media directamente la habilidad lectora mediante la conciencia fonológica y memoria auditiva (Sousa et al.).",
+            "card_2_tag": "Nature Human Behaviour (2024)",
+            "card_2_title": "16 Regiones Genómicas Compartidas",
+            "card_2_desc": "Más de 1 millón de genomas analizados revelan vínculos genéticos profundos entre el ritmo musical, el lenguaje y la dislexia (gen DLAT).",
+            "card_3_tag": "Frontiers in Psychology (2011/2016)",
+            "card_3_title": "Comprobado en Ensayos de Preescolar",
+            "card_3_desc": "Un ensayo controlado de 20 semanas demostró que 10 minutos diarios de ritmo musical lograron avances en conciencia fonológica iguales a un programa intensivo de fonética.",
+            "card_4_tag": "Harvard Developing Child (2024)",
+            "card_4_title": "1 Millón de Sinapsis / Seg",
+            "card_4_desc": "La corteza auditiva es más plástica antes de los 7 años. El aprendizaje rítmico multisensorial construye circuitos neuronales duraderos.",
+            "stats_title": "El Estado de Emergencia en la Primera Infancia",
+            "stat_naep_val": "69%",
+            "stat_naep_lab": "Estudiantes de 4º grado en EE. UU. por debajo del nivel competente de lectura (NAEP 2024)",
+            "stat_unesco_val": "300M",
+            "stat_unesco_lab": "Niños en situación de pobreza de aprendizaje global (UNESCO 2024)",
+            "stat_teachers_val": "44M",
+            "stat_teachers_lab": "Déficit global de maestros de educación básica (UNESCO 2024)",
+            "accordion_btn_open": "Ver Referencias y Estudios Científicos ↓",
+            "accordion_btn_close": "Ocultar Referencias ↑"
+        },
+        "comparison": {
+            "label": "¿Por qué SOE?",
+            "title_1": "Diseñado para el Cerebro en Desarrollo —",
+            "title_2": "No para el Algoritmo",
+            "subtitle": "Un claro contraste entre la educación sensorial intencional y la distracción comercial de pantallas.",
+            "col_feature": "Vector de Aprendizaje",
+            "col_soe": "The Sound of Essentials",
+            "col_algo": "El Algoritmo de Atención",
+            "row_1_title": "Núcleo Pedagógico",
+            "row_1_soe": "Estimulación neuronal activa por ritmo y fonética",
+            "row_1_algo": "Bucles pasivos y destellos de dopamina",
+            "row_2_title": "Mundo Narrativo",
+            "row_2_soe": "7 Tierras cohesivas y 15 Héroes mentores",
+            "row_2_algo": "Minijuegos inconexos y anuncios invasivos",
+            "row_3_title": "Ritmo del Sistema Nervioso",
+            "row_3_soe": "Tempo calmado, neuro-afirmativo y pausas conscientes",
+            "row_3_algo": "Sobrestimulación y cortes visuales rápidos",
+            "row_4_title": "Privacidad y Respeto",
+            "row_4_soe": "100% Libre de Anuncios, Cero Rastreo de Datos",
+            "row_4_algo": "Rastreo de comportamiento y compras dentro de la app",
+            "row_5_title": "Origen y Artesanía",
+            "row_5_soe": "Forjado por el corazón de un padre y el amor de una madre, con bellas artes auténticas",
+            "row_5_algo": "Optimización automatizada de granjas de contenido"
+        },
+        "faq": {
+            "label": "¿Tienes Preguntas?",
+            "title": "Preguntas Frecuentes",
+            "subtitle": "Todo lo que necesitas saber sobre el álbum Deluxe gratuito y el ecosistema Rhythm Quest.",
+            "q1": "¿Por qué The Sound of Essentials Deluxe es completamente gratis?",
+            "a1": "El Sound of Essentials original fue creado como un regalo sincero para las familias. La edición Deluxe permanece gratuita para asegurar que cada niño tenga acceso a un aprendizaje sensorial y musical fundamental. El acceso digital solo requiere tu correo electrónico, con materiales opcionales y ediciones físicas disponibles al finalizar la compra.",
+            "q2": "¿Cómo obtengo acceso digital inmediato?",
+            "a2": "Simplemente haz clic en 'Comenzar la Experiencia Gratis' e ingresa tu correo electrónico. Recibirás acceso directo a la transmisión privada de las 19 canciones, enlaces de descarga directa y el PDF de 40 páginas para colorear.",
+            "q3": "¿Para qué rango de edad está diseñado?",
+            "a3": "The Sound of Essentials está diseñado específicamente para niños de 2 a 7 años (Preescolar hasta 2º Grado). Está estructurado tanto para el hogar como para las aulas de educación temprana.",
+            "q4": "¿Cómo ayuda el ritmo musical al aprendizaje de la lectura?",
+            "a4": "Investigaciones científicas en Nature Scientific Reports confirman que la discriminación del ritmo entrena el procesamiento temporal del cerebro: el mecanismo exacto para segmentar sílabas y fonemas al aprender a leer.",
+            "q5": "¿Qué es The Seven Land Quest ($19)?",
+            "a5": "The Seven Land Quest es nuestra guía interactiva de 7 semanas. Amplía las 19 canciones en 400 actividades interactivas, juegos de movimiento, mapas de aventura imprimibles y metas semanales de ritmo."
         },
         "features": {
             "active": {
                 "title": "Activo, No Pasivo",
                 "subtitle": "Maestro-en-una-Caja",
-                "desc": "Cada episodio es una lección estructurada, no una distracción."
+                "desc": "Cada canción y melodía es una lección estructurada que invita a los niños a moverse, cantar y practicar."
             },
             "neuro": {
                 "title": "Neuro-Afirmativo",
@@ -93,6 +210,16 @@
                 "subtitle": "No se requiere Maestro",
                 "desc": "Construido para enfrentar el déficit de 44 millones de maestros."
             }
+        },
+        "cta_title": "La biología no espera a que los sistemas se arreglen solos.",
+        "cta_subtitle": "Abre la puerta al aprendizaje con música.",
+        "explore_media": "Comenzar la Experiencia Gratis →",
+        "final_cta": {
+            "title": "Comienza la Búsqueda del Ritmo de tu Familia",
+            "subtitle": "19 canciones originales, 7 tierras de aprendizaje y actividades neuroafirmativas diseñadas para el cerebro en desarrollo.",
+            "btn_free": "Comenzar la Experiencia Gratis →",
+            "btn_quest": "Explorar La Aventura de 7 Tierras ($19) →",
+            "badge": "Acceso Digital Instantáneo · Sin Sobrecarga de Pantallas · 100% Gratis para Empezar"
         }
     },
     "universe": {
@@ -457,7 +584,7 @@
             },
             "preschool": {
                 "title": "Probado en Preescolar",
-                "desc": "En un ensayo controlado, 10 minutos diarios de entrenamiento musical desarrollaron la conciencia fonológica en preescolares con la misma eficacia que un programa dedicado de fonética. La ventana es de 2 a 8 años. Ese es nuestro enfoque."
+                "desc": "En un ensayo controlado, 10 minutos diarios de entrenamiento musical desarrollaron la conciencia fonológica en preescolares con la misma eficacia que un programa dedicado de fonética. La ventana es de 2 a 7 años. Ese es nuestro enfoque."
             },
             "genetics": {
                 "title": "Escrito en Nuestro ADN",
@@ -504,25 +631,101 @@
         "lyrics_btn": "Letra",
         "no_lyrics": "No hay letra disponible para esta pista.",
         "tracks": {
-            "1":  { "title": "Día Soleado (Intro)",           "domain": "Introducción",              "desc": "Una suave melodía de amanecer que da la bienvenida al mundo de SOE." },
-            "2":  { "title": "Días de la Semana",             "domain": "Tiempo y Celestia",          "desc": "Elias y Selene cantan los siete días, desarrollando habilidades de secuenciación temporal." },
-            "3":  { "title": "Remix del Abecedario",          "domain": "Lenguaje y Harmonia",       "desc": "Kenji y Aiko dan vida al abecedario con un remix rítmico de fonética." },
-            "4":  { "title": "Interludio de Caballos",        "domain": "Ciencia y Terrasol",          "desc": "Un divertido viaje hablado por el reino animal, guiado por el humor." },
-            "5":  { "title": "Le Cheval",                     "domain": "Lenguaje y Luminosity",      "desc": "Un tributo bilingüe francés-inglés al poder y la gracia del caballo." },
-            "6":  { "title": "Vamos a Estirarnos",            "domain": "Físico y Vitalis",          "desc": "Felix y Amara lideran una rutina completa de respiración y estiramiento." },
-            "7":  { "title": "Hora de Ejercicio",             "domain": "Físico y Vitalis",          "desc": "Una marcha motivadora con respuesta rítmica al llamado." },
-            "8":  { "title": "Números",                       "domain": "Matemáticas y Numeria",     "desc": "Kwame y Octavia cuentan hasta 10 con palmadas — numeración práctica en acción." },
-            "9":  { "title": "Mi Cuerpo",                     "domain": "Ciencia y Terrasol",          "desc": "Athena y Ezra guían a los aprendices por la anatomía del cuerpo humano." },
-            "10": { "title": "Modales",                       "domain": "Socio-Emocional",           "desc": "Aiko enseña el lenguaje de la cortesía — por favor, gracias, con permiso." },
-            "11": { "title": "¿Sabes Qué Hora Es?",           "domain": "Tiempo y Celestia",          "desc": "Elias y Selene introducen la lectura del reloj y las rutinas diarias." },
-            "12": { "title": "Cambios",                       "domain": "Ciencia y Terrasol",          "desc": "Nerissa reflexiona sobre el cambiante clima y la constancia del amor." },
-            "13": { "title": "Cien",                          "domain": "Matemáticas y Numeria",     "desc": "Octavia cuenta hasta 100 — un hito en la numeración temprana." },
-            "14": { "title": "El Océano",                     "domain": "Ciencia y Terrasol",          "desc": "Un viaje sonoro inmersivo explorando las maravillas del océano." },
-            "15": { "title": "Palabras Difíciles",            "domain": "Lenguaje y Luminosity",      "desc": "Ronan y Nerissa abordan vocabulario multi-silábico con ejercicios rítmicos." },
-            "16": { "title": "Formas",                        "domain": "Matemáticas y Terrasol",   "desc": "Silas y Vesta cantan sobre círculos, cuadrados, triángulos y más." },
-            "17": { "title": "Los Meses del Año",             "domain": "Tiempo y Celestia",          "desc": "Elias guía una recitación completa del calendario con melodía memorable." },
-            "18": { "title": "Lluvia",                        "domain": "Ciencia y Terrasol",          "desc": "Athena y Ezra exploran el ciclo del agua y la belleza de la lluvia." },
-            "19": { "title": "Después de la Tormenta (Outro)", "domain": "Introducción",            "desc": "Una pista de cierre tranquila — la promesa de que la luz siempre sigue a la tormenta." }
+            "1": {
+                "title": "Día Soleado (Intro)",
+                "domain": "Introducción",
+                "desc": "Una suave melodía de amanecer que da la bienvenida al mundo de SOE."
+            },
+            "2": {
+                "title": "Días de la Semana",
+                "domain": "Tiempo y Celestia",
+                "desc": "Elias y Selene cantan los siete días, desarrollando habilidades de secuenciación temporal."
+            },
+            "3": {
+                "title": "Remix del Abecedario",
+                "domain": "Lenguaje y Harmonia",
+                "desc": "Kenji y Aiko dan vida al abecedario con un remix rítmico de fonética."
+            },
+            "4": {
+                "title": "Interludio de Caballos",
+                "domain": "Ciencia y Terrasol",
+                "desc": "Un divertido viaje hablado por el reino animal, guiado por el humor."
+            },
+            "5": {
+                "title": "Le Cheval",
+                "domain": "Lenguaje y Luminosity",
+                "desc": "Un tributo bilingüe francés-inglés al poder y la gracia del caballo."
+            },
+            "6": {
+                "title": "Vamos a Estirarnos",
+                "domain": "Físico y Vitalis",
+                "desc": "Felix y Amara lideran una rutina completa de respiración y estiramiento."
+            },
+            "7": {
+                "title": "Hora de Ejercicio",
+                "domain": "Físico y Vitalis",
+                "desc": "Una marcha motivadora con respuesta rítmica al llamado."
+            },
+            "8": {
+                "title": "Números",
+                "domain": "Matemáticas y Numeria",
+                "desc": "Kwame y Octavia cuentan hasta 10 con palmadas — numeración práctica en acción."
+            },
+            "9": {
+                "title": "Mi Cuerpo",
+                "domain": "Ciencia y Terrasol",
+                "desc": "Athena y Ezra guían a los aprendices por la anatomía del cuerpo humano."
+            },
+            "10": {
+                "title": "Modales",
+                "domain": "Socio-Emocional",
+                "desc": "Aiko enseña el lenguaje de la cortesía — por favor, gracias, con permiso."
+            },
+            "11": {
+                "title": "¿Sabes Qué Hora Es?",
+                "domain": "Tiempo y Celestia",
+                "desc": "Elias y Selene introducen la lectura del reloj y las rutinas diarias."
+            },
+            "12": {
+                "title": "Cambios",
+                "domain": "Ciencia y Terrasol",
+                "desc": "Nerissa reflexiona sobre el cambiante clima y la constancia del amor."
+            },
+            "13": {
+                "title": "Cien",
+                "domain": "Matemáticas y Numeria",
+                "desc": "Octavia cuenta hasta 100 — un hito en la numeración temprana."
+            },
+            "14": {
+                "title": "El Océano",
+                "domain": "Ciencia y Terrasol",
+                "desc": "Un viaje sonoro inmersivo explorando las maravillas del océano."
+            },
+            "15": {
+                "title": "Palabras Difíciles",
+                "domain": "Lenguaje y Aquaria",
+                "desc": "Ronan y Nerissa abordan vocabulario multi-silábico con ejercicios rítmicos."
+            },
+            "16": {
+                "title": "Formas",
+                "domain": "Matemáticas y Terrasol",
+                "desc": "Silas y Vesta cantan sobre círculos, cuadrados, triángulos y más."
+            },
+            "17": {
+                "title": "Los Meses del Año",
+                "domain": "Tiempo y Celestia",
+                "desc": "Elias guía una recitación completa del calendario con melodía memorable."
+            },
+            "18": {
+                "title": "Lluvia",
+                "domain": "Ciencia y Terrasol",
+                "desc": "Athena y Ezra exploran el ciclo del agua y la belleza de la lluvia."
+            },
+            "19": {
+                "title": "Después de la Tormenta (Outro)",
+                "domain": "Introducción",
+                "desc": "Una pista de cierre tranquila — la promesa de que la luz siempre sigue a la tormenta."
+            }
         }
     }
 }

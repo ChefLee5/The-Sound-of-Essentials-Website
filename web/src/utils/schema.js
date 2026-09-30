@@ -24,7 +24,7 @@ export function homeSchema() {
       name: SITE_NAME,
       url: SITE_URL,
       logo: ORG_LOGO,
-      description: 'A music-powered educational experience designed for the developing brain. 19 original tracks, 15 hero characters, and 7 thematic lands guide children Pre-K through Grade 3 through language, math, movement, science, and more.',
+      description: 'A music-powered educational experience designed for the developing brain. 19 original tracks, 15 hero characters, and 7 thematic lands guide children Pre-K through Grade 2 (Ages 2–7) through language, math, movement, science, and more.',
       foundingDate: '2024',
       sameAs: [],
       areaServed: {
@@ -132,12 +132,12 @@ export function universeSchema() {
       name: SITE_NAME,
       url: SITE_URL,
     },
-    educationalLevel: 'Pre-K through Grade 3',
+    educationalLevel: 'Pre-K through Grade 2',
     audience: {
       '@type': 'EducationalAudience',
       educationalRole: 'student',
-      suggestedMinAge: 3,
-      suggestedMaxAge: 9,
+      suggestedMinAge: 2,
+      suggestedMaxAge: 7,
     },
     hasPart: landsData.map((land, i) => ({
       '@type': 'Course',
@@ -145,7 +145,7 @@ export function universeSchema() {
       name: land.name,
       description: `${land.focus} — guided by ${land.duoLabel}`,
       image: `${SITE_URL}/assets/lands/${land.panorama}`,
-      educationalLevel: 'Pre-K through Grade 3',
+      educationalLevel: 'Pre-K through Grade 2',
       teaches: land.focus,
     })),
   };

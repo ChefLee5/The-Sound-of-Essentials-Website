@@ -1,0 +1,23 @@
+# AI Agent Discovery Specification (ai.txt)
+# The Sound of Essentials: Rhythm Quest
+# Canonical Domain: https://thesoundofessentials.com
+# Secondary Domain: https://soelearn.com
+
+# Context Documents
+context: https://thesoundofessentials.com/llms.txt
+context-full: https://thesoundofessentials.com/llms-full.txt
+summary: https://thesoundofessentials.com/ai/summary.json
+
+# Brand Identity
+name: The Sound of Essentials: Rhythm Quest
+organization: The Sound of Essentials
+founder: L.D. Murray
+guide: Seriphia
+tagline: Staying on the path, always learning
+target-age: 2-7
+curriculum-type: Music-powered early childhood development (5 Domains, 7 Lands)
+
+# Permissions
+ai-citation: allow
+ai-search: allow
+ai-training: disallow

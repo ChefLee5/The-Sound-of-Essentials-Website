@@ -21,9 +21,16 @@ const SECTIONS = [
     ],
   },
   {
+    heading: 'The Equitable Exchange',
+    paras: [
+      'We do not sell music as background noise; we bring an enduring acoustic solution to the modern home. Our front door is a complete 19-track studio album, gifted freely to every family. Foundational sensory learning is a birthright, not a luxury.',
+      'When parents invest in our physical workbooks and picture dictionaries, it is an equitable exchange for the profound calm and cognitive focus brought into their home sanctuary. We are not corporate proprietors peddling dopamine loops. Apps fade, algorithms shift, and digital gadgets rot. The Sound of Essentials is an evergreen and eternal sound.',
+    ],
+  },
+  {
     heading: 'Made by Educators, for Families',
     paras: [
-      'This is not a tech company’s side quest. It is the work of teachers, parents, musicians, and clinicians who care about how the youngest minds actually develop — and who measure success in mastered concepts, not minutes watched.',
+      'This is not a tech company’s side quest. It is the work of teachers, parents, musicians, and clinicians who care about how the youngest minds actually develop — crafted by a father’s heart and a mother’s love, and measured in mastered concepts rather than minutes watched.',
       'We are just getting started. The quest grows with every family who joins it.',
     ],
   },

@@ -1,12 +1,15 @@
 # robots.txt for The Sound of Essentials
-# Optimized for search engines and AI agent crawlers.
+# Optimized for search engines, AI agent crawlers, and LLM search bots.
 
 User-agent: *
 Allow: /
-Disallow: /ebook/OEBPS/images/   # Prevents raw scraping of ebook source images
+Disallow: /ebook/OEBPS/images/   # Prevents raw scraping of proprietary ebook assets
 
-# AI and LLM Crawlers
+# Frontier AI, LLM & Agentic Search Crawlers
 User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
 Allow: /
 
 User-agent: ClaudeBot
@@ -19,6 +22,18 @@ User-agent: Google-Extended
 Allow: /
 
 User-agent: PerplexityBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: cohere-ai
 Allow: /
 
 # Sitemap

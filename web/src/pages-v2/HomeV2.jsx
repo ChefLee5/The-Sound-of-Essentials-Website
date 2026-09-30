@@ -111,7 +111,7 @@ const HomeV2 = () => {
                 Listen Free
               </button>
             </form>
-            <p className="v2-email-meta">Streaming now · Ages 2–8 · No app required</p>
+            <p className="v2-email-meta">Streaming now · Ages 2–7 · No app required</p>
           </RevealV2>
         </div>
       </section>

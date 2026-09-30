@@ -1,33 +1,42 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { assetPath } from '../utils/assetPath';
-
-// All SOE target languages — codes with locale files are fully active;
-// others fall back to English until translated.
-const LANGUAGES = [
-  { code: 'en', label: 'English',    native: 'English',    flag: '🇺🇸', active: true  },
-  { code: 'es', label: 'Spanish',    native: 'Español',    flag: '🇪🇸', active: true  },
-  { code: 'fr', label: 'French',     native: 'Français',   flag: '🇫🇷', active: true  },
-  { code: 'pt', label: 'Portuguese', native: 'Português',  flag: '🇧🇷', active: false },
-  { code: 'ar', label: 'Arabic',     native: 'العربية',   flag: '🇸🇦', active: false },
-  { code: 'yo', label: 'Yoruba',     native: 'Yorùbá',    flag: '🇳🇬', active: false },
-  { code: 'ha', label: 'Hausa',      native: 'Hausa',      flag: '🇳🇬', active: false },
-  { code: 'sw', label: 'Swahili',    native: 'Kiswahili',  flag: '🇰🇪', active: false },
-  { code: 'zh', label: 'Mandarin',   native: '普通话',      flag: '🇨🇳', active: false },
-  { code: 'hi', label: 'Hindi',      native: 'हिन्दी',     flag: '🇮🇳', active: false },
-];
 
 const Navbar = () => {
   const { t, i18n } = useTranslation();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
-  const langRef = useRef(null);
   const location = useLocation();
 
-  // Dark-background pages where navbar needs inverted colors
-  const isDark = location.pathname.startsWith('/player');
+  const currentLang = (i18n.language || 'en').slice(0, 2);
+  const languages = [
+    { code: 'en', label: 'English', flag: '🇺🇸', short: 'EN' },
+    { code: 'es', label: 'Español', flag: '🇪🇸', short: 'ES' },
+    { code: 'fr', label: 'Français', flag: '🇫🇷', short: 'FR' },
+  ];
+  const currentLangObj = languages.find(l => l.code === currentLang) || languages[0];
+
+  const handleSelectLang = (code) => {
+    i18n.changeLanguage(code);
+    setLangOpen(false);
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (!e.target.closest('.navbar__lang-wrapper')) {
+        setLangOpen(false);
+      }
+    };
+    if (langOpen) {
+      document.addEventListener('click', handleClickOutside);
+    }
+    return () => document.removeEventListener('click', handleClickOutside);
+  }, [langOpen]);
+
+  // Dark-background pages (none currently, player is now bright & playful)
+  const isDark = false;
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 40);
@@ -46,33 +55,15 @@ const Navbar = () => {
     return () => { document.body.style.overflow = ''; };
   }, [menuOpen]);
 
-  // Close lang dropdown on outside click
-  useEffect(() => {
-    const handler = (e) => {
-      if (langRef.current && !langRef.current.contains(e.target)) {
-        setLangOpen(false);
-      }
-    };
-    document.addEventListener('mousedown', handler);
-    return () => document.removeEventListener('mousedown', handler);
-  }, []);
-
-  const selectLanguage = (lang) => {
-    // Only switch if locale file exists; others fall back to English
-    i18n.changeLanguage(lang.active ? lang.code : 'en');
-    setLangOpen(false);
-  };
-
-  const currentLang = LANGUAGES.find(l => l.code === i18n.language.split('-')[0]) || LANGUAGES[0];
-
   const navLinks = [
     { to: '/',           label: t('navbar.home') },
-    { to: '/universe',   label: t('navbar.universe') },
     { to: '/heroes',     label: t('navbar.heroes') },
     { to: '/science',    label: t('navbar.science') },
-    { to: '/mission',    label: t('navbar.mission') },
-    { to: '/listen',    label: t('navbar.media') },
-    { to: '/allies',     label: '🤝 Ally Annex' },
+    { to: '/listen',     label: t('navbar.media') },
+    { to: '/workbook',   label: '📘 Workbook' },
+    { to: '/headphones', label: '🎧 Headphones' },
+    { to: '/gallery',    label: '📖 Gallery' },
+    { to: '/join',       label: '✉️ ' + t('navbar.contact', 'Contact') },
   ];
 
   const isActive = (to) =>
@@ -90,15 +81,15 @@ const Navbar = () => {
       <Link to="/" className="navbar__logo" aria-label={t('app_title')}>
         <div className="navbar__logo-icon-wrap">
           <img
-            src={assetPath('/assets/soe-icon.png')}
-            alt="SOE Logo"
+            src={assetPath('/assets/soe-official-logo.webp')}
+            alt="The Sound of Essentials Official Logo"
             className="navbar__logo-img"
           />
           <div className="navbar__logo-sparkle" aria-hidden="true">✨</div>
         </div>
         <span className="navbar__logo-wordmark">
           <span className="navbar__logo-soe">The Sound of Essentials</span>
-          <span className="navbar__logo-sub">Rhythm Quest</span>
+          <span className="navbar__logo-sub">A Musical Learning Experience</span>
           <span className="navbar__logo-shine" aria-hidden="true" />
         </span>
       </Link>
@@ -136,40 +127,33 @@ const Navbar = () => {
 
       {/* ── Right controls ── */}
       <div className="navbar__right">
-        {/* Language Dropdown */}
-        <div className="navbar__lang-wrap" ref={langRef}>
+        {/* Language selector dropdown */}
+        <div className="navbar__lang-wrapper">
           <button
+            type="button"
+            className="navbar__lang-btn"
             onClick={() => setLangOpen(!langOpen)}
-            className={`navbar__lang ${langOpen ? 'navbar__lang--open' : ''}`}
-            aria-label="Select language"
+            aria-label={t('navbar.toggle_lang', 'Select Language')}
             aria-expanded={langOpen}
           >
-            <span className="navbar__lang-flag">{currentLang.flag}</span>
-            <span className="navbar__lang-code">{currentLang.code.toUpperCase()}</span>
-            <svg className="navbar__lang-chevron" width="10" height="10" viewBox="0 0 10 10" fill="none">
-              <path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-            </svg>
+            <span className="navbar__lang-flag">{currentLangObj.flag}</span>
+            <span className="navbar__lang-code">{currentLangObj.short}</span>
+            <span className={`navbar__lang-chevron ${langOpen ? 'navbar__lang-chevron--open' : ''}`}>▾</span>
           </button>
 
           {langOpen && (
-            <div className="navbar__lang-dropdown" role="listbox" aria-label="Choose language">
-              <div className="navbar__lang-dropdown-header">🌍 Choose Language</div>
-              {LANGUAGES.map(lang => (
+            <div className="navbar__lang-dropdown" role="menu">
+              {languages.map((l) => (
                 <button
-                  key={lang.code}
-                  className={`navbar__lang-option ${
-                    lang.code === currentLang.code ? 'navbar__lang-option--active' : ''
-                  } ${!lang.active ? 'navbar__lang-option--soon' : ''}`}
-                  onClick={() => selectLanguage(lang)}
-                  role="option"
-                  aria-selected={lang.code === currentLang.code}
+                  key={l.code}
+                  type="button"
+                  role="menuitem"
+                  className={`navbar__lang-option ${l.code === currentLang ? 'navbar__lang-option--active' : ''}`}
+                  onClick={() => handleSelectLang(l.code)}
                 >
-                  <span className="navbar__lang-option-flag">{lang.flag}</span>
-                  <span className="navbar__lang-option-text">
-                    <span className="navbar__lang-option-native">{lang.native}</span>
-                    {!lang.active && <span className="navbar__lang-option-soon">Coming soon</span>}
-                  </span>
-                  {lang.code === currentLang.code && <span className="navbar__lang-check">✓</span>}
+                  <span className="navbar__lang-option-flag">{l.flag}</span>
+                  <span className="navbar__lang-option-label">{l.label}</span>
+                  {l.code === currentLang && <span className="navbar__lang-option-check">✓</span>}
                 </button>
               ))}
             </div>
@@ -303,14 +287,15 @@ const Navbar = () => {
 
         .navbar__logo-sub {
           font-family: var(--font-display);
-          font-weight: 500;
-          font-size: 0.65rem;
-          letter-spacing: 0.04em;
+          font-weight: 600;
+          font-size: 0.58rem;
+          letter-spacing: 0.025em;
           background: linear-gradient(90deg, var(--color-green), var(--color-blue));
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
           text-transform: uppercase;
+          white-space: nowrap;
         }
 
         /* ── Shimmer sweep across wordmark ── */
@@ -403,136 +388,6 @@ const Navbar = () => {
           flex-shrink: 0;
         }
 
-        /* ── Language Dropdown ── */
-        .navbar__lang-wrap {
-          position: relative;
-        }
-
-        .navbar__lang {
-          display: flex;
-          align-items: center;
-          gap: 0.3rem;
-          font-family: var(--font-display);
-          font-size: 0.78rem;
-          font-weight: 700;
-          letter-spacing: 0.04em;
-          color: #1a1a2e;
-          background: none;
-          border: 1.5px solid rgba(0,0,0,0.18);
-          border-radius: 8px;
-          padding: 0.38rem 0.55rem;
-          cursor: pointer;
-          transition: all 0.2s ease;
-          white-space: nowrap;
-        }
-
-        .navbar__lang:hover,
-        .navbar__lang--open {
-          border-color: var(--color-green);
-          color: var(--color-green);
-          background: var(--color-green-soft);
-        }
-
-        .navbar__lang-flag { font-size: 1rem; line-height: 1; }
-        .navbar__lang-code { font-size: 0.75rem; font-weight: 700; }
-
-        .navbar__lang-chevron {
-          opacity: 0.5;
-          transition: transform 0.2s ease;
-        }
-        .navbar__lang--open .navbar__lang-chevron {
-          transform: rotate(180deg);
-        }
-
-        /* Dropdown panel */
-        .navbar__lang-dropdown {
-          position: absolute;
-          top: calc(100% + 8px);
-          right: 0;
-          background: #fff;
-          border: 1.5px solid rgba(0,0,0,0.08);
-          border-radius: 14px;
-          box-shadow: 0 8px 32px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.06);
-          min-width: 200px;
-          overflow: hidden;
-          z-index: 2000;
-          animation: langDropIn 0.18s cubic-bezier(0.4,0,0.2,1);
-        }
-
-        @keyframes langDropIn {
-          from { opacity: 0; transform: translateY(-6px) scale(0.97); }
-          to   { opacity: 1; transform: translateY(0)    scale(1);    }
-        }
-
-        .navbar__lang-dropdown-header {
-          font-family: var(--font-display);
-          font-size: 0.7rem;
-          font-weight: 700;
-          letter-spacing: 0.1em;
-          text-transform: uppercase;
-          color: #8a8aaa;
-          padding: 0.75rem 1rem 0.4rem;
-          border-bottom: 1px solid rgba(0,0,0,0.05);
-        }
-
-        .navbar__lang-option {
-          display: flex;
-          align-items: center;
-          gap: 0.6rem;
-          width: 100%;
-          padding: 0.6rem 1rem;
-          background: none;
-          border: none;
-          cursor: pointer;
-          text-align: left;
-          transition: background 0.15s ease;
-          font-family: var(--font-display);
-        }
-
-        .navbar__lang-option:hover {
-          background: rgba(76,175,80,0.07);
-        }
-
-        .navbar__lang-option--active {
-          background: rgba(76,175,80,0.1);
-        }
-
-        .navbar__lang-option--soon {
-          opacity: 0.65;
-          cursor: default;
-        }
-        .navbar__lang-option--soon:hover {
-          background: none;
-        }
-
-        .navbar__lang-option-flag { font-size: 1.1rem; line-height: 1; }
-
-        .navbar__lang-option-text {
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          gap: 0.05rem;
-        }
-
-        .navbar__lang-option-native {
-          font-size: 0.88rem;
-          font-weight: 600;
-          color: #1a1a2e;
-        }
-
-        .navbar__lang-option-soon {
-          font-size: 0.68rem;
-          color: #aaa;
-          font-weight: 500;
-        }
-
-        .navbar__lang-check {
-          font-size: 0.8rem;
-          color: var(--color-green);
-          font-weight: 700;
-        }
-
-
         .navbar__cta-btn {
           font-family: var(--font-display);
           font-weight: 700;
@@ -557,7 +412,11 @@ const Navbar = () => {
         .navbar__hamburger {
           display: none;
           flex-direction: column;
+          align-items: center;
+          justify-content: center;
           gap: 5px;
+          min-width: 44px;
+          min-height: 44px;
           background: none;
           border: none;
           cursor: pointer;
@@ -575,7 +434,7 @@ const Navbar = () => {
         .navbar__hamburger span {
           width: 22px;
           height: 2px;
-          background: #1a1a2e;
+          background: var(--color-text-primary);
           border-radius: 2px;
           display: block;
           transition: all 0.3s ease;
@@ -599,23 +458,29 @@ const Navbar = () => {
 
         /* ── Mobile ── */
         @media (max-width: 840px) {
+          .navbar {
+            padding: max(0.5rem, env(safe-area-inset-top, 0px)) 1rem 0.5rem 1rem;
+          }
+
           .navbar__links {
             position: fixed;
             top: 0;
             right: -100%;
-            width: 80%;
-            max-width: 310px;
+            width: 85%;
+            max-width: 320px;
             height: 100vh;
+            height: 100dvh;
             flex-direction: column;
             align-items: flex-start;
             justify-content: flex-start;
             gap: 0.25rem;
-            padding: 0 1.5rem 2rem;
+            padding: max(1.25rem, env(safe-area-inset-top, 0px)) 1.5rem max(2rem, env(safe-area-inset-bottom, 0px));
             background: #fff;
-            box-shadow: -8px 0 40px rgba(0,0,0,0.1);
+            box-shadow: -8px 0 40px rgba(0,0,0,0.15);
             transition: right 0.38s cubic-bezier(0.4, 0, 0.2, 1);
             z-index: 1000;
             overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
           }
 
           .navbar__links--open {
@@ -628,7 +493,7 @@ const Navbar = () => {
             align-items: center;
             justify-content: space-between;
             width: 100%;
-            padding: 1.5rem 0 1rem;
+            padding: 0.5rem 0 1rem;
             margin-bottom: 0.5rem;
             border-bottom: 1px solid var(--color-border);
           }
@@ -645,11 +510,15 @@ const Navbar = () => {
           .navbar__drawer-close {
             background: none;
             border: none;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             cursor: pointer;
             color: var(--color-text-secondary);
-            padding: 0.25rem 0.5rem;
-            border-radius: 6px;
+            min-width: 44px;
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
             transition: background 0.2s;
           }
 
@@ -658,9 +527,12 @@ const Navbar = () => {
           }
 
           .navbar__link {
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             width: 100%;
-            padding: 0.75rem 0.5rem;
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+            padding: 0.65rem 0.75rem;
             border-radius: 10px;
           }
 
@@ -670,8 +542,9 @@ const Navbar = () => {
             align-items: center;
             justify-content: center;
             width: 100%;
-            margin-top: 1rem;
-            padding: 0.9rem;
+            margin-top: 1.25rem;
+            min-height: 48px;
+            padding: 0.85rem;
             font-size: 1rem;
           }
 
@@ -679,12 +552,8 @@ const Navbar = () => {
             display: flex;
           }
 
-          /* Hide desktop CTA + lang on mobile */
+          /* Hide desktop CTA on mobile */
           .navbar__cta-btn:not(.navbar__cta-btn--mobile) {
-            display: none;
-          }
-
-          .navbar__lang {
             display: none;
           }
 
@@ -758,19 +627,6 @@ const Navbar = () => {
           background: linear-gradient(90deg, #FF8F00, #FFD54F);
         }
 
-        /* Language button */
-        .navbar--dark .navbar__lang {
-          color: rgba(255,200,120,0.7);
-          border-color: rgba(255,200,120,0.2);
-        }
-
-        .navbar--dark .navbar__lang:hover,
-        .navbar--dark .navbar__lang--open {
-          color: #FFD54F;
-          border-color: #FFB74D;
-          background: rgba(255,200,120,0.1);
-        }
-
         /* CTA button */
         .navbar--dark .navbar__cta-btn {
           background: linear-gradient(135deg, #FF8F00, #FFB74D);
@@ -790,6 +646,119 @@ const Navbar = () => {
         .navbar--dark .navbar__hamburger:hover {
           background: rgba(255,200,120,0.1);
         }
+
+        /* ── Language Switcher (Desktop) ── */
+        .navbar__lang-wrapper {
+          position: relative;
+        }
+
+        .navbar__lang-btn {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.4rem;
+          padding: 0.45rem 0.85rem;
+          background: rgba(255, 255, 255, 0.85);
+          border: 1.5px solid rgba(0, 0, 0, 0.08);
+          border-radius: 50px;
+          font-family: var(--font-heading, inherit);
+          font-weight: 700;
+          font-size: 0.82rem;
+          color: #2D3748;
+          cursor: pointer;
+          transition: all 0.2s ease;
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        .navbar__lang-btn:hover {
+          background: #FFFFFF;
+          border-color: #FF6F00;
+          color: #FF6F00;
+          transform: translateY(-1px);
+          box-shadow: 0 3px 8px rgba(255, 111, 0, 0.15);
+        }
+
+        .navbar__lang-flag {
+          font-size: 1rem;
+        }
+
+        .navbar__lang-code {
+          letter-spacing: 0.05em;
+        }
+
+        .navbar__lang-chevron {
+          font-size: 0.75rem;
+          transition: transform 0.2s ease;
+          color: #718096;
+        }
+
+        .navbar__lang-chevron--open {
+          transform: rotate(180deg);
+        }
+
+        .navbar__lang-dropdown {
+          position: absolute;
+          top: calc(100% + 8px);
+          right: 0;
+          min-width: 140px;
+          background: #FFFFFF;
+          border: 1.5px solid rgba(0, 0, 0, 0.08);
+          border-radius: 16px;
+          box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+          padding: 0.4rem;
+          z-index: 1001;
+          display: flex;
+          flex-direction: column;
+          gap: 0.2rem;
+          animation: langFadeIn 0.2s ease;
+        }
+
+        @keyframes langFadeIn {
+          from { opacity: 0; transform: translateY(-4px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+
+        .navbar__lang-option {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          width: 100%;
+          padding: 0.5rem 0.75rem;
+          border: none;
+          background: transparent;
+          border-radius: 10px;
+          font-family: inherit;
+          font-size: 0.85rem;
+          font-weight: 600;
+          color: #2D3748;
+          cursor: pointer;
+          transition: background 0.15s ease, color 0.15s ease;
+          text-align: left;
+        }
+
+        .navbar__lang-option:hover {
+          background: rgba(255, 111, 0, 0.08);
+          color: #FF6F00;
+        }
+
+        .navbar__lang-option--active {
+          background: rgba(255, 111, 0, 0.12);
+          color: #FF6F00;
+          font-weight: 700;
+        }
+
+        .navbar__lang-option-flag {
+          font-size: 1rem;
+        }
+
+        .navbar__lang-option-label {
+          flex: 1;
+        }
+
+        .navbar__lang-option-check {
+          color: #FF6F00;
+          font-weight: 900;
+        }
+
       `}</style>
     </nav>
   );

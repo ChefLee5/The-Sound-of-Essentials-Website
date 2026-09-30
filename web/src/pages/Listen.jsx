@@ -123,7 +123,7 @@ const Listen = () => {
                 alt="The Sound of Essentials: Rhythm Quest album cover"
                 loading="eager"
               />
-              <span className="listen-cover__badge">19 Tracks • Ages 2–8</span>
+              <span className="listen-cover__badge">19 Tracks • Ages 2–7</span>
             </div>
           </div>
         </div>
@@ -456,7 +456,7 @@ const Listen = () => {
                   <div className="section-label">📐 Shape Art</div>
                   <h2 className="section-title">Interactive <span className="text-plum">Shape Gallery</span></h2>
                   <p className="section-subtitle" style={{ margin: '0 auto 2.5rem auto' }}>
-                    Beautiful hand-drawn shapes from the land of Terrasol.
+                    Artistic visual shapes from the land of Terrasol.
                   </p>
                 </RevealSection>
                 <div className="shape-gallery">

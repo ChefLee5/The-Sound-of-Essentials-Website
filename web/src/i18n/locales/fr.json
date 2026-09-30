@@ -8,8 +8,13 @@
         "media": "Médiathèque",
         "mission": "Notre Mission",
         "join": "Rejoindre l'Aventure",
+        "contact": "Contactez-nous",
         "toggle_menu": "Afficher le menu de navigation",
-        "toggle_lang": "Changer la langue"
+        "toggle_lang": "Changer la langue",
+        "lang_select": "Langue",
+        "lang_en": "English",
+        "lang_es": "Español",
+        "lang_fr": "Français"
     },
     "hero": {
         "title": "Conçu pour le cerveau en développement,",
@@ -21,6 +26,8 @@
         "explore": "Explorer",
         "get_involved": "S'engager",
         "stay_connected": "Rester Connecté",
+        "contact_us": "Contactez-nous",
+        "contact_email": "info@soelearn.com",
         "subscribe": "S'abonner",
         "all_rights_reserved": "Tous droits réservés.",
         "sci_sound": "Science du Son",
@@ -29,59 +36,169 @@
         "weekly_activities": "Activités hebdomadaires neuro-affirmantes et sorties musicales."
     },
     "home": {
+
+        "hero_offer": {
+            "eyebrow": "THE SOUND OF ESSENTIALS DELUXE · ÂGES 2–7",
+            "title_main": "Une Expérience d'Apprentissage Musicale",
+            "title_highlight": "(Gratuit Aujourd'hui)",
+            "subtitle": "Un voyage sonore immersif à travers la phonétique, les nombres, le mouvement et le monde naturel. Conçu pour le cerveau en développement, pas pour l'algorithme.",
+            "price_strike": "Valeur de 19$",
+            "price_tag": "Gratuit pour les Familles Fondatrices",
+            "price_note": "Accès Numérique Immédiat · À Vous pour Toujours",
+            "check_1": "19 chansons originales qui enseignent la phonétique, les maths et les sciences",
+            "check_2": "Livre de coloriage Rhythm Quest de 40 pages et fiches imprimables inclus",
+            "check_3": "Diffusion numérique instantanée et téléchargement audio MP3 direct",
+            "check_4": "Accès 100% Gratuit à l'Album · Envoi Immédiat par Email",
+            "cta_primary": "Commencer l'Expérience Gratuite →",
+            "cta_secondary": "Explorer The Seven Land Quest ($19) →",
+            "guarantee_badge": "Gratuit pour toujours · Accès numérique immédiat · Aucun envoi physique"
+        },
         "hero_label": "Médias Neuro-Affirmants",
         "hero_title_1": "Conçu pour le cerveau en développement,",
         "hero_title_2": "pas pour l'algorithme.",
-        "hero_subtitle": "Un écosystème scientifiquement fondé et axé sur la musique.",
-        "hero_note": "Pour les enfants de 2 à 8 ans · Fondé sur les neurosciences",
+        "hero_subtitle": "Un écosystème scientifiquement fondé et axé sur la musique pour la petite enfance. Calme. Concentré. Essentiel.",
+        "hero_note": "Pour les enfants de 2 à 7 ans · Fondé sur les neurosciences",
+        "voices": {
+            "label": "Voix de l'Univers & Mission",
+            "title": "Guidé par la Vocation & le Récit",
+            "seriphia_quote": "Bienvenue, jeune explorateur. Le chemin du son commence ici. Écoute attentivement, bouge en rythme et regarde le monde se révéler.",
+            "seriphia_author": "Seriphia",
+            "seriphia_role": "Gardienne du Son",
+            "founder_quote": "Façonné par le cœur d'un père et l'amour d'une mère, né de la crise des apprentissages précoces et bâti avec un dévouement absolu. 15 années de passion.",
+            "founder_author": "Lee Murphy",
+            "founder_role": "Fondateur & Premier Auditeur",
+            "hero_quote": "Dans Harmonia, chaque rythme est un mot qui attend d'être découvert. Le langage commence dans l'oreille.",
+            "hero_author": "Kenji & Aiko",
+            "hero_role": "Héros de Harmonia"
+        },
+        "quest_offer": {
+            "label": "Le Livre de Contes Illustré",
+            "title_1": "Rhythm Quest",
+            "title_2": "Livre de Contes ($19)",
+            "subtitle": "Le livre d'aventures illustré en couleurs qui donne vie à la musique. Voyagez avec Seriphia à travers les 7 Contrées, rencontrez les 15 Héros Mentors et lisez au rythme des chansons.",
+            "feat_1_title": "Les 7 Contrées Musicales",
+            "feat_1_desc": "Explorez chaque monde, de la phonétique d'Harmonia aux rythmes des saisons de Celestia.",
+            "feat_2_title": "Aventure Illustrée en Couleurs",
+            "feat_2_desc": "Des illustrations artisanales riches, les origines des personnages et des récits immersifs.",
+            "feat_3_title": "Paroles et Récits pour Chanter",
+            "feat_3_desc": "Paroles complètes, repères phonétiques et dialogues pour les 19 pistes de l'album musical.",
+            "cta": "Obtenir le Livre de Contes ($19) →"
+        },
         "why_label": "La Double Crise",
         "why_title_1": "Nous transformons un État d'Urgence",
         "why_title_2": "en Sound of Essentials: Rhythm Quest.",
         "why_subtitle": "300 millions d'enfants dans le monde ne savent pas lire correctement.",
         "stat_1_val": "300M",
-        "stat_1_lab": "Les enfants manquent de compétences en lecture",
+        "stat_1_lab": "Enfants privés de compétences fondamentales en lecture",
         "stat_2_val": "44M",
-        "stat_2_lab": "Déficit mondial d'enseignants",
+        "stat_2_lab": "Pénurie mondiale d'enseignants dans la petite enfance",
         "stat_3_val": "1M",
-        "stat_3_lab": "Connexions neurales formées par seconde durant les 1 000 premiers jours",
+        "stat_3_lab": "Connexions neurales créées par seconde dans la petite enfance",
         "approach_label": "Notre Approche",
         "approach_title_1": "Pas du divertissement.",
         "approach_title_2": "Une intervention.",
-        "approach_subtitle": "Chaque élément de SOE est conçu pour protéger et nourrir le cerveau.",
+        "approach_subtitle": "Chaque élément de SOE est conçu pour protéger et nourrir le cerveau en développement par le langage universel de la musique.",
         "curriculum_label": "Le Programme",
         "curriculum_title_1": "Cinq Domaines d'",
         "curriculum_title_2": "Apprentissage Essentiel",
-        "curriculum_subtitle": "Chaque leçon tisse les cinq domaines de développement.",
-        "cta_title": "La biologie n'attend pas que les systèmes se réparent d'eux-mêmes.",
-        "cta_subtitle": "Rejoignez l'écosystème de soutien.",
-        "explore_media": "Explorer la Médiathèque →",
+        "curriculum_subtitle": "Chaque leçon s'articule autour des cinq domaines clés du développement.",
         "domains": {
             "language": {
-                "title": "Langage",
-                "desc": "Phonétique, vocabulaire et communication par la chanson et le rythme."
+                "title": "Langage & Phonétique",
+                "desc": "Conscience phonémique, vocabulaire et communication par la chanson et le rythme."
             },
             "cognitive": {
-                "title": "Cognitif",
-                "desc": "Reconnaissance des formes, mémoire et résolution de problèmes par le jeu musical."
+                "title": "Cognitif & Mathématiques",
+                "desc": "Reconnaissance des formes, mémoire spatiale, calcul et résolution de problèmes."
             },
             "physical": {
-                "title": "Physique",
-                "desc": "Capacités motrices et conscience corporelle par le mouvement et la danse."
+                "title": "Physique & Moteur",
+                "desc": "Motricité, coordination bilatérale et conscience corporelle en rythme actif."
             },
             "science": {
-                "title": "Science",
-                "desc": "Nature, anatomie et découverte par l'exploration sensorielle."
+                "title": "Science & Nature",
+                "desc": "Observation de la nature, anatomie, astronomie et exploration sensorielle."
             },
             "social_emotional": {
                 "title": "Socio-Émotionnel",
-                "desc": "Savoir-vivre, empathie et autorégulation par la musique collaborative."
+                "desc": "Empathie, coopération, savoir-vivre et autorégulation par la musique partagée."
             }
+        },
+        "credibility": {
+            "quote": "Façonné par le cœur d'un père et l'amour d'une mère. Fondé sur la science des apprentissages réels des enfants.",
+            "sub": "Aucun capital-risque. Aucun piège algorithmique à dopamine. Uniquement des beaux-arts artisanaux et une science cognitive validée."
+        },
+        "science_trust": {
+            "label": "Fondé sur la Science",
+            "title_1": "Pourquoi le Rythme",
+            "title_2": "Développe les Futurs Lecteurs",
+            "subtitle": "Notre pédagogie repose sur des neurosciences évaluées par les pairs, la psychologie cognitive et des essais contrôlés randomisés.",
+            "card_1_tag": "Nature Scientific Reports (2022)",
+            "card_1_title": "Le Rythme Porte la Lecture",
+            "card_1_desc": "La recherche prouve que la perception du rythme (et non la mélodie) est le médiateur direct de la lecture via la conscience phonologique et la mémoire auditive (Sousa et al.).",
+            "card_2_tag": "Nature Human Behaviour (2024)",
+            "card_2_title": "16 Régions Génomiques Communes",
+            "card_2_desc": "L'analyse de plus d'1 million de génomes révèle des liens génétiques profonds entre rythme musical, langage et dyslexie (le gène DLAT).",
+            "card_3_tag": "Frontiers in Psychology (2011/2016)",
+            "card_3_title": "Démontré en Maternelle (ECR)",
+            "card_3_desc": "Un essai clinique de 20 semaines a prouvé que 10 minutes quotidiennes de rythme musical améliorent la conscience phonologique autant qu'un programme dédié de phonétique.",
+            "card_4_tag": "Harvard Developing Child (2024)",
+            "card_4_title": "1 Million de Synapses / Sec",
+            "card_4_desc": "Le cortex auditif est au pic de sa plasticité avant 7 ans. L'apprentissage rythmique multisensoriel crée des circuits neuronaux durables.",
+            "stats_title": "L'État d'Urgence dans la Petite Enfance",
+            "stat_naep_val": "69%",
+            "stat_naep_lab": "Élèves de CM1 aux USA sous le seuil de compétence en lecture (NAEP 2024)",
+            "stat_unesco_val": "300M",
+            "stat_unesco_lab": "Enfants en situation de pauvreté des apprentissages (UNESCO 2024)",
+            "stat_teachers_val": "44M",
+            "stat_teachers_lab": "Déficit mondial d'enseignants dans l'éducation de base (UNESCO 2024)",
+            "accordion_btn_open": "Consulter les Références & Publications Scientifiques ↓",
+            "accordion_btn_close": "Masquer les Références ↑"
+        },
+        "comparison": {
+            "label": "Pourquoi SOE ?",
+            "title_1": "Conçu pour le Cerveau en Développement —",
+            "title_2": "Pas pour l'Algorithme",
+            "subtitle": "Un contraste évident entre une éducation sensorielle bienveillante et la distraction commerciale des écrans.",
+            "col_feature": "Vecteur Pédagogique",
+            "col_soe": "The Sound of Essentials",
+            "col_algo": "L'Algorithme d'Attention",
+            "row_1_title": "Cœur Pédagogique",
+            "row_1_soe": "Stimulation neuronale active par le rythme et la phonétique",
+            "row_1_algo": "Boucles passives et flashs de dopamine",
+            "row_2_title": "Univers Narratif",
+            "row_2_soe": "7 Contrées cohérentes et 15 Héros mentors",
+            "row_2_algo": "Mini-jeux décousus et publicités intrusives",
+            "row_3_title": "Rythme Nerveux",
+            "row_3_soe": "Tempo apaisé, neuro-affirmant et silences intentionnels",
+            "row_3_algo": "Surstimulation et coupures visuelles frénétiques",
+            "row_4_title": "Confidentialité & Respect",
+            "row_4_soe": "100% Sans Pub, Zéro Traçage de Données",
+            "row_4_algo": "Traçage comportemental et incitations d'achats in-app",
+            "row_5_title": "Origine & Artisanat",
+            "row_5_soe": "Façonné par le cœur d'un père et l'amour d'une mère, avec de véritables beaux-arts",
+            "row_5_algo": "Optimisation automatisée de fermes de contenu"
+        },
+        "faq": {
+            "label": "Encore des Questions ?",
+            "title": "Foire Aux Questions",
+            "subtitle": "Tout ce que vous devez savoir sur l'album Deluxe gratuit et l'écosystème Rhythm Quest.",
+            "q1": "Pourquoi The Sound of Essentials Deluxe est-il entièrement gratuit ?",
+            "a1": "The Sound of Essentials a été créé comme un don authentique aux familles. L'édition Deluxe demeure gratuite afin que chaque enfant bénéficie d'un éveil sensoriel et musical fondamental. L'accès numérique immédiat ne nécessite qu'un email, avec des matériels d'apprentissage et éditions physiques optionnels disponibles à la commande.",
+            "q2": "Comment obtenir l'accès numérique immédiat ?",
+            "a2": "Cliquez simplement sur 'Commencer l'Expérience Gratuite' et saisissez votre adresse email. Vous recevrez instantanément l'accès privé aux 19 pistes audio, les liens de téléchargement direct et le livre de coloriage de 40 pages en PDF.",
+            "q3": "À quelle tranche d'âge ce programme s'adresse-t-il ?",
+            "a3": "The Sound of Essentials est spécialement conçu pour les enfants de 2 à 7 ans (de la Toute Petite Section au CE1). Il convient aussi bien au foyer qu'aux classes d'éveil.",
+            "q4": "Comment le rythme aide-t-il l'enfant à apprendre à lire ?",
+            "a4": "Les publications scientifiques dans Nature Scientific Reports confirment que la discrimination rythmique développe le traitement temporel cérébral : le mécanisme fondamental servant à découper syllabes et phonèmes lors de l'apprentissage de la lecture.",
+            "q5": "Qu'est-ce que The Seven Land Quest ($19) ?",
+            "a5": "The Seven Land Quest est notre guide d'accompagnement sur 7 semaines. Il prolonge les 19 chansons à travers 400 activités interactives, des jeux corporels, des cartes d'aventure à imprimer et des étapes rythmiques hebdomadaires."
         },
         "features": {
             "active": {
                 "title": "Actif, Pas Passif",
                 "subtitle": "Enseignant-en-Boîte",
-                "desc": "Chaque épisode est une leçon structurée."
+                "desc": "Chaque chanson et mélodie est une leçon structurée qui invite les enfants à bouger, chanter et s'exercer."
             },
             "neuro": {
                 "title": "Neuro-Affirmant",
@@ -93,6 +210,16 @@
                 "subtitle": "Aucun Enseignant Requis",
                 "desc": "Conçu pour le déficit d'enseignants."
             }
+        },
+        "cta_title": "La biologie n'attend pas que les systèmes se réparent d'eux-mêmes.",
+        "cta_subtitle": "Ouvrez la porte aux apprentissages par la musique.",
+        "explore_media": "Commencer l'Expérience Gratuite →",
+        "final_cta": {
+            "title": "Commencez la Quête du Rythme de Votre Famille",
+            "subtitle": "19 chansons originales, 7 contrées d'apprentissage et des activités quotidiennes neuro-affirmatives conçues pour le cerveau en développement.",
+            "btn_free": "Commencer l'Expérience Gratuite →",
+            "btn_quest": "Explorer La Quête des 7 Contrées (19 $) →",
+            "badge": "Accès Numérique Immédiat · Sans Surcharge d'Écran · 100 % Gratuit pour Commencer"
         }
     },
     "universe": {
@@ -457,7 +584,7 @@
             },
             "preschool": {
                 "title": "Prouvé en Maternelle",
-                "desc": "Dans un essai contrôlé, 10 minutes d'entraînement musical quotidien ont développé la conscience phonologique chez les enfants d'âge préscolaire aussi efficacement qu'un programme de phonétique dédié. La fenêtre est de 2 à 8 ans. C'est notre cible."
+                "desc": "Dans un essai contrôlé, 10 minutes d'entraînement musical quotidien ont développé la conscience phonologique chez les enfants d'âge préscolaire aussi efficacement qu'un programme de phonétique dédié. La fenêtre est de 2 à 7 ans. C'est notre cible."
             },
             "genetics": {
                 "title": "Inscrit dans Notre ADN",
@@ -493,6 +620,7 @@
         "subscribe": "S'abonner",
         "email_error": "Veuillez entrer une adresse e-mail valide.",
         "org_email_error": "Veuillez entrer une adresse e-mail d'organisation valide.",
+        "org_submit_error": "Nous n'avons pas pu envoyer votre message. Veuillez réessayer.",
         "no_spam": "Pas de spam. Juste du contenu essentiel et apaisant. Désabonnez-vous à tout moment.",
         "who_we_serve": "Qui nous servons",
         "find_your_role_1": "Trouvez votre ",
@@ -504,10 +632,17 @@
         "audience_2_desc": "Vous cherchez un programme évolutif ? Notre modèle « Teacher-in-a-Box » vous permet de déployer SOE dans votre classe ou centre communautaire sans formation spécialisée.",
         "audience_3_title": "Investisseurs à impact et ONG",
         "audience_3_desc": "Vous financez des solutions pour la crise mondiale de l'éducation préscolaire ? SOE est conçu pour un impact à grande échelle, une intervention musicale qui fonctionne là où les infrastructures traditionnelles ne peuvent atteindre.",
-        "partnerships_label": "Partenariats",
+        "partnerships_label": "Contact et Partenariats",
+        "direct_contact_label": "Contact Direct",
+        "direct_contact_title": "Contactez Notre Équipe",
+        "direct_contact_desc": "Vous avez des questions sur notre programme, nos pistes musicales ou nos partenariats scolaires ? Écrivez-nous directement à info@soelearn.com.",
+        "direct_email_btn": "✉️ Écrire à info@soelearn.com",
+        "direct_email_copy": "📋 Copier l'e-mail",
+        "direct_email_copied": "✓ Copié dans le presse-papiers !",
+        "direct_response_time": "⚡ Réponse habituelle sous 24 à 48 heures ouvrées.",
         "build_together_1": "Construisons ",
         "build_together_2": "Ensemble",
-        "partnerships_subtitle": "Écoles, ONG, investisseurs et organisations communautaires, contactez-nous pour découvrir comment le modèle SOE peut servir votre communauté.",
+        "partnerships_subtitle": "Écoles, ONG, familles en instruction en famille et éducateurs, contactez-nous directement ou envoyez une demande ci-dessous.",
         "message_received": "Message reçu !",
         "partnership_thank_you": "Merci de votre intérêt pour un partenariat avec SOE. Notre équipe vous répondra sous 48 heures.",
         "label_name": "Votre nom",
@@ -566,25 +701,101 @@
         "lyrics_btn": "Paroles",
         "no_lyrics": "Pas de paroles disponibles pour ce morceau.",
         "tracks": {
-            "1":  { "title": "Jour Ensoleillé (Intro)",         "domain": "Introduction",               "desc": "Une douce mélodie de lever de soleil qui accueille les apprenants." },
-            "2":  { "title": "Les Jours de la Semaine",         "domain": "Temps et Celestia",           "desc": "Elias et Selene chantent les sept jours, développant les compétences de séquençage." },
-            "3":  { "title": "Remix de l'Alphabet",             "domain": "Langage et Harmonia",        "desc": "Kenji et Aiko donnent vie à l'alphabet avec un remix phonétique rythmique." },
-            "4":  { "title": "Interlude des Chevaux",           "domain": "Science et Terrasol",          "desc": "Un voyage parlé et ludique à travers le règne animal." },
-            "5":  { "title": "Le Cheval",                       "domain": "Langage et Luminosity",       "desc": "Un hommage bilingue français-anglais à la puissance et la grâce du cheval." },
-            "6":  { "title": "Étirons-nous",                    "domain": "Physique et Vitalis",        "desc": "Felix et Amara guident une routine complète de respiration et d'étirement." },
-            "7":  { "title": "L'Heure de l'Exercice",           "domain": "Physique et Vitalis",        "desc": "Une marche stimulante avec des chants en appel et réponse rythmiques." },
-            "8":  { "title": "Les Nombres",                     "domain": "Mathématiques et Numeria",   "desc": "Kwame et Octavia comptent jusqu'à 10 avec des claquements de mains." },
-            "9":  { "title": "Mon Corps",                       "domain": "Science et Terrasol",          "desc": "Athena et Ezra guident les apprenants à travers l'anatomie du corps humain." },
-            "10": { "title": "Les Manières",                    "domain": "Socio-Émotionnel",           "desc": "Aiko enseigne le langage de la courtoisie — s'il vous plaît, merci, excusez-moi." },
-            "11": { "title": "Savez-vous Quelle Heure Il Est ?", "domain": "Temps et Celestia",         "desc": "Elias et Selene introduisent la lecture de l'horloge et les routines quotidiennes." },
-            "12": { "title": "Changements",                     "domain": "Science et Terrasol",          "desc": "Nerissa réfléchit sur les changements météorologiques et la constance de l'amour." },
-            "13": { "title": "Cent",                            "domain": "Mathématiques et Numeria",   "desc": "Octavia compte jusqu'à 100 — une étape importante en numératie." },
-            "14": { "title": "L'Océan",                         "domain": "Science et Terrasol",          "desc": "Un voyage sonore immersif explorant les merveilles de l'océan." },
-            "15": { "title": "Les Mots Difficiles",             "domain": "Langage et Luminosity",       "desc": "Ronan et Nerissa s'attaquent au vocabulaire polysyllabique avec des exercices rythmiques." },
-            "16": { "title": "Les Formes",                      "domain": "Mathématiques et Terrasol", "desc": "Silas et Vesta chantent les cercles, carrés, triangles et plus encore." },
-            "17": { "title": "Les Mois de l'Année",             "domain": "Temps et Celestia",           "desc": "Elias guide une récitation complète du calendrier sur une mélodie mémorable." },
-            "18": { "title": "La Pluie",                        "domain": "Science et Terrasol",          "desc": "Athena et Ezra explorent le cycle de l'eau et la beauté de la pluie." },
-            "19": { "title": "Après la Tempête (Outro)",       "domain": "Introduction",               "desc": "Une piste de clôture apaisante — la promesse que la lumière suit toujours la tempête." }
+            "1": {
+                "title": "Jour Ensoleillé (Intro)",
+                "domain": "Introduction",
+                "desc": "Une douce mélodie de lever de soleil qui accueille les apprenants."
+            },
+            "2": {
+                "title": "Les Jours de la Semaine",
+                "domain": "Temps et Celestia",
+                "desc": "Elias et Selene chantent les sept jours, développant les compétences de séquençage."
+            },
+            "3": {
+                "title": "Remix de l'Alphabet",
+                "domain": "Langage et Harmonia",
+                "desc": "Kenji et Aiko donnent vie à l'alphabet avec un remix phonétique rythmique."
+            },
+            "4": {
+                "title": "Interlude des Chevaux",
+                "domain": "Science et Terrasol",
+                "desc": "Un voyage parlé et ludique à travers le règne animal."
+            },
+            "5": {
+                "title": "Le Cheval",
+                "domain": "Langage et Luminosity",
+                "desc": "Un hommage bilingue français-anglais à la puissance et la grâce du cheval."
+            },
+            "6": {
+                "title": "Étirons-nous",
+                "domain": "Physique et Vitalis",
+                "desc": "Felix et Amara guident une routine complète de respiration et d'étirement."
+            },
+            "7": {
+                "title": "L'Heure de l'Exercice",
+                "domain": "Physique et Vitalis",
+                "desc": "Une marche stimulante avec des chants en appel et réponse rythmiques."
+            },
+            "8": {
+                "title": "Les Nombres",
+                "domain": "Mathématiques et Numeria",
+                "desc": "Kwame et Octavia comptent jusqu'à 10 avec des claquements de mains."
+            },
+            "9": {
+                "title": "Mon Corps",
+                "domain": "Science et Terrasol",
+                "desc": "Athena et Ezra guident les apprenants à travers l'anatomie du corps humain."
+            },
+            "10": {
+                "title": "Les Manières",
+                "domain": "Socio-Émotionnel",
+                "desc": "Aiko enseigne le langage de la courtoisie — s'il vous plaît, merci, excusez-moi."
+            },
+            "11": {
+                "title": "Savez-vous Quelle Heure Il Est ?",
+                "domain": "Temps et Celestia",
+                "desc": "Elias et Selene introduisent la lecture de l'horloge et les routines quotidiennes."
+            },
+            "12": {
+                "title": "Changements",
+                "domain": "Science et Terrasol",
+                "desc": "Nerissa réfléchit sur les changements météorologiques et la constance de l'amour."
+            },
+            "13": {
+                "title": "Cent",
+                "domain": "Mathématiques et Numeria",
+                "desc": "Octavia compte jusqu'à 100 — une étape importante en numératie."
+            },
+            "14": {
+                "title": "L'Océan",
+                "domain": "Science et Terrasol",
+                "desc": "Un voyage sonore immersif explorant les merveilles de l'océan."
+            },
+            "15": {
+                "title": "Les Mots Difficiles",
+                "domain": "Langage et Aquaria",
+                "desc": "Ronan et Nerissa s'attaquent au vocabulaire polysyllabique avec des exercices rythmiques."
+            },
+            "16": {
+                "title": "Les Formes",
+                "domain": "Mathématiques et Terrasol",
+                "desc": "Silas et Vesta chantent les cercles, carrés, triangles et plus encore."
+            },
+            "17": {
+                "title": "Les Mois de l'Année",
+                "domain": "Temps et Celestia",
+                "desc": "Elias guide une récitation complète du calendrier sur une mélodie mémorable."
+            },
+            "18": {
+                "title": "La Pluie",
+                "domain": "Science et Terrasol",
+                "desc": "Athena et Ezra explorent le cycle de l'eau et la beauté de la pluie."
+            },
+            "19": {
+                "title": "Après la Tempête (Outro)",
+                "domain": "Introduction",
+                "desc": "Une piste de clôture apaisante — la promesse que la lumière suit toujours la tempête."
+            }
         }
     }
 }

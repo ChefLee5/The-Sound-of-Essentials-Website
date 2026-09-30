@@ -8,6 +8,8 @@
     "build": "vite build",
     "build:hosted-assets": "vite build && node scripts/prune-hosted-assets.mjs",
     "lint": "eslint .",
+    "test:canon": "node scripts/soe-canon-guard.mjs",
+    "test:gates": "node scripts/soe-canon-guard.mjs && eslint .",
     "preview": "vite preview"
   },
   "dependencies": {

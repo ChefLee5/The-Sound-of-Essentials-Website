@@ -69,7 +69,7 @@ const NavbarV2 = () => {
 
       {/* ── Bottom-left: Metadata ── */}
       <div className="v2-nav__meta-left">
-        <span>Ages 2–8</span>
+        <span>Ages 2–7</span>
         <span>·</span>
         <button
           onClick={cycleLang}

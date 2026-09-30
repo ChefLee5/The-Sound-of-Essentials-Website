@@ -4,7 +4,7 @@
 
 ## Project Identity
 
-**The Sound of Essentials: Rhythm Quest** is a multilingual, music-driven early childhood learning ecosystem. The companion website introduces 7 themed Lands, 15 hero characters (guided by Seriphia), and a scientifically grounded curriculum for ages 2–8.
+**The Sound of Essentials: Rhythm Quest** is a multilingual, music-driven early childhood learning ecosystem. The companion website introduces 7 themed Lands, 15 hero characters (guided by Seriphia), and a scientifically grounded curriculum for ages 2–7 (Pre-K to Grade 2).
 
 **Tagline:** "Designed for the developing brain — not the algorithm."
 **Target audience:** Parents, educators, and early childhood professionals.
@@ -20,6 +20,29 @@
 ## Decision-Making Principles
 
 When processing questions or formulating responses, **collapse all alternatives that do not include or advance the stated objective.** Do not present, explore, or hedge with options that diverge from the goal. Every recommendation, code suggestion, and design decision must pass through a single filter: *does this serve the objective?* If not, discard it silently and move on. The user is not asking for a menu — they are asking for the path.
+
+---
+
+## Shopify Helix 4-Gate Workflow (Automated Quality Enforcement)
+
+Every code update, component addition, or curriculum pipeline change MUST pass the automated 4-Gate Pipeline before being declared complete:
+
+1. **Gate 1: Behavior & Canon Guard (`npm run test:canon`)**
+   - Headless automated assertions validating 7 Lands, 15 Heroes, product catalog, card-vaulting price invariants ($\ge \$0.50$), zero banned entities (Marcus, Elena, Geometria, Grade 3), and i18n key parity across EN, ES, FR.
+   - Fails with **Exit Code 2** (Non-Escape Ralph Hook) if any check fails.
+2. **Gate 2: Spatial UI Auditor (`python tools/gemini_spatial_diff.py`)**
+   - Automated spatial layout and CSS token audit verifying continuous 50px pill button radii (`--radius-pill`), canonical cream backgrounds, mobile target sizing, and zero non-responsive fixed widths.
+3. **Gate 3: Adversarial Code Critic (`python tools/adversarial_code_review.py`)**
+   - Automated critic scrutinizing React 19 / Framer Motion traps, unhandled audio promise rejections, a11y `aria-label` / `alt` omissions, and credential leaks.
+4. **Gate 4: Human-in-the-Loop Review & Persistent Feedback Ledger**
+   - Revisions and human preferences are permanently recorded in `.learnings/soe_feedback_log.md` so future agent runs retain institutional memory.
+
+**Full Pipeline Command:**
+```bash
+python tools/soe_helix_runner.py
+# or in web/
+npm run test:gates
+```
 
 ---
 
@@ -169,10 +192,10 @@ All routes use `React.lazy()` code-splitting. Page transitions use Framer Motion
 | 🎵 Harmonia | Language & Culture | Kenji, Aiko | `#d4a843` |
 | 🔢 Numeria | Math & Numbers | Kwame, Octavia | `#7fb685` |
 | 🌿 Vitalis | Physical & Motor Skills | Felix, Amara | `#c4785a` |
-| 🔭 Celestia | Time & Seasons | Elias, Selene | `#9678c4` |
-| 📖 Luminosity | Advanced Language | Ronan, Nerissa | `#d4a843` |
-| 📐 Geometria | Shapes & Spatial Reasoning | Silas, Vesta | `#7fb685` |
-| 🌊 Terrasol | Science & Nature | Ezra, Athena | `#5ba4c9` |
+| ⏰ Celestia | Time & Seasons | Elias, Selene | `#9678c4` |
+| 📖 Luminosity | Advanced Language & Wonder | Athena, Ezra | `#d4897a` |
+| 💧 Aquaria | Water, Emotion & Literacy | Nerissa, Ronan | `#5ba4c9` |
+| 🌿 Terrasol | Science, Nature & Stewardship | Vesta, Silas | `#5fb685` |
 
 **Seriphia** is the guardian character who oversees all 7 Lands (`featured: true`, purple `#9C27B0`).
 
