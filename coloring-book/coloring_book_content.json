@@ -1,0 +1,260 @@
+{
+  "title": "Rhythm Quest",
+  "subtitle": "Coloring Book",
+  "eyebrow": "The Sound of Essentials",
+  "tagline": "Staying on the path. Always learning.",
+  "ages": "Ages 2–8",
+  "footer": "The Sound of Essentials · soundofessentials.com",
+  "cover_art": "cover-seriphia-land.jpg",
+  "cover_alt": "Seriphia standing on a floating island of flowers, gems circling her hands",
+  "intro": {
+    "eyebrow": "Before you begin",
+    "title": "Be the hero of your own learning.",
+    "lede": "Inside are {n} pages from the Rhythm Quest — the lands, the friends, and the animals your child meets along the path. Print them one at a time or all at once. There is no wrong color and no wrong order.",
+    "cards": [
+      {
+        "title": "Say it out loud",
+        "body": "Read the line at the top of each page together before the crayons come out."
+      },
+      {
+        "title": "Take your time",
+        "body": "One page a day is plenty. Slow hands build steady focus."
+      },
+      {
+        "title": "Hang it up",
+        "body": "Finished pages belong on the wall. Every one is a step on the path."
+      }
+    ],
+    "kicker": "Designed for the developing brain — not the algorithm."
+  },
+  "plates": [
+    {
+      "n": 1,
+      "title": "Hear the call",
+      "prompt": "Music drifts over the hills. Color the ribbon of notes leading the way.",
+      "art": "CB_Hearthecall.png"
+    },
+    {
+      "n": 2,
+      "title": "Seriphia calls",
+      "prompt": "Your guide sings from the clouds. What color is her song?",
+      "art": "CB_Seriphiacall.png"
+    },
+    {
+      "n": 3,
+      "title": "Step onto the path",
+      "prompt": "Every hero starts with one step. Color the great stone gate.",
+      "art": "CB_Path.png"
+    },
+    {
+      "n": 4,
+      "title": "The long road",
+      "prompt": "Look at all the friends walking with you. Give each one a color.",
+      "art": "CB_WordPath.png"
+    },
+    {
+      "n": 5,
+      "title": "Alphabet jump",
+      "prompt": "Hop from A to Z. Color your three favorite letters first.",
+      "art": "CB_ABCjum.png"
+    },
+    {
+      "n": 6,
+      "title": "Shapes ahead",
+      "prompt": "Circles, triangles, squares — color each shape a different color.",
+      "art": "CB_Shapes.png"
+    },
+    {
+      "n": 7,
+      "title": "Into Numeria",
+      "prompt": "Numbers hide in the canyon walls. How many can you find?",
+      "art": "CB_Numeria.png"
+    },
+    {
+      "n": 8,
+      "title": "Stepping stones",
+      "prompt": "Color the stones under her feet, one by one.",
+      "art": "CB_Stones.png"
+    },
+    {
+      "n": 9,
+      "title": "Over the hill",
+      "prompt": "The whole tribe is running. Color the grass any color you like.",
+      "art": "CB_Hill.png"
+    },
+    {
+      "n": 10,
+      "title": "A game of tag",
+      "prompt": "Color the trees, then draw yourself into the game.",
+      "art": "CB_Tag.png"
+    },
+    {
+      "n": 11,
+      "title": "Take a big breath",
+      "prompt": "Breathe in. Breathe out. Color the sunbeams above you.",
+      "art": "CB_Breath.png"
+    },
+    {
+      "n": 12,
+      "title": "Listen close",
+      "prompt": "Notes float across the field. Color the melody.",
+      "art": "CB_Hear2.png"
+    },
+    {
+      "n": 13,
+      "title": "Look how far",
+      "prompt": "Under the music arch, look back at the road you walked.",
+      "art": "CB_lookhowfar.png"
+    },
+    {
+      "n": 14,
+      "title": "In the orchard",
+      "prompt": "Two ponies say hello. Color the apples first.",
+      "art": "CB_Orchard.png"
+    },
+    {
+      "n": 15,
+      "title": "Field of tulips",
+      "prompt": "So many flowers! Try a new color for every row.",
+      "art": "CB_Tulips.png"
+    },
+    {
+      "n": 16,
+      "title": "Flower crowns",
+      "prompt": "Color the sunflowers tall and bright.",
+      "art": "CB_Flowercrown.png"
+    },
+    {
+      "n": 17,
+      "title": "An apple for the pony",
+      "prompt": "Be gentle. Color the pony soft and warm.",
+      "art": "CB_Ponyapple.png"
+    },
+    {
+      "n": 18,
+      "title": "Out to pasture",
+      "prompt": "Color the fence, then the hills behind it.",
+      "art": "CB_Pasture.png"
+    },
+    {
+      "n": 19,
+      "title": "A horse runs free",
+      "prompt": "Color the mane flying in the wind.",
+      "art": "CB_Horse.png"
+    },
+    {
+      "n": 20,
+      "title": "A friendly hello",
+      "prompt": "Color the big old tree and its long branches.",
+      "art": "CB_Pethorse.png"
+    },
+    {
+      "n": 21,
+      "title": "Brushing time",
+      "prompt": "Slow strokes. Color the tall grass around them.",
+      "art": "CB_Brushhorse.png"
+    },
+    {
+      "n": 22,
+      "title": "Time to rest",
+      "prompt": "Shhh — the pony is sleeping. Use quiet colors.",
+      "art": "CB_Ponysleep.png"
+    },
+    {
+      "n": 23,
+      "title": "Le cheval",
+      "prompt": "A new word today. Say it out loud, then color the meadow.",
+      "art": "CB_LeCheval.png"
+    },
+    {
+      "n": 24,
+      "title": "Oink!",
+      "prompt": "Color the piggy and every bubble around it.",
+      "art": "CB_Oink.png"
+    },
+    {
+      "n": 25,
+      "title": "Lunch together",
+      "prompt": "Everyone shares. Color the picnic in the shade.",
+      "art": "CB_lunch.png"
+    },
+    {
+      "n": 26,
+      "title": "Little boats",
+      "prompt": "Color the water first, then the boats.",
+      "art": "CB_Boats.png"
+    },
+    {
+      "n": 27,
+      "title": "At the water",
+      "prompt": "Color the ripples and the reeds.",
+      "art": "CB_water.png"
+    },
+    {
+      "n": 28,
+      "title": "Aquaria",
+      "prompt": "A big wave rises. What color is the sea today?",
+      "art": "CB_Aquaria.png"
+    },
+    {
+      "n": 29,
+      "title": "Sunset on the shore",
+      "prompt": "Color the sun going down behind her.",
+      "art": "CB_WaveSunset.png"
+    },
+    {
+      "n": 30,
+      "title": "Terrasol farm",
+      "prompt": "Color the barn red — or any color you choose.",
+      "art": "CB_Terrasol.png"
+    },
+    {
+      "n": 31,
+      "title": "Keep on learning",
+      "prompt": "The sky opens up. Color the light shining down.",
+      "art": "CB_Keeponlearning.png"
+    },
+    {
+      "n": 32,
+      "title": "Friends of Aquaria",
+      "prompt": "Two friends, head to toe. Color their clothes.",
+      "art": "CB_AquariaDuo.png"
+    },
+    {
+      "n": 33,
+      "title": "Friends of Celestia",
+      "prompt": "Color their robes and their happy faces.",
+      "art": "CB_CelestiaDuo.png"
+    },
+    {
+      "n": 34,
+      "title": "Friends of Harmonia",
+      "prompt": "Color the music notes floating around them.",
+      "art": "CB_HarmoniaDuo.png"
+    },
+    {
+      "n": 35,
+      "title": "Friends of Luminosity",
+      "prompt": "Give them a bright color that shines.",
+      "art": "CB_Luminosity Duo.png"
+    },
+    {
+      "n": 36,
+      "title": "Friends of Terrasol",
+      "prompt": "Color their boots for a day on the farm.",
+      "art": "CB_TerrasolDuo.png"
+    },
+    {
+      "n": 37,
+      "title": "Friends of Vitalis",
+      "prompt": "Stretch up tall! Color them strong and healthy.",
+      "art": "CB_VitalisDuo.png"
+    },
+    {
+      "n": 38,
+      "title": "You did it!",
+      "prompt": "You walked the whole path. Color your celebration.",
+      "art": "CB_Congrats.png"
+    }
+  ]
+}

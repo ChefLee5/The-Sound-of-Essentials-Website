@@ -64,3 +64,8 @@ workbook/SOE_The_Summer_Stretch_Workbook_print.pdf
 workbook/OEBPS/images_print/
 workbook/art_generated/
 __pycache__/
+
+# Coloring book build outputs and art staging (regeneratable)
+coloring-book/Rhythm_Quest_Coloring_Book_print.html
+coloring-book/Rhythm_Quest_Coloring_Book_print.pdf
+coloring-book/art_print/

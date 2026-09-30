@@ -99,11 +99,49 @@ def extract(path: Path):
     return body, styles
 
 
+BRAND_FONTS = ("Fredoka", "Inter", "Bricolage")
+
+
+def check_brand_fonts():
+    """Warn loudly if the brand typefaces are not installed on this machine.
+
+    Headless Edge's --print-to-pdf pipeline does NOT load @font-face webfonts.
+    Verified 2026-07-30: neither data: URIs nor local file:// URLs are applied;
+    both fall back silently. It DOES resolve fonts installed on the system, by
+    family name -- and workbook.css already names the right stacks. So the only
+    working fix is to install Fredoka / Inter / Bricolage Grotesque as system
+    fonts. Without them this script produces a book set in Segoe UI and Arial,
+    which is what shipped before anyone noticed.
+    """
+    import os
+    dirs = [Path(os.environ.get("WINDIR", r"C:\Windows")) / "Fonts",
+            Path(os.environ.get("LOCALAPPDATA", "")) / "Microsoft" / "Windows" / "Fonts"]
+    have = set()
+    for d in dirs:
+        if not d.exists():
+            continue
+        for f in d.glob("*.tt*"):
+            for b in BRAND_FONTS:
+                if b.lower() in f.name.lower():
+                    have.add(b)
+    missing = [b for b in BRAND_FONTS if b not in have]
+    if missing:
+        print("[font] " + "!" * 62)
+        print(f"[font] WARNING: brand typefaces NOT installed: {', '.join(missing)}")
+        print("[font] Output will fall back to Segoe UI / Arial, NOT brand canon.")
+        print("[font] Fix: install the .ttf files, then re-run. @font-face does")
+        print("[font] not work here -- headless Edge print ignores webfonts.")
+        print("[font] " + "!" * 62)
+    else:
+        print(f"[font] brand typefaces present: {', '.join(sorted(have))}")
+    return not missing
+
+
 def build():
     css = CSS_FILE.read_text(encoding="utf-8")
-    # Strip the Google Fonts @import: the network fetch stalls headless
-    # Edge's print pipeline indefinitely. Local font fallbacks apply.
+    # The Google Fonts @import stalls headless Edge's print pipeline, so it goes.
     css = re.sub(r"@import url\([^)]*\);", "", css)
+    check_brand_fonts()
     parts = [
         "<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'/>",
         "<title>SOE Rhythm Quest: The Summer Stretch Workbook — Print</title>",
