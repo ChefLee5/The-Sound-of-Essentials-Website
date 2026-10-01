@@ -18,35 +18,42 @@ import { fileURLToPath } from 'node:url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const WEB_ROOT = path.resolve(__dirname, '..');
+const ECO_ROOT = path.resolve(WEB_ROOT, '..');
+const CORE_CANON_PATH = path.resolve(ECO_ROOT, '.agents', 'core', 'canon.json');
 
-// ── CANONICAL DEFINITIONS (Locked July 2026 Canon) ───────────────────────────
-const CANONICAL_LANDS = [
-  'harmonia',
-  'numeria',
-  'vitalis',
-  'celestia',
-  'luminosity',
-  'aquaria',
-  'terrasol',
-];
+// ── CANONICAL DEFINITIONS (Loaded Dynamically from .agents/core/canon.json) ──
+let CANONICAL_LANDS = [];
+let CANONICAL_HERO_PAIRS = {};
+let BANNED_PATTERNS = [];
 
-const CANONICAL_HERO_PAIRS = {
-  harmonia: ['kenji', 'aiko'],
-  numeria: ['kwame', 'octavia'],
-  vitalis: ['felix', 'amara'],
-  celestia: ['elias', 'selene'],
-  luminosity: ['athena', 'ezra'],
-  aquaria: ['nerissa', 'ronan'],
-  terrasol: ['vesta', 'silas'],
-};
-
-const BANNED_PATTERNS = [
-  { pattern: /\bMarcus\b/g, reason: 'Retired character (Marcus was retired in July 2026 canon)' },
-  { pattern: /\bElena\b/g, reason: 'Retired character (Elena was retired in July 2026 canon)' },
-  { pattern: /\bGeometria\b/gi, reason: 'Retired land (Replaced by Aquaria)' },
-  { pattern: /\bAges?\s*2\s*[-–—]\s*8\b/gi, reason: 'Canon age is strictly Ages 2–7 (Pre-K to Grade 2)' },
-  { pattern: /\bGrade\s*3\b/gi, reason: 'Canon ceiling is Grade 2; Grade 3 is strictly retired' },
-];
+if (fs.existsSync(CORE_CANON_PATH)) {
+  const canonData = JSON.parse(fs.readFileSync(CORE_CANON_PATH, 'utf8'));
+  CANONICAL_LANDS = canonData.canonical_lands;
+  CANONICAL_HERO_PAIRS = canonData.canonical_hero_pairs;
+  BANNED_PATTERNS = canonData.banned_entities.map((item) => ({
+    pattern: new RegExp(item.pattern, 'gi'),
+    reason: item.reason,
+  }));
+} else {
+  // Fallback defaults if core schema is missing
+  CANONICAL_LANDS = ['harmonia', 'numeria', 'vitalis', 'celestia', 'luminosity', 'aquaria', 'terrasol'];
+  CANONICAL_HERO_PAIRS = {
+    harmonia: ['kenji', 'aiko'],
+    numeria: ['kwame', 'octavia'],
+    vitalis: ['felix', 'amara'],
+    celestia: ['elias', 'selene'],
+    luminosity: ['athena', 'ezra'],
+    aquaria: ['nerissa', 'ronan'],
+    terrasol: ['vesta', 'silas'],
+  };
+  BANNED_PATTERNS = [
+    { pattern: /\bMarcus\b/gi, reason: 'Retired character (Marcus was retired in July 2026 canon)' },
+    { pattern: /\bElena\b/gi, reason: 'Retired character (Elena was retired in July 2026 canon)' },
+    { pattern: /\bGeometria\b/gi, reason: 'Retired land (Replaced by Aquaria)' },
+    { pattern: /\bAges?\s*2\s*[-–—]\s*8\b/gi, reason: 'Canon age is strictly Ages 2–7 (Pre-K to Grade 2)' },
+    { pattern: /\bGrade\s*3\b/gi, reason: 'Canon ceiling is Grade 2; Grade 3 is strictly retired' },
+  ];
+}
 
 let totalChecks = 0;
 let failedChecks = 0;

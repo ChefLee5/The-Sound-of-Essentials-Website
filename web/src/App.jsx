@@ -26,6 +26,10 @@ const DictionarySale = lazy(() => import('./pages/DictionarySale'));
 const RhythmQuestSale = lazy(() => import('./pages/RhythmQuestSale'));
 const Listen     = lazy(() => import('./pages/Listen'));
 const Player     = lazy(() => import('./pages/Player'));
+const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
+const TermsOfService = lazy(() => import('./pages/TermsOfService'));
+const DmcaPolicy = lazy(() => import('./pages/DmcaPolicy'));
+import CookieConsent from './components/CookieConsent';
 
 // ── V2 Redesign Routes (parallel, isolated under /v2) ───────────
 const HomeV2      = lazy(() => import('./pages-v2/HomeV2'));
@@ -83,11 +87,15 @@ const App = () => {
                 <Route path="/dictionary" element={<AnimatedPage><DictionarySale /></AnimatedPage>} />
                 <Route path="/rhythm-quest" element={<AnimatedPage><RhythmQuestSale /></AnimatedPage>} />
                 <Route path="/player"     element={<AnimatedPage><Player /></AnimatedPage>} />
+                <Route path="/privacy"    element={<AnimatedPage><PrivacyPolicy /></AnimatedPage>} />
+                <Route path="/terms"      element={<AnimatedPage><TermsOfService /></AnimatedPage>} />
+                <Route path="/dmca"       element={<AnimatedPage><DmcaPolicy /></AnimatedPage>} />
               </Routes>
             </AnimatePresence>
           )}
         </Suspense>
       </main>
+      <CookieConsent />
       {!isV2 && <Footer />}
     </div>
   );

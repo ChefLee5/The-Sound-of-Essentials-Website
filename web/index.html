@@ -31,10 +31,6 @@
   <meta name="twitter:description"
     content="Designed for the developing brain, not the algorithm. A music-driven ecosystem for early childhood development." />
   <meta name="twitter:image" content="/assets/soe-official-logo.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Dancing+Script:wght@500;700&family=Fredoka:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
   <!-- Single Page Apps for GitHub Pages SPA redirect handler -->
   <script type="text/javascript">
     (function(l) {
@@ -48,10 +44,17 @@
       }
     }(window.location));
   </script>
-  <!-- Microsoft Clarity -->
+  <!-- Microsoft Clarity — CIPA / Wiretapping Protection: consent false by default until affirmative opt-in -->
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        // Enforce CIPA / wiretapping safe mode: consent set to false until explicit user acceptance
+        try {
+          var hasConsent = localStorage.getItem('soe_privacy_consent') === 'granted';
+          c[a]("consent", hasConsent);
+        } catch(e) {
+          c[a]("consent", false);
+        }
         t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "wcdgngeqcm");

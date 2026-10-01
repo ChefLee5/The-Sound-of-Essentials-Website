@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { RevealSection } from '../hooks/useReveal';
 import heroesData from '../data/heroes.json';
 import landsData from '../data/lands.json';
@@ -56,6 +57,7 @@ const dictPreviews = [
 ];
 
 const DictionarySale = () => {
+  const { t } = useTranslation();
   const scrollRef = useRef(null);
 
   useEffect(() => {
@@ -321,6 +323,29 @@ const DictionarySale = () => {
                 <Link to="/join" className="btn btn-gold">Reserve the Dictionary — $55</Link>
                 <Link to="/join" className="btn btn-sage">Full Quest Bundle — $89</Link>
               </div>
+
+              {/* California ARL & Consumer Subscription Disclosure */}
+              <div 
+                className="arl-renewal-notice"
+                style={{
+                  margin: '1.25rem auto',
+                  padding: '0.85rem 1.25rem',
+                  background: 'rgba(0,0,0,0.03)',
+                  border: '1px solid rgba(0,0,0,0.08)',
+                  borderRadius: 'var(--radius-sm, 12px)',
+                  fontSize: '0.78rem',
+                  color: 'var(--color-text-dark-secondary, #665c54)',
+                  lineHeight: 1.5,
+                  maxWidth: '560px',
+                  textAlign: 'center'
+                }}
+              >
+                🔒 <strong>Subscription &amp; Continuity Disclosure:</strong> {t('legal.auto_renewal_notice')}{' '}
+                <Link to="/terms" style={{ color: 'var(--color-orange, #FF6F00)', textDecoration: 'underline' }}>
+                  Terms &amp; Cancellation Policy
+                </Link>
+              </div>
+
               <div className="dict-guarantee">
                 <span>🔒</span> Instant digital delivery · EPUB format · Read on any device
               </div>

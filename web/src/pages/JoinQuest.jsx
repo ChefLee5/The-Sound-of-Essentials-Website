@@ -9,14 +9,22 @@ const JoinQuest = () => {
     const { t } = useTranslation();
     useEffect(() => { document.title = 'Join the Quest — SOE Rhythm Quest'; }, []);
 
+    // Newsletter COPPA gate
+    const [isAdultConfirmed, setIsAdultConfirmed] = useState(false);
+
     // Contact State
-    const [contact, setContact] = useState({ name: '', org: '', email: '', message: '', submitted: false });
+    const [contact, setContact] = useState({ name: '', org: '', email: '', message: '', adultConfirmed: false, submitted: false });
     const [contactLoading, setContactLoading] = useState(false);
     const [contactError, setContactError] = useState('');
 
     const handleContact = async (e) => {
         e.preventDefault();
         setContactError('');
+
+        if (!contact.adultConfirmed) {
+            setContactError(t('legal.parental_gate_error'));
+            return;
+        }
 
         if (!contact.email.includes('@')) {
             setContactError(t('join.org_email_error'));
@@ -66,7 +74,67 @@ const JoinQuest = () => {
                                 </p>
                             </div>
 
-                            <BeehiivSubscribeForm className="newsletter-form" />
+                            {/* COPPA Parental Affirmation Gate */}
+                            <div 
+                                className="coppa-parental-gate" 
+                                data-clarity-mask="true"
+                                style={{
+                                    background: isAdultConfirmed ? 'rgba(76, 175, 80, 0.08)' : 'rgba(255, 111, 0, 0.08)',
+                                    border: `1.5px solid ${isAdultConfirmed ? 'var(--color-green, #4CAF50)' : 'var(--color-orange, #FF6F00)'}`,
+                                    borderRadius: 'var(--radius-sm, 12px)',
+                                    padding: '0.85rem 1rem',
+                                    margin: '0 auto 1.5rem',
+                                    maxWidth: '480px',
+                                    textAlign: 'left',
+                                    display: 'flex',
+                                    alignItems: 'flex-start',
+                                    gap: '0.75rem',
+                                    transition: 'all 0.3s ease'
+                                }}
+                            >
+                                <input
+                                    id="coppa-newsletter-check"
+                                    type="checkbox"
+                                    checked={isAdultConfirmed}
+                                    onChange={(e) => setIsAdultConfirmed(e.target.checked)}
+                                    style={{
+                                        width: '18px',
+                                        height: '18px',
+                                        marginTop: '0.2rem',
+                                        accentColor: 'var(--color-orange, #FF6F00)',
+                                        cursor: 'pointer'
+                                    }}
+                                />
+                                <label 
+                                    htmlFor="coppa-newsletter-check" 
+                                    style={{ fontSize: '0.84rem', color: '#2B2016', cursor: 'pointer', lineHeight: 1.45 }}
+                                >
+                                    <strong style={{ display: 'block', color: 'var(--color-orange, #FF6F00)', marginBottom: '0.15rem' }}>
+                                        Parent / Educator Affirmation (COPPA Compliance):
+                                    </strong>
+                                    {t('legal.parental_affirmation')}
+                                </label>
+                            </div>
+
+                            {isAdultConfirmed ? (
+                                <div data-clarity-mask="true">
+                                    <BeehiivSubscribeForm className="newsletter-form" />
+                                </div>
+                            ) : (
+                                <div 
+                                    style={{
+                                        padding: '1.25rem',
+                                        background: '#f8f9fa',
+                                        borderRadius: 'var(--radius-sm, 12px)',
+                                        maxWidth: '480px',
+                                        margin: '0 auto',
+                                        fontSize: '0.88rem',
+                                        color: '#665c54'
+                                    }}
+                                >
+                                    🔒 <em>Please check the adult confirmation box above to reveal the newsletter signup.</em>
+                                </div>
+                            )}
                         </div>
                     </RevealSection>
                 </div>
@@ -158,7 +226,7 @@ const JoinQuest = () => {
                                     </p>
                                 </div>
                             ) : (
-                                <form className="contact-form" onSubmit={handleContact}>
+                                <form className="contact-form" onSubmit={handleContact} data-clarity-mask="true">
                                     <div className="form-grid">
                                         <div className="form-group">
                                             <label htmlFor="contact-name" className="form-label">{t('join.label_name')}</label>
@@ -167,6 +235,7 @@ const JoinQuest = () => {
                                                 type="text"
                                                 required
                                                 disabled={contactLoading}
+                                                data-clarity-mask="true"
                                                 className="form-input"
                                                 placeholder={t('join.placeholder_name')}
                                                 value={contact.name}
@@ -179,6 +248,7 @@ const JoinQuest = () => {
                                                 id="contact-org"
                                                 type="text"
                                                 disabled={contactLoading}
+                                                data-clarity-mask="true"
                                                 className="form-input"
                                                 placeholder={t('join.placeholder_org')}
                                                 value={contact.org}
@@ -194,6 +264,7 @@ const JoinQuest = () => {
                                             type="email"
                                             required
                                             disabled={contactLoading}
+                                            data-clarity-mask="true"
                                             className="form-input"
                                             placeholder={t('join.placeholder_email')}
                                             value={contact.email}
@@ -207,12 +278,49 @@ const JoinQuest = () => {
                                             id="contact-message"
                                             required
                                             disabled={contactLoading}
+                                            data-clarity-mask="true"
                                             className="form-input form-textarea"
                                             placeholder={t('join.placeholder_message')}
                                             rows="5"
                                             value={contact.message}
                                             onChange={(e) => setContact({ ...contact, message: e.target.value })}
                                         />
+                                    </div>
+
+                                    {/* COPPA Adult Affirmation Gate Checkbox */}
+                                    <div 
+                                        className="form-group"
+                                        style={{
+                                            display: 'flex',
+                                            alignItems: 'flex-start',
+                                            gap: '0.65rem',
+                                            padding: '0.75rem 0.9rem',
+                                            background: contact.adultConfirmed ? 'rgba(76, 175, 80, 0.08)' : 'rgba(255, 111, 0, 0.08)',
+                                            borderRadius: 'var(--radius-sm, 8px)',
+                                            border: `1.5px solid ${contact.adultConfirmed ? 'var(--color-green, #4CAF50)' : 'var(--color-orange, #FF6F00)'}`,
+                                            marginBottom: '1rem'
+                                        }}
+                                    >
+                                        <input
+                                            id="contact-adult-check"
+                                            type="checkbox"
+                                            required
+                                            checked={contact.adultConfirmed}
+                                            onChange={(e) => setContact({ ...contact, adultConfirmed: e.target.checked })}
+                                            style={{
+                                                width: '18px',
+                                                height: '18px',
+                                                marginTop: '0.15rem',
+                                                accentColor: 'var(--color-orange, #FF6F00)',
+                                                cursor: 'pointer'
+                                            }}
+                                        />
+                                        <label htmlFor="contact-adult-check" style={{ fontSize: '0.82rem', color: '#2B2016', cursor: 'pointer', lineHeight: 1.45 }}>
+                                            <strong style={{ display: 'block', color: 'var(--color-orange, #FF6F00)', marginBottom: '0.1rem' }}>
+                                                Adult Verification (COPPA Compliance):
+                                            </strong>
+                                            {t('legal.parental_affirmation')}
+                                        </label>
                                     </div>
 
                                     {contactError && <p className="form-error-msg animate-fade-in" style={{ marginBottom: '1rem' }}>{contactError}</p>}

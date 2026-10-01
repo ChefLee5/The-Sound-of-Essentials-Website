@@ -33,7 +33,23 @@
         "sci_sound": "Science of the Sound",
         "partner": "Partner With Us",
         "newsletter": "Newsletter",
-        "weekly_activities": "Weekly neuro-affirming activities and music drops."
+        "weekly_activities": "Weekly neuro-affirming activities and music drops.",
+        "privacy_policy": "Privacy Policy",
+        "terms_of_service": "Terms of Service",
+        "dmca_policy": "DMCA Policy",
+        "postal_address": "The Sound of Essentials · P.O. Box 724 · info@soelearn.com"
+    },
+    "legal": {
+        "parental_affirmation": "I confirm I am a parent or educator (18 years or older) consenting on behalf of my family or classroom.",
+        "parental_gate_error": "Please confirm you are 18 years or older to proceed.",
+        "cookie_banner_text": "We respect your family's privacy. We do not sell personal data or track children. We use essential storage and privacy-masked analytics to improve early learning.",
+        "cookie_accept": "Accept Essential & Analytics",
+        "cookie_decline": "Decline Non-Essential",
+        "cookie_learn_more": "Learn more in our Privacy Policy",
+        "auto_renewal_notice": "Notice on Recurring Subscriptions: The Rhythm Pass ($14.99/mo) automatically renews each month until cancelled. You may cancel at any time with one click in your account or by emailing info@soelearn.com with zero fees.",
+        "privacy_title": "Privacy Policy & COPPA Compliance",
+        "terms_title": "Terms of Service & Auto-Renewal Policy",
+        "dmca_title": "DMCA Notice & Safe Harbor Policy"
     },
     "home": {
 

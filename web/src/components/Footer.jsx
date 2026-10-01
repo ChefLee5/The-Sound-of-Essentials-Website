@@ -47,12 +47,14 @@ const Footer = () => {
             <Link to="/listen" className="footer__link">{t('navbar.media')}</Link>
           </div>
 
-          {/* Get Involved */}
+          {/* Get Involved & Legal */}
           <div className="footer__col">
             <h4 className="footer__heading">{t('footer.get_involved')}</h4>
             <Link to="/join" className="footer__link">{t('hero.join_button')}</Link>
             <Link to="/join" className="footer__link">{t('footer.partner')}</Link>
-            <Link to="/join" className="footer__link">{t('footer.newsletter')}</Link>
+            <Link to="/privacy" className="footer__link">{t('footer.privacy_policy')}</Link>
+            <Link to="/terms" className="footer__link">{t('footer.terms_of_service')}</Link>
+            <Link to="/dmca" className="footer__link">{t('footer.dmca_policy')}</Link>
           </div>
 
           {/* Stay Connected */}
@@ -69,8 +71,14 @@ const Footer = () => {
         </div>
 
         <div className="footer__bottom">
-          <p>© {new Date().getFullYear()} The Sound of Essentials: <span className="logo-accent-cursive">Rhythm Quest</span>. {t('footer.all_rights_reserved')}</p>
+          <div>
+            <p>© {new Date().getFullYear()} The Sound of Essentials: <span className="logo-accent-cursive">Rhythm Quest</span>. {t('footer.all_rights_reserved')}</p>
+            <p style={{ fontSize: '0.78rem', color: 'rgba(255,255,255,0.7)', marginTop: '0.35rem' }}>{t('footer.postal_address')}</p>
+          </div>
           <div className="footer__bottom-links">
+            <Link to="/privacy" className="footer__bottom-link">{t('footer.privacy_policy')}</Link>
+            <Link to="/terms" className="footer__bottom-link">{t('footer.terms_of_service')}</Link>
+            <Link to="/dmca" className="footer__bottom-link">{t('footer.dmca_policy')}</Link>
             <Link to="/mission" className="footer__bottom-link">{t('navbar.mission')}</Link>
             <Link to="/join" className="footer__bottom-link">{t('hero.join_button')}</Link>
           </div>

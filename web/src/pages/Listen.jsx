@@ -27,6 +27,7 @@ const Listen = () => {
     try { return localStorage.getItem(STORAGE_KEY) === '1'; } catch { return false; }
   });
 
+  const [isAdultConfirmed, setIsAdultConfirmed] = useState(false);
   const [searchParams, setSearchParams] = useSearchParams();
   const [justUnlocked, setJustUnlocked] = useState(false);
 
@@ -217,7 +218,68 @@ const Listen = () => {
                 coloring pages, and start a free 5-day learning journey.
               </p>
 
-              <BeehiivSubscribeForm className="listen-optin__form" />
+              {/* COPPA Parental Affirmation Gate */}
+              <div 
+                className="coppa-parental-gate" 
+                data-clarity-mask="true"
+                style={{
+                  background: isAdultConfirmed ? 'rgba(76, 175, 80, 0.08)' : 'rgba(255, 111, 0, 0.08)',
+                  border: `1.5px solid ${isAdultConfirmed ? 'var(--color-green, #4CAF50)' : 'var(--color-orange, #FF6F00)'}`,
+                  borderRadius: 'var(--radius-sm, 12px)',
+                  padding: '0.85rem 1rem',
+                  margin: '1.25rem auto 1.5rem',
+                  maxWidth: '520px',
+                  textAlign: 'left',
+                  display: 'flex',
+                  alignItems: 'flex-start',
+                  gap: '0.75rem',
+                  transition: 'all 0.3s ease'
+                }}
+              >
+                <input
+                  id="coppa-adult-check"
+                  type="checkbox"
+                  checked={isAdultConfirmed}
+                  onChange={(e) => setIsAdultConfirmed(e.target.checked)}
+                  style={{
+                    width: '18px',
+                    height: '18px',
+                    marginTop: '0.2rem',
+                    accentColor: 'var(--color-orange, #FF6F00)',
+                    cursor: 'pointer'
+                  }}
+                />
+                <label 
+                  htmlFor="coppa-adult-check" 
+                  style={{ fontSize: '0.84rem', color: '#2B2016', cursor: 'pointer', lineHeight: 1.45 }}
+                >
+                  <strong style={{ display: 'block', color: 'var(--color-orange, #FF6F00)', marginBottom: '0.15rem' }}>
+                    Parent / Educator Affirmation (COPPA Compliance):
+                  </strong>
+                  {t('legal.parental_affirmation')}
+                </label>
+              </div>
+
+              {isAdultConfirmed ? (
+                <div data-clarity-mask="true">
+                  <BeehiivSubscribeForm className="listen-optin__form" />
+                </div>
+              ) : (
+                <div 
+                  style={{
+                    padding: '1.25rem',
+                    background: '#f8f9fa',
+                    borderRadius: 'var(--radius-sm, 12px)',
+                    maxWidth: '480px',
+                    margin: '0 auto',
+                    fontSize: '0.88rem',
+                    color: '#665c54'
+                  }}
+                >
+                  🔒 <em>Please check the parental confirmation box above to reveal the free album unlock form.</em>
+                </div>
+              )}
+
               <p className="listen-optin__disclaimer">
                 No spam, ever. Unsubscribe anytime. We respect your family's inbox.
               </p>
