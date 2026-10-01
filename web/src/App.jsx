@@ -33,6 +33,7 @@ const Gallery    = lazy(() => import('./pages/Gallery'));
 const AdsShowcase = lazy(() => import('./pages/AdsShowcase'));
 const AdminCrm   = lazy(() => import('./pages/AdminCrm'));
 const ProgrammaticPersonaPage = lazy(() => import('./pages/ProgrammaticPersonaPage'));
+const SolutionsHub = lazy(() => import('./pages/SolutionsHub'));
 const AdvertorialStory = lazy(() => import('./pages/AdvertorialStory'));
 const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
 const TermsOfService = lazy(() => import('./pages/TermsOfService'));
