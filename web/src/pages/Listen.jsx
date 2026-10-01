@@ -42,6 +42,7 @@ const Listen = () => {
   const [directEmail, setDirectEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [optinError, setOptinError] = useState('');
+  const [isAdultConfirmed, setIsAdultConfirmed] = useState(false);
 
   // Universal Gate Modal State
   const [isDownloadGateOpen, setIsDownloadGateOpen] = useState(false);
@@ -409,16 +410,76 @@ const Listen = () => {
                 printable coloring book, and start a free 5-day sensory learning journey.
               </p>
 
-              <BrevoSubscribeForm
-                className="listen-optin__form"
-                buttonText="🎧 Unlock 19 tracks free"
-                placeholder="Enter your best email..."
-                sourcePath="/listen"
-                onSuccess={({ email }) => {
-                  trackLead({ formName: 'listen_brevo_optin', email, source: 'listen_page' });
-                  unlock();
+              {/* COPPA Parental Affirmation Gate */}
+              <div 
+                className="coppa-parental-gate" 
+                data-clarity-mask="true"
+                style={{
+                  background: isAdultConfirmed ? 'rgba(76, 175, 80, 0.08)' : 'rgba(255, 111, 0, 0.08)',
+                  border: `1.5px solid ${isAdultConfirmed ? 'var(--color-green, #4CAF50)' : 'var(--color-orange, #FF6F00)'}`,
+                  borderRadius: 'var(--radius-sm, 12px)',
+                  padding: '0.85rem 1rem',
+                  margin: '1.25rem auto 1.5rem',
+                  maxWidth: '520px',
+                  textAlign: 'left',
+                  display: 'flex',
+                  alignItems: 'flex-start',
+                  gap: '0.75rem',
+                  transition: 'all 0.3s ease'
                 }}
-              />
+              >
+                <input
+                  id="coppa-adult-check"
+                  type="checkbox"
+                  checked={isAdultConfirmed}
+                  onChange={(e) => setIsAdultConfirmed(e.target.checked)}
+                  style={{
+                    width: '18px',
+                    height: '18px',
+                    marginTop: '0.2rem',
+                    accentColor: 'var(--color-orange, #FF6F00)',
+                    cursor: 'pointer'
+                  }}
+                />
+                <label 
+                  htmlFor="coppa-adult-check" 
+                  style={{ fontSize: '0.84rem', color: '#2B2016', cursor: 'pointer', lineHeight: 1.45 }}
+                >
+                  <strong style={{ display: 'block', color: 'var(--color-orange, #FF6F00)', marginBottom: '0.15rem' }}>
+                    Parent / Educator Affirmation (COPPA Compliance):
+                  </strong>
+                  I confirm I am a parent, legal guardian, or educator 18 years of age or older consenting to receive educational resources.
+                </label>
+              </div>
+
+              {isAdultConfirmed ? (
+                <div data-clarity-mask="true">
+                  <BrevoSubscribeForm
+                    className="listen-optin__form"
+                    buttonText="🎧 Unlock 19 tracks free"
+                    placeholder="Enter your best email..."
+                    sourcePath="/listen"
+                    onSuccess={({ email }) => {
+                      trackLead({ formName: 'listen_brevo_optin', email, source: 'listen_page' });
+                      unlock();
+                    }}
+                  />
+                </div>
+              ) : (
+                <div 
+                  style={{
+                    padding: '1.25rem',
+                    background: '#f8f9fa',
+                    borderRadius: 'var(--radius-sm, 12px)',
+                    maxWidth: '480px',
+                    margin: '0 auto',
+                    fontSize: '0.88rem',
+                    color: '#665c54'
+                  }}
+                >
+                  🔒 <em>Please check the parental confirmation box above to reveal the free album unlock form.</em>
+                </div>
+              )}
             </div>
           </div>
         </section>

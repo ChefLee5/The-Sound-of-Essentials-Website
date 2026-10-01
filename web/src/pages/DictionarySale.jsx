@@ -444,6 +444,29 @@ const DictionarySale = () => {
                 <a href="#pricing" className="btn btn-sage">Full Quest Bundle — $89</a>
                 <Link to="/workbook" className="btn btn-outline">Explore $21 Workbook &amp; Curriculum →</Link>
               </div>
+
+              {/* California ARL & Consumer Subscription Disclosure */}
+              <div 
+                className="arl-renewal-notice"
+                style={{
+                  margin: '1.25rem auto',
+                  padding: '0.85rem 1.25rem',
+                  background: 'rgba(0,0,0,0.03)',
+                  border: '1px solid rgba(0,0,0,0.08)',
+                  borderRadius: 'var(--radius-sm, 12px)',
+                  fontSize: '0.78rem',
+                  color: 'var(--color-text-dark-secondary, #665c54)',
+                  lineHeight: 1.5,
+                  maxWidth: '560px',
+                  textAlign: 'center'
+                }}
+              >
+                🔒 <strong>Subscription &amp; Continuity Disclosure:</strong> Optional memberships (such as the Rhythm Pass at $14.99/month) automatically renew each billing cycle until cancelled. You may easily cancel anytime online with 1-click in your account settings or by emailing billing@soelearn.com with zero cancellation penalties.{' '}
+                <Link to="/terms" style={{ color: 'var(--color-orange, #FF6F00)', textDecoration: 'underline' }}>
+                  Terms &amp; Cancellation Policy
+                </Link>
+              </div>
+
               <div className="dict-guarantee">
                 <span>🔒</span> Instant digital delivery · EPUB format · Read on any device
               </div>

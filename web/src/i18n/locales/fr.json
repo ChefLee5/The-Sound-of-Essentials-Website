@@ -33,7 +33,23 @@
         "sci_sound": "Science du Son",
         "partner": "Participer",
         "newsletter": "Newsletter",
-        "weekly_activities": "Activités hebdomadaires neuro-affirmantes et sorties musicales."
+        "weekly_activities": "Activités hebdomadaires neuro-affirmantes et sorties musicales.",
+        "privacy_policy": "Politique de Confidentialité",
+        "terms_of_service": "Conditions d'Utilisation",
+        "dmca_policy": "Politique DMCA",
+        "postal_address": "The Sound of Essentials · P.O. Box 724 · info@soelearn.com"
+    },
+    "legal": {
+        "parental_affirmation": "Je confirme être un parent ou un éducateur (âgé de 18 ans ou plus) consentant au nom de ma famille ou de ma classe.",
+        "parental_gate_error": "Veuillez confirmer que vous avez 18 ans ou plus pour continuer.",
+        "cookie_banner_text": "Nous respectons la vie privée de votre famille. Nous ne vendons pas de données personnelles et ne suivons pas les enfants. Nous utilisons un stockage essentiel et des analyses masquées pour améliorer l'apprentissage précoce.",
+        "cookie_accept": "Accepter les essentiels et analyses",
+        "cookie_decline": "Refuser les non-essentiels",
+        "cookie_learn_more": "En savoir plus dans notre Politique de Confidentialité",
+        "auto_renewal_notice": "Avis sur les abonnements récurrents : Le Rhythm Pass (14,99 $/mois) se renouvelle automatiquement chaque mois jusqu'à résiliation. Vous pouvez annuler à tout moment en un clic dans votre compte ou par e-mail à info@soelearn.com sans frais de résiliation.",
+        "privacy_title": "Politique de Confidentialité et Conformité COPPA",
+        "terms_title": "Conditions d'Utilisation et Politique de Renouvellement Automatique",
+        "dmca_title": "Avis DMCA et Politique de Sphère de Sécurité"
     },
     "home": {
 

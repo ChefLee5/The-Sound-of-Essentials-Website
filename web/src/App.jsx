@@ -1,4 +1,4 @@
-import { lazy, Suspense, useState, useCallback, useMemo } from 'react';
+import { lazy, Suspense, useState, useCallback } from 'react';
 import { Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import AnimatedPage from './components/AnimatedPage';
@@ -33,8 +33,11 @@ const Gallery    = lazy(() => import('./pages/Gallery'));
 const AdsShowcase = lazy(() => import('./pages/AdsShowcase'));
 const AdminCrm   = lazy(() => import('./pages/AdminCrm'));
 const ProgrammaticPersonaPage = lazy(() => import('./pages/ProgrammaticPersonaPage'));
-const SolutionsHub = lazy(() => import('./pages/SolutionsHub'));
 const AdvertorialStory = lazy(() => import('./pages/AdvertorialStory'));
+const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
+const TermsOfService = lazy(() => import('./pages/TermsOfService'));
+const DmcaPolicy = lazy(() => import('./pages/DmcaPolicy'));
+import CookieConsent from './components/CookieConsent';
 
 // ── V2 Redesign Routes (parallel, isolated under /v2) ───────────
 const HomeV2      = lazy(() => import('./pages-v2/HomeV2'));
@@ -119,12 +122,17 @@ const App = () => {
                 <Route path="/admin/*"    element={<Navigate to="/admin/crm" replace />} />
                 <Route path="/crm"        element={<Navigate to="/admin/crm" replace />} />
                 <Route path="/crm/*"      element={<Navigate to="/admin/crm" replace />} />
+                {/* Legal & Compliance Protocol Routes */}
+                <Route path="/privacy"    element={<AnimatedPage><PrivacyPolicy /></AnimatedPage>} />
+                <Route path="/terms"      element={<AnimatedPage><TermsOfService /></AnimatedPage>} />
+                <Route path="/dmca"       element={<AnimatedPage><DmcaPolicy /></AnimatedPage>} />
                 <Route path="*"           element={<Navigate to="/" replace />} />
               </Routes>
             </AnimatePresence>
           )}
         </Suspense>
       </main>
+      <CookieConsent />
       {!isV2 && !isAdmin && <Footer />}
     </div>
   );

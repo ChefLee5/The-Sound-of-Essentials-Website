@@ -95,8 +95,16 @@ const Footer = () => {
         </div>
 
         <div className="footer__bottom">
-          <p>© {new Date().getFullYear()} The Sound of Essentials: <span className="logo-accent-cursive">Rhythm Quest</span>. {t('footer.all_rights_reserved')}</p>
+          <div className="footer__bottom-info">
+            <p>© {new Date().getFullYear()} The Sound of Essentials: <span className="logo-accent-cursive">Rhythm Quest</span>. {t('footer.all_rights_reserved')}</p>
+            <p className="footer__compliance-notice" style={{ fontSize: '0.75rem', opacity: 0.85, marginTop: '0.35rem' }}>
+              The Sound of Essentials · P.O. Box 724 · New York, NY 10027 · info@soelearn.com
+            </p>
+          </div>
           <div className="footer__bottom-links">
+            <Link to="/privacy" className="footer__bottom-link">Privacy Policy</Link>
+            <Link to="/terms" className="footer__bottom-link">Terms of Service</Link>
+            <Link to="/dmca" className="footer__bottom-link">DMCA Notice</Link>
             <a href="mailto:info@soelearn.com" className="footer__bottom-link footer__bottom-email">
               ✉️ info@soelearn.com
             </a>

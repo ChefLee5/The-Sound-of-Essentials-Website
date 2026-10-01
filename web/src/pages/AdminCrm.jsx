@@ -28,7 +28,7 @@ const EMAIL_TEMPLATES = [
     id: 'school_pilot',
     name: '🏫 School Licensing Pilot Invitation',
     subject: 'The Sound of Essentials — Early Learning Music Curriculum Pilot for {{organization}}',
-    body: `Hi {{name}},\n\nThank you for reaching out regarding The Sound of Essentials: Rhythm Quest for {{organization}}.\n\nWe designed our neuro-affirming, music-grounded curriculum across 7 developmental lands (phonological awareness, numeracy, sensory regulation, and STEM literacy) specifically for ages 2–8.\n\nWe would love to provide a digital pilot packet for your classrooms, including sample audio tracks, the Rhythm Ready readiness assessment, and teacher implementation guides.\n\nWhen would be a convenient time for a brief 15-minute walkthrough this week?\n\nWarm regards,\nFounder & Creator\nThe Sound of Essentials`,
+    body: `Hi {{name}},\n\nThank you for reaching out regarding The Sound of Essentials: Rhythm Quest for {{organization}}.\n\nWe designed our neuro-affirming, music-grounded curriculum across 7 developmental lands (phonological awareness, numeracy, sensory regulation, and STEM literacy) specifically for ages 2–7.\n\nWe would love to provide a digital pilot packet for your classrooms, including sample audio tracks, the Rhythm Ready readiness assessment, and teacher implementation guides.\n\nWhen would be a convenient time for a brief 15-minute walkthrough this week?\n\nWarm regards,\nFounder & Creator\nThe Sound of Essentials`,
   },
   {
     id: 'workbook_welcome',

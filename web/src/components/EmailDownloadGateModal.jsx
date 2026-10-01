@@ -138,7 +138,7 @@ export const EmailDownloadGateModal = ({
                 </div>
               )}
 
-              <form onSubmit={handleSubmit} className="email-gate-form">
+              <form onSubmit={handleSubmit} className="email-gate-form" data-clarity-mask="true">
                 <div className="email-gate-input-group">
                   <label className="email-gate-label">Your Name</label>
                   <input
@@ -176,6 +176,18 @@ export const EmailDownloadGateModal = ({
                     <option value="ally">🩺 Pediatric OT / Therapist</option>
                     <option value="creator">🎨 Artist / Musician</option>
                   </select>
+                </div>
+
+                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.5rem', margin: '0.75rem 0', fontSize: '0.8rem', color: '#555' }}>
+                  <input
+                    type="checkbox"
+                    id="modal-coppa-check"
+                    required
+                    style={{ marginTop: '0.15rem', accentColor: '#FF6F00', cursor: 'pointer' }}
+                  />
+                  <label htmlFor="modal-coppa-check" style={{ cursor: 'pointer', lineHeight: 1.35 }}>
+                    I confirm I am an adult (18+) consenting to receive educational resources under COPPA guidelines.
+                  </label>
                 </div>
 
                 <button

@@ -3,6 +3,8 @@
    Bright & Playful — Warm. Vibrant. Joyful.
    ======================================== */
 
+@import './styles/self-hosted-fonts.css';
+
 /* More Sugar — self-hosted display font */
 @font-face {
   font-family: 'More Sugar';

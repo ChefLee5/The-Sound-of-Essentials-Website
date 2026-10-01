@@ -230,7 +230,7 @@ const JoinQuest = () => {
                                     </p>
                                 </div>
                             ) : (
-                                <form className="contact-form" onSubmit={handleContact}>
+                                <form className="contact-form" onSubmit={handleContact} data-clarity-mask="true">
                                     <div className="form-grid">
                                         <div className="form-group">
                                             <label htmlFor="contact-name" className="form-label">{t('join.label_name')}</label>
@@ -285,6 +285,18 @@ const JoinQuest = () => {
                                             value={contact.message}
                                             onChange={(e) => setContact({ ...contact, message: e.target.value })}
                                         />
+                                    </div>
+
+                                    <div className="form-group" style={{ display: 'flex', alignItems: 'flex-start', gap: '0.6rem', marginTop: '0.5rem' }}>
+                                        <input
+                                            id="join-adult-check"
+                                            type="checkbox"
+                                            required
+                                            style={{ marginTop: '0.2rem', accentColor: 'var(--color-orange)', cursor: 'pointer' }}
+                                        />
+                                        <label htmlFor="join-adult-check" style={{ fontSize: '0.82rem', color: 'var(--color-text-secondary)', cursor: 'pointer', lineHeight: 1.4 }}>
+                                            I confirm I am an adult (18 years or older) representing a family, school, or organization under COPPA guidelines.
+                                        </label>
                                     </div>
 
                                     {contactError && <p className="form-error-msg animate-fade-in" style={{ marginBottom: '1rem' }}>{contactError}</p>}

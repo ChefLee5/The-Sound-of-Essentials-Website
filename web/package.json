@@ -10,6 +10,8 @@
     "sync:r2": "node scripts/sync-to-r2.mjs",
     "deploy:cf": "npm run build && npx wrangler pages deploy dist",
     "lint": "eslint .",
+    "test:canon": "node scripts/soe-canon-guard.mjs",
+    "test:gates": "node scripts/soe-canon-guard.mjs && eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
