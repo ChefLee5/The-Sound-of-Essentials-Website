@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en" data-palette="sky" data-style="framed" data-mood="playful" data-ink="full">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rhythm Quest Coloring Book &middot; The Sound of Essentials</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext y='26' font-size='26'%3E%E2%98%85%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Fredoka:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Dancing+Script:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="styles/coloring-book.css">
+</head>
+<body>
+
+<!-- Screen only. Replaces the Design editor's props panel so the book can be
+     set up before it goes to the printer. Hidden by @media print. -->
+<div class="controls" role="group" aria-label="Coloring book options">
+  <label>Palette
+    <select data-prop="palette">
+        <option value="sky">Sky &amp; sunshine</option>
+        <option value="meadow">Meadow morning</option>
+        <option value="plum">Plum twilight</option>
+    </select>
+  </label>
+  <label>Pages
+    <select data-prop="style">
+        <option value="framed">Framed card</option>
+        <option value="bleed">Full bleed</option>
+    </select>
+  </label>
+  <label>Mood
+    <select data-prop="mood">
+        <option value="playful">Playful prompts</option>
+        <option value="quiet">Quiet pages</option>
+    </select>
+  </label>
+  <label>Ink
+    <select data-prop="ink">
+        <option value="full">Full colour</option>
+        <option value="saver">Ink saver</option>
+    </select>
+  </label>
+  <button type="button" onclick="window.print()">Print &#8250;</button>
+</div>
+
+<main>
+
+  <section class="page page--cover">
+   <div class="sheet sheet--cover">
+    <div class="cover__eyebrow">
+      <span class="cover__rule"></span>
+      <span>The Sound of Essentials</span>
+      <span class="cover__rule"></span>
+    </div>
+    <h1 class="cover__title">Rhythm Quest</h1>
+    <div class="cover__subtitle">Coloring Book</div>
+    <div class="cover__art">
+      <img src="art_print/cover-seriphia-land.jpg" alt="Seriphia standing on a floating island of flowers, gems circling her hands" />
+    </div>
+    <div class="cover__foot">
+      <div class="cover__owner">
+        <div class="cover__owner-label">This book belongs to</div>
+        <div class="cover__owner-rule"></div>
+      </div>
+      <div class="cover__ages"><div>Ages 2–8</div></div>
+      <div class="cover__tagline">Staying on the path. Always learning.</div>
+    </div>
+   </div>
+  </section>
+  <section class="page page--intro">
+   <div class="sheet sheet--intro">
+    <div class="intro__eyebrow">Before you begin</div>
+    <h2 class="intro__title">Be the hero of your own learning.</h2>
+    <p class="intro__lede">Inside are 38 pages from the Rhythm Quest — the lands, the friends, and the animals your child meets along the path. Print them one at a time or all at once. There is no wrong color and no wrong order.</p>
+    <div class="intro__cards">
+      <div class="intro__card">
+        <div class="intro__card-title">Say it out loud</div>
+        <p>Read the line at the top of each page together before the crayons come out.</p>
+      </div>
+      <div class="intro__card">
+        <div class="intro__card-title">Take your time</div>
+        <p>One page a day is plenty. Slow hands build steady focus.</p>
+      </div>
+      <div class="intro__card">
+        <div class="intro__card-title">Hang it up</div>
+        <p>Finished pages belong on the wall. Every one is a step on the path.</p>
+      </div>
+    </div>
+    <p class="intro__kicker">Designed for the developing brain — not the algorithm.</p>
+   </div>
+  </section>
+  <section class="page page--plate">
+   <div class="sheet sheet--plate">
+    <header class="plate__head">
+      <h2 class="plate__title">Hear the call</h2>
+      <div class="plate__num"><span class="plate__star">&#9733;</span><span>Page 01</span></div>
+    </header>
+    <p class="plate__prompt">Music drifts over the hills. Color the ribbon of notes leading the way.</p>
+    <div class="plate__frame">
+      <img src="art_print/CB_Hearthecall.jpg" alt="Hear the call &mdash; coloring page line art" />
+    </div>
+    <footer class="plate__foot">
+      <span>Name ____________________</span>
+      <span>The Sound of Essentials · soundofessentials.com</span>
+      <span>Date ____________</span>
+    </footer>
+   </div>
+  </section>
+  <section class="page page--plate">
+   <div class="sheet sheet--plate">
+    <header class="plate__head">
+      <h2 class="plate__title">Seriphia calls</h2>
+      <div class="plate__num"><span class="plate__star">&#9733;</span><span>Page 02</span></div>
+    </header>
+    <p class="plate__prompt">Your guide sings from the clouds. What color is her song?</p>
+    <div class="plate__frame">
+      <img src="art_print/CB_Seriphiacall.jpg" alt="Seriphia calls &mdash; coloring page line art" />
+    </div>
+    <footer class="plate__foot">
+      <span>Name ____________________</span>
+      <span>The Sound of Essentials · soundofessentials.com</span>
+      <span>Date ____________</span>
+    </footer>
+   </div>
+  </section>
+  <section class="page page--plate">
+   <div class="sheet sheet--plate">
+    <header class="plate__head">
+      <h2 class="plate__title">Step onto the path</h2>
+      <div class="plate__num"><span class="plate__star">&#9733;</span><span>Page 03</span></div>
+    </header>
+    <p class="plate__prompt">Every hero starts with one step. Color the great stone gate.</p>
+    <div class="plate__frame">
+      <img src="art_print/CB_Path.jpg" alt="Step onto the path &mdash; coloring page line art" />
+    </div>
+    <footer class="plate__foot">
+      <span>Name ____________________</span>
+      <span>The Sound of Essentials · soundofessentials.com</span>
+      <span>Date ____________</span>
+    </footer>
+   </div>
+  </section>
+  <section class="page page--plate">
+   <div class="sheet sheet--plate">
+    <header class="plate__head">
+      <h2 class="plate__title">The long road</h2>
+      <div class="plate__num"><span class="plate__star">&#9733;</span><span>Page 04</span></div>
+    </header>
+    <p class="plate__prompt">Look at all the friends walking with you. Give each one a color.</p>
+    <div class="plate__frame">
+      <img src="art_print/CB_WordPath.jpg" alt="The long road &mdash; coloring page line art" />
+    </div>
+    <footer class="plate__foot">
+      <span>Name ____________________</span>
+      <span>The Sound of Essentials · soundofessentials.com</span>
+      <span>Date ____________</span>
+    </footer>
+   </div>
+  </section>
+  <section class="page page--plate">
+   <div class="sheet sheet--plate">
+    <header class="plate__head">
+      <h2 class="plate__title">Alphabet jump</h2>
+      <div class="plate__num"><span class="plate__star">&#9733;</span><span>Page 05</span></div>
+    </header>
+    <p class="plate__prompt">Hop from A to Z. Color your three favorite letters first.</p>
+    <div class="plate__frame">
+      <img src="art_print/CB_ABCjum.jpg" alt="Alphabet jump &mdash; coloring page line art" />
+    </div>
+    <footer class="plate__foot">
+      <span>Name ____________________</span>
+      <span>The Sound of Essentials · soundofessentials.com</span>
+      <span>Date ____________</span>
+    </footer>
+   </div>
+  </section>
+  <section class="page page--plate">
+   <div class="sheet sheet--plate">
+    <header class="plate__head">
+      <h2 class="plate__title">Shapes ahead</h2>
+      <div class="plate__num"><span class="plate__star">&#9733;</span><span>Page 06</span></div>
+    </header>
+    <p class="plate__prompt">Circles, triangles, squares — color each shape a different color.</p>
+    <div class="plate__frame">
+      <img src="art_print/CB_Shapes.jpg" alt="Shapes ahead &mdash; coloring page line art" />
+    </div>
+    <footer class="plate__foot">
+      <span>Name ____________________</span>
+      <span>The Sound of Essentials · soundofessentials.com</span>
+      <span>Date ____________</span>
+    </footer>
+   </div>
+  </section>
+  <section class="page page--plate">
+   <div class="sheet sheet--plate">
+    <header class="plate__head">
+      <h2 class="plate__title">Into Numeria</h2>
+      <div class="plate__num"><span class="plate__star">&#9733;</span><span>Page 07</span></div>
+    </header>
+    <p class="plate__prompt">Numbers hide in the canyon walls. How many can you find?</p>
+    <div class="plate__frame">
+      <img src="art_print/CB_Numeria.jpg" alt="Into Numeria &mdash; coloring page line art" />
+    </div>
+    <footer class="plate__foot">
+      <span>Name ____________________</span>
+      <span>The Sound of Essentials · soundofessentials.com</span>
+      <span>Date ____________</span>
+    </footer>
+   </div>
+  </section>
+  <section class="page page--plate">
+   <div class="sheet sheet--plate">
+    <header class="plate__head">
+      <h2 class="plate__title">Stepping stones</h2>
+      <div class="plate__num"><span class="plate__star">&#9733;</span><span>Page 08</span></div>
+    </header>
+    <p class="plate__prompt">Color the stones under her feet, one by one.</p>
+    <div class="plate__frame">
+      <img src="art_print/CB_Stones.jpg" alt="Stepping stones &mdash; coloring page line art" />
+    </div>
+    <footer class="plate__foot">
+      <span>Name ____________________</span>
+      <span>The Sound of Essentials · soundofessentials.com</span>
+      <span>Date ____________</span>
+    </footer>
+   </div>
+  </section>
+  <section class="page page--plate">
+   <div class="sheet sheet--plate">
+    <header class="plate__head">
+      <h2 class="plate__title">Over the hill</h2>
+      <div class="plate__num"><span class="plate__star">&#9733;</span><span>Page 09</span></div>
+    </header>
+    <p class="plate__prompt">The whole tribe is running. Color the grass any color you like.</p>
+    <div class="plate__frame">
+      <img src="art_print/CB_Hill.jpg" alt="Over the hill &mdash; coloring page line art" />
+    </div>
+    <footer class="plate__foot">
+      <span>Name ____________________</span>
+      <span>The Sound of Essentials · soundofessentials.com</span>
+      <span>Date ____________</span>
+    </footer>
+   </div>
+  </section>
+  <section class="page page--plate">
+   <div class="sheet sheet--plate">
+    <header class="plate__head">
+      <h2 class="plate__title">A game of tag</h2>
+      <div class="plate__num"><span class="plate__star">&#9733;</span><span>Page 10</span></div>
+    </header>
+    <p class="plate__prompt">Color the trees, then draw yourself into the game.</p>
+    <div class="plate__frame">
+      <img src="art_print/CB_Tag.jpg" alt="A game of tag &mdash; coloring page line art" />
+    </div>
+    <footer class="plate__foot">
+      <span>Name ____________________</span>
+      <span>The Sound of Essentials · soundofessentials.com</span>
+      <span>Date ____________</span>
+    </footer>
+   </div>
+  </section>
+  <section class="page page--plate">
+   <div class="sheet sheet--plate">
+    <header class="plate__head">
+      <h2 class="plate__title">Take a big breath</h2>
+      <div class="plate__num"><span class="plate__star">&#9733;</span><span>Page 11</span></div>
+    </header>
+    <p class="plate__prompt">Breathe in. Breathe out. Color the sunbeams above you.</p>
+    <div class="plate__frame">
+      <img src="art_print/CB_Breath.jpg" alt="Take a big breath &mdash; coloring page line art" />
+    </div>
+    <footer class="plate__foot">
+      <span>Name ____________________</span>
+      <span>The Sound of Essentials · soundofessentials.com</span>
+      <span>Date ____________</span>
+    </footer>
+   </div>
+  </section>
+  <section class="page page--plate">
+   <div class="sheet sheet--plate">
+    <header class="plate__head">
+      <h2 class="plate__title">Listen close</h2>
+      <div class="plate__num"><span class="plate__star">&#9733;</span><span>Page 12</span></div>
+    </header>
+    <p class="plate__prompt">Notes float across the field. Color the melody.</p>
+    <div class="plate__frame">
+      <img src="art_print/CB_Hear2.jpg" alt="Listen close &mdash; coloring page line art" />
+    </div>
+    <footer class="plate__foot">
+      <span>Name ____________________</span>
+      <span>The Sound of Essentials · soundofessentials.com</span>
+      <span>Date ____________</span>
+    </footer>
+   </div>
+  </section>
+  <section class="page page--plate">
+   <div class="sheet sheet--plate">
+    <header class="plate__head">
+      <h2 class="plate__title">Look how far</h2>
+      <div class="plate__num"><span class="plate__star">&#9733;</span><span>Page 13</span></div>
+    </header>
+    <p class="plate__prompt">Under the music arch, look back at the road you walked.</p>
+    <div class="plate__frame">
+      <img src="art_print/CB_lookhowfar.jpg" alt="Look how far &mdash; coloring page line art" />
+    </div>
+    <footer class="plate__foot">
+      <span>Name ____________________</span>
+      <span>The Sound of Essentials · soundofessentials.com</span>
+      <span>Date ____________</span>
+    </footer>
+   </div>
+  </section>
+  <section class="page page--plate">
+   <div class="sheet sheet--plate">
+    <header class="plate__head">
+      <h2 class="plate__title">In the orchard</h2>
+      <div class="plate__num"><span class="plate__star">&#9733;</span><span>Page 14</span></div>
+    </header>
+    <p class="plate__prompt">Two ponies say hello. Color the apples first.</p>
+    <div class="plate__frame">
+      <img src="art_print/CB_Orchard.jpg" alt="In the orchard &mdash; coloring page line art" />
+    </div>
+    <footer class="plate__foot">
+      <span>Name ____________________</span>
+      <span>The Sound of Essentials · soundofessentials.com</span>
+      <span>Date ____________</span>
+    </footer>
+   </div>
+  </section>
+  <section class="page page--plate">
+   <div class="sheet sheet--plate">
+    <header class="plate__head">
+      <h2 class="plate__title">Field of tulips</h2>
+      <div class="plate__num"><span class="plate__star">&#9733;</span><span>Page 15</span></div>
+    </header>
+    <p class="plate__prompt">So many flowers! Try a new color for every row.</p>
+    <div class="plate__frame">
+      <img src="art_print/CB_Tulips.jpg" alt="Field of tulips &mdash; coloring page line art" />
+    </div>
+    <footer class="plate__foot">
+      <span>Name ____________________</span>
+      <span>The Sound of Essentials · soundofessentials.com</span>
+      <span>Date ____________</span>
+    </footer>
+   </div>
+  </section>
+  <section class="page page--plate">
+   <div class="sheet sheet--plate">
+    <header class="plate__head">
+      <h2 class="plate__title">Flower crowns</h2>
+      <div class="plate__num"><span class="plate__star">&#9733;</span><span>Page 16</span></div>
+    </header>
+    <p class="plate__prompt">Color the sunflowers tall and bright.</p>
+    <div class="plate__frame">
+      <img src="art_print/CB_Flowercrown.jpg" alt="Flower crowns &mdash; coloring page line art" />
+    </div>
+    <footer class="plate__foot">
+      <span>Name ____________________</span>
+      <span>The Sound of Essentials · soundofessentials.com</span>
+      <span>Date ____________</span>
+    </footer>
+   </div>
+  </section>
+  <section class="page page--plate">
+   <div class="sheet sheet--plate">
+    <header class="plate__head">
+      <h2 class="plate__title">An apple for the pony</h2>
+      <div class="plate__num"><span class="plate__star">&#9733;</span><span>Page 17</span></div>
+    </header>
+    <p class="plate__prompt">Be gentle. Color the pony soft and warm.</p>
+    <div class="plate__frame">
+      <img src="art_print/CB_Ponyapple.jpg" alt="An apple for the pony &mdash; coloring page line art" />
+    </div>
+    <footer class="plate__foot">
+      <span>Name ____________________</span>
+      <span>The Sound of Essentials · soundofessentials.com</span>
+      <span>Date ____________</span>
+    </footer>
+   </div>
+  </section>
+  <section class="page page--plate">
+   <div class="sheet sheet--plate">
+    <header class="plate__head">
+      <h2 class="plate__title">Out to pasture</h2>
+      <div class="plate__num"><span class="plate__star">&#9733;</span><span>Page 18</span></div>
+    </header>
+    <p class="plate__prompt">Color the fence, then the hills behind it.</p>
+    <div class="plate__frame">
+      <img src="art_print/CB_Pasture.jpg" alt="Out to pasture &mdash; coloring page line art" />
+    </div>
+    <footer class="plate__foot">
+      <span>Name ____________________</span>
+      <span>The Sound of Essentials · soundofessentials.com</span>
+      <span>Date ____________</span>
+    </footer>
+   </div>
+  </section>
+  <section class="page page--plate">
+   <div class="sheet sheet--plate">
+    <header class="plate__head">
+      <h2 class="plate__title">A horse runs free</h2>
+      <div class="plate__num"><span class="plate__star">&#9733;</span><span>Page 19</span></div>
+    </header>
+    <p class="plate__prompt">Color the mane flying in the wind.</p>
+    <div class="plate__frame">
+      <img src="art_print/CB_Horse.jpg" alt="A horse runs free &mdash; coloring page line art" />
+    </div>
+    <footer class="plate__foot">
+      <span>Name ____________________</span>
+      <span>The Sound of Essentials · soundofessentials.com</span>
+      <span>Date ____________</span>
+    </footer>
+   </div>
+  </section>
+  <section class="page page--plate">
+   <div class="sheet sheet--plate">
+    <header class="plate__head">
+      <h2 class="plate__title">A friendly hello</h2>
+      <div class="plate__num"><span class="plate__star">&#9733;</span><span>Page 20</span></div>
+    </header>
+    <p class="plate__prompt">Color the big old tree and its long branches.</p>
+    <div class="plate__frame">
+      <img src="art_print/CB_Pethorse.jpg" alt="A friendly hello &mdash; coloring page line art" />
+    </div>
+    <footer class="plate__foot">
+      <span>Name ____________________</span>
+      <span>The Sound of Essentials · soundofessentials.com</span>
+      <span>Date ____________</span>
+    </footer>
+   </div>
+  </section>
+  <section class="page page--plate">
+   <div class="sheet sheet--plate">
+    <header class="plate__head">
+      <h2 class="plate__title">Brushing time</h2>
+      <div class="plate__num"><span class="plate__star">&#9733;</span><span>Page 21</span></div>
+    </header>
+    <p class="plate__prompt">Slow strokes. Color the tall grass around them.</p>
+    <div class="plate__frame">
+      <img src="art_print/CB_Brushhorse.jpg" alt="Brushing time &mdash; coloring page line art" />
+    </div>
+    <footer class="plate__foot">
+      <span>Name ____________________</span>
+      <span>The Sound of Essentials · soundofessentials.com</span>
+      <span>Date ____________</span>
+    </footer>
+   </div>
+  </section>
+  <section class="page page--plate">
+   <div class="sheet sheet--plate">
+    <header class="plate__head">
+      <h2 class="plate__title">Time to rest</h2>
+      <div class="plate__num"><span class="plate__star">&#9733;</span><span>Page 22</span></div>
+    </header>
+    <p class="plate__prompt">Shhh — the pony is sleeping. Use quiet colors.</p>
+    <div class="plate__frame">
+      <img src="art_print/CB_Ponysleep.jpg" alt="Time to rest &mdash; coloring page line art" />
+    </div>
+    <footer class="plate__foot">
+      <span>Name ____________________</span>
+      <span>The Sound of Essentials · soundofessentials.com</span>
+      <span>Date ____________</span>
+    </footer>
+   </div>
+  </section>
+  <section class="page page--plate">
+   <div class="sheet sheet--plate">
+    <header class="plate__head">
+      <h2 class="plate__title">Le cheval</h2>
+      <div class="plate__num"><span class="plate__star">&#9733;</span><span>Page 23</span></div>
+    </header>
+    <p class="plate__prompt">A new word today. Say it out loud, then color the meadow.</p>
+    <div class="plate__frame">
+      <img src="art_print/CB_LeCheval.jpg" alt="Le cheval &mdash; coloring page line art" />
+    </div>
+    <footer class="plate__foot">
+      <span>Name ____________________</span>
+      <span>The Sound of Essentials · soundofessentials.com</span>
+      <span>Date ____________</span>
+    </footer>
+   </div>
+  </section>
+  <section class="page page--plate">
+   <div class="sheet sheet--plate">
+    <header class="plate__head">
+      <h2 class="plate__title">Oink!</h2>
+      <div class="plate__num"><span class="plate__star">&#9733;</span><span>Page 24</span></div>
+    </header>
+    <p class="plate__prompt">Color the piggy and every bubble around it.</p>
+    <div class="plate__frame">
+      <img src="art_print/CB_Oink.jpg" alt="Oink! &mdash; coloring page line art" />
+    </div>
+    <footer class="plate__foot">
+      <span>Name ____________________</span>
+      <span>The Sound of Essentials · soundofessentials.com</span>
+      <span>Date ____________</span>
+    </footer>
+   </div>
+  </section>
+  <section class="page page--plate">
+   <div class="sheet sheet--plate">
+    <header class="plate__head">
+      <h2 class="plate__title">Lunch together</h2>
+      <div class="plate__num"><span class="plate__star">&#9733;</span><span>Page 25</span></div>
+    </header>
+    <p class="plate__prompt">Everyone shares. Color the picnic in the shade.</p>
+    <div class="plate__frame">
+      <img src="art_print/CB_lunch.jpg" alt="Lunch together &mdash; coloring page line art" />
+    </div>
+    <footer class="plate__foot">
+      <span>Name ____________________</span>
+      <span>The Sound of Essentials · soundofessentials.com</span>
+      <span>Date ____________</span>
+    </footer>
+   </div>
+  </section>
+  <section class="page page--plate">
+   <div class="sheet sheet--plate">
+    <header class="plate__head">
+      <h2 class="plate__title">Little boats</h2>
+      <div class="plate__num"><span class="plate__star">&#9733;</span><span>Page 26</span></div>
+    </header>
+    <p class="plate__prompt">Color the water first, then the boats.</p>
+    <div class="plate__frame">
+      <img src="art_print/CB_Boats.jpg" alt="Little boats &mdash; coloring page line art" />
+    </div>
+    <footer class="plate__foot">
+      <span>Name ____________________</span>
+      <span>The Sound of Essentials · soundofessentials.com</span>
+      <span>Date ____________</span>
+    </footer>
+   </div>
+  </section>
+  <section class="page page--plate">
+   <div class="sheet sheet--plate">
+    <header class="plate__head">
+      <h2 class="plate__title">At the water</h2>
+      <div class="plate__num"><span class="plate__star">&#9733;</span><span>Page 27</span></div>
+    </header>
+    <p class="plate__prompt">Color the ripples and the reeds.</p>
+    <div class="plate__frame">
+      <img src="art_print/CB_water.jpg" alt="At the water &mdash; coloring page line art" />
+    </div>
+    <footer class="plate__foot">
+      <span>Name ____________________</span>
+      <span>The Sound of Essentials · soundofessentials.com</span>
+      <span>Date ____________</span>
+    </footer>
+   </div>
+  </section>
+  <section class="page page--plate">
+   <div class="sheet sheet--plate">
+    <header class="plate__head">
+      <h2 class="plate__title">Aquaria</h2>
+      <div class="plate__num"><span class="plate__star">&#9733;</span><span>Page 28</span></div>
+    </header>
+    <p class="plate__prompt">A big wave rises. What color is the sea today?</p>
+    <div class="plate__frame">
+      <img src="art_print/CB_Aquaria.jpg" alt="Aquaria &mdash; coloring page line art" />
+    </div>
+    <footer class="plate__foot">
+      <span>Name ____________________</span>
+      <span>The Sound of Essentials · soundofessentials.com</span>
+      <span>Date ____________</span>
+    </footer>
+   </div>
+  </section>
+  <section class="page page--plate">
+   <div class="sheet sheet--plate">
+    <header class="plate__head">
+      <h2 class="plate__title">Sunset on the shore</h2>
+      <div class="plate__num"><span class="plate__star">&#9733;</span><span>Page 29</span></div>
+    </header>
+    <p class="plate__prompt">Color the sun going down behind her.</p>
+    <div class="plate__frame">
+      <img src="art_print/CB_WaveSunset.jpg" alt="Sunset on the shore &mdash; coloring page line art" />
+    </div>
+    <footer class="plate__foot">
+      <span>Name ____________________</span>
+      <span>The Sound of Essentials · soundofessentials.com</span>
+      <span>Date ____________</span>
+    </footer>
+   </div>
+  </section>
+  <section class="page page--plate">
+   <div class="sheet sheet--plate">
+    <header class="plate__head">
+      <h2 class="plate__title">Terrasol farm</h2>
+      <div class="plate__num"><span class="plate__star">&#9733;</span><span>Page 30</span></div>
+    </header>
+    <p class="plate__prompt">Color the barn red — or any color you choose.</p>
+    <div class="plate__frame">
+      <img src="art_print/CB_Terrasol.jpg" alt="Terrasol farm &mdash; coloring page line art" />
+    </div>
+    <footer class="plate__foot">
+      <span>Name ____________________</span>
+      <span>The Sound of Essentials · soundofessentials.com</span>
+      <span>Date ____________</span>
+    </footer>
+   </div>
+  </section>
+  <section class="page page--plate">
+   <div class="sheet sheet--plate">
+    <header class="plate__head">
+      <h2 class="plate__title">Keep on learning</h2>
+      <div class="plate__num"><span class="plate__star">&#9733;</span><span>Page 31</span></div>
+    </header>
+    <p class="plate__prompt">The sky opens up. Color the light shining down.</p>
+    <div class="plate__frame">
+      <img src="art_print/CB_Keeponlearning.jpg" alt="Keep on learning &mdash; coloring page line art" />
+    </div>
+    <footer class="plate__foot">
+      <span>Name ____________________</span>
+      <span>The Sound of Essentials · soundofessentials.com</span>
+      <span>Date ____________</span>
+    </footer>
+   </div>
+  </section>
+  <section class="page page--plate">
+   <div class="sheet sheet--plate">
+    <header class="plate__head">
+      <h2 class="plate__title">Friends of Aquaria</h2>
+      <div class="plate__num"><span class="plate__star">&#9733;</span><span>Page 32</span></div>
+    </header>
+    <p class="plate__prompt">Two friends, head to toe. Color their clothes.</p>
+    <div class="plate__frame">
+      <img src="art_print/CB_AquariaDuo.jpg" alt="Friends of Aquaria &mdash; coloring page line art" />
+    </div>
+    <footer class="plate__foot">
+      <span>Name ____________________</span>
+      <span>The Sound of Essentials · soundofessentials.com</span>
+      <span>Date ____________</span>
+    </footer>
+   </div>
+  </section>
+  <section class="page page--plate">
+   <div class="sheet sheet--plate">
+    <header class="plate__head">
+      <h2 class="plate__title">Friends of Celestia</h2>
+      <div class="plate__num"><span class="plate__star">&#9733;</span><span>Page 33</span></div>
+    </header>
+    <p class="plate__prompt">Color their robes and their happy faces.</p>
+    <div class="plate__frame">
+      <img src="art_print/CB_CelestiaDuo.jpg" alt="Friends of Celestia &mdash; coloring page line art" />
+    </div>
+    <footer class="plate__foot">
+      <span>Name ____________________</span>
+      <span>The Sound of Essentials · soundofessentials.com</span>
+      <span>Date ____________</span>
+    </footer>
+   </div>
+  </section>
+  <section class="page page--plate">
+   <div class="sheet sheet--plate">
+    <header class="plate__head">
+      <h2 class="plate__title">Friends of Harmonia</h2>
+      <div class="plate__num"><span class="plate__star">&#9733;</span><span>Page 34</span></div>
+    </header>
+    <p class="plate__prompt">Color the music notes floating around them.</p>
+    <div class="plate__frame">
+      <img src="art_print/CB_HarmoniaDuo.jpg" alt="Friends of Harmonia &mdash; coloring page line art" />
+    </div>
+    <footer class="plate__foot">
+      <span>Name ____________________</span>
+      <span>The Sound of Essentials · soundofessentials.com</span>
+      <span>Date ____________</span>
+    </footer>
+   </div>
+  </section>
+  <section class="page page--plate">
+   <div class="sheet sheet--plate">
+    <header class="plate__head">
+      <h2 class="plate__title">Friends of Luminosity</h2>
+      <div class="plate__num"><span class="plate__star">&#9733;</span><span>Page 35</span></div>
+    </header>
+    <p class="plate__prompt">Give them a bright color that shines.</p>
+    <div class="plate__frame">
+      <img src="art_print/CB_Luminosity%20Duo.jpg" alt="Friends of Luminosity &mdash; coloring page line art" />
+    </div>
+    <footer class="plate__foot">
+      <span>Name ____________________</span>
+      <span>The Sound of Essentials · soundofessentials.com</span>
+      <span>Date ____________</span>
+    </footer>
+   </div>
+  </section>
+  <section class="page page--plate">
+   <div class="sheet sheet--plate">
+    <header class="plate__head">
+      <h2 class="plate__title">Friends of Terrasol</h2>
+      <div class="plate__num"><span class="plate__star">&#9733;</span><span>Page 36</span></div>
+    </header>
+    <p class="plate__prompt">Color their boots for a day on the farm.</p>
+    <div class="plate__frame">
+      <img src="art_print/CB_TerrasolDuo.jpg" alt="Friends of Terrasol &mdash; coloring page line art" />
+    </div>
+    <footer class="plate__foot">
+      <span>Name ____________________</span>
+      <span>The Sound of Essentials · soundofessentials.com</span>
+      <span>Date ____________</span>
+    </footer>
+   </div>
+  </section>
+  <section class="page page--plate">
+   <div class="sheet sheet--plate">
+    <header class="plate__head">
+      <h2 class="plate__title">Friends of Vitalis</h2>
+      <div class="plate__num"><span class="plate__star">&#9733;</span><span>Page 37</span></div>
+    </header>
+    <p class="plate__prompt">Stretch up tall! Color them strong and healthy.</p>
+    <div class="plate__frame">
+      <img src="art_print/CB_VitalisDuo.jpg" alt="Friends of Vitalis &mdash; coloring page line art" />
+    </div>
+    <footer class="plate__foot">
+      <span>Name ____________________</span>
+      <span>The Sound of Essentials · soundofessentials.com</span>
+      <span>Date ____________</span>
+    </footer>
+   </div>
+  </section>
+  <section class="page page--plate">
+   <div class="sheet sheet--plate">
+    <header class="plate__head">
+      <h2 class="plate__title">You did it!</h2>
+      <div class="plate__num"><span class="plate__star">&#9733;</span><span>Page 38</span></div>
+    </header>
+    <p class="plate__prompt">You walked the whole path. Color your celebration.</p>
+    <div class="plate__frame">
+      <img src="art_print/CB_Congrats.jpg" alt="You did it! &mdash; coloring page line art" />
+    </div>
+    <footer class="plate__foot">
+      <span>Name ____________________</span>
+      <span>The Sound of Essentials · soundofessentials.com</span>
+      <span>Date ____________</span>
+    </footer>
+   </div>
+  </section>
+</main>
+
+<script>
+  // Each control flips a data-attribute on <html>; every visual consequence
+  // lives in coloring-book.css. Nothing here computes style.
+  for (const sel of document.querySelectorAll('.controls [data-prop]')) {
+    const key = sel.dataset.prop;
+    sel.value = document.documentElement.dataset[key];
+    sel.addEventListener('change', () => {
+      document.documentElement.dataset[key] = sel.value;
+      localStorage.setItem('rq-' + key, sel.value);
+    });
+    const saved = localStorage.getItem('rq-' + key);
+    if (saved) { sel.value = saved; document.documentElement.dataset[key] = saved; }
+  }
+</script>
+</body>
+</html>
