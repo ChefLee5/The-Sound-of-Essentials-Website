@@ -7,6 +7,7 @@ import { assetPath } from '../utils/assetPath';
 import ProofInThePause from '../components/ui/ProofInThePause';
 import StickyThumbCta from '../components/ui/StickyThumbCta';
 import { trackInitiateCheckout, appendUtmsToUrl } from '../utils/analytics';
+import ConciergeBadge from '../components/ConciergeBadge';
 import './RhythmQuestSale.css';
 
 /**
@@ -1180,7 +1181,7 @@ const RhythmReadyFaq = () => (
    ═══════════════════════════════════════════════════════════════ */
 const RhythmQuestSale = () => {
   useEffect(() => {
-    document.title = 'The Sound of Essentials: Rhythm Ready Workbook — 8-Week Readiness Quest (Grades K–3)';
+    document.title = 'The Sound of Essentials: Rhythm Ready Workbook — 8-Week Readiness Quest (Ages 2–7)';
   }, []);
 
   const carouselOrder = [
@@ -1252,12 +1253,13 @@ const RhythmQuestSale = () => {
                 Get the Workbook &amp; Curriculum Today
               </h2>
               <p className="section-subtitle" style={{ marginTop: '1rem' }}>
-                8 Weeks. 40 Days. 240+ Daily Activities. Grades K–3.
+                8 Weeks. 40 Days. 240+ Daily Activities. Pre-K to Grade 2 (Ages 2–7).
                 <br />
                 <span style={{ color: 'var(--color-green)', fontWeight: 600 }}>
                   A multi-sensory, music-powered learning routine.
                 </span>
               </p>
+              <ConciergeBadge />
               <div className="rq-cta-actions">
                 <RqBuyLink className="btn btn-gold">Get the Workbook &amp; Curriculum — $21</RqBuyLink>
                 <a href="#dictionary-presale" className="btn btn-outline">Pre-Order Picture Dictionary — $55 ↓</a>
