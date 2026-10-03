@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SOE Canonical World Model & Identity Contract",
+  "version": "2.0.0",
+  "updated": "2026-09-30",
+  "target_audience": {
+    "age_range": "Ages 2–7 (Pre-K to Grade 2)",
+    "min_age": 2,
+    "max_age": 7,
+    "grade_ceiling": "Grade 2",
+    "buyers": ["Parents", "Homeschoolers", "Early Childhood Educators", "State DOEs", "Head Start Consortia"]
+  },
+  "tagline": "Designed for the developing brain — not the algorithm.",
+  "brand_proof_line": "Crafted by a father's heart and a mother's love, born from living the early learning crisis and built with whole-heart devotion. 15 years in the making.",
+  "canonical_lands": [
+    "harmonia",
+    "numeria",
+    "vitalis",
+    "celestia",
+    "luminosity",
+    "aquaria",
+    "terrasol"
+  ],
+  "canonical_hero_pairs": {
+    "harmonia": ["kenji", "aiko"],
+    "numeria": ["kwame", "octavia"],
+    "vitalis": ["felix", "amara"],
+    "celestia": ["elias", "selene"],
+    "luminosity": ["athena", "ezra"],
+    "aquaria": ["nerissa", "ronan"],
+    "terrasol": ["vesta", "silas"]
+  },
+  "featured_guardian": {
+    "id": "seriphia",
+    "name": "Seriphia",
+    "title": "Guardian of the Sound",
+    "appearance": "Black woman with gentle, discerning eyes, thin gold-rimmed circular glasses, subtle faint gold halo of light, elegant cream/ivory linen robe with subtle gold embroidery."
+  },
+  "banned_entities": [
+    { "pattern": "\\bMarcus\\b", "reason": "Retired character (Marcus was retired in July 2026 canon)" },
+    { "pattern": "\\bElena\\b", "reason": "Retired character (Elena was retired in July 2026 canon)" },
+    { "pattern": "\\bGeometria\\b", "reason": "Retired land (Replaced by Aquaria)" },
+    { "pattern": "\\bSophia\\b", "reason": "Retired land/entity (Replaced by Luminosity)" },
+    { "pattern": "\\bAges?\\s*2\\s*[-–—]\\s*8\\b", "reason": "Canon age is strictly Ages 2–7 (Pre-K to Grade 2)" },
+    { "pattern": "\\bGrade\\s*3\\b", "reason": "Canon ceiling is Grade 2; Grade 3 is strictly retired" },
+    { "pattern": "\\blive\\s+(instrumentation|instruments?|acoustic\\s+instruments?|orchestra|music)\\b", "reason": "Canon restriction: SOE was recorded live, but does NOT have live instrumentation or live music. Never claim live instruments/music." },
+    { "pattern": "\\blive\\s+acoustic\\b", "reason": "Canon restriction: No 'live acoustic' claims for instrumentation or music." },
+    { "pattern": "\\blive\\s+organic\\b", "reason": "Canon restriction: No 'live organic' claims." },
+    { "pattern": "\\bShopify\\b", "reason": "Shopify is strictly retired. Complete omission of Shopify in our stack. All payments use Direct Stripe API with card vaulting." }
+  ],
+  "music_production_canon": {
+    "total_tracks": 19,
+    "album_title": "The Sound of Essentials: Rhythm Quest",
+    "delivery": "100% Free streaming on soelearn.com/listen / $19 digital download",
+    "production_method": "Originally published music — 19 master studio recordings, recorded live in studio sessions with authentic human vocals and warm acoustic arrangements.",
+    "strict_omissions_and_corrections": [
+      "ORIGINALLY PUBLISHED MUSIC: The Sound of Essentials is originally published music (originally published 19-track acoustic album recorded live in studio sessions).",
+      "NO LIVE INSTRUMENTATION: SOE was recorded live, but does NOT feature live instrumentation. Never state or imply live instruments, live instrumentation, live orchestra, or live music.",
+      "NO INVENTED INSTRUMENTS: Never invent specific instruments (e.g., violins, cellos, upright bass, kalimbas, nylon-string guitars, harps, djembes).",
+      "CANON COPY FIDELITY: Stick strictly to documented canon copy and compound what has been established. Stop deviating, creating hallucinated claims, or introducing unvetted marketing copy."
+    ]
+  },
+  "developmental_domains": [
+    { "id": "language", "name": "Language & Literacy", "land": "harmonia" },
+    { "id": "cognitive", "name": "Cognitive & Mathematical Reasoning", "land": "numeria" },
+    { "id": "physical", "name": "Physical Development & Somatic Movement", "land": "vitalis" },
+    { "id": "science", "name": "Scientific Exploration & Temporal Inquiry", "land": "celestia" },
+    { "id": "social_emotional", "name": "Social-Emotional Learning & Moral Character", "land": "luminosity" }
+  ],
+  "cultural_deltas": [
+    { "delta": 1, "name": "Screen vs. Sensory", "focus": "Tactile, audio-first learning over addictive screen flicker" },
+    { "delta": 2, "name": "Testing vs. Arts", "focus": "Music, rhythm, and poetry over standardized testing drill" },
+    { "delta": 3, "name": "Algorithm vs. Handcrafted", "focus": "Parent-crafted intentionality over dopamine algorithms" },
+    { "delta": 4, "name": "Institution vs. Sanctuary", "focus": "Home and community sanctuary over institutional assembly-line schooling" },
+    { "delta": 5, "name": "Consumption vs. Quest", "focus": "Active developmental quest over passive media consumption" }
+  ]
+}

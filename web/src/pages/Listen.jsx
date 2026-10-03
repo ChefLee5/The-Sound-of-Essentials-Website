@@ -246,19 +246,35 @@ const Listen = () => {
                 <span className="badge-tag">{t('listen.ethicalHeistBadge')}</span>
                 <h2 className="heist-title">{t('listen.ethicalHeistTitle')}</h2>
                 <p className="heist-subtitle">{t('listen.ethicalHeistSubtitle')}</p>
+
+                {/* Primary Direct D2C Email Capture Form */}
+                <form onSubmit={handleDirectOptin} className="ethical-heist-form" id="heist-email-form">
+                  <div className="heist-input-group">
+                    <input
+                      type="email"
+                      required
+                      value={directEmail}
+                      onChange={(e) => setDirectEmail(e.target.value)}
+                      placeholder="Enter your email to unlock all 19 tracks..."
+                      className="heist-email-input"
+                      aria-label="Parent email address"
+                    />
+                    <button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="btn btn-gold btn-shimmer heist-submit-btn"
+                    >
+                      {isSubmitting ? 'Unlocking...' : `🎧 ${t('listen.ethicalHeistCta')} →`}
+                    </button>
+                  </div>
+                  {optinError && <p className="heist-error" role="alert">{optinError}</p>}
+                  <p className="heist-guarantee">
+                    🔒 100% Free · Instant streaming player &amp; printable coloring book delivery · No spam
+                  </p>
+                </form>
               </div>
 
-              <div style={{ margin: '1.5rem auto 1rem auto', display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap', alignItems: 'center' }}>
-                <MagneticPill intensity={0.25}>
-                  <button
-                    type="button"
-                    onClick={() => openAlbumUnlockGate()}
-                    className="btn btn-gold btn-shimmer"
-                    style={{ fontSize: '1.05rem', padding: '0.9rem 2.5rem', cursor: 'pointer', border: 'none' }}
-                  >
-                    🎧 {t('listen.ethicalHeistCta')} →
-                  </button>
-                </MagneticPill>
+              <div style={{ margin: '1.25rem auto 1rem auto', display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap', alignItems: 'center' }}>
                 <button
                   type="button"
                   onClick={handleColoringBookDownloadClick}

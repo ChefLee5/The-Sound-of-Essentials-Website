@@ -112,6 +112,64 @@
   margin: 0;
 }
 
+/* ── Inline Email Capture Form ── */
+.ethical-heist-form {
+  margin-top: 1.25rem;
+}
+
+.heist-input-group {
+  display: flex;
+  gap: 0.6rem;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+@media (max-width: 640px) {
+  .heist-input-group {
+    flex-direction: column;
+  }
+}
+
+.heist-email-input {
+  flex: 1;
+  padding: 0.85rem 1.4rem;
+  border: 2px solid #e5e7eb;
+  border-radius: var(--radius-xl, 50px);
+  font-size: 1rem;
+  font-family: inherit;
+  color: var(--color-text-dark, #1f2937);
+  background: #ffffff;
+  outline: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.heist-email-input:focus {
+  border-color: var(--color-orange, #ff6f00);
+  box-shadow: 0 0 0 3px rgba(255, 111, 0, 0.15);
+}
+
+.heist-submit-btn {
+  font-size: 1.02rem;
+  padding: 0.85rem 2rem;
+  white-space: nowrap;
+  border: none;
+  cursor: pointer;
+}
+
+.heist-error {
+  color: #dc2626;
+  font-size: 0.88rem;
+  font-weight: 600;
+  margin: 0.6rem 0 0 0;
+}
+
+.heist-guarantee {
+  font-size: 0.82rem;
+  color: var(--color-text-muted, #6b7280);
+  margin: 0.75rem 0 0 0;
+}
+
 /* ── Album Cover ── */
 .listen-cover {
   display: flex;

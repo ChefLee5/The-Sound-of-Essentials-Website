@@ -6,7 +6,7 @@
  * Enforces canonical consistency, world model integrity, card-vaulting
  * constraints, and anti-slop rules across The Sound of Essentials ecosystem.
  *
- * Modeled on Shopify's Helix Gate 1 (Behavior & Headless Integrity).
+ * SOE Helix Gate 1 (Behavior & Platform Invariant Verifier).
  * Fails with EXIT CODE 2 if any gate check fails (Ralph Loop / Non-Escape).
  * ============================================================================
  */
@@ -19,14 +19,18 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const WEB_ROOT = path.resolve(__dirname, '..');
 const ECO_ROOT = path.resolve(WEB_ROOT, '..');
-const CORE_CANON_PATH = path.resolve(ECO_ROOT, '.agents', 'core', 'canon.json');
+const candidateCanonPaths = [
+  path.resolve(ECO_ROOT, '.agents', 'core', 'canon.json'),
+  path.resolve(ECO_ROOT, '..', '.agents', 'core', 'canon.json'),
+];
+const CORE_CANON_PATH = candidateCanonPaths.find((p) => fs.existsSync(p));
 
 // ── CANONICAL DEFINITIONS (Loaded Dynamically from .agents/core/canon.json) ──
 let CANONICAL_LANDS = [];
 let CANONICAL_HERO_PAIRS = {};
 let BANNED_PATTERNS = [];
 
-if (fs.existsSync(CORE_CANON_PATH)) {
+if (CORE_CANON_PATH && fs.existsSync(CORE_CANON_PATH)) {
   const canonData = JSON.parse(fs.readFileSync(CORE_CANON_PATH, 'utf8'));
   CANONICAL_LANDS = canonData.canonical_lands;
   CANONICAL_HERO_PAIRS = canonData.canonical_hero_pairs;
@@ -50,8 +54,13 @@ if (fs.existsSync(CORE_CANON_PATH)) {
     { pattern: /\bMarcus\b/gi, reason: 'Retired character (Marcus was retired in July 2026 canon)' },
     { pattern: /\bElena\b/gi, reason: 'Retired character (Elena was retired in July 2026 canon)' },
     { pattern: /\bGeometria\b/gi, reason: 'Retired land (Replaced by Aquaria)' },
+    { pattern: /\bSophia\b/gi, reason: 'Retired land/entity (Replaced by Luminosity)' },
     { pattern: /\bAges?\s*2\s*[-–—]\s*8\b/gi, reason: 'Canon age is strictly Ages 2–7 (Pre-K to Grade 2)' },
     { pattern: /\bGrade\s*3\b/gi, reason: 'Canon ceiling is Grade 2; Grade 3 is strictly retired' },
+    { pattern: /\blive\s+(instrumentation|instruments?|acoustic\s+instruments?|orchestra|music)\b/gi, reason: 'Canon restriction: SOE was recorded live, but does NOT have live instrumentation or live music. Never claim live instruments/music.' },
+    { pattern: /\blive\s+acoustic\b/gi, reason: 'Canon restriction: No live acoustic claims for instrumentation or music.' },
+    { pattern: /\blive\s+organic\b/gi, reason: 'Canon restriction: No live organic claims.' },
+    { pattern: /\bShopify\b/gi, reason: 'Shopify is strictly retired. Complete omission of Shopify in our stack. All payments use Direct Stripe API.' },
   ];
 }
 
@@ -147,8 +156,8 @@ check('tracks.json contains all 19 tracks mapped to valid lands', () => {
   return true;
 });
 
-// ── 2. SHOPIFY CARD-VAULTING INVARIANTS ──────────────────────────────────────
-console.log('\n\x1b[1m[2/4] Verifying Shopify Revenue Stack & Card-Vaulting Invariants...\x1b[0m');
+// ── 2. DIRECT STRIPE REVENUE STACK & CARD-VAULTING INVARIANTS ─────────────────
+console.log('\n\x1b[1m[2/4] Verifying Direct Stripe Revenue Stack & Card-Vaulting Invariants...\x1b[0m');
 
 check('products.json satisfies card-vaulting hierarchy (>= $0.50 threshold)', () => {
   if (!fs.existsSync(productsPath)) return 'products.json not found';

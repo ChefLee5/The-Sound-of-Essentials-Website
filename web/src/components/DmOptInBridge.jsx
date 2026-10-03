@@ -15,12 +15,12 @@ export default function DmOptInBridge() {
         rel="noopener noreferrer"
         className="dm-trigger-btn"
         id="dm-instagram-trigger"
-        aria-label="Direct message SOE on Instagram to get tracks instantly with no email"
+        aria-label="Connect with SOE on Instagram to get tracks delivered in addition to email"
       >
         <span className="dm-icon" role="img" aria-label="Chat Bubble">💬</span>
         <div className="dm-text">
-          <strong>{t('listen.dmCtaTitle', 'Send to my Instagram (No Email Required)')}</strong>
-          <small>{t('listen.dmCtaSubtitle', 'DM "RHYTHM" to @soelearn & get tracks instantly')}</small>
+          <strong>{t('listen.dmCtaTitle', 'Also Connect via Instagram DM')}</strong>
+          <small>{t('listen.dmCtaSubtitle', 'Get tracks and coloring book delivered to your Instagram in addition to email')}</small>
         </div>
       </a>
     </div>

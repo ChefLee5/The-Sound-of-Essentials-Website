@@ -954,7 +954,7 @@ const AdminCrm = () => {
               activities.map((act) => (
                 <div key={act.id} className="crm-activity-item">
                   <div className="crm-activity-icon">
-                    {act.activity_type === 'stripe_checkout' || act.activity_type === 'shopify_order' ? '💳' : act.activity_type === 'form_submit' ? '📝' : act.activity_type === 'email_outreach' ? '✉️' : '🎵'}
+                    {act.activity_type === 'stripe_checkout' || act.activity_type === 'stripe_order' ? '💳' : act.activity_type === 'form_submit' ? '📝' : act.activity_type === 'email_outreach' ? '✉️' : '🎵'}
                   </div>
                   <div className="crm-activity-body">
                     <div className="crm-activity-header">

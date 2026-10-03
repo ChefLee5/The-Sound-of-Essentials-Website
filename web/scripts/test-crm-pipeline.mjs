@@ -83,10 +83,10 @@ async function testCrmPipeline() {
   }
 
   // -------------------------------------------------------------
-  // TEST 4: Shopify Webhook Ingestion (/api/webhooks/shopify)
+  // TEST 4: Stripe Webhook Ingestion (/api/webhooks/stripe)
   // -------------------------------------------------------------
   total++;
-  console.log('\n[TEST 4] Testing Shopify Webhook Order Sync Simulation...');
+  console.log('\n[TEST 4] Testing Stripe Webhook Order Sync Simulation...');
   const webhookEmail = `test.customer.${Date.now()}@parentmail.org`;
   try {
     const payload = JSON.stringify({
@@ -106,7 +106,7 @@ async function testCrmPipeline() {
       ],
     });
 
-    const res = await fetchUrl(`${PRODUCTION_URL}/api/webhooks/shopify`, {
+    const res = await fetchUrl(`${PRODUCTION_URL}/api/webhooks/stripe`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -117,11 +117,11 @@ async function testCrmPipeline() {
 
     const json = JSON.parse(res.body);
     if (res.status === 200 && json.success) {
-      console.log('✅ PASS: Shopify order ingested automatically into CRM contact + activities!');
+      console.log('✅ PASS: Stripe order ingested automatically into CRM contact + activities!');
       console.log(`   Customer ID: ${json.contactId}`);
       passed++;
     } else {
-      console.log('❌ FAIL: Shopify webhook error:', res.body);
+      console.log('❌ FAIL: Stripe webhook error:', res.body);
     }
   } catch (err) {
     console.error('❌ FAIL:', err.message);

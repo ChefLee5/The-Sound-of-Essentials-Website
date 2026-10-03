@@ -56,7 +56,7 @@ export const getStoredUtms = () => {
 };
 
 /**
- * Appends persisted UTM parameters to an outgoing URL (e.g. Shopify checkout or referral link).
+ * Appends persisted UTM parameters to an outgoing URL (e.g. Stripe checkout or referral link).
  */
 export const appendUtmsToUrl = (urlStr) => {
   if (!urlStr || typeof window === 'undefined') return urlStr;

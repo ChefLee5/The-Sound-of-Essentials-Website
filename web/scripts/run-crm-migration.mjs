@@ -77,11 +77,11 @@ async function runCrmMigration() {
 
       INSERT INTO crm_activities (contact_id, activity_type, title, description)
       SELECT id, 'form_submit', 'Institutional Partnership Inquiry', 'Submitted request from /join inquiring about curriculum licensing for 5 classrooms.'
-      FROM crm_contacts WHERE email = 'elena.montessori@oakridgeacademy.edu';
+      FROM crm_contacts WHERE email = 'sarah.montessori@oakridgeacademy.edu';
 
       INSERT INTO crm_activities (contact_id, activity_type, title, description)
-      SELECT id, 'shopify_order', 'Purchased Rhythm Ready Print Workbook', 'Order #SOE-1042 completed via Shopify ($35.00).'
-      FROM crm_contacts WHERE email = 'marcus.parent@gmail.com';
+      SELECT id, 'stripe_order', 'Purchased Rhythm Ready Print Workbook', 'Order #SOE-1042 completed via Stripe checkout ($35.00).'
+      FROM crm_contacts WHERE email = 'david.parent@gmail.com';
     `;
 
     // Clean seed statements
