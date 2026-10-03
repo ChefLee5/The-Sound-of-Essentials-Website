@@ -194,7 +194,7 @@ const ProgrammaticPersonaPage = () => {
               <h3 className="pseo-spotlight-title">{page.trackTitle}</h3>
               <span className="pseo-spotlight-sub">{page.trackNumber} · {page.trackFocus}</span>
               <p className="pseo-spotlight-desc">
-                Recorded with organic nylon-string guitars, wooden kalimbas, and hand percussion. Calibrated at gentle 90–110 BPM resting heart-rate tempo to nurture autonomic nervous system balance.
+                Recorded live in studio sessions with warm acoustic arrangements. Calibrated at gentle 90–110 BPM resting heart-rate tempo to nurture autonomic nervous system balance.
               </p>
               <div className="pseo-spotlight-actions">
                 <Link to="/listen?unlocked=true" className="pseo-btn pseo-btn-primary">

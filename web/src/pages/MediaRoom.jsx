@@ -625,7 +625,14 @@ const MediaRoom = () => {
                   ⬇️ Download
                 </button>
 
-                <Link to="/join" className="btn btn-gold">{t('media.pre_order_coloring')}</Link>
+                <a
+                  href="https://buy.stripe.com/test_8x2aEXbJW0BLcwS0oi6Vq01"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-gold"
+                >
+                  {t('media.pre_order_coloring')}
+                </a>
               </div>
             </div>
           </RevealSection>

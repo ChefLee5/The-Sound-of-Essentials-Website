@@ -55,7 +55,7 @@ const TermsOfService = () => {
           <section style={{ marginBottom: '2rem' }}>
             <h2 style={{ color: 'var(--color-orange, #FF6F00)', fontSize: '1.4rem', marginBottom: '0.8rem' }}>3. Digital Goods &amp; Physical Fulfillment</h2>
             <ul style={{ paddingLeft: '1.5rem', marginTop: '0.5rem' }}>
-              <li><strong>Free Album &amp; Digital Downloads:</strong> The Deluxe 19-Track Album and digital coloring books are provided free of charge for founding families. Digital companions (such as the Rhythm Quest Illustrated Ebook and Picture Dictionary) are delivered immediately via secure cloud download links upon purchase confirmation.</li>
+              <li><strong>Free Album &amp; Digital Streaming:</strong> The Deluxe 19-Track Album is gifted freely to founding families for digital streaming and personal enrichment. Digital companions and learning packs (such as the $7 Quest Starter &amp; Coloring Pack, Rhythm Quest Illustrated Ebook, and Picture Dictionary) are delivered immediately via secure cloud download links upon purchase confirmation.</li>
               <li><strong>Physical Workbooks:</strong> Physical editions (such as the print Rhythm Ready Workbook) are fulfilled and shipped to the verified postal address provided at checkout. Tracking numbers are transmitted via email upon dispatch.</li>
             </ul>
           </section>

@@ -165,7 +165,7 @@ All primary text hooks are strictly engineered to front-load the punchline withi
   >
   > Turn morning car rides and quiet time into an 8-week learning quest.
   >
-  > Language, math, science, and somatic movement wrapped in warm orchestral melodies. Free album + coloring pages.
+  > Language, math, science, and somatic movement wrapped in warm acoustic melodies. Free album + coloring pages.
 
 ---
 

@@ -61,7 +61,7 @@
             "price_tag": "Gratuit pour les Familles Fondatrices",
             "price_note": "Accès Numérique Immédiat · À Vous pour Toujours",
             "check_1": "19 chansons originales qui enseignent la phonétique, les maths et les sciences",
-            "check_2": "Livre de coloriage Rhythm Quest de 40 pages et fiches imprimables inclus",
+            "check_2": "Enregistrements acoustiques de maître à travers les 7 Terres et 5 domaines de développement",
             "check_3": "Diffusion numérique instantanée et téléchargement audio MP3 direct",
             "check_4": "Accès 100% Gratuit à l'Album · Envoi Immédiat par Email",
             "cta_primary": "Commencer l'Expérience Gratuite →",
@@ -201,7 +201,7 @@
             "q1": "Pourquoi The Sound of Essentials Deluxe est-il entièrement gratuit ?",
             "a1": "The Sound of Essentials a été créé comme un don authentique aux familles. L'édition Deluxe demeure gratuite afin que chaque enfant bénéficie d'un éveil sensoriel et musical fondamental. L'accès numérique immédiat ne nécessite qu'un email, avec des matériels d'apprentissage et éditions physiques optionnels disponibles à la commande.",
             "q2": "Comment obtenir l'accès numérique immédiat ?",
-            "a2": "Cliquez simplement sur 'Commencer l'Expérience Gratuite' et saisissez votre adresse email. Vous recevrez instantanément l'accès privé aux 19 pistes audio, les liens de téléchargement direct et le livre de coloriage de 40 pages en PDF.",
+            "a2": "Cliquez simplement sur 'Commencer l'Expérience Gratuite' et saisissez votre adresse email. Vous recevrez instantanément l'accès privé aux 19 pistes audio et les liens de téléchargement direct. Vous pouvez également ajouter le Pack de Démarrage et Coloriage à 7 $ pour obtenir le livre de coloriage de 40 pages et le kit de transition.",
             "q3": "À quelle tranche d'âge ce programme s'adresse-t-il ?",
             "a3": "The Sound of Essentials est spécialement conçu pour les enfants de 2 à 7 ans (de la Toute Petite Section au CE1). Il convient aussi bien au foyer qu'aux classes d'éveil.",
             "q4": "Comment le rythme aide-t-il l'enfant à apprendre à lire ?",
@@ -711,7 +711,7 @@
         "read_subtitle": "Suivez Seriphia et les héros page après page.",
         "prev": "← Précédent",
         "next": "Suivant →",
-        "pre_order_coloring": "Pré-commander le Livre de Coloriage",
+        "pre_order_coloring": "Obtenir le Pack de Coloriage (7 $) →",
         "pre_order_book": "Pré-commander le Livre de Contes",
         "lyrics_btn": "Paroles",
         "no_lyrics": "Pas de paroles disponibles pour ce morceau.",
@@ -816,11 +816,12 @@
     "listen": {
         "ethicalHeistBadge": "L'ACCÈS EXCLUSIF",
         "ethicalHeistTitle": "ADOPTEZ la routine matinale de 10 minutes qui a éliminé les crises d'écran dans plus de 500 foyers",
-        "ethicalHeistSubtitle": "Sans écrans. 19 pistes acoustiques enregistrées en studio et le guide tactile pour les 2–7 ans. Gratuit aujourd'hui.",
-        "ethicalHeistCta": "OBTENIR LE GUIDE GRATUIT (ALBUM + COLORIAGE)",
+        "ethicalHeistSubtitle": "Sans fausses promesses. Seulement 19 pistes acoustiques de maître enregistrées en studio à travers les 7 Terres pour les 2–7 ans. Gratuit aujourd'hui.",
+        "ethicalHeistCta": "DÉVERROUILLER LES 19 PISTES GRATUITEMENT (0 $)",
         "orDivider": "ÉGALEMENT DISPONIBLE",
         "dmCtaTitle": "Connectez-vous aussi par Instagram DM",
-        "dmCtaSubtitle": "Recevez les 19 pistes sur votre Instagram en plus de votre e-mail"
+        "dmCtaSubtitle": "Recevez les 19 pistes sur votre Instagram en plus de votre e-mail",
+        "starterPackCta": "🎨 Pack de Démarrage et Coloriage (7 $) →"
     },
     "institutions": {
         "badge": "Concorde Institutionnelle et Entreprise",

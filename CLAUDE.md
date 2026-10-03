@@ -470,5 +470,9 @@ Converts source images to optimized WebP for production use.
    - **Interactive Language Switcher:** `web/src/components/Navbar.jsx` provides an interactive language selector with flags (`🇺🇸 EN`, `🇪🇸 ES`, `🇫🇷 FR`) for desktop and mobile navigation.
    - **Strict Localization Parity:** All user-facing strings across all three languages are maintained in `web/src/i18n/locales/en.json`, `es.json`, and `fr.json`.
    - **Institutional Alignment:** Built to support Head Start Dual Language Learners (over 32% of enrollment) and ESSA Title III compliance for public school and district procurement.
+16. **Music Canon & Audio Production (Absolute):** The Sound of Essentials is **originally published music**, **recorded live in studio sessions** (19 master tracks across 7 Lands).
+    - **No Live Instrumentation / No Live Music:** SOE was recorded live, but does **NOT** feature live instrumentation or live music. Never claim "live instruments", "live instrumentation", "live orchestra", or "live music".
+    - **Zero Invented Instruments:** Never hallucinate or claim specific instruments (e.g., violins, cellos, upright bass, kalimbas, nylon guitars, harps, djembes).
+17. **Canon Copy Fidelity & Zero Hallucinated Claims:** Stick strictly to documented canon copy and compound what has been established. Never deviate, invent new marketing claims, or hallucinate features for emails, listicles, advertorials, or web pages.
 
 

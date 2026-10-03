@@ -33,16 +33,13 @@
 ### Stage 1: Conversational Email Capture & Instant Gratification Delivery (0–5 Seconds)
 * **Trigger:** User sends `RHYTHM`
 * **Bot Automated Response (Immediate):**
-  > *"Hey friend! 🎵 To make sure you never lose your access and to deliver your high-resolution 28-page printable coloring book (PDF), what is your best email address?"*
+  > *"Hey friend! 🎵 To make sure you never lose your private player access and to unlock all 19 studio-recorded master tracks, what is your best email address?"*
 * **User inputs email** (e.g., `sarah@example.com`)
 * **Bot Automated Response & Brevo Sync (Instant):**
-  > *"Got it! Added you to our founding family list and sent a copy to your inbox! 💌*  
+  > *"Got it! Added you to our founding family list and sent your access confirmation to your inbox! 💌*  
   >  
   > *🎧 **Stream all 19 Master Acoustic Tracks ($0):**  
-  > [https://soelearn.com/player?ref=dm_instant](https://soelearn.com/player?ref=dm_instant)  
-  >  
-  > *🎨 **Download Your Free 28-Page Tactile Coloring Book (PDF):**  
-  > [https://soelearn.com/assets/downloads/SOE_Coloring_Book.pdf](https://soelearn.com/assets/downloads/SOE_Coloring_Book.pdf)*  
+  > [https://soelearn.com/player?ref=dm_instant](https://soelearn.com/player?ref=dm_instant)*  
   >  
   > *Bookmark that player link—it's 100% unlocked for your family."*
 
@@ -55,15 +52,15 @@
   > *1️⃣ Ages 2–4 (Toddler / Preschool)*  
   > *2️⃣ Ages 5–7 (Pre-K to Grade 2)*"
 
-### Stage 3: Card-Vaulting Bridge ($7 Quest Starter Pack)
+### Stage 3: Card-Vaulting Bridge ($7 Quest Starter & Coloring Pack)
 * **User selects [1️⃣ or 2️⃣]**
 * **Bot Response:**
-  > *"Perfect! For [Ages selected], start with Track #1 in Terrasol with Seriphia—it grounds their morning routine in natural rhythm.*  
+  > *"Perfect! For [Ages selected], start with Track #1 in Terrasol with Seriphia—it grounds their daily routine in natural acoustic rhythm.*  
   >  
-  > *By the way—most founding parents pair the music with the physical **$7 Quest Starter Pack** (Printed Land Map, 15 Hero Character Cards, and the Daily Acoustic Routine Guide).*  
+  > *By the way—most founding parents pair the music with the **$7 Quest Starter & Coloring Pack** (Complete 40-Page Storybook Coloring Book PDF, Seriphia's 5-Minute 432Hz Bedtime Calming Track, 7-Land Tactile Cue Cards, and Refrigerator Daily Rhythm Dial).*  
   >  
-  > *Grab it here before bedtime routine today ($7 one-time, ships free):*  
-  > 👉 [https://soelearn.com/workbook?bump=starter7&ref=dm_bridge](https://soelearn.com/workbook?bump=starter7&ref=dm_bridge)*"
+  > *Grab it here before bedtime tonight ($7 one-time download):*  
+  > 👉 [https://soelearn.com/listen?bump=starter7&ref=dm_bridge](https://soelearn.com/listen?bump=starter7&ref=dm_bridge)*"
 
 ---
 

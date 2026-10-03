@@ -2,22 +2,25 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { submitSoeInterest } from '../services/soeSubmissions';
 import { triggerBrowserDownload } from '../utils/deliveryUrl';
-import { trackLead } from '../utils/analytics';
+import { trackLead, trackInitiateCheckout } from '../utils/analytics';
 import { setGateUnlocked, isValidEmail } from '../utils/gateAuth';
 import './EmailDownloadGateModal.css';
 
+const STRIPE_BUMP_URL = 'https://buy.stripe.com/test_8x2aEXbJW0BLcwS0oi6Vq01';
+
 /**
- * EmailDownloadGateModal — Universal High-Converting Email Capture Gate.
+ * EmailDownloadGateModal — Universal High-Converting Email Capture Gate & In-Cart Bump.
  * Enforces email capture before delivering any PDF, coloring sheet, or audio file,
- * writing directly to Neon PostgreSQL CRM, triggering analytics, and delivering the file instantly.
+ * writing directly to Neon PostgreSQL CRM, triggering analytics, and delivering the file instantly,
+ * while presenting the acute $7 in-cart 5-minute bedtime reset bump to vault the card.
  */
 export const EmailDownloadGateModal = ({
   isOpen,
   onClose,
   downloadItem = {
-    title: 'SOE Rhythm Quest: 40-Page Coloring Book',
-    filename: 'SOE_Rhythm_Quest_Coloring_Book.pdf',
-    url: '/downloads/SOE_Rhythm_Quest_Coloring_Book.pdf',
+    title: 'The Sound of Essentials: 19-Track Album Experience',
+    filename: 'The_Sound_of_Essentials_19_Tracks.pdf',
+    url: null,
     kind: 'interest',
   },
   onSuccess = () => {},
@@ -30,6 +33,14 @@ export const EmailDownloadGateModal = ({
   const [isSuccess, setIsSuccess] = useState(false);
 
   if (!isOpen) return null;
+
+  const handleBumpClick = () => {
+    trackInitiateCheckout({
+      sku: 'SOE-STARTER-PACK',
+      name: 'The Quest Starter & Coloring Pack: 40-Page Coloring Book, 432Hz Reset Track & Transition Kit',
+      price: 7.00,
+    });
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -94,12 +105,6 @@ export const EmailDownloadGateModal = ({
     setIsSuccess(true);
     setIsSubmitting(false);
     onSuccess(email.trim().toLowerCase());
-
-    // Auto-close modal after celebration
-    setTimeout(() => {
-      setIsSuccess(false);
-      onClose();
-    }, 2400);
   };
 
   return (
@@ -178,7 +183,7 @@ export const EmailDownloadGateModal = ({
                   </select>
                 </div>
 
-                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.5rem', margin: '0.75rem 0', fontSize: '0.8rem', color: '#555' }}>
+                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.5rem', margin: '0.5rem 0', fontSize: '0.8rem', color: '#555' }}>
                   <input
                     type="checkbox"
                     id="modal-coppa-check"
@@ -188,6 +193,29 @@ export const EmailDownloadGateModal = ({
                   <label htmlFor="modal-coppa-check" style={{ cursor: 'pointer', lineHeight: 1.35 }}>
                     I confirm I am an adult (18+) consenting to receive educational resources under COPPA guidelines.
                   </label>
+                </div>
+
+                {/* ── In-Cart Bump: Acute 5-Minute Friction Medication & 40-Page Coloring Book ── */}
+                <div className="email-gate-bump-card">
+                  <div className="email-gate-bump-head">
+                    <span className="email-gate-bump-badge">⚡ SPECIAL IN-CART BUMP • 75% OFF</span>
+                    <span className="email-gate-bump-price">$7</span>
+                  </div>
+                  <h4 className="email-gate-bump-title">
+                    The Quest Starter &amp; Coloring Pack (40-Page Book + 5-Minute Reset Kit)
+                  </h4>
+                  <p className="email-gate-bump-desc">
+                    Includes the <strong>Complete 40-Page Rhythm Quest Storybook Coloring Book (PDF)</strong>, <strong>Seriphia’s 432Hz Bedtime Calming Track</strong>, <strong>7-Land Tactile Rhythm Cue Cards</strong>, and the refrigerator <strong>Daily Rhythm Dial</strong>.
+                  </p>
+                  <a
+                    href={STRIPE_BUMP_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={handleBumpClick}
+                    className="email-gate-bump-link"
+                  >
+                    ➕ Add Quest Starter &amp; Coloring Pack ($7) →
+                  </a>
                 </div>
 
                 <button
@@ -210,6 +238,37 @@ export const EmailDownloadGateModal = ({
               <p className="email-gate-subtext" style={{ marginTop: '0.5rem' }}>
                 Your file (<strong>{downloadItem.filename}</strong>) is downloading now. We've also saved your explorer pass for <strong>{email}</strong>!
               </p>
+
+              {/* ── High-Converting Post-Capture Bump Card ── */}
+              <div className="email-gate-bump-card email-gate-bump-card--success">
+                <div className="email-gate-bump-head">
+                  <span className="email-gate-bump-badge">🌙 PARENT SANCTUARY UPGRADE</span>
+                  <span className="email-gate-bump-price">$7</span>
+                </div>
+                <h4 className="email-gate-bump-title">
+                  Grab the Quest Starter &amp; 40-Page Coloring Pack ($7)
+                </h4>
+                <p className="email-gate-bump-desc">
+                  Pair your free 19-track album with the complete 40-page tactile storybook coloring book, Seriphia's 432Hz calming audio, printable daily rhythm dial, and transition cue cards.
+                </p>
+                <a
+                  href={STRIPE_BUMP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={handleBumpClick}
+                  className="email-gate-bump-btn-solid"
+                >
+                  ⚡ Order Quest Starter &amp; Coloring Pack ($7 Stripe Checkout) →
+                </a>
+              </div>
+
+              <button
+                type="button"
+                onClick={onClose}
+                className="email-gate-continue-btn"
+              >
+                Continue Exploring →
+              </button>
             </div>
           )}
         </motion.div>

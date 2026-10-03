@@ -23,7 +23,7 @@ But watch closely and you’ll notice she isn’t building anything. She’s cha
 
 So, what are the bright apps actually training?
 
-The reason isn't that your kid lacks focus. It's how the apps are built.
+The reason isn’t that your kid lacks focus. It’s how the apps are built.
 
 Most learning apps run on the exact same loop as a slot machine: a flash, a chime, a tiny reward — over and over, fast enough that the young brain never rests.
 
@@ -31,7 +31,7 @@ Scientists have a plain name for what that trains: the dopamine loop. It teaches
 
 And it lands at the worst possible time. In a child’s first years, the brain forms over 1,000,000 new neural connections every second. What you feed it now, it wires in permanently. Fast, flashing rewards wire in one thing: the itch for more stimulation.
 
-The fix isn't more screen time or a "better" app. It's stepping out of the loop entirely — and starting where reading actually begins.
+The fix isn’t more screen time or a "better" app. It’s stepping out of the loop entirely — and starting where reading actually begins.
 
 Sound, not screens.
 
@@ -41,7 +41,7 @@ The shift: trading the app for The Sound of Essentials Ecosystem.
 
 More moms are making it — moving toward something that begins with the ear, built on how reading truly starts: hearing sounds before ever seeing letters.
 
-Instead of a screen chasing her attention, there are songs. Nineteen of them. Sung by real musicians with live acoustic voices — no autoplay, no ads, no tracking, and nothing designed to keep her hooked. These are calm, whole stories designed for your child to move and sing along to.
+Instead of a screen chasing her attention, there are songs. Nineteen of them. Originally published music — nineteen master tracks recorded live in studio sessions with authentic human vocals and warm acoustic arrangements — no autoplay, no ads, no tracking, and nothing designed to keep her hooked. These are calm, whole stories designed for your child to move and sing along to.
 
 That’s the answer to the dopamine loop. Where the apps kept her craving the next flash, this keeps her steady — clapping, singing, building the sound patterns that reading is actually made of.
 
@@ -58,7 +58,7 @@ Part of the appeal isn't just what it adds — it's what it deliberately leaves 
 ✓ Stop worrying your child's brain is being hijacked by addictive design — Zero algorithmic traps, no dopamine loops, no data tracking.
 ✓ Finally feel calm during learning time instead of managing overstimulation — Conscious pauses and neuro-affirming tempo designed for developing nervous systems.
 ✓ Watch real reading skills actually take root — Sound-before-symbol pedagogy wires durable neural pathways during the critical 1,000-day auditory window.
-✓ See your child genuinely excited to learn, not dopamine-dependent on apps — Active rhythm, live singing, and a cohesive story world across 7 lands and 15 mentor characters.
+✓ See your child genuinely excited to learn, not dopamine-dependent on apps — Active rhythm, authentic singing, and a cohesive story world across 7 lands and 15 mentor characters.
 ✓ Trust you're following neuroscience, not ed-tech hype — Grounded in how young brains actually learn: through auditory input and whole-body movement.
 
 What are you actually getting?
@@ -93,7 +93,7 @@ Passive screen time does not build reading proficiency — it builds screen depe
 
 How Does It Work Over Time? (The 30-Day Shift):
 
-• Day 1 (First Listen): You press play. The opening track arrives with live acoustic vocals and an unhurried rhythm — no bright pings, no reward chimes. Your child stops what they're doing and listens.
+• Day 1 (First Listen): You press play. The opening track arrives with warm acoustic vocals recorded live in studio sessions and an unhurried rhythm — no bright pings, no reward chimes. Your child stops what they're doing and listens.
 • Week 1 (Sound Becomes Familiar): By the third replay, you notice your child humming the phonics melody while playing with blocks. The songs have space to breathe.
 • Month 1 (Rhythm Enters the Body): Your child moves to the beat during song time — swaying, clapping, dancing — without being asked. The Picture Dictionary arrives as a companion, not a screen substitute.
 • Month 3 (The Mentors Stick): You overhear your child referencing mentor characters from the 7 Lands by name during playtime. Literacy and joy feel inseparable.
@@ -129,7 +129,7 @@ Q: Is this a standalone curriculum or do I need other materials?
 A: It is a complete early foundation. The Deluxe Album (19 songs), Picture Dictionary (4,000+ words), and Rhythm Ready Workbook (40 daily quests) together scaffold sound, symbol, and motor mastery.
 
 Q: What makes this safe for my child's developing brain?
-A: This is not an app. Zero algorithms, zero autoplay traps, and zero dopamine loops. Live acoustic instruments and conversational tempos protect young nervous systems from overstimulation.
+A: This is not an app. Zero algorithms, zero autoplay traps, and zero dopamine loops. Warm acoustic arrangements and conversational tempos protect young nervous systems from overstimulation.
 
 Q: Who created this?
 A: Rhythm Quest was handcrafted by a father's heart and a mother's love for our children—grounded in developmental neuroscience, not corporate ed-tech. Music is the beacon for all children to learn.

@@ -55,7 +55,7 @@ Scientists link shared music and movement to brain regions that help a child rea
 
 The Sound of Essentialspowers Rhythm Quest — 19 original songs built by working musicians and a mother.
 
-It was recorded withlive acoustic vocals, made to be sung with a child, not played at one.
+It is originally published music, recorded live in studio sessions with warm acoustic vocals, made to be sung with a child, not played at one.
 
 That answers the closeness gap head-on. No autoplay, no flashing loops, no data collected on your kid.
 
@@ -100,7 +100,7 @@ Instead of disconnected mini-games designed to trigger dopamine loops, the Rhyth
 
 ## 19 original songs composed by seasoned musicians, not algorithm farms
 
-Every track on the Deluxe Album was scratch-made by experienced musicians with live acoustic vocals—not auto-generated, not licensed stock loops, not optimized for engagement metrics. The foundational craft matters: when children learn from authentic music made with intention, they internalize that learning itself is a human act, a gift, not a product to be mined. This signals to young learners that joy and mastery are inseparable from care and artistry.
+Every track on the Deluxe Album is originally published music, recorded live in studio sessions with warm acoustic vocals—not auto-generated, not licensed stock loops, not optimized for engagement metrics. The foundational craft matters: when children learn from authentic music made with intention, they internalize that learning itself is a human act, a gift, not a product to be mined. This signals to young learners that joy and mastery are inseparable from care and artistry.
 
 
 ![Calm tempo and conscious pauses protect the developing nervous system](https://ahxicvvvnelbwoisdexl.supabase.co/storage/v1/object/public/images/generated/reason-4-3a86ff34.webp)

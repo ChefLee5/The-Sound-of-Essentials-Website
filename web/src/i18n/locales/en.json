@@ -61,7 +61,7 @@
             "price_tag": "Free for Founding Families",
             "price_note": "Instant Digital Access · Yours to Keep",
             "check_1": "19 original acoustic tracks that wire early phonics, math & emotional calm",
-            "check_2": "40-page Rhythm Quest coloring book & printables included",
+            "check_2": "Master acoustic recordings across all 7 Lands & 5 developmental domains",
             "check_3": "Instant digital streaming & direct MP3 download access",
             "check_4": "100% Free Forever · No Subscription Trap · Pairs with Rhythm Quest",
             "cta_primary": "Claim Your Free 19-Track Album →",
@@ -201,7 +201,7 @@
             "q1": "Why is the album 100% free?",
             "a1": "We believe foundational sensory learning is a birthright, not a luxury. That is why the complete 19-track album, The Sound of Essentials: A Musical Learning Experience, is gifted freely to founding families ($0) as our front door. Our commercial pitch is simple and honest: experience the music in your home first. When you are ready to expand the journey, you can pair the music with our physical companion storybook, The Sound of Essentials: Rhythm Quest ($19), and our tactile print workbooks.",
             "q2": "How do I get instant digital access?",
-            "a2": "Simply click 'Start the Free Experience' and enter your email. You will immediately receive private streaming access to all 19 tracks, direct audio download links, and the printable 40-page coloring book PDF.",
+            "a2": "Simply click 'Claim Your Free 19-Track Album' and enter your email. You will immediately receive private streaming access to all 19 tracks and direct audio download links. You can also add the $7 Quest Starter & Coloring Pack for the complete 40-page coloring book and 5-minute transition reset kit.",
             "q3": "What age group is this designed for?",
             "a3": "The Sound of Essentials is designed specifically for children ages 2–7 (Toddler, Pre-K, Kindergarten, 1st & 2nd Grade). It is structured for both home listening and early classroom environments.",
             "q4": "How does musical rhythm build reading skills?",
@@ -711,7 +711,7 @@
         "read_subtitle": "Follow Seriphia and the heroes through the Rhythm Quest Storybook, page by page.",
         "prev": "← Prev",
         "next": "Next →",
-        "pre_order_coloring": "Pre-Order the Coloring Book",
+        "pre_order_coloring": "Get the 40-Page Coloring Pack ($7) →",
         "pre_order_book": "Pre-Order the Storybook",
         "lyrics_btn": "Lyrics",
         "no_lyrics": "No lyrics available for this track.",
@@ -816,11 +816,12 @@
     "listen": {
         "ethicalHeistBadge": "THE ETHICAL HEIST",
         "ethicalHeistTitle": "STEAL The 10-Minute Morning Routine That Displaced Screen Meltdowns Across 500+ Homes",
-        "ethicalHeistSubtitle": "No fake promises. Just 19 studio-recorded acoustic master tracks and the screen-free tactile blueprint for ages 2–7. Free today.",
-        "ethicalHeistCta": "STEAL THE BLUEPRINT (FREE ALBUM + COLORING BOOK)",
+        "ethicalHeistSubtitle": "No fake promises. Just 19 studio-recorded acoustic master tracks across all 7 Lands for ages 2–7. Free today.",
+        "ethicalHeistCta": "UNLOCK ALL 19 TRACKS FREE ($0)",
         "orDivider": "ALSO AVAILABLE",
         "dmCtaTitle": "Also Connect via Instagram DM",
-        "dmCtaSubtitle": "Get the 19 master tracks delivered to your Instagram in addition to email"
+        "dmCtaSubtitle": "Get the 19 master tracks delivered to your Instagram in addition to email",
+        "starterPackCta": "🎨 Quest Starter & Coloring Pack ($7) →"
     },
     "institutions": {
         "badge": "Institutional & Enterprise Concord",

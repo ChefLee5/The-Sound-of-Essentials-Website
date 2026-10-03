@@ -61,7 +61,7 @@
             "price_tag": "Gratis para Familias Fundadoras",
             "price_note": "Acceso Digital Inmediato · Tuyo para Siempre",
             "check_1": "19 canciones originales que enseñan fonética, matemáticas y ciencias",
-            "check_2": "Libro para colorear Rhythm Quest de 40 páginas e imprimibles incluidos",
+            "check_2": "Grabaciones acústicas maestras a través de las 7 Tierras y 5 dominios del desarrollo",
             "check_3": "Transmisión digital inmediata y descarga directa de audio MP3",
             "check_4": "Acceso 100% Gratuito al Álbum · Entrega Inmediata por Correo",
             "cta_primary": "Comenzar la Experiencia Gratis →",
@@ -201,7 +201,7 @@
             "q1": "¿Por qué The Sound of Essentials Deluxe es completamente gratis?",
             "a1": "El Sound of Essentials original fue creado como un regalo sincero para las familias. La edición Deluxe permanece gratuita para asegurar que cada niño tenga acceso a un aprendizaje sensorial y musical fundamental. El acceso digital solo requiere tu correo electrónico, con materiales opcionales y ediciones físicas disponibles al finalizar la compra.",
             "q2": "¿Cómo obtengo acceso digital inmediato?",
-            "a2": "Simplemente haz clic en 'Comenzar la Experiencia Gratis' e ingresa tu correo electrónico. Recibirás acceso directo a la transmisión privada de las 19 canciones, enlaces de descarga directa y el PDF de 40 páginas para colorear.",
+            "a2": "Simplemente haz clic en 'Comenzar la Experiencia Gratis' e ingresa tu correo electrónico. Recibirás acceso directo a la transmisión privada de las 19 canciones y enlaces de descarga directa. También puedes añadir el Paquete de Inicio y Colorear por $7 para obtener el libro para colorear de 40 páginas y el kit de transición.",
             "q3": "¿Para qué rango de edad está diseñado?",
             "a3": "The Sound of Essentials está diseñado específicamente para niños de 2 a 7 años (Preescolar hasta 2º Grado). Está estructurado tanto para el hogar como para las aulas de educación temprana.",
             "q4": "¿Cómo ayuda el ritmo musical al aprendizaje de la lectura?",
@@ -641,7 +641,7 @@
         "read_subtitle": "Sigue a Seriphia y los héroes página a página.",
         "prev": "← Anterior",
         "next": "Siguiente →",
-        "pre_order_coloring": "Pre-ordenar el Libro para Colorear",
+        "pre_order_coloring": "Obtener el Paquete de Colorear ($7) →",
         "pre_order_book": "Pre-ordenar el Libro de Cuentos",
         "lyrics_btn": "Letra",
         "no_lyrics": "No hay letra disponible para esta pista.",
@@ -816,11 +816,12 @@
     "listen": {
         "ethicalHeistBadge": "EL ACCESO PRIVILEGIADO",
         "ethicalHeistTitle": "OBTÉN la rutina matutina de 10 minutos que eliminó las rabietas de pantalla en más de 500 hogares",
-        "ethicalHeistSubtitle": "Sin pantallas. 19 pistas acústicas maestras grabadas en estudio y la guía táctil para edades de 2 a 7 años. Gratis hoy.",
-        "ethicalHeistCta": "OBTÉN LA GUÍA GRATIS (ÁLBUM + LIBRO DE COLOREAR)",
+        "ethicalHeistSubtitle": "Sin promesas falsas. Solo 19 pistas acústicas maestras grabadas en estudio a través de las 7 Tierras para edades de 2 a 7 años. Gratis hoy.",
+        "ethicalHeistCta": "DESBLOQUEAR LAS 19 PISTAS GRATIS ($0)",
         "orDivider": "TAMBIÉN DISPONIBLE",
         "dmCtaTitle": "Conéctate también por Instagram DM",
-        "dmCtaSubtitle": "Recibe las 19 pistas en tu Instagram además de por correo electrónico"
+        "dmCtaSubtitle": "Recibe las 19 pistas en tu Instagram además de por correo electrónico",
+        "starterPackCta": "🎨 Paquete de Inicio y Colorear ($7) →"
     },
     "institutions": {
         "badge": "Concordia Institucional y Corporativa",

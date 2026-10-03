@@ -105,7 +105,7 @@ In addition to the 15 public heroes, the SOE Legacy maintains a 16th character: 
 
 ### 2.4 The Completed Asset Vault
 SOE enters enterprise expansion with finished, defensible IP assets:
-- **19-Track Master Acoustic Album:** Rich master studio recordings produced and arranged by seasoned musicians, featuring authentic live vocal performances, warm acoustic arrangements, and child-safe cadence.
+- **19-Track Master Acoustic Album:** Originally published music recorded live in studio sessions, featuring authentic vocal performances, warm acoustic arrangements, and child-safe cadence.
 - **4,232-Word Essential Picture Dictionary:** 157 illustrated thematic scenes spanning all seven lands. Formatted in EPUB 3 fixed-layout and high-resolution print PDF.
 - **40-Day / 240-Activity Readiness Workbook:** Structured eight-week curriculum connecting daily motor, phonics, and cognitive exercises.
 - **Standards Crosswalk & Compliance Engine:** Native CLI tools generating full pedagogical alignment to Head Start ELOF, NAEYC, and state early learning frameworks.
@@ -410,9 +410,9 @@ The SOE growth strategy follows an intentional escalation hierarchy, moving from
 ```
 
 ### 7.1 The Consumer Funnel Mechanics (Stage 2)
-The consumer funnel is engineered around Shopify platform constraints to maximize order value while preserving brand integrity:
+The consumer funnel is engineered around direct payment constraints to maximize order value while preserving brand integrity:
 - **The $0 Front Door:** The 19-track album is truly free. No hidden processing fees, maintaining Meta ad policy compliance and brand trust.
-- **The $7 In-Cart Bump:** The Quest Starter Pack ($7) crosses Shopify's $0.50 order minimum, successfully vaulting the customer's payment credentials.
+- **The $7 In-Cart Bump:** The Quest Starter Pack ($7) crosses the $0.50 order minimum, successfully vaulting the customer's payment credentials.
 - **The Physical Anchor:** The $35 Print Workbook forces collection of a physical shipping address, meeting the platform requirement to unlock the recurring $14.99/month Rhythm Pass subscription.
 - **Physical Book Upsells:** Post-purchase pathways offer the initial 3-book Hero starter set ($39) and full slipcase reservation, significantly increasing average order value.
 - **Blended Revenue Yield:** Converts high top-of-funnel traffic into an average initial transaction value of $42 to $78 per buying customer.
@@ -480,7 +480,7 @@ The Concord Treasury operates under strict fiduciary and pedagogical parameters:
 ```
 
 ### Milestone 1: Core Engine & D2C Ignition (Q3–Q4 2026)
-- Stabilize Shopify card-vaulting funnel with $7 bump and $35 physical workbook.
+- Stabilize Direct Stripe API card-vaulting funnel with $7 bump and $35 physical workbook.
 - Deploy full automated standards crosswalk generator for all 19 tracks.
 - Complete editorial manuscripts for the first four Hero Hardcover storybooks (Kenji, Aiko, Vesta, Silas).
 

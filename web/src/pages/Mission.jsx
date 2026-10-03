@@ -291,7 +291,7 @@ const Mission = () => {
                   <div className="flow-column">
                     <p className="flow-column__title">7 Lands Universe</p>
                     <p className="flow-column__text">
-                      15 diverse heroes across 5 core developmental domains, brought to life through visionary generative AI artistry and scored with live acoustic instruments.
+                      15 diverse heroes across 5 core developmental domains, brought to life through visionary generative AI artistry and scored with original acoustic music recorded live in studio sessions.
                     </p>
                   </div>
                   <div className="flow-column">

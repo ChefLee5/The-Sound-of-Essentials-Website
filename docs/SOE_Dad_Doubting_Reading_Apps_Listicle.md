@@ -124,7 +124,7 @@ If your child is used to high-speed animations, flashing lights, and cartoon noi
 
 No recurring subscriptions. No credit card required. A complete 19-track acoustic sound-before-symbol foundation for families who want off the tablet treadmill.
 
-- ✅ **Full 19-Track Studio Album:** Mastered live acoustic vocals across 7 learning lands.
+- ✅ **Full 19-Track Studio Album:** Originally published music — 19 master acoustic tracks recorded live in studio sessions across 7 learning lands.
 - ✅ **15 Mentor Characters:** Integrated lessons in phonics, sharing, and self-regulation.
 - ✅ **100% Ad-Free & Tracking-Free:** Zero data harvesting, zero subscription locks.
 - ✅ **Instant Multi-Device Streaming:** Works on any phone, speaker, or home stereo.

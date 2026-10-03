@@ -7,9 +7,9 @@
     "format": "Digital Audio",
     "price": 0.0,
     "currency": "USD",
-    "description": "The complete 19-track foundational album gifted freely to founding families ($0). Recorded with live acoustic vocals and organic instruments to replace screen fatigue with calm co-regulation. Pairs with the Rhythm Quest companion storybook.",
+    "description": "The complete 19-track foundational album gifted freely to founding families ($0). Recorded live in studio sessions with warm vocals and unhurried acoustic arrangements to replace screen fatigue with calm co-regulation. Pairs with the Rhythm Quest companion storybook.",
     "features": [
-      "19 original acoustic tracks with live organic instrumentation",
+      "19 original acoustic tracks recorded live in studio sessions",
       "Covers all 5 developmental domains (Language, Cognitive, Physical, Science, Social-Emotional)",
       "Pairs with The Sound of Essentials: Rhythm Quest companion storybook",
       "100% Ad-Free, zero algorithmic traps",
@@ -34,6 +34,40 @@
     "funnelStage": "lead-magnet",
     "status": "available",
     "storeUrl": "/listen"
+  },
+  {
+    "id": "quest-starter-pack",
+    "name": "The Quest Starter & Coloring Pack: 40-Page Coloring Book, 432Hz Reset Track & Transition Kit",
+    "shortName": "Quest Starter & Coloring Pack",
+    "type": "order-bump",
+    "format": "40-Page Printable Coloring Book (PDF) + 432Hz Calming Audio + Rhythm Dial",
+    "price": 7.0,
+    "currency": "USD",
+    "description": "The complete 40-page tactile storybook coloring book paired with the 5-minute screen-to-bedtime transition kit: Seriphia’s 432Hz calming track, 7-Land tactile rhythm cue cards, refrigerator daily rhythm dial, and hero phonics lyric sheets.",
+    "features": [
+      "Complete 40-Page Rhythm Quest Storybook Coloring Book (Printable PDF)",
+      "Seriphia's 5-minute 432Hz bedtime calming acoustic track",
+      "7-Land printable tactile rhythm cue cards (visual transition schedule)",
+      "Refrigerator 1-page 'Daily Rhythm Dial' victory card",
+      "Printable phonics lyric sheets & hero character badges",
+      "Instant download + Direct Stripe card vaulting pass"
+    ],
+    "ageRange": "Ages 2–7",
+    "gradeRange": "Pre-K to Grade 2",
+    "isbn": null,
+    "cover": "/assets/marketing/quest-collage.webp",
+    "category": "education",
+    "tags": [
+      "order-bump",
+      "starter-pack",
+      "coloring-book",
+      "transition-kit",
+      "bedtime-calm",
+      "printables"
+    ],
+    "funnelStage": "order-bump",
+    "status": "available",
+    "storeUrl": "https://buy.stripe.com/test_8x2aEXbJW0BLcwS0oi6Vq01"
   },
   {
     "id": "rhythm-quest-ebook",

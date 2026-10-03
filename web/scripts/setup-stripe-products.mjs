@@ -73,8 +73,8 @@ const PRODUCTS_TO_CREATE = [
   },
   {
     handle: 'quest-starter-pack',
-    name: 'The Quest Starter Pack',
-    description: 'Gate-1 printables, sensory phonics guides, rhythm flashcards, and high-fidelity bonus audio stems.',
+    name: 'The Quest Starter & Coloring Pack: 40-Page Coloring Book, 432Hz Reset Track & Transition Kit',
+    description: 'The complete 40-page tactile storybook coloring book paired with the 5-minute screen-to-bedtime transition kit: Seriphia’s 432Hz calming track, 7-Land tactile rhythm cue cards, refrigerator daily rhythm dial, and hero phonics lyric sheets.',
     priceCents: 700,
     type: 'one_time',
     collectShipping: false,

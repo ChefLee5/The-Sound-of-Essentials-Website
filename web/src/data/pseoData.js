@@ -115,7 +115,7 @@ export const pseoPages = [
       },
       {
         "title": "Zero Overstimulation Risk",
-        "desc": "Recorded with organic acoustic instruments (nylon guitar, kalimba, hand percussion) free of abrasive synth bursts."
+        "desc": "Originally published acoustic music recorded live in studio sessions, completely free of abrasive synth bursts."
       }
     ],
     "features": [
@@ -135,7 +135,7 @@ export const pseoPages = [
       },
       {
         "q": "Can parents use these materials at home between therapy sessions?",
-        "a": "Absolutely. Therapists frequently assign the free 19-track album and coloring book as low-friction, screen-free home engagement."
+        "a": "Absolutely. Therapists frequently assign the free 19-track album and screen-free tactile routines as low-friction, screen-free home engagement."
       },
       {
         "q": "Is there a digital app required to play the music?",
@@ -702,8 +702,8 @@ export const pseoPages = [
         "desc": "Our 4,000+ word Picture Dictionary delivers unmatched scope across 157 illustrated everyday environments."
       },
       {
-        "title": "Acoustic Instrument Authenticity",
-        "desc": "Children hear the timbre of real nylon strings, wood kalimbas, and shakers instead of synthesized computer bleeps."
+        "title": "Acoustic Authenticity",
+        "desc": "Children hear warm, natural acoustic frequencies recorded live instead of synthesized computer bleeps."
       },
       {
         "title": "Zero Tablet Dependency",
@@ -727,7 +727,7 @@ export const pseoPages = [
       },
       {
         "q": "What makes the audio 'handcrafted'?",
-        "a": "Every track was composed, arranged, and performed by living musicians using acoustic instruments, giving the music warmth, organic pacing, and genuine emotional resonance."
+        "a": "Originally published music composed, arranged, and recorded live in studio sessions, giving the songs warmth, unhurried pacing, and genuine emotional resonance."
       },
       {
         "q": "Can we purchase institutional classroom bundles?",
@@ -828,7 +828,7 @@ export const pseoPages = [
     "deltaSummary": {
       "problem": "Discerning families paying premium tuition expect exceptional cognitive development\u2014not off-the-shelf phonics worksheets, tablet time, or generic cartoon media.",
       "counterTruth": "Elite early learning is defined by intentionality, sensory restraint, rich vocabulary, and artistic excellence that respects the dignity of the child's developing mind.",
-      "soeSolution": "Rhythm Quest delivers a proprietary, neuro-affirming curriculum: a 4,000+ word Picture Dictionary, 19 orchestral acoustic tracks, and an 8-week structured readiness quest across 7 developmental lands."
+      "soeSolution": "Rhythm Quest delivers a proprietary, neuro-affirming curriculum: a 4,000+ word Picture Dictionary, 19 originally published acoustic tracks recorded live, and an 8-week structured readiness quest across 7 developmental lands."
     },
     "hero": "Elias & Selene",
     "heroTitle": "Keepers of Celestia",
@@ -933,7 +933,7 @@ export const pseoPages = [
       }
     ],
     "features": [
-      "100% Acoustic Instrumentation: Nylon Strings, Kalimba, Shakers",
+      "19 Master Acoustic Tracks Recorded Live",
       "Full Physical 4,000+ Word Illustrated Picture Dictionary",
       "Daily 16-Minute Readiness Workbook Blocks",
       "Bilateral Movement Routines for Physical Grounding"

@@ -36,7 +36,7 @@ flowchart LR
 
 ### 2. Skill 2: `marketing-psychology` (Behavioral Triggers & Sanctuary Framing)
 - **Parental Identity Framing**: Speak directly to the "Sanctuary Parent" exhausted by screen-time meltdowns and algorithmic dopamine loops.
-- **Sensory Grounding**: Ground copy in physical reality—warm acoustic vocals, live instruments, unhurried tempos, sitting together on the couch.
+- **Sensory Grounding**: Ground copy in physical reality—warm acoustic arrangements recorded live, unhurried tempos, sitting together on the couch.
 - **The Equitable Exchange**: Frame the purchase not as an aggressive extraction or commercial trap, but as a fair, willing exchange where families receive the music with gladness and choose to endeavor deeper into physical books.
 - **Loss Aversion & Cognitive Ease**: Reassure parents that there are zero subscription traps or autoplay hooks—just pure, screen-free peace.
 
@@ -139,7 +139,7 @@ flowchart LR
 + "shortName": "A Musical Learning Experience",
   "price": 0.0,
 - "description": "19 original tracks designed for the developing brain...",
-+ "description": "The complete 19-track foundational album gifted freely to founding families ($0). Recorded with live acoustic vocals and organic instruments to replace screen fatigue with calm co-regulation. Pairs with the Rhythm Quest companion storybook.",
++ "description": "The complete 19-track foundational album gifted freely to founding families ($0). Recorded live in studio sessions with warm vocals and unhurried acoustic arrangements to replace screen fatigue with calm co-regulation. Pairs with the Rhythm Quest companion storybook.",
 
 - "name": "The Sound of Essentials: Rhythm Quest",
 - "shortName": "Rhythm Quest",

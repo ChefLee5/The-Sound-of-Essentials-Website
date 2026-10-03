@@ -178,7 +178,7 @@ That is the Rhythm Quest: 19 songs across 7 Lands, streaming free for ages 2 to 
 
 The Sound of Essentials takes the opposite approach.
 
-Nineteen original songs feature acoustic instrumentation, calm pacing, and lyrics mapped to early childhood milestones for ages 2 to 7.
+Nineteen originally published songs feature warm acoustic arrangements, calm pacing, and lyrics mapped to early childhood milestones for ages 2 to 7.
 
 No ads, no algorithms, and no screen fatigue, just brain-building melody.
 
@@ -422,7 +422,7 @@ Built independently for their own family, it is now shared freely with homes and
     delta: 'Δ5: Consumption vs. Quest',
     audience: 'Montessori & World Music Enthusiasts',
     image: '/assets/marketing/meta-ads/ad01_feel_felt_found.jpg',
-    primaryText: `Combine the self-directed domain learning of Montessori, the memorable characters of classic children's television, and the rich instrumentation of global world music.
+    primaryText: `Combine the self-directed domain learning of Montessori, the memorable characters of classic children's television, and the rich musical heritage of global rhythms.
 
 The Sound of Essentials brings those elements together through early brain science.
 
@@ -518,7 +518,7 @@ Nineteen songs, streaming free for ages 2 to 7.
 
 Young children do not require flashing neon screens to stay engaged; they thrive on steady rhythm and acoustic melody.
 
-The Sound of Essentials offers rich instrumentation and cheerful call-and-response songs that engage curiosity while keeping the home environment calm for ages 2 to 7.
+The Sound of Essentials offers rich acoustic melodies and cheerful call-and-response songs that engage curiosity while keeping the home environment calm for ages 2 to 7.
 
 🎵 Stream the calming learning playlist free below.`,
     headline: 'Better Than Baby Shark. Way Better.',

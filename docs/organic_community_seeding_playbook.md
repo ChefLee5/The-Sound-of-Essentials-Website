@@ -137,7 +137,7 @@ flowchart TD
 >
 > Finding classroom music that isn't overstimulating, hyper-synthesized, or commercially grating is an uphill battle.
 >
-> We developed **The Sound of Essentials: Rhythm Quest**—a collection of 19 acoustic songs specifically paced for developing nervous systems (warm brass, piano, orchestral strings, natural percussion).
+> We developed **The Sound of Essentials: Rhythm Quest**—a collection of 19 originally published acoustic songs recorded live and specifically paced for developing nervous systems.
 >
 > Each track maps directly to an early developmental domain:
 > - **Harmonia:** Beginning phonics & polite manners

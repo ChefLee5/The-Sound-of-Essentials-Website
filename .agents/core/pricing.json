@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SOE Revenue Stack & Pricing Contract",
+  "version": "2.0.0",
+  "updated": "2026-09-30",
+  "currency": "USD",
+  "payment_architecture": {
+    "engine": "Direct Stripe API / Card Vaulting",
+    "shopify_status": "Strictly Retired - NOT USED",
+    "vaulting_rule": "Card vaulted at Gate 1 ($0 Album with in-cart add-on or $19 tripwire) enables 1-click upsells at Gate 2 without re-entering payment info."
+  },
+  "product_ladder": [
+    {
+      "id": "rhythm-quest-album",
+      "sku": "SOE-ALB-001",
+      "name": "The Sound of Essentials Deluxe: A Musical Learning Experience",
+      "type": "front_end_free",
+      "format": "Digital Audio Streaming & MP3 Download",
+      "price": 0.00,
+      "retail_value": 19.00,
+      "track_count": 19,
+      "purpose": "Primary front-end free gateway and lead hook on /listen. Music is the standalone entry point to vault card via $7 Quest Starter & Coloring Pack in-cart add-on."
+    },
+    {
+      "id": "quest-starter-pack",
+      "sku": "SOE-BUMP-001",
+      "name": "The Quest Starter & Coloring Pack: 40-Page Coloring Book, 432Hz Reset Track & Transition Kit",
+      "type": "order_bump",
+      "format": "40-Page Printable Coloring Book (PDF) + 432Hz Calming Audio + Rhythm Dial",
+      "price": 7.00,
+      "threshold_valid": true,
+      "includes": [
+        "Complete 40-Page Rhythm Quest Storybook Coloring Book (PDF)",
+        "Seriphia's 5-Minute 432Hz Bedtime & Transition Reset Audio Track",
+        "7-Land Printable Tactile Rhythm Cue Cards",
+        "Refrigerator Daily Rhythm Dial & Victory Check-in Chart",
+        "15 Hero Character Badges & Phonics Lyric Sheets"
+      ],
+      "purpose": "Primary $7 card-vaulting offer on website: packages the complete 40-page tactile storybook coloring book, Seriphia's 432Hz calming track, 7-Land cue cards, and refrigerator daily rhythm dial; vaults card at Gate 1 via Direct Stripe API."
+    },
+    {
+      "id": "rhythm-quest-ebook",
+      "sku": "SOE-EBK-001",
+      "name": "The Sound of Essentials: Rhythm Quest Storybook",
+      "type": "tripwire",
+      "format": "EPUB + Interactive PDF",
+      "price": 19.00,
+      "page_count": 66,
+      "purpose": "Core storybook companion introducing all 7 Lands and 15 Heroes"
+    },
+    {
+      "id": "summer-stretch-workbook-digital",
+      "sku": "SOE-WB-DIG",
+      "name": "SOE Rhythm Ready / Summer Stretch Workbook (Digital)",
+      "type": "digital_workbook",
+      "format": "PDF / EPUB",
+      "price": 21.00,
+      "blocks": "10 blocks/day (A–J), ~400 activities across 8 weeks"
+    },
+    {
+      "id": "summer-stretch-workbook-print",
+      "sku": "SOE-WB-PRT",
+      "name": "SOE Rhythm Ready / Summer Stretch Workbook (Print)",
+      "type": "physical_workbook",
+      "format": "Perfect-bound print workbook",
+      "price": 35.00,
+      "purpose": "Captures physical shipping address for recurring continuity"
+    },
+    {
+      "id": "picture-dictionary",
+      "sku": "SOE-DIC-001",
+      "name": "The Sound of Essentials: Essential Picture Dictionary",
+      "type": "core_encyclopedia",
+      "format": "EPUB 3 + Print PDF",
+      "price": 55.00,
+      "retail_price": 79.00,
+      "word_count": "4,232 words across 125 scenes",
+      "purpose": "High-value foundational literacy pillar"
+    },
+    {
+      "id": "full-quest-bundle",
+      "sku": "SOE-BND-001",
+      "name": "The Full Quest Digital Bundle",
+      "type": "complete_bundle",
+      "format": "Album + Dictionary + Workbook + Ebook",
+      "price": 89.00,
+      "includes": ["rhythm-quest-album", "picture-dictionary", "summer-stretch-workbook-digital", "rhythm-quest-ebook"]
+    },
+    {
+      "id": "rhythm-pass-continuity",
+      "sku": "SOE-SUB-001",
+      "name": "The Rhythm Pass (Monthly Continuity)",
+      "type": "subscription",
+      "price": 14.99,
+      "billing_interval": "monthly",
+      "purpose": "Ongoing monthly tactile drops, educator lesson extensions, and seasonal songs"
+    }
+  ]
+}

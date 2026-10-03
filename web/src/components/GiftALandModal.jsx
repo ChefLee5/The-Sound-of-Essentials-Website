@@ -19,7 +19,7 @@ export const GiftALandModal = ({ isOpen, onClose, triggerLand = 'Harmonia' }) =>
 
   const origin = typeof window !== 'undefined' ? window.location.origin : 'https://thesoundofessentials.com';
   const shareUrl = `${origin}/listen?utm_source=referral&utm_medium=gift_a_land&utm_campaign=explorer_share`;
-  const shareMessage = `Hey! We've been listening to The Sound of Essentials: Rhythm Quest with our kids — it's a completely free 19-track musical learning experience & coloring book. Thought your family would love it: ${shareUrl}`;
+  const shareMessage = `Hey! We've been listening to The Sound of Essentials: Rhythm Quest with our kids — it's a completely free 19-track musical learning experience. Thought your family would love it: ${shareUrl}`;
 
   const handleCopyLink = () => {
     try {
@@ -46,7 +46,7 @@ export const GiftALandModal = ({ isOpen, onClose, triggerLand = 'Harmonia' }) =>
       try {
         await navigator.share({
           title: 'The Sound of Essentials: Free 19-Track Musical Quest',
-          text: "Free 19-track album & coloring book for early learners!",
+          text: "Free 19-track album for early learners!",
           url: shareUrl,
         });
         setBonusUnlocked(true);

@@ -46,7 +46,7 @@ Children journey through the 7 Lands of Essential Learning, guided by **Seriphia
 
 ## 3. The 19-Track Music Catalog
 
-All 19 original master tracks are hosted on Cloudflare R2 with zero-egress CDN delivery:
+Originally published music — 19 master studio recordings, recorded live in studio sessions with authentic human vocals and warm acoustic arrangements. All 19 tracks are hosted on Cloudflare R2 with zero-egress CDN delivery:
 
 1. **The Sound of Essentials** (Terrasol) — Domain: Sound & Nature Awareness
 2. **Harmonia Welcome** (Harmonia) — Domain: Phonics & Linguistic Cadence
@@ -73,17 +73,17 @@ All 19 original master tracks are hosted on Cloudflare R2 with zero-egress CDN d
 ## 4. Product Catalog, Canonical Pricing & Revenue Stack
 
 ### 4.1 Product Ladder
-- **Gate 1 Lead Magnet ($0):** Deluxe 19-Track Album + Printable 40-Page Coloring Book (100% free with email capture on `/listen`).
-- **In-Cart Order Bump ($7):** The Quest Starter Pack (7-Land Flashcards, Lyric Sheets & Character Badge Kit).
+- **Gate 1 Lead Gateway ($0):** Deluxe 19-Track Album Experience (100% free private player streaming and audio download with email capture on `/listen`).
+- **In-Cart Order Bump ($7):** The Quest Starter & Coloring Pack: 40-Page Coloring Book, 432Hz Reset Track & Transition Kit (Complete 40-Page Storybook Coloring Book PDF, Seriphia's 432Hz Bedtime Calming Track, 7-Land Tactile Cue Cards, Refrigerator Daily Rhythm Dial & Phonics Lyric Sheets).
 - **Gate 2 Tripwire ($19):** SOE Rhythm Quest Illustrated Ebook (66-page storybook companion).
 - **Core Curriculum ($21 Digital / $35 Print):** SOE Rhythm Quest: Rhythm Ready Workbook (8-Week Readiness Quest, 40 days, ~400 activities).
 - **High-Value Bundle ($49):** The Complete Quest Pack (Ebook + Picture Dictionary Digital + Audio Masters).
 - **Flagship Reference ($55 Sale / $79 Compare-at):** The Essential Picture Dictionary (4,000+ words, 125 scenes, ASL descriptions).
 - **Membership ($14.99/mo):** The Rhythm Pass (Monthly quest drops & live family sing-alongs).
 
-### 4.2 Card Vaulting & Shopify Architectural Constraints
-- **Shopify Post-Purchase Upsells:** Shopify checkout requires an initial transaction $\ge \$0.50$ to vault a customer's credit card.
-- **The Zero-Cost Front End:** Gate 1 is 100% free ($0). When a customer opts into the $7 in-cart bump or $19 ebook on Shopify, the card is vaulted, enabling post-purchase one-click upsells for the $35 print workbook or $14.99/mo Rhythm Pass.
+### 4.2 Card Vaulting & Direct Stripe API Architecture
+- **Direct Stripe API Post-Purchase Upsells:** Direct Stripe API checkout tokenizes and vaults customer payment credentials on transactions $\ge \$0.50$.
+- **The Zero-Cost Front End:** Gate 1 is 100% free ($0). When a customer opts into the $7 in-cart bump or $19 ebook via Direct Stripe API, the card is vaulted, enabling post-purchase one-click upsells for the $35 print workbook or $14.99/mo Rhythm Pass.
 - **Physical Shipping Address Capture:** The physical $35 workbook requires entering a physical shipping address, creating high-intent customer records for school licensing and home delivery.
 
 ---
@@ -96,7 +96,7 @@ The entire ecosystem operates on a **$0 fixed monthly overhead** serverless stac
 2. **Audio & Media Storage:** Cloudflare R2 (19 album master tracks & PDF downloads with 0 egress fees).
 3. **Serverless Database:** Neon PostgreSQL (Scale-to-zero serverless PostgreSQL in AWS US-East-2, endpoint `ep-wandering-voice-ae85papv`).
 4. **CRM & Lead Pipeline:** Custom Cloudflare Functions Edge API (`/api/admin/crm/*`) connected directly to Neon PostgreSQL.
-5. **Commerce & Billing:** Shopify (`the-sound-of-essentials.myshopify.com`).
+5. **Commerce & Billing:** Direct Stripe API & Card Vaulting (`soelearn.com`).
 6. **Analytics & Attribution:** Meta Pixel (fbq), Google Analytics 4 (gtag), Microsoft Clarity (`wcdgngeqcm`), and local UTM persistence.
 
 ---
@@ -119,12 +119,12 @@ Early childhood language acquisition relies on acoustic phonemic discrimination.
 
 1. **English Pathway (Phonemic Foundations):**
    - *Core Musical Track:* Track 04 (*Let's Stretch*) and foundational phonics tracks.
-   - *Acoustic Mechanics:* Upright acoustic bass and nylon-string guitars maintain an unhurried tempo. This tempo gives developing ears the exact acoustic space needed to isolate consonant boundaries, initial sounds, and vowel formants.
+   - *Acoustic Mechanics:* Warm acoustic arrangements maintain an unhurried tempo. This tempo gives developing ears the exact acoustic space needed to isolate consonant boundaries, initial sounds, and vowel formants.
    - *Pedagogical Focus:* Syllable segmentation, consonant-vowel rhyming, and steady beat-keeping for early counting.
 
 2. **Español Pathway (Ritmo y Conteo):**
    - *Core Musical Track:* Track 11 (*Numbers & Los Números*).
-   - *Acoustic Mechanics:* Live acoustic percussion and call-and-response vocal structures pair early numeracy with natural Latin American speech rhythms.
+   - *Acoustic Mechanics:* Warm acoustic arrangements and call-and-response vocal structures pair early numeracy with natural Latin American speech rhythms.
    - *Pedagogical Focus:* Dual-language counting (1 to 10), spatial relational vocabulary, and somatic movement games.
 
 3. **Français Pathway (Éveil et Articulation):**

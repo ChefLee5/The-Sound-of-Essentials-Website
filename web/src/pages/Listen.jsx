@@ -18,13 +18,15 @@ import ProofInThePause from '../components/ui/ProofInThePause';
 import StickyThumbCta from '../components/ui/StickyThumbCta';
 import GiftALandModal from '../components/GiftALandModal';
 import EmailDownloadGateModal from '../components/EmailDownloadGateModal';
-import { trackLead } from '../utils/analytics';
+import { trackLead, trackInitiateCheckout } from '../utils/analytics';
 import { submitSoeInterest } from '../services/soeSubmissions';
 import { getDeliveryUrl, triggerBrowserDownload } from '../utils/deliveryUrl';
 import { isGateUnlocked, setGateUnlocked, getCapturedEmail, isValidEmail } from '../utils/gateAuth';
 import DmOptInBridge from '../components/DmOptInBridge';
 import './MediaRoom.css';
 import './Listen.css';
+
+const STRIPE_STARTER_PACK_URL = 'https://buy.stripe.com/test_8x2aEXbJW0BLcwS0oi6Vq01';
 
 const Listen = () => {
   const { t } = useTranslation();
@@ -49,16 +51,16 @@ const Listen = () => {
   const [isDownloadGateOpen, setIsDownloadGateOpen] = useState(false);
   const [gateDownloadItem, setGateDownloadItem] = useState({
     title: 'SOE Rhythm Quest: Full 19-Track Album Experience',
-    filename: 'SOE_Rhythm_Quest_Coloring_Book.pdf',
-    url: getDeliveryUrl('coloring-book'),
+    filename: 'SOE_Rhythm_Quest_19_Tracks.pdf',
+    url: null,
     kind: 'interest',
   });
 
   const openAlbumUnlockGate = (customTitle) => {
     setGateDownloadItem({
       title: customTitle || 'SOE Rhythm Quest: Full 19-Track Album Experience',
-      filename: 'SOE_Rhythm_Quest_Coloring_Book.pdf',
-      url: getDeliveryUrl('coloring-book'),
+      filename: 'SOE_Rhythm_Quest_19_Tracks.pdf',
+      url: null,
       kind: 'interest',
     });
     setIsDownloadGateOpen(true);
@@ -114,22 +116,12 @@ const Listen = () => {
     }
   };
 
-  const handleColoringBookDownloadClick = (e) => {
-    if (e) e.preventDefault();
-    const storedEmail = getCapturedEmail();
-    if (storedEmail) {
-      // Already captured email: deliver directly
-      triggerBrowserDownload(getDeliveryUrl('coloring-book'), 'SOE_Rhythm_Quest_Coloring_Book.pdf');
-    } else {
-      // Gate download: require email capture first
-      setGateDownloadItem({
-        title: 'SOE Rhythm Quest: 40-Page Coloring Book',
-        filename: 'SOE_Rhythm_Quest_Coloring_Book.pdf',
-        url: getDeliveryUrl('coloring-book'),
-        kind: 'interest',
-      });
-      setIsDownloadGateOpen(true);
-    }
+  const handleStarterPackClick = () => {
+    trackInitiateCheckout({
+      sku: 'SOE-STARTER-PACK',
+      name: 'The Quest Starter & Coloring Pack: 40-Page Coloring Book, 432Hz Reset Track & Transition Kit',
+      price: 7.00,
+    });
   };
 
   const handleCopyShareLink = () => {
@@ -223,14 +215,16 @@ const Listen = () => {
                   🎧 Launch 19-Track Player →
                 </button>
               </MagneticPill>
-              <button
-                type="button"
-                onClick={handleColoringBookDownloadClick}
+              <a
+                href={STRIPE_STARTER_PACK_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={handleStarterPackClick}
                 className="btn btn-outline"
-                style={{ fontSize: '1rem', padding: '0.85rem 1.8rem', background: 'rgba(255, 255, 255, 0.8)', cursor: 'pointer' }}
+                style={{ fontSize: '1rem', padding: '0.85rem 1.8rem', background: 'rgba(255, 255, 255, 0.8)', cursor: 'pointer', textDecoration: 'none' }}
               >
-                🎨 Download Free Coloring Book (PDF) ↓
-              </button>
+                🎨 {t('listen.starterPackCta', 'Quest Starter & Coloring Pack ($7) →')}
+              </a>
 
               <Link to="/gallery" className="btn btn-outline" style={{ fontSize: '1rem', padding: '0.85rem 1.8rem', background: 'rgba(255, 255, 255, 0.8)' }}>
                 📖 Companion Storybook ($19) →
@@ -269,20 +263,22 @@ const Listen = () => {
                   </div>
                   {optinError && <p className="heist-error" role="alert">{optinError}</p>}
                   <p className="heist-guarantee">
-                    🔒 100% Free · Instant streaming player &amp; printable coloring book delivery · No spam
+                    🔒 100% Free · Instant streaming player access to all 19 tracks · No spam
                   </p>
                 </form>
               </div>
 
               <div style={{ margin: '1.25rem auto 1rem auto', display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap', alignItems: 'center' }}>
-                <button
-                  type="button"
-                  onClick={handleColoringBookDownloadClick}
+                <a
+                  href={STRIPE_STARTER_PACK_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={handleStarterPackClick}
                   className="btn btn-outline"
-                  style={{ fontSize: '1rem', padding: '0.85rem 1.8rem', background: 'rgba(255, 255, 255, 0.8)', cursor: 'pointer' }}
+                  style={{ fontSize: '1rem', padding: '0.85rem 1.8rem', background: 'rgba(255, 255, 255, 0.8)', cursor: 'pointer', textDecoration: 'none' }}
                 >
-                  🎨 Download Free Coloring Book (PDF) ↓
-                </button>
+                  🎨 {t('listen.starterPackCta', 'Quest Starter & Coloring Pack ($7) →')}
+                </a>
                 <Link to="/gallery" className="btn btn-outline" style={{ fontSize: '1rem', padding: '0.85rem 1.8rem', background: 'rgba(255, 255, 255, 0.8)' }}>
                   📖 Companion Storybook ($19) →
                 </Link>
@@ -432,8 +428,8 @@ const Listen = () => {
               <span className="listen-optin__icon">🎧</span>
               <h2 className="listen-optin__heading">Unlock the Full Quest</h2>
               <p className="listen-optin__subtext">
-                Enter your email to unlock all 19 tracks, waveform audio player,
-                printable coloring book, and start a free 5-day sensory learning journey.
+                Enter your email to unlock all 19 tracks, access the full private player,
+                and start a free 5-day sensory learning journey.
               </p>
 
               {/* COPPA Parental Affirmation Gate */}
@@ -647,7 +643,7 @@ const Listen = () => {
                       {copied ? '✅ Link Copied to Clipboard!' : '🔗 Copy Free Invite Link'}
                     </button>
                     <a
-                      href={`https://wa.me/?text=${encodeURIComponent("Hey! Check out this free 19-track musical learning experience & coloring book for kids: " + (typeof window !== 'undefined' ? window.location.origin + '/listen' : 'https://thesoundofessentials.com/listen'))}`}
+                      href={`https://wa.me/?text=${encodeURIComponent("Hey! Check out this free 19-track musical learning experience for kids: " + (typeof window !== 'undefined' ? window.location.origin + '/listen' : 'https://thesoundofessentials.com/listen'))}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="btn btn-outline"

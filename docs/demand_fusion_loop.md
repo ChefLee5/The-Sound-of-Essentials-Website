@@ -16,7 +16,7 @@ For an isolated agent with no real-world offering, survival pressure is a novelt
 ### The SOE Inversion: Real Products, Real Demand, Autonomous Discipline
 SOE possesses the real-world commercial engine that Automaton lacked:
 1. **Proven High-Converting Product Ladder:** Truly $0 front end (19-track album) → $7 in-cart card-vaulting bump → $19 flat eBook → $35 physical *Rhythm Ready Workbook* → $14.99/mo *Rhythm Pass* subscription.
-2. **Shopify Post-Purchase Infrastructure:** Real card vaulting on orders ≥ $0.50 via the $7 bump, unlocking post-purchase one-click upsells.
+2. **Direct Stripe Card Vaulting Infrastructure:** Real card vaulting on orders ≥ $0.50 via the $7 bump, unlocking post-purchase one-click upsells.
 3. **High-Value Enterprise B2B Market:** Stage 3 State DOE procurement, Head Start ELOF adoptions, and $349 classroom print crates.
 4. **Rich Creative Asset Engine:** 30 ad archetypes, 5 Cultural Deltas, and the Higgsfield visual asset pipeline.
 
@@ -29,7 +29,7 @@ By wrapping this into a **Demand Fusion Loop**, we eliminate the fatal flaw of t
 ```mermaid
 flowchart TD
     subgraph RevenueEngine [Commercial Ingestion]
-        Shopify[Shopify Checkout & Webhooks] -->|Orders ≥ $0.50| Vault[Card Vaulted]
+        Stripe[Direct Stripe Checkout & Webhooks] -->|Orders ≥ $0.50| Vault[Card Vaulted]
         Vault --> Upsell[One-Click Upsells: $19 eBook / $35 Workbook / $14.99 Rhythm Pass]
         Inquiry[B2B School & District Pilot Submissions] -->|Edge API /api/submit| NeonCRM[(Neon PostgreSQL CRM & Deals)]
     end
@@ -74,7 +74,7 @@ Instead of binary "running vs. crashed", the Demand Fusion Loop operates in **fo
 | **🔴 Tier 4: Dormant / Hibernation** | Zero Treasury | **Treasury Balance ≤ $0.00** | **Absolute Code Circuit Breaker.** Zero inference calls permitted. | All external API calls, paid campaigns, and broadcasts stopped. | Fully offline. |
 
 > [!IMPORTANT]
-> **The Hibernation Resilience Rule:** Tier 4 is never a fatal crash. Public-facing web assets (`/listen`, `/universe`, `/science`) remain operational and accessible. When an inbound customer completes a purchase on Shopify or an institution submits an order, the webhook instantly credits the treasury, waking the loop back into Tier 2 or Tier 1.
+> **The Hibernation Resilience Rule:** Tier 4 is never a fatal crash. Public-facing web assets (`/listen`, `/universe`, `/science`) remain operational and accessible. When an inbound customer completes a purchase via Direct Stripe API or an institution submits an order, the webhook instantly credits the treasury, waking the loop back into Tier 2 or Tier 1.
 
 ---
 
@@ -178,7 +178,7 @@ When the 19 acoustic tracks propagate organically via short-form video ("Views >
 
 1. **Step 1: Database Treasury Schema (`Neon PostgreSQL`)**
    - Create `crm_treasury_ledger` table tracking: `timestamp`, `transaction_type` (inbound_order, ad_spend, inference_cost), `amount`, `resulting_balance`, and `active_tier`.
-2. **Step 2: Shopify Webhook Auto-Crediting (`/api/shopify-webhook`)**
+2. **Step 2: Stripe Webhook Auto-Crediting (`/api/stripe-webhook`)**
    - On every order paid event, calculate gross profit and automatically post a credit transaction to `crm_treasury_ledger`.
 3. **Step 3: Edge Circuit Breaker (`web/functions/api/admin/crm/treasury.js`)**
    - Provide an edge API endpoint returning `{ currentTier, treasuryBalance, canSpendPaidAds, inferenceTier }`.

@@ -3,7 +3,7 @@
 
 > **Strategic Directive:** Update the Demand Fusion model to reflect **exponentially higher projections** driven by organic TikTok sound virality, near-zero marginal customer acquisition costs ($0 CAC), and hyper-scaled contribution margins (88%–92%+).
 >
-> **Canonical Integration:** Aligned with the 19-track acoustic album engine, Gate 1 / Gate 2 Shopify card-vaulting architecture, Stage 3 Enterprise B2B roadmap, and the 5 Cultural Deltas.
+> **Canonical Integration:** Aligned with the 19-track acoustic album engine, Gate 1 / Gate 2 Direct Stripe card-vaulting architecture, Stage 3 Enterprise B2B roadmap, and the 5 Cultural Deltas.
 
 ---
 
@@ -139,6 +139,6 @@ flowchart LR
 2. **UGC Seed Program (Pre-K & Homeschool Educators):**
    - Provide 25 top early-childhood micro-creators on TikTok/Instagram with free physical *Rhythm Ready Workbooks* and *Essential Picture Dictionaries* to showcase during circle times.
 3. **Card-Vaulting Optimization on High Traffic Spikes:**
-   - Ensure the Shopify checkout flow and in-cart $7 bump maintain sub-second load times on mobile traffic bursts to maximize card vaulting efficiency.
+   - Ensure the Direct Stripe checkout flow and in-cart $7 bump maintain sub-second load times on mobile traffic bursts to maximize card vaulting efficiency.
 4. **Automated B2B Lead Conversion:**
    - Every educator tagging or sharing SOE music on TikTok is identified and funneled via the CRM pipeline into a Stage 3 Institutional Classroom Pilot proposal.

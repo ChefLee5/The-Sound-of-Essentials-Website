@@ -518,7 +518,7 @@ const Home = () => {
                   <span className="cred-icon">🎨</span>
                   <div>
                     <strong>Scratch-Made Fine Arts</strong>
-                    <span>Masterfully produced by seasoned musicians with rich acoustic warmth and authentic live vocals</span>
+                    <span>Masterfully produced by seasoned musicians with rich acoustic warmth and authentic vocals recorded live in studio sessions</span>
                   </div>
                 </div>
                 <div className="credibility-pillar">

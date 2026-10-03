@@ -20,7 +20,7 @@ export default function DmOptInBridge() {
         <span className="dm-icon" role="img" aria-label="Chat Bubble">💬</span>
         <div className="dm-text">
           <strong>{t('listen.dmCtaTitle', 'Also Connect via Instagram DM')}</strong>
-          <small>{t('listen.dmCtaSubtitle', 'Get tracks and coloring book delivered to your Instagram in addition to email')}</small>
+          <small>{t('listen.dmCtaSubtitle', 'Get the 19 master tracks delivered to your Instagram in addition to email')}</small>
         </div>
       </a>
     </div>
