@@ -38,6 +38,7 @@ const AdvertorialStory = lazy(() => import('./pages/AdvertorialStory'));
 const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
 const TermsOfService = lazy(() => import('./pages/TermsOfService'));
 const DmcaPolicy = lazy(() => import('./pages/DmcaPolicy'));
+const InstitutionsQpc = lazy(() => import('./pages/InstitutionsQpc'));
 import CookieConsent from './components/CookieConsent';
 
 // ── V2 Redesign Routes (parallel, isolated under /v2) ───────────
@@ -110,6 +111,9 @@ const App = () => {
                 <Route path="/download"   element={<AnimatedPage><OrderSuccess /></AnimatedPage>} />
                 {/* Programmatic SEO Solutions Engine */}
                 <Route path="/solutions" element={<AnimatedPage><SolutionsHub /></AnimatedPage>} />
+                <Route path="/institutions" element={<AnimatedPage><InstitutionsQpc /></AnimatedPage>} />
+                <Route path="/enterprise" element={<AnimatedPage><InstitutionsQpc /></AnimatedPage>} />
+                <Route path="/qpc" element={<AnimatedPage><InstitutionsQpc /></AnimatedPage>} />
                 <Route path="/for/:slug" element={<AnimatedPage><ProgrammaticPersonaPage /></AnimatedPage>} />
                 <Route path="/solutions/:slug" element={<AnimatedPage><ProgrammaticPersonaPage /></AnimatedPage>} />
                 <Route path="/guides/:slug" element={<AnimatedPage><ProgrammaticPersonaPage /></AnimatedPage>} />
