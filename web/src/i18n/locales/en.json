@@ -812,5 +812,52 @@
                 "desc": "A calm closing track that reminds every child that light always follows the storm."
             }
         }
+    },
+    "listen": {
+        "ethicalHeistBadge": "THE ETHICAL HEIST",
+        "ethicalHeistTitle": "STEAL The 10-Minute Morning Routine That Displaced Screen Meltdowns Across 500+ Homes",
+        "ethicalHeistSubtitle": "No fake promises. Just 19 studio-recorded acoustic master tracks and the screen-free tactile blueprint for ages 2–7. Free today.",
+        "ethicalHeistCta": "STEAL THE BLUEPRINT (FREE ALBUM + COLORING BOOK)",
+        "orDivider": "OR",
+        "dmCtaTitle": "Send to my Instagram (No Email Required)",
+        "dmCtaSubtitle": "DM \"RHYTHM\" to @soelearn & get tracks instantly"
+    },
+    "institutions": {
+        "badge": "Institutional & Enterprise Concord",
+        "title": "Scale Screen-Free Learning Across Your Classrooms",
+        "subtitle": "Turnkey 10–15 minute acoustic lesson extensions and 50-state standards crosswalks (Head Start ELOF & NAEYC) for ages 2–7.",
+        "step1_title": "Step 1: Quick Institutional Fit Assessment",
+        "step1_subtitle": "Select your facility parameters to unlock institutional pricing and curriculum exhibits.",
+        "q1_label": "Organization Type",
+        "q1_opt1": "Preschool / Daycare Chain (Multi-Center)",
+        "q1_opt2": "Head Start / Early Head Start Grantee",
+        "q1_opt3": "Private Pre-K / Elementary Academy",
+        "q1_opt4": "State DOE / District Coordinator",
+        "q2_label": "Classroom Count (Ages 2–7)",
+        "q2_opt1": "1 to 5 Classrooms",
+        "q2_opt2": "6 to 20 Classrooms",
+        "q2_opt3": "20+ Classrooms (District / Statewide)",
+        "q3_label": "Curriculum Implementation Timeline",
+        "q3_opt1": "Immediate (Current School Year)",
+        "q3_opt2": "Next Term / Academic Year",
+        "q3_opt3": "Exploratory / Grant Planning",
+        "next_btn": "Proceed to Curriculum Pitch →",
+        "step2_title": "Step 2: The Turnkey Acoustic Classroom System",
+        "feature1_title": "19 Master Acoustic Tracks",
+        "feature1_desc": "Recorded live in studio sessions. Daily morning acoustic rhythms for circle time, transitions, and phonics.",
+        "feature2_title": "50-State ELOF & NAEYC Crosswalk",
+        "feature2_desc": "Full standards alignment across all 5 core developmental domains for ages 2–7.",
+        "feature3_title": "Printable Educator & Student Kits",
+        "feature3_desc": "Tactile, screen-free workbooks and laminated learning cards for immediate classroom deployment.",
+        "step3_title": "Step 3: Schedule Institutional Concierge Review",
+        "step3_subtitle": "Speak directly with an SOE Curriculum Specialist to review licensing, procurement, and pilot kits.",
+        "book_call": "Schedule Priority Curriculum Call",
+        "direct_email": "Or email institutional licensing directly at: info@soelearn.com"
+    },
+    "concierge": {
+        "online": "Educator Concierge Active",
+        "text": "Have questions about ages 2–7 readiness? Text our curriculum team directly: ",
+        "phone": "1-800-555-RHYTHM",
+        "callout": "Real educators, zero chatbots. Available Mon-Fri 8am-6pm EST."
     }
 }

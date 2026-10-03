@@ -70,6 +70,48 @@
   animation: fadeInUp 0.6s 0.2s var(--ease-gentle) both;
 }
 
+/* ── Ethical Heist Callout ── */
+.ethical-heist-callout {
+  background: linear-gradient(135deg, rgba(255, 248, 240, 0.95), rgba(255, 255, 255, 0.9));
+  border: 2px dashed rgba(255, 111, 0, 0.35);
+  border-radius: var(--radius-lg, 24px);
+  padding: 1.5rem 1.75rem;
+  max-width: 720px;
+  margin: 0 auto 1.75rem auto;
+  box-shadow: 0 8px 24px rgba(255, 111, 0, 0.08);
+  animation: fadeInUp 0.6s 0.25s var(--ease-gentle) both;
+}
+
+.ethical-heist-callout .badge-tag {
+  display: inline-block;
+  background: var(--color-orange, #ff6f00);
+  color: #ffffff;
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 4px 14px;
+  border-radius: var(--radius-xl, 50px);
+  margin-bottom: 0.65rem;
+}
+
+.ethical-heist-callout .heist-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.2rem, 3.2vw, 1.75rem);
+  font-weight: 800;
+  color: var(--color-text-dark, #1f2937);
+  line-height: 1.25;
+  margin-bottom: 0.5rem;
+}
+
+.ethical-heist-callout .heist-subtitle {
+  font-size: 0.98rem;
+  color: var(--color-text-muted, #4b5563);
+  line-height: 1.5;
+  margin: 0;
+}
+
 /* ── Album Cover ── */
 .listen-cover {
   display: flex;

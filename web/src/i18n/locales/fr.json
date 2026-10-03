@@ -52,7 +52,6 @@
         "dmca_title": "Avis DMCA et Politique de Sphère de Sécurité"
     },
     "home": {
-
         "hero_offer": {
             "eyebrow": "THE SOUND OF ESSENTIALS DELUXE · ÂGES 2–7",
             "title_main": "Une Expérience d'Apprentissage Musicale",
@@ -813,5 +812,52 @@
                 "desc": "Une piste de clôture apaisante — la promesse que la lumière suit toujours la tempête."
             }
         }
+    },
+    "listen": {
+        "ethicalHeistBadge": "L'ACCÈS EXCLUSIF",
+        "ethicalHeistTitle": "ADOPTEZ la routine matinale de 10 minutes qui a éliminé les crises d'écran dans plus de 500 foyers",
+        "ethicalHeistSubtitle": "Sans écrans. 19 pistes acoustiques enregistrées en studio et le guide tactile pour les 2–7 ans. Gratuit aujourd'hui.",
+        "ethicalHeistCta": "OBTENIR LE GUIDE GRATUIT (ALBUM + COLORIAGE)",
+        "orDivider": "OU",
+        "dmCtaTitle": "Envoyer sur mon Instagram (Sans e-mail)",
+        "dmCtaSubtitle": "Envoyez \"RHYTHM\" par message direct à @soelearn et recevez les morceaux instantanément"
+    },
+    "institutions": {
+        "badge": "Concorde Institutionnelle et Entreprise",
+        "title": "Développez l'apprentissage sans écran dans vos classes",
+        "subtitle": "Extensions de leçons acoustiques clés en main de 10 à 15 minutes et alignement pédagogique (Head Start ELOF et NAEYC) pour les 2–7 ans.",
+        "step1_title": "Étape 1 : Évaluation rapide de compatibilité institutionnelle",
+        "step1_subtitle": "Sélectionnez les caractéristiques de votre établissement pour débloquer les tarifs institutionnels.",
+        "q1_label": "Type d'établissement",
+        "q1_opt1": "Réseau de crèches / écoles maternelles (multi-centres)",
+        "q1_opt2": "Bénéficiaire Head Start / Early Head Start",
+        "q1_opt3": "Académie préscolaire ou primaire privée",
+        "q1_opt4": "Coordinateur de district / Ministère de l'Éducation",
+        "q2_label": "Nombre de classes (Âges 2–7 ans)",
+        "q2_opt1": "1 à 5 classes",
+        "q2_opt2": "6 à 20 classes",
+        "q2_opt3": "20+ classes (District ou niveau régional)",
+        "q3_label": "Calendrier de déploiement",
+        "q3_opt1": "Immédiat (Année scolaire en cours)",
+        "q3_opt2": "Prochaine rentrée académique",
+        "q3_opt3": "Exploratoire / Demande de subvention",
+        "next_btn": "Découvrir le programme pédagogique →",
+        "step2_title": "Étape 2 : Le système acoustique clé en main en classe",
+        "feature1_title": "19 pistes acoustiques de référence",
+        "feature1_desc": "Enregistrées en studio. Rythmes acoustiques quotidiens pour les rassemblements et la phonétique.",
+        "feature2_title": "Alignement sur les normes ELOF et NAEYC",
+        "feature2_desc": "Alignement sur les 5 domaines de développement pour les enfants de 2 à 7 ans.",
+        "feature3_title": "Kits imprimables pour éducateurs et élèves",
+        "feature3_desc": "Cahiers d'exercices tactiles sans écran et fiches pédagogiques pour la classe.",
+        "step3_title": "Étape 3 : Planifier une consultation pédagogique",
+        "step3_subtitle": "Échangez directement avec un spécialiste pédagogique de SOE pour les licences et kits pilotes.",
+        "book_call": "Réserver un appel pédagogique prioritaire",
+        "direct_email": "Ou écrivez directement à l'équipe institutionnelle : info@soelearn.com"
+    },
+    "concierge": {
+        "online": "Conciergerie éducative active",
+        "text": "Des questions sur l'éveil pour les 2–7 ans ? Envoyez un message à notre équipe pédagogique : ",
+        "phone": "1-800-555-RHYTHM",
+        "callout": "De vrais éducateurs, aucun robot. Du lundi au vendredi."
     }
 }

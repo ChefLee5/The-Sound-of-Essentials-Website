@@ -22,6 +22,7 @@ import { trackLead } from '../utils/analytics';
 import { submitSoeInterest } from '../services/soeSubmissions';
 import { getDeliveryUrl, triggerBrowserDownload } from '../utils/deliveryUrl';
 import { isGateUnlocked, setGateUnlocked, getCapturedEmail, isValidEmail } from '../utils/gateAuth';
+import DmOptInBridge from '../components/DmOptInBridge';
 import './MediaRoom.css';
 import './Listen.css';
 
@@ -241,6 +242,12 @@ const Listen = () => {
             </div>
           ) : (
             <>
+              <div className="ethical-heist-callout">
+                <span className="badge-tag">{t('listen.ethicalHeistBadge')}</span>
+                <h2 className="heist-title">{t('listen.ethicalHeistTitle')}</h2>
+                <p className="heist-subtitle">{t('listen.ethicalHeistSubtitle')}</p>
+              </div>
+
               <div style={{ margin: '1.5rem auto 1rem auto', display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap', alignItems: 'center' }}>
                 <MagneticPill intensity={0.25}>
                   <button
@@ -249,7 +256,7 @@ const Listen = () => {
                     className="btn btn-gold btn-shimmer"
                     style={{ fontSize: '1.05rem', padding: '0.9rem 2.5rem', cursor: 'pointer', border: 'none' }}
                   >
-                    🎧 Unlock All 19 Tracks Free →
+                    🎧 {t('listen.ethicalHeistCta')} →
                   </button>
                 </MagneticPill>
                 <button
@@ -267,6 +274,9 @@ const Listen = () => {
                   📚 Rhythm Ready Workbook ($21) →
                 </Link>
               </div>
+
+              <DmOptInBridge />
+
               <ProofInThePause variant="compact" />
             </>
           )}
@@ -579,7 +589,7 @@ const Listen = () => {
                   <div className="listen-tripwire-card glass-card" style={{ padding: '2.5rem', background: 'linear-gradient(135deg, rgba(255, 248, 240, 0.95), rgba(255, 255, 255, 0.92))', border: '2px solid rgba(255, 111, 0, 0.25)' }}>
                     <div className="listen-tripwire-card__content">
                       <span className="listen-tripwire-card__badge" style={{ background: 'rgba(255, 111, 0, 0.15)', color: 'var(--color-orange)' }}>
-                        📚 Complete 8-Week Curriculum · Grades K–3
+                        📚 Complete 8-Week Curriculum · Pre-K to Grade 2 (Ages 2–7)
                       </span>
                       <h3 className="listen-tripwire-card__title" style={{ fontSize: '1.8rem', marginTop: '0.5rem' }}>
                         Pair This Album With The Daily Rhythm Ready Workbook
