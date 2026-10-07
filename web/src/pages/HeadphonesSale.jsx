@@ -331,7 +331,7 @@ const HeadphonesSale = () => {
             </p>
             <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 1.5rem 0', color: '#5C4A3A', lineHeight: 1.8 }}>
               <li>✔ AWATRUE HK05 74/85dB Safe Sensory Headphones ($34.99 value)</li>
-              <li>✔ Physical 8-Week Rhythm Ready Workbook ($35.00 value)</li>
+              <li>✔ Physical 8-Week Rhythm Ready Workbook ($45.00 value)</li>
               <li>✔ 1.5m Tangle-Free Braided Audio Cable</li>
               <li>✔ Free 19-Track Album Streaming &amp; Printable Activities</li>
             </ul>
@@ -341,7 +341,7 @@ const HeadphonesSale = () => {
             <span style={{ fontSize: '0.9rem', color: '#786454', textTransform: 'uppercase', fontWeight: 700 }}>Bundle Deal</span>
             <div style={{ margin: '0.75rem 0' }}>
               <span className="hp-bundle-price">$39</span>
-              <span className="hp-bundle-retail">$69.99</span>
+              <span className="hp-bundle-retail">$79.99</span>
             </div>
             <p style={{ color: '#16A34A', fontWeight: 600, fontSize: '0.9rem', marginBottom: '1.25rem' }}>
               Save $30.99 + Free Shipping
