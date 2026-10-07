@@ -221,7 +221,7 @@ export const MagneticPill = ({ children, className = '', style = {}, intensity =
 /**
  * 3D Magnetic Tilt Card for Track Previews & Album Art with Apple spring physics.
  */
-export const TiltCard = ({ children, className = '', style = {}, maxTilt = 8, accentColor, ...props }) => {
+export const TiltCard = ({ children, className = '', style = {}, maxTilt = 8, _accentColor, ...props }) => {
   const ref = useRef(null);
   // Apple WWDC 2018 fluid rotation springs
   const rotX = useSpring(0, { stiffness: 280, damping: 28, mass: 0.8 });

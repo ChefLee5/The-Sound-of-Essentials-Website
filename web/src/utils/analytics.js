@@ -142,7 +142,7 @@ export const trackPageView = (path, title = '') => {
 /**
  * Dispatches Lead event (e.g. email capture on /listen or newsletter).
  */
-export const trackLead = ({ email = '', formName = 'gate1_listen', source = 'listen_page', ...rest } = {}) => {
+export const trackLead = ({ email: _email = '', formName = 'gate1_listen', source = 'listen_page', ...rest } = {}) => {
   if (typeof window === 'undefined') return;
   const utms = getStoredUtms();
 

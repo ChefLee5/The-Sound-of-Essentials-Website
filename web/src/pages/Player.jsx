@@ -9,7 +9,6 @@ import { assetPath } from '../utils/assetPath';
 import { audioUrl } from '../utils/audioUrl';
 import tracksData from '../data/tracks.json';
 import { trackLead } from '../utils/analytics';
-import { submitSoeInterest } from '../services/soeSubmissions';
 import { triggerQuestCelebration, TiltCard } from '../components/ui/DesignSpells';
 import { isGateUnlocked, setGateUnlocked, getCapturedEmail, isValidEmail } from '../utils/gateAuth';
 
@@ -73,39 +72,6 @@ const Player = () => {
     }
   }, [searchParams, setSearchParams, unlock]);
 
-  const [directEmail, setDirectEmail] = useState('');
-  const [directName, setDirectName] = useState('');
-  const [isSubmittingDirect, setIsSubmittingDirect] = useState(false);
-  const [directError, setDirectError] = useState('');
-
-  const handleDirectUnlock = async (e) => {
-    e.preventDefault();
-    setDirectError('');
-    const cleanEmail = directEmail.trim().toLowerCase();
-    if (!isValidEmail(cleanEmail)) {
-      setDirectError('Please enter a valid email address.');
-      return;
-    }
-    setIsSubmittingDirect(true);
-    const cleanName = directName.trim() || 'Rhythm Explorer';
-    try {
-      await submitSoeInterest({
-        kind: 'interest',
-        name: cleanName,
-        email: cleanEmail,
-        organizationName: 'Player Free Pass',
-        message: 'Unlocked 19-Track Audio Player via Direct Form',
-        sourcePath: '/player',
-      });
-    } catch (err) {
-      console.warn('Direct unlock edge sync notice:', err);
-    }
-
-    setGateUnlocked(cleanEmail, cleanName);
-    trackLead({ formName: 'player_direct_optin', email: cleanEmail, name: cleanName, source: 'player_page' });
-    unlock(cleanEmail);
-    setIsSubmittingDirect(false);
-  };
 
   const handleTrackChange = useCallback((index) => {
     setActiveTrack(index);

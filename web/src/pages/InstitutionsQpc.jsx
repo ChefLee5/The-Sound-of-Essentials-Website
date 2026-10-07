@@ -23,7 +23,7 @@ export default function InstitutionsQpc() {
   const [leadOrg, setLeadOrg] = useState('');
   const [leadPhone, setLeadPhone] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
+  const [_submitted, setSubmitted] = useState(false);
   const [submitError, setSubmitError] = useState('');
 
   const handleQualifierSubmit = (e) => {

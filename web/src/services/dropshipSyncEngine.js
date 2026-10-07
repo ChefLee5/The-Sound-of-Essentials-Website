@@ -3,7 +3,6 @@
  * Bridges Neon PostgreSQL CRM, CJ Dropshipping fulfillment, and TikTok Shop Partner API.
  */
 
-import { cjDropshipService } from './cjDropshipService.js';
 import { tiktokShopService } from './tiktokShopService.js';
 
 const NEON_ENDPOINT = 'https://ep-wandering-voice-ae85papv.c-2.us-east-2.aws.neon.tech/sql';

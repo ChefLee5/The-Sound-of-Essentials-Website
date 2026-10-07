@@ -190,7 +190,7 @@ export const AudioPlayer = ({ tracks }) => {
   const [progress, setProgress] = useState(0);
   const [duration, setDuration] = useState(0);
   const [showLyrics, setShowLyrics] = useState(false);
-  const [analyser, setAnalyser] = useState(null);
+  const [analyser] = useState(null);
   const audioRef = useRef(null);
 
   const initAudio = () => {
@@ -254,9 +254,6 @@ export const AudioPlayer = ({ tracks }) => {
 
   const togglePlay = (e) => {
     initAudio();
-    if (audioContextRef.current?.state === 'suspended') {
-      audioContextRef.current.resume();
-    }
     const audio = audioRef.current;
     if (isPlaying) {
       audio.pause();
@@ -298,9 +295,6 @@ export const AudioPlayer = ({ tracks }) => {
 
   const selectTrack = (i, e) => {
     initAudio();
-    if (audioContextRef.current?.state === 'suspended') {
-      audioContextRef.current.resume();
-    }
     if (i === currentTrack && isPlaying) {
       togglePlay(e);
       return;

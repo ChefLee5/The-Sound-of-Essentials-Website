@@ -16,11 +16,10 @@ import {
 import { triggerQuestCelebration, TiltCard, MagneticPill } from '../components/ui/DesignSpells';
 import ProofInThePause from '../components/ui/ProofInThePause';
 import StickyThumbCta from '../components/ui/StickyThumbCta';
-import GiftALandModal from '../components/GiftALandModal';
 import EmailDownloadGateModal from '../components/EmailDownloadGateModal';
+import { GiftALandModal } from '../components/GiftALandModal';
 import { trackLead, trackInitiateCheckout } from '../utils/analytics';
 import { submitSoeInterest } from '../services/soeSubmissions';
-import { getDeliveryUrl, triggerBrowserDownload } from '../utils/deliveryUrl';
 import { isGateUnlocked, setGateUnlocked, getCapturedEmail, isValidEmail } from '../utils/gateAuth';
 import DmOptInBridge from '../components/DmOptInBridge';
 import './MediaRoom.css';
@@ -125,7 +124,14 @@ const Listen = () => {
   };
 
   const handleCopyShareLink = () => {
-    setIsGiftModalOpen(true);
+    try {
+      const url = typeof window !== 'undefined' ? `${window.location.origin}/listen` : 'https://thesoundofessentials.com/listen';
+      navigator.clipboard.writeText(url);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 3000);
+    } catch {
+      setIsGiftModalOpen(true);
+    }
   };
 
   // ── Track data (for AudioPlayer + JSON-LD) ──────────────────
@@ -678,6 +684,13 @@ const Listen = () => {
             navigate('/player');
           }
         }}
+      />
+
+      {/* ── Viral Milestone Gift A Land Modal ── */}
+      <GiftALandModal
+        isOpen={isGiftModalOpen}
+        onClose={() => setIsGiftModalOpen(false)}
+        triggerLand={giftLand}
       />
     </div>
   );
