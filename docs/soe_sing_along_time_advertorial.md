@@ -1,6 +1,6 @@
 # Why Parents Are Trading Screen Time for Sing-Along Time — And Watching Their Kids Grow Kinder
 
-- **Source:** [https://www.getlandra.com/preview/sIE48ds4UaFgnfwcLuUt8wJ-2mX6Ehad](https://www.getlandra.com/preview/sIE48ds4UaFgnfwcLuUt8wJ-2mX6Ehad)
+- **Canonical Route:** [/story](https://thesoundofessentials.com/story) | **Target Funnel:** The Sound of Essentials: Rhythm Quest Flagship Editorial Advertorial
 > **Subtitle:** The songs behind a calmer home: 19 original tracks and 15 mentor characters that teach empathy, cooperation, and self-regulation while kids play, not stare.
 
 ---

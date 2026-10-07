@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Sound of Essentials: Rhythm Quest — Totality Executive Deck</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-cream: #faf9f7;
+      --bg-light: #f3f1ee;
+      --bg-card: #ffffff;
+      --color-orange: #FF6F00;
+      --color-orange-dark: #E65100;
+      --color-green: #4CAF50;
+      --color-purple: #7B1FA2;
+      --color-blue: #1E88E5;
+      --color-yellow: #FFB300;
+      --color-text-dark: #1a1a2e;
+      --color-text-muted: #555568;
+      --radius-sm: 12px;
+      --radius-md: 20px;
+      --radius-lg: 28px;
+      --radius-pill: 50px;
+      --font-display: 'Outfit', sans-serif;
+      --font-heading: 'Fredoka', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      --font-cursive: 'Dancing Script', cursive;
+      --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.05);
+      --shadow-hover: 0 18px 45px rgba(255, 111, 0, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      background-color: var(--bg-cream);
+      color: var(--color-text-dark);
+      font-family: var(--font-body);
+      overflow: hidden;
+      height: 100vh;
+      width: 100vw;
+      user-select: none;
+    }
+
+    /* Top Progress Bar */
+    #progress-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 6px;
+      background: rgba(0, 0, 0, 0.05);
+      z-index: 100;
+    }
+    #progress-bar {
+      height: 100%;
+      width: 10%;
+      background: linear-gradient(90deg, var(--color-orange), var(--color-purple));
+      transition: width 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    /* Slide Deck Wrapper */
+    #deck-container {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px 40px 80px 40px;
+    }
+
+    .slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 40px 60px 90px 60px;
+      display: flex;
+      flex-direction: column;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(15px) scale(0.98);
+      transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.4s;
+      overflow-y: auto;
+    }
+
+    .slide.active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0) scale(1);
+      z-index: 10;
+    }
+
+    /* Header in Slide */
+    .slide-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 24px;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+      padding-bottom: 14px;
+    }
+    .slide-badge-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+    .pill-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 16px;
+      border-radius: var(--radius-pill);
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      font-family: var(--font-display);
+      background: #FFF0E0;
+      color: var(--color-orange);
+      border: 1px solid rgba(255, 111, 0, 0.2);
+    }
+    .pill-badge.purple {
+      background: #F3E5F5;
+      color: var(--color-purple);
+      border-color: rgba(123, 31, 162, 0.2);
+    }
+    .pill-badge.green {
+      background: #E8F5E9;
+      color: var(--color-green);
+      border-color: rgba(76, 175, 80, 0.2);
+    }
+    .pill-badge.blue {
+      background: #E3F2FD;
+      color: var(--color-blue);
+      border-color: rgba(30, 136, 229, 0.2);
+    }
+    .slide-title {
+      font-family: var(--font-heading);
+      font-size: 2.1rem;
+      color: var(--color-text-dark);
+      font-weight: 700;
+      line-height: 1.15;
+    }
+    .slide-subtitle {
+      font-size: 1rem;
+      color: var(--color-text-muted);
+      margin-top: 4px;
+      font-weight: 400;
+    }
+    .brand-mark {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-display);
+      font-weight: 700;
+      color: var(--color-orange-dark);
+      font-size: 1rem;
+    }
+    .brand-mark img {
+      height: 38px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    /* Layout Grids */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      flex: 1;
+      align-items: stretch;
+    }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      flex: 1;
+    }
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      flex: 1;
+    }
+
+    /* Cards */
+    .glass-card {
+      background: var(--bg-card);
+      border: 1.5px solid rgba(0, 0, 0, 0.06);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      box-shadow: var(--shadow-soft);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      position: relative;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .glass-card:hover {
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-2px);
+    }
+    .card-title {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      color: var(--color-text-dark);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .card-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      background: rgba(255, 111, 0, 0.1);
+      color: var(--color-orange);
+    }
+    .card-body {
+      font-size: 0.92rem;
+      line-height: 1.55;
+      color: var(--color-text-muted);
+      flex: 1;
+    }
+    .card-body ul {
+      margin-left: 18px;
+      margin-top: 8px;
+    }
+    .card-body li {
+      margin-bottom: 6px;
+    }
+    .card-body strong {
+      color: var(--color-text-dark);
+    }
+
+    /* Big Metric Stat Box */
+    .stat-box {
+      background: linear-gradient(135deg, #ffffff 0%, #fff8f0 100%);
+      border: 2px solid rgba(255, 111, 0, 0.15);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      text-align: center;
+      box-shadow: var(--shadow-soft);
+    }
+    .stat-number {
+      font-family: var(--font-display);
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: var(--color-orange);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .stat-label {
+      font-size: 0.88rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--color-text-dark);
+      font-family: var(--font-display);
+    }
+    .stat-sub {
+      font-size: 0.78rem;
+      color: var(--color-text-muted);
+      margin-top: 4px;
+    }
+
+    /* Slide 1 Hero Layout */
+    .hero-center {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      height: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .hero-logo-img {
+      max-height: 110px;
+      margin-bottom: 24px;
+      filter: drop-shadow(0 10px 20px rgba(255,111,0,0.2));
+    }
+    .hero-h1 {
+      font-family: var(--font-heading);
+      font-size: 3.4rem;
+      line-height: 1.08;
+      color: var(--color-text-dark);
+      margin-bottom: 16px;
+    }
+    .hero-h1 span {
+      color: var(--color-orange);
+      background: linear-gradient(90deg, #FF6F00, #E65100);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-motto {
+      font-family: var(--font-cursive);
+      font-size: 1.8rem;
+      color: var(--color-purple);
+      margin-bottom: 24px;
+    }
+    .hero-desc {
+      font-size: 1.15rem;
+      line-height: 1.6;
+      color: var(--color-text-muted);
+      max-width: 780px;
+      margin-bottom: 34px;
+    }
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    /* Org Table styling */
+    .org-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0 8px;
+      font-size: 0.88rem;
+    }
+    .org-table th {
+      text-align: left;
+      padding: 10px 14px;
+      font-family: var(--font-display);
+      font-size: 0.8rem;
+      color: var(--color-text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .org-table td {
+      background: #ffffff;
+      padding: 12px 14px;
+      border-top: 1px solid rgba(0,0,0,0.04);
+      border-bottom: 1px solid rgba(0,0,0,0.04);
+    }
+    .org-table tr td:first-child {
+      border-left: 1px solid rgba(0,0,0,0.04);
+      border-top-left-radius: var(--radius-sm);
+      border-bottom-left-radius: var(--radius-sm);
+      font-weight: 700;
+      color: var(--color-orange);
+    }
+    .org-table tr td:last-child {
+      border-right: 1px solid rgba(0,0,0,0.04);
+      border-top-right-radius: var(--radius-sm);
+      border-bottom-right-radius: var(--radius-sm);
+      color: var(--color-text-muted);
+    }
+
+    /* Image Spotlight Component */
+    .image-spotlight {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 2px solid rgba(0,0,0,0.05);
+      position: relative;
+      height: 100%;
+      background: #f0ede8;
+    }
+    .image-spotlight img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .image-spotlight .caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.75) 100%);
+      color: #ffffff;
+      padding: 16px 20px;
+      font-size: 0.85rem;
+    }
+
+    /* Bottom Control Bar */
+    #nav-controls {
+      position: fixed;
+      bottom: 18px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      border-radius: var(--radius-pill);
+      padding: 8px 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      z-index: 100;
+    }
+    .nav-btn {
+      background: transparent;
+      border: none;
+      outline: none;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--color-text-dark);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: var(--radius-pill);
+      transition: all 0.2s;
+    }
+    .nav-btn:hover {
+      background: rgba(255, 111, 0, 0.1);
+      color: var(--color-orange);
+    }
+    .nav-btn.primary {
+      background: var(--color-orange);
+      color: #ffffff;
+    }
+    .nav-btn.primary:hover {
+      background: var(--color-orange-dark);
+    }
+    #slide-indicator {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: var(--color-text-muted);
+      min-width: 65px;
+      text-align: center;
+    }
+    .divider-v {
+      width: 1px;
+      height: 20px;
+      background: rgba(0, 0, 0, 0.1);
+    }
+
+    /* Speaker Notes Modal */
+    #notes-panel {
+      position: fixed;
+      bottom: 80px;
+      right: 40px;
+      width: 380px;
+      max-height: 260px;
+      background: #ffffff;
+      border: 1.5px solid rgba(0,0,0,0.1);
+      border-radius: var(--radius-md);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.15);
+      padding: 18px 20px;
+      z-index: 90;
+      display: none;
+      overflow-y: auto;
+    }
+    #notes-panel.active {
+      display: block;
+    }
+    #notes-panel h4 {
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      color: var(--color-orange);
+      margin-bottom: 8px;
+      display: flex;
+      justify-content: space-between;
+    }
+    #notes-content {
+      font-size: 0.85rem;
+      line-height: 1.5;
+      color: var(--color-text-muted);
+    }
+
+    /* Email Format Modal */
+    #email-modal {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 820px;
+      max-width: 90vw;
+      max-height: 85vh;
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+      z-index: 200;
+      padding: 30px;
+      display: none;
+      flex-direction: column;
+    }
+    #email-modal.active {
+      display: flex;
+    }
+    #modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0,0,0,0.4);
+      backdrop-filter: blur(4px);
+      z-index: 190;
+      display: none;
+    }
+    #modal-overlay.active {
+      display: block;
+    }
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+      padding-bottom: 12px;
+    }
+    .modal-header h3 {
+      font-family: var(--font-heading);
+      font-size: 1.4rem;
+      color: var(--color-text-dark);
+    }
+    .email-textarea {
+      flex: 1;
+      height: 420px;
+      border: 1px solid rgba(0,0,0,0.1);
+      border-radius: var(--radius-sm);
+      padding: 16px;
+      font-family: monospace;
+      font-size: 0.85rem;
+      line-height: 1.5;
+      background: #fdfdfd;
+      color: #333;
+      resize: none;
+      overflow-y: auto;
+    }
+    .modal-footer {
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    /* Print Stylesheet */
+    @media print {
+      body {
+        overflow: visible !important;
+        height: auto !important;
+        background: #ffffff !important;
+      }
+      #progress-container, #nav-controls, #notes-panel, #email-modal, #modal-overlay {
+        display: none !important;
+      }
+      #deck-container {
+        padding: 0 !important;
+        height: auto !important;
+        display: block !important;
+      }
+      .slide {
+        position: relative !important;
+        display: flex !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        page-break-after: always !important;
+        break-after: page !important;
+        height: 100vh !important;
+        padding: 40px !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Progress Bar -->
+  <div id="progress-container">
+    <div id="progress-bar"></div>
+  </div>
+
+  <!-- Deck Container -->
+  <div id="deck-container">
+
+    <!-- SLIDE 1: Title & Vision -->
+    <section class="slide active" data-title="Title & Vision" data-notes="Opening executive hook: Position SOE not as an app, but as a sovereign, multi-medium early childhood ecosystem designed for developing brains (ages 2-7).">
+      <div class="hero-center">
+        <img src="./SOE Logo.png" alt="The Sound of Essentials Logo" class="hero-logo-img" onerror="this.style.display='none'">
+        <div class="pill-badge" style="margin-bottom: 14px;">Enterprise Architecture & Totality Assessment</div>
+        <h1 class="hero-h1">The Sound of Essentials: <br><span>Rhythm Quest</span></h1>
+        <div class="hero-motto">"Staying on the path, always learning."</div>
+        <p class="hero-desc">
+          A vertically integrated, sovereign artist collective delivering a sensory-first early childhood learning sanctuary (Ages 2–7). 100% music publishing and master ownership, zero platform renting, original studio acoustic compositions, 15 canonical character turnarounds, print-ready publishing, 50-state curriculum crosswalks, direct Stripe card vaulting, and automated quality governance.
+        </p>
+        <div class="hero-tags">
+          <div class="pill-badge orange">Sovereign Artist Collective</div>
+          <div class="pill-badge" style="background:#FFF3E0; color:#E65100; border-color:#FFB74D;">100% Music Publishing Owned</div>
+          <div class="pill-badge purple">18-Role Industry Stack</div>
+          <div class="pill-badge green">Zero Platform Renting</div>
+          <div class="pill-badge blue">5.82 GB / 11,564 Assets</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 2: Macro Enterprise Scale -->
+    <section class="slide" data-title="Scale by the Numbers" data-notes="Walk stakeholders through the concrete quantitative footprint: over 11,500 files, 5.8 GB, 19 master tracks, and $1.8M-$2.4M replacement value.">
+      <div class="slide-header">
+        <div>
+          <div class="slide-badge-wrap">
+            <span class="pill-badge">Pillar Overview</span>
+            <span class="pill-badge blue">Scale & Depth</span>
+          </div>
+          <h2 class="slide-title">The Macro Enterprise Footprint</h2>
+          <div class="slide-subtitle">Quantitative assessment of the complete creative and technical repository.</div>
+        </div>
+        <div class="brand-mark">
+          <img src="./SOE Logo.png" alt="SOE" onerror="this.style.display='none'">
+          <span>SOE RHYTHM QUEST</span>
+        </div>
+      </div>
+
+      <div class="grid-4" style="margin-bottom: 20px;">
+        <div class="stat-box">
+          <div class="stat-number">5.82</div>
+          <div class="stat-label">Gigabytes</div>
+          <div class="stat-sub">High-res master art & code</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">11,564</div>
+          <div class="stat-label">Total Files</div>
+          <div class="stat-sub">Zero placeholders, production grade</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">19</div>
+          <div class="stat-label">Studio Tracks</div>
+          <div class="stat-sub">Acoustic session masters</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">400+</div>
+          <div class="stat-label">Daily Activities</div>
+          <div class="stat-sub">40-Day 8-Week Readiness Quest</div>
+        </div>
+      </div>
+
+      <div class="grid-3">
+        <div class="glass-card">
+          <div class="card-title"><div class="card-icon">⚡</div> Code & Web Architecture</div>
+          <div class="card-body">
+            <strong>5,800+ Codefiles</strong> across React 19.2, Vite 7.2, and Python automation. 38+ custom routes, persistent canvas audio player, programmatic SEO engine, and direct Stripe card-vaulting pipeline.
+          </div>
+        </div>
+        <div class="glass-card">
+          <div class="card-title"><div class="card-icon">🎨</div> Visual Art & Lore Vault</div>
+          <div class="card-body">
+            <strong>1,800+ Master Art Assets</strong> including 15 character turnarounds, Seriphia guardian model sheets, 11+ panoramic 4K/8K scene paintings, and 125+ scene backgrounds.
+          </div>
+        </div>
+        <div class="glass-card">
+          <div class="card-title"><div class="card-icon">💎</div> Industry Replacement Value</div>
+          <div class="card-body">
+            <strong>$1,500,000 to $2,400,000+</strong> agency replacement equivalent, representing 15–22 full-time specialists executing across 12–18 months of intensive sprint cycles.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 3: The 18-Role Organization & Talent Stack -->
+    <section class="slide" data-title="18-Role Talent Stack" data-notes="Emphasize that this work represents 7 distinct professional departments that normally require a team of 15 to 22 people in an agency or studio.">
+      <div class="slide-header">
+        <div>
+          <div class="slide-badge-wrap">
+            <span class="pill-badge purple">Organizational Structure</span>
+            <span class="pill-badge">Industry Equivalence</span>
+          </div>
+          <h2 class="slide-title">The 18-Role Industry Talent Stack</h2>
+          <div class="slide-subtitle">Cross-functional team required to construct the totality of the Sound of Essentials.</div>
+        </div>
+        <div class="brand-mark">
+          <span>SOE ORGANIZATION</span>
+        </div>
+      </div>
+
+      <table class="org-table">
+        <thead>
+          <tr>
+            <th style="width: 25%;">Department</th>
+            <th style="width: 32%;">Industry Job Title</th>
+            <th style="width: 43%;">Concrete System Deliverables</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Executive & Strategy</td>
+            <td>Founder & Strategic Lead (L.D. Murray)</td>
+            <td>Vision architecture, capital allocation, sovereign background stewardship</td>
+          </tr>
+          <tr>
+            <td>Pedagogy & Standards</td>
+            <td>Director of ECE Pedagogy & Standards Lead</td>
+            <td>5 Core Domains, 50-State DOE crosswalks, Head Start ELOF alignment</td>
+          </tr>
+          <tr>
+            <td>Audio & Sonic Core</td>
+            <td>Music Director & Acoustic Session Arranger</td>
+            <td>19 Master tracks across 7 Lands, call-and-response lyric architecture</td>
+          </tr>
+          <tr>
+            <td>Visual Art & Lore</td>
+            <td>Art Director & Visual Development Lead (Danielle Alexis)</td>
+            <td>15 Canonical hero turnarounds, Seriphia specs, 4K production scenes</td>
+          </tr>
+          <tr>
+            <td>Publishing & Print</td>
+            <td>Managing Editor & Pre-Press Automation Eng.</td>
+            <td>400-Activity Workbook, Lulu POD API client, 157 MB EPUB 3.0 builder</td>
+          </tr>
+          <tr>
+            <td>Web & Platform Eng.</td>
+            <td>Principal Frontend & FinTech Engineer</td>
+            <td>React 19, Vanilla CSS tokens, i18n EN/ES/FR, Stripe card vaulting</td>
+          </tr>
+          <tr>
+            <td>Growth & Direct Response</td>
+            <td>Direct-Response Copy Chief & Media Buyer</td>
+            <td>5 Cultural Deltas, 30-Ad engine, 4 Native advertorials, 18 Brevo CRM flows</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- SLIDE 4: Pillar I — The Sonic Foundation -->
+    <section class="slide" data-title="Pillar I: Audio Architecture" data-notes="Highlight: originally published studio sessions across 7 lands. Strict zero live music/orchestra claims, zero screen noise, calms child nervous system.">
+      <div class="slide-header">
+        <div>
+          <div class="slide-badge-wrap">
+            <span class="pill-badge orange">Pillar I</span>
+            <span class="pill-badge">Sonic Architecture</span>
+          </div>
+          <h2 class="slide-title">Master Studio Music & Sonic Curriculum</h2>
+          <div class="slide-subtitle">19 acoustic session master tracks calibrated for developing brains (Ages 2–7).</div>
+        </div>
+        <div class="brand-mark">
+          <span>PILLAR I: AUDIO</span>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div style="display: flex; flex-direction: column; gap: 16px;">
+          <div class="glass-card">
+            <div class="card-title"><div class="card-icon">👑</div> 100% Publishing & Master Rights Ownership</div>
+            <div class="card-body">
+              <strong>Complete IP Sovereignty:</strong> SOE holds 100% unencumbered master sound recording and music publishing rights. Zero record label debt, zero 360 predatory contracts, zero distributor cuts. Bypasses Spotify/Apple streaming pennies by delivering music natively on <code>soelearn.com/listen</code> with owned email capture.
+            </div>
+          </div>
+          <div class="glass-card">
+            <div class="card-title"><div class="card-icon">🎵</div> Originally Published Studio Masters</div>
+            <div class="card-body">
+              19 original studio-recorded master tracks spanning all 7 Lands plus Terrasol bookends. Produced specifically to replace algorithmically synthesized nursery tracks with organic acoustic warmth.
+              <ul>
+                <li><strong>Harmonia (Language):</strong> Phonics, vowels, and French immersion (<em>Le Cheval</em>).</li>
+                <li><strong>Numeria (Math):</strong> 1–20 rhythm matrix and call-and-response clapping.</li>
+                <li><strong>Vitalis (Motor):</strong> Somatic movement pacing (<em>Let's Stretch</em>, <em>Drill Time</em>).</li>
+                <li><strong>Celestia (Mindfulness):</strong> Downtempo anchors for calm and bedtime transitions.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="glass-card">
+            <div class="card-title"><div class="card-icon">🛡️</div> Strict Canon Audio Contract</div>
+            <div class="card-body">
+              <strong>Zero Hallucinated Claims:</strong> No claims of "live orchestra" or "live instrumentation." Pure acoustic studio sessions with strict omission of invented instruments. Neuro-affirming frequency balance.
+            </div>
+          </div>
+        </div>
+
+        <div class="image-spotlight">
+          <img src="./The Sound of Essentials album cover.png" alt="Album Cover" onerror="this.src='./SOE Logo.png'">
+          <div class="caption">
+            <strong>The 19-Track Rhythm Quest Studio Master Album</strong><br>
+            Direct digital listening gate with email unlock and zero third-party platform lock-in.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 5: Pillar II — Visual Lore & Character Model Sheets -->
+    <section class="slide" data-title="Pillar II: Visual Lore" data-notes="Art Direction by Danielle Alexis: Racial diversity and ambiguity is canonical. Seriphia leads with wisdom; 15 diverse heroes guide children without glowing screens.">
+      <div class="slide-header">
+        <div>
+          <div class="slide-badge-wrap">
+            <span class="pill-badge green">Pillar II</span>
+            <span class="pill-badge">Visual Canon</span>
+          </div>
+          <h2 class="slide-title">Visual Lore, Heroes & Model Sheets</h2>
+          <div class="slide-subtitle">Art Direction: Danielle Alexis — 15 Canonical Heroes, Seriphia guardian, and storybook anime world-building.</div>
+        </div>
+        <div class="brand-mark">
+          <span>PILLAR II: VISUAL ART</span>
+        </div>
+      </div>
+
+      <div class="grid-3">
+        <div class="glass-card">
+          <div class="card-title"><div class="card-icon">👑</div> Seriphia & Guardian Lore</div>
+          <div class="card-body">
+            <strong>Seriphia</strong>: Regal Black woman, round gold glasses, glowing halo, ivory gown with gold embroidery. Serves as Lead Marketer, Sovereign Guide, and narrator for early learners and parents.
+          </div>
+          <div style="margin-top: 14px; border-radius: 12px; overflow: hidden; height: 160px;">
+            <img src="./Call to Learn with stones Seriphia.png" style="width: 100%; height: 100%; object-fit: cover;" alt="Seriphia">
+          </div>
+        </div>
+
+        <div class="glass-card">
+          <div class="card-title"><div class="card-icon">🌍</div> 15 Canonical Heroes</div>
+          <div class="card-body">
+            Turnarounds and model sheets across 7 Lands:
+            <ul>
+              <li><strong>Kenji & Aiko:</strong> Harmonia (Language)</li>
+              <li><strong>Kwame & Octavia:</strong> Numeria (Math)</li>
+              <li><strong>Felix & Amara:</strong> Vitalis (Movement)</li>
+              <li><strong>Elias & Selene:</strong> Celestia (Mindfulness)</li>
+              <li><strong>Ronan & Nerissa:</strong> Aquaria (Calm)</li>
+              <li><strong>Silas & Vesta:</strong> Terrasol (Nature)</li>
+              <li><strong>Athena & Ezra:</strong> Luminosity (Science)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="glass-card">
+          <div class="card-title"><div class="card-icon">✨</div> Diversity & Aesthetic Policy</div>
+          <div class="card-body">
+            <strong>Strict Visual Canon:</strong>
+            <ul>
+              <li><strong>Racial Diversity & Ambiguity:</strong> Black, Brown, Asian, Polynesian, Latino, and multiracial subjects. Monocultural Caucasian stock is banned.</li>
+              <li><strong>Zero Glowing Screens:</strong> Physical toys, trees, water, wooden blocks, and floating musical staves.</li>
+              <li><strong>Atmosphere:</strong> Warm golden sunlight, soft line art, neuro-affirming tones.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 6: Pillar III — Curriculum & Lulu Print Publishing -->
+    <section class="slide" data-title="Pillar III: Publishing Pipeline" data-notes="400-activity workbook, 4,000+ word dictionary, automated Lulu API print-on-demand cover and interior pipeline.">
+      <div class="slide-header">
+        <div>
+          <div class="slide-badge-wrap">
+            <span class="pill-badge purple">Pillar III</span>
+            <span class="pill-badge">Publishing & Print</span>
+          </div>
+          <h2 class="slide-title">Curriculum Architecture & Lulu POD</h2>
+          <div class="slide-subtitle">Turnkey print-on-demand automation, 400+ activities, and EPUB 3.0 builds.</div>
+        </div>
+        <div class="brand-mark">
+          <span>PILLAR III: PUBLISHING</span>
+        </div>
+      </div>
+
+      <div class="grid-3">
+        <div class="glass-card">
+          <div class="card-title"><div class="card-icon">📘</div> Rhythm Ready Workbook</div>
+          <div class="card-body">
+            <strong>8-Week Readiness Quest:</strong>
+            <ul>
+              <li>40 days of structured learning across all 7 Lands.</li>
+              <li>10 blocks per day (A–J), ~400 tactile activities.</li>
+              <li>57 MB interior PDF formatted for Lulu commercial presses.</li>
+              <li>157 MB interactive EPUB 3.0 publication.</li>
+              <li>$21 Digital / $35 Physical Print pricing.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="glass-card">
+          <div class="card-title"><div class="card-icon">📖</div> Essential Picture Dictionary</div>
+          <div class="card-body">
+            <strong>Vocabulary Expansion Engine:</strong>
+            <ul>
+              <li>4,232 canonical early vocabulary words.</li>
+              <li>125 panoramic scenes across all 7 Lands.</li>
+              <li>Parent/Teacher guide and developmental index.</li>
+              <li>Automated Python script generating valid XHTML for EPUB packaging.</li>
+              <li>$55 Digital standalone / $79 physical bundle.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="glass-card">
+          <div class="card-title"><div class="card-icon">🖨️</div> Lulu Direct Automation</div>
+          <div class="card-body">
+            <strong>Custom Python Tooling:</strong>
+            <ul>
+              <li><code>build_lulu_print_covers.py</code>: Exact spine calculators for coil and paperback editions.</li>
+              <li><code>lulu_client.py</code>: Direct OAuth API integration for hands-off print dropshipping.</li>
+              <li><code>preflight_lulu.py</code>: Pre-flight color, bleed, and margin validation.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 7: Pillar IV — Web Platform, Design Tokens & FinTech -->
+    <section class="slide" data-title="Pillar IV: Web Architecture" data-notes="Modern React 19 stack, 1,041 lines of vanilla CSS tokens, tri-lingual parity (EN/ES/FR), direct Stripe card vaulting.">
+      <div class="slide-header">
+        <div>
+          <div class="slide-badge-wrap">
+            <span class="pill-badge blue">Pillar IV</span>
+            <span class="pill-badge">Software Engineering</span>
+          </div>
+          <h2 class="slide-title">React 19 Web Platform & FinTech Stack</h2>
+          <div class="slide-subtitle">Zero-Tailwind custom design system, tri-lingual parity, and direct Stripe card vaulting.</div>
+        </div>
+        <div class="brand-mark">
+          <span>PILLAR IV: SOFTWARE</span>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div style="display: flex; flex-direction: column; gap: 16px;">
+          <div class="glass-card">
+            <div class="card-title"><div class="card-icon">⚛️</div> React 19.2 + Vite 7.2 Architecture</div>
+            <div class="card-body">
+              Built on React 19.2, React Router 7.13, and Vite 7.2. 38+ custom pages with dynamic route code-splitting (<code>React.lazy()</code>), Framer Motion page transitions, and Remotion video player integration.
+            </div>
+          </div>
+          <div class="glass-card">
+            <div class="card-title"><div class="card-icon">🎨</div> 1,041-Line Vanilla CSS Design System</div>
+            <div class="card-body">
+              No TailwindCSS dependencies. Strict CSS custom properties for warm cream backgrounds (<code>#faf9f7</code>), primary orange (<code>#FF6F00</code>), 50px pill radii, Fredoka & Bricolage Grotesque typography, and custom glassmorphism.
+            </div>
+          </div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 16px;">
+          <div class="glass-card">
+            <div class="card-title"><div class="card-icon">🌐</div> 100% Tri-Lingual Parity (i18n)</div>
+            <div class="card-body">
+              Exact user-facing parity across <strong>English, Spanish, and French</strong> (~145 KB localized JSON). Every header, button, modal, and lyric is fully translated without layout breakage.
+            </div>
+          </div>
+          <div class="glass-card">
+            <div class="card-title"><div class="card-icon">💳</div> Sovereign FinTech: Zero Platform Renting</div>
+            <div class="card-body">
+              <strong>Shopify Strictly Retired:</strong> Direct Stripe API integration that vaults the customer's card during the $7 Starter Pack cart bump, enabling seamless post-purchase 1-click upsells into physical workbooks and the $14.99/mo Rhythm Pass without Shopify SaaS cuts or third-party platform lock-in.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 8: Pillar V — 5 Cultural Deltas & Direct-Response Copy -->
+    <section class="slide" data-title="Pillar V: Cultural Deltas" data-notes="Counter-positioning: Screen vs Sensory, Algorithm vs Handcrafted. 30 ad archetypes and 4 high-converting native advertorials.">
+      <div class="slide-header">
+        <div>
+          <div class="slide-badge-wrap">
+            <span class="pill-badge orange">Pillar V</span>
+            <span class="pill-badge">Narrative & Copy</span>
+          </div>
+          <h2 class="slide-title">The 5 Cultural Deltas & Copy Engine</h2>
+          <div class="slide-subtitle">Direct-response positioning that resonates with conscious parents and educators.</div>
+        </div>
+        <div class="brand-mark">
+          <span>PILLAR V: COPYWRITING</span>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="glass-card">
+          <div class="card-title"><div class="card-icon">🎯</div> The 5 Market-Defining Deltas</div>
+          <div class="card-body">
+            <ul>
+              <li><strong>Screen vs. Sensory:</strong> Replacing glowing screen addictions with acoustic, tactile learning.</li>
+              <li><strong>Testing vs. Arts:</strong> Shifting from rote memorization drills to joyful musical immersion.</li>
+              <li><strong>Algorithm vs. Handcrafted:</strong> Moving away from AI-generated dopamine loops to human-crafted pedagogy.</li>
+              <li><strong>Institution vs. Sanctuary:</strong> Transforming home environments into peaceful learning sanctuaries.</li>
+              <li><strong>Consumption vs. Quest:</strong> Turning passive media consumption into active hero journeys.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="glass-card">
+          <div class="card-title"><div class="card-icon">📝</div> Native Advertorial & Ad Engine</div>
+          <div class="card-body">
+            <ul>
+              <li><strong>30 Meta Ad Archetypes:</strong> Complete copy matrix with 3 hook variations and 5-step narrative arcs.</li>
+              <li><strong>"Dad Doubting Reading Apps" Listicle:</strong> High-converting 55 KB interactive editorial listicle addressing parental screen guilt.</li>
+              <li><strong>Education Sovereignty Advertorial:</strong> Deep-dive narrative exploring homeschooling, sanctuary routines, and early reading.</li>
+              <li><strong>Global Learn English (ESL) Portal:</strong> Targeted advertorial for international multilingual households.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 9: Pillar VI — Growth Engine & Institutional B2B -->
+    <section class="slide" data-title="Pillar VI: Growth & B2B" data-notes="Brevo 18-campaign email engine, Taboola/Meta paid media scripts, and State DOE ELOF standards crosswalks.">
+      <div class="slide-header">
+        <div>
+          <div class="slide-badge-wrap">
+            <span class="pill-badge green">Pillar VI</span>
+            <span class="pill-badge">Growth & Institutional</span>
+          </div>
+          <h2 class="slide-title">Growth Funnels & State DOE Procurement</h2>
+          <div class="slide-subtitle">Stage 3 institutional roadmap: Head Start, preschool chains, and Brevo automation.</div>
+        </div>
+        <div class="brand-mark">
+          <span>PILLAR VI: B2B & GROWTH</span>
+        </div>
+      </div>
+
+      <div class="grid-3">
+        <div class="glass-card">
+          <div class="card-title"><div class="card-icon">✉️</div> Brevo 18-Campaign CRM</div>
+          <div class="card-body">
+            <ul>
+              <li><strong>6 D2C Nurture Sequences:</strong> Instant album delivery trigger + Days 1–5 behavioral onboarding.</li>
+              <li><strong>12 B2B Outreach Templates:</strong> Segmented campaigns for preschool chains, speech clinics, and school boards.</li>
+              <li>Verified sender domain authentication on <code>soelearn.com</code> (DKIM/DMARC).</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="glass-card">
+          <div class="card-title"><div class="card-icon">🏛️</div> State DOE & ELOF Crosswalks</div>
+          <div class="card-body">
+            <ul>
+              <li>Complete 50-State Early Learning alignment.</li>
+              <li>Head Start Early Learning Outcomes Framework (ELOF) alignment matrix.</li>
+              <li>SOE Concord Franchise Prospectus for public-private institutional partnerships.</li>
+              <li>Curriculum CLI producing 10–15 min classroom lesson extension packages.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="glass-card">
+          <div class="card-title"><div class="card-icon">🤝</div> The Ally Annex Engine</div>
+          <div class="card-body">
+            <ul>
+              <li>17 Vetted affiliate partners across 3 tiers (Immediate, High-Ticket, Supporting).</li>
+              <li>Mindvalley (50%), Hoffman Academy (20% recurring), Jai Institute ($375+).</li>
+              <li>Ascension funnel bridging SOE with conscious parenting and education platforms.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 10: Pillar VII — Automated Quality Enforcement & Conclusion -->
+    <section class="slide" data-title="Quality Governance & Summary" data-notes="The Helix Gates: Zero drift, programmatic validation, Ralph hook exit code 2. SOE is ready for global scale.">
+      <div class="slide-header">
+        <div>
+          <div class="slide-badge-wrap">
+            <span class="pill-badge blue">Pillar VII</span>
+            <span class="pill-badge">Quality Governance</span>
+          </div>
+          <h2 class="slide-title">The Helix Gates & Executive Conclusion</h2>
+          <div class="slide-subtitle">Automated canon enforcement, zero drift, and ready for commercial scale.</div>
+        </div>
+        <div class="brand-mark">
+          <span>PILLAR VII: GOVERNANCE</span>
+        </div>
+      </div>
+
+      <div class="grid-2" style="margin-bottom: 20px;">
+        <div class="glass-card">
+          <div class="card-title"><div class="card-icon">🔒</div> The Helix Automated Quality Gates</div>
+          <div class="card-body">
+            To prevent brand drift or architectural degradation, all updates must pass automated gates:
+            <ul>
+              <li><code>npm run test:canon</code>: Validates 15 hero schemas, 7 lands, pricing contracts, and translation parity.</li>
+              <li><strong>Non-Escape Ralph Hook:</strong> Automatically terminates CI builds with <strong>Exit Code 2</strong> if any unauthorized claims, unapproved instruments, or older age references appear.</li>
+              <li>Single Source of Truth in <code>.agents/core/</code> (<code>canon.json</code>, <code>pricing.json</code>, <code>tokens.json</code>).</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="glass-card">
+          <div class="card-title"><div class="card-icon">🚀</div> Commercial Horizon</div>
+          <div class="card-body">
+            <strong>The Sound of Essentials: Rhythm Quest</strong> stands fully constructed as a production-grade enterprise asset:
+            <ul>
+              <li><strong>D2C Funnel Ready:</strong> Free album lead magnet into $7 cart bump, $35 print workbook, and $14.99/mo continuity.</li>
+              <li><strong>B2B Ready:</strong> ELOF crosswalks and classroom CLI ready for state procurement proposals.</li>
+              <li><strong>Owned Infrastructure:</strong> Direct Stripe billing, custom React web app, zero dependency on rental platforms.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="stat-box" style="display: flex; justify-content: space-around; align-items: center; padding: 16px;">
+        <div><strong>Founder:</strong> L.D. Murray</div>
+        <div class="divider-v"></div>
+        <div><strong>Art Director:</strong> Danielle Alexis</div>
+        <div class="divider-v"></div>
+        <div><strong>Primary Guide:</strong> Seriphia</div>
+        <div class="divider-v"></div>
+        <div><strong>Sovereign Ownership:</strong> 100% Master & Publishing Rights (Zero Platform Rent)</div>
+        <div class="divider-v"></div>
+        <div><strong>Ages:</strong> 2–7 (Pre-K to Gr 2)</div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Bottom Navigation Bar -->
+  <div id="nav-controls">
+    <button class="nav-btn" id="prev-btn" onclick="prevSlide()">‹ Previous</button>
+    <div id="slide-indicator">01 / 10</div>
+    <button class="nav-btn primary" id="next-btn" onclick="nextSlide()">Next ›</button>
+    <div class="divider-v"></div>
+    <button class="nav-btn" onclick="toggleNotes()">📝 Notes (N)</button>
+    <button class="nav-btn" onclick="openEmailModal()">✉️ Email Format</button>
+    <button class="nav-btn" onclick="window.print()">🖨️ Print / PDF</button>
+    <button class="nav-btn" onclick="toggleFullscreen()">⛶ Fullscreen</button>
+  </div>
+
+  <!-- Speaker Notes Panel -->
+  <div id="notes-panel">
+    <h4>Speaker Notes <span style="cursor:pointer;" onclick="toggleNotes()">✕</span></h4>
+    <div id="notes-content">Select slide to see talking points...</div>
+  </div>
+
+  <!-- Email Briefing Modal -->
+  <div id="modal-overlay" onclick="closeEmailModal()"></div>
+  <div id="email-modal">
+    <div class="modal-header">
+      <h3>Executive Briefing Email (Copy-Paste Ready)</h3>
+      <button class="nav-btn" onclick="closeEmailModal()">✕ Close</button>
+    </div>
+    <textarea class="email-textarea" id="email-text" readonly>
+SUBJECT: Executive Assessment: The Sound of Essentials (Totality, Sovereign Structure & Enterprise Architecture)
+
+Team & Stakeholders,
+
+Here is the comprehensive totality assessment of The Sound of Essentials: Rhythm Quest ecosystem across all production domains.
+
+1. THE MACRO REPOSITORY FOOTPRINT
+• Total Files: 11,564 production files across 5.82 GB (zero placeholders).
+• Web & Code: 5,800+ files (React 19.2, Vite 7.2, Python automation).
+• Visual Art: 1,800+ master visual assets (15 character turnarounds, Seriphia guardian, 11+ 4K/8K scene paintings).
+• Audio: 19 Master acoustic studio session tracks mapped across 7 Lands.
+• Commercial Replacement Value: $1.5M - $2.4M+ (18-role agency/studio team equivalent).
+
+2. SOVEREIGN STARTUP STRUCTURE & 100% OWNERSHIP
+• 100% Master & Publishing Ownership: SOE holds 100% unencumbered rights to all 19 master sound recordings and musical compositions. Zero record label recoupment, zero 360 predatory contracts, zero platform cuts.
+• Zero Platform Renting: Complete elimination of Shopify SaaS fees; direct Stripe API card vaulting; self-hosted web audio at soelearn.com/listen bypassing streaming gatekeepers; direct Lulu print-on-demand APIs with zero warehouse inventory debt.
+• Sovereign Collective: Independent artist collective of acoustic musicians, vocalists, and educators working with Seriphia as the sovereign marketing guide.
+
+3. THE 18-ROLE INDUSTRY TALENT STACK
+Constructing this totality in industry requires 18 specialized roles across 7 functional departments:
+1. Founder & Strategic Lead (L.D. Murray)
+2. Director of Early Childhood Pedagogy
+3. GovEd / State Standards Alignment Specialist
+4. Music Director & Executive Audio Producer
+5. Lyricist & Dual-Language Vocal Arranger
+6. Art Director & Visual Development Lead (Danielle Alexis)
+7. Lead Character Concept Artist
+8. Production Illustrator & Background Artist
+9. Managing Editor & Book Production Specialist
+10. Pre-Press & Print-on-Demand (Lulu) Engineer
+11. Principal Frontend Architect (React 19)
+12. Design Systems & Motion Architect (Vanilla CSS)
+13. Internationalization (i18n) Engineer (EN/ES/FR)
+14. FinTech & Direct Card-Vaulting Engineer (Stripe)
+15. Automated QA & Governance Engineer (Helix Gates)
+16. Direct-Response Copy Chief (5 Cultural Deltas)
+17. Head of Paid Acquisition & Media Buying
+18. Lifecycle CRM & Funnel Specialist (Brevo/Beehiiv)
+
+4. THE 7 CORE ARCHITECTURAL PILLARS
+• Pillar I (Audio): 19 master tracks, acoustic sanctuary policy, zero live music/orchestra claims, neuro-affirming tempos.
+• Pillar II (Art): 15 canonical heroes across 7 lands, directed by Danielle Alexis, strict racial diversity & ambiguity, zero glowing screens.
+• Pillar III (Publishing): 400-activity 8-Week Workbook, 4,232-word Picture Dictionary, Lulu POD API automation.
+• Pillar IV (Web & FinTech): React 19 web app, 1,041-line custom Vanilla CSS, i18n EN/ES/FR parity, direct Stripe card vaulting (Shopify retired).
+• Pillar V (Copy): The 5 Cultural Deltas, 30-ad copy engine, 4 native advertorials (Dad Doubting Apps, Education Sovereignty).
+• Pillar VI (Growth & B2B): 18-campaign Brevo CRM engine, Taboola/Meta paid media scripts, 50-state ELOF crosswalks.
+• Pillar VII (Quality Governance): The Helix Gates (npm run test:canon) enforcing zero drift via Non-Escape Ralph Hooks.
+
+Target Audience: Strictly Ages 2–7 (Pre-K to Grade 2).
+Core Motto: "Staying on the path, always learning."
+    </textarea>
+    <div class="modal-footer">
+      <button class="nav-btn primary" onclick="copyEmailText()">📋 Copy to Clipboard</button>
+    </div>
+  </div>
+
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+    const progressBar = document.getElementById('progress-bar');
+    const indicator = document.getElementById('slide-indicator');
+    const notesPanel = document.getElementById('notes-panel');
+    const notesContent = document.getElementById('notes-content');
+    const emailModal = document.getElementById('email-modal');
+    const modalOverlay = document.getElementById('modal-overlay');
+
+    function updateSlide() {
+      slides.forEach((s, idx) => {
+        s.classList.toggle('active', idx === currentSlide);
+      });
+      const progressPercent = ((currentSlide + 1) / totalSlides) * 100;
+      progressBar.style.width = progressPercent + '%';
+      indicator.textContent = String(currentSlide + 1).padStart(2, '0') + ' / ' + String(totalSlides).padStart(2, '0');
+
+      // Update speaker notes
+      const notes = slides[currentSlide].getAttribute('data-notes') || 'No specific notes for this slide.';
+      const title = slides[currentSlide].getAttribute('data-title') || 'Slide';
+      notesContent.innerHTML = '<strong>' + title + '</strong><br>' + notes;
+    }
+
+    function nextSlide() {
+      if (currentSlide < totalSlides - 1) {
+        currentSlide++;
+        updateSlide();
+      }
+    }
+
+    function prevSlide() {
+      if (currentSlide > 0) {
+        currentSlide--;
+        updateSlide();
+      }
+    }
+
+    function toggleNotes() {
+      notesPanel.classList.toggle('active');
+    }
+
+    function openEmailModal() {
+      emailModal.classList.add('active');
+      modalOverlay.classList.add('active');
+    }
+
+    function closeEmailModal() {
+      emailModal.classList.remove('active');
+      modalOverlay.classList.remove('active');
+    }
+
+    function copyEmailText() {
+      const emailText = document.getElementById('email-text');
+      emailText.select();
+      document.execCommand('copy');
+      alert('Executive briefing email copied to clipboard!');
+    }
+
+    function toggleFullscreen() {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen().catch(() => {});
+      } else {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        }
+      }
+    }
+
+    // Keyboard Navigation
+    window.addEventListener('keydown', (e) => {
+      if (e.target.tagName === 'TEXTAREA' || e.target.tagName === 'INPUT') return;
+      if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') {
+        nextSlide();
+      } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+        prevSlide();
+      } else if (e.key === 'Home') {
+        currentSlide = 0;
+        updateSlide();
+      } else if (e.key === 'End') {
+        currentSlide = totalSlides - 1;
+        updateSlide();
+      } else if (e.key.toLowerCase() === 'n') {
+        toggleNotes();
+      } else if (e.key.toLowerCase() === 'f') {
+        toggleFullscreen();
+      } else if (e.key.toLowerCase() === 'e') {
+        openEmailModal();
+      } else if (e.key === 'Escape') {
+        closeEmailModal();
+      }
+    });
+
+    // Touch / Swipe Navigation
+    let touchStartX = 0;
+    window.addEventListener('touchstart', e => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, false);
+    window.addEventListener('touchend', e => {
+      const touchEndX = e.changedTouches[0].screenX;
+      if (touchStartX - touchEndX > 50) nextSlide();
+      if (touchEndX - touchStartX > 50) prevSlide();
+    }, false);
+
+    // Initial load
+    updateSlide();
+  </script>
+</body>
+</html>

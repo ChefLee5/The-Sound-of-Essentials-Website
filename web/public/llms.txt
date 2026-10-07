@@ -42,6 +42,9 @@ The curriculum spans 5 Core Domains of Essential Learning mapped across 7 Lands 
 - [Hero Mentors & Seriphia Directory](https://thesoundofessentials.com/heroes): Character catalog with land-based filtering and audio voice clips.
 - [Essential Picture Dictionary Pre-Sale](https://thesoundofessentials.com/workbook#dictionary-presale): Pre-sale reservation and curriculum details for the Essential Picture Dictionary.
 - [Editorial Pre-Sell Bridge](https://thesoundofessentials.com/story): Direct-response advertorial and parent guide ("A Quieter Way to Learn: Starting with Sound, Not Screens").
+- [ABCmouse Screen-Free Alternatives Guide](https://thesoundofessentials.com/alternatives/abcmouse): Definitive 2026 parent and educator comparison guide ranking the top 5 screen-free phonics alternatives to ABCmouse for ages 2–7.
+- [Reading Eggs Screen-Free Alternatives Guide](https://thesoundofessentials.com/alternatives/reading-eggs): 2026 parent guide ranking the top 5 screen-free phonics alternatives to Reading Eggs for ages 2–7.
+- [Hooked on Phonics Screen-Free Alternatives Guide](https://thesoundofessentials.com/alternatives/hooked-on-phonics): 2026 parent guide ranking the top 5 screen-free phonics alternatives to Hooked on Phonics for ages 2–7.
 - [Pedagogical Science & Neuroscience](https://thesoundofessentials.com/science): Academic research (Dalcroze Eurhythmics, Orff Schulwerk, Kodály Method, and phonological neuroscience).
 - [Founder Story & Mission](https://thesoundofessentials.com/mission): The founder's story, mission, and the global early learning crisis.
 - [Institutional & Learning Solutions](https://thesoundofessentials.com/solutions): Early childhood institutional licensing, Head Start ELOF crosswalks, and classroom extension packages.

@@ -35,6 +35,9 @@ const AdminCrm   = lazy(() => import('./pages/AdminCrm'));
 const ProgrammaticPersonaPage = lazy(() => import('./pages/ProgrammaticPersonaPage'));
 const SolutionsHub = lazy(() => import('./pages/SolutionsHub'));
 const AdvertorialStory = lazy(() => import('./pages/AdvertorialStory'));
+const AbcMouseAlternatives = lazy(() => import('./pages/AbcMouseAlternatives'));
+const ReadingEggsAlternatives = lazy(() => import('./pages/ReadingEggsAlternatives'));
+const HookedOnPhonicsAlternatives = lazy(() => import('./pages/HookedOnPhonicsAlternatives'));
 const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
 const TermsOfService = lazy(() => import('./pages/TermsOfService'));
 const DmcaPolicy = lazy(() => import('./pages/DmcaPolicy'));
@@ -121,6 +124,16 @@ const App = () => {
                 <Route path="/story" element={<AnimatedPage><AdvertorialStory /></AnimatedPage>} />
                 <Route path="/quieter-way" element={<AnimatedPage><AdvertorialStory /></AnimatedPage>} />
                 <Route path="/advertorial" element={<AnimatedPage><AdvertorialStory /></AnimatedPage>} />
+                {/* Competitor Alternative & Comparison Listicles */}
+                <Route path="/alternatives/abcmouse" element={<AnimatedPage><AbcMouseAlternatives /></AnimatedPage>} />
+                <Route path="/abcmouse-alternatives" element={<AnimatedPage><AbcMouseAlternatives /></AnimatedPage>} />
+                <Route path="/compare/abcmouse" element={<AnimatedPage><AbcMouseAlternatives /></AnimatedPage>} />
+                <Route path="/alternatives/reading-eggs" element={<AnimatedPage><ReadingEggsAlternatives /></AnimatedPage>} />
+                <Route path="/reading-eggs-alternatives" element={<AnimatedPage><ReadingEggsAlternatives /></AnimatedPage>} />
+                <Route path="/compare/reading-eggs" element={<AnimatedPage><ReadingEggsAlternatives /></AnimatedPage>} />
+                <Route path="/alternatives/hooked-on-phonics" element={<AnimatedPage><HookedOnPhonicsAlternatives /></AnimatedPage>} />
+                <Route path="/hooked-on-phonics-alternatives" element={<AnimatedPage><HookedOnPhonicsAlternatives /></AnimatedPage>} />
+                <Route path="/compare/hooked-on-phonics" element={<AnimatedPage><HookedOnPhonicsAlternatives /></AnimatedPage>} />
                 <Route path="/admin/crm"  element={<AnimatedPage><AdminCrm /></AnimatedPage>} />
                 <Route path="/admin/crm/*" element={<AnimatedPage><AdminCrm /></AnimatedPage>} />
                 <Route path="/admin"      element={<Navigate to="/admin/crm" replace />} />

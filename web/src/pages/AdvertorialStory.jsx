@@ -26,9 +26,9 @@ const AdvertorialStory = () => {
 
     window.scrollTo(0, 0);
 
-    // Listen for resize messages from the embedded exact Landra clone
+    // Listen for resize messages from the embedded advertorial
     const handleMessage = (event) => {
-      if (event.data && event.data.type === 'LANDRA_RESIZE' && event.data.height > 0) {
+      if (event.data && (event.data.type === 'ADV_RESIZE' || event.data.type === 'RESIZE') && event.data.height > 0) {
         setIframeHeight(`${event.data.height + 40}px`);
       }
     };
