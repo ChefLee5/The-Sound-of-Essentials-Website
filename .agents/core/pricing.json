@@ -62,9 +62,9 @@
       "sku": "SOE-WB-PRT",
       "name": "SOE Rhythm Ready / Summer Stretch Workbook (Print)",
       "type": "physical_workbook",
-      "format": "Perfect-bound print workbook",
-      "price": 35.00,
-      "purpose": "Captures physical shipping address for recurring continuity"
+      "format": "Perfect-bound full-color 454-page print workbook (Free US Shipping via Lulu POD)",
+      "price": 45.00,
+      "purpose": "Captures physical shipping address for recurring continuity. Shipped on-demand via Lulu Print API with Free Standard Shipping included."
     },
     {
       "id": "picture-dictionary",

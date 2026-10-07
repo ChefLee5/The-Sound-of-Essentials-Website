@@ -2,7 +2,6 @@ import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { Link } from 'react-router-dom';
 import { RevealSection } from '../hooks/useReveal';
 import heroesData from '../data/heroes.json';
-import landsData from '../data/lands.json';
 import { assetPath } from '../utils/assetPath';
 import ProofInThePause from '../components/ui/ProofInThePause';
 import StickyThumbCta from '../components/ui/StickyThumbCta';
@@ -11,24 +10,31 @@ import ConciergeBadge from '../components/ConciergeBadge';
 import './RhythmQuestSale.css';
 
 /**
- * Single source of truth for primary buy CTAs on this page.
- * Stripe Payment Link for The Rhythm Ready Workbook ($21 Digital).
+ * Stripe Payment Links for The Rhythm Ready Workbook:
+ * - $21 Digital Download
+ * - $45 Physical Print-on-Demand (POD via Lulu with Free US Shipping)
  */
-const CHECKOUT_URL = 'https://buy.stripe.com/test_eVqbJ18xKcktbsOfjc6Vq02';
-const CHECKOUT_IS_ABSOLUTE = /^https?:\/\//i.test(CHECKOUT_URL);
+const CHECKOUT_DIGITAL_URL = 'https://buy.stripe.com/test_eVqbJ18xKcktbsOfjc6Vq02';
+const CHECKOUT_PRINT_URL = 'https://buy.stripe.com/test_3cI9ATeW8dox2Wi0oi6Vq03';
 
-/** The page's only buy control. Every CTA goes through it. */
-const RqBuyLink = ({ className = '', children }) => {
-  const checkoutUrlWithUtms = useMemo(() => appendUtmsToUrl(CHECKOUT_URL), []);
-  const handleClick = () => {
+/** The page's primary buy control. Supports digital ($21) and physical print ($45). */
+const RqBuyLink = ({ className = '', format = 'digital', children, onClick }) => {
+  const targetUrl = format === 'print' ? CHECKOUT_PRINT_URL : CHECKOUT_DIGITAL_URL;
+  const checkoutUrlWithUtms = useMemo(() => appendUtmsToUrl(targetUrl), [targetUrl]);
+  const isAbsolute = /^https?:\/\//i.test(targetUrl);
+
+  const handleClick = (e) => {
     trackInitiateCheckout({
-      sku: 'SOE-RQ-WORKBOOK',
-      name: 'Rhythm Ready Workbook ($21 Digital / $35 Print)',
-      price: 21.00,
+      sku: format === 'print' ? 'SOE-RQ-WORKBOOK-PRT' : 'SOE-RQ-WORKBOOK-DIG',
+      name: format === 'print'
+        ? 'Rhythm Ready Workbook (Physical Print · $45 Free Shipping)'
+        : 'Rhythm Ready Workbook (Digital · $21)',
+      price: format === 'print' ? 45.00 : 21.00,
     });
+    if (onClick) onClick(e);
   };
 
-  return CHECKOUT_IS_ABSOLUTE ? (
+  return isAbsolute ? (
     <a href={checkoutUrlWithUtms} rel="noopener" className={className} onClick={handleClick}>
       {children}
     </a>
@@ -249,25 +255,25 @@ const RhythmReadyHero = () => {
 
             <div className="rq-hero__offer">
               <div className="rq-hero__price-tag">
-                <span className="rq-hero__price">$21</span>
-                <span className="rq-hero__price-note">complete 8-week digital workbook</span>
+                <span className="rq-hero__price">$21 <span style={{ fontSize: '1.2rem', fontWeight: 500, color: 'var(--color-text-dark-secondary)' }}>/ $45</span></span>
+                <span className="rq-hero__price-note">Digital PDF ($21) or Physical Print ($45)</span>
               </div>
 
               <p className="rq-hero__price-math">
-                40 structured days of learning — about <strong>52¢ a day</strong>. Paid once, yours forever.
+                Instant digital download or <strong>454-page physical workbook</strong> shipped to your door with <strong>Free US Shipping</strong> via Lulu POD.
               </p>
 
               <ProofInThePause variant="compact" />
 
               <div className="rq-hero__actions">
-                <RqBuyLink className="btn btn-gold">Get Workbook &amp; Curriculum · $21</RqBuyLink>
+                <a href="#offer" className="btn btn-gold">Get Workbook · From $21 ↓</a>
                 <a href="#whats-inside" className="btn btn-outline">Explore the 8 Weeks ↓</a>
               </div>
 
               <ul className="rq-hero__assure">
-                <li>Instant printable PDF &amp; tablet-ready</li>
+                <li>Instant PDF ($21) or 454-page physical print ($45)</li>
+                <li>Free Standard US Shipping on physical print</li>
                 <li>Built for Ages 2–7 (Pre-K to Grade 2)</li>
-                <li>Lifetime family access &amp; instant delivery</li>
               </ul>
 
               <p className="rq-hero__free-note">
@@ -597,10 +603,10 @@ const RhythmReadyWhatsInside = () => {
             Every single day follows a predictable, neuro-affirming sequence that children look forward to.
           </p>
           <ul className="rq-inside__facts">
-            <li className="rq-inside__fact rq-inside__fact--price">$21 Digital Complete</li>
+            <li className="rq-inside__fact rq-inside__fact--price">$21 Digital / $45 Print</li>
             <li className="rq-inside__fact">40 Day-by-Day Lessons</li>
-            <li className="rq-inside__fact">240+ Activity Blocks</li>
-            <li className="rq-inside__fact">Grades K–3</li>
+            <li className="rq-inside__fact">400+ Activity Blocks</li>
+            <li className="rq-inside__fact">Pre-K to Grade 2 (Ages 2–7)</li>
           </ul>
         </RevealSection>
 
@@ -628,7 +634,7 @@ const RhythmReadyWhatsInside = () => {
               <div className="rq-ledger-row">
                 <span className="rq-ledger-row__k">Curriculum Format</span>
                 <span className="rq-ledger-row__v">
-                  Complete 8-week / 40-day printable PDF workbook. Print individual days or bind as a full readiness workbook.
+                  Available as instant digital PDF ($21) or 454-page physical print workbook ($45 with Free US Shipping via Lulu POD).
                 </span>
               </div>
               <div className="rq-ledger-row">
@@ -645,7 +651,7 @@ const RhythmReadyWhatsInside = () => {
               </div>
             </div>
 
-            <RqBuyLink className="btn btn-gold">Get the Workbook &amp; Curriculum · $21</RqBuyLink>
+            <a href="#offer" className="btn btn-gold">Choose Digital ($21) or Physical Print ($45) →</a>
             <p className="rq-inside__cta-note">
               Instant PDF Download · Ready to Print Today · Read on Any Device
             </p>
@@ -780,9 +786,9 @@ const RhythmReadyRoadmap = () => {
                     math, science, somatic regulation, and creative expression.
                   </p>
                   <div className="rq-qmap__cta">
-                    <RqBuyLink className="btn btn-gold">Get the Workbook &amp; Curriculum · $21</RqBuyLink>
+                    <a href="#offer" className="btn btn-gold">Get the Workbook · From $21 →</a>
                     <span className="rq-qmap__guarantee">
-                      Instant digital delivery · Print or tablet-ready · Lifetime access
+                      Instant digital PDF ($21) or 454-page physical print ($45 with Free US Shipping)
                     </span>
                   </div>
                 </div>
@@ -798,100 +804,160 @@ const RhythmReadyRoadmap = () => {
 /* ═══════════════════════════════════════════════════════════════
    THE OFFER
    ═══════════════════════════════════════════════════════════════ */
-const RhythmReadyOffer = () => (
-  <section className="rq-offer-section section" id="offer">
-    <div className="container">
-      <RevealSection className="text-center">
-        <div className="section-label">The Complete Curriculum</div>
-        <h2 className="section-title">
-          8 Weeks of Structured Learning.
-          <span className="rq-offer__title-accent">One Payment of $21.</span>
-        </h2>
-        <p className="section-subtitle" style={{ margin: '0 auto' }}>
-          Everything you need for an unforgettable, low-stress journey of learning.
-        </p>
-      </RevealSection>
+const RhythmReadyOffer = () => {
+  const [format, setFormat] = useState('print');
 
-      <RevealSection delay={0.15}>
-        <div className="rq-offer">
-          <div className="rq-offer__includes">
-            <h3 className="rq-offer__includes-title">What the Workbook &amp; Curriculum Includes</h3>
-            <ul className="rq-offer__list">
-              <li className="rq-offer__item">
-                <span className="rq-offer__tick" aria-hidden="true">✓</span>
-                <span>
-                  <strong>8 Full Weeks / 40 Day-by-Day Lessons.</strong> Structured across all 7 lands.
-                </span>
-              </li>
-              <li className="rq-offer__item">
-                <span className="rq-offer__tick" aria-hidden="true">✓</span>
-                <span>
-                  <strong>400+ Daily Activity Blocks.</strong> Ten 3-minute subject blocks per day (~30 mins/day).
-                </span>
-              </li>
-              <li className="rq-offer__item">
-                <span className="rq-offer__tick" aria-hidden="true">✓</span>
-                <span>
-                  <strong>Sound-Before-Symbol Phonetic Guides.</strong> Pronunciation keys on every page.
-                </span>
-              </li>
-              <li className="rq-offer__item">
-                <span className="rq-offer__tick" aria-hidden="true">✓</span>
-                <span>
-                  <strong>15 Hero Guides &amp; Coaching Tips.</strong> Hero mentorship for daily motivation.
-                </span>
-              </li>
-              <li className="rq-offer__item">
-                <span className="rq-offer__tick" aria-hidden="true">✓</span>
-                <span>
-                  <strong>Friday Milestone Celebrations &amp; Quest Stars.</strong> Gamified rewards &amp; progress mapping.
-                </span>
-              </li>
-              <li className="rq-offer__item">
-                <span className="rq-offer__tick" aria-hidden="true">✓</span>
-                <span>
-                  <strong>Instant High-Resolution PDF Download.</strong> Print at home or complete on a tablet.
-                </span>
-              </li>
-            </ul>
+  return (
+    <section className="rq-offer-section section" id="offer">
+      <div className="container">
+        <RevealSection className="text-center">
+          <div className="section-label">The Complete Curriculum</div>
+          <h2 className="section-title">
+            8 Weeks of Structured Learning.
+            <span className="rq-offer__title-accent"> Choose Your Format.</span>
+          </h2>
+          <p className="section-subtitle" style={{ margin: '0 auto' }}>
+            Instant digital PDF download or 454-page physical workbook delivered to your door with Free US Shipping.
+          </p>
+        </RevealSection>
 
-            <p className="rq-offer__free">
-              Pairs perfectly with the free 19-track album on /listen. No expensive curriculum boxes or
-              monthly subscription fees.
-            </p>
-          </div>
+        <RevealSection delay={0.15}>
+          <div className="rq-offer">
+            <div className="rq-offer__includes">
+              <h3 className="rq-offer__includes-title">What the Workbook &amp; Curriculum Includes</h3>
+              <ul className="rq-offer__list">
+                <li className="rq-offer__item">
+                  <span className="rq-offer__tick" aria-hidden="true">✓</span>
+                  <span>
+                    <strong>8 Full Weeks / 40 Day-by-Day Lessons.</strong> Structured across all 7 lands.
+                  </span>
+                </li>
+                <li className="rq-offer__item">
+                  <span className="rq-offer__tick" aria-hidden="true">✓</span>
+                  <span>
+                    <strong>400+ Daily Activity Blocks.</strong> Ten 3-minute subject blocks per day (~30 mins/day).
+                  </span>
+                </li>
+                <li className="rq-offer__item">
+                  <span className="rq-offer__tick" aria-hidden="true">✓</span>
+                  <span>
+                    <strong>Sound-Before-Symbol Phonetic Guides.</strong> Pronunciation keys on every page.
+                  </span>
+                </li>
+                <li className="rq-offer__item">
+                  <span className="rq-offer__tick" aria-hidden="true">✓</span>
+                  <span>
+                    <strong>15 Hero Guides &amp; Coaching Tips.</strong> Hero mentorship for daily motivation.
+                  </span>
+                </li>
+                <li className="rq-offer__item">
+                  <span className="rq-offer__tick" aria-hidden="true">✓</span>
+                  <span>
+                    <strong>Friday Milestone Celebrations &amp; Quest Stars.</strong> Gamified rewards &amp; progress mapping.
+                  </span>
+                </li>
+                <li className="rq-offer__item">
+                  <span className="rq-offer__tick" aria-hidden="true">✓</span>
+                  <span>
+                    <strong>Dual-Format Flexibility.</strong> Choose instant printable PDF ($21) or 454-page physical print workbook ($45).
+                  </span>
+                </li>
+              </ul>
 
-          <aside className="rq-offer__price">
-            <div className="rq-offer__stave" aria-hidden="true">
-              <span /><span /><span /><span /><span />
+              <p className="rq-offer__free">
+                Pairs perfectly with the free 19-track album on /listen. No expensive curriculum boxes or
+                monthly subscription fees.
+              </p>
             </div>
 
-            <span className="rq-offer__amount">$21</span>
-            <span className="rq-offer__terms">complete digital workbook · no subscription</span>
-            <p className="rq-offer__math">
-              40 days of guided learning = <strong>~52¢ a day</strong>.
-            </p>
+            <aside className="rq-offer__price">
+              {/* ── Format Selector ── */}
+              <div className="rq-offer__format-selector" role="tablist" aria-label="Curriculum Format">
+                <button
+                  type="button"
+                  role="tab"
+                  aria-selected={format === 'print'}
+                  className={`rq-format-btn ${format === 'print' ? 'is-active' : ''}`}
+                  onClick={() => setFormat('print')}
+                >
+                  <span className="rq-format-btn__icon">📦</span>
+                  <span className="rq-format-btn__text">Physical Print</span>
+                  <span className="rq-format-btn__badge">Free US Ship</span>
+                </button>
+                <button
+                  type="button"
+                  role="tab"
+                  aria-selected={format === 'digital'}
+                  className={`rq-format-btn ${format === 'digital' ? 'is-active' : ''}`}
+                  onClick={() => setFormat('digital')}
+                >
+                  <span className="rq-format-btn__icon">📱</span>
+                  <span className="rq-format-btn__text">Digital Download</span>
+                </button>
+              </div>
 
-            <RqBuyLink className="btn btn-gold rq-offer__buy">
-              <span>Get the Workbook &amp; Curriculum</span>
-              <span className="rq-offer__buy-price">$21</span>
-            </RqBuyLink>
+              <div className="rq-offer__stave" aria-hidden="true">
+                <span /><span /><span /><span /><span />
+              </div>
 
-            <p className="rq-offer__nudge">Instant digital delivery · Ready to start today.</p>
-
-            <div className="rq-offer__guarantee">
-              <span className="rq-offer__seal" aria-hidden="true">⚡</span>
-              <span>
-                <strong className="rq-offer__seal-title">Instant Digital Delivery</strong>
-                Immediate access to your complete printable workbook &amp; curriculum PDF upon checkout. Tablet-ready with lifetime family access.
+              <span className="rq-offer__amount">{format === 'print' ? '$45' : '$21'}</span>
+              <span className="rq-offer__terms">
+                {format === 'print'
+                  ? '454-page physical book · Free Standard US Shipping'
+                  : 'complete digital workbook · no subscription'}
               </span>
-            </div>
-          </aside>
-        </div>
-      </RevealSection>
-    </div>
-  </section>
-);
+              <p className="rq-offer__math">
+                {format === 'print' ? (
+                  <>Printed on demand via <strong>Lulu Press</strong> on durable 60# paper.</>
+                ) : (
+                  <>40 days of guided learning = <strong>~52¢ a day</strong>.</>
+                )}
+              </p>
+
+              <RqBuyLink format={format} className="btn btn-gold rq-offer__buy">
+                <span>{format === 'print' ? 'Order Physical Print Workbook' : 'Get Digital Workbook & Curriculum'}</span>
+                <span className="rq-offer__buy-price">{format === 'print' ? '$45' : '$21'}</span>
+              </RqBuyLink>
+
+              <p className="rq-offer__nudge">
+                {format === 'print'
+                  ? 'Delivered to your door with tracking · Free US Shipping included.'
+                  : 'Instant digital delivery · Ready to start today.'}
+              </p>
+
+              <div className="rq-offer__guarantee">
+                <span className="rq-offer__seal" aria-hidden="true">
+                  {format === 'print' ? '📦' : '⚡'}
+                </span>
+                <span>
+                  <strong className="rq-offer__seal-title">
+                    {format === 'print' ? 'Lulu Print-on-Demand & Free Shipping' : 'Instant Digital Delivery'}
+                  </strong>
+                  {format === 'print'
+                    ? '454 full-color pages bound and shipped directly via Lulu POD. Includes delivery tracking and zero shipping fees.'
+                    : 'Immediate access to your complete printable workbook & curriculum PDF upon checkout. Tablet-ready with lifetime family access.'}
+                </span>
+              </div>
+
+              <div className="rq-offer__switcher-nudge">
+                Prefer the other format?{' '}
+                <button
+                  type="button"
+                  className="rq-offer__switcher-link"
+                  onClick={() => setFormat(format === 'print' ? 'digital' : 'print')}
+                >
+                  {format === 'print'
+                    ? 'Switch to Instant Digital ($21)'
+                    : 'Switch to Physical Print ($45 · Free Shipping)'}
+                </button>
+              </div>
+            </aside>
+          </div>
+        </RevealSection>
+      </div>
+    </section>
+  );
+};
 
 /* ═══════════════════════════════════════════════════════════════
    DICTIONARY PRE-SALE OFFER COMPONENT
@@ -1161,13 +1227,13 @@ const RhythmReadyFaq = () => (
           <div className="rq-faq__cta">
             <span className="rq-faq__cta-eyebrow">Ready to Begin</span>
             <p className="rq-faq__cta-price">
-              <strong>$21</strong> complete 8-week workbook
+              <strong>$21</strong> Digital · <strong>$45</strong> Print
             </p>
-            <RqBuyLink className="btn btn-gold rq-faq__cta-btn">
-              Get the Workbook &amp; Curriculum · $21
-            </RqBuyLink>
+            <a href="#offer" className="btn btn-gold rq-faq__cta-btn">
+              Choose Digital ($21) or Print ($45) →
+            </a>
             <p className="rq-faq__cta-fine">
-              Instant PDF download · Print or use on tablet · Lifetime access
+              Instant digital PDF or 454-page physical book with Free US Shipping via Lulu POD
             </p>
           </div>
         </RevealSection>
@@ -1253,7 +1319,7 @@ const RhythmQuestSale = () => {
                 Get the Workbook &amp; Curriculum Today
               </h2>
               <p className="section-subtitle" style={{ marginTop: '1rem' }}>
-                8 Weeks. 40 Days. 240+ Daily Activities. Pre-K to Grade 2 (Ages 2–7).
+                8 Weeks. 40 Days. 400+ Daily Activities. Pre-K to Grade 2 (Ages 2–7).
                 <br />
                 <span style={{ color: 'var(--color-green)', fontWeight: 600 }}>
                   A multi-sensory, music-powered learning routine.
@@ -1261,12 +1327,13 @@ const RhythmQuestSale = () => {
               </p>
               <ConciergeBadge />
               <div className="rq-cta-actions">
-                <RqBuyLink className="btn btn-gold">Get the Workbook &amp; Curriculum — $21</RqBuyLink>
-                <a href="#dictionary-presale" className="btn btn-outline">Pre-Order Picture Dictionary — $55 ↓</a>
+                <RqBuyLink format="print" className="btn btn-gold">Order Physical Print Edition — $45 (Free Shipping)</RqBuyLink>
+                <RqBuyLink format="digital" className="btn btn-outline">Get Instant Digital PDF — $21</RqBuyLink>
+                <a href="#dictionary-presale" className="btn btn-sage">Pre-Order Picture Dictionary — $55 ↓</a>
                 <Link to="/listen" className="btn btn-sage">Get the Free Album First</Link>
               </div>
               <div className="rq-guarantee">
-                <span>🔒</span> Instant digital PDF delivery · Print or use on tablet · Lifetime family access
+                <span>🔒</span> 454-page physical print includes Free US Shipping via Lulu POD · Digital PDF delivers immediately
               </div>
             </div>
           </RevealSection>
@@ -1275,12 +1342,11 @@ const RhythmQuestSale = () => {
 
       {/* ── Mobile Sticky Thumb Zone CTA ── */}
       <StickyThumbCta
-        targetUrl={appendUtmsToUrl(CHECKOUT_URL)}
-        isExternal={CHECKOUT_IS_ABSOLUTE}
-        label="📚 Get the Workbook ($21) →"
-        subtext="8-Week Guided Phonics & Learning Quest"
-        badge="⚡️ Instant Digital PDF"
-        onClick={() => trackInitiateCheckout({ sku: 'SOE-RQ-WORKBOOK', name: 'Rhythm Ready Workbook', price: 21.00 })}
+        targetUrl="#offer"
+        isExternal={false}
+        label="📚 Get the Workbook (Digital $21 / Print $45) →"
+        subtext="8-Week Guided Phonics & Readiness Quest"
+        badge="⚡️ Digital & Physical Print"
       />
     </div>
   );

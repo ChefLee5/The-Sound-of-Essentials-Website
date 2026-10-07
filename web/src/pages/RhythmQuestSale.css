@@ -2517,6 +2517,81 @@
 }
 
 /* ── Price column ── */
+/* ── Format Selector Tabs ── */
+.rq-offer__format-selector {
+  display: flex;
+  gap: 0.4rem;
+  background: rgba(0, 0, 0, 0.05);
+  padding: 0.35rem;
+  border-radius: var(--radius-pill, 50px);
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  position: relative;
+  z-index: 2;
+}
+
+.rq-format-btn {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 0.65rem 0.75rem;
+  border: none;
+  background: transparent;
+  border-radius: var(--radius-pill, 50px);
+  font-family: var(--font-heading);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--color-text-dark-secondary);
+  cursor: pointer;
+  transition: all 0.25s var(--ease-gentle);
+}
+
+.rq-format-btn:hover {
+  color: var(--color-text-dark);
+}
+
+.rq-format-btn.is-active {
+  background: #ffffff;
+  color: var(--color-orange, #FF6F00);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+.rq-format-btn__badge {
+  display: inline-block;
+  padding: 0.12rem 0.45rem;
+  background: var(--color-green-soft, rgba(76, 175, 80, 0.15));
+  color: var(--color-green, #2E7D32);
+  border-radius: var(--radius-pill, 50px);
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.rq-offer__switcher-nudge {
+  margin-top: 1.25rem;
+  font-size: 0.82rem;
+  color: var(--color-text-dark-secondary);
+}
+
+.rq-offer__switcher-link {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--color-orange, #FF6F00);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: underline;
+  margin-left: 0.25rem;
+  transition: color 0.2s ease;
+}
+
+.rq-offer__switcher-link:hover {
+  color: #e65100;
+}
+
 .rq-offer__price {
   position: relative;
   padding: 2.75rem 2.25rem;

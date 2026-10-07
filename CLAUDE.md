@@ -9,8 +9,10 @@
 **Organizational Structure & Personas:**
 - **Artist Collective:** SOE is an *artist collective* of musicians, vocalists, acoustic artisans, and educators.
 - **Founder Role (L.D. Murray):** L.D. Murray is the **Founder** in a **strategic background role**. L.D. Murray is *not* an artist, *not* a performer, and *never* front-facing on-camera/acoustic performance talent.
+- **Art Director (Danielle Alexis):** Danielle Alexis is the **Art Director**, governing visual development, character lore integrity, racial diversity canon, illustration aesthetics, and visual world-building across all 7 Lands.
 - **Lead Marketer & Sovereign Guide (Seriphia):** **Seriphia** is the primary forefront persona and **Lead Marketer**. She brings wisdom to teach the early learners and inspire parents in the essentials of learning.
 - **The Heroes:** Early learners learn directly from the **15 Character Heroes** across the 7 Lands.
+- **Sovereign Startup Structure:** SOE operates as an independent sovereign artist collective with **100% music publishing and master sound recording ownership** across all 19 tracks. The enterprise enforces **zero platform renting**: Shopify is strictly retired, audio streams directly on owned web audio infrastructure (`soelearn.com/listen`), direct Stripe card vaulting captures post-purchase upsells, and print fulfillment is automated on-demand via Lulu API with zero inventory debt.
 - **Core Motto:** *"Staying on the path, always learning."*
 
 **Tagline:** "Designed for the developing brain — not the algorithm."
