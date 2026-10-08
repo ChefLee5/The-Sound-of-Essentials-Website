@@ -176,9 +176,10 @@ const CanvasBackground = () => {
       canvas.width  = W;
       canvas.height = H;
 
-      orbs     = Array.from({ length: 8  }, () => new Orb(W, H));
-      notes    = Array.from({ length: 22 }, () => new Note(W, H));
-      sparkles = Array.from({ length: 40 }, () => new Sparkle(W, H));
+      const isMobile = W < 768;
+      orbs     = Array.from({ length: isMobile ? 3 : 8  }, () => new Orb(W, H));
+      notes    = Array.from({ length: isMobile ? 6 : 22 }, () => new Note(W, H));
+      sparkles = Array.from({ length: isMobile ? 12 : 40 }, () => new Sparkle(W, H));
     };
 
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -202,8 +203,18 @@ const CanvasBackground = () => {
     };
 
     setup();
+    let idleTimer;
     if (isRunning) {
-      draw();
+      // Defer RAF until after main thread settles (crushes TBT)
+      if ('requestIdleCallback' in window) {
+        window.requestIdleCallback(() => {
+          raf = requestAnimationFrame(draw);
+        }, { timeout: 800 });
+      } else {
+        idleTimer = setTimeout(() => {
+          raf = requestAnimationFrame(draw);
+        }, 200);
+      }
     } else {
       // Single static render for reduced motion
       const W = canvas.width;
@@ -231,6 +242,7 @@ const CanvasBackground = () => {
     document.addEventListener('visibilitychange', onVisibilityChange);
     return () => {
       cancelAnimationFrame(raf);
+      if (idleTimer) clearTimeout(idleTimer);
       window.removeEventListener('resize', onResize);
       document.removeEventListener('visibilitychange', onVisibilityChange);
     };

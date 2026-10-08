@@ -6,15 +6,15 @@ const SplashScreen = ({ onFinished }) => {
   const [phase, setPhase] = useState('enter'); // enter → show → exit → done
 
   useEffect(() => {
-    // Phase 1: entrance animation plays via CSS (0–800ms)
-    const showTimer = setTimeout(() => setPhase('show'), 800);
-    // Phase 2: hold for reading (800–3000ms)
-    const exitTimer = setTimeout(() => setPhase('exit'), 3000);
-    // Phase 3: fade out (3000–3700ms), then remove
+    // Phase 1: entrance animation plays via CSS (0–500ms)
+    const showTimer = setTimeout(() => setPhase('show'), 500);
+    // Phase 2: hold for reading (500–1800ms)
+    const exitTimer = setTimeout(() => setPhase('exit'), 1800);
+    // Phase 3: fade out (1800–2200ms), then remove
     const doneTimer = setTimeout(() => {
       setPhase('done');
       onFinished?.();
-    }, 3700);
+    }, 2200);
 
     return () => {
       clearTimeout(showTimer);
@@ -100,7 +100,7 @@ const SplashScreen = ({ onFinished }) => {
           </div>
         </div>
 
-        <h1 className="splash-screen__title">
+        <div className="splash-screen__title" role="presentation" aria-hidden="true">
           <span className="splash-screen__title-line1">{t('splash.line1')}</span>
           <span className="splash-screen__title-line2">
             {titleLine2.split('').map((char, i) => (
@@ -113,7 +113,7 @@ const SplashScreen = ({ onFinished }) => {
               </span>
             ))}
           </span>
-        </h1>
+        </div>
 
         <div className="splash-screen__subtitle">
           {subtitleText.split('').map((char, i) => (

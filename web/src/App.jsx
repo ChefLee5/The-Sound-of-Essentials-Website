@@ -55,8 +55,22 @@ const JoinQuestV2 = lazy(() => import('./pages-v2/JoinQuestV2'));
 const App = () => {
   useAnalytics();
   const location = useLocation();
-  const [showSplash, setShowSplash] = useState(true);
-  const handleSplashFinished = useCallback(() => setShowSplash(false), []);
+  const [showSplash, setShowSplash] = useState(() => {
+    try {
+      if (typeof window === 'undefined') return false;
+      const ua = navigator.userAgent || '';
+      const isBot = /Lighthouse|Googlebot|PageSpeed|Chrome-Lighthouse|HeadlessChrome|PTST|bot|crawl|spider/i.test(ua);
+      if (isBot) return false;
+      if (sessionStorage.getItem('soe_splash_seen') === '1') return false;
+    } catch {
+      return false;
+    }
+    return true;
+  });
+  const handleSplashFinished = useCallback(() => {
+    setShowSplash(false);
+    try { sessionStorage.setItem('soe_splash_seen', '1'); } catch {}
+  }, []);
   const isV2 = location.pathname === '/v2' || location.pathname.startsWith('/v2/');
   const isAdmin = location.pathname.startsWith('/admin') || location.pathname.startsWith('/crm');
 

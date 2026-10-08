@@ -16,7 +16,7 @@ const Home = () => {
   const { t } = useTranslation();
 
   useEffect(() => {
-    document.title = 'The Sound of Essentials Deluxe — A Musical Learning Experience';
+    document.title = 'The Sound of Essentials | Music-Driven Early Learning';
   }, []);
 
   /* ── Interactive State: FAQ Accordion ── */
@@ -51,6 +51,7 @@ const Home = () => {
   const rotateRight = () => setRotation(r => r - theta);
 
   useEffect(() => {
+    if (typeof window !== 'undefined' && window.innerWidth < 768) return;
     const interval = setInterval(() => {
       setRotation(r => r - theta);
     }, 3200);

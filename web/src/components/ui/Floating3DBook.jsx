@@ -118,7 +118,11 @@ export const Floating3DBook = ({
               src={assetPath(imageSrc)}
               alt={altText}
               className="hero__3d-book-img"
+              width="400"
+              height="400"
+              fetchPriority="high"
               loading="eager"
+              style={{ aspectRatio: '1 / 1' }}
             />
 
             {/* Specular Glare / Holographic Light Sheen */}
