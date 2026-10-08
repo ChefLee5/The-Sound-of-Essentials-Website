@@ -1,3 +1,9 @@
+# Pre-Sell Bridge Landing Pages
+/dad-reading-apps-review        /dad-reading-apps-review.html        200
+/education-sovereignty          /education-sovereignty.html          200
+/global-learn-english           /global-learn-english.html           200
+/sing-along-time                /sing-along-time.html                200
+
 # Cloudflare Pages SPA rewrite rule
 # Rewrites all unmatched paths to /index.html for React Router DOM client-side routing
 /*    /index.html   200

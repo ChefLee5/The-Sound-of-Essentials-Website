@@ -38,6 +38,10 @@ const AdvertorialStory = lazy(() => import('./pages/AdvertorialStory'));
 const AbcMouseAlternatives = lazy(() => import('./pages/AbcMouseAlternatives'));
 const ReadingEggsAlternatives = lazy(() => import('./pages/ReadingEggsAlternatives'));
 const HookedOnPhonicsAlternatives = lazy(() => import('./pages/HookedOnPhonicsAlternatives'));
+const DadReadingAppsReview = lazy(() => import('./pages/DadReadingAppsReview'));
+const EducationSovereignty = lazy(() => import('./pages/EducationSovereignty'));
+const GlobalLearnEnglish = lazy(() => import('./pages/GlobalLearnEnglish'));
+const SingAlongTime = lazy(() => import('./pages/SingAlongTime'));
 const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
 const TermsOfService = lazy(() => import('./pages/TermsOfService'));
 const DmcaPolicy = lazy(() => import('./pages/DmcaPolicy'));
@@ -138,6 +142,15 @@ const App = () => {
                 <Route path="/story" element={<AnimatedPage><AdvertorialStory /></AnimatedPage>} />
                 <Route path="/quieter-way" element={<AnimatedPage><AdvertorialStory /></AnimatedPage>} />
                 <Route path="/advertorial" element={<AnimatedPage><AdvertorialStory /></AnimatedPage>} />
+                {/* Sovereign Editorial Pre-Sell Bridge Routes */}
+                <Route path="/dad-reading-apps-review" element={<AnimatedPage><DadReadingAppsReview /></AnimatedPage>} />
+                <Route path="/dad-review" element={<AnimatedPage><DadReadingAppsReview /></AnimatedPage>} />
+                <Route path="/education-sovereignty" element={<AnimatedPage><EducationSovereignty /></AnimatedPage>} />
+                <Route path="/sovereign-child" element={<AnimatedPage><EducationSovereignty /></AnimatedPage>} />
+                <Route path="/global-learn-english" element={<AnimatedPage><GlobalLearnEnglish /></AnimatedPage>} />
+                <Route path="/sound-before-symbol" element={<AnimatedPage><GlobalLearnEnglish /></AnimatedPage>} />
+                <Route path="/sing-along-time" element={<AnimatedPage><SingAlongTime /></AnimatedPage>} />
+                <Route path="/rhythm-reset" element={<AnimatedPage><SingAlongTime /></AnimatedPage>} />
                 {/* Competitor Alternative & Comparison Listicles */}
                 <Route path="/alternatives/abcmouse" element={<AnimatedPage><AbcMouseAlternatives /></AnimatedPage>} />
                 <Route path="/abcmouse-alternatives" element={<AnimatedPage><AbcMouseAlternatives /></AnimatedPage>} />

@@ -4,6 +4,7 @@ import { useAnimeReveal } from '../hooks/useAnimeReveal';
 import GooeyMarquee from '../components/GooeyMarquee';
 import StoryScroll, { FlowSection } from '../components/StoryScroll';
 import { assetCssUrl, assetPath } from '../utils/assetPath';
+import PhilanthropicDonationSection from '../components/PhilanthropicDonationSection';
 
 /* ── Reveal Hook ── */
 const useReveal = () => {
@@ -387,6 +388,11 @@ const Mission = () => {
                     fontSize="clamp(1.8rem, 5vw, 3.5rem)"
                 />
             </section>
+ 
+            {/* ── Philanthropic Giving & Mission Sponsorship ── */}
+            <RevealSection>
+                <PhilanthropicDonationSection />
+            </RevealSection>
 
             {/* ── Tailor-Made CTA ── */}
             <section className="section">

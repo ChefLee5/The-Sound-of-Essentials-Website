@@ -4,6 +4,7 @@ import { assetPath } from '../utils/assetPath';
 import FullSection from '../components-v2/FullSection';
 import CharSplitText from '../components-v2/CharSplitText';
 import { RevealV2 } from '../hooks/useScrollReveal';
+import PhilanthropicDonationSection from '../components/PhilanthropicDonationSection';
 
 const SECTIONS = [
   {
@@ -93,6 +94,11 @@ const MissionV2 = () => {
           Not the algorithm. The child.
         </CharSplitText>
       </section>
+
+      {/* ── Philanthropic Giving & Mission Sponsorship ── */}
+      <RevealV2>
+        <PhilanthropicDonationSection />
+      </RevealV2>
 
       {/* ── CTA ── */}
       <section className="v2-section v2-text-center">

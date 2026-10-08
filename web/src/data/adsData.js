@@ -21,7 +21,7 @@ It offers children a calm sanctuary where music brings foundational learning to 
     headline: 'A Musical Sanctuary for Young Minds',
     description: 'Free songs + coloring pages',
     cta: 'LISTEN_NOW',
-    url: 'https://thesoundofessentials.com/listen?utm_source=meta&utm_medium=paid_social&utm_campaign=cold_delta4&utm_content=ad01_feel_felt_found',
+    url: 'https://thesoundofessentials.com/education-sovereignty?utm_source=meta&utm_medium=paid_social&utm_campaign=cold_delta4&utm_content=ad01_feel_felt_found',
   },
   {
     id: 'ad02',
@@ -44,7 +44,7 @@ The Sound of Essentials builds on Dalcroze, Orff, and Kodály methods for ages 2
     headline: 'Backed by Science. Loved by Kids.',
     description: 'Research-backed curriculum.',
     cta: 'LEARN_MORE',
-    url: 'https://thesoundofessentials.com/listen?utm_source=meta&utm_medium=paid_social&utm_campaign=cold_delta2&utm_content=ad02_myth_deflection',
+    url: 'https://thesoundofessentials.com/sing-along-time?utm_source=meta&utm_medium=paid_social&utm_campaign=cold_delta2&utm_content=ad02_myth_deflection',
   },
   {
     id: 'ad03',
@@ -69,7 +69,7 @@ Ages 2 to 7. Free 19-track album streaming today.
     headline: 'Screen Time You Won\'t Feel Bad About',
     description: 'Zero guilt. 100% free.',
     cta: 'LISTEN_NOW',
-    url: 'https://thesoundofessentials.com/listen?utm_source=meta&utm_medium=paid_social&utm_campaign=cold_delta1&utm_content=ad03_before_after',
+    url: 'https://thesoundofessentials.com/dad-reading-apps-review?utm_source=meta&utm_medium=paid_social&utm_campaign=cold_delta1&utm_content=ad03_before_after',
   },
   {
     id: 'ad04',
@@ -94,7 +94,7 @@ The Sound of Essentials uses 19 songs to teach math, language, science, and moto
     headline: 'More Than Music. It\'s a Curriculum.',
     description: '5 developmental domains.',
     cta: 'LISTEN_NOW',
-    url: 'https://thesoundofessentials.com/listen?utm_source=meta&utm_medium=paid_social&utm_campaign=cold_delta2&utm_content=ad04_contrarian',
+    url: 'https://thesoundofessentials.com/sing-along-time?utm_source=meta&utm_medium=paid_social&utm_campaign=cold_delta2&utm_content=ad04_contrarian',
   },
   {
     id: 'ad05',
@@ -115,7 +115,7 @@ Children request the Rhythm Quest tracks on repeat, sing the lyrics back, and as
     headline: 'Listen Free: 19 Educational Songs',
     description: 'Instant access. No spam.',
     cta: 'LISTEN_NOW',
-    url: 'https://thesoundofessentials.com/listen?utm_source=meta&utm_medium=paid_social&utm_campaign=cold_delta5&utm_content=ad05_challenge',
+    url: 'https://thesoundofessentials.com/sing-along-time?utm_source=meta&utm_medium=paid_social&utm_campaign=cold_delta5&utm_content=ad05_challenge',
   },
   {
     id: 'ad06',
@@ -140,7 +140,7 @@ It proved me wrong in the best way.
     headline: 'Finally: Kids Music You\'ll Enjoy Too',
     description: 'Parents love it too.',
     cta: 'LISTEN_NOW',
-    url: 'https://thesoundofessentials.com/listen?utm_source=meta&utm_medium=paid_social&utm_campaign=cold_delta3&utm_content=ad06_reverse_testimonial',
+    url: 'https://thesoundofessentials.com/dad-reading-apps-review?utm_source=meta&utm_medium=paid_social&utm_campaign=cold_delta3&utm_content=ad06_reverse_testimonial',
   },
   {
     id: 'ad07',
@@ -163,7 +163,7 @@ That is the Rhythm Quest: 19 songs across 7 Lands, streaming free for ages 2 to 
     headline: 'Your Child\'s New Favorite Songs',
     description: 'Free songs + coloring pages',
     cta: 'LISTEN_NOW',
-    url: 'https://thesoundofessentials.com/listen?utm_source=meta&utm_medium=paid_social&utm_campaign=cold_delta5&utm_content=ad07_future_pacing',
+    url: 'https://thesoundofessentials.com/sing-along-time?utm_source=meta&utm_medium=paid_social&utm_campaign=cold_delta5&utm_content=ad07_future_pacing',
   },
   {
     id: 'ad08',
@@ -186,7 +186,7 @@ No ads, no algorithms, and no screen fatigue, just brain-building melody.
     headline: '19 Songs. 7 Worlds. 100% Free.',
     description: 'No ads. No algorithm.',
     cta: 'LISTEN_NOW',
-    url: 'https://thesoundofessentials.com/listen?utm_source=meta&utm_medium=paid_social&utm_campaign=cold_delta1&utm_content=ad08_status_quo',
+    url: 'https://thesoundofessentials.com/dad-reading-apps-review?utm_source=meta&utm_medium=paid_social&utm_campaign=cold_delta1&utm_content=ad08_status_quo',
   },
   {
     id: 'ad09',
@@ -207,7 +207,7 @@ The Sound of Essentials brings that foundation home. Nineteen tracks across 7 La
     headline: '5 Learning Domains. 19 Songs. Free.',
     description: 'Neuroscience meets music.',
     cta: 'LEARN_MORE',
-    url: 'https://thesoundofessentials.com/listen?utm_source=meta&utm_medium=paid_social&utm_campaign=cold_delta4&utm_content=ad09_pas',
+    url: 'https://thesoundofessentials.com/education-sovereignty?utm_source=meta&utm_medium=paid_social&utm_campaign=cold_delta4&utm_content=ad09_pas',
   },
   {
     id: 'ad10',
@@ -228,7 +228,7 @@ Tap below to stream all 19 tracks immediately, with free printable coloring shee
     headline: '15 Heroes. 7 Lands. 1 Quest.',
     description: 'Start the adventure today.',
     cta: 'LISTEN_NOW',
-    url: 'https://thesoundofessentials.com/listen?utm_source=meta&utm_medium=paid_social&utm_campaign=cold_delta5&utm_content=ad10_aida',
+    url: 'https://thesoundofessentials.com/sing-along-time?utm_source=meta&utm_medium=paid_social&utm_campaign=cold_delta5&utm_content=ad10_aida',
   },
   // ── Ads 11 to 30 ──────────────────────────────────────────────────
   {
@@ -252,7 +252,7 @@ We provide the music freely because every child deserves a strong foundation.
     headline: 'A Social Enterprise for Kids',
     description: 'Global. Diverse. Free.',
     cta: 'LEARN_MORE',
-    url: 'https://thesoundofessentials.com/listen?utm_source=meta&utm_medium=paid_social&utm_campaign=cold_delta4&utm_content=ad11_origin_story',
+    url: 'https://thesoundofessentials.com/education-sovereignty?utm_source=meta&utm_medium=paid_social&utm_campaign=cold_delta4&utm_content=ad11_origin_story',
   },
   {
     id: 'ad12',
@@ -273,7 +273,7 @@ Created for ages 2 to 7 with zero screen fatigue. Staying on the path, always le
     headline: 'Built for Brains, Not Algorithms',
     description: 'A mission, not a product.',
     cta: 'LISTEN_NOW',
-    url: 'https://thesoundofessentials.com/listen?utm_source=meta&utm_medium=paid_social&utm_campaign=cold_delta1&utm_content=ad12_the_enemy',
+    url: 'https://thesoundofessentials.com/dad-reading-apps-review?utm_source=meta&utm_medium=paid_social&utm_campaign=cold_delta1&utm_content=ad12_the_enemy',
   },
   {
     id: 'ad13',
@@ -296,7 +296,7 @@ Nineteen songs across 7 developmental Lands, screen-free for ages 2 to 7.
     headline: 'Music Learning for Every Child 🌍',
     description: 'Join the movement today.',
     cta: 'LISTEN_NOW',
-    url: 'https://thesoundofessentials.com/listen?utm_source=meta&utm_medium=paid_social&utm_campaign=cold_delta4&utm_content=ad13_social_proof',
+    url: 'https://thesoundofessentials.com/education-sovereignty?utm_source=meta&utm_medium=paid_social&utm_campaign=cold_delta4&utm_content=ad13_social_proof',
   },
   {
     id: 'ad14',
@@ -319,7 +319,7 @@ Curiosity leads the way without tests or pressure.
     headline: 'Which Hero Will They Love?',
     description: 'Kids choose their own path.',
     cta: 'LISTEN_NOW',
-    url: 'https://thesoundofessentials.com/listen?utm_source=meta&utm_medium=paid_social&utm_campaign=cold_delta5&utm_content=ad14_dream_state',
+    url: 'https://thesoundofessentials.com/sing-along-time?utm_source=meta&utm_medium=paid_social&utm_campaign=cold_delta5&utm_content=ad14_dream_state',
   },
   {
     id: 'ad15',
@@ -342,7 +342,7 @@ The full 19-track Sound of Essentials album is streaming free today.
     headline: '19 Songs. 7 Worlds. 100% Free.',
     description: 'Instant access for families.',
     cta: 'LISTEN_NOW',
-    url: 'https://thesoundofessentials.com/listen?utm_source=meta&utm_medium=paid_social&utm_campaign=cold_delta2&utm_content=ad15_urgency',
+    url: 'https://thesoundofessentials.com/sing-along-time?utm_source=meta&utm_medium=paid_social&utm_campaign=cold_delta2&utm_content=ad15_urgency',
   },
   {
     id: 'ad16',
@@ -363,7 +363,7 @@ The Sound of Essentials supports parents who choose active curiosity: 19 songs, 
     headline: 'Replace Junk Content With This',
     description: 'No ads. No algorithm.',
     cta: 'LISTEN_NOW',
-    url: 'https://thesoundofessentials.com/listen?utm_source=meta&utm_medium=paid_social&utm_campaign=cold_delta1&utm_content=ad16_us_vs_them',
+    url: 'https://thesoundofessentials.com/dad-reading-apps-review?utm_source=meta&utm_medium=paid_social&utm_campaign=cold_delta1&utm_content=ad16_us_vs_them',
   },
   {
     id: 'ad17',
@@ -390,7 +390,7 @@ Seven Lands, 19 songs, and free streaming for ages 2 to 7.
     headline: 'Unlock the Full Rhythm Quest 🎵',
     description: 'Instant access for families.',
     cta: 'LISTEN_NOW',
-    url: 'https://thesoundofessentials.com/listen?utm_source=meta&utm_medium=paid_social&utm_campaign=cold_delta5&utm_content=ad17_micro_commitment',
+    url: 'https://thesoundofessentials.com/sing-along-time?utm_source=meta&utm_medium=paid_social&utm_campaign=cold_delta5&utm_content=ad17_micro_commitment',
   },
   {
     id: 'ad18',
@@ -411,7 +411,7 @@ Built independently for their own family, it is now shared freely with homes and
     headline: 'A Social Enterprise for Kids',
     description: 'Global. Diverse. Free.',
     cta: 'LEARN_MORE',
-    url: 'https://thesoundofessentials.com/listen?utm_source=meta&utm_medium=paid_social&utm_campaign=cold_delta3&utm_content=ad18_curiosity_gap',
+    url: 'https://thesoundofessentials.com/dad-reading-apps-review?utm_source=meta&utm_medium=paid_social&utm_campaign=cold_delta3&utm_content=ad18_curiosity_gap',
   },
   {
     id: 'ad19',
@@ -434,7 +434,7 @@ Nineteen songs across 7 Lands, streaming free for ages 2 to 7.
     headline: 'A Musical Universe for Young Minds',
     description: 'Start the adventure today.',
     cta: 'LISTEN_NOW',
-    url: 'https://thesoundofessentials.com/listen?utm_source=meta&utm_medium=paid_social&utm_campaign=cold_delta5&utm_content=ad19_analogy_bridge',
+    url: 'https://thesoundofessentials.com/global-learn-english?utm_source=meta&utm_medium=paid_social&utm_campaign=cold_delta5&utm_content=ad19_analogy_bridge',
   },
   {
     id: 'ad20',
@@ -457,7 +457,7 @@ The young mind grows rapidly during these formative years. Built for ages 2 to 7
     headline: 'Explore 7 Magical Lands Free 🌍',
     description: 'Join the movement today.',
     cta: 'LISTEN_NOW',
-    url: 'https://thesoundofessentials.com/listen?utm_source=meta&utm_medium=paid_social&utm_campaign=cold_delta4&utm_content=ad20_timeline',
+    url: 'https://thesoundofessentials.com/education-sovereignty?utm_source=meta&utm_medium=paid_social&utm_campaign=cold_delta4&utm_content=ad20_timeline',
   },
   {
     id: 'ad21',
@@ -480,7 +480,7 @@ The music stays free for every family.
     headline: 'Built for Brains, Not Algorithms',
     description: 'A mission, not a product.',
     cta: 'LEARN_MORE',
-    url: 'https://thesoundofessentials.com/listen?utm_source=meta&utm_medium=paid_social&utm_campaign=cold_delta2&utm_content=ad21_one_line_knockout',
+    url: 'https://thesoundofessentials.com/sing-along-time?utm_source=meta&utm_medium=paid_social&utm_campaign=cold_delta2&utm_content=ad21_one_line_knockout',
   },
   {
     id: 'ad22',
@@ -503,7 +503,7 @@ Nineteen songs, streaming free for ages 2 to 7.
     headline: 'Meet the Heroes of Rhythm Quest',
     description: '15 guides. 19 songs. Free.',
     cta: 'LISTEN_NOW',
-    url: 'https://thesoundofessentials.com/listen?utm_source=meta&utm_medium=paid_social&utm_campaign=cold_delta4&utm_content=ad22_nested_loop',
+    url: 'https://thesoundofessentials.com/education-sovereignty?utm_source=meta&utm_medium=paid_social&utm_campaign=cold_delta4&utm_content=ad22_nested_loop',
   },
   {
     id: 'ad23',
@@ -524,7 +524,7 @@ The Sound of Essentials offers rich acoustic melodies and cheerful call-and-resp
     headline: 'Better Than Baby Shark. Way Better.',
     description: 'Parents love it too.',
     cta: 'LISTEN_NOW',
-    url: 'https://thesoundofessentials.com/listen?utm_source=meta&utm_medium=paid_social&utm_campaign=cold_delta1&utm_content=ad23_permission_slip',
+    url: 'https://thesoundofessentials.com/dad-reading-apps-review?utm_source=meta&utm_medium=paid_social&utm_campaign=cold_delta1&utm_content=ad23_permission_slip',
   },
   {
     id: 'ad24',
@@ -547,7 +547,7 @@ Nineteen songs, screen-free and streaming free today.
     headline: 'Music + Neuroscience Builds Early Minds',
     description: '5 developmental domains.',
     cta: 'LEARN_MORE',
-    url: 'https://thesoundofessentials.com/listen?utm_source=meta&utm_medium=paid_social&utm_campaign=cold_delta2&utm_content=ad24_shocking_stat',
+    url: 'https://thesoundofessentials.com/sing-along-time?utm_source=meta&utm_medium=paid_social&utm_campaign=cold_delta2&utm_content=ad24_shocking_stat',
   },
   {
     id: 'ad25',
@@ -568,7 +568,7 @@ Intentional acoustic tempos and multilingual melodies support focus for ages 2 t
     headline: 'See Your Child in These Heroes',
     description: 'Free in 3 languages.',
     cta: 'LISTEN_NOW',
-    url: 'https://thesoundofessentials.com/listen?utm_source=meta&utm_medium=paid_social&utm_campaign=cold_delta3&utm_content=ad25_third_person',
+    url: 'https://thesoundofessentials.com/global-learn-english?utm_source=meta&utm_medium=paid_social&utm_campaign=cold_delta3&utm_content=ad25_third_person',
   },
   {
     id: 'ad26',
@@ -591,7 +591,7 @@ Screen-free calm and complete peace of mind.
     headline: 'A Social Enterprise for Kids',
     description: 'A mission, not a product.',
     cta: 'LISTEN_NOW',
-    url: 'https://thesoundofessentials.com/listen?utm_source=meta&utm_medium=paid_social&utm_campaign=cold_delta4&utm_content=ad26_confession',
+    url: 'https://thesoundofessentials.com/education-sovereignty?utm_source=meta&utm_medium=paid_social&utm_campaign=cold_delta4&utm_content=ad26_confession',
   },
   {
     id: 'ad27',
@@ -614,7 +614,7 @@ Nineteen songs across 7 Lands for ages 2 to 7. Free streaming today.
     headline: 'Free Music That Teaches Kids',
     description: 'Instant access. No spam.',
     cta: 'LISTEN_NOW',
-    url: 'https://thesoundofessentials.com/listen?utm_source=meta&utm_medium=paid_social&utm_campaign=cold_delta5&utm_content=ad27_trojan_horse',
+    url: 'https://thesoundofessentials.com/sing-along-time?utm_source=meta&utm_medium=paid_social&utm_campaign=cold_delta5&utm_content=ad27_trojan_horse',
   },
   {
     id: 'ad28',
@@ -637,7 +637,7 @@ No recurring subscriptions or mandatory upgrades, just wholesome acoustic educat
     headline: '19 Songs. 7 Worlds. 100% Free.',
     description: 'Educational + enjoyable.',
     cta: 'LISTEN_NOW',
-    url: 'https://thesoundofessentials.com/listen?utm_source=meta&utm_medium=paid_social&utm_campaign=cold_delta3&utm_content=ad28_comparative',
+    url: 'https://thesoundofessentials.com/dad-reading-apps-review?utm_source=meta&utm_medium=paid_social&utm_campaign=cold_delta3&utm_content=ad28_comparative',
   },
   {
     id: 'ad29',
@@ -660,7 +660,7 @@ Nineteen original tracks, streaming free today.
     headline: 'Brain-Building Music for Kids',
     description: 'Stream free. Learn forever.',
     cta: 'LEARN_MORE',
-    url: 'https://thesoundofessentials.com/listen?utm_source=meta&utm_medium=paid_social&utm_campaign=cold_delta2&utm_content=ad29_mechanism',
+    url: 'https://thesoundofessentials.com/sing-along-time?utm_source=meta&utm_medium=paid_social&utm_campaign=cold_delta2&utm_content=ad29_mechanism',
   },
   {
     id: 'ad30',
@@ -683,6 +683,6 @@ Nineteen songs, 7 Lands, and 15 hero guides, free for every family.
     headline: 'Your Child\'s New Favorite Songs',
     description: 'Join 1,000+ families today',
     cta: 'LISTEN_NOW',
-    url: 'https://thesoundofessentials.com/listen?utm_source=meta&utm_medium=paid_social&utm_campaign=cold_delta5&utm_content=ad30_identity_shift',
+    url: 'https://thesoundofessentials.com/education-sovereignty?utm_source=meta&utm_medium=paid_social&utm_campaign=cold_delta5&utm_content=ad30_identity_shift',
   },
 ];

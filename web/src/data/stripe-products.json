@@ -70,5 +70,13 @@
     "name": "SOE Sensory Listening & Workbook Bundle (Headphones + 8-Week Workbook)",
     "price": 39,
     "sku": "SOE-HP-WB-BUNDLE"
+  },
+  "soe-philanthropic-donation": {
+    "productId": "prod_VP2JqzaBbtPSii",
+    "priceId": "price_1UOEF9DeDquNmfDqe8v3AtCG",
+    "url": "https://buy.stripe.com/test_14A9AT9BO4S140mc706Vq09",
+    "name": "SOE Mission: Philanthropic Early Learning Donation",
+    "price": "custom",
+    "sku": "SOE-PHILANTHROPY-MISSION"
   }
 }

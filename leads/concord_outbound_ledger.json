@@ -1,0 +1,426 @@
+{
+  "dispatched": {
+    "enquiries@busybees.com": {
+      "lead_id": "lead-europe-030",
+      "name": "Busy Bees Childcare UK",
+      "pillar": "Pillar III: Child Development",
+      "template_id": 8,
+      "dispatched_at": "2026-10-08T09:40:25.452629",
+      "message_id": "<202610080940.94021994328@smtp-relay.mailin.fr>"
+    },
+    "info@werockthespectrumkidsgym.com": {
+      "lead_id": "lead-us-047",
+      "name": "We Rock the Spectrum Kid's Gym (National)",
+      "pillar": "Pillar III: Child Development",
+      "template_id": 8,
+      "dispatched_at": "2026-10-08T09:40:27.233709",
+      "message_id": "<202610080940.51210416993@smtp-relay.mailin.fr>"
+    },
+    "info@nhsa.org": {
+      "lead_id": "lead-us-050",
+      "name": "National Head Start Association (NHSA Innovation Hub)",
+      "pillar": "Pillar III: Child Development",
+      "template_id": 8,
+      "dispatched_at": "2026-10-08T09:40:29.176994",
+      "message_id": "<202610080940.81495534582@smtp-relay.mailin.fr>"
+    },
+    "support@goodstart.org.au": {
+      "lead_id": "lead-aus-015",
+      "name": "Goodstart Early Learning",
+      "pillar": "Pillar III: Child Development",
+      "template_id": 8,
+      "dispatched_at": "2026-10-08T09:40:30.889753",
+      "message_id": "<202610080940.49383925484@smtp-relay.mailin.fr>"
+    },
+    "info@ndna.org.uk": {
+      "lead_id": "lead-europe-020",
+      "name": "National Day Nurseries Association (NDNA UK)",
+      "pillar": "Pillar III: Child Development",
+      "template_id": 8,
+      "dispatched_at": "2026-10-08T09:40:32.717631",
+      "message_id": "<202610080940.36394127312@smtp-relay.mailin.fr>"
+    },
+    "enquiries@guardian.edu.au": {
+      "lead_id": "lead-aus-026",
+      "name": "Guardian Childcare & Education",
+      "pillar": "Pillar III: Child Development",
+      "template_id": 8,
+      "dispatched_at": "2026-10-08T09:40:34.649534",
+      "message_id": "<202610080940.19940882421@smtp-relay.mailin.fr>"
+    },
+    "eca@earlychildhood.org.au": {
+      "lead_id": "lead-aus-029",
+      "name": "Early Childhood Australia (ECA)",
+      "pillar": "Pillar III: Child Development",
+      "template_id": 8,
+      "dispatched_at": "2026-10-08T09:40:36.460135",
+      "message_id": "<202610080940.44086530598@smtp-relay.mailin.fr>"
+    },
+    "info@childbase.com": {
+      "lead_id": "lead-europe-032",
+      "name": "Childbase Partnership",
+      "pillar": "Pillar III: Child Development",
+      "template_id": 8,
+      "dispatched_at": "2026-10-08T09:40:38.118670",
+      "message_id": "<202610080940.69024413553@smtp-relay.mailin.fr>"
+    },
+    "info@britishorchardnursery.com": {
+      "lead_id": "lead-asia-039",
+      "name": "British Orchard Nursery (UAE & Middle East)",
+      "pillar": "Pillar III: Child Development",
+      "template_id": 8,
+      "dispatched_at": "2026-10-08T09:40:40.020497",
+      "message_id": "<202610080940.44809543026@smtp-relay.mailin.fr>"
+    },
+    "info@reddamhouse.com": {
+      "lead_id": "lead-africa-043",
+      "name": "Reddam House Early Learning Schools (ELS)",
+      "pillar": "Pillar III: Child Development",
+      "template_id": 8,
+      "dispatched_at": "2026-10-08T09:40:41.711870",
+      "message_id": "<202610080940.79252485898@smtp-relay.mailin.fr>"
+    },
+    "enquiry@etonhouse.edu.sg": {
+      "lead_id": "lead-asia-006",
+      "name": "EtonHouse International Education Group",
+      "pillar": "Pillar III: Child Development",
+      "template_id": 8,
+      "dispatched_at": "2026-10-08T09:40:43.416113",
+      "message_id": "<202610080940.29016246316@smtp-relay.mailin.fr>"
+    },
+    "contact@babilou.fr": {
+      "lead_id": "lead-europe-021",
+      "name": "Babilou Family Europe",
+      "pillar": "Pillar III: Child Development",
+      "template_id": 8,
+      "dispatched_at": "2026-10-08T09:40:45.253464",
+      "message_id": "<202610080940.54976555899@smtp-relay.mailin.fr>"
+    },
+    "info@oac.edu.au": {
+      "lead_id": "lead-aus-027",
+      "name": "Only About Children (OAC)",
+      "pillar": "Pillar III: Child Development",
+      "template_id": 8,
+      "dispatched_at": "2026-10-08T09:40:46.884284",
+      "message_id": "<202610080940.25226609152@smtp-relay.mailin.fr>"
+    },
+    "childcare@ymcagta.org": {
+      "lead_id": "lead-canada-037",
+      "name": "YMCA Child Care Canada (GTA & Regional)",
+      "pillar": "Pillar III: Child Development",
+      "template_id": 8,
+      "dispatched_at": "2026-10-08T09:40:48.661942",
+      "message_id": "<202610080940.91864593394@smtp-relay.mailin.fr>"
+    },
+    "info@ctckids.org": {
+      "lead_id": "lead-us-048",
+      "name": "Children's Therapy Center (CTC Early Intervention)",
+      "pillar": "Pillar III: Child Development",
+      "template_id": 8,
+      "dispatched_at": "2026-10-08T09:40:50.449420",
+      "message_id": "<202610080940.46964715414@smtp-relay.mailin.fr>"
+    },
+    "info@cccf-fcsge.ca": {
+      "lead_id": "lead-canada-011",
+      "name": "Canadian Child Care Federation (CCCF)",
+      "pillar": "Pillar III: Child Development",
+      "template_id": 8,
+      "dispatched_at": "2026-10-08T09:40:52.339327",
+      "message_id": "<202610080940.29937150887@smtp-relay.mailin.fr>"
+    },
+    "info@brightpathkids.com": {
+      "lead_id": "lead-canada-036",
+      "name": "BrightPath Early Learning Canada",
+      "pillar": "Pillar III: Child Development",
+      "template_id": 8,
+      "dispatched_at": "2026-10-08T09:40:54.153963",
+      "message_id": "<202610080940.80697009484@smtp-relay.mailin.fr>"
+    },
+    "info@crawfordinternational.co.za": {
+      "lead_id": "lead-africa-044",
+      "name": "Crawford International Pre-Primary",
+      "pillar": "Pillar III: Child Development",
+      "template_id": 8,
+      "dispatched_at": "2026-10-08T09:40:56.108681",
+      "message_id": "<202610080940.37763211277@smtp-relay.mailin.fr>"
+    },
+    "admin@childcarealliance.org.au": {
+      "lead_id": "lead-aus-016",
+      "name": "Australian Childcare Alliance (ACA)",
+      "pillar": "Pillar III: Child Development",
+      "template_id": 8,
+      "dispatched_at": "2026-10-08T09:40:57.873641",
+      "message_id": "<202610080940.77015659054@smtp-relay.mailin.fr>"
+    },
+    "info@g8education.edu.au": {
+      "lead_id": "lead-aus-018",
+      "name": "G8 Education Early Learning",
+      "pillar": "Pillar III: Child Development",
+      "template_id": 8,
+      "dispatched_at": "2026-10-08T09:40:59.546861",
+      "message_id": "<202610080940.52129704894@smtp-relay.mailin.fr>"
+    },
+    "communications@cobis.org.uk": {
+      "lead_id": "lead-europe-024",
+      "name": "Council of British International Schools (COBIS)",
+      "pillar": "Pillar III: Child Development",
+      "template_id": 8,
+      "dispatched_at": "2026-10-08T09:41:01.290668",
+      "message_id": "<202610080941.16220413369@smtp-relay.mailin.fr>"
+    },
+    "enrol@theblossomnursery.com": {
+      "lead_id": "lead-asia-042",
+      "name": "The Blossom Nursery (Babilou UAE)",
+      "pillar": "Pillar III: Child Development",
+      "template_id": 8,
+      "dispatched_at": "2026-10-08T09:41:02.917272",
+      "message_id": "<202610080941.24127534084@smtp-relay.mailin.fr>"
+    },
+    "engage@curro.co.za": {
+      "lead_id": "lead-africa-002",
+      "name": "Curro Early Childhood Education",
+      "pillar": "Pillar III: Child Development",
+      "template_id": 8,
+      "dispatched_at": "2026-10-08T09:41:04.665126",
+      "message_id": "<202610080941.18689036031@smtp-relay.mailin.fr>"
+    },
+    "info@gemseducation.com": {
+      "lead_id": "lead-asia-009",
+      "name": "GEMS Early Years (GEMS Education)",
+      "pillar": "Pillar III: Child Development",
+      "template_id": 8,
+      "dispatched_at": "2026-10-08T09:41:06.386378",
+      "message_id": "<202610080941.99406150761@smtp-relay.mailin.fr>"
+    },
+    "info@kidsandcompany.com": {
+      "lead_id": "lead-canada-012",
+      "name": "Kids & Company Canada",
+      "pillar": "Pillar III: Child Development",
+      "template_id": 8,
+      "dispatched_at": "2026-10-08T09:41:08.210032",
+      "message_id": "<202610080941.95824972329@smtp-relay.mailin.fr>"
+    },
+    "enquiries@beststart.co.nz": {
+      "lead_id": "lead-aus-019",
+      "name": "BestStart Educare (New Zealand)",
+      "pillar": "Pillar III: Child Development",
+      "template_id": 8,
+      "dispatched_at": "2026-10-08T09:41:09.894488",
+      "message_id": "<202610080941.54341389605@smtp-relay.mailin.fr>"
+    },
+    "partnerships@goodinside.com": {
+      "lead_id": "lead-014",
+      "name": "Dr. Becky Kennedy (Good Inside)",
+      "pillar": "Pillar III: Child Development",
+      "template_id": 8,
+      "dispatched_at": "2026-10-08T09:41:11.664283",
+      "message_id": "<202610080941.95118880484@smtp-relay.mailin.fr>"
+    },
+    "playingwithchanel@gmail.com": {
+      "lead_id": "lead-016",
+      "name": "Priscila Yu, OTR/L (Playing With Chanel)",
+      "pillar": "Pillar III: Child Development",
+      "template_id": 8,
+      "dispatched_at": "2026-10-08T09:41:13.358487",
+      "message_id": "<202610080941.56867578032@smtp-relay.mailin.fr>"
+    },
+    "partners@biglittlefeelings.com": {
+      "lead_id": "lead-018",
+      "name": "Big Little Feelings",
+      "pillar": "Pillar III: Child Development",
+      "template_id": 8,
+      "dispatched_at": "2026-10-08T09:41:15.227287",
+      "message_id": "<202610080941.33134427310@smtp-relay.mailin.fr>"
+    },
+    "communications@childmind.org": {
+      "lead_id": "lead-017",
+      "name": "Child Mind Institute",
+      "pillar": "Pillar III: Child Development",
+      "template_id": 8,
+      "dispatched_at": "2026-10-08T09:41:17.055171",
+      "message_id": "<202610080941.75972569094@smtp-relay.mailin.fr>"
+    }
+  },
+  "history": [
+    {
+      "email": "enquiries@busybees.com",
+      "lead_id": "lead-europe-030",
+      "template_id": 8,
+      "timestamp": "2026-10-08T09:40:25.452737"
+    },
+    {
+      "email": "info@werockthespectrumkidsgym.com",
+      "lead_id": "lead-us-047",
+      "template_id": 8,
+      "timestamp": "2026-10-08T09:40:27.233731"
+    },
+    {
+      "email": "info@nhsa.org",
+      "lead_id": "lead-us-050",
+      "template_id": 8,
+      "timestamp": "2026-10-08T09:40:29.177016"
+    },
+    {
+      "email": "support@goodstart.org.au",
+      "lead_id": "lead-aus-015",
+      "template_id": 8,
+      "timestamp": "2026-10-08T09:40:30.889779"
+    },
+    {
+      "email": "info@ndna.org.uk",
+      "lead_id": "lead-europe-020",
+      "template_id": 8,
+      "timestamp": "2026-10-08T09:40:32.717659"
+    },
+    {
+      "email": "enquiries@guardian.edu.au",
+      "lead_id": "lead-aus-026",
+      "template_id": 8,
+      "timestamp": "2026-10-08T09:40:34.649558"
+    },
+    {
+      "email": "eca@earlychildhood.org.au",
+      "lead_id": "lead-aus-029",
+      "template_id": 8,
+      "timestamp": "2026-10-08T09:40:36.460156"
+    },
+    {
+      "email": "info@childbase.com",
+      "lead_id": "lead-europe-032",
+      "template_id": 8,
+      "timestamp": "2026-10-08T09:40:38.118692"
+    },
+    {
+      "email": "info@britishorchardnursery.com",
+      "lead_id": "lead-asia-039",
+      "template_id": 8,
+      "timestamp": "2026-10-08T09:40:40.020520"
+    },
+    {
+      "email": "info@reddamhouse.com",
+      "lead_id": "lead-africa-043",
+      "template_id": 8,
+      "timestamp": "2026-10-08T09:40:41.711891"
+    },
+    {
+      "email": "enquiry@etonhouse.edu.sg",
+      "lead_id": "lead-asia-006",
+      "template_id": 8,
+      "timestamp": "2026-10-08T09:40:43.416140"
+    },
+    {
+      "email": "contact@babilou.fr",
+      "lead_id": "lead-europe-021",
+      "template_id": 8,
+      "timestamp": "2026-10-08T09:40:45.253486"
+    },
+    {
+      "email": "info@oac.edu.au",
+      "lead_id": "lead-aus-027",
+      "template_id": 8,
+      "timestamp": "2026-10-08T09:40:46.884303"
+    },
+    {
+      "email": "childcare@ymcagta.org",
+      "lead_id": "lead-canada-037",
+      "template_id": 8,
+      "timestamp": "2026-10-08T09:40:48.661962"
+    },
+    {
+      "email": "info@ctckids.org",
+      "lead_id": "lead-us-048",
+      "template_id": 8,
+      "timestamp": "2026-10-08T09:40:50.449442"
+    },
+    {
+      "email": "info@cccf-fcsge.ca",
+      "lead_id": "lead-canada-011",
+      "template_id": 8,
+      "timestamp": "2026-10-08T09:40:52.339349"
+    },
+    {
+      "email": "info@brightpathkids.com",
+      "lead_id": "lead-canada-036",
+      "template_id": 8,
+      "timestamp": "2026-10-08T09:40:54.153983"
+    },
+    {
+      "email": "info@crawfordinternational.co.za",
+      "lead_id": "lead-africa-044",
+      "template_id": 8,
+      "timestamp": "2026-10-08T09:40:56.108699"
+    },
+    {
+      "email": "admin@childcarealliance.org.au",
+      "lead_id": "lead-aus-016",
+      "template_id": 8,
+      "timestamp": "2026-10-08T09:40:57.873661"
+    },
+    {
+      "email": "info@g8education.edu.au",
+      "lead_id": "lead-aus-018",
+      "template_id": 8,
+      "timestamp": "2026-10-08T09:40:59.546881"
+    },
+    {
+      "email": "communications@cobis.org.uk",
+      "lead_id": "lead-europe-024",
+      "template_id": 8,
+      "timestamp": "2026-10-08T09:41:01.290682"
+    },
+    {
+      "email": "enrol@theblossomnursery.com",
+      "lead_id": "lead-asia-042",
+      "template_id": 8,
+      "timestamp": "2026-10-08T09:41:02.917294"
+    },
+    {
+      "email": "engage@curro.co.za",
+      "lead_id": "lead-africa-002",
+      "template_id": 8,
+      "timestamp": "2026-10-08T09:41:04.665148"
+    },
+    {
+      "email": "info@gemseducation.com",
+      "lead_id": "lead-asia-009",
+      "template_id": 8,
+      "timestamp": "2026-10-08T09:41:06.386397"
+    },
+    {
+      "email": "info@kidsandcompany.com",
+      "lead_id": "lead-canada-012",
+      "template_id": 8,
+      "timestamp": "2026-10-08T09:41:08.210057"
+    },
+    {
+      "email": "enquiries@beststart.co.nz",
+      "lead_id": "lead-aus-019",
+      "template_id": 8,
+      "timestamp": "2026-10-08T09:41:09.894510"
+    },
+    {
+      "email": "partnerships@goodinside.com",
+      "lead_id": "lead-014",
+      "template_id": 8,
+      "timestamp": "2026-10-08T09:41:11.664327"
+    },
+    {
+      "email": "playingwithchanel@gmail.com",
+      "lead_id": "lead-016",
+      "template_id": 8,
+      "timestamp": "2026-10-08T09:41:13.358510"
+    },
+    {
+      "email": "partners@biglittlefeelings.com",
+      "lead_id": "lead-018",
+      "template_id": 8,
+      "timestamp": "2026-10-08T09:41:15.227307"
+    },
+    {
+      "email": "communications@childmind.org",
+      "lead_id": "lead-017",
+      "template_id": 8,
+      "timestamp": "2026-10-08T09:41:17.055196"
+    }
+  ]
+}
