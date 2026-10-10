@@ -100,15 +100,79 @@ const MissionV2 = () => {
         <PhilanthropicDonationSection />
       </RevealV2>
 
-      {/* ── CTA ── */}
+      {/* ── Two-Path Audience Split CTA (BP-01) ── */}
       <section className="v2-section v2-text-center">
         <div className="v2-container">
           <RevealV2>
-            <h2 className="v2-heading v2-heading--lg">Join the quest</h2>
-            <p className="v2-body v2-body--lg" style={{ margin: '1rem auto 2rem', maxWidth: '480px' }}>
-              Be part of a different kind of childhood media.
+            <span className="v2-label">Choose Your Path</span>
+            <h2 className="v2-heading v2-heading--lg" style={{ marginTop: '0.5rem' }}>
+              Begin the Journey
+            </h2>
+            <p className="v2-body v2-body--lg" style={{ margin: '1rem auto 0', maxWidth: '580px' }}>
+              Whether in the living room sanctuary or the early childhood classroom, sensory learning begins with rhythm.
             </p>
-            <Link to="/v2/join" className="v2-btn v2-btn--gold">Get Involved →</Link>
+
+            <div className="v2-two-path">
+              {/* Path 1: Families & Homeschool */}
+              <div className="v2-two-path__card v2-two-path__card--accent">
+                <span className="v2-two-path__badge v2-two-path__badge--orange">
+                  For Families & Homeschool
+                </span>
+                <h3 className="v2-two-path__title">Bring the Sanctuary Home</h3>
+                <p className="v2-two-path__desc">
+                  Access the complete 19-track acoustic album 100% free, plus screen-free tactile workbooks and phonics literature for ages 2 to 7.
+                </p>
+                <ul className="v2-two-path__list">
+                  <li className="v2-two-path__item">
+                    <span className="v2-two-path__check">✓</span>
+                    <span>100% Free 19-Track Album Download</span>
+                  </li>
+                  <li className="v2-two-path__item">
+                    <span className="v2-two-path__check">✓</span>
+                    <span>Tactile Phonics & Rhythm Literature</span>
+                  </li>
+                  <li className="v2-two-path__item">
+                    <span className="v2-two-path__check">✓</span>
+                    <span>Zero Algorithmic Screen Time</span>
+                  </li>
+                </ul>
+                <Link to="/v2/join" className="v2-btn v2-btn--gold" style={{ width: '100%' }}>
+                  Start the Family Quest →
+                </Link>
+              </div>
+
+              {/* Path 2: Educators & Consortia */}
+              <div className="v2-two-path__card">
+                <span className="v2-two-path__badge v2-two-path__badge--green">
+                  For Classrooms & Consortia
+                </span>
+                <h3 className="v2-two-path__title">Equip Your Learning Spaces</h3>
+                <p className="v2-two-path__desc">
+                  Turnkey 10–15 minute music-powered sensory lessons aligned with Head Start ELOF, NAEYC, and state early learning standards.
+                </p>
+                <ul className="v2-two-path__list">
+                  <li className="v2-two-path__item v2-two-path__item--green">
+                    <span className="v2-two-path__check">✓</span>
+                    <span>State DOE & Consortia Procurement Alignment</span>
+                  </li>
+                  <li className="v2-two-path__item v2-two-path__item--green">
+                    <span className="v2-two-path__check">✓</span>
+                    <span>ELOF & Multi-Institutional Crosswalks</span>
+                  </li>
+                  <li className="v2-two-path__item v2-two-path__item--green">
+                    <span className="v2-two-path__check">✓</span>
+                    <span>Non-Tech Screen-Free Classroom Kits</span>
+                  </li>
+                </ul>
+                <Link to="/education-sovereignty" className="v2-btn v2-btn--outline" style={{ width: '100%' }}>
+                  Explore Education Sovereignty →
+                </Link>
+              </div>
+            </div>
+
+            <p className="v2-two-path__reassurance">
+              Acoustic music and tactile literature crafted by a father's heart and a mother's love.
+            </p>
           </RevealV2>
         </div>
       </section>

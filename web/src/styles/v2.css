@@ -1027,8 +1027,120 @@
 
 
 /* ══════════════════════════════════════════════════════════════
-   21. RESPONSIVE
+   21. TWO-PATH CTA SPLIT (BP-01)
    ══════════════════════════════════════════════════════════════ */
+
+.v2-two-path {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  max-width: 1040px;
+  margin: 3rem auto 2rem;
+  text-align: left;
+}
+
+.v2-two-path__card {
+  background: var(--v2-bg-card);
+  border: 1px solid var(--v2-border);
+  border-radius: var(--v2-radius-lg);
+  padding: clamp(2rem, 4vw, 2.75rem);
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--v2-duration-normal) var(--v2-ease-out),
+              box-shadow var(--v2-duration-normal) var(--v2-ease-out);
+}
+
+.v2-two-path__card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--v2-shadow-md);
+}
+
+.v2-two-path__card--accent {
+  border-color: rgba(255, 111, 0, 0.35);
+  background: rgba(255, 248, 240, 0.85);
+}
+
+.v2-two-path__badge {
+  display: inline-block;
+  align-self: flex-start;
+  font-family: var(--v2-font-heading);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--v2-radius-full);
+  margin-bottom: 1.25rem;
+}
+
+.v2-two-path__badge--orange {
+  background: rgba(255, 111, 0, 0.12);
+  color: var(--v2-accent-orange);
+}
+
+.v2-two-path__badge--green {
+  background: rgba(127, 182, 133, 0.2);
+  color: #2e7d32;
+}
+
+.v2-two-path__title {
+  font-family: var(--v2-font-heading);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--v2-text-primary);
+  margin-bottom: 0.75rem;
+  line-height: 1.25;
+}
+
+.v2-two-path__desc {
+  font-family: var(--v2-font-body);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--v2-text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.v2-two-path__list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  flex-grow: 1;
+}
+
+.v2-two-path__item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--v2-font-body);
+  font-size: 0.9rem;
+  color: var(--v2-text-primary);
+}
+
+.v2-two-path__check {
+  color: var(--v2-accent-orange);
+  font-weight: bold;
+}
+
+.v2-two-path__item--green .v2-two-path__check {
+  color: #2e7d32;
+}
+
+.v2-two-path__reassurance {
+  margin-top: 1.75rem;
+  font-family: var(--v2-font-heading);
+  font-style: italic;
+  font-size: 0.92rem;
+  color: var(--v2-text-muted);
+}
+
+
+/* ══════════════════════════════════════════════════════════════
+   22. RESPONSIVE
+   ══════════════════════════════════════════════════════════════ */
+
 
 @media (max-width: 968px) {
   .v2-split {
