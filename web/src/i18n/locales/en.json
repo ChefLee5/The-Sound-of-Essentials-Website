@@ -53,10 +53,10 @@
     },
     "home": {
         "hero_offer": {
-            "eyebrow": "FOUNDING FAMILY GIFT · AGES 2–7",
+            "eyebrow": "EDUCATION CONCORD · SCREEN-FREE LEARNING ADVOCACY (AGES 2–7)",
             "title_main": "The Sound of Essentials: A Musical Learning Experience",
             "title_highlight": "(Free Album)",
-            "subtitle": "Replace screen-time battles with 19 unhurried acoustic songs designed for the developing brain. We gift this full album freely to founding families. Experience the music in your home first, then pair it with our companion storybook.",
+            "subtitle": "Build kindergarten-ready focus, phonics, and calm in 10 minutes a day without glowing screens or tablet battles. We gift all 19 studio-recorded acoustic songs freely to founding families and classrooms so children ages 2 to 7 absorb language, counting, and emotional balance naturally.",
             "price_strike": "$19 Value",
             "price_tag": "Free for Founding Families",
             "price_note": "Instant Digital Access · Yours to Keep",
@@ -814,9 +814,9 @@
         }
     },
     "listen": {
-        "ethicalHeistBadge": "THE ETHICAL HEIST",
-        "ethicalHeistTitle": "STEAL The 10-Minute Morning Routine That Displaced Screen Meltdowns Across 500+ Homes",
-        "ethicalHeistSubtitle": "No fake promises. Just 19 studio-recorded acoustic master tracks across all 7 Lands for ages 2–7. Free today.",
+        "ethicalHeistBadge": "EDUCATION CONCORD · FOUNDING PASS",
+        "ethicalHeistTitle": "Build Kindergarten-Ready Focus, Phonics, and Calm in 10 Minutes a Day Without Glowing Screens or Tablet Battles",
+        "ethicalHeistSubtitle": "Fast cartoons and noisy apps overstimulate young nervous systems. Unlock all 19 studio-recorded acoustic master tracks (60 to 80 BPM) across all 7 Lands for ages 2 to 7. Gifted freely ($0) today.",
         "ethicalHeistCta": "UNLOCK ALL 19 TRACKS FREE ($0)",
         "orDivider": "ALSO AVAILABLE",
         "dmCtaTitle": "Also Connect via Instagram DM",
@@ -824,9 +824,9 @@
         "starterPackCta": "🎨 Quest Starter & Coloring Pack ($7) →"
     },
     "institutions": {
-        "badge": "Institutional & Enterprise Concord",
-        "title": "Scale Screen-Free Learning Across Your Classrooms",
-        "subtitle": "Turnkey 10–15 minute acoustic lesson extensions and 50-state standards crosswalks (Head Start ELOF & NAEYC) for ages 2–7.",
+        "badge": "Education Concord · Institutional Advocacy",
+        "title": "Deliver 100% ELOF, NAEYC & State-Aligned Learning Across All 5 Domains Without Teacher Prep Burnout or Screens",
+        "subtitle": "Turnkey 10 to 15 minute acoustic rhythm and tactile classroom rituals (60 to 80 BPM) with 50-state standards crosswalks for ages 2 to 7.",
         "step1_title": "Step 1: Quick Institutional Fit Assessment",
         "step1_subtitle": "Select your facility parameters to unlock institutional pricing and curriculum exhibits.",
         "q1_label": "Organization Type",

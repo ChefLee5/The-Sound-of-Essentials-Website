@@ -99,6 +99,17 @@ const CampaignLauncher = () => {
     fetchMetaStatus();
   }, []);
 
+  useEffect(() => {
+    if (metaStatus && metaStatus.is_configured) {
+      setWiringForm(prev => ({
+        ...prev,
+        ad_account_id: prev.ad_account_id || (metaStatus.ad_account_id && !metaStatus.ad_account_id.includes('Not Connected') ? metaStatus.ad_account_id : ''),
+        page_id: prev.page_id || (metaStatus.page_id && !metaStatus.page_id.includes('Not Configured') ? metaStatus.page_id : ''),
+        pixel_id: prev.pixel_id || (metaStatus.pixel_id && !metaStatus.pixel_id.includes('Not Configured') ? metaStatus.pixel_id : ''),
+      }));
+    }
+  }, [metaStatus]);
+
   const fetchMetaStatus = async () => {
     try {
       const res = await fetch(`${API_BASE}/api/v1/meta/status`);
@@ -113,6 +124,13 @@ const CampaignLauncher = () => {
 
   const handleVerifyCredentials = async (e) => {
     e.preventDefault();
+    if (!wiringForm.access_token.trim()) {
+      setVerifyFeedback({
+        verified: false,
+        error: 'Please enter your System User Access Token.',
+      });
+      return;
+    }
     setVerifying(true);
     setVerifyFeedback(null);
     try {
@@ -123,6 +141,14 @@ const CampaignLauncher = () => {
       });
       const data = await res.json();
       setVerifyFeedback(data);
+      if (data.verified) {
+        setWiringForm(prev => ({
+          ...prev,
+          ad_account_id: data.ad_account_id || data.account_details?.id || prev.ad_account_id,
+          page_id: data.page_id || prev.page_id,
+          pixel_id: data.pixel_id || prev.pixel_id,
+        }));
+      }
       await fetchMetaStatus();
     } catch (err) {
       console.warn('Verify credentials error:', err);
@@ -209,10 +235,27 @@ const CampaignLauncher = () => {
               <h3 style={{ margin: '0 0 0.75rem', fontFamily: 'Fredoka, cursive', fontSize: '1.15rem' }}>
                 🔗 Meta Marketing API Credentials & Handshake
               </h3>
-              <p style={{ fontSize: '0.86rem', color: '#6B5E51', margin: '0 0 1.25rem' }}>
-                Enter your credentials below to wire this cockpit directly to your Meta Ads Manager.
-                If left empty or in mock mode, the system runs safely in <strong>Sandbox Simulation Mode</strong>, generating real Graph API payloads with $0 ad spend.
+              <p style={{ fontSize: '0.86rem', color: '#6B5E51', margin: '0 0 1rem' }}>
+                Wire this cockpit directly to your Meta Ads Manager. All dispatches run safely in <strong>Sandbox Simulation Mode</strong> until live credentials are confirmed.
               </p>
+
+              <div style={{
+                background: '#FFF9E6',
+                border: '1px solid #FFE082',
+                borderRadius: '8px',
+                padding: '0.75rem 1rem',
+                marginBottom: '1.25rem',
+                fontSize: '0.84rem',
+                color: '#5D4037',
+                lineHeight: '1.5'
+              }}>
+                <strong>💡 Meta Setup Checklist:</strong>
+                <ol style={{ margin: '0.35rem 0 0 1.2rem', padding: 0 }}>
+                  <li>In <strong>Meta Business Settings → System Users</strong>, select <strong>SOE API</strong> and click <strong>Assign Assets</strong>.</li>
+                  <li>Assign your <strong>Ad Account</strong> (enable <em>Manage campaigns</em>) and <strong>Facebook Page</strong> (enable <em>Create ads</em>).</li>
+                  <li>Enter your <strong>Ad Account ID</strong> (e.g. <code>act_123456789012345</code>) and <strong>Page ID</strong> (e.g. <code>61593646665667</code>) below, then click <strong>Test &amp; Save Handshake</strong>.</li>
+                </ol>
+              </div>
 
               <form onSubmit={handleVerifyCredentials}>
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '1rem' }}>
@@ -225,6 +268,9 @@ const CampaignLauncher = () => {
                       value={wiringForm.ad_account_id}
                       onChange={(e) => setWiringForm({ ...wiringForm, ad_account_id: e.target.value })}
                     />
+                    <span style={{ fontSize: '0.75rem', color: '#8C7E72', display: 'block', marginTop: '0.25rem' }}>
+                      From Meta Ads Manager top-left dropdown or URL
+                    </span>
                   </div>
                   <div>
                     <label className="mcls-label">Meta Pixel / Dataset ID</label>
@@ -235,6 +281,9 @@ const CampaignLauncher = () => {
                       value={wiringForm.pixel_id}
                       onChange={(e) => setWiringForm({ ...wiringForm, pixel_id: e.target.value })}
                     />
+                    <span style={{ fontSize: '0.75rem', color: '#8C7E72', display: 'block', marginTop: '0.25rem' }}>
+                      From Meta Events Manager &gt; Datasets / Pixels
+                    </span>
                   </div>
                 </div>
 
@@ -247,25 +296,32 @@ const CampaignLauncher = () => {
                       placeholder="EAAB..."
                       value={wiringForm.access_token}
                       onChange={(e) => setWiringForm({ ...wiringForm, access_token: e.target.value })}
+                      required
                     />
+                    <span style={{ fontSize: '0.75rem', color: '#8C7E72', display: 'block', marginTop: '0.25rem' }}>
+                      Generated for System User &quot;SOE API&quot; in Business Settings
+                    </span>
                   </div>
                   <div>
                     <label className="mcls-label">Facebook Page ID</label>
                     <input
                       type="text"
                       className="mcls-input"
-                      placeholder="e.g. 1122334455"
+                      placeholder="e.g. 61593646665667"
                       value={wiringForm.page_id}
                       onChange={(e) => setWiringForm({ ...wiringForm, page_id: e.target.value })}
                     />
+                    <span style={{ fontSize: '0.75rem', color: '#8C7E72', display: 'block', marginTop: '0.25rem' }}>
+                      From facebook.com/profile.php?id=...
+                    </span>
                   </div>
                 </div>
 
-                <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+                <div style={{ display: 'flex', gap: '1rem', alignItems: 'center', marginTop: '0.5rem' }}>
                   <button
                     type="submit"
                     className="mcls-btn-wire"
-                    style={{ background: '#FF6F00', color: '#FFF', borderColor: '#FF6F00' }}
+                    style={{ background: '#FF6F00', color: '#FFF', borderColor: '#FF6F00', cursor: verifying ? 'wait' : 'pointer' }}
                     disabled={verifying}
                   >
                     {verifying ? 'Pinging Meta Graph API...' : '⚡ Test & Save Handshake'}
@@ -278,15 +334,17 @@ const CampaignLauncher = () => {
 
               {verifyFeedback && (
                 <div style={{
-                  marginTop: '1rem',
-                  padding: '0.85rem 1rem',
+                  marginTop: '1.25rem',
+                  padding: '0.9rem 1.1rem',
                   borderRadius: '10px',
                   background: verifyFeedback.verified ? 'rgba(76, 175, 80, 0.12)' : 'rgba(255, 152, 0, 0.12)',
                   border: `1.5px solid ${verifyFeedback.verified ? '#4CAF50' : '#FFA726'}`,
-                  fontSize: '0.86rem',
-                  color: verifyFeedback.verified ? '#1B5E20' : '#8C3D00'
+                  fontSize: '0.88rem',
+                  color: verifyFeedback.verified ? '#1B5E20' : '#8C3D00',
+                  lineHeight: '1.5'
                 }}>
-                  <strong>{verifyFeedback.verified ? '✅ Verified Live:' : 'ℹ️ Status Notice:'}</strong> {verifyFeedback.message || verifyFeedback.error}
+                  <strong>{verifyFeedback.verified ? '✅ Verified Live:' : 'ℹ️ Status Notice:'}</strong>{' '}
+                  {verifyFeedback.message || verifyFeedback.error}
                 </div>
               )}
             </div>

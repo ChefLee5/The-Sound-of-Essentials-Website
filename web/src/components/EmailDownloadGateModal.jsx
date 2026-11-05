@@ -134,7 +134,7 @@ export const EmailDownloadGateModal = ({
               </h2>
 
               <p className="email-gate-subtext">
-                Unlock instant access to <strong>{downloadItem.title}</strong> and join 15,000+ families on the screen-free learning quest.
+                Unlock instant access to <strong>{downloadItem.title}</strong> and bring 60 to 80 BPM acoustic calm and hands-on readiness into your home or classroom.
               </p>
 
               {errorMessage && (

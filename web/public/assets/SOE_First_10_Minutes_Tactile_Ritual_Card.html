@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>First 10 Minutes Tactile Ritual Card | The Sound of Essentials: Rhythm Quest (Ages 2–7)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-cream: #FFF8F0;
+      --card-white: #FFFFFF;
+      --brand-orange: #FF6F00;
+      --brand-orange-soft: #FFF0E0;
+      --terrasol-green: #5fb685;
+      --terrasol-soft: #ECFDF5;
+      --aquaria-blue: #5ba4c9;
+      --aquaria-soft: #EFF8FC;
+      --sun-gold: #FFB300;
+      --text-dark: #1F2937;
+      --text-muted: #4B5563;
+      --border-warm: #F3E5D8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg-cream);
+      color: var(--text-dark);
+      line-height: 1.5;
+      padding: 24px 16px 48px;
+    }
+
+    h1, h2, h3, .pill-badge, .btn-pill {
+      font-family: 'Fredoka', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    .toolbar {
+      max-width: 860px;
+      margin: 0 auto 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 22px;
+      border-radius: 50px;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .btn-pill:hover {
+      transform: translateY(-1px);
+    }
+
+    .btn-orange {
+      background-color: var(--brand-orange);
+      color: #FFFFFF;
+      box-shadow: 0 4px 14px rgba(255, 111, 0, 0.28);
+    }
+
+    .btn-outline {
+      background-color: var(--card-white);
+      color: var(--text-dark);
+      border: 2px solid var(--border-warm);
+    }
+
+    .sheet {
+      max-width: 860px;
+      margin: 0 auto;
+      background: var(--card-white);
+      border-radius: 24px;
+      border: 2px solid var(--border-warm);
+      box-shadow: 0 12px 32px rgba(31, 41, 55, 0.06);
+      overflow: hidden;
+    }
+
+    .sheet-header {
+      background: linear-gradient(135deg, #FF6F00 0%, #FF8F00 100%);
+      color: #FFFFFF;
+      padding: 26px 32px;
+    }
+
+    .header-pills {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .pill-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 14px;
+      border-radius: 50px;
+      font-size: 12.5px;
+      font-weight: 600;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+    }
+
+    .pill-frosted {
+      background: rgba(255, 255, 255, 0.22);
+      color: #FFFFFF;
+    }
+
+    .pill-green {
+      background: var(--terrasol-green);
+      color: #FFFFFF;
+    }
+
+    .sheet-title {
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 6px;
+    }
+
+    .sheet-subtitle {
+      font-size: 14.5px;
+      opacity: 0.96;
+      font-weight: 500;
+    }
+
+    .sheet-body {
+      padding: 28px 32px;
+    }
+
+    .section {
+      margin-bottom: 22px;
+    }
+
+    .section:last-child {
+      margin-bottom: 0;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 16.5px;
+      font-weight: 700;
+      color: var(--brand-orange);
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      margin-bottom: 10px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid var(--bg-cream);
+    }
+
+    .mission-box {
+      background: var(--brand-orange-soft);
+      border-left: 5px solid var(--brand-orange);
+      padding: 14px 18px;
+      border-radius: 0 14px 14px 0;
+      font-size: 15px;
+      font-weight: 500;
+      color: #7C2D12;
+    }
+
+    .materials-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .material-chip {
+      background: var(--bg-cream);
+      border: 1px solid var(--border-warm);
+      padding: 6px 14px;
+      border-radius: 50px;
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--text-dark);
+    }
+
+    .ritual-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    @media (max-width: 680px) {
+      .ritual-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .ritual-card {
+      background: var(--bg-cream);
+      border: 1.5px solid var(--border-warm);
+      border-radius: 16px;
+      padding: 16px 18px;
+    }
+
+    .ritual-card h3 {
+      font-size: 16px;
+      color: var(--text-dark);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .ritual-card .tempo-tag {
+      font-size: 11.5px;
+      background: var(--aquaria-Soft, #EFF8FC);
+      color: #0369A1;
+      border: 1px solid #BAE6FD;
+      padding: 2px 10px;
+      border-radius: 50px;
+      font-weight: 700;
+    }
+
+    .ritual-steps {
+      padding-left: 18px;
+      font-size: 13.5px;
+      color: var(--text-dark);
+    }
+
+    .ritual-steps li {
+      margin-bottom: 6px;
+    }
+
+    .spider-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 12px;
+    }
+
+    .spider-item {
+      background: #FFFFFF;
+      border: 1.5px solid var(--border-warm);
+      padding: 12px 14px;
+      border-radius: 14px;
+      font-size: 13px;
+    }
+
+    .spider-item strong {
+      font-family: 'Fredoka', sans-serif;
+      font-size: 14px;
+      color: var(--brand-orange);
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    .whisper-box {
+      background: var(--terrasol-soft);
+      border: 1.5px solid #A7F3D0;
+      border-radius: 14px;
+      padding: 14px 18px;
+      font-size: 13.5px;
+      color: #065F46;
+    }
+
+    .standards-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12.5px;
+      margin-top: 4px;
+    }
+
+    .standards-table th,
+    .standards-table td {
+      padding: 9px 12px;
+      border: 1px solid var(--border-warm);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .standards-table th {
+      background: var(--bg-cream);
+      font-weight: 700;
+      width: 24%;
+      color: var(--text-dark);
+    }
+
+    .std-badge {
+      display: inline-block;
+      padding: 2px 9px;
+      border-radius: 50px;
+      font-size: 11.5px;
+      font-weight: 600;
+      margin-right: 5px;
+      margin-bottom: 4px;
+    }
+
+    .std-elof {
+      background: var(--aquaria-soft);
+      color: #0369A1;
+      border: 1px solid #BAE6FD;
+    }
+
+    .std-naeyc {
+      background: var(--brand-orange-soft);
+      color: #9A3412;
+      border: 1px solid #FED7AA;
+    }
+
+    .std-state {
+      background: var(--terrasol-soft);
+      color: #065F46;
+      border: 1px solid #A7F3D0;
+    }
+
+    .next-step-banner {
+      margin-top: 20px;
+      background: var(--bg-cream);
+      border: 2px dashed var(--brand-orange);
+      border-radius: 16px;
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .next-step-text {
+      font-size: 13.5px;
+    }
+
+    .next-step-text strong {
+      color: var(--brand-orange);
+      font-size: 14.5px;
+      display: block;
+    }
+
+    .sheet-footer {
+      text-align: center;
+      font-size: 12px;
+      color: var(--text-muted);
+      padding: 14px 24px;
+      background: var(--bg-cream);
+      border-top: 1.5px solid var(--border-warm);
+    }
+
+    @media print {
+      body {
+        background: #FFFFFF;
+        padding: 0;
+      }
+      .toolbar {
+        display: none !important;
+      }
+      .sheet {
+        box-shadow: none;
+        border: 1px solid #D1D5DB;
+        max-width: 100%;
+        border-radius: 12px;
+      }
+      .sheet-header,
+      .mission-box,
+      .ritual-card,
+      .whisper-box,
+      .std-badge,
+      .pill-badge {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      @page {
+        size: letter portrait;
+        margin: 1cm;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="toolbar">
+    <a href="/listen" class="btn-pill btn-outline">← Back to 19-Track Album Hub</a>
+    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+      <a href="/player" class="btn-pill btn-outline">🎧 Open Streaming Player</a>
+      <button type="button" onclick="window.print()" class="btn-pill btn-orange">🖨️ Print / Save 1-Page Ritual Card (PDF)</button>
+    </div>
+  </div>
+
+  <article class="sheet">
+    <header class="sheet-header">
+      <div class="header-pills">
+        <span class="pill-badge pill-frosted">🛡️ Education Concord · Screen-Free Learning Advocacy</span>
+        <span class="pill-badge pill-green">⏱️ 10 Minutes · Zero Prep · Ages 2–7</span>
+      </div>
+      <h1 class="sheet-title">The "First 10 Minutes" Acoustic &amp; Tactile Ritual Card</h1>
+      <p class="sheet-subtitle">
+        Guided by Seriphia, Felix &amp; Amara (Vitalis), and Vesta &amp; Silas (Terrasol) · 60 to 90 BPM Nervous System Grounding
+      </p>
+    </header>
+
+    <main class="sheet-body">
+      <!-- 1. Quest Mission -->
+      <section class="section">
+        <h2 class="section-title">1. 🎯 Quest Mission ("Talk FROM, Not ABOUT")</h2>
+        <div class="mission-box">
+          <strong>Sovereign Invitation:</strong> "Step onto the rug and soften your shoulders. Before we trace a single letter or count a single stone, we let our ears hear the living acoustic beat, stretch our spines like towering canopy trees in Vitalis, and plant our feet into the cool soil of Terrasol."
+        </div>
+      </section>
+
+      <!-- Materials Required -->
+      <section class="section">
+        <h2 class="section-title">📦 Ordinary Room Materials (Zero Prep Required)</h2>
+        <div class="materials-row">
+          <span class="material-chip">🎵 Track 06 ("Let's Stretch") &amp; Track 03 ("Alphabet Song Remix")</span>
+          <span class="material-chip">🧣 1 Washcloth, Napkin, or Small Cushion</span>
+          <span class="material-chip">🥄 2 Wooden Spoons (or Bare Hands on the Rug)</span>
+        </div>
+      </section>
+
+      <!-- 2 & 3. Two-Phase 10-Minute Ritual -->
+      <section class="section">
+        <h2 class="section-title">2. 🥁 The 10-Minute Acoustic &amp; Tactile Sequence</h2>
+        <div class="ritual-grid">
+          <div class="ritual-card">
+            <h3>
+              <span>Phase A: The Rhythm Ignition (3 Mins)</span>
+              <span class="tempo-tag">68 BPM · Track 06</span>
+            </h3>
+            <ol class="ritual-steps">
+              <li><strong>Press Play on Track 06 ("Let's Stretch"):</strong> Put all glowing screens out of sight so the room focuses entirely on the acoustic guitar and warm percussion.</li>
+              <li><strong>The 4-Count Ocean Inhale:</strong> Hold both palms two inches in front of the mouth. Breathe in through the nose for 4 beats, then exhale for 6 beats ("shhhhh") to feel the warm air on the palms.</li>
+              <li><strong>Canopy Balance Challenge:</strong> Place a folded washcloth on top of the head. Stretch both arms high on tiptoes toward the ceiling without letting the cloth slide off, then slowly fold forward to let it land softly on the rug.</li>
+            </ol>
+          </div>
+
+          <div class="ritual-card">
+            <h3>
+              <span>Phase B: Tactile Discovery Ritual (7 Mins)</span>
+              <span class="tempo-tag">90 BPM · Track 03</span>
+            </h3>
+            <ol class="ritual-steps">
+              <li><strong>Press Play on Track 03 ("Alphabet Song Remix"):</strong> Sit cross-legged on the floor with two wooden spoons or palms resting flat on the rug.</li>
+              <li><strong>Cross-Midline Floor Taps:</strong> Tap the floor on the steady 4/4 beat, alternating crossing both hands to the left knee and then to the right knee to wake up both hemispheres of the brain.</li>
+              <li><strong>Syllable Stomp &amp; Lip Stops:</strong> Stand up and stomp once for each syllable in nature words (<em>seed, wa-ter, sun-shine, har-mo-ny</em>). Close the lips firmly on `/m/`, `/b/`, and `/p/` before releasing the sound on the downbeat.</li>
+              <li><strong>The Subterranean Hum (1-Min Close):</strong> Rest both hands on the ribcage and hum a low, gentle <em>"Mmmmm"</em> together for three slow breaths to feel the chest vibration settle the room.</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. The 5-Domain Spider -->
+      <section class="section">
+        <h2 class="section-title">3. 🌐 The 5-Domain Developmental Spider</h2>
+        <div class="spider-grid">
+          <div class="spider-item">
+            <strong>🗣️ Language &amp; Phonemic Rhythm</strong>
+            Isolating bilabial stop consonants (`/m/`, `/b/`, `/p/`) and stomping multisyllabic words on a steady acoustic pulse before looking at print symbols.
+          </div>
+          <div class="spider-item">
+            <strong>🧠 Cognitive &amp; Rhythmic Logic</strong>
+            Auditory working memory, 4-count vs. 6-count temporal ratio tracking, and inhibitory stop-and-go impulse control.
+          </div>
+          <div class="spider-item">
+            <strong>🤸 Physical &amp; Midline Motor</strong>
+            Bilateral midline crossing (reducing `b/d` and `p/q` letter reversals), static balance with head-top proprioception, and postural core control.
+          </div>
+          <div class="spider-item">
+            <strong>🔬 Science &amp; Sensory Inquiry</strong>
+            Observing warm exhaled airflow temperature on the palms, thoracic acoustic resonance during humming, and floor-surface tactile feedback.
+          </div>
+          <div class="spider-item" style="grid-column: 1 / -1;">
+            <strong>💛 Social-Emotional &amp; Co-Regulation</strong>
+            Replacing post-screen restlessness and transition chaos with shared group breathing and calm acoustic heartbeat synchronization (60 to 80 BPM).
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. Parent / Teacher Whisper -->
+      <section class="section">
+        <h2 class="section-title">4. 🌟 Parent &amp; Educator Neurological Whisper</h2>
+        <div class="whisper-box">
+          <strong>Why This Works in 10 Minutes:</strong> Extending the exhale to 6 counts while listening to 60 to 80 BPM acoustic instruments activates the vagus nerve's calming brake. Crossing the body's midline with rhythmic hand taps connects the left and right cerebral hemispheres, preparing a child's eyes and hands for smooth left-to-right reading and calm pencil grip.
+        </div>
+      </section>
+
+      <!-- 6. Institutional Standards Crosswalk -->
+      <section class="section">
+        <h2 class="section-title">5. 🏛️ 50-State Institutional Standards Crosswalk</h2>
+        <table class="standards-table">
+          <tr>
+            <th>Head Start ELOF</th>
+            <td>
+              <span class="std-badge std-elof">P-LIT 1 (Phonological Segments)</span>
+              <span class="std-badge std-elof">P-PMP 1 &amp; 2 (Gross Motor &amp; Proprioception)</span>
+              <span class="std-badge std-elof">P-ATL 1 &amp; 2 (Emotional Regulation &amp; Focus)</span>
+            </td>
+          </tr>
+          <tr>
+            <th>NAEYC Accreditation</th>
+            <td>
+              <span class="std-badge std-naeyc">2.B.01 (Self-Regulation)</span>
+              <span class="std-badge std-naeyc">2.E.04 (Phonological Awareness)</span>
+              <span class="std-badge std-naeyc">2.J.06 (Rhythmic Movement Integration)</span>
+            </td>
+          </tr>
+          <tr>
+            <th>State &amp; K-Readiness</th>
+            <td>
+              <span class="std-badge std-state">CCSS RF.K.2.B (Syllable Blending/Segmenting)</span>
+              <span class="std-badge std-state">TX-TPG III.B.4 &amp; IX.A.1</span>
+              <span class="std-badge std-state">CA-PTKLF LLD 2.1 &amp; PD-HLTH 1.1</span>
+            </td>
+          </tr>
+        </table>
+
+        <div class="next-step-banner">
+          <div class="next-step-text">
+            <strong>Ready for the Full 40-Day Screen-Free Readiness Quest?</strong>
+            Pair your free 19-track acoustic album with our 66-page Illustrated Storybook ($19), 40-Day Rhythm Ready Workbook ($21), or 4,000-Word Picture Dictionary ($55) at <b>thesoundofessentials.com/listen</b>.
+          </div>
+          <a href="/rhythm-ready" class="btn-pill btn-orange" style="font-size: 13.5px; padding: 8px 18px;">Explore 40-Day Workbook →</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="sheet-footer">
+      The Sound of Essentials Collective · Education Concord Initiative · Crafted for Ages 2 to 7 · thesoundofessentials.com
+    </footer>
+  </article>
+
+</body>
+</html>
+

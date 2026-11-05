@@ -106,6 +106,25 @@
               "story_snippet": "Kenji tried to say a brand-new word out loud in front of his friends, but it came out all jumbled. His cheeks went warm and he wanted to hide. Aiko didn't laugh — she said, \"Thank you for saying it out loud. That took courage.\" Kenji tried again, a little slower, and this time it came out clear.",
               "reflection_question": "Have you ever tried something new and it came out wrong at first? Write about it — what happened next?",
               "tip": "Kenji says: Saying something wrong out loud is still braver than staying quiet. I'm proud of you for trying!"
+            },
+            "K": {
+              "title": "Socratic Spark: Courageous Greeting Voice",
+              "time": 3,
+              "domain": "Critical Thinking & Fairminded Inquiry",
+              "strategy_code": "S-6",
+              "strategy_name": "Developing Intellectual Courage",
+              "intellectual_standard": "Clarity",
+              "socratic_category": "1. Questions of Clarification",
+              "land": 1,
+              "land_class": "land1",
+              "land_name": "Harmonia",
+              "hero_guides": "Kenji & Aiko",
+              "char_img": "seriphia.png",
+              "rhythm_cue": "68 BPM Open-Palm Echo Tap (tap knees gently twice before speaking)",
+              "tactile_spark": "Hold a spoon or smooth stone like a microphone. Practice saying 'Good morning!' first in a tiny shy whisper, then in a clear, warm Harmonia voice.",
+              "socratic_question": "When everyone in a group stays quiet or agrees, why does it take gentle courage to ask a question or welcome a new friend first?",
+              "tip": "Seriphia says: Brave thinking starts with a kind, honest voice — just like Kenji trying his new word again!",
+              "standard_alignment": "ELOF P-SE 9 (Sense of Self & Voice) | NAEYC 2.C.01"
             }
           }
         },
@@ -207,6 +226,25 @@
               "story_snippet": "Octavia was counting a big pile of number tiles when she lost her place — twice! She felt her frustration building. Kwame sat beside her and said, \"Counting a big pile is hard. Let's group them into fives together.\" Octavia took a breath, grouped the tiles, and finished the count with a smile.",
               "reflection_question": "What do you do when you lose count or lose your place? Write one thing that helps you start again.",
               "tip": "Octavia says: Losing count doesn't mean you can't count — it just means the pile was big! Break it into smaller pieces."
+            },
+            "K": {
+              "title": "Socratic Spark: All, Most, or Some Shapes?",
+              "time": 3,
+              "domain": "Critical Thinking & Fairminded Inquiry",
+              "strategy_code": "S-10",
+              "strategy_name": "Refining Generalizations and Avoiding Oversimplifications",
+              "intellectual_standard": "Precision",
+              "socratic_category": "2. Questions that Probe Assumptions",
+              "land": 2,
+              "land_class": "land2",
+              "land_name": "Numeria",
+              "hero_guides": "Kwame & Octavia",
+              "char_img": "seriphia.png",
+              "rhythm_cue": "92 BPM Ten-Finger Check (wiggle all 10 fingers, then fold some down)",
+              "tactile_spark": "Look at 5 objects near your table (books, cups, pencils, blocks). Touch each one to test how many have straight sides.",
+              "socratic_question": "Would it be accurate to say ALL things in our room have four corners, or is it truer to say SOME or MOST? How did counting prove it?",
+              "tip": "Seriphia says: Careful thinkers skip words like 'always' and 'everything' when 'most' or 'some' tells the real truth!",
+              "standard_alignment": "ELOF P-MATH 4 (Quantity Comparison) | CCSS.MATH K.CC.C.6"
             }
           }
         },
@@ -308,6 +346,25 @@
               "story_snippet": "Silas was sure he'd found a diamond in the garden — but Vesta gently showed him it was just a shiny quartz rock. Silas felt a little silly for being so sure. \"Thank you for showing me,\" Vesta said. \"Guessing is how scientists start!\" Silas kept the quartz anyway — it was still his favorite find of the day.",
               "reflection_question": "Have you ever been excited about a guess that turned out different than you thought? Write about it.",
               "tip": "Silas says: Every scientist guesses wrong sometimes. What matters is staying curious enough to look closer!"
+            },
+            "K": {
+              "title": "Socratic Spark: The 'Let's Check!' Weather Test",
+              "time": 3,
+              "domain": "Critical Thinking & Fairminded Inquiry",
+              "strategy_code": "S-5",
+              "strategy_name": "Developing Intellectual Humility and Suspending Judgment",
+              "intellectual_standard": "Accuracy",
+              "socratic_category": "3. Questions that Probe Reasons, Evidence & Causes",
+              "land": 3,
+              "land_class": "land3",
+              "land_name": "Terrasol",
+              "hero_guides": "Vesta & Silas",
+              "char_img": "seriphia.png",
+              "rhythm_cue": "76 BPM Three-Beat Detective Knock (knock-knock-knock on the table)",
+              "tactile_spark": "Step to a window or door and use three senses: look at the sky, listen for wind, and feel the air temperature on your hand.",
+              "socratic_question": "Just like Silas checking his shiny quartz rock, what do your senses know FOR SURE about today's weather — and what do we have to say 'I don't know yet' about?",
+              "tip": "Seriphia says: Saying 'I don't know yet — let's test!' is how every true scientist in Terrasol begins.",
+              "standard_alignment": "ELOF P-SCI 1 (Scientific Humility & Observation) | NAEYC 2.G.01"
             }
           }
         },
@@ -409,6 +466,25 @@
               "story_snippet": "Felix tried a new stretch during Movement time and lost his balance, landing with a soft thud. A few kids giggled, but Amara knelt down and said, \"That was a tricky move — thanks for going first.\" Felix laughed too, stood back up, and tried it again — this time he stuck the landing.",
               "reflection_question": "What do you do after you fall down or make a mistake while moving your body? Write about a time you tried again.",
               "tip": "Felix says: Falling down is part of learning to move. Getting back up is the real skill!"
+            },
+            "K": {
+              "title": "Socratic Spark: Why Do Communities Have Helpers?",
+              "time": 3,
+              "domain": "Critical Thinking & Fairminded Inquiry",
+              "strategy_code": "S-17",
+              "strategy_name": "Questioning Deeply: Raising and Pursuing Root or Significant Questions",
+              "intellectual_standard": "Significance",
+              "socratic_category": "6. Questions About the Question",
+              "land": 6,
+              "land_class": "land6",
+              "land_name": "Luminosity",
+              "hero_guides": "Athena & Ezra",
+              "char_img": "seriphia.png",
+              "rhythm_cue": "84 BPM Hands-Over-Heart Pause Breath (inhale 4 counts before answering)",
+              "tactile_spark": "Line up 3 household items representing helpers (a bandage, a broom, a storybook) and take one away at a time.",
+              "socratic_question": "What deep wonder-question hides inside our neighborhood: what would happen in one single week if nobody helped clean, heal, or teach?",
+              "tip": "Seriphia says: Big wisdom grows when we ask 'Why does this matter?' about everyday things around us.",
+              "standard_alignment": "ELOF P-SCI 4 (Deep Questioning) | CCSS.ELA SL.K.3"
             }
           }
         },
@@ -510,6 +586,25 @@
               "story_snippet": "Elias, the Time Keeper himself, mixed up two days on the calendar during Friday review. Selene smiled and said, \"Even Time Keepers get their days crossed sometimes — thank you for double-checking.\" Elias re-traced the week on the calendar wheel, and this time it clicked into place.",
               "reflection_question": "What is one thing from this whole week that you want to remember? Write it down like Elias would.",
               "tip": "Elias says: Even the keeper of time double-checks the calendar sometimes. Checking your work is a strength, not a weakness!"
+            },
+            "K": {
+              "title": "Socratic Spark: Seven-Day Wonder Spark",
+              "time": 3,
+              "domain": "Critical Thinking & Fairminded Inquiry",
+              "strategy_code": "D-1",
+              "strategy_name": "Developing Intellectual Curiosity",
+              "intellectual_standard": "Depth",
+              "socratic_category": "1. Questions of Clarification",
+              "land": 7,
+              "land_class": "land7",
+              "land_name": "Celestia",
+              "hero_guides": "Elias & Selene",
+              "char_img": "seriphia.png",
+              "rhythm_cue": "72 BPM Seven-Day Clap Circle (one warm clap for each day of the week)",
+              "tactile_spark": "Point to your favorite page from Week 1 and place a small coin, leaf, or star token on the picture that made you most curious.",
+              "socratic_question": "Out of everything you explored across the 7 Lands this week, which mystery made your mind ask 'How does that work?' the most?",
+              "tip": "Seriphia says: Curiosity is the golden key to all 7 Lands — every great learner starts by wondering aloud!",
+              "standard_alignment": "ELOF P-ATL 4 (Intellectual Curiosity) | NAEYC 2.A.10"
             }
           }
         }
@@ -618,6 +713,25 @@
               "story_snippet": "Before her big listening recital, Aiko's tummy felt full of butterflies. \"I must be doing something wrong,\" she whispered. Kenji shook his head: \"Butterflies mean you CARE. Your body is getting ready to do something that matters.\" Aiko took a slow breath, smiled at her butterflies, and walked on stage.",
               "reflection_question": "When was the last time your tummy felt fluttery before something big? What did it mean you cared about?",
               "tip": "Aiko says: Butterflies aren't a stop sign — they're your heart saying this matters. Bring them along!"
+            },
+            "K": {
+              "title": "Socratic Spark: Cupped Ears & Silent Dialogue",
+              "time": 3,
+              "domain": "Critical Thinking & Fairminded Inquiry",
+              "strategy_code": "S-22",
+              "strategy_name": "Listening Critically: The Art of Silent Dialogue",
+              "intellectual_standard": "Completeness",
+              "socratic_category": "1. Questions of Clarification",
+              "land": 1,
+              "land_class": "land1",
+              "land_name": "Harmonia",
+              "hero_guides": "Kenji & Aiko",
+              "char_img": "seriphia.png",
+              "rhythm_cue": "68 BPM Cupped 'Sonorous Ears' Echo Pulse (4-beat pause before replying)",
+              "tactile_spark": "Ask a family member or classmate, 'What made you smile today?' Listen without interrupting, then echo their idea back until they nod 'Yes!'",
+              "socratic_question": "What is the difference between just waiting quietly for your turn to talk versus truly listening so well you can echo your friend's heart?",
+              "tip": "Seriphia says: When you paraphrase someone's thought fairly before sharing yours, two minds harmonize like one song.",
+              "standard_alignment": "ELOF P-LC 1 (Active Listening) | CCSS.ELA SL.K.1"
             }
           }
         },
@@ -719,6 +833,25 @@
               "story_snippet": "Nerissa kept stumbling on the word \"squirrel\" — it made her want to give up. She noticed her frustration bubbling like sea foam. \"This feeling means I'm at the edge of something new,\" she told herself. She slowed the word into little sound-waves — squir-rel — and rode each one until the whole word swam smoothly.",
               "reflection_question": "What word or task makes you feel bubbly-frustrated? Write it, then break it into small pieces like Nerissa.",
               "tip": "Nerissa says: Frustration is the splash right before the breakthrough. Slow the wave down and ride it!"
+            },
+            "K": {
+              "title": "Socratic Spark: Pets vs. Wild Horses: Deep Clues",
+              "time": 3,
+              "domain": "Critical Thinking & Fairminded Inquiry",
+              "strategy_code": "S-29",
+              "strategy_name": "Noting Significant Similarities and Differences",
+              "intellectual_standard": "Relevance",
+              "socratic_category": "3. Questions that Probe Reasons, Evidence & Causes",
+              "land": 2,
+              "land_class": "land2",
+              "land_name": "Numeria",
+              "hero_guides": "Kwame & Octavia",
+              "char_img": "seriphia.png",
+              "rhythm_cue": "88 BPM Trotting Knee-Pat (left-right-left-right horse cadence)",
+              "tactile_spark": "Compare a small indoor pet (like a cat or puppy) with a galloping wild horse using your hands to show space and food needs.",
+              "socratic_question": "Beyond fur color or four legs, what BIG difference in daily care explains why a puppy thrives in a home while a wild horse needs open fields?",
+              "tip": "Seriphia says: Looking past surface colors to spot deep needs is how Numeria and Terrasol thinkers compare wisely.",
+              "standard_alignment": "ELOF P-MATH 9 (Shape Attributes) | CCSS.MATH K.G.B.4"
             }
           }
         },
@@ -820,6 +953,25 @@
               "story_snippet": "Selene woke up feeling gray, like a cloudy day, and worried something was wrong with her. Elias looked at the sky with her. \"Seasons change, and so do feelings,\" he said. \"A cloudy morning doesn't mean a ruined day.\" By afternoon, Selene's clouds had drifted, and she wrote a song about weather that lives inside people.",
               "reflection_question": "If your feelings today were weather, what would they be? Draw or write your inside-weather.",
               "tip": "Selene says: Every feeling is a season, and no season stays forever. You can sing in any weather!"
+            },
+            "K": {
+              "title": "Socratic Spark: The Thought Beneath the Feeling Wave",
+              "time": 3,
+              "domain": "Critical Thinking & Fairminded Inquiry",
+              "strategy_code": "S-4",
+              "strategy_name": "Exploring Thoughts Underlying Feelings and Feelings Underlying Thoughts",
+              "intellectual_standard": "Fairmindedness",
+              "socratic_category": "4. Questions About Viewpoints or Perspectives",
+              "land": 4,
+              "land_class": "land4",
+              "land_name": "Aquaria",
+              "hero_guides": "Nerissa & Ronan",
+              "char_img": "seriphia.png",
+              "rhythm_cue": "64 BPM Ocean Tide Breath (4-count inhale, 6-count '/shhhh/' exhale)",
+              "tactile_spark": "Draw a quick wave in the air with your hand, then smooth the water flat as you breathe out slowly.",
+              "socratic_question": "Imagine someone accidentally smudges your drawing: how does your feeling wave change if you switch your thought from 'They were mean!' to 'Their elbow slipped!'?",
+              "tip": "Seriphia says: Every big feeling rides on a hidden thought — checking that thought brings calm Aquaria waters.",
+              "standard_alignment": "ELOF P-SE 6 (Emotional Understanding) | NAEYC 2.L.01"
             }
           }
         },
@@ -921,6 +1073,25 @@
               "story_snippet": "Before teaching her first dance to the little ones, Amara's legs felt shaky. \"Shaky legs?\" laughed Felix kindly. \"That's just your power warming up!\" Amara stomped her shaky legs like a drumbeat until the shake became a rhythm — and the rhythm became the first step of her dance.",
               "reflection_question": "Where do you feel nervousness in your body? What could that feeling turn into?",
               "tip": "Amara says: A shake can become a shimmy. Your body's nervous energy is just power looking for a dance!"
+            },
+            "K": {
+              "title": "Socratic Spark: What Makes 'Thank You' Real?",
+              "time": 3,
+              "domain": "Critical Thinking & Fairminded Inquiry",
+              "strategy_code": "S-14",
+              "strategy_name": "Clarifying and Analyzing the Meanings of Words or Phrases",
+              "intellectual_standard": "Clarity",
+              "socratic_category": "1. Questions of Clarification",
+              "land": 1,
+              "land_class": "land1",
+              "land_name": "Harmonia",
+              "hero_guides": "Kenji & Aiko",
+              "char_img": "seriphia.png",
+              "rhythm_cue": "70 BPM Two-Hand Heart-to-Open-Palm Gesture",
+              "tactile_spark": "Act out saying 'Thank you!' two ways: first snatching an object with a frown, second receiving it gently with warm eyes.",
+              "socratic_question": "If someone says the polite words 'Please' and 'Thank you' while grabbing roughly, did they really use good manners? What makes courtesy real?",
+              "tip": "Seriphia says: Words aren't magic spells by themselves — true Harmonia manners unite kind words with respectful actions!",
+              "standard_alignment": "ELOF P-LC 6 (Vocabulary Depth) | NAEYC 2.D.02"
             }
           }
         },
@@ -1022,6 +1193,25 @@
               "story_snippet": "At the big family gathering, Vesta felt squeezed and overwhelmed — too many voices, too many hugs. She almost hid. Instead, she drew a little map of the room and marked one quiet corner \"my recharge spot.\" Visiting her spot between hugs, she discovered the crowd felt fun when she could step out and step back in.",
               "reflection_question": "What helps you recharge when things feel like too much? Draw your own recharge spot.",
               "tip": "Vesta says: Feeling overwhelmed means your heart is taking in a lot of love at once. It's okay to take breaks!"
+            },
+            "K": {
+              "title": "Socratic Spark: Gentle Voice, Safe Circle",
+              "time": 3,
+              "domain": "Critical Thinking & Fairminded Inquiry",
+              "strategy_code": "D-2",
+              "strategy_name": "Developing Social Sensitivity",
+              "intellectual_standard": "Fairmindedness",
+              "socratic_category": "4. Questions About Viewpoints or Perspectives",
+              "land": 4,
+              "land_class": "land4",
+              "land_name": "Aquaria",
+              "hero_guides": "Nerissa & Ronan",
+              "char_img": "seriphia.png",
+              "rhythm_cue": "60 BPM Soft Chime Hum (hum one warm note before speaking)",
+              "tactile_spark": "Place one hand gently on your chest and practice asking a helpful question in your kindest, most welcoming tone.",
+              "socratic_question": "When a friend makes a mistake counting or reading, how can we ask a question gently so they feel safe and excited to keep trying?",
+              "tip": "Seriphia says: Social sensitivity means caring for our friend's heart at the exact same moment we sharpen our thinking.",
+              "standard_alignment": "ELOF P-SE 6 (Social Sensitivity & Empathy) | NAEYC 2.B.01"
             }
           }
         }
@@ -1130,6 +1320,25 @@
               "story_snippet": "The class had to count all the library books — hundreds of them! Kwame started alone and kept losing track. Then he stopped: \"Wait. Let's do this together. WE can each take one shelf.\" Ten counters finished in minutes what one counter couldn't finish in an hour. The librarian hung a sign: Counted with love, by all of us.",
               "reflection_question": "What big job could you finish faster with helpers? Write who you'd invite to your team.",
               "tip": "Kwame says: 'Let's' is my favorite math word — it multiplies helpers and divides the work!"
+            },
+            "K": {
+              "title": "Socratic Spark: Testing What Makes a Rule Wise",
+              "time": 3,
+              "domain": "Critical Thinking & Fairminded Inquiry",
+              "strategy_code": "S-20",
+              "strategy_name": "Analyzing or Evaluating Actions and Policies",
+              "intellectual_standard": "Logic",
+              "socratic_category": "5. Questions that Probe Implications & Consequences",
+              "land": 6,
+              "land_class": "land6",
+              "land_name": "Luminosity",
+              "hero_guides": "Athena & Ezra",
+              "char_img": "seriphia.png",
+              "rhythm_cue": "84 BPM Two-Step Rule Check (stomp for 'Why', clap for 'What Happens Next')",
+              "tactile_spark": "Compare two pretend home rules: Rule A ('Walk with scissors pointed down') and Rule B ('Only children wearing blue may speak').",
+              "socratic_question": "Why is Rule A wise and helpful for everyone, while Rule B is unfair? How can we test whether any rule is doing a good job?",
+              "tip": "Seriphia says: Fair rules aren't bossy wishes — they protect everyone's safety, learning, and dignity equally!",
+              "standard_alignment": "ELOF P-SE 5 (Evaluating Behavior & Rules) | NAEYC 2.L.02"
             }
           }
         },
@@ -1231,6 +1440,25 @@
               "story_snippet": "Ronan's cleanup net got so full of river junk he couldn't lift it. He almost dumped it back. Nerissa waded over: \"We've got this — you lift, I'll pull.\" Splash by splash, they hauled it out together. \"Funny,\" Ronan said, \"the net felt lighter the moment you said WE.\"",
               "reflection_question": "Write about a time something felt lighter because someone helped you — or because you helped them.",
               "tip": "Ronan says: Brave doesn't mean alone. The strongest word a warrior knows is 'we'!"
+            },
+            "K": {
+              "title": "Socratic Spark: Three Fair Paths for One Shared Tool",
+              "time": 3,
+              "domain": "Critical Thinking & Fairminded Inquiry",
+              "strategy_code": "S-19",
+              "strategy_name": "Generating or Assessing Solutions",
+              "intellectual_standard": "Completeness",
+              "socratic_category": "4. Questions About Viewpoints or Perspectives",
+              "land": 6,
+              "land_class": "land6",
+              "land_name": "Luminosity",
+              "hero_guides": "Athena & Ezra",
+              "char_img": "seriphia.png",
+              "rhythm_cue": "90 BPM Three-Path Finger Tap (tap finger 1, finger 2, finger 3)",
+              "tactile_spark": "Set one favorite crayon or musical shaker on the table and imagine three friends all reach for it at the exact same moment.",
+              "socratic_question": "Instead of grabbing first, can you invent THREE different fair ways for three friends to share one tool — and pick which works best?",
+              "tip": "Seriphia says: Strong problem-solvers never stop at their first impulse — they invent multiple fair paths and test them!",
+              "standard_alignment": "ELOF P-SE 4 (Social Problem-Solving) | NAEYC 2.B.05"
             }
           }
         },
@@ -1332,6 +1560,25 @@
               "story_snippet": "Athena knew ALL the answers, and she liked going first. But she noticed some friends had stopped raising their hands. So she tried something new: \"What do WE think?\" she asked, and waited. Quiet voices spoke up with ideas Athena had never thought of. The wisest sage, she learned, is the one who makes room.",
               "reflection_question": "When could you make room for someone else's idea? Write one question you could ask a friend.",
               "tip": "Athena says: Knowing answers is good. Growing MORE answer-finders is wisdom!"
+            },
+            "K": {
+              "title": "Socratic Spark: Me-First vs. Fair-for-All",
+              "time": 3,
+              "domain": "Critical Thinking & Fairminded Inquiry",
+              "strategy_code": "S-2",
+              "strategy_name": "Developing Insight into Egocentricity or Sociocentricity",
+              "intellectual_standard": "Fairmindedness",
+              "socratic_category": "2. Questions that Probe Assumptions",
+              "land": 4,
+              "land_class": "land4",
+              "land_name": "Aquaria",
+              "hero_guides": "Nerissa & Ronan",
+              "char_img": "seriphia.png",
+              "rhythm_cue": "76 BPM Ripple Circle Sweep (sweep both arms wide to include the whole room)",
+              "tactile_spark": "Pretend you are choosing the game for music time, and a younger child wants a slower rhythm so they can keep up.",
+              "socratic_question": "How can we tell the difference between thinking an idea is 'best' because it is truly fair for everyone versus only because it lets US win first?",
+              "tip": "Seriphia says: Spotting the 'me-first' tug inside our own mind is one of the bravest superpowers in Aquaria!",
+              "standard_alignment": "ELOF P-SE 7 (Empathy & Perspective) | NAEYC 2.L.04"
             }
           }
         },
@@ -1433,6 +1680,25 @@
               "story_snippet": "Ezra wanted to record the garden's morning sounds, but his one microphone missed the crickets by the fence and the finches in the fig tree. He recruited friends to stand still in every corner, humming the note of what they heard. \"Alone I heard a garden,\" Ezra said. \"Together we heard a choir.\"",
               "reflection_question": "Close your eyes for 30 seconds. What sounds do you hear that someone else might miss? Write two.",
               "tip": "Ezra says: Every listener catches a different sound. That's why we listen together!"
+            },
+            "K": {
+              "title": "Socratic Spark: Mystery Drops on the Cold Cup",
+              "time": 3,
+              "domain": "Critical Thinking & Fairminded Inquiry",
+              "strategy_code": "S-30",
+              "strategy_name": "Examining or Evaluating Assumptions",
+              "intellectual_standard": "Accuracy",
+              "socratic_category": "2. Questions that Probe Assumptions",
+              "land": 3,
+              "land_class": "land3",
+              "land_name": "Terrasol",
+              "hero_guides": "Vesta & Silas",
+              "char_img": "seriphia.png",
+              "rhythm_cue": "76 BPM Raindrop Finger-Patter (patter fingertips softly like rain)",
+              "tactile_spark": "Touch the outside of a cold cup of water (or imagine water tinted red with berry juice while the outside drops stay clear).",
+              "socratic_question": "Many people ASSUME cold water leaked right through the glass! If berry water inside is red but the outside drops are clear, where did the drops REALLY come from?",
+              "tip": "Seriphia says: Checking hidden assumptions with a simple real-world test turns everyday surprises into Terrasol science!",
+              "standard_alignment": "ELOF P-SCI 4 (Testing Predictions) | NAEYC 2.G.04"
             }
           }
         },
@@ -1534,6 +1800,25 @@
               "story_snippet": "At the Week 3 concert, Aiko had the solo — but halfway through, she saw little Pip in the front row humming along perfectly. Aiko knelt and held out the melody like a baton: \"Sing it WITH me?\" The solo became a duet, the duet became a sing-along, and Harmonia learned its favorite new song — the one everyone owns.",
               "reflection_question": "What's something you're good at that you could share instead of keeping solo? Write how you'd invite someone in.",
               "tip": "Aiko says: A shared song is twice as loud and ten times as warm. This week, turn your solo into a duet!"
+            },
+            "K": {
+              "title": "Socratic Spark: The Twilight Slow-Down Question",
+              "time": 3,
+              "domain": "Critical Thinking & Fairminded Inquiry",
+              "strategy_code": "S-13",
+              "strategy_name": "Clarifying Issues, Conclusions, or Beliefs",
+              "intellectual_standard": "Clarity",
+              "socratic_category": "6. Questions About the Question",
+              "land": 7,
+              "land_class": "land7",
+              "land_name": "Celestia",
+              "hero_guides": "Elias & Selene",
+              "char_img": "seriphia.png",
+              "rhythm_cue": "60 BPM Largo Pause Bell (count 1-2-3-4 silently before speaking)",
+              "tactile_spark": "Take one slow Celestia breath and turn a messy complaint ('Everything is ruined!') into one clear, calm problem statement.",
+              "socratic_question": "Why does slowing down to state the exact problem clearly and fairly make disagreements twice as easy to solve?",
+              "tip": "Seriphia says: A muddled question tangles our feet, while a clear, star-bright question lights the path halfway home.",
+              "standard_alignment": "ELOF P-LC 2 (Clarifying Meaning) | CCSS.ELA SL.2.1"
             }
           }
         }
@@ -1642,6 +1927,25 @@
               "story_snippet": "Little Juniper kept building her block mountain upside-down — wide side up. Vesta almost fixed it for her. Instead she asked, \"Tell me about your mountain?\" Juniper beamed: \"It's an upside-down mountain for the sky-people!\" Vesta grinned. There was nothing to fix — there was a whole imagination to explore.",
               "reflection_question": "Has anyone ever misunderstood something you made? What did you wish they had asked you first?",
               "tip": "Vesta says: Before you fix, ask. Sometimes 'wrong' is just a wonder you haven't understood yet!"
+            },
+            "K": {
+              "title": "Socratic Spark: Stepping Onto Another Traveler's Shore",
+              "time": 3,
+              "domain": "Critical Thinking & Fairminded Inquiry",
+              "strategy_code": "S-3",
+              "strategy_name": "Exercising Fairmindedness",
+              "intellectual_standard": "Fairmindedness",
+              "socratic_category": "4. Questions About Viewpoints or Perspectives",
+              "land": 4,
+              "land_class": "land4",
+              "land_name": "Aquaria",
+              "hero_guides": "Nerissa & Ronan",
+              "char_img": "seriphia.png",
+              "rhythm_cue": "72 BPM Two-Shore Step (step left for Shore A, cross right for Shore B)",
+              "tactile_spark": "Place two pieces of paper on the floor: stand on Paper A as a child who rides a boat to school, then step onto Paper B as a child who walks snowy hills.",
+              "socratic_question": "Why might a boat seem strange to a mountain traveler at first — and what happens when we step into their shoes before judging?",
+              "tip": "Seriphia says: Fairminded explorers travel across two sets of footprints before deciding what makes sense!",
+              "standard_alignment": "ELOF P-SE 4 (Cooperative Problem-Solving) | NAEYC 2.B.02"
             }
           }
         },
@@ -1743,6 +2047,25 @@
               "story_snippet": "A new student, Mila, wouldn't sing during music time. Kenji wondered if she disliked music — until he asked, \"What music do you love?\" Mila's hands flew: she signed her favorite song in sign language, rhythm dancing through her fingers. Kenji learned her song hand by hand. Now Harmonia's choir sings AND signs.",
               "reflection_question": "Think of someone who does something differently than you. Write one question you could ask to understand their way.",
               "tip": "Kenji says: Everyone carries music inside. Asking 'show me your way' opens doors that guessing never will!"
+            },
+            "K": {
+              "title": "Socratic Spark: Three Rules for a Trustworthy Borrower",
+              "time": 3,
+              "domain": "Critical Thinking & Fairminded Inquiry",
+              "strategy_code": "S-15",
+              "strategy_name": "Developing Criteria for Evaluation: Clarifying Values and Standards",
+              "intellectual_standard": "Specificity",
+              "socratic_category": "3. Questions that Probe Reasons, Evidence & Causes",
+              "land": 2,
+              "land_class": "land2",
+              "land_name": "Numeria",
+              "hero_guides": "Kwame & Octavia",
+              "char_img": "seriphia.png",
+              "rhythm_cue": "88 BPM Three-Star Clap-Pat-Clap Yardstick Rhythm",
+              "tactile_spark": "Hold a pencil or book that belongs to someone else gently in both hands as if you borrowed it for one day.",
+              "socratic_question": "Before lending your favorite treasure, what THREE clear measuring rules (criteria) show that someone is ready to borrow responsibly?",
+              "tip": "Seriphia says: Clear criteria turn vague wishes like 'be careful' into fair, specific promises everyone can keep.",
+              "standard_alignment": "ELOF P-MATH 8 (Measurement Attributes) | CCSS.MATH K.MD.A.2"
             }
           }
         },
@@ -1844,6 +2167,25 @@
               "story_snippet": "Ronan was sure his friend Tam skipped the river cleanup because he didn't care. He almost said something sharp. Instead he tried, \"Hey — what happened yesterday?\" Tam looked down: \"My boots have holes. I didn't want anyone to see.\" Ronan swallowed his almost-words. The next day, two pairs of boots stood by the river.",
               "reflection_question": "Write about a time you guessed why someone did something — and the real reason turned out different.",
               "tip": "Ronan says: The story you imagine about someone is usually smaller than their real one. Ask for the real one!"
+            },
+            "K": {
+              "title": "Socratic Spark: Map Clues: Observe vs. Infer",
+              "time": 3,
+              "domain": "Critical Thinking & Fairminded Inquiry",
+              "strategy_code": "S-32",
+              "strategy_name": "Making Plausible Inferences, Predictions, or Interpretations",
+              "intellectual_standard": "Logic",
+              "socratic_category": "3. Questions that Probe Reasons, Evidence & Causes",
+              "land": 3,
+              "land_class": "land3",
+              "land_name": "Terrasol",
+              "hero_guides": "Vesta & Silas",
+              "char_img": "seriphia.png",
+              "rhythm_cue": "80 BPM Tracker Cadence: 1 Stomp for 'Eyes Observe', 2 Claps for 'Mind Infers'",
+              "tactile_spark": "Look at today's map or out your window at wet pavement, swaying branches, or footprints.",
+              "socratic_question": "What is one fact your eyes OBSERVE directly right now — and what smart INFERENCE can your mind make from that clue while checking alternatives?",
+              "tip": "Seriphia says: Knowing the bridge between what our eyes see and what our mind infers keeps our thinking sharp and honest!",
+              "standard_alignment": "ELOF P-SCI 3 (Inference & Prediction) | CCSS.ELA RL.1.1"
             }
           }
         },
@@ -1945,6 +2287,25 @@
               "story_snippet": "Pip declared the compass was broken: \"It won't point where I'm going!\" Athena didn't correct him. \"What have you tried so far?\" she asked. Pip showed her — he'd been turning the compass, expecting the needle to follow. \"Ahh,\" said Athena, \"so you discovered the needle is loyal to the north! What could that be useful for?\" Pip's eyes went wide with the answer.",
               "reflection_question": "What's something that confused you until someone asked what YOU were thinking? Write what helped it click.",
               "tip": "Athena says: 'What have you tried?' is the sage's favorite question. It finds the discovery hiding inside the mistake!"
+            },
+            "K": {
+              "title": "Socratic Spark: The Lantern of Truth: Checking Sources",
+              "time": 3,
+              "domain": "Critical Thinking & Fairminded Inquiry",
+              "strategy_code": "S-16",
+              "strategy_name": "Evaluating the Credibility of Sources of Information",
+              "intellectual_standard": "Accuracy",
+              "socratic_category": "3. Questions that Probe Reasons, Evidence & Causes",
+              "land": 6,
+              "land_class": "land6",
+              "land_name": "Luminosity",
+              "hero_guides": "Athena & Ezra",
+              "char_img": "seriphia.png",
+              "rhythm_cue": "84 BPM Two-Tap Lantern Check ('Were they there? Why do they say so?')",
+              "tactile_spark": "Cup your hands like Athena's glowing lantern and shine it first toward a pretend candy commercial, then toward a real apple or vegetable.",
+              "socratic_question": "Who is a more trustworthy source about what helps your body grow strong — a flashy commercial trying to sell candy, or testing real whole foods yourself? Why?",
+              "tip": "Seriphia says: Wise Luminosity thinkers always check whether a voice has real firsthand knowledge or is just trying to sell something!",
+              "standard_alignment": "ELOF P-SCI 2 (Evaluating Information) | NAEYC 2.L.06"
             }
           }
         },
@@ -2046,6 +2407,25 @@
               "story_snippet": "Remy's bead pattern went red-red-blue-red-red-GREEN — and Octavia's pattern-loving eyes twitched. \"Interesting!\" she managed. \"Walk me through your pattern?\" Remy pointed: \"Green is for grandma. She gets a surprise every seventh bead.\" Octavia sat down slowly. It wasn't a broken pattern. It was a love pattern — the most advanced kind.",
               "reflection_question": "Look at something a family member arranged their own way. Write a question you could ask about why they like it like that.",
               "tip": "Octavia says: A wonder-filled week! Remember: patterns you don't understand yet aren't wrong — they're invitations."
+            },
+            "K": {
+              "title": "Socratic Spark: Clapping Out Thinker's Power Words",
+              "time": 3,
+              "domain": "Critical Thinking & Fairminded Inquiry",
+              "strategy_code": "S-28",
+              "strategy_name": "Thinking Precisely About Thinking: Using Critical Vocabulary",
+              "intellectual_standard": "Precision",
+              "socratic_category": "1. Questions of Clarification",
+              "land": 1,
+              "land_class": "land1",
+              "land_name": "Harmonia",
+              "hero_guides": "Kenji & Aiko",
+              "char_img": "seriphia.png",
+              "rhythm_cue": "84 BPM Syllable Slowdown Clap (Track 15 'Hard Words' beat)",
+              "tactile_spark": "Clap the syllables slowly on your knees: 'Ob-serve' (2 claps), 'In-fer' (2 claps), 'As-sume' (2 claps), 'Ev-i-dence' (3 claps).",
+              "socratic_question": "How does using exact thinking words like 'evidence' and 'assume' help your mind spot clues that fuzzy words like 'stuff' hide?",
+              "tip": "Seriphia says: Slowing down to clap out precise thinking words gives your growing mind crystal-clear lenses!",
+              "standard_alignment": "ELOF P-LC 5 (Expressive Precision) | NAEYC 2.B.03"
             }
           }
         }
@@ -2154,6 +2534,25 @@
               "story_snippet": "The tree pose made Amara wobble like jelly, and heat rose in her chest — the give-up feeling. She stopped: \"Hello, wobble. You're here because I'm learning something my body doesn't know YET.\" She wobbled on purpose, laughed, and tried again beside the wall. By Friday, the jelly stood tall as a tree.",
               "reflection_question": "What's your 'wobble' right now — something your body or brain doesn't know YET? Write it with the word YET at the end.",
               "tip": "Amara says: The wobble isn't failure — it's your balance being born. Welcome it!"
+            },
+            "K": {
+              "title": "Socratic Spark: My Own Hands Test It First",
+              "time": 3,
+              "domain": "Critical Thinking & Fairminded Inquiry",
+              "strategy_code": "S-1",
+              "strategy_name": "Thinking Independently",
+              "intellectual_standard": "Adequacy",
+              "socratic_category": "1. Questions of Clarification",
+              "land": 5,
+              "land_class": "land5",
+              "land_name": "Vitalis",
+              "hero_guides": "Felix & Amara",
+              "char_img": "seriphia.png",
+              "rhythm_cue": "96 BPM Solo 4-Beat Body-Percussion Invention (invent your own 4-beat tap!)",
+              "tactile_spark": "Try balancing a soft book or rolled sock on your palm, elbow, or foot in three original ways invented purely by YOU.",
+              "socratic_question": "Why does testing three ways with your own hands and mind BEFORE asking an adult for help make your brain grow stronger?",
+              "tip": "Seriphia says: Independent thinking doesn't mean never asking for help — it means trusting your own curious hands to explore first!",
+              "standard_alignment": "ELOF P-ATL 4 (Initiative & Curiosity) | NAEYC 2.A.10"
             }
           }
         },
@@ -2255,6 +2654,25 @@
               "story_snippet": "Felix came dead last in the obstacle race, and the disappointment sat heavy as a backpack full of rocks. He wanted to quit racing forever. That night he noticed something: his chest only ached like this about things he LOVED. \"This hurt is proof I care,\" he said. He turned the ache into a training plan, one cone at a time.",
               "reflection_question": "Write about a time losing or messing up really stung. What did the sting tell you about what you love?",
               "tip": "Felix says: Only things that matter can disappoint you. That heavy feeling? It's love wearing a disguise!"
+            },
+            "K": {
+              "title": "Socratic Spark: The Same Fair Kitchen Rule for Me",
+              "time": 3,
+              "domain": "Critical Thinking & Fairminded Inquiry",
+              "strategy_code": "S-7",
+              "strategy_name": "Developing Intellectual Good Faith or Integrity",
+              "intellectual_standard": "Consistency",
+              "socratic_category": "4. Questions About Viewpoints or Perspectives",
+              "land": 5,
+              "land_class": "land5",
+              "land_name": "Vitalis",
+              "hero_guides": "Felix & Amara",
+              "char_img": "seriphia.png",
+              "rhythm_cue": "80 BPM Mirror-Palm Balance (press palms together evenly left and right)",
+              "tactile_spark": "Think of a sharing or clean-up rule at snack time (like taking an equal slice or wiping crumbs).",
+              "socratic_question": "Why is it so easy to notice when SOMEONE ELSE breaks a sharing rule, and what does true Vitalis integrity ask us to check about ourselves?",
+              "tip": "Seriphia says: Intellectual integrity means holding ourselves to the exact same fair yardstick we hold up for our friends!",
+              "standard_alignment": "ELOF P-SE 5 (Prosocial Integrity) | NAEYC 2.B.02"
             }
           }
         },
@@ -2356,6 +2774,25 @@
               "story_snippet": "Before speaking at the Aquaria assembly, Nerissa's heart drummed so fast she thought everyone could hear it. Instead of fighting the drum, she made it her metronome: one slow breath for every four beats. \"My heart isn't scared,\" she realized. \"It's setting the tempo.\" She spoke in rhythm with herself — and her voice came out like a song.",
               "reflection_question": "Put your hand on your heart and count 10 beats. What tempo is your body playing right now — fast, slow, or in-between?",
               "tip": "Nerissa says: A racing heart is your body's drumroll — it plays loudest right before something great!"
+            },
+            "K": {
+              "title": "Socratic Spark: Two Vitalis Breaths When Puzzles Wobble",
+              "time": 3,
+              "domain": "Critical Thinking & Fairminded Inquiry",
+              "strategy_code": "S-8",
+              "strategy_name": "Developing Intellectual Perseverance",
+              "intellectual_standard": "Depth",
+              "socratic_category": "5. Questions that Probe Implications & Consequences",
+              "land": 5,
+              "land_class": "land5",
+              "land_name": "Vitalis",
+              "hero_guides": "Felix & Amara",
+              "char_img": "seriphia.png",
+              "rhythm_cue": "100 BPM Cadet Reset: Freeze -> Hand on Heart -> 2 Slow Breaths -> Steady Pulse",
+              "tactile_spark": "Try tapping your head with one hand while rubbing your tummy in circles with the other — pause, breathe, and try slower!",
+              "socratic_question": "When a tricky rhythm or math puzzle wobbles on try number one, what helpful clue did that wobble teach your hands for try number two?",
+              "tip": "Seriphia says: Mistakes are never stop signs in Vitalis — after one calm breath, every wobble becomes a clue!",
+              "standard_alignment": "ELOF P-ATL 2 (Persistence & Attention) | NAEYC 2.B.04"
             }
           }
         },
@@ -2457,6 +2894,25 @@
               "story_snippet": "The night before the seasons festival, Selene's thoughts spun too fast for sleep. \"My brain is broken tonight,\" she sighed. Then she listened closer — her spinning thoughts were all IDEAS, sparkling like too many stars. She kept a notepad by her pillow, gave each idea one line, and told them, \"I'll see you tomorrow.\" Sleep came like a quiet chorus.",
               "reflection_question": "When your brain feels too busy, what are the thoughts made of — worries, ideas, wishes? Write two of them down to hold for tomorrow.",
               "tip": "Selene says: A busy mind isn't broken — it's bright. Give your sparks a notepad and your eyes some rest!"
+            },
+            "K": {
+              "title": "Socratic Spark: Tracing WHY a Strategy Works",
+              "time": 3,
+              "domain": "Critical Thinking & Fairminded Inquiry",
+              "strategy_code": "S-9",
+              "strategy_name": "Developing Confidence in Reason",
+              "intellectual_standard": "Logic",
+              "socratic_category": "3. Questions that Probe Reasons, Evidence & Causes",
+              "land": 5,
+              "land_class": "land5",
+              "land_name": "Vitalis",
+              "hero_guides": "Felix & Amara",
+              "char_img": "seriphia.png",
+              "rhythm_cue": "92 BPM Step-by-Step March ('First we check, next we test, then we know!')",
+              "tactile_spark": "Group 10 small items (beans, coins, or blocks) first in a messy heap, then into two neat rows of 5.",
+              "socratic_question": "Why did organizing into neat fives make counting faster and more accurate than guessing at a messy pile? Trace the reason!",
+              "tip": "Seriphia says: When you see WHY a smart strategy works instead of copying blindly, your confidence in reason shines!",
+              "standard_alignment": "ELOF P-SCI 5 (Reasoning & Inquiry) | NAEYC 2.G.02"
             }
           }
         },
@@ -2558,6 +3014,25 @@
               "story_snippet": "Kwame's tower of homework felt heavier than any scale could measure, and dread crept in. So he weighed it for real: each task got a pebble on the balance scale. Seven pebbles — that's all his mountain was. \"Dread made it feel like seventy,\" he laughed. He moved one pebble to the 'done' side, then another. The scale — and his chest — grew lighter.",
               "reflection_question": "What feels like a heavy pile for you right now? List the pieces — count them like pebbles. How many are there really?",
               "tip": "Kwame says: A balanced week indeed! Big feelings love to multiply the truth. Counting the real number takes their power away."
+            },
+            "K": {
+              "title": "Socratic Spark: Matching Our Promise With Our Practice",
+              "time": 3,
+              "domain": "Critical Thinking & Fairminded Inquiry",
+              "strategy_code": "S-27",
+              "strategy_name": "Comparing and Contrasting Ideals with Actual Practice",
+              "intellectual_standard": "Consistency",
+              "socratic_category": "2. Questions that Probe Assumptions",
+              "land": 5,
+              "land_class": "land5",
+              "land_name": "Vitalis",
+              "hero_guides": "Felix & Amara",
+              "char_img": "seriphia.png",
+              "rhythm_cue": "96 BPM Sovereign Statue Freeze Check on the Beat Stop",
+              "tactile_spark": "Compare saying 'I'm sorry!' super fast while rushing past versus stopping gently to help rebuild what fell.",
+              "socratic_question": "How can we notice when the words we SAY ('I play fairly') don't quite match what our hands ACTUALLY did — and repair the gap?",
+              "tip": "Seriphia says: Champions align their real everyday actions with their highest ideals — one honest repair at a time.",
+              "standard_alignment": "ELOF P-ATL 1 (Self-Monitoring) | NAEYC 2.L.01"
             }
           }
         }
@@ -2666,6 +3141,25 @@
               "story_snippet": "Pip's birdhouse door faced the ground. Silas opened his mouth to say \"That's wrong\" — and closed it. \"Have you considered how the birds will fly in?\" he asked instead. Pip studied it, flipped the birdhouse himself, then added a landing stick Silas had never seen on any birdhouse. \"Good thing I didn't fix it,\" Silas thought. \"His way ended up better.\"",
               "reflection_question": "Would you rather someone fix your project FOR you, or ask you a question that helps you fix it yourself? Write why.",
               "tip": "Silas says: 'Have you considered...' hands someone a tool. 'You're wrong' takes their tools away!"
+            },
+            "K": {
+              "title": "Socratic Spark: Testing the Root Reason Behind an Idea",
+              "time": 3,
+              "domain": "Critical Thinking & Fairminded Inquiry",
+              "strategy_code": "S-18",
+              "strategy_name": "Analyzing or Evaluating Arguments, Interpretations, Beliefs, or Theories",
+              "intellectual_standard": "Logic",
+              "socratic_category": "3. Questions that Probe Reasons, Evidence & Causes",
+              "land": 3,
+              "land_class": "land3",
+              "land_name": "Terrasol",
+              "hero_guides": "Vesta & Silas",
+              "char_img": "seriphia.png",
+              "rhythm_cue": "78 BPM Root-and-Branch Tap (tap floor for 'Reasons', reach up for 'Claim')",
+              "tactile_spark": "Compare a small heavy coin and a larger light piece of paper or wooden block in your two hands.",
+              "socratic_question": "If a friend predicts 'Big things always sink and tiny things always float,' how does comparing a tiny coin and a wooden block test their reason?",
+              "tip": "Seriphia says: Every invention and explanation stands on reasons — testing those roots keeps our discoveries strong!",
+              "standard_alignment": "ELOF P-SCI 5 (Hypothesis Evaluation) | NGSS K-PS2"
             }
           }
         },
@@ -2767,6 +3261,25 @@
               "story_snippet": "Remy solved the number puzzle backwards — starting from the answer and working to the front. \"That's not the method,\" Octavia almost said. Instead: \"What made you start from the end?\" Remy shrugged: \"The end had the most clues.\" Octavia tested it on the next puzzle herself. Backwards was FASTER. Now Numeria teaches both directions.",
               "reflection_question": "Do you ever solve things your own weird way? Write about your way — and what makes it work for you.",
               "tip": "Octavia says: 'The method' is just the first way someone found. Your way might be the next method!"
+            },
+            "K": {
+              "title": "Socratic Spark: Clue Basket vs. Tricky Decoy Numbers",
+              "time": 3,
+              "domain": "Critical Thinking & Fairminded Inquiry",
+              "strategy_code": "S-31",
+              "strategy_name": "Distinguishing Relevant from Irrelevant Facts",
+              "intellectual_standard": "Relevance",
+              "socratic_category": "6. Questions About the Question",
+              "land": 2,
+              "land_class": "land2",
+              "land_name": "Numeria",
+              "hero_guides": "Kwame & Octavia",
+              "char_img": "seriphia.png",
+              "rhythm_cue": "92 BPM Clue Filter: 1 Firm Stomp for Needed Clue, Side-Wave for Decoy Fact",
+              "tactile_spark": "Listen closely: 'Octavia wound 4 brass clocks, wore 2 green ribbons, and fixed 3 sundials. How many timepieces did she tend?'",
+              "socratic_question": "The fact '2 green ribbons' is completely true — so why did you leave the number 2 OUT when counting Octavia's timepieces?",
+              "tip": "Seriphia says: Not every true number belongs in your equation! Filtering relevant clues beats blind number-crunching every time.",
+              "standard_alignment": "ELOF P-MATH 6 (Problem Solving) | CCSS.MATH K.OA.A.2"
             }
           }
         },
@@ -2868,6 +3381,25 @@
               "story_snippet": "Mila wanted to test if plants grow better with music — by playing DRUMS at the garden. Loud ones. Ezra winced. \"Have you thought about what the quiet plants will tell us?\" he offered. Mila's eyes lit: \"A quiet row AND a drum row — then we compare!\" Ezra hadn't given her the answer. He'd given her a better question, and she'd built a real experiment from it.",
               "reflection_question": "If you could test one curious question this week, what would it be? Write your question and your first step.",
               "tip": "Ezra says: A good question doesn't stop an idea — it grows it a second branch!"
+            },
+            "K": {
+              "title": "Socratic Spark: Why Scientists Use Two Matching Jars",
+              "time": 3,
+              "domain": "Critical Thinking & Fairminded Inquiry",
+              "strategy_code": "S-33",
+              "strategy_name": "Giving Reasons and Evaluating Evidence and Alleged Facts",
+              "intellectual_standard": "Adequacy",
+              "socratic_category": "3. Questions that Probe Reasons, Evidence & Causes",
+              "land": 3,
+              "land_class": "land3",
+              "land_name": "Terrasol",
+              "hero_guides": "Vesta & Silas",
+              "char_img": "seriphia.png",
+              "rhythm_cue": "76 BPM Two-Hand Comparison Tap (tap left knee for Jar A, right knee for Jar B)",
+              "tactile_spark": "Cup your left hand as 'Sunny Wet Seed Jar A' and your right hand as 'Dry Seed Jar B' side by side.",
+              "socratic_question": "To prove seeds need water to sprout, why must a scientist test BOTH a watered jar AND an identical dry jar instead of only one jar?",
+              "tip": "Seriphia says: Fair side-by-side evidence lets nature speak clearly instead of leaving us guessing!",
+              "standard_alignment": "ELOF P-SCI 6 (Evidence-Based Conclusions) | NGSS K-LS1-1"
             }
           }
         },
@@ -2969,6 +3501,25 @@
               "story_snippet": "Juniper invented her own calendar: eight days a week, with a day called \"Funday.\" Elias, Keeper of real calendars, felt his eyebrows rise. \"Walk me through your invention,\" he said, and truly listened. \"Funday is for finishing dreams from the other days,\" she explained. Elias nodded slowly and pinned her calendar next to his. \"Inventors,\" he said, \"deserve wall space.\"",
               "reflection_question": "Invent your own special day! What would you name it, and what would it be for? Write or draw it.",
               "tip": "Elias says: Time enough to listen is the best gift you can give an inventor — including the one in your mirror!"
+            },
+            "K": {
+              "title": "Socratic Spark: Guest & Host: Dialogical Two-Voice Check",
+              "time": 3,
+              "domain": "Critical Thinking & Fairminded Inquiry",
+              "strategy_code": "S-25",
+              "strategy_name": "Reasoning Dialogically: Comparing Perspectives, Interpretations, or Theories",
+              "intellectual_standard": "Completeness",
+              "socratic_category": "4. Questions About Viewpoints or Perspectives",
+              "land": 4,
+              "land_class": "land4",
+              "land_name": "Aquaria",
+              "hero_guides": "Nerissa & Ronan",
+              "char_img": "seriphia.png",
+              "rhythm_cue": "68 BPM Passing-Shell Call-and-Response Sway",
+              "tactile_spark": "Sit on Chair A as a tired traveler arriving in a new town, then move to Chair B as the busy host preparing the room.",
+              "socratic_question": "What helpful detail does the traveler notice that the host might miss — and how does talking back and forth make hospitality wiser for both?",
+              "tip": "Seriphia says: Dialogical thinking means letting two honest perspectives converse until a fuller picture appears.",
+              "standard_alignment": "ELOF P-LC 4 (Conversational Pragmatics) | NAEYC 2.C.03"
             }
           }
         },
@@ -3070,6 +3621,25 @@
               "story_snippet": "The little inventors' fair was chaos — glue everywhere, ideas half-built, one volcano erupting early. Athena walked the tables with only one sentence: \"What would you like to try next?\" No fixing, no steering. By day's end, every invention was finished — each one stranger and more wonderful than anything Athena would have designed. That, she wrote in her journal, is the lantern trick: light the path, don't walk it for them.",
               "reflection_question": "What would YOU like to try next — in anything? Write your next step like an inventor's plan.",
               "tip": "Athena says: A discovery-filled week! Remember the lantern trick: the best helpers light paths, they don't push feet."
+            },
+            "K": {
+              "title": "Socratic Spark: The Polyrhythm Contradiction Detector",
+              "time": 3,
+              "domain": "Critical Thinking & Fairminded Inquiry",
+              "strategy_code": "S-34",
+              "strategy_name": "Recognizing Contradictions",
+              "intellectual_standard": "Consistency",
+              "socratic_category": "2. Questions that Probe Assumptions",
+              "land": 2,
+              "land_class": "land2",
+              "land_name": "Numeria",
+              "hero_guides": "Kwame & Octavia",
+              "char_img": "seriphia.png",
+              "rhythm_cue": "88 BPM Smooth Pulse vs. Crossed-Wrists 'X' Clash Signal",
+              "tactile_spark": "Tap a steady beat, then cross your wrists in an 'X' if these two claims clash: 'My bag is completely empty' and 'Three apples are inside my bag.'",
+              "socratic_question": "Why can't two opposite claims both be true in the exact same way at the exact same moment — and what should we check when beats clash?",
+              "tip": "Seriphia says: Spotting contradictions is like hearing an out-of-tune note — pausing to check restores clear harmony!",
+              "standard_alignment": "ELOF P-ATL 3 (Cognitive Flexibility) | NAEYC 2.F.03"
             }
           }
         }
@@ -3178,6 +3748,25 @@
               "story_snippet": "A little Aquarian named Coral couldn't say her R's — \"wiver\" instead of \"river\" — and she'd stopped talking in class. Nerissa knelt beside her: \"Want to know a secret? Until I was your age, I said 'thquirrel.' Me! The Sound Sculptor!\" Coral's mouth fell open. \"Sounds take time to sculpt,\" Nerissa said. \"Mine came. Yours is coming.\" Coral whispered \"wiver\" — then grinned and tried again.",
               "reflection_question": "What's hard for you now that a grown-up you know once found hard too? Ask someone about a thing they struggled with as a kid, and write what they say.",
               "tip": "Nerissa says: Every expert you admire once struggled exactly where you're struggling. The road continues — keep walking!"
+            },
+            "K": {
+              "title": "Socratic Spark: Sound-Detective Story Critique",
+              "time": 3,
+              "domain": "Critical Thinking & Fairminded Inquiry",
+              "strategy_code": "S-21",
+              "strategy_name": "Reading Critically: Clarifying or Critiquing Texts",
+              "intellectual_standard": "Depth",
+              "socratic_category": "3. Questions that Probe Reasons, Evidence & Causes",
+              "land": 1,
+              "land_class": "land1",
+              "land_name": "Harmonia",
+              "hero_guides": "Kenji & Aiko",
+              "char_img": "seriphia.png",
+              "rhythm_cue": "74 BPM Two-Tap Story Pause ('Wait — does that make sense?')",
+              "tactile_spark": "Think of a classic tale like The Gingerbread Man trusting the clever fox or Goldilocks walking into an empty house.",
+              "socratic_question": "When we listen like story detectives instead of passive listeners, what hidden warning clue did the Gingerbread Man overlook?",
+              "tip": "Seriphia says: Critical listeners don't just swallow a story whole — they ask why characters acted and whether clues add up!",
+              "standard_alignment": "ELOF P-LIT 4 (Story Comprehension) | CCSS.ELA RL.K.1"
             }
           }
         },
@@ -3279,6 +3868,25 @@
               "story_snippet": "Tam hid during reading time — the words swam and scrambled on the page. Ronan sat with him and opened the oldest book in Aquaria's library. Inside the cover, in shaky child-handwriting: 'This book beat me today. — R.' \"That's me,\" Ronan said. \"Same book. It beat me forty times before I beat it.\" Tam looked at the shaky signature, then at the Word Warrior it became. He opened to page one.",
               "reflection_question": "Write a note to your future self about something hard today. Someday you'll read it the way Tam read Ronan's!",
               "tip": "Ronan says: Struggling readers become word warriors every single day. You're not behind — you're mid-story!"
+            },
+            "K": {
+              "title": "Socratic Spark: Weighing Both Sides on the Ocean Scale",
+              "time": 3,
+              "domain": "Critical Thinking & Fairminded Inquiry",
+              "strategy_code": "S-26",
+              "strategy_name": "Reasoning Dialectically: Evaluating Perspectives, Interpretations, or Theories",
+              "intellectual_standard": "Fairmindedness",
+              "socratic_category": "4. Questions About Viewpoints or Perspectives",
+              "land": 4,
+              "land_class": "land4",
+              "land_name": "Aquaria",
+              "hero_guides": "Nerissa & Ronan",
+              "char_img": "seriphia.png",
+              "rhythm_cue": "64 BPM Two-Cup Balance Scale Sway (weigh left palm vs. right palm)",
+              "tactile_spark": "Hold out both palms like balance cups for an ocean town: Cup A holds 'Fishermen need boats to feed families'; Cup B holds 'Sea turtles need quiet clean water.'",
+              "socratic_question": "When two caring groups disagree, how can weighing the strongest clues in BOTH cups help us invent a solution that protects families AND sea life?",
+              "tip": "Seriphia says: Dialectical thinking weighs competing truths fairly instead of cheering for only one side.",
+              "standard_alignment": "ELOF P-SCI 3 (Comparing & Evaluating) | NAEYC 2.G.02"
             }
           }
         },
@@ -3380,6 +3988,25 @@
               "story_snippet": "Pip crumpled his song sheet: \"It's terrible. I'll never write like you.\" Kenji left and came back hauling a dusty box — one hundred crumpled papers, his first hundred songs. \"Every Word Musician has a crumple box,\" he said. \"The song Harmonia sings at every festival? It was crumple number ninety-nine, uncrumpled and fixed.\" Pip smoothed out his sheet and drew a small box in the corner: #1.",
               "reflection_question": "What would go in YOUR crumple box — drawings, words, or projects that didn't work yet? Write why keeping them might matter.",
               "tip": "Kenji says: Your worst try today is a stepping stone in a bridge you can't see yet. Keep every stone!"
+            },
+            "K": {
+              "title": "Socratic Spark: Feeling the Invisible Soundwave",
+              "time": 3,
+              "domain": "Critical Thinking & Fairminded Inquiry",
+              "strategy_code": "D-3",
+              "strategy_name": "Observing Critically",
+              "intellectual_standard": "Specificity",
+              "socratic_category": "3. Questions that Probe Reasons, Evidence & Causes",
+              "land": 1,
+              "land_class": "land1",
+              "land_name": "Harmonia",
+              "hero_guides": "Kenji & Aiko",
+              "char_img": "seriphia.png",
+              "rhythm_cue": "72 BPM Humming Throat-Touch Observation (hum low, then high)",
+              "tactile_spark": "Rest two gentle fingers on the front of your throat while humming a low giant note and then a high bird note — feel the buzz change!",
+              "socratic_question": "What tiny difference did your fingertips OBSERVE between a loud hum and total silence, and how does that connect soundwaves to ocean waves?",
+              "tip": "Seriphia says: Critical observation means training our eyes, ears, and fingertips to catch fine clues rushing minds miss!",
+              "standard_alignment": "ELOF P-SCI 1 (Critical Sensory Observation) | NAEYC 2.G.01"
             }
           }
         },
@@ -3481,6 +4108,25 @@
               "story_snippet": "Mila told Aiko sadly, \"I interrupted everyone at lunch again. I'll always be bad at listening.\" Aiko laughed gently: \"You know I'm called the Harmony Keeper? When I was small, I talked over EVERYONE — my nickname was Chatterbird.\" Mila stared. \"How did Chatterbird become the Harmony Keeper?\" \"One conversation at a time,\" Aiko said. \"Same road you're on right now.\"",
               "reflection_question": "Is there a habit you're trying to change? Write it down — then write the nickname you'll earn once you've changed it.",
               "tip": "Aiko says: 'Always' and 'never' are the only words that are never true about growing kids. You are built to change!"
+            },
+            "K": {
+              "title": "Socratic Spark: Painting Exact Pictures With Words",
+              "time": 3,
+              "domain": "Critical Thinking & Fairminded Inquiry",
+              "strategy_code": "D-4",
+              "strategy_name": "Expressing Precisely",
+              "intellectual_standard": "Precision",
+              "socratic_category": "1. Questions of Clarification",
+              "land": 1,
+              "land_class": "land1",
+              "land_name": "Harmonia",
+              "hero_guides": "Kenji & Aiko",
+              "char_img": "seriphia.png",
+              "rhythm_cue": "80 BPM Crisp Articulation Tap (one clean tap per descriptive word)",
+              "tactile_spark": "Close your eyes, touch one textured object nearby (bark, spoon, cloth, or page), and replace the fuzzy word 'nice' with three exact sensory words.",
+              "socratic_question": "Why does saying 'cool, smooth, golden wooden spoon' help a listener understand your mind so much clearer than saying 'that thing'?",
+              "tip": "Seriphia says: Precise expression gives your inner thoughts clear wings so every listener sees what you mean!",
+              "standard_alignment": "ELOF P-LC 5 (Precise Expressive Language) | CCSS.ELA SL.K.6"
             }
           }
         },
@@ -3582,6 +4228,25 @@
               "story_snippet": "On the last night of story week, Selene showed the children Celestia's oldest songbook. The final song stopped mid-line — unfinished for a hundred years. \"Why did no one finish it?\" they asked. \"Because it isn't stuck,\" Selene smiled. \"It's waiting. Some songs wait for the right singer to grow up.\" She looked around the circle. \"One of you, maybe. You're all still being written too.\"",
               "reflection_question": "You are an unfinished song — and that's the exciting part! Write one line of the 'song of you' as it sounds today.",
               "tip": "Selene says: A story-filled week! Unfinished doesn't mean broken — it means the best verses are still coming."
+            },
+            "K": {
+              "title": "Socratic Spark: Leading Your Own Socratic Wonder Circle",
+              "time": 3,
+              "domain": "Critical Thinking & Fairminded Inquiry",
+              "strategy_code": "S-24",
+              "strategy_name": "Practicing Socratic Discussion: Clarifying and Questioning Beliefs, Theories, or Perspectives",
+              "intellectual_standard": "Depth",
+              "socratic_category": "6. Questions About the Question",
+              "land": 6,
+              "land_class": "land6",
+              "land_name": "Luminosity",
+              "hero_guides": "Athena & Ezra",
+              "char_img": "seriphia.png",
+              "rhythm_cue": "68 BPM Socratic Talking Drum (4 quiet heartbeats of wait-time between turns)",
+              "tactile_spark": "Invite one family member or friend into a 3-minute circle using a rolled napkin or spoon as the Talking Stick.",
+              "socratic_question": "Practice being the Socratic Guide! Ask your partner: 'What makes a story unforgettable — and can you give me an example?' Then listen and ask one follow-up 'Why?'",
+              "tip": "Seriphia says: When YOU ask thoughtful questions and honor quiet thinking time, you light up every mind in the circle!",
+              "standard_alignment": "ELOF P-LC 3 (Collaborative Inquiry) | CCSS.ELA SL.1.1"
             }
           }
         }
@@ -3690,6 +4355,25 @@
               "story_snippet": "Elias gathered the heroes around the great Memory Book of the summer. \"Eight weeks,\" he said, turning pages: Kenji's jumbled word, Octavia's lost count, Felix's fall, Aiko's butterflies, Ronan's heavy net. \"Look closely — every one of these pages is a mistake.\" He smiled. \"And every mistake grew into the strongest chapter of this book.\"",
               "reflection_question": "Turn back through YOUR workbook like a Memory Book. Find one early page where something was hard. Is it easier now? Write what changed.",
               "tip": "Elias says: Time turns struggles into stories. You've been writing a great one for eight whole weeks!"
+            },
+            "K": {
+              "title": "Socratic Spark: The Golden Yarn Bridge Across Lands",
+              "time": 3,
+              "domain": "Critical Thinking & Fairminded Inquiry",
+              "strategy_code": "S-11",
+              "strategy_name": "Comparing Analogous Situations: Transferring Insights to New Contexts",
+              "intellectual_standard": "Relevance",
+              "socratic_category": "5. Questions that Probe Implications & Consequences",
+              "land": 7,
+              "land_class": "land7",
+              "land_name": "Celestia",
+              "hero_guides": "Elias & Selene",
+              "char_img": "seriphia.png",
+              "rhythm_cue": "72 BPM Bridge-Sweep Gesture (arc one hand from left knee to right knee)",
+              "tactile_spark": "Point to a seed picture from Terrasol and a music/handwriting page from Harmonia, drawing an invisible golden bridge between them.",
+              "socratic_question": "How is watering a tiny seed a little bit every morning JUST LIKE practicing a hard word, math count, or friendship skill each day?",
+              "tip": "Seriphia says: Analogous transfer lets wisdom earned in one Land shine brightly in brand-new adventures!",
+              "standard_alignment": "ELOF P-ATL 5 (Transferring Prior Learning) | NAEYC 2.F.03"
             }
           }
         },
@@ -3791,6 +4475,25 @@
               "story_snippet": "For the Grand Celebration, Amara choreographed the Champion Dance — one move from each week: a wobble (Week 5!), a shaky-leg stomp (Week 2!), a last-place lap of honor (for Felix), a slow-motion fall and rise. \"Why are all the moves mistakes?\" asked Pip. Amara spun: \"Because that's what champion dances are made of. The falls we got up from!\"",
               "reflection_question": "Invent one dance move that shows something you overcame this summer. Name your move and draw or describe it!",
               "tip": "Amara says: Dance your falls proudly — they're the steps that taught your feet the most!"
+            },
+            "K": {
+              "title": "Socratic Spark: Yesterday, Today & Tomorrow's Wiser Eyes",
+              "time": 3,
+              "domain": "Critical Thinking & Fairminded Inquiry",
+              "strategy_code": "S-12",
+              "strategy_name": "Developing One's Perspective: Creating or Exploring Beliefs, Arguments, or Theories",
+              "intellectual_standard": "Significance",
+              "socratic_category": "4. Questions About Viewpoints or Perspectives",
+              "land": 7,
+              "land_class": "land7",
+              "land_name": "Celestia",
+              "hero_guides": "Elias & Selene",
+              "char_img": "seriphia.png",
+              "rhythm_cue": "72 BPM Three-Time Waltz Sway: 'Yesterday (left) — Today (center) — Tomorrow (right)'",
+              "tactile_spark": "Flip back briefly to Week 1 Day 1 and compare your very first page with your work here in Week 8.",
+              "socratic_question": "What is one skill or idea you understand clearly TODAY that felt tricky or unfamiliar back in Week 1 — and how did your perspective grow?",
+              "tip": "Seriphia says: Strong thinkers celebrate how their understanding deepens across seasons of patient practice!",
+              "standard_alignment": "ELOF P-SE 9 (Developing Perspective) | NAEYC 2.L.03"
             }
           }
         },
@@ -3892,6 +4595,25 @@
               "story_snippet": "Kwame loves numbers, so he counted the summer: 40 days. 10 blocks a day. Almost 400 activities. \"But here's my favorite number,\" he said, holding up a giant ONE. \"One kid — you — showed up again and again. Every song, every story, every wobbly letter. The biggest number of the summer is how much ONE learner can grow.\"",
               "reflection_question": "Give your summer a number! How many stars out of 100 was it? Write your number and the best thing you learned.",
               "tip": "Kwame says: You can't always see growing while it happens — but count backwards to Week 1, and WOW. Look at you!"
+            },
+            "K": {
+              "title": "Socratic Spark: Weaving All Seven Lands Into One World",
+              "time": 3,
+              "domain": "Critical Thinking & Fairminded Inquiry",
+              "strategy_code": "S-23",
+              "strategy_name": "Making Interdisciplinary Connections",
+              "intellectual_standard": "Completeness",
+              "socratic_category": "5. Questions that Probe Implications & Consequences",
+              "land": 7,
+              "land_class": "land7",
+              "land_name": "Celestia",
+              "hero_guides": "Elias & Selene",
+              "char_img": "seriphia.png",
+              "rhythm_cue": "84 BPM Seven-Finger Constellation Count (raise 7 fingers for 7 Lands)",
+              "tactile_spark": "Touch 5 fingers as you connect one everyday event — baking bread or tending a garden — across Words, Numbers, Science, Movement, and Sharing.",
+              "socratic_question": "How do Harmonia's words, Numeria's measurements, Terrasol's plants, Vitalis's muscles, and Aquaria's kindness all work TOGETHER inside one family meal?",
+              "tip": "Seriphia says: School subjects aren't separate boxes — in the real world, all 7 Lands sing one connected symphony!",
+              "standard_alignment": "ELOF P-SCI 4 & P-MATH 7 (Cross-Domain Synthesis) | NAEYC 2.A.08"
             }
           }
         },
@@ -3993,6 +4715,25 @@
               "story_snippet": "Vesta unrolled a giant map of the summer: eight lands for eight weeks, with little flags at every adventure — the rhyme river, the syllable mountains, the tempo storm, the crumple-box forest. \"The map looks finished,\" said Juniper. Vesta shook her head and pointed past the last flag, where the map faded into blank space. \"Cartographers leave room,\" she said. \"That part is for what you explore next.\"",
               "reflection_question": "Draw a tiny map of your summer quest — mark 3 favorite stops. Then leave blank space and label it: NEXT!",
               "tip": "Vesta says: Finished maps are just invitations to draw bigger ones. Your blank space is waiting!"
+            },
+            "K": {
+              "title": "Socratic Spark: Four-Star Consequence Ripples Into Tomorrow",
+              "time": 3,
+              "domain": "Critical Thinking & Fairminded Inquiry",
+              "strategy_code": "S-35",
+              "strategy_name": "Exploring Implications and Consequences",
+              "intellectual_standard": "Significance",
+              "socratic_category": "5. Questions that Probe Implications & Consequences",
+              "land": 7,
+              "land_class": "land7",
+              "land_name": "Celestia",
+              "hero_guides": "Elias & Selene",
+              "char_img": "seriphia.png",
+              "rhythm_cue": "76 BPM Domino Clap Ripple (4 escalating claps from soft to bright)",
+              "tactile_spark": "Tap four invisible stars across your desk from left to right: Choice -> Ripple 1 -> Ripple 2 -> Community Gift.",
+              "socratic_question": "Trace the four-step consequence chain: if you share a kind question or help a younger learner today, what ripple happens second, third, and fourth?",
+              "tip": "Seriphia says: Looking ahead at consequences before we leap turns everyday choices into lasting Celestia starlight!",
+              "standard_alignment": "ELOF P-SCI 4 (Cause & Effect Over Time) | CCSS.ELA RL.K.2"
             }
           }
         },
@@ -4094,6 +4835,25 @@
               "story_snippet": "On the final day, all the heroes gathered — Kenji and Aiko, Octavia and Kwame, Vesta and Silas, Amara and Felix, Athena and Ezra, Nerissa and Ronan, Selene and Elias. Kenji stepped forward with the Champion's Pledge: \"I tried. I wobbled. I asked. I helped. I grew. And when the next hard thing comes —\" all the heroes answered together — \"I'LL REMEMBER I'VE DONE HARD THINGS BEFORE!\"",
               "reflection_question": "Say the Champion's Pledge out loud, then sign your name below it like a true hero of the 7 Lands. What hard thing will you try next?",
               "tip": "Kenji says: This isn't goodbye — heroes' quests never really end. See you in the next adventure, Champion!"
+            },
+            "K": {
+              "title": "Socratic Spark: The Sovereign Fairminded Thinker's Pledge",
+              "time": 3,
+              "domain": "Critical Thinking & Fairminded Inquiry",
+              "strategy_code": "S-ALL",
+              "strategy_name": "Strong-Sense Fairminded Synthesis Across All 7 Lands",
+              "intellectual_standard": "Fairmindedness",
+              "socratic_category": "6. Questions About the Question",
+              "land": 7,
+              "land_class": "land7",
+              "land_name": "Celestia",
+              "hero_guides": "All 14 Land Heroes",
+              "char_img": "seriphia.png",
+              "rhythm_cue": "88 BPM Grand Champion Heart-Tap-Clap-Open-Arms Cadence",
+              "tactile_spark": "Stand tall with hands over your heart, take one calm breath, and speak the Sovereign Thinker's Pledge aloud to someone you love.",
+              "socratic_question": "Speak & reflect: 'I observe closely, ask brave questions, check my assumptions, listen fairly to every shore, and test ideas with care!' Which thinking superpower will you carry forward first?",
+              "tip": "Seriphia says: Crafted with love and earned through 40 days of rhythm and reason — the 7 Lands and fairminded wisdom shine inside you now!",
+              "standard_alignment": "ELOF P-ATL 5, P-LC 3 & P-SE 7 | NAEYC 2.A.08 | CCSS.ELA SL.K-2.1"
             }
           }
         }

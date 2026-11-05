@@ -53,10 +53,10 @@
     },
     "home": {
         "hero_offer": {
-            "eyebrow": "THE SOUND OF ESSENTIALS DELUXE · ÂGES 2–7",
+            "eyebrow": "EDUCATION CONCORD · PLAIDOYER POUR UN ÉVEIL SANS ÉCRAN (ÂGES 2–7)",
             "title_main": "Une Expérience d'Apprentissage Musicale",
             "title_highlight": "(Gratuit Aujourd'hui)",
-            "subtitle": "Un voyage sonore immersif à travers la phonétique, les nombres, le mouvement et le monde naturel. Conçu pour le cerveau en développement, pas pour l'algorithme.",
+            "subtitle": "Développez l'attention, la phonétique et l'apaisement dès la maternelle en 10 minutes par jour sans écrans lumineux ni conflits liés aux tablettes. Nous offrons nos 19 chansons acoustiques enregistrées en studio aux familles fondatrices et aux classes afin que les enfants de 2 à 7 ans intègrent le langage, les nombres et l'équilibre émotionnel naturellement.",
             "price_strike": "Valeur de 19$",
             "price_tag": "Gratuit pour les Familles Fondatrices",
             "price_note": "Accès Numérique Immédiat · À Vous pour Toujours",
@@ -814,9 +814,9 @@
         }
     },
     "listen": {
-        "ethicalHeistBadge": "L'ACCÈS EXCLUSIF",
-        "ethicalHeistTitle": "ADOPTEZ la routine matinale de 10 minutes qui a éliminé les crises d'écran dans plus de 500 foyers",
-        "ethicalHeistSubtitle": "Sans fausses promesses. Seulement 19 pistes acoustiques de maître enregistrées en studio à travers les 7 Terres pour les 2–7 ans. Gratuit aujourd'hui.",
+        "ethicalHeistBadge": "EDUCATION CONCORD · ACCÈS FONDATEUR",
+        "ethicalHeistTitle": "Développez l'attention, la phonétique et le calme en 10 minutes par jour sans écrans lumineux ni conflits liés aux tablettes",
+        "ethicalHeistSubtitle": "Les dessins animés rapides et les applications bruyantes saturent le système nerveux des tout-petits. Débloquez les 19 pistes acoustiques enregistrées en studio (60 à 80 BPM) à travers les 7 Terres pour les 2 à 7 ans. Offert gratuitement (0 $) aujourd'hui.",
         "ethicalHeistCta": "DÉVERROUILLER LES 19 PISTES GRATUITEMENT (0 $)",
         "orDivider": "ÉGALEMENT DISPONIBLE",
         "dmCtaTitle": "Connectez-vous aussi par Instagram DM",
@@ -824,9 +824,9 @@
         "starterPackCta": "🎨 Pack de Démarrage et Coloriage (7 $) →"
     },
     "institutions": {
-        "badge": "Concorde Institutionnelle et Entreprise",
-        "title": "Développez l'apprentissage sans écran dans vos classes",
-        "subtitle": "Extensions de leçons acoustiques clés en main de 10 à 15 minutes et alignement pédagogique (Head Start ELOF et NAEYC) pour les 2–7 ans.",
+        "badge": "Education Concord · Plaidoyer Institutionnel",
+        "title": "Déployez un éveil aligné sur les normes ELOF, NAEYC et ministérielles dans les 5 domaines sans surcharge de préparation ni écrans",
+        "subtitle": "Rituels acoustiques et tactiles clés en main de 10 à 15 minutes (60 à 80 BPM) avec référentiels de correspondance pour les enfants de 2 à 7 ans.",
         "step1_title": "Étape 1 : Évaluation rapide de compatibilité institutionnelle",
         "step1_subtitle": "Sélectionnez les caractéristiques de votre établissement pour débloquer les tarifs institutionnels.",
         "q1_label": "Type d'établissement",

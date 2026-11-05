@@ -53,10 +53,10 @@
     },
     "home": {
         "hero_offer": {
-            "eyebrow": "THE SOUND OF ESSENTIALS DELUXE · EDADES 2–7",
+            "eyebrow": "EDUCATION CONCORD · DEFENSA DEL APRENDIZAJE SIN PANTALLAS (EDADES 2–7)",
             "title_main": "Una Experiencia de Aprendizaje Musical",
             "title_highlight": "(Gratis Hoy)",
-            "subtitle": "Un viaje sonoro inmersivo a través de la fonética, números, movimiento y el mundo natural. Creado para el cerebro en desarrollo, no para el algoritmo de pantalla.",
+            "subtitle": "Desarrolla la concentración, la fonética y la calma listas para el preescolar en 10 minutos al día sin pantallas brillantes ni batallas por la tableta. Obsequiamos las 19 canciones acústicas grabadas en estudio a las familias fundadoras y aulas para que los niños de 2 a 7 años asimilen el lenguaje, el conteo y el equilibrio emocional de forma natural.",
             "price_strike": "Valor de $19",
             "price_tag": "Gratis para Familias Fundadoras",
             "price_note": "Acceso Digital Inmediato · Tuyo para Siempre",
@@ -814,9 +814,9 @@
         "tagline": "Diseñado para el Cerebro en Desarrollo"
     },
     "listen": {
-        "ethicalHeistBadge": "EL ACCESO PRIVILEGIADO",
-        "ethicalHeistTitle": "OBTÉN la rutina matutina de 10 minutos que eliminó las rabietas de pantalla en más de 500 hogares",
-        "ethicalHeistSubtitle": "Sin promesas falsas. Solo 19 pistas acústicas maestras grabadas en estudio a través de las 7 Tierras para edades de 2 a 7 años. Gratis hoy.",
+        "ethicalHeistBadge": "EDUCATION CONCORD · PASE FUNDADOR",
+        "ethicalHeistTitle": "Desarrolla la concentración, la fonética y la calma en 10 minutos al día sin pantallas brillantes ni batallas por la tableta",
+        "ethicalHeistSubtitle": "Los dibujos animados rápidos y las aplicaciones ruidosas sobreestimulan el sistema nervioso infantil. Desbloquea las 19 pistas acústicas maestras grabadas en estudio (60 a 80 BPM) en las 7 Tierras para edades de 2 a 7 años. Gratis ($0) hoy.",
         "ethicalHeistCta": "DESBLOQUEAR LAS 19 PISTAS GRATIS ($0)",
         "orDivider": "TAMBIÉN DISPONIBLE",
         "dmCtaTitle": "Conéctate también por Instagram DM",
@@ -824,9 +824,9 @@
         "starterPackCta": "🎨 Paquete de Inicio y Colorear ($7) →"
     },
     "institutions": {
-        "badge": "Concordia Institucional y Corporativa",
-        "title": "Escala el aprendizaje sin pantallas en tus aulas",
-        "subtitle": "Extensiones de lecciones acústicas listas de 10 a 15 minutos y alineación curricular (Head Start ELOF y NAEYC) para edades de 2 a 7 años.",
+        "badge": "Education Concord · Defensa Educativa Institucional",
+        "title": "Implementa el aprendizaje alineado con ELOF, NAEYC y estándares estatales en los 5 dominios sin agotamiento docente ni pantallas",
+        "subtitle": "Rituales de aula acústicos y táctiles listos para usar de 10 a 15 minutos (60 a 80 BPM) con correspondencia curricular en los 50 estados para edades de 2 a 7 años.",
         "step1_title": "Paso 1: Evaluación rápida de idoneidad institucional",
         "step1_subtitle": "Selecciona los parámetros de tu centro para ver precios institucionales y muestras curriculares.",
         "q1_label": "Tipo de organización",

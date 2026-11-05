@@ -7,27 +7,27 @@ import json
 from typing import Dict, List, Optional
 from soe_curriculum.models import TrackInfo, LandInfo, HeroInfo
 
-# Canonical fallback tracks if JSON is missing
+# Canonical fallback tracks if JSON is missing (Strictly matches the 19 published tracks)
 FALLBACK_TRACKS = [
-    {"id": 1, "slug": "sunny-day", "title": "Sunny Day (Intro)", "landId": "terrasol", "color": "#FF6F00", "domainIcon": "☀️"},
+    {"id": 1, "slug": "sunny-day", "title": "Sunny Day (intro)", "landId": "terrasol", "color": "#FF6F00", "domainIcon": "☀️"},
     {"id": 2, "slug": "days-of-the-week", "title": "Days of the Week", "landId": "celestia", "color": "#1E88E5", "domainIcon": "📅"},
     {"id": 3, "slug": "alphabet-song-remix", "title": "Alphabet Song Remix", "landId": "harmonia", "color": "#FF6F00", "domainIcon": "🗣️"},
     {"id": 4, "slug": "horses-interlude", "title": "Horses Interlude", "landId": "terrasol", "color": "#9C27B0", "domainIcon": "🎨"},
     {"id": 5, "slug": "le-cheval", "title": "Le Cheval", "landId": "luminosity", "color": "#1E88E5", "domainIcon": "🇫🇷"},
-    {"id": 6, "slug": "lets-stretch", "title": "Let's Stretch", "landId": "vitalis", "color": "#4CAF50", "domainIcon": "🤸"},
+    {"id": 6, "slug": "lets-stretch", "title": "Lets Stretch", "landId": "vitalis", "color": "#4CAF50", "domainIcon": "🤸"},
     {"id": 7, "slug": "drill-time", "title": "Drill Time", "landId": "vitalis", "color": "#4CAF50", "domainIcon": "💪"},
     {"id": 8, "slug": "numbers", "title": "Numbers", "landId": "numeria", "color": "#FF6F00", "domainIcon": "🔢"},
     {"id": 9, "slug": "my-body", "title": "My Body", "landId": "terrasol", "color": "#9C27B0", "domainIcon": "🔬"},
     {"id": 10, "slug": "manners", "title": "Manners", "landId": "harmonia", "color": "#1E88E5", "domainIcon": "🤝"},
-    {"id": 11, "slug": "seasons", "title": "Seasons", "landId": "celestia", "color": "#9678c4", "domainIcon": "🍂"},
-    {"id": 12, "slug": "months-of-the-year", "title": "Months of the Year", "landId": "celestia", "color": "#1E88E5", "domainIcon": "🗓️"},
-    {"id": 13, "slug": "shapes", "title": "Shapes", "landId": "numeria", "color": "#7fb685", "domainIcon": "🔺"},
-    {"id": 14, "slug": "colors", "title": "Colors", "landId": "luminosity", "color": "#d4897a", "domainIcon": "🎨"},
-    {"id": 15, "slug": "feelings", "title": "Feelings", "landId": "aquaria", "color": "#5ba4c9", "domainIcon": "💙"},
-    {"id": 16, "slug": "opposite-words", "title": "Opposite Words", "landId": "harmonia", "color": "#d4a843", "domainIcon": "↔️"},
-    {"id": 17, "slug": "time", "title": "Time", "landId": "celestia", "color": "#9678c4", "domainIcon": "⏳"},
-    {"id": 18, "slug": "thank-you", "title": "Thank You", "landId": "harmonia", "color": "#d4a843", "domainIcon": "🙏"},
-    {"id": 19, "slug": "goodnight-terrasol", "title": "Goodnight Terrasol", "landId": "terrasol", "color": "#5fb685", "domainIcon": "🌙"}
+    {"id": 11, "slug": "time", "title": "Time", "landId": "celestia", "color": "#FF6F00", "domainIcon": "⏰"},
+    {"id": 12, "slug": "changes", "title": "Changes", "landId": "terrasol", "color": "#4CAF50", "domainIcon": "🦋"},
+    {"id": 13, "slug": "one-hundred", "title": "One hundred", "landId": "numeria", "color": "#9C27B0", "domainIcon": "💯"},
+    {"id": 14, "slug": "the-ocean", "title": "The Ocean", "landId": "terrasol", "color": "#1E88E5", "domainIcon": "🌊"},
+    {"id": 15, "slug": "hard-words", "title": "Hard Words", "landId": "aquaria", "color": "#FF6F00", "domainIcon": "📖"},
+    {"id": 16, "slug": "shapes", "title": "Shapes", "landId": "terrasol", "color": "#4CAF50", "domainIcon": "🔷"},
+    {"id": 17, "slug": "months-of-the-year", "title": "Months of the Year", "landId": "celestia", "color": "#9C27B0", "domainIcon": "🗓️"},
+    {"id": 18, "slug": "rain", "title": "Rain", "landId": "terrasol", "color": "#1E88E5", "domainIcon": "🌧️"},
+    {"id": 19, "slug": "after-the-storm", "title": "After the Storm (outro)", "landId": "terrasol", "color": "#4CAF50", "domainIcon": "🌈"}
 ]
 
 FALLBACK_LANDS = [

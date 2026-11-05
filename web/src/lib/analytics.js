@@ -1,4 +1,4 @@
-// Meta Pixel + GA4 loaders.
+// Meta Pixel + GA4 + Pinterest Tag loaders.
 //
 // Listen.jsx already fires window.fbq('track', 'Lead') and window.gtag('event',
 // 'generate_lead') on a successful album unlock. Neither global existed — index.html
@@ -8,12 +8,14 @@
 // IDs come from env so they differ per environment and never sit in git:
 //   VITE_META_PIXEL_ID=1234567890
 //   VITE_GA4_MEASUREMENT_ID=G-XXXXXXXXXX
+//   VITE_PINTEREST_TAG_ID=2612345678901
 // Missing ID = that tag simply does not load. No placeholder ever ships.
 
 import { initAutoTracking } from '../utils/analytics';
 
 const META_PIXEL_ID = import.meta.env.VITE_META_PIXEL_ID;
 const GA4_ID = import.meta.env.VITE_GA4_MEASUREMENT_ID;
+const PINTEREST_TAG_ID = import.meta.env.VITE_PINTEREST_TAG_ID;
 
 function loadMetaPixel(id) {
   // Meta's own snippet, kept verbatim so it stays diffable against their docs.
@@ -42,6 +44,27 @@ function loadGa4(id) {
   window.gtag('config', id);
 }
 
+function loadPinterestTag(id) {
+  // Pinterest's official Tag snippet
+  !function (e) {
+    if (!window.pintrk) {
+      window.pintrk = function () {
+        window.pintrk.queue.push(Array.prototype.slice.call(arguments));
+      };
+      var n = window.pintrk;
+      n.queue = [];
+      n.version = '3.0';
+      var t = document.createElement('script');
+      t.async = !0;
+      t.src = e;
+      var r = document.getElementsByTagName('script')[0];
+      r.parentNode.insertBefore(t, r);
+    }
+  }('https://s.pinimg.com/ct/core.js');
+  window.pintrk('load', id);
+  window.pintrk('page');
+}
+
 export function initAnalytics() {
   if (typeof window === 'undefined') return;
 
@@ -66,6 +89,12 @@ export function initAnalytics() {
     loadGa4(GA4_ID);
   } else if (import.meta.env.DEV) {
     console.info('[analytics] VITE_GA4_MEASUREMENT_ID not set — GA4 can be configured via GTM container.');
+  }
+
+  if (PINTEREST_TAG_ID) {
+    loadPinterestTag(PINTEREST_TAG_ID);
+  } else if (import.meta.env.DEV) {
+    console.info('[analytics] VITE_PINTEREST_TAG_ID not set — Pinterest Tag direct loader skipped.');
   }
 }
 

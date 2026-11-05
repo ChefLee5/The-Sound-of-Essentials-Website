@@ -10,9 +10,9 @@
     <dc:creator>The Sound of Essentials Team</dc:creator>
     <dc:language>en</dc:language>
     <dc:subject>Education; School Readiness; Foundation; Early Childhood; Elementary; Homeschool</dc:subject>
-    <dc:description>A neuro-affirming, bilingual-ready 8-week Rhythm Ready workbook set in the 7 Lands of the SOE universe. About 30 minutes of daily cross-curricular activities across 10 short activity blocks, for ages 2–7 (Pre-K to Grade 2).</dc:description>
+    <dc:description>A neuro-affirming, bilingual-ready 8-week Rhythm Ready workbook set in the 7 Lands of the SOE universe. About 30 minutes of daily cross-curricular activities across 11 short activity blocks (including Seriphia's Socratic Spark critical thinking inquiry), for ages 2–7 (Pre-K to Grade 2).</dc:description>
     <dc:rights>Copyright © 2026 The Sound of Essentials. All rights reserved.</dc:rights>
-    <meta property="dcterms:modified">2026-09-28T03:12:59Z</meta>
+    <meta property="dcterms:modified">2026-11-03T04:29:34Z</meta>
     <meta name="cover" content="cover-image"/>
 
     <!-- W3C EPUB Accessibility 1.1 / EAA Compliance (Lulu Guide Page 11) -->
@@ -24,7 +24,7 @@
     <meta property="schema:accessibilityFeature">readingOrder</meta>
     <meta property="schema:accessibilityFeature">tableOfContents</meta>
     <meta property="schema:accessibilityHazard">none</meta>
-    <meta property="schema:accessibilitySummary">A neuro-affirming early learning workbook featuring structured navigation, alternative text on all 125 illustrations and 14 hero cards, clear heading hierarchy, and accessible color contrast.</meta>
+    <meta property="schema:accessibilitySummary">A neuro-affirming early learning workbook featuring structured navigation, alternative text on all 125 illustrations and 15 hero cards, clear heading hierarchy, and accessible color contrast.</meta>
   </metadata>
 
   <manifest>
@@ -208,7 +208,7 @@
     <item id="dict_land7_the_water_cycle_weather_systems" href="images/dictionary/land7_the-water-cycle-weather-systems.jpg" media-type="image/jpeg"/>
     <item id="dict_land7_time_concepts_history" href="images/dictionary/land7_time-concepts-history.jpg" media-type="image/jpeg"/>
     <item id="dict_land7_time_in_music_rhythm" href="images/dictionary/land7_time-in-music-rhythm.jpg" media-type="image/jpeg"/>
-    <!-- 14 Hero Character Avatars -->
+    <!-- 15 Hero & Guardian Character Avatars -->
     <item id="char_aiko" href="images/characters/aiko.png" media-type="image/png"/>
     <item id="char_amara" href="images/characters/amara.png" media-type="image/png"/>
     <item id="char_athena" href="images/characters/athena.png" media-type="image/png"/>
@@ -221,6 +221,7 @@
     <item id="char_octavia" href="images/characters/octavia.png" media-type="image/png"/>
     <item id="char_ronan" href="images/characters/ronan.png" media-type="image/png"/>
     <item id="char_selene" href="images/characters/selene.png" media-type="image/png"/>
+    <item id="char_seriphia" href="images/characters/seriphia.png" media-type="image/png"/>
     <item id="char_silas" href="images/characters/silas.png" media-type="image/png"/>
     <item id="char_vesta" href="images/characters/vesta.png" media-type="image/png"/>
     <!-- 8 Master Land Hero Artworks -->

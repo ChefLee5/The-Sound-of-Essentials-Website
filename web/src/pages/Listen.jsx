@@ -52,17 +52,17 @@ const Listen = () => {
   // Universal Gate Modal State
   const [isDownloadGateOpen, setIsDownloadGateOpen] = useState(false);
   const [gateDownloadItem, setGateDownloadItem] = useState({
-    title: 'SOE Rhythm Quest: Full 19-Track Album Experience',
-    filename: 'SOE_Rhythm_Quest_19_Tracks.pdf',
-    url: null,
+    title: 'SOE Rhythm Quest: 19-Track Album & First 10 Minutes Tactile Ritual Card',
+    filename: 'SOE_First_10_Minutes_Tactile_Ritual_Card.html',
+    url: assetPath('/assets/SOE_First_10_Minutes_Tactile_Ritual_Card.html'),
     kind: 'interest',
   });
 
   const openAlbumUnlockGate = (customTitle) => {
     setGateDownloadItem({
-      title: customTitle || 'SOE Rhythm Quest: Full 19-Track Album Experience',
-      filename: 'SOE_Rhythm_Quest_19_Tracks.pdf',
-      url: null,
+      title: customTitle || 'SOE Rhythm Quest: 19-Track Album & First 10 Minutes Tactile Ritual Card',
+      filename: 'SOE_First_10_Minutes_Tactile_Ritual_Card.html',
+      url: assetPath('/assets/SOE_First_10_Minutes_Tactile_Ritual_Card.html'),
       kind: 'interest',
     });
     setIsDownloadGateOpen(true);
@@ -204,7 +204,7 @@ const Listen = () => {
       {/* ── Hero ── */}
       <section className="listen-hero">
         <div className="container">
-          <span className="listen-hero__eyebrow">🎵 {isUnlocked ? 'Full Quest Unlocked • 19 Tracks' : 'Free Preview • 19 Tracks'}</span>
+          <span className="listen-hero__eyebrow">🎵 {isUnlocked ? 'Full Quest Unlocked • 19 Tracks' : 'Education Concord • Screen-Free Learning Advocacy (Ages 2–7)'}</span>
           <KineticHeadline
             tag="h1"
             className="listen-hero__title"
@@ -220,7 +220,7 @@ const Listen = () => {
             isPlaying={isUnlocked}
           />
           <p className="section-subtitle listen-hero__subtitle">
-            19 acoustic songs gifted freely ($0) to founding families. Experience the music first, then pair it with our 66-page companion storybook, <em>The Sound of Essentials: Rhythm Quest</em> ($19), to bring all 15 heroes into your child's hands.
+            Build kindergarten-ready focus, phonics, and emotional calm in 10 minutes a day without glowing screens or tablet battles. We gift all 19 studio-recorded acoustic tracks freely ($0) to founding families and educators, ready to pair with our 66-page companion storybook, <em>The Sound of Essentials: Rhythm Quest</em> ($19), and 40-Day Readiness Workbook ($21).
           </p>
 
           {isUnlocked ? (
@@ -235,6 +235,15 @@ const Listen = () => {
                   🎧 Launch 19-Track Player →
                 </button>
               </MagneticPill>
+              <a
+                href={assetPath('/assets/SOE_First_10_Minutes_Tactile_Ritual_Card.html')}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-outline"
+                style={{ fontSize: '1rem', padding: '0.85rem 1.8rem', background: 'rgba(255, 255, 255, 0.92)', borderColor: '#FF6F00', color: '#FF6F00', fontWeight: 700, cursor: 'pointer', textDecoration: 'none' }}
+              >
+                🖨️ First 10-Min Tactile Ritual Card (Free) →
+              </a>
               <a
                 href={STRIPE_STARTER_PACK_URL}
                 target="_blank"
@@ -359,6 +368,46 @@ const Listen = () => {
           </div>
         </div>
       </section>
+
+      {/* ── Institutional Truth & Phonics Proof Section ── */}
+      <section className="listen-science-proof" style={{ padding: '3rem 0', background: 'rgba(255, 111, 0, 0.035)', borderTop: '1px solid rgba(255, 111, 0, 0.12)', borderBottom: '1px solid rgba(255, 111, 0, 0.12)' }}>
+        <div className="container">
+          <RevealSection className="text-center" style={{ maxWidth: '840px', margin: '0 auto' }}>
+            <span className="section-label" style={{ background: 'var(--color-orange, #FF6F00)', color: '#fff', padding: '5px 16px', borderRadius: '50px', fontSize: '0.8rem', fontWeight: '800', letterSpacing: '0.08em', textTransform: 'uppercase', display: 'inline-block', marginBottom: '0.85rem' }}>
+              🧠 The Science of Sound vs. The 30-Year Guessing Flaw
+            </span>
+            <h2 className="section-title" style={{ fontSize: 'clamp(1.75rem, 4vw, 2.4rem)', lineHeight: 1.2, marginBottom: '1rem', color: 'var(--color-text-dark, #1E293B)' }}>
+              Why Sound Must Come <span style={{ color: 'var(--color-orange, #FF6F00)' }}>Before Symbols</span>
+            </h2>
+            <p className="section-subtitle" style={{ fontSize: '1.05rem', color: '#475569', lineHeight: 1.6, marginBottom: '2rem' }}>
+              For 30 years, standard school curricula taught young children to &ldquo;guess&rdquo; words using pictures and shapes. When Mississippi discarded guessing in favor of structured phonics and sound-to-letter mastery, their reading scores jumped from <strong>49th to 9th in the nation</strong>.
+            </p>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1.25rem', textAlign: 'left', marginTop: '1.5rem' }}>
+              <div style={{ background: '#ffffff', borderRadius: '16px', padding: '1.5rem', border: '1px solid #E2E8F0', boxShadow: '0 4px 12px rgba(15, 23, 42, 0.04)' }}>
+                <div style={{ fontSize: '1.4rem', marginBottom: '0.5rem', fontWeight: '700', color: '#EF4444' }}>❌ The Old Way (The Guessing Flaw)</div>
+                <h3 style={{ fontSize: '1.05rem', fontWeight: '700', color: '#0F172A', marginBottom: '0.5rem' }}>Visual Guessing</h3>
+                <p style={{ fontSize: '0.9rem', color: '#64748B', lineHeight: 1.5 }}>
+                  Children are taught to look at pictures, guess from context, and hope they&rsquo;re right. Tablets and predictive AI automate this guessing game—leaving fundamental auditory decoding underdeveloped.
+                </p>
+              </div>
+
+              <div style={{ background: '#ffffff', borderRadius: '16px', padding: '1.5rem', border: '2px solid rgba(255, 111, 0, 0.4)', boxShadow: '0 8px 20px rgba(255, 111, 0, 0.08)' }}>
+                <div style={{ fontSize: '1.4rem', marginBottom: '0.5rem', fontWeight: '700', color: '#16A34A' }}>✅ The SOE Way (Auditory Phonics)</div>
+                <h3 style={{ fontSize: '1.05rem', fontWeight: '700', color: '#FF6F00', marginBottom: '0.5rem' }}>Rhythm &amp; Phonemic Mastery</h3>
+                <p style={{ fontSize: '0.9rem', color: '#334155', lineHeight: 1.5 }}>
+                  19 original tracks wire phonemic discrimination into young minds through rhythm, meter, and melody <em>first</em>. When your child sees the word on paper, decoding is natural, effortless, and permanent.
+                </p>
+              </div>
+            </div>
+
+            <div style={{ marginTop: '1.75rem', fontSize: '0.88rem', color: '#64748B', fontStyle: 'italic' }}>
+              Crafted by a father&rsquo;s heart and a mother&rsquo;s love &bull; Strictly Ages 2&ndash;7 &bull; 100% Screen-Free Sensory Learning
+            </div>
+          </RevealSection>
+        </div>
+      </section>
+
       {/* ── Track Preview Grid ── */}
       <section className="listen-preview">
         <div className="container">
@@ -445,6 +494,15 @@ const Listen = () => {
                   🎧 Launch 19-Track Player →
                 </button>
               </MagneticPill>
+              <a
+                href={assetPath('/assets/SOE_First_10_Minutes_Tactile_Ritual_Card.html')}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-outline"
+                style={{ fontSize: '1rem', padding: '0.85rem 1.8rem', background: 'rgba(255, 255, 255, 0.92)', borderColor: '#FF6F00', color: '#FF6F00', fontWeight: 700, cursor: 'pointer', textDecoration: 'none' }}
+              >
+                🖨️ First 10-Min Tactile Ritual Card (Free) →
+              </a>
             </div>
           )}
         </div>

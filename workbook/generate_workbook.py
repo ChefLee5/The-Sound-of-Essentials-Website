@@ -182,6 +182,24 @@ def render_day(week_num: int, day_data: dict, template: str) -> str:
     substitutions["ACT9_TIP"]             = j.get("tip", "")
     substitutions["ACT9_CHAR_IMG"]        = j.get("char_img", "placeholder_avatar.png").lower()
 
+    # Block K (Seriphia's Socratic Spark — 40-day Critical Thinking foundation)
+    k = b.get("K", {})
+    substitutions["ACT10_TITLE"]         = k.get("title", "")
+    substitutions["ACT10_TIME"]          = str(k.get("time", 3))
+    substitutions["ACT10_STRATEGY_CODE"] = k.get("strategy_code", "")
+    substitutions["ACT10_STRATEGY_NAME"] = k.get("strategy_name", "")
+    substitutions["ACT10_STANDARD"]      = k.get("intellectual_standard", "")
+    substitutions["ACT10_SOCRATIC_CAT"]  = k.get("socratic_category", "")
+    substitutions["ACT10_LAND_CLASS"]    = k.get("land_class", "land7")
+    substitutions["ACT10_LAND_NAME"]     = k.get("land_name", "Celestia")
+    substitutions["ACT10_HERO_GUIDES"]   = k.get("hero_guides", "Elias & Selene")
+    substitutions["ACT10_CHAR_IMG"]      = k.get("char_img", "seriphia.png").lower()
+    substitutions["ACT10_RHYTHM_CUE"]    = k.get("rhythm_cue", "")
+    substitutions["ACT10_TACTILE_SPARK"] = k.get("tactile_spark", "")
+    substitutions["ACT10_SOCRATIC_Q"]    = k.get("socratic_question", "")
+    substitutions["ACT10_TIP"]           = k.get("tip", "")
+    substitutions["ACT10_STANDARDS"]     = k.get("standard_alignment", "")
+
     #── Reflection block F ──────────────────────────────────────────────────
     f_blk = b.get("F", {})
     substitutions["REFLECTION_PROMPT"] = f_blk.get("reflection_prompt", "")
@@ -345,7 +363,7 @@ def generate_opf(page_refs: list[str], title: str = "SOE Rhythm Quest: Rhythm Re
             )
 
     # Add all character avatar images to manifest
-    manifest_lines.append('    <!-- 14 Hero Character Avatars -->')
+    manifest_lines.append('    <!-- 15 Hero & Guardian Character Avatars -->')
     for img_path in sorted(CHAR_IMG_DEST.glob("*.*")):
         if img_path.suffix.lower() in (".jpg", ".jpeg", ".png"):
             mtype = "image/png" if img_path.suffix.lower() == ".png" else "image/jpeg"
@@ -379,7 +397,7 @@ def generate_opf(page_refs: list[str], title: str = "SOE Rhythm Quest: Rhythm Re
     <dc:creator>The Sound of Essentials Team</dc:creator>
     <dc:language>en</dc:language>
     <dc:subject>Education; School Readiness; Foundation; Early Childhood; Elementary; Homeschool</dc:subject>
-    <dc:description>A neuro-affirming, bilingual-ready 8-week Rhythm Ready workbook set in the 7 Lands of the SOE universe. About 30 minutes of daily cross-curricular activities across 10 short activity blocks, for ages 2–7 (Pre-K to Grade 2).</dc:description>
+    <dc:description>A neuro-affirming, bilingual-ready 8-week Rhythm Ready workbook set in the 7 Lands of the SOE universe. About 30 minutes of daily cross-curricular activities across 11 short activity blocks (including Seriphia's Socratic Spark critical thinking inquiry), for ages 2–7 (Pre-K to Grade 2).</dc:description>
     <dc:rights>Copyright © 2026 The Sound of Essentials. All rights reserved.</dc:rights>
     <meta property="dcterms:modified">{date_str}</meta>
     <meta name="cover" content="cover-image"/>
@@ -393,7 +411,7 @@ def generate_opf(page_refs: list[str], title: str = "SOE Rhythm Quest: Rhythm Re
     <meta property="schema:accessibilityFeature">readingOrder</meta>
     <meta property="schema:accessibilityFeature">tableOfContents</meta>
     <meta property="schema:accessibilityHazard">none</meta>
-    <meta property="schema:accessibilitySummary">A neuro-affirming early learning workbook featuring structured navigation, alternative text on all 125 illustrations and 14 hero cards, clear heading hierarchy, and accessible color contrast.</meta>
+    <meta property="schema:accessibilitySummary">A neuro-affirming early learning workbook featuring structured navigation, alternative text on all 125 illustrations and 15 hero cards, clear heading hierarchy, and accessible color contrast.</meta>
   </metadata>
 
   <manifest>

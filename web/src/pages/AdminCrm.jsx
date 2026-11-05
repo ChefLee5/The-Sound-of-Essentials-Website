@@ -585,17 +585,16 @@ const AdminCrm = () => {
 
       // If backend did not dispatch email directly (e.g. edge function cache before rebuild),
       // execute direct Brevo client dispatch as guaranteed fallback
-      // If backend did not dispatch email directly (e.g. edge function cache before rebuild),
-      // execute direct Brevo client dispatch if environment variable is present
       if (!resData?.email_dispatched) {
         const clientBrevoKey = import.meta.env.VITE_BREVO_API_KEY;
         if (clientBrevoKey) {
           try {
-            await fetch('https://api.brevo.com/v3/smtp/email', {
+            const directRes = await fetch('https://api.brevo.com/v3/smtp/email', {
               method: 'POST',
               headers: {
                 'api-key': clientBrevoKey,
                 'Content-Type': 'application/json',
+                'Accept': 'application/json',
               },
               body: JSON.stringify({
                 sender: { id: 2 },
@@ -605,6 +604,10 @@ const AdminCrm = () => {
                 textContent: emailBody,
               }),
             });
+            if (!directRes.ok) {
+              const errBody = await directRes.text();
+              console.warn('Direct Brevo client dispatch status note:', errBody);
+            }
           } catch (directErr) {
             console.warn('Direct Brevo client dispatch fallback note:', directErr);
           }
@@ -648,10 +651,10 @@ const AdminCrm = () => {
     }
   };
 
-  // Alternative 2: Open directly in Outlook 365 Web & Log Activity
+  // Alternative 2: Open directly in Outlook 365 Web & Log Activity (with info@soelearn.com login_hint)
   const handleOpenInOutlook = async () => {
     if (!selectedContact) return;
-    const outlookUrl = `https://outlook.office.com/mail/deeplink/compose?to=${encodeURIComponent(selectedContact.email)}&subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+    const outlookUrl = `https://outlook.office.com/mail/deeplink/compose?to=${encodeURIComponent(selectedContact.email)}&subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}&login_hint=info@soelearn.com`;
     window.open(outlookUrl, '_blank', 'noopener,noreferrer');
 
     try {
@@ -663,12 +666,12 @@ const AdminCrm = () => {
           activity_type: 'email_outreach',
           title: `Outbound Email (Outlook): ${emailSubject}`,
           description: emailBody.slice(0, 300) + (emailBody.length > 300 ? '...' : ''),
-          metadata: { delivery_channel: 'outlook_web' },
+          metadata: { delivery_channel: 'outlook_web', sender_hint: 'info@soelearn.com' },
         }),
       });
       fetchActivities();
       setEmailStatus('success');
-      setEmailStatusMsg(`✅ Opened Outlook 365 composer & logged outreach to Neon timeline!`);
+      setEmailStatusMsg(`✅ Opened Outlook 365 composer (targeted info@soelearn.com) & logged outreach to Neon timeline!`);
     } catch (err) {
       console.warn('Outlook activity log note:', err);
     }
@@ -1721,6 +1724,7 @@ const AdminCrm = () => {
                 onClick={handleSendEmailViaBrevo}
                 disabled={emailStatus === 'sending'}
                 className="btn btn-gold btn-lg crm-send-main-btn"
+                style={{ width: '100%', fontSize: '1.05rem', padding: '0.85rem' }}
               >
                 {emailStatus === 'sending' ? (
                   <>
@@ -1728,15 +1732,18 @@ const AdminCrm = () => {
                   </>
                 ) : (
                   <>
-                    🚀 Send via Brevo Server &amp; Log to Database
+                    🚀 Send from info@soelearn.com (1-Click Brevo Delivery)
                   </>
                 )}
               </button>
+              <div style={{ fontSize: '0.78rem', color: '#16A34A', marginTop: '0.4rem', textAlign: 'center', fontWeight: 600 }}>
+                ✓ Delivered directly from info@soelearn.com with DKIM/DMARC — no Outlook login required.
+              </div>
             </div>
 
             {/* Alternative One-Click Webmail / Client Launchers */}
-            <div className="crm-outreach-alternatives">
-              <span className="crm-alternatives-title">Or launch in your preferred email client (auto-logs to Neon CRM):</span>
+            <div className="crm-outreach-alternatives" style={{ marginTop: '1.25rem' }}>
+              <span className="crm-alternatives-title">Or draft in external webmail / desktop client:</span>
               <div className="crm-launcher-buttons">
                 <button
                   type="button"
@@ -1750,18 +1757,21 @@ const AdminCrm = () => {
                   type="button"
                   onClick={handleOpenInOutlook}
                   className="crm-launcher-btn"
-                  title="Open directly in Outlook 365 web composer"
+                  title="Open directly in Outlook 365 targeting info@soelearn.com"
                 >
-                  <span style={{ color: '#0078D4' }}>🔵</span> Outlook Web
+                  <span style={{ color: '#0078D4' }}>🔵</span> Outlook Web (soelearn.com)
                 </button>
                 <button
                   type="button"
                   onClick={handleOpenInDesktopMail}
                   className="crm-launcher-btn"
-                  title="Open in default email app (without opening dead blank tabs)"
+                  title="Open in default desktop mail app"
                 >
                   <span>📬</span> Desktop Mail App
                 </button>
+              </div>
+              <div style={{ fontSize: '0.74rem', color: '#64748B', marginTop: '0.45rem', textAlign: 'center', lineHeight: '1.4' }}>
+                ⚠️ <strong>Note on Outlook / Desktop Mail:</strong> Ensure your mail app&apos;s active &apos;From&apos; account is <code>info@soelearn.com</code> (not a personal address like GMX). For automatic delivery from <code>info@soelearn.com</code>, use the gold button above.
               </div>
             </div>
 

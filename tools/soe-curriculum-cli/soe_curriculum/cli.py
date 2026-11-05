@@ -18,6 +18,15 @@ from soe_curriculum.exporters import (
     export_batch_json
 )
 from soe_curriculum.standards import STANDARDS_CATALOG
+from soe_curriculum.critical_thinking import (
+    SYLLABUS_CHAPTERS,
+    SOE_SOCRATIC_QUESTS,
+    get_strategies_by_land,
+    get_remodelled_units_by_land,
+    export_socratic_quest_markdown,
+    export_foundation_json,
+)
+from soe_curriculum.workbook_block_k import apply_block_k_to_workbook
 
 
 @click.group()
@@ -292,6 +301,94 @@ def interactive_repl():
             click.secho(f"\n🌟 TEACHER WHISPER:\n{lesson.teacher_whisper}\n", fg="yellow")
         else:
             click.secho(f"Unrecognized track or command: '{cmd}'. Type 'list' or 'help'.", fg="red")
+
+
+@main.command(name="strategies")
+@click.option("--land", default=None, help="Filter by Land ID (harmonia, numeria, vitalis, luminosity, aquaria, terrasol, celestia).")
+@click.option("--category", default=None, help="Filter by category (affective, macro, micro).")
+def list_critical_thinking_strategies(land: Optional[str], category: Optional[str]):
+    """List the 35 Critical Thinking Strategies mapped across SOE's 7 Lands."""
+    strategies = get_strategies_by_land(land_id=land, category=category)
+    if not strategies:
+        click.secho("No matching Critical Thinking strategies found.", fg="red")
+        sys.exit(1)
+
+    click.echo(click.style(f"\n=== SOE CRITICAL THINKING STRATEGIES ({len(strategies)} Matched) ===", fg="cyan", bold=True))
+    for s in strategies:
+        click.echo(f"  [{s.code:<4}] {s.formal_name} ({s.category})")
+        click.echo(f"         Land: {s.land_name} ({s.hero_guides}) | Source: PDF p.{s.pdf_page}")
+        click.echo(f"         Spark: {s.socratic_spark}\n")
+
+
+@main.command(name="socratic-pack")
+@click.option("--all", "all_lands", is_flag=True, help="Export Socratic Critical Thinking Quests + full foundation JSON for all 7 Lands.")
+@click.option("--land", default=None, help="Export Socratic Critical Thinking Quest for a single Land ID.")
+@click.option("--output-dir", "-o", default="./curriculum_output/critical_thinking_expansion", help="Output directory.")
+def export_socratic_curriculum_pack(all_lands: bool, land: Optional[str], output_dir: str):
+    """Export SOE Critical Thinking & Socratic Inquiry Lesson Packs + Foundation Syllabus JSON."""
+    if not all_lands and not land:
+        click.secho("Error: Specify either --all or --land <land_id>.", fg="red")
+        sys.exit(1)
+
+    os.makedirs(output_dir, exist_ok=True)
+    selected_keys = list(SOE_SOCRATIC_QUESTS.keys()) if all_lands else [land.strip().lower()]
+
+    for key in selected_keys:
+        if key not in SOE_SOCRATIC_QUESTS:
+            click.secho(f"Error: Unknown Land '{key}'. Available: {list(SOE_SOCRATIC_QUESTS.keys())}", fg="red")
+            sys.exit(1)
+        quest = SOE_SOCRATIC_QUESTS[key]
+        md_path = os.path.join(output_dir, f"soe_socratic_quest_{key}.md")
+        with open(md_path, "w", encoding="utf-8") as f:
+            f.write(export_socratic_quest_markdown(quest))
+        click.echo(f"  [OK] Exported {quest.land_name} Socratic Quest -> {md_path}")
+
+    if all_lands:
+        json_path = os.path.join(output_dir, "soe_critical_thinking_foundation.json")
+        with open(json_path, "w", encoding="utf-8") as f:
+            f.write(export_foundation_json())
+        click.echo(f"  [OK] Exported Complete Foundation Syllabus JSON (16 Chapters, 35 Strategies, 70 Units) -> {json_path}")
+
+    click.secho(f"\n[OK] Critical Thinking Curriculum Expansion ready in {output_dir}\n", fg="green", bold=True)
+
+
+@main.command(name="workbook-block-k")
+@click.option(
+    "--workbook-json",
+    default=None,
+    help="Path to workbook_content.json (defaults to ../../workbook/workbook_content.json).",
+)
+@click.option(
+    "--foundation-json",
+    default=None,
+    help="Optional path to soe_critical_thinking_foundation.json for cross-verification.",
+)
+@click.option("--dry-run", is_flag=True, help="Validate all 40 Block K entries without modifying workbook_content.json.")
+def sync_workbook_block_k(workbook_json: Optional[str], foundation_json: Optional[str], dry_run: bool):
+    """Generate and validate all 40 daily Block K ('Seriphia's Socratic Spark') entries in workbook_content.json."""
+    from pathlib import Path
+
+    repo_root = Path(__file__).resolve().parents[3]
+    wb_path = Path(workbook_json) if workbook_json else (repo_root / "workbook" / "workbook_content.json")
+    fd_path = (
+        Path(foundation_json)
+        if foundation_json
+        else (repo_root / "curriculum_output" / "critical_thinking_expansion" / "soe_critical_thinking_foundation.json")
+    )
+
+    stats = apply_block_k_to_workbook(
+        workbook_json_path=wb_path,
+        foundation_json_path=fd_path if fd_path.exists() else None,
+        write=not dry_run,
+    )
+    mode_label = "Validated (dry-run)" if dry_run else "Applied & Validated"
+    click.secho(
+        f"[OK] {mode_label} Block K across {stats['days_updated']} days "
+        f"({stats['blocks_per_day']} blocks/day = {stats['total_activities']} total activities; "
+        f"{stats['unique_strategies_wired']} unique Socratic strategies) -> {wb_path}",
+        fg="green",
+        bold=True,
+    )
 
 
 if __name__ == "__main__":
