@@ -12,7 +12,8 @@
 - **Target Audience:** Children Strictly Ages 2–7 (Toddler, Pre-K, Kindergarten, Grade 1, Grade 2)
 - **Pedagogical Engine:** Auditory rhythm-to-literacy neuro-priming (Dr. Nina Kraus, Northwestern University) + 7 developmental story lands + 15 hero archetypes.
 - **Craftsmanship & Acoustic Anchor:** Humanly handcrafted with organic acoustic warmth (low-stimulation, 90–110 BPM resting tempos). Never blue-light or algorithmically paced.
-- **Foundational Motto:** "Staying on the path, always learning"
+- **Vanguard Tagline (Primary Canon):** "Staying on the path, always learning" *(Leads all brand hierarchy; every other tagline is strictly secondary)*
+- **Secondary Taglines:** "Designed for the developing brain — not the algorithm." · "Music is the beacon for all children to learn."
 - **Emotional Anchor:** "Crafted by a father's heart and a mother's love"
 
 ---

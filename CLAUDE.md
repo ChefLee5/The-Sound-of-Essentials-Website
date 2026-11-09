@@ -13,10 +13,9 @@
 - **Lead Marketer & Sovereign Guide (Seriphia):** **Seriphia** is the primary forefront persona and **Lead Marketer**. She brings wisdom to teach the early learners and inspire parents in the essentials of learning.
 - **The Heroes:** Early learners learn directly from the **15 Character Heroes** across the 7 Lands.
 - **Sovereign Startup Structure:** SOE operates as an independent sovereign artist collective with **100% music publishing and master sound recording ownership** across all 19 tracks. The enterprise enforces **zero platform renting**: Shopify is strictly retired, audio streams directly on owned web audio infrastructure (`soelearn.com/listen`), direct Stripe card vaulting captures post-purchase upsells, and print fulfillment is automated on-demand via Lulu API with zero inventory debt.
-- **Core Motto:** *"Staying on the path, always learning."*
-
-**Tagline:** "Designed for the developing brain — not the algorithm."
-**Target audience:** Parents, educators, and early childhood professionals.
+- **Vanguard Tagline (Primary Canon):** ***"Staying on the path, always learning."*** *(Non-negotiable primary motto; every other tagline or axiom is strictly secondary).*
+- **Secondary Taglines:** *"Designed for the developing brain — not the algorithm."* · *"Music is the beacon for all children to learn."*
+- **Target audience:** Parents, educators, and early childhood professionals.
 
 **GitHub:** `https://github.com/ChefLee5/The-Sound-of-Essentials-Website`
 **Live domains:**

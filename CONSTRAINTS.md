@@ -15,6 +15,7 @@
   * **15 Hero Mentors:** Early learners learn directly from the 15 characters mapped across the 7 Lands. (Gabriel / Lil G is the unreleased 16th character).
 * **Factual & Narrative Integrity:**
   * **Zero Fabricated Statistics:** Never invent clinical percentages or studies. Attribute claims strictly to established pedagogical neuroscience (Dalcroze, Orff, Kodály).
+  * **Vanguard Tagline (Primary Canon):** ***"Staying on the path, always learning."*** *(Leads all brand hierarchy; every other tagline or axiom is strictly secondary).*
   * **Emotional Anchor:** Always preserve the spirit: *"Crafted by a father's heart and a mother's love."*
 
 ---
