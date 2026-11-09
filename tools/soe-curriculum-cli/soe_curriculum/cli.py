@@ -95,17 +95,19 @@ def generate_lesson(track: str, output_format: str, output_dir: str, age_group: 
         click.secho(f"Error: {e}", fg="red")
         sys.exit(1)
 
-    os.makedirs(output_dir, exist_ok=True)
-    slug = lesson.track_slug
-
     if stdout and output_format == "md":
         click.echo(export_markdown(lesson))
+        return
+    elif stdout and output_format == "html":
+        click.echo(export_html(lesson))
         return
     elif stdout and output_format == "json":
         click.echo(export_json(lesson))
         return
 
     # Write files
+    os.makedirs(output_dir, exist_ok=True)
+    slug = lesson.track_slug
     saved_files = []
     if output_format in ["md", "all"]:
         path = os.path.join(output_dir, f"{slug}.md")
