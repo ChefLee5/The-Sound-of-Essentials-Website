@@ -17,6 +17,7 @@
   * **Zero Fabricated Statistics:** Never invent clinical percentages or studies. Attribute claims strictly to established pedagogical neuroscience (Dalcroze, Orff, Kodály).
   * **Vanguard Tagline (Primary Canon):** ***"Staying on the path, always learning."*** *(Leads all brand hierarchy; every other tagline or axiom is strictly secondary).*
   * **Emotional Anchor:** Always preserve the spirit: *"Crafted by a father's heart and a mother's love."*
+  * **ASD-STE100 Voice Standard:** All B2B institutional correspondence and lesson instructions must use Simplified Technical English (active voice only, max 20 words/sentence, zero AI tropes like *delve*, *testament*, *seamless*, *foster*, *elevate*).
 
 ---
 

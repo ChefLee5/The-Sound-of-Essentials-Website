@@ -393,6 +393,84 @@ const Home = () => {
       </section>
 
       {/* ═══════════════════════════════════════════════════════
+          SECTION 3B: AI-ERA READINESS & BIOLOGICAL GROUNDING
+      ═══════════════════════════════════════════════════════ */}
+      <section className="section ai-readiness-section glow-gold" id="ai-readiness">
+        <div className="container">
+          <RevealSection className="text-center">
+            <div className="section-label section-label--ai-readiness">
+              🤖 The Future of Learning
+            </div>
+            <h2 className="section-title">
+              What Do the People Building AI <br />
+              <span className="text-orange">Tell Their Own Kids to Learn?</span>
+            </h2>
+            <p className="section-subtitle" style={{ maxWidth: '780px', margin: '0.75rem auto 3rem' }}>
+              The tech leaders engineering artificial intelligence are not rushing their young children to screens. 
+              Instead, they agree on a fundamental truth: before the machine, wire the biological foundation.
+            </p>
+          </RevealSection>
+
+          <div className="ai-readiness-grid">
+            <RevealSection delay={0.1}>
+              <div className="ai-readiness-card glass-card">
+                <div className="ai-readiness-card__quote-badge">NVIDIA CEO Jensen Huang</div>
+                <blockquote className="ai-readiness-card__quote">
+                  "Language is the programming language of AI. The ultimate programming language."
+                </blockquote>
+                <h3 className="ai-readiness-card__title">Language Is the First Compiler</h3>
+                <p className="ai-readiness-card__desc">
+                  Natural language fluency, rich vocabulary, and auditory discrimination are the true code of the future. The Sound of Essentials builds the child's neural compiler between ages 2 and 7 through phonics, musical rhythm, and storytelling.
+                </p>
+                <div className="ai-readiness-card__tag">🎵 Auditory &amp; Phonics Scaffolding</div>
+              </div>
+            </RevealSection>
+
+            <RevealSection delay={0.2}>
+              <div className="ai-readiness-card glass-card ai-readiness-card--featured">
+                <div className="ai-readiness-card__quote-badge">Google Brain Founder Andrew Ng</div>
+                <blockquote className="ai-readiness-card__quote">
+                  "I worry a lot about students using cognitive offloading to AI in a way that damages long-term learning retention."
+                </blockquote>
+                <h3 className="ai-readiness-card__title">Zero "Cognitive Offloading" (Ages 2–7)</h3>
+                <p className="ai-readiness-card__desc">
+                  Highlighting his own 5 and 7-year-old, Ng warns against outsourcing early memory and reasoning to digital tools. SOE provides a 100% screen-free sanctuary so developing brains wire durable, lifelong neural retention.
+                </p>
+                <div className="ai-readiness-card__tag">🧠 100% Screen-Free Brain Architecture</div>
+              </div>
+            </RevealSection>
+
+            <RevealSection delay={0.3}>
+              <div className="ai-readiness-card glass-card">
+                <div className="ai-readiness-card__quote-badge">Stanford AI Director Fei-Fei Li</div>
+                <blockquote className="ai-readiness-card__quote">
+                  "The timeless value of learning to learn, the ability to learn, is even more important now."
+                </blockquote>
+                <h3 className="ai-readiness-card__title">Sovereign Agency &amp; "Learning to Learn"</h3>
+                <p className="ai-readiness-card__desc">
+                  When algorithms recall and summarize, human advantage shifts entirely to agency, curiosity, and joyful exploration. Guided by Seriphia across 7 Lands, early learners build intrinsic confidence to discover and create.
+                </p>
+                <div className="ai-readiness-card__tag">🧭 Agency &amp; 5-Domain Mastery</div>
+              </div>
+            </RevealSection>
+          </div>
+
+          <RevealSection delay={0.4}>
+            <div className="ai-readiness-banner glass-card">
+              <div className="ai-readiness-banner__icon">🛡️</div>
+              <div className="ai-readiness-banner__text">
+                <strong>Designed for the developing brain — not the algorithm.</strong>
+                <span> While college computer science enrollment dropped 12.4% this year, foundational human literacy, sensory grounding, and speech mastery remain under 1% unemployment. Give your child the gift of durable, un-cancellable human wiring.</span>
+              </div>
+              <Link to="/listen" className="btn btn-gold btn-shimmer ai-readiness-banner__btn">
+                Stream 19 Free Tracks →
+              </Link>
+            </div>
+          </RevealSection>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════════
           SECTION 4: THE RHYTHM QUEST STORYBOOK ($19 LEAD PRODUCT)
       ═══════════════════════════════════════════════════════ */}
       <section className="section quest-feature-section glow-gold">
@@ -1906,6 +1984,135 @@ const Home = () => {
           align-items: center;
         }
 
+        /* ── SECTION 3B: AI-Era Readiness Section ── */
+        .ai-readiness-section {
+          padding: 5rem 0;
+          position: relative;
+        }
+
+        .section-label--ai-readiness {
+          background: rgba(255, 111, 0, 0.12);
+          color: #c45000;
+          border: 1px solid rgba(255, 111, 0, 0.28);
+        }
+
+        .ai-readiness-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 1.75rem;
+          margin-bottom: 2.5rem;
+        }
+
+        .ai-readiness-card {
+          padding: 2.25rem 2rem;
+          border-radius: var(--radius-2xl);
+          background: linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(255, 248, 240, 0.90));
+          border: 1.5px solid rgba(255, 111, 0, 0.18);
+          box-shadow: 0 16px 36px -8px rgba(255, 111, 0, 0.08);
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+          transition: transform 0.3s var(--ease-gentle), box-shadow 0.3s var(--ease-gentle);
+        }
+
+        .ai-readiness-card:hover {
+          transform: translateY(-6px);
+          box-shadow: 0 24px 48px -10px rgba(255, 111, 0, 0.16);
+          border-color: rgba(255, 111, 0, 0.38);
+        }
+
+        .ai-readiness-card--featured {
+          border: 2px solid rgba(255, 111, 0, 0.45);
+          background: linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(255, 243, 230, 0.95));
+          box-shadow: 0 20px 45px -8px rgba(255, 111, 0, 0.14);
+        }
+
+        .ai-readiness-card__quote-badge {
+          display: inline-block;
+          align-self: flex-start;
+          padding: 0.3rem 0.85rem;
+          border-radius: 50px;
+          font-size: 0.75rem;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+          background: rgba(255, 111, 0, 0.12);
+          color: #c45000;
+          margin-bottom: 1.25rem;
+        }
+
+        .ai-readiness-card__quote {
+          font-family: var(--font-heading);
+          font-size: 1.12rem;
+          line-height: 1.45;
+          font-weight: 600;
+          font-style: italic;
+          color: var(--color-text-primary);
+          margin: 0 0 1.25rem 0;
+          padding-left: 0.85rem;
+          border-left: 3px solid #FF6F00;
+        }
+
+        .ai-readiness-card__title {
+          font-family: var(--font-heading);
+          font-size: 1.25rem;
+          font-weight: 700;
+          color: var(--color-text-primary);
+          margin-bottom: 0.75rem;
+        }
+
+        .ai-readiness-card__desc {
+          font-size: 0.95rem;
+          line-height: 1.6;
+          color: var(--color-text-secondary);
+          margin-bottom: 1.5rem;
+          flex-grow: 1;
+        }
+
+        .ai-readiness-card__tag {
+          font-size: 0.82rem;
+          font-weight: 600;
+          color: #FF6F00;
+          padding-top: 0.85rem;
+          border-top: 1px solid rgba(0, 0, 0, 0.06);
+        }
+
+        .ai-readiness-banner {
+          padding: 2rem 2.5rem;
+          border-radius: var(--radius-2xl);
+          display: flex;
+          align-items: center;
+          gap: 2rem;
+          background: linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(255, 248, 240, 0.92));
+          border: 1.5px solid rgba(255, 111, 0, 0.22);
+          box-shadow: 0 16px 36px -8px rgba(255, 111, 0, 0.08);
+        }
+
+        .ai-readiness-banner__icon {
+          font-size: 2.5rem;
+          flex-shrink: 0;
+        }
+
+        .ai-readiness-banner__text {
+          flex: 1;
+          font-size: 0.98rem;
+          line-height: 1.6;
+          color: var(--color-text-secondary);
+        }
+
+        .ai-readiness-banner__text strong {
+          color: var(--color-text-primary);
+          display: block;
+          font-size: 1.15rem;
+          margin-bottom: 0.35rem;
+          font-family: var(--font-heading);
+        }
+
+        .ai-readiness-banner__btn {
+          flex-shrink: 0;
+          white-space: nowrap;
+        }
+
         /* ── SECTION 9: Comparison Table ── */
         .comparison-table-wrap {
           margin-top: 2.5rem;
@@ -2233,6 +2440,9 @@ const Home = () => {
           .emergency-callout { flex-direction: column; align-items: flex-start; padding: 2rem 1.75rem; }
           .emergency-callout__actions { width: 100%; }
           .emergency-callout__actions .btn { width: 100%; min-height: 48px; justify-content: center; }
+          .ai-readiness-grid { grid-template-columns: 1fr; }
+          .ai-readiness-banner { flex-direction: column; text-align: center; gap: 1.25rem; }
+          .ai-readiness-banner__btn { width: 100%; justify-content: center; }
           .lands-preview-grid { grid-template-columns: repeat(2, 1fr); }
           .domains-grid { grid-template-columns: repeat(2, 1fr); }
           .faq-question-btn { min-height: 52px; padding: 1rem; }

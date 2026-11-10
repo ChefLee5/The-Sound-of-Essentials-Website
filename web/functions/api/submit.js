@@ -5,7 +5,9 @@
  */
 
 const FALLBACK_DB_URL = 'postgresql://neondb_owner:npg_ks2SarDnOB1E@ep-wandering-voice-ae85papv.c-2.us-east-2.aws.neon.tech/neondb?sslmode=require';
+const FALLBACK_BREVO_KEY = '';
 const DEFAULT_BREVO_LIST_ID = 2; // SOE_Album_Listeners
+const INSTITUTIONAL_BREVO_LIST_ID = 12; // SOE_Inbound_Institutional_Inquiries
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export async function onRequestPost(context) {
@@ -197,10 +199,19 @@ export async function onRequestPost(context) {
     }
 
     // 4. Background Brevo Contact Synchronization (Non-blocking)
-    const brevoApiKey = env?.BREVO_API_KEY;
-    const brevoListId = Number(env?.BREVO_LIST_ID) || DEFAULT_BREVO_LIST_ID;
+    const brevoApiKey = env?.BREVO_API_KEY || FALLBACK_BREVO_KEY;
+    const targetListId = isInstitutional ? INSTITUTIONAL_BREVO_LIST_ID : (Number(env?.BREVO_LIST_ID) || DEFAULT_BREVO_LIST_ID);
     if (brevoApiKey) {
       try {
+        const contactAttributes = {
+          FIRSTNAME: normalizedName || 'Rhythm Explorer',
+          SOURCE: sourcePath || '/listen',
+          PERSONA: persona,
+        };
+        if (organizationName?.trim()) {
+          contactAttributes.ORGANIZATION = organizationName.trim();
+        }
+
         const brevoRes = await fetch('https://api.brevo.com/v3/contacts', {
           method: 'POST',
           headers: {
@@ -209,18 +220,38 @@ export async function onRequestPost(context) {
           },
           body: JSON.stringify({
             email: normalizedEmail,
-            attributes: {
-              FIRSTNAME: normalizedName || 'Rhythm Explorer',
-              SOURCE: sourcePath || '/listen',
-              PERSONA: persona,
-            },
-            listIds: [brevoListId],
+            attributes: contactAttributes,
+            listIds: [targetListId],
             updateEnabled: true,
           }),
         });
-        if (!brevoRes.ok) {
+
+        let brevoContactId = null;
+        if (brevoRes.ok) {
+          const resData = await brevoRes.json();
+          brevoContactId = resData?.id;
+        } else {
           const brevoErrText = await brevoRes.text();
           console.warn('Brevo Sync non-OK status:', brevoRes.status, brevoErrText);
+        }
+
+        // If message is provided, log CRM note in Brevo
+        if (message?.trim()) {
+          try {
+            await fetch('https://api.brevo.com/v3/crm/notes', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                'api-key': brevoApiKey,
+              },
+              body: JSON.stringify({
+                text: `<b>${isInstitutional ? 'Institutional Inquiry' : 'Website Submission'}</b> via ${sourcePath || '/join'}:<br>${message.trim()}`,
+                contactIds: brevoContactId ? [brevoContactId] : undefined,
+              }),
+            });
+          } catch (noteErr) {
+            console.warn('Brevo Note logging notice:', noteErr);
+          }
         }
       } catch (brevoErr) {
         console.warn('Brevo Sync notice (non-blocking):', brevoErr);

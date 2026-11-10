@@ -23,3 +23,11 @@ Use vanilla CSS with custom properties (`index.css`).
 - L.D. Murray is Founder in a strategic background role (never front-facing artist).
 - Seriphia is Lead Marketer and Sovereign Guide.
 - Learners learn directly from the 15 Character Heroes across the 7 Lands.
+
+### 6. ASD-STE100 Voice Standard (De-Fluffing & Stoic Clarity)
+All B2B institutional communications, curriculum instructions, and system copy must adhere to Simplified Technical English.
+- Active voice only.
+- Max 20 words per sentence (prose/B2B) and max 15 words per sentence (early childhood instructions).
+- Absolute ban on AI tropes (*delve*, *testament*, *tapestry*, *seamless*, *game-changer*, *holistic*, *elevate*, *foster*).
+- Zero negative contrast staging ("Not X, but Y").
+- Full canon rule: [.agents/rules/asd-ste100-voice-standard.md](file:///c:/Users/ldmur/Downloads/The-Sound-of-Essentials-Website/.agents/rules/asd-ste100-voice-standard.md).

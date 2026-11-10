@@ -12,3 +12,4 @@
 2. **Phase 2 (Organology & Dual-Level Chord SVG Plates):** Vector plates for the 6 instrument families + Apprentice 1-Finger Mini-Chords (Ages 5–7) vs. Mentor 6-String Open Voicings.
 3. **Phase 3 (Royal Quarto Bookbinding CAD):** Print-ready die-lines (`9.5" × 12.25"` Royal Quarto, vegan English morocco-grain faux leather, 22k gold foil stamping featuring `"STAYING ON THE PATH, ALWAYS LEARNING"`, 5 raised spine bands, Smyth-sewn lay-flat binding).
 4. **Phase 4 (QR Audio Stem Routing):** Connect `/music-u/:trackSlug` routes on `soelearn.com` to serve master audio, isolated instrumental backing stems, and 75% slow-tempo practice loops.
+

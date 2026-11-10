@@ -1,0 +1,274 @@
+/* ==========================================================================
+   RhythmSyllableTapWidget.css
+   Bright & Playful Canon (July 2026):
+   - Background: #FFF8F0 cream
+   - Accent: #FF6F00 orange
+   - Radii: 50px pill radius (border-radius: 9999px / 50px)
+   - Typography: Fredoka / Inter
+   - Pure Vanilla CSS with tokens
+   ========================================================================== */
+
+.rhythm-tap-widget {
+  background: #FFF8F0;
+  border: 2px solid rgba(255, 111, 0, 0.18);
+  border-radius: 32px;
+  padding: 2.25rem 2rem;
+  margin: 2rem auto;
+  max-width: 720px;
+  box-shadow: 0 12px 32px rgba(255, 111, 0, 0.08);
+  color: #2D2424;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.rhythm-tap-header {
+  margin-bottom: 1.75rem;
+}
+
+.rhythm-tap-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 111, 0, 0.12);
+  color: #D85A00;
+  font-family: 'Fredoka', cursive, sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.4rem 1.25rem;
+  border-radius: 50px;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.rhythm-tap-pill .pulse-dot {
+  width: 8px;
+  height: 8px;
+  background: #FF6F00;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 8px rgba(255, 111, 0, 0.6);
+  animation: rhythmPulse 1.4s ease-in-out infinite;
+}
+
+@keyframes rhythmPulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.4); opacity: 0.6; }
+}
+
+.rhythm-tap-title {
+  font-family: 'Fredoka', cursive, sans-serif;
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: #1A120B;
+  margin: 0.25rem 0 0.5rem 0;
+  line-height: 1.25;
+}
+
+.rhythm-tap-subtitle {
+  font-size: 0.95rem;
+  color: #5C4B40;
+  margin: 0 auto;
+  max-width: 540px;
+  line-height: 1.5;
+}
+
+/* Word selector chips */
+.rhythm-word-selector {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1.75rem;
+}
+
+.rhythm-word-chip {
+  background: #FFFFFF;
+  border: 1.5px solid rgba(255, 111, 0, 0.22);
+  color: #5C4B40;
+  font-family: 'Fredoka', cursive, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.5rem 1.15rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  outline: none;
+}
+
+.rhythm-word-chip:hover {
+  border-color: #FF6F00;
+  transform: translateY(-2px);
+  color: #FF6F00;
+}
+
+.rhythm-word-chip.active {
+  background: #FF6F00;
+  color: #FFFFFF;
+  border-color: #FF6F00;
+  box-shadow: 0 4px 14px rgba(255, 111, 0, 0.35);
+}
+
+/* Syllable visualizer row */
+.rhythm-syllable-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  min-height: 72px;
+}
+
+.syllable-block {
+  background: #FFFFFF;
+  border: 2px solid #E8D8C8;
+  border-radius: 20px;
+  padding: 0.75rem 1.25rem;
+  min-width: 64px;
+  font-family: 'Fredoka', cursive, sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #8C7A6B;
+  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+  user-select: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.syllable-block.active {
+  background: #FFF0E0;
+  border-color: #FF6F00;
+  color: #D85A00;
+  transform: scale(1.12);
+  box-shadow: 0 8px 20px rgba(255, 111, 0, 0.25);
+}
+
+.syllable-block.completed {
+  background: #E8F5E9;
+  border-color: #4CAF50;
+  color: #2E7D32;
+  transform: scale(1);
+}
+
+/* Big tactile tap button with Anime.js particle stage */
+.rhythm-tap-action-area {
+  margin-bottom: 1.5rem;
+}
+
+.rhythm-drum-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rhythm-particles-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.rhythm-particle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  font-weight: 700;
+  user-select: none;
+  pointer-events: none;
+  will-change: transform, opacity;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.rhythm-drum-button {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #FF8A00 0%, #FF5100 100%);
+  border: 4px solid #FFFFFF;
+  box-shadow: 0 10px 28px rgba(255, 81, 0, 0.4), inset 0 2px 6px rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  font-family: 'Fredoka', cursive, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  transition: transform 0.08s ease-out, box-shadow 0.08s ease-out;
+  outline: none;
+  touch-action: manipulation;
+  user-select: none;
+}
+
+.rhythm-drum-button:hover {
+  transform: scale(1.04);
+  box-shadow: 0 12px 34px rgba(255, 81, 0, 0.5), inset 0 2px 8px rgba(255, 255, 255, 0.5);
+}
+
+.rhythm-drum-button:active,
+.rhythm-drum-button.pressed {
+  transform: scale(0.94) translateY(4px);
+  box-shadow: 0 4px 12px rgba(255, 81, 0, 0.4), inset 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.drum-icon {
+  font-size: 2rem;
+  margin-bottom: 0.15rem;
+}
+
+/* Completion celebrate banner */
+.rhythm-celebrate-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #E8F5E9;
+  color: #2E7D32;
+  border: 1.5px solid rgba(76, 175, 80, 0.3);
+  padding: 0.5rem 1.25rem;
+  border-radius: 50px;
+  font-family: 'Fredoka', cursive, sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-top: 0.75rem;
+  animation: popIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Tactile takeaway footer note */
+.rhythm-tactile-footer {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px dashed rgba(255, 111, 0, 0.2);
+  font-size: 0.85rem;
+  color: #7A685B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.rhythm-tactile-footer strong {
+  color: #D85A00;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rhythm-particle {
+    display: none !important;
+  }
+  .rhythm-drum-button {
+    transition: none !important;
+  }
+}
+

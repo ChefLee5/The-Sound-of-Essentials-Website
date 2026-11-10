@@ -69,3 +69,4 @@ Most early-childhood music books are disposable, brightly plasticized, spiral-bo
 | **18** | **Rain** | **Terrasol** (Vesta & Silas) | D Minor / F Major · `4/4` | `♩ = 80` *Tranquillo* | Pizzicato Violin/Guitar, Rainstick, Soft Piano | **Staccato Articulation:** Short plucked raindrops (`staccato`) vs. smooth flowing streams (`legato`) (`P-SCI 4`). |
 | **19** | **After the Storm (Outro)** *(Instrumental Benediction)* | **Terrasol** (Seriphia Guide) | G Major · `4/4` | `♩ = 66` *Largo* | Solo Nylon Guitar, Warm String Pad, 432 Hz Chimes | **Somatic Resolution & Rest:** Plagal cadence (`IV–I`) bringing heart rate to calm evening sanctuary (`P-SE 1`). |
 | **20–22** | **Bonus Conservatory Stems I–III** | **All 7 Lands** (Seriphia) | `Em` · `G` · `C` | `♩ = 75% / 100%` | Full Acoustic Backing Ensemble (No Lead Vox) | **Recital Performance Scores:** Engraved ensemble arrangements for classroom graduation recitals. |
+

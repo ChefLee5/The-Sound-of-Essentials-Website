@@ -50,7 +50,7 @@ export default function InstitutionsQpc() {
         name: leadName.trim(),
         email: leadEmail.trim().toLowerCase(),
         organizationName: leadOrg.trim() || 'Early Childhood Institution',
-        notes: `Classrooms: ${classroomCount}, Type: ${orgType}, Timeline: ${timeline}, Phone: ${leadPhone.trim()}`,
+        message: `Classrooms: ${classroomCount}, Type: ${orgType}, Timeline: ${timeline}, Phone: ${leadPhone.trim()}`,
         sourcePath: '/institutions',
       });
       trackLead({
