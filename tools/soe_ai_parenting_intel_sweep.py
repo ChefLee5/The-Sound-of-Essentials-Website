@@ -24,17 +24,17 @@ VAULT_FILE = DOCS_DIR / "soe_ai_parenting_intel_vault.json"
 DEFAULT_SEEDS = [
     {
         "id": "INTEL-001",
-        "speaker": "Jensen Huang",
-        "title": "CEO & Founder, NVIDIA",
-        "source": "Ask the Giants / Lex Fridman Interview",
-        "url": "https://youtu.be/CYn4mOV5r7o",
-        "quote": "Language is the programming language of AI. The ultimate programming language. It could be that the English major could be the most successful.",
+        "speaker": "Andrej Karpathy",
+        "title": "Co-Founder, OpenAI & Founder, Eureka Labs",
+        "source": "Andrej Karpathy (@karpathy)",
+        "url": "https://x.com/karpathy",
+        "quote": "The hottest new programming language is English.",
         "concept": "Natural Language as AI's Native Code",
         "target_age": "2-7",
         "leverage_score": 98.0,
         "soe_asset_mapping": "Harmonia Land (Kenji & Aiko), Phonics & Vocabulary, 19-Track Album Lead Magnet",
-        "ad_hook": "NVIDIA's CEO says language is the ultimate code of AI. Before Python, toddlers need rhythm and phonics.",
-        "date_added": "2026-11-09"
+        "ad_hook": "OpenAI's co-founder says English is the hottest new programming language. Before Python, toddlers need rhythm and phonics.",
+        "date_added": "2026-11-12"
     },
     {
         "id": "INTEL-002",

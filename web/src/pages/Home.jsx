@@ -414,9 +414,9 @@ const Home = () => {
           <div className="ai-readiness-grid">
             <RevealSection delay={0.1}>
               <div className="ai-readiness-card glass-card">
-                <div className="ai-readiness-card__quote-badge">NVIDIA CEO Jensen Huang</div>
+                <div className="ai-readiness-card__quote-badge">OpenAI Co-Founder Andrej Karpathy</div>
                 <blockquote className="ai-readiness-card__quote">
-                  "Language is the programming language of AI. The ultimate programming language."
+                  "The hottest new programming language is English."
                 </blockquote>
                 <h3 className="ai-readiness-card__title">Language Is the First Compiler</h3>
                 <p className="ai-readiness-card__desc">

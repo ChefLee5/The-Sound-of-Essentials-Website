@@ -1,13 +1,13 @@
 # 🎯 SOE AI Builder Marketing Hooks & Creatives Export
-**Generated:** 2026-11-09 16:01:44
+**Generated:** 2026-11-12 08:30:27
 **Source Vault:** `docs/soe_ai_parenting_intel_vault.json`
 
 ---
 
-### Jensen Huang — Natural Language as AI's Native Code
+### Andrej Karpathy — Natural Language as AI's Native Code
 - **Score:** `98.0%` (Alpha Leverage)
-- **Quote:** *"Language is the programming language of AI. The ultimate programming language. It could be that the English major could be the most successful."*
-- **Meta Ad Hook:** NVIDIA's CEO says language is the ultimate code of AI. Before Python, toddlers need rhythm and phonics.
+- **Quote:** *"The hottest new programming language is English."*
+- **Meta Ad Hook:** OpenAI's co-founder says English is the hottest new programming language. Before Python, toddlers need rhythm and phonics.
 - **Organic Social Angle:** Short-form reaction pointing to `soelearn.com/listen`.
 - **SOE Asset Mapping:** Harmonia Land (Kenji & Aiko), Phonics & Vocabulary, 19-Track Album Lead Magnet
 

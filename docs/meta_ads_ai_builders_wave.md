@@ -7,12 +7,12 @@
 
 ---
 
-## Creative 01: The AI Builder's Secret (Jensen Huang Hook)
+## Creative 01: The AI Builder's Secret (Andrej Karpathy Hook)
 
 * **Ad Set:** `AdSet - Tech & Conscientious Parents (Ages 2–7)`
 * **Campaign:** `SOE - Acquisition (Wave 6 - AI Builder Intelligence)`
 * **Target Objective:** Leads / Listen Free (`soelearn.com/listen`)
-* **UTM:** `utm_source=meta&utm_medium=paid_social&utm_campaign=cold_ai_wave6&utm_content=ad01_jensen_language_code`
+* **UTM:** `utm_source=meta&utm_medium=paid_social&utm_campaign=cold_ai_wave6&utm_content=ad01_karpathy_language_code`
 
 ### Ad Copy
 * **Headline:** Language Is the Code of the Future
@@ -22,9 +22,9 @@
 
 #### Primary Text:
 ```
-NVIDIA's CEO Jensen Huang said something that caught Silicon Valley completely off guard:
+OpenAI co-founder Andrej Karpathy said something that caught Silicon Valley completely off guard:
 
-"Language is the programming language of AI. The ultimate programming language."
+"The hottest new programming language is English."
 
 If natural language is the ultimate code of the future, where does the compiler get built?
 

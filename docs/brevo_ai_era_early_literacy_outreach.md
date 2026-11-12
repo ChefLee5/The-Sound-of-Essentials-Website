@@ -36,8 +36,8 @@ Dear {{contact.FIRSTNAME | default: "Early Childhood Director"}},
 
 As educational technology vendors flood districts with tablet-based learning apps, the leaders who actually build artificial intelligence are saying something strikingly different.
 
-Recently, NVIDIA CEO Jensen Huang noted an essential truth:
-*"Language is the programming language of AI. The ultimate programming language."*
+Recently, OpenAI co-founder Andrej Karpathy noted an essential truth:
+*"The hottest new programming language is English."*
 
 If natural language is the foundational code of the future, where is the compiler built?
 

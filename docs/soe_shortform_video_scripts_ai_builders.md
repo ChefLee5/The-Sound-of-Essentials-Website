@@ -7,7 +7,7 @@
 
 ---
 
-## Script 01: "The Language Compiler" (Jensen Huang Hook)
+## Script 01: "The Language Compiler" (Andrej Karpathy Hook)
 * **Target Duration:** 42 seconds
 * **Sound Cue / Background Track:** SOE Album Track 1 — *"Welcome to Harmonia"* (Acoustic rhythm, gentle guitar & percussion at 105 BPM, low volume under voiceover)
 * **Format:** Face-to-camera with Green Screen or split B-roll
@@ -16,8 +16,8 @@
 
 | Time | Visual / B-Roll | On-Screen Text Overlay | Spoken Script (Voiceover / Creator) |
 | :---: | :--- | :--- | :--- |
-| **0:00–0:03** | Creator points up at a bold screenshot of Jensen Huang's headline. | 🚨 "Language is the programming language of AI" — NVIDIA CEO | "NVIDIA's CEO just said something that should change how every parent thinks about early education." |
-| **0:03–0:12** | Quick cut to footage of a toddler tapping aimlessly on a flashing tablet vs. clapping along with a wooden rhythm stick. | ❌ Toddler Coding Apps<br>✅ Auditory & Language Wiring | "He said: *'Language is the programming language of AI. The ultimate programming language.'* Everyone told parents to teach 4-year-olds to code. But the people who actually built the models know the truth." |
+| **0:00–0:03** | Creator points up at a bold screenshot of Andrej Karpathy's quote. | 🚨 "The hottest new programming language is English." — Andrej Karpathy | "One of OpenAI's co-founders just said something that should change how every parent thinks about early education." |
+| **0:03–0:12** | Quick cut to footage of a toddler tapping aimlessly on a flashing tablet vs. clapping along with a wooden rhythm stick. | ❌ Toddler Coding Apps<br>✅ Auditory & Language Wiring | "Andrej Karpathy—who co-founded OpenAI and led AI at Tesla—put it simply: *'The hottest new programming language is English.'* Everyone told parents to teach 4-year-olds to code. But the people who actually built the models know the truth." |
 | **0:12–0:24** | B-roll of The Sound of Essentials 2D storybook art (Kenji and Aiko clapping in Harmonia, glowing letters rising). | 🧠 Build the compiler between ages 2 and 7 | "If natural language is the ultimate code, where does your child's compiler get installed? Not on an iPad. Inside the developing brain between ages 2 and 7—through phonics, acoustic rhythm, and rich vocabulary." |
 | **0:24–0:34** | Quick pan of the physical *Rhythm Ready Workbook* and phone streaming the 19-track album through a Bluetooth speaker. | 🎶 100% Screen-Free<br>📻 19 Original Songs | "When kids sing rhythmically, their brain connects sound to meaning twice as fast. That's why The Sound of Essentials made a 100% screen-free music curriculum for ages 2 to 7." |
 | **0:34–0:42** | Creator smiles, showing the phone screen with the free album player. | 🎁 Link in Bio: Stream 19 Tracks Free! | "Build their biological foundation first. Tap the link in my bio to stream the complete 19-track foundational album 100% free right now." |
