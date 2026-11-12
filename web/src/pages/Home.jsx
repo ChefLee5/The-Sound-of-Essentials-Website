@@ -12,6 +12,12 @@ import { assetCssUrl, assetPath } from '../utils/assetPath';
 import Floating3DBook from '../components/ui/Floating3DBook';
 import StickyThumbCta from '../components/ui/StickyThumbCta';
 import KineticHeadline from '../components/KineticHeadline';
+import {
+  MagicOfferCard,
+  AnimatedShinyPill,
+  SparklesText,
+  ShimmerButton,
+} from '../components/ui/MagicOfferPrimitives';
 
 const Home = () => {
   const { t } = useTranslation();
@@ -167,45 +173,71 @@ const Home = () => {
                 </h1>
                 <p className="section-subtitle hero__subtitle">{t('home.hero_offer.subtitle')}</p>
 
-                {/* Offer Pricing & Value Box */}
-                <div className="hero__offer-box glass-card">
+                {/* Offer Pricing & Value Box (Magic UI: BorderBeam · MagicCard · ShinyPill · SparklesText · ShimmerButton) */}
+                <MagicOfferCard className="hero__offer-box">
+                  <div className="hero__offer-top">
+                    <AnimatedShinyPill>{t('home.hero_offer.price_note')}</AnimatedShinyPill>
+                  </div>
+
                   <div className="hero__price-line">
                     <span className="hero__price-strike">{t('home.hero_offer.price_strike')}</span>
                     <span className="hero__price-arrow" aria-hidden="true">→</span>
-                    <span className="hero__price-val">{t('home.hero_offer.price_tag')}</span>
-                    <span className="hero__price-note">· {t('home.hero_offer.price_note')}</span>
+                    <SparklesText className="hero__price-val">
+                      {t('home.hero_offer.price_tag')}
+                    </SparklesText>
                   </div>
 
                   <ul className="hero__checkmarks">
                     <li>
-                      <span className="check-icon">✓</span>
+                      <span className="check-icon" aria-hidden="true">
+                        <svg viewBox="0 0 16 16" width="12" height="12" fill="none">
+                          <path d="M3.2 8.4L6.4 11.4L12.8 4.8" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                      </span>
                       <span>{t('home.hero_offer.check_1')}</span>
                     </li>
                     <li>
-                      <span className="check-icon">✓</span>
+                      <span className="check-icon" aria-hidden="true">
+                        <svg viewBox="0 0 16 16" width="12" height="12" fill="none">
+                          <path d="M3.2 8.4L6.4 11.4L12.8 4.8" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                      </span>
                       <span>{t('home.hero_offer.check_2')}</span>
                     </li>
                     <li>
-                      <span className="check-icon">✓</span>
+                      <span className="check-icon" aria-hidden="true">
+                        <svg viewBox="0 0 16 16" width="12" height="12" fill="none">
+                          <path d="M3.2 8.4L6.4 11.4L12.8 4.8" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                      </span>
                       <span>{t('home.hero_offer.check_3')}</span>
                     </li>
                     <li>
-                      <span className="check-icon">✓</span>
+                      <span className="check-icon" aria-hidden="true">
+                        <svg viewBox="0 0 16 16" width="12" height="12" fill="none">
+                          <path d="M3.2 8.4L6.4 11.4L12.8 4.8" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                      </span>
                       <span>{t('home.hero_offer.check_4')}</span>
                     </li>
                   </ul>
 
                   <div className="hero__actions">
-                    <Link to="/listen" className="btn btn-gold btn-shimmer hero__btn-primary">
+                    <ShimmerButton to="/listen" className="hero__btn-primary">
                       {t('home.hero_offer.cta_primary')}
-                    </Link>
+                    </ShimmerButton>
                   </div>
 
                   <div className="hero__guarantee">
-                    <span className="guarantee-icon">🔒</span>
+                    <span className="guarantee-icon" aria-hidden="true">
+                      <svg viewBox="0 0 16 16" width="13" height="13" fill="none">
+                        <rect x="3" y="7" width="10" height="7" rx="2" stroke="currentColor" strokeWidth="1.6" />
+                        <path d="M5.2 7V5a2.8 2.8 0 0 1 5.6 0v2" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+                      </svg>
+                    </span>
                     <span>{t('home.hero_offer.guarantee_badge')}</span>
                   </div>
-                </div>
+                </MagicOfferCard>
               </div>
 
               {/* Hero Visual: 3D Interactive Floating Album Cover Showcase */}
@@ -1305,18 +1337,20 @@ const Home = () => {
 
         /* Hero Offer Card */
         .hero__offer-box {
-          padding: 1.75rem 2rem;
-          background: rgba(255, 255, 255, 0.85);
-          border: 2px solid rgba(255, 111, 0, 0.25);
-          box-shadow: 0 12px 36px rgba(0, 0, 0, 0.08);
-          border-radius: var(--radius-lg);
+          padding: 1.65rem 1.85rem 1.45rem;
           margin-bottom: 1rem;
+        }
+
+        .hero__offer-top {
+          display: flex;
+          align-items: center;
+          margin-bottom: 0.85rem;
         }
 
         .hero__price-line {
           display: flex;
           align-items: center;
-          gap: 0.6rem;
+          gap: 0.65rem;
           font-family: var(--font-heading);
           flex-wrap: wrap;
           margin-bottom: 1.25rem;
@@ -1324,70 +1358,97 @@ const Home = () => {
 
         .hero__price-strike {
           text-decoration: line-through;
-          color: var(--color-text-muted);
-          font-size: 0.95rem;
+          color: var(--color-text-dark-secondary);
+          background: rgba(255, 111, 0, 0.08);
+          border: 1px solid rgba(255, 111, 0, 0.16);
+          border-radius: 50px;
+          padding: 0.18rem 0.65rem;
+          font-size: 0.88rem;
+          font-weight: 600;
         }
 
         .hero__price-arrow {
-          color: var(--color-text-muted);
+          color: var(--color-orange);
+          font-weight: 700;
         }
 
         .hero__price-val {
-          font-size: 1.35rem;
+          font-size: clamp(1.3rem, 2.2vw, 1.55rem);
           font-weight: 700;
-          color: var(--color-green);
-        }
-
-        .hero__price-note {
-          font-size: 0.85rem;
-          color: var(--color-text-secondary);
+          color: #2E7D32;
+          letter-spacing: -0.01em;
+          line-height: 1.2;
         }
 
         .hero__checkmarks {
           list-style: none;
           padding: 0;
-          margin: 0 0 1.5rem 0;
+          margin: 0 0 1.35rem 0;
           display: grid;
           grid-template-columns: repeat(2, 1fr);
-          gap: 0.75rem 1.25rem;
+          gap: 0.65rem 0.85rem;
         }
 
         .hero__checkmarks li {
           display: flex;
           align-items: flex-start;
-          gap: 0.5rem;
-          font-size: 0.92rem;
+          gap: 0.6rem;
+          padding: 0.65rem 0.78rem;
+          border-radius: 16px;
+          background: rgba(255, 248, 240, 0.75);
+          border: 1px solid rgba(255, 111, 0, 0.12);
+          font-size: 0.88rem;
+          font-weight: 500;
           line-height: 1.4;
-          color: var(--color-text-primary);
+          color: var(--color-text-dark);
+          text-align: left;
+          transition: background 0.22s ease, border-color 0.22s ease, transform 0.22s ease;
+        }
+
+        .hero__checkmarks li:hover {
+          background: rgba(255, 255, 255, 0.96);
+          border-color: rgba(76, 175, 80, 0.32);
+          transform: translateY(-1px);
         }
 
         .check-icon {
-          color: var(--color-green);
-          font-weight: 700;
-          font-size: 1.05rem;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 22px;
+          height: 22px;
+          border-radius: 50%;
+          background: rgba(76, 175, 80, 0.14);
+          border: 1px solid rgba(76, 175, 80, 0.3);
+          color: #2E7D32;
           flex-shrink: 0;
+          margin-top: 1px;
         }
 
         .hero__actions {
           display: flex;
+          align-items: center;
           gap: 1rem;
           flex-wrap: wrap;
           margin-bottom: 1rem;
         }
 
-        .hero__btn-primary {
-          box-shadow: 0 6px 24px rgba(255,111,0,0.3);
-          font-size: 1rem;
-          padding: 0.85rem 1.75rem;
-        }
-
         .hero__guarantee {
           display: flex;
           align-items: center;
-          gap: 0.4rem;
-          font-size: 0.8rem;
-          color: var(--color-text-muted);
+          gap: 0.45rem;
+          padding-top: 0.85rem;
+          border-top: 1px solid rgba(255, 111, 0, 0.12);
+          font-size: 0.82rem;
+          color: var(--color-text-dark-secondary);
           font-weight: 500;
+        }
+
+        .guarantee-icon {
+          display: inline-flex;
+          align-items: center;
+          color: #2E7D32;
+          flex-shrink: 0;
         }
 
         /* 3D Character Cylinder Carousel */
@@ -2455,7 +2516,10 @@ const Home = () => {
           .hero__content { text-align: center; }
           .hero__title { justify-content: center; }
           .hero__subtitle { margin: 0 auto 1.5rem; text-align: center; }
+          .hero__offer-box { padding: 1.35rem 1.15rem 1.2rem; }
+          .hero__offer-top { justify-content: center; }
           .hero__price-line { justify-content: center; }
+          .hero__checkmarks { grid-template-columns: 1fr; gap: 0.55rem; }
           .hero__actions { justify-content: center; }
           .hero__guarantee { justify-content: center; }
           .domains-grid { grid-template-columns: 1fr; }

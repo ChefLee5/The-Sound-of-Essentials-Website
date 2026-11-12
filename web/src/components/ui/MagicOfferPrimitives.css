@@ -1,0 +1,311 @@
+/* ============================================================================
+   MAGIC UI PRIMITIVES (SOE Bright & Playful July 2026 Canon)
+   BorderBeam · MagicCard Spotlight · AnimatedShinyText · SparklesText · ShimmerButton
+   ============================================================================ */
+
+/* ── 1. MagicCard + BorderBeam Wrapper ── */
+.magic-offer-card {
+  position: relative;
+  border-radius: var(--radius-lg, 28px);
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.96) 0%,
+    rgba(255, 248, 240, 0.92) 60%,
+    rgba(255, 253, 249, 0.95) 100%
+  );
+  border: 1px solid rgba(255, 111, 0, 0.16);
+  box-shadow:
+    inset 0 1.5px 0 rgba(255, 255, 255, 0.95),
+    0 18px 46px -12px rgba(255, 111, 0, 0.16),
+    0 8px 24px -6px rgba(43, 32, 22, 0.07);
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  overflow: hidden;
+  isolation: isolate;
+  transition:
+    transform 0.32s cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 0.32s cubic-bezier(0.2, 0.8, 0.2, 1),
+    border-color 0.32s ease;
+}
+
+.magic-offer-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 111, 0, 0.3);
+  box-shadow:
+    inset 0 1.5px 0 rgba(255, 255, 255, 1),
+    0 24px 54px -12px rgba(255, 111, 0, 0.22),
+    0 10px 28px -6px rgba(43, 32, 22, 0.09);
+}
+
+/* Cursor-following warm spotlight (MagicCard) */
+.magic-offer-card__spotlight {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  z-index: 0;
+  opacity: var(--magic-opacity, 0);
+  background: radial-gradient(
+    360px circle at var(--magic-x, 50%) var(--magic-y, 50%),
+    rgba(255, 179, 0, 0.16),
+    rgba(255, 111, 0, 0.06) 45%,
+    transparent 74%
+  );
+  transition: opacity 0.28s ease;
+}
+
+/* Traveling perimeter beam (BorderBeam) */
+.magic-border-beam {
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 2;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  overflow: hidden;
+}
+
+.magic-border-beam::before {
+  content: '';
+  position: absolute;
+  inset: -120%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg 255deg,
+    rgba(255, 111, 0, 0.35) 280deg,
+    #ff6f00 308deg,
+    #ffb300 330deg,
+    #4caf50 348deg,
+    transparent 360deg
+  );
+  animation: magic-beam-rotate 6.5s linear infinite;
+  will-change: transform;
+}
+
+.magic-offer-card__inner {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── 2. AnimatedShinyText Pill ── */
+.magic-shiny-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.35rem 0.9rem;
+  border-radius: 50px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 248, 240, 0.95),
+    rgba(255, 241, 224, 0.9)
+  );
+  border: 1px solid rgba(255, 111, 0, 0.24);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    0 2px 10px rgba(255, 111, 0, 0.08);
+  font-family: var(--font-heading, 'Fredoka', sans-serif);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.015em;
+  line-height: 1.25;
+}
+
+.magic-shiny-pill__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #4caf50;
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+  flex-shrink: 0;
+}
+
+.magic-shiny-pill__text {
+  background: linear-gradient(
+    110deg,
+    #8d3b00 0%,
+    #8d3b00 38%,
+    #ff6f00 48%,
+    #ffb300 52%,
+    #8d3b00 62%,
+    #8d3b00 100%
+  );
+  background-size: 240% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: magic-shiny-sweep 4.2s ease-in-out infinite;
+}
+
+/* ── 3. SparklesText ── */
+.magic-sparkles-text {
+  position: relative;
+  display: inline-block;
+}
+
+.magic-sparkles-text__content {
+  position: relative;
+  z-index: 1;
+}
+
+.magic-sparkles-text__star {
+  position: absolute;
+  pointer-events: none;
+  z-index: 2;
+  display: block;
+}
+
+/* ── 4. ShimmerButton (Magic UI Shimmer CTA) ── */
+.magic-shimmer-btn-wrap {
+  display: inline-block;
+}
+
+.magic-shimmer-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.92rem 1.9rem;
+  border-radius: 50px;
+  border: 1.5px solid rgba(255, 255, 255, 0.65);
+  background: linear-gradient(135deg, #ff6f00 0%, #ff9100 55%, #ffb300 100%);
+  color: var(--color-text-dark, #2b2016);
+  font-family: var(--font-heading, 'Fredoka', sans-serif);
+  font-size: 1.03rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  cursor: pointer;
+  overflow: hidden;
+  isolation: isolate;
+  box-shadow:
+    inset 0 1.5px 0 rgba(255, 255, 255, 0.65),
+    0 10px 28px -6px rgba(255, 111, 0, 0.45),
+    0 2px 6px rgba(43, 32, 22, 0.08);
+  transition:
+    box-shadow 0.25s ease,
+    filter 0.25s ease;
+}
+
+.magic-shimmer-btn:hover {
+  box-shadow:
+    inset 0 1.5px 0 rgba(255, 255, 255, 0.8),
+    0 14px 36px -6px rgba(255, 111, 0, 0.56),
+    0 4px 12px rgba(43, 32, 22, 0.1);
+}
+
+/* Rotating rim sparkle on button */
+.magic-shimmer-btn__spark {
+  position: absolute;
+  inset: 0;
+  padding: 1.5px;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 0;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  overflow: hidden;
+}
+
+.magic-shimmer-btn__spark::before {
+  content: '';
+  position: absolute;
+  inset: -150%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg 290deg,
+    rgba(255, 255, 255, 0.95) 330deg,
+    transparent 360deg
+  );
+  animation: magic-beam-rotate 3.6s linear infinite;
+}
+
+/* Smooth glass glare sweep across button face */
+.magic-shimmer-btn__glare {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background: linear-gradient(
+    115deg,
+    transparent 0%,
+    transparent 36%,
+    rgba(255, 255, 255, 0.42) 50%,
+    transparent 64%,
+    transparent 100%
+  );
+  transform: translateX(-120%);
+  animation: magic-btn-glare 4.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.magic-shimmer-btn__label {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+@keyframes magic-beam-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes magic-shiny-sweep {
+  0%,
+  15% {
+    background-position: 120% 0;
+  }
+  55%,
+  100% {
+    background-position: -120% 0;
+  }
+}
+
+@keyframes magic-btn-glare {
+  0%,
+  20% {
+    transform: translateX(-120%);
+  }
+  55%,
+  100% {
+    transform: translateX(120%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .magic-border-beam::before,
+  .magic-shiny-pill__text,
+  .magic-shimmer-btn__spark::before,
+  .magic-shimmer-btn__glare {
+    animation: none;
+  }
+
+  .magic-shiny-pill__text {
+    color: #8d3b00;
+    background: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .magic-shimmer-btn-wrap,
+  .magic-shimmer-btn {
+    width: 100%;
+  }
+}
+
