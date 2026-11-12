@@ -33,6 +33,23 @@
   font-display: swap;
 }
 
+/* Life Savers — self-hosted whimsical serif display & offer font */
+@font-face {
+  font-family: 'Life Savers';
+  src: url('/assets/fonts/LifeSavers-Vg8y.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Life Savers';
+  src: url('/assets/fonts/LifeSaversBold-JynB.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 
 :root {
   /* ── Bright & Playful Palette ── */
@@ -102,6 +119,7 @@
   --font-cursive: 'Have Idea', 'Dancing Script', cursive;
   --font-sugar: 'More Sugar', 'Fredoka', cursive;
   --font-milky: 'Milky Week', 'Fredoka', cursive, sans-serif;
+  --font-lifesavers: 'Life Savers', 'Fredoka', serif;
 
   /* ── Safe Area Insets ── */
   --safe-area-top: env(safe-area-inset-top, 0px);

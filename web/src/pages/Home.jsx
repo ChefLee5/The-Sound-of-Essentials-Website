@@ -1339,6 +1339,13 @@ const Home = () => {
         .hero__offer-box {
           padding: 1.65rem 1.85rem 1.45rem;
           margin-bottom: 1rem;
+          font-family: var(--font-lifesavers);
+        }
+
+        .hero__offer-box .magic-shiny-pill,
+        .hero__offer-box .magic-shimmer-btn {
+          font-family: var(--font-lifesavers);
+          font-weight: 700;
         }
 
         .hero__offer-top {
@@ -1351,7 +1358,7 @@ const Home = () => {
           display: flex;
           align-items: center;
           gap: 0.65rem;
-          font-family: var(--font-heading);
+          font-family: var(--font-lifesavers);
           flex-wrap: wrap;
           margin-bottom: 1.25rem;
         }
@@ -1363,8 +1370,8 @@ const Home = () => {
           border: 1px solid rgba(255, 111, 0, 0.16);
           border-radius: 50px;
           padding: 0.18rem 0.65rem;
-          font-size: 0.88rem;
-          font-weight: 600;
+          font-size: 0.92rem;
+          font-weight: 700;
         }
 
         .hero__price-arrow {
@@ -1373,7 +1380,7 @@ const Home = () => {
         }
 
         .hero__price-val {
-          font-size: clamp(1.3rem, 2.2vw, 1.55rem);
+          font-size: clamp(1.38rem, 2.3vw, 1.65rem);
           font-weight: 700;
           color: #2E7D32;
           letter-spacing: -0.01em;
@@ -1393,13 +1400,13 @@ const Home = () => {
           display: flex;
           align-items: flex-start;
           gap: 0.6rem;
-          padding: 0.65rem 0.78rem;
+          padding: 0.68rem 0.82rem;
           border-radius: 16px;
           background: rgba(255, 248, 240, 0.75);
           border: 1px solid rgba(255, 111, 0, 0.12);
-          font-size: 0.88rem;
-          font-weight: 500;
-          line-height: 1.4;
+          font-size: 0.93rem;
+          font-weight: 700;
+          line-height: 1.42;
           color: var(--color-text-dark);
           text-align: left;
           transition: background 0.22s ease, border-color 0.22s ease, transform 0.22s ease;
@@ -1439,9 +1446,9 @@ const Home = () => {
           gap: 0.45rem;
           padding-top: 0.85rem;
           border-top: 1px solid rgba(255, 111, 0, 0.12);
-          font-size: 0.82rem;
+          font-size: 0.86rem;
           color: var(--color-text-dark-secondary);
-          font-weight: 500;
+          font-weight: 700;
         }
 
         .guarantee-icon {
