@@ -37,3 +37,41 @@ def test_rhythm_guardian_kill_and_scale_decisions():
     assert decisions["ad_winner_1"]["action"] == "SCALE_BUDGET"
     assert decisions["ad_winner_1"]["new_budget_cents"] == 6000  # +20% of 5000
     assert decisions["ad_learning_1"]["action"] == "HOLD"
+
+
+def test_rhythm_guardian_adversarial_review_and_anti_shiny_object():
+    guardian = RhythmGuardianOptimizer()
+
+    # 1. Valid canon-locked & funnel-aligned proposal -> APPROVED
+    good = guardian.review_proposal_adversarial({
+        "unit_key": "MCLS-STUDIO",
+        "title": "Ad18: If They Can't Rhyme (Ages 2–7 Harmonia Phonics)",
+        "description": "3-Layer meta ad anchored on Kenji & Aiko phonics rhyming.",
+        "target_route": "https://soelearn.com/listen",
+        "visual_reference": "The Sound of Essentials Image Assets/Canonical Master Visuals/Pond Aiko_Kenji.png",
+        "requires_visual": True,
+    })
+    assert good["approved"] is True
+    assert good["verdict"] == "APPROVED"
+
+    # 2. Age creep / retired entity -> BLOCKED_CANON
+    bad_canon = guardian.review_proposal_adversarial({
+        "unit_key": "MCLS-PULSE",
+        "title": "Ages 2-8 guide featuring Marcus",
+        "description": "No credit card required.",
+        "target_route": "/listen",
+    })
+    assert bad_canon["approved"] is False
+    assert bad_canon["verdict"] == "BLOCKED_CANON"
+    assert len(bad_canon["canon_violations"]) == 3
+
+    # 3. Shiny-object / Linktree distraction -> SHINY_OBJECT_HOLD
+    shiny = guardian.review_proposal_adversarial({
+        "unit_key": "MCLS-PRIME",
+        "title": "Launch crypto token and Linktree storefront",
+        "description": "Side quest outside core SOE curriculum.",
+        "target_route": "https://linktr.ee/random",
+    })
+    assert shiny["approved"] is False
+    assert shiny["verdict"] == "SHINY_OBJECT_HOLD"
+    assert len(shiny["shiny_object_flags"]) >= 2

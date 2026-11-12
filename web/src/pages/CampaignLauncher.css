@@ -12,13 +12,13 @@
 }
 
 .mcls-container {
-  max-width: 1240px;
+  max-width: 1280px;
   margin: 0 auto;
 }
 
 .mcls-header {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1.75rem;
 }
 
 .mcls-badge {
@@ -47,8 +47,98 @@
 .mcls-subtitle {
   font-size: 1.05rem;
   color: #6B5E51;
-  max-width: 720px;
+  max-width: 780px;
   margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* Top Telemetry Strip */
+.mcls-kpi-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.mcls-kpi-pill {
+  background: #FFFFFF;
+  border: 1.5px solid #EADBCC;
+  border-radius: 16px;
+  padding: 0.9rem 1.15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  box-shadow: 0 4px 14px rgba(43, 32, 22, 0.04);
+}
+
+.mcls-kpi-value {
+  font-family: var(--font-heading, 'Fredoka', cursive);
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #FF6F00;
+}
+
+.mcls-kpi-label {
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #7A6D60;
+}
+
+/* Command Deck Navigation Tabs */
+.mcls-nav-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-bottom: 1.75rem;
+  background: #FFFFFF;
+  padding: 0.6rem;
+  border-radius: 18px;
+  border: 1.5px solid #EADBCC;
+  box-shadow: 0 4px 16px rgba(43, 32, 22, 0.04);
+}
+
+.mcls-nav-tab {
+  flex: 1 1 auto;
+  background: transparent;
+  border: none;
+  border-radius: 12px;
+  padding: 0.75rem 1.15rem;
+  font-family: var(--font-heading, 'Fredoka', cursive);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #5A4E42;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.mcls-nav-tab:hover {
+  background: #FFF8F0;
+  color: #2B2016;
+}
+
+.mcls-nav-tab.active {
+  background: linear-gradient(135deg, #FF6F00 0%, #E65100 100%);
+  color: #FFFFFF;
+  box-shadow: 0 4px 12px rgba(255, 111, 0, 0.28);
+}
+
+.mcls-tab-counter {
+  font-size: 0.74rem;
+  padding: 2px 8px;
+  border-radius: 20px;
+  background: rgba(43, 32, 22, 0.08);
+  color: inherit;
+}
+
+.mcls-nav-tab.active .mcls-tab-counter {
+  background: rgba(255, 255, 255, 0.24);
+  color: #FFFFFF;
 }
 
 /* Connection Deck Banner */
@@ -112,9 +202,13 @@
   color: #3A2E22;
   cursor: pointer;
   transition: all 0.2s;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
 }
 
-.mcls-btn-wire:hover {
+.mcls-btn-wire:hover:not(:disabled) {
   background: #FF6F00;
   color: #FFFFFF;
   border-color: #FF6F00;
@@ -155,9 +249,11 @@
   font-size: 1.35rem;
   font-weight: 700;
   color: #2B2016;
-  margin-bottom: 1.5rem;
+  margin: 0 0 1.25rem;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
   gap: 0.5rem;
 }
 
@@ -226,7 +322,9 @@
   margin-bottom: 0.4rem;
 }
 
-.mcls-select, .mcls-input {
+.mcls-select,
+.mcls-input,
+.mcls-textarea {
   width: 100%;
   padding: 0.85rem 1rem;
   border-radius: 12px;
@@ -237,9 +335,18 @@
   outline: none;
   transition: border-color 0.2s;
   box-sizing: border-box;
+  font-family: inherit;
 }
 
-.mcls-select:focus, .mcls-input:focus {
+.mcls-textarea {
+  min-height: 110px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.mcls-select:focus,
+.mcls-input:focus,
+.mcls-textarea:focus {
   border-color: #FF6F00;
 }
 
@@ -299,8 +406,8 @@
   border-radius: 50px;
   font-family: var(--font-heading, 'Fredoka', cursive);
   font-weight: 800;
-  font-size: 1.15rem;
-  padding: 1.1rem 2rem;
+  font-size: 1.1rem;
+  padding: 1rem 1.75rem;
   cursor: pointer;
   box-shadow: 0 6px 20px rgba(255, 111, 0, 0.35);
   transition: all 0.2s ease;
@@ -347,7 +454,8 @@
   font-size: 0.8rem;
   max-height: 320px;
   overflow: auto;
-  margin-top: 1rem;
+  margin-top: 0.85rem;
+  white-space: pre-wrap;
 }
 
 /* Telemetry Stats */
@@ -379,4 +487,199 @@
   text-transform: uppercase;
   font-weight: 700;
   margin-top: 2px;
+}
+
+/* Approval Cards & Units Grid */
+.mcls-approvals-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+
+.mcls-approval-card {
+  background: #FFFDF9;
+  border: 1.5px solid #EADBCC;
+  border-radius: 18px;
+  padding: 1.35rem 1.5rem;
+  transition: all 0.2s ease;
+}
+
+.mcls-approval-card.executed {
+  border-color: #81C784;
+  background: rgba(76, 175, 80, 0.04);
+}
+
+.mcls-approval-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.65rem;
+}
+
+.mcls-pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  align-items: center;
+}
+
+.mcls-tag {
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: #EFE6DC;
+  color: #4A3E32;
+}
+
+.mcls-tag.unit {
+  background: rgba(255, 111, 0, 0.14);
+  color: #D84315;
+}
+
+.mcls-tag.pass {
+  background: rgba(46, 125, 50, 0.14);
+  color: #1B5E20;
+}
+
+.mcls-tag.blocked {
+  background: rgba(198, 40, 40, 0.14);
+  color: #B71C1C;
+}
+
+.mcls-approval-title {
+  font-family: var(--font-heading, 'Fredoka', cursive);
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: #2B2016;
+  margin: 0.35rem 0;
+}
+
+.mcls-approval-summary {
+  font-size: 0.9rem;
+  color: #5A4E42;
+  line-height: 1.5;
+  margin: 0 0 0.9rem;
+}
+
+.mcls-approval-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  align-items: center;
+}
+
+.mcls-btn-approve {
+  background: linear-gradient(135deg, #2E7D32 0%, #1B5E20 100%);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 50px;
+  padding: 8px 18px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.mcls-btn-approve:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.mcls-btn-secondary {
+  background: #FFFFFF;
+  color: #4A3E32;
+  border: 1.5px solid #DCCDBE;
+  border-radius: 50px;
+  padding: 7px 15px;
+  font-weight: 700;
+  font-size: 0.82rem;
+  cursor: pointer;
+}
+
+.mcls-btn-secondary:hover {
+  border-color: #FF6F00;
+  color: #FF6F00;
+}
+
+/* Units Roster Grid */
+.mcls-units-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 1.5rem;
+}
+
+.mcls-unit-card {
+  background: #FFFFFF;
+  border: 1.5px solid #EADBCC;
+  border-radius: 22px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 6px 22px rgba(43, 32, 22, 0.05);
+}
+
+.mcls-unit-top {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 0.85rem;
+}
+
+.mcls-unit-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: #FFF3E0;
+  border: 1.5px solid #FFE0B2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.mcls-unit-name {
+  font-family: var(--font-heading, 'Fredoka', cursive);
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #2B2016;
+  margin: 0;
+}
+
+.mcls-unit-role {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #FF6F00;
+}
+
+/* Directives Grid */
+.mcls-directives-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+.mcls-directive-card {
+  background: #FFFFFF;
+  border: 1.5px solid #EADBCC;
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 18px rgba(43, 32, 22, 0.04);
+}
+
+.mcls-directive-pre {
+  background: #FFFDF9;
+  border: 1px solid #EFE6DC;
+  border-radius: 12px;
+  padding: 1rem;
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: #2B2016;
+  white-space: pre-wrap;
+  margin: 0.75rem 0 0;
 }

@@ -86,3 +86,80 @@ class RhythmGuardianOptimizer:
                     }
 
         return decisions
+
+    def review_proposal_adversarial(self, proposal: Dict[str, Any]) -> Dict[str, Any]:
+        """
+        MCLS Pillar 5: Ras Mic 'Review This' Adversarial Gate & Anti-Shiny-Object Advisor.
+        Audits any proposed campaign, feature, or creative brief against SOE Canon,
+        Anti-Slop Visual Grounding, and Unit Economic / Funnel Focus invariants BEFORE execution.
+        """
+        import re
+
+        title = str(proposal.get("title", ""))
+        description = str(proposal.get("description", ""))
+        target_route = str(proposal.get("target_route", ""))
+        visual_ref = str(proposal.get("visual_reference", ""))
+        unit_key = str(proposal.get("unit_key", "MCLS-STUDIO"))
+        combined_text = f"{title} {description} {target_route} {visual_ref}".strip()
+
+        canon_violations: List[str] = []
+        slop_warnings: List[str] = []
+        shiny_object_flags: List[str] = []
+
+        # Gate 1: SOE Canon Contract
+        canon_checks = [
+            (r"\bAges?\s*2\s*[-–—]\s*8\b", "Age creep detected: strictly use Ages 2–7 (Pre-K to Grade 2)."),
+            (r"\bGrade\s*3\b", "Grade ceiling violation: strictly Pre-K to Grade 2."),
+            (r"\b(Marcus|Elena|Reef|Zara|Dara|Sophia|Geometria)\b", "Retired character or land name detected."),
+            (r"\bno\s+credit\s+card\s+required\b", "Billing rule violation: never claim 'no credit card required' (card vaulting active)."),
+            (r"\bShopify\b", "Stack incompatibility: Shopify is retired; use direct soelearn.com Stripe funnel."),
+        ]
+        for pattern, msg in canon_checks:
+            if re.search(pattern, combined_text, flags=re.IGNORECASE):
+                canon_violations.append(msg)
+
+        # Gate 2: Anti-Slop & Canonical Design Lock
+        if unit_key == "MCLS-STUDIO" or proposal.get("requires_visual", False):
+            if not visual_ref.strip():
+                slop_warnings.append("Missing canonical visual reference from 'Reference images/' or 'Canonical Master Visuals/'.")
+            if re.search(r"\b(stock\s+photo|generic\s+illustration|purple\s+gradient|claymorphism)\b", combined_text, flags=re.IGNORECASE):
+                slop_warnings.append("Design canon breach: generic stock/purple-gradient/claymorphism slop detected.")
+
+        # Gate 3: Anti-Shiny-Object & Funnel Focus Advisor
+        valid_funnel_anchors = [
+            "/listen", "/workbook", "/rhythm-ready", "/dictionary-sale",
+            "/bundle", "/institutions", "/cloud-academy", "/tactile", "/qpc",
+            "school_pilot", "llms.txt", "brevo", "slant3d", "build123d",
+        ]
+        if target_route and not any(anchor in target_route.lower() for anchor in valid_funnel_anchors):
+            shiny_object_flags.append(
+                f"Off-funnel destination '{target_route}': proposals must route to /listen, /workbook, /dictionary-sale, /institutions, /cloud-academy, or llms.txt."
+            )
+
+        distraction_patterns = [
+            (r"\b(crypto|synthetic\s+stock|real\s+estate|trucking|dropship)\b", "Shiny Object Drift: unrelated venture keyword detected."),
+            (r"\b(linktree|multi-link)\b", "Conversion dilution: single-destination funnel routing required (Lesson #24)."),
+        ]
+        for pattern, msg in distraction_patterns:
+            if re.search(pattern, combined_text, flags=re.IGNORECASE):
+                shiny_object_flags.append(msg)
+
+        if canon_violations:
+            verdict = "BLOCKED_CANON"
+        elif shiny_object_flags or slop_warnings:
+            verdict = "SHINY_OBJECT_HOLD" if shiny_object_flags else "CAUTION_SLOP_RISK"
+        else:
+            verdict = "APPROVED"
+
+        return {
+            "verdict": verdict,
+            "approved": verdict == "APPROVED",
+            "canon_violations": canon_violations,
+            "slop_warnings": slop_warnings,
+            "shiny_object_flags": shiny_object_flags,
+            "guardrails": {
+                "max_lead_cpa_dollars": self.max_lead_cpa,
+                "min_ctr_percent": self.min_ctr,
+                "canonical_age_range": "Ages 2–7",
+            },
+        }

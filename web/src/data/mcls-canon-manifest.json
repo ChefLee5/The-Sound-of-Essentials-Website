@@ -1,0 +1,168 @@
+{
+  "compiled_at": "2026-11-12T02:48:12.553Z",
+  "compiler": "SOE MCLS Deterministic Canon Compiler v2.5",
+  "age_bounds": "Ages 2–7 (Pre-K to Grade 2)",
+  "grade_ceiling": "Grade 2",
+  "tagline": "Designed for the developing brain — not the algorithm.",
+  "brand_proof_line": "Crafted by a father's heart and a mother's love, born from living the early learning crisis and built with whole-heart devotion. 15 years in the making.",
+  "counts": {
+    "lands": 7,
+    "heroes": 15,
+    "tracks": 19,
+    "products": 10
+  },
+  "lands_roster": [
+    {
+      "id": "harmonia",
+      "name": "Harmonia",
+      "domain": "",
+      "heroes": [
+        "kenji",
+        "aiko"
+      ]
+    },
+    {
+      "id": "numeria",
+      "name": "Numeria",
+      "domain": "",
+      "heroes": [
+        "kwame",
+        "octavia"
+      ]
+    },
+    {
+      "id": "vitalis",
+      "name": "Vitalis",
+      "domain": "",
+      "heroes": [
+        "felix",
+        "amara"
+      ]
+    },
+    {
+      "id": "celestia",
+      "name": "Celestia",
+      "domain": "",
+      "heroes": [
+        "elias",
+        "selene"
+      ]
+    },
+    {
+      "id": "luminosity",
+      "name": "Luminosity",
+      "domain": "",
+      "heroes": [
+        "athena",
+        "ezra"
+      ]
+    },
+    {
+      "id": "aquaria",
+      "name": "Aquaria",
+      "domain": "",
+      "heroes": [
+        "nerissa",
+        "ronan"
+      ]
+    },
+    {
+      "id": "terrasol",
+      "name": "Terrasol",
+      "domain": "",
+      "heroes": [
+        "vesta",
+        "silas"
+      ]
+    }
+  ],
+  "product_ladder": [
+    {
+      "id": "rhythm-quest-album",
+      "title": "The Sound of Essentials: A Musical Learning Experience",
+      "price": 0,
+      "priceFormatted": "$0"
+    },
+    {
+      "id": "quest-starter-pack",
+      "title": "The Quest Starter & Coloring Pack: 40-Page Coloring Book, 432Hz Reset Track & Transition Kit",
+      "price": 7,
+      "priceFormatted": "$7"
+    },
+    {
+      "id": "rhythm-quest-ebook",
+      "title": "The Sound of Essentials: Rhythm Quest (Companion Storybook)",
+      "price": 19,
+      "priceFormatted": "$19"
+    },
+    {
+      "id": "rhythm-quest-storybook-print",
+      "title": "The Sound of Essentials: Rhythm Quest (Physical Print Storybook)",
+      "price": 35,
+      "priceFormatted": "$35"
+    },
+    {
+      "id": "rhythmready-workbook",
+      "title": "SOE Rhythm Quest: Rhythm Ready Workbook",
+      "price": 21,
+      "priceFormatted": "$21"
+    },
+    {
+      "id": "picture-dictionary",
+      "title": "SOE Rhythm Quest: Essential Picture Dictionary",
+      "price": 55,
+      "priceFormatted": "$55"
+    },
+    {
+      "id": "full-quest-bundle",
+      "title": "The Full Quest Bundle",
+      "price": 49,
+      "priceFormatted": "$49"
+    },
+    {
+      "id": "soe-sensory-headphones",
+      "title": "AWATRUE HK05 Safe Sensory Kids Headphones (74/85dB Dual Limit)",
+      "price": 24.99,
+      "priceFormatted": "$24.99"
+    },
+    {
+      "id": "soe-headphones-workbook-bundle",
+      "title": "SOE Sensory Listening & 8-Week Readiness Bundle",
+      "price": 39,
+      "priceFormatted": "$39"
+    },
+    {
+      "id": "bronze-token-album",
+      "title": "The Sound of Essentials: Deluxe Bronze / Copper Token Album",
+      "price": 85,
+      "priceFormatted": "$85"
+    }
+  ],
+  "cultural_deltas": [
+    {
+      "delta": 1,
+      "name": "Screen vs. Sensory",
+      "focus": "Tactile, audio-first learning over addictive screen flicker"
+    },
+    {
+      "delta": 2,
+      "name": "Testing vs. Arts",
+      "focus": "Music, rhythm, and poetry over standardized testing drill"
+    },
+    {
+      "delta": 3,
+      "name": "Algorithm vs. Handcrafted",
+      "focus": "Parent-crafted intentionality over dopamine algorithms"
+    },
+    {
+      "delta": 4,
+      "name": "Institution vs. Sanctuary",
+      "focus": "Home and community sanctuary over institutional assembly-line schooling"
+    },
+    {
+      "delta": 5,
+      "name": "Consumption vs. Quest",
+      "focus": "Active developmental quest over passive media consumption"
+    }
+  ]
+}

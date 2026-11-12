@@ -819,6 +819,9 @@ const AdminCrm = () => {
         </div>
 
         <div className="crm-header__actions">
+          <a href="/mcls" className="btn btn-outline btn-sm" style={{ background: '#FFF8F0', borderColor: '#FF6F00', color: '#D84315', textDecoration: 'none', fontWeight: 700 }} title="Open SOE Market Campaign Launch System (MCLS)">
+            🚀 MCLS Command
+          </a>
           <button onClick={handleSimulateLead} className="btn btn-outline btn-sm" style={{ background: '#fff', borderColor: '#FF6F00', color: '#FF6F00' }} title="Simulate an incoming lead or order write to Neon">
             ⚡ Ingest Live Lead
           </button>
