@@ -1,6 +1,6 @@
 """
-Generate SOE Picture Dictionary VIP Pre-Sale Sampler PDF
-Creates an authentic, beautiful multi-scene sampler for pre-sale customers.
+Generate SOE Picture Dictionary VIP Sampler PDF
+Creates an authentic, beautiful multi-scene sampler for founding customers.
 """
 
 import sys
@@ -55,7 +55,7 @@ title_page.insert_text(
 )
 title_page.insert_text(
     (54, 220),
-    "Official VIP Pre-Sale Curriculum Sampler (Ages 2–7 · Pre-K to Grade 2)",
+    "Official VIP Curriculum Sampler (Ages 2–7 · Pre-K to Grade 2)",
     fontsize=16,
     color=(0.35, 0.38, 0.45),
 )

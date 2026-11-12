@@ -9,6 +9,7 @@ import StickyThumbCta from '../components/ui/StickyThumbCta';
 import { trackInitiateCheckout } from '../utils/analytics';
 import KineticHeadline from '../components/KineticHeadline';
 import PDPQuestionChips from '../components/PDPQuestionChips';
+import DigitalLicenseNotice from '../components/DigitalLicenseNotice';
 import './DictionarySale.css';
 
 /* ── Land-specific stats from the pipeline knowledge base ── */
@@ -137,10 +138,10 @@ const DictionarySale = () => {
             <div className="dict-hero__price-tag">
               <span className="dict-hero__price-retail">$79</span>
               <span className="dict-hero__price-listed">$55</span>
-              <span className="dict-hero__price-note">Pre-Sale Special · Honest Compare-At $79</span>
+              <span className="dict-hero__price-note">Reserve Your Copy · Honest Compare-At $79</span>
             </div>
             <div className="dict-hero__actions">
-              <a href="#pricing" className="btn btn-gold btn-shimmer">Pre-Order Now — $55 →</a>
+              <a href="#pricing" className="btn btn-gold btn-shimmer">Reserve Your Copy — $55 →</a>
               <a href="#preview" className="btn btn-outline">Preview Pages ↓</a>
             </div>
           </div>
@@ -348,7 +349,7 @@ const DictionarySale = () => {
       <section className="dict-pricing section" id="pricing">
         <div className="container text-center">
           <RevealSection>
-            <div className="section-label">Pre-Sale Offers</div>
+            <div className="section-label">Reserve Your Copy</div>
             <h2 className="section-title" style={{ color: 'var(--color-text-dark)' }}>
               Choose Your <span className="text-gold">Learning Journey</span>
             </h2>
@@ -370,7 +371,7 @@ const DictionarySale = () => {
                   <span className="dict-price-card__discount-badge">SAVE 30%</span>
                 </div>
                 <p className="dict-price-card__hook">
-                  The complete 4,000+ word visual vocabulary journey across 125 illustrated scenes. Pre-sale reservation · Digital delivery upon release.
+                  The complete 4,000+ word visual vocabulary journey across 125 illustrated scenes. Reserve your copy · Digital delivery upon release.
                 </p>
                 <ul className="dict-price-card__features">
                   <li>✓ 4,000+ verified vocabulary words</li>
@@ -378,7 +379,7 @@ const DictionarySale = () => {
                   <li>✓ All 7 Lands &amp; 15 heroes included</li>
                   <li>✓ Phonetic pronunciation guides</li>
                   <li>✓ Bilingual EN/ES support</li>
-                  <li>✓ Pre-sale reservation · Delivered upon release</li>
+                  <li>✓ Reserve your copy · Delivered upon release</li>
                 </ul>
                 <a
                   href="https://buy.stripe.com/test_14AfZhcO02JT40m9YS6Vq06"
@@ -386,7 +387,7 @@ const DictionarySale = () => {
                   className="btn btn-gold"
                   onClick={() => trackInitiateCheckout({ sku: 'SOE-DICTIONARY', name: 'Essential Picture Dictionary', price: 55.00 })}
                 >
-                  Pre-Order Dictionary ($55) →
+                  Reserve Your Copy ($55) →
                 </a>
               </div>
 
@@ -404,7 +405,7 @@ const DictionarySale = () => {
                   Everything for a full year of music-powered learning. Complete digital access across all core and premium products.
                 </p>
                 <ul className="dict-price-card__features">
-                  <li>✓ Essential Picture Dictionary ($55 value · Pre-sale release)</li>
+                  <li>✓ Essential Picture Dictionary ($55 value · Reserved edition)</li>
                   <li>✓ 19-Track Rhythm Quest Album ($0 free)</li>
                   <li>✓ 66-Page Rhythm Quest Storybook ($19 value)</li>
                   <li>✓ Rhythm Ready Workbook Digital ($21 value)</li>
@@ -421,7 +422,7 @@ const DictionarySale = () => {
               </div>
             </div>
 
-            <PDPQuestionChips preset="dictionary" label="Pre-Sale Questions?" />
+            <PDPQuestionChips preset="dictionary" label="Questions About Reserving?" />
           </RevealSection>
         </div>
       </section>
@@ -478,6 +479,8 @@ const DictionarySale = () => {
                 </Link>
               </div>
 
+              <DigitalLicenseNotice variant="household" style={{ maxWidth: '560px', marginBottom: '1rem' }} />
+
               <div className="dict-guarantee">
                 <span>🔒</span> Instant digital delivery · EPUB format · Read on any device
               </div>
@@ -489,7 +492,7 @@ const DictionarySale = () => {
       {/* ── Mobile Sticky Thumb Zone CTA ── */}
       <StickyThumbCta
         targetUrl="#pricing"
-        label="📖 Pre-Order Dictionary ($55) →"
+        label="📖 Reserve Your Copy ($55) →"
         subtext="4,000+ Words • 125 Illustrated Scenes"
         badge="🌟 Ages 2–7"
         onClick={() => trackInitiateCheckout({ sku: 'SOE-DICTIONARY', name: 'Essential Picture Dictionary', price: 55.00 })}

@@ -80,8 +80,8 @@ export const PRESET_CHIPS = {
       icon: '📦',
       question: 'When and how will this be delivered?',
       answer:
-        'This is an exclusive Pre-Sale reservation ($55 vs $79 retail). Your digital EPUB 3 edition and companion printable materials will be delivered to your email upon official publication release.',
-      badge: 'Pre-Sale Reservation · Delivered Upon Release',
+        'Reserve your copy today ($55 vs $79 retail). Your digital EPUB 3 edition and companion printable materials will be delivered to your email upon official publication release.',
+      badge: 'Reserve Your Copy · Delivered Upon Release',
     },
   ],
 };

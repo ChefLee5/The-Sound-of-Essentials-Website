@@ -41,7 +41,7 @@ FOR pediatric occupational therapists, speech-language pathologists, and reading
 | `SOE-WB-DIGITAL` | **Rhythm Ready Workbook (Digital)** | **$21.00** | Digital Curriculum | `/rhythm-ready` | 8-week, 40-day readiness quest (400 activities) printable PDF |
 | `SOE-WB-PRINT` | **Rhythm Ready Workbook (Print)** | **$35.00** / $45 | Physical Print Book | `/rhythm-ready` | 454-page physical spiral-bound workbook with Free US Shipping |
 | `SOE-BUNDLE-01` | **The Full Quest Bundle** | **$49.00** | Complete Digital Suite | `/workbook` | Dictionary + Album + Storybook + Workbook Digital ($148 value) |
-| `SOE-DICT-01` | **Essential Picture Dictionary** | **$55.00** | Pre-Sale Reservation ($79 list) | `/workbook` | Pre-sale reservation (delivery after sale upon official release) · 4,232 words across 157 illustrated scenes |
+| `SOE-DICT-01` | **Essential Picture Dictionary** | **$55.00** | Reserve Your Copy ($79 list) | `/workbook` | Reserve your copy today (digital delivery upon official release) · 4,232 words across 157 illustrated scenes |
 | `SOE-PASS-01` | **The Rhythm Pass Continuity** | **$14.99/mo** | Monthly Continuity | `/listen` | Ongoing monthly audio adventure drops, seasonal quests, community |
 
 ---

@@ -173,8 +173,22 @@ class _ManifoldMesh:
         return output_path
 
 
+SOE_CAD_LICENSE_GRANT: Dict[str, Any] = {
+    "license_id": "SOE-PERSONAL-OR-POD-V1",
+    "terms_url": "https://soelearn.com/terms#digital-license",
+    "permitted": "Personal household use or 1 licensed Cloud Academy classroom/school site (Ages 2-7).",
+    "prohibited": "Commercial 3D-print resale (Etsy/TPT), public STL reposting, or unlicensed multi-campus distribution.",
+    "unauthorized_fee_remedy": "Retroactive commercial/multi-seat fee ($199/classroom or $499/campus minimum).",
+}
+
+
 def _emit_build123d_nameplate_script(clean_name: str, width_mm: float, depth_mm: float, base_h: float) -> str:
-    return f'''"""Auto-generated SOE Text-to-CAD build123d script (earthtojake/text-to-cad compatible)."""
+    return f'''"""
+Auto-generated SOE Text-to-CAD build123d script (earthtojake/text-to-cad compatible).
+License: SOE-PERSONAL-OR-POD-V1 (https://soelearn.com/terms#digital-license)
+Permitted: Personal household or active Cloud Academy Pod use only (Ages 2-7).
+Prohibited: Commercial print resale, Etsy/TPT redistribution, or multi-school sharing.
+"""
 from build123d import Align, BuildPart, BuildSketch, Extrude, FontStyle, Location, Text, Circle, RectangleRounded, fillet
 
 CHILD_NAME = {clean_name!r}
@@ -254,6 +268,7 @@ def generate_harmonia_nameplate(child_name: str, output_dir: str | Path) -> Dict
         "child_name": cleaned,
         "stl_path": str(stl_path),
         "build123d_script_path": str(cad_script_path),
+        "digital_license": SOE_CAD_LICENSE_GRANT,
         "dfm": dfm,
     }
 
@@ -284,7 +299,13 @@ def generate_vitalis_knuckle_board(beats: int = 8, output_dir: str | Path = ".")
     out_dir = Path(output_dir)
     stl_path = mesh.write_stl(out_dir / f"vitalis_knuckle_board_{beat_count}beat.stl")
     dfm = validate_stl_dfm(stl_path)
-    return {"sku": "SOE-VIT-KNUCKLE-01", "beats": beat_count, "stl_path": str(stl_path), "dfm": dfm}
+    return {
+        "sku": "SOE-VIT-KNUCKLE-01",
+        "beats": beat_count,
+        "stl_path": str(stl_path),
+        "digital_license": SOE_CAD_LICENSE_GRANT,
+        "dfm": dfm,
+    }
 
 
 def generate_nfc_hero_totem_plinth(hero_name: str, output_dir: str | Path = ".") -> Dict[str, Any]:
@@ -314,6 +335,7 @@ def generate_nfc_hero_totem_plinth(hero_name: str, output_dir: str | Path = ".")
         "land": land,
         "nfc_pocket_spec": {"tag_type": "NTAG215", "diameter_mm": 26.2, "pause_layer_z_mm": 3.2},
         "stl_path": str(stl_path),
+        "digital_license": SOE_CAD_LICENSE_GRANT,
         "dfm": dfm,
     }
 

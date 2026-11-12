@@ -280,10 +280,10 @@ const OrderSuccess = () => {
                 4,000+ words across 125 illustrated scenes. Bilingual EN/ES support and phonetic guides.
               </p>
               <div className="order-success__ascension-price">
-                <strong>$55</strong> <span>Pre-Sale (Compare at $79)</span>
+                <strong>$55</strong> <span>Reserve Your Copy (Compare at $79)</span>
               </div>
               <Link to="/workbook#dictionary-presale" className="btn btn-gold">
-                Pre-Order Dictionary ($55) →
+                Reserve Your Copy ($55) →
               </Link>
             </div>
           </div>

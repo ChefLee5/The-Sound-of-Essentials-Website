@@ -43,6 +43,14 @@ const SOE_TACTILE_CATALOG = [
   },
 ];
 
+const SOE_DIGITAL_CAD_LICENSE = {
+  license_id: 'SOE-PERSONAL-OR-POD-V1',
+  terms_url: 'https://soelearn.com/terms#digital-license',
+  permitted: 'Single-household personal use or 1 licensed Cloud Academy classroom/school site (Ages 2–7).',
+  prohibited: 'No commercial 3D-print resale (Etsy/TPT), public STL reposting, or unlicensed multi-school sharing.',
+  unauthorized_fee_remedy: 'Retroactive commercial/multi-seat licensing fee ($199/classroom or $499/campus minimum).',
+};
+
 function jsonResponse(payload, status = 200) {
   return new Response(JSON.stringify(payload), {
     status,
@@ -82,6 +90,7 @@ export async function onRequestGet() {
     engine: 'SOE Cloud Academy Text-to-CAD + Slant 3D POD',
     age_canon: 'Ages 2–7 (Pre-K to Grade 2)',
     cpsc_small_parts_clearance_mm: 31.8,
+    digital_license: SOE_DIGITAL_CAD_LICENSE,
     catalog: SOE_TACTILE_CATALOG,
   });
 }
@@ -133,6 +142,7 @@ export async function onRequestPost(context) {
           captures_shipping_address: true,
           unlocks_rhythm_pass: '$14.99/mo The Rhythm Pass',
         },
+        digital_license: SOE_DIGITAL_CAD_LICENSE,
       });
     }
 

@@ -119,7 +119,7 @@ const PRODUCTS_TO_CREATE = [
   },
   {
     handle: 'essential-picture-dictionary-presale',
-    name: 'SOE Rhythm Quest: Essential Picture Dictionary (Pre-Sale)',
+    name: 'SOE Rhythm Quest: Essential Picture Dictionary (Reserve Your Copy)',
     description: '125-scene illustrated vocabulary journey through all 7 Lands. Over 4,000 words with phonetic guides and bilingual EN/ES support.',
     priceCents: 5500,
     type: 'one_time',

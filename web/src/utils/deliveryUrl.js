@@ -49,7 +49,7 @@ export const FULFILLMENT_FILES = {
     cover: '/assets/marketing/rhythm-ready-workbook-cover.webp',
   },
   'picture-dictionary': {
-    title: 'SOE Rhythm Quest: Essential Picture Dictionary (VIP Pre-Sale Sampler)',
+    title: 'SOE Rhythm Quest: Essential Picture Dictionary (VIP Sampler Edition)',
     filename: 'SOE_Picture_Dictionary_Sampler.pdf',
     format: 'PDF',
     size: '13.6 MB',

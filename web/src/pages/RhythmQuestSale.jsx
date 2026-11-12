@@ -9,6 +9,7 @@ import { trackInitiateCheckout, appendUtmsToUrl } from '../utils/analytics';
 import ConciergeBadge from '../components/ConciergeBadge';
 import KineticHeadline from '../components/KineticHeadline';
 import PDPQuestionChips from '../components/PDPQuestionChips';
+import DigitalLicenseNotice from '../components/DigitalLicenseNotice';
 import JsonLd from '../components/JsonLd';
 import { productsSchema, faqSchema } from '../utils/schema';
 import './RhythmQuestSale.css';
@@ -980,6 +981,7 @@ const RhythmReadyOffer = () => {
               </div>
 
               <PDPQuestionChips preset="workbook" label="Have questions before ordering?" />
+              <DigitalLicenseNotice variant="household" />
             </aside>
           </div>
         </RevealSection>
@@ -989,13 +991,13 @@ const RhythmReadyOffer = () => {
 };
 
 /* ═══════════════════════════════════════════════════════════════
-   DICTIONARY PRE-SALE OFFER COMPONENT
+   DICTIONARY RESERVE OFFER COMPONENT
    ═══════════════════════════════════════════════════════════════ */
-const DictionaryPreSaleOffer = () => {
+const DictionaryReserveOffer = () => {
   const handleDictCheckout = () => {
     trackInitiateCheckout({
       sku: 'SOE-DICTIONARY',
-      name: 'Essential Picture Dictionary ($55 Pre-Sale)',
+      name: 'Essential Picture Dictionary ($55 Reserve Your Copy)',
       price: 55.00,
     });
   };
@@ -1005,10 +1007,10 @@ const DictionaryPreSaleOffer = () => {
       <div id="dictionary" style={{ position: 'relative', top: '-90px', visibility: 'hidden' }} />
       <div className="container">
         <RevealSection className="text-center">
-          <div className="section-label">📖 Companion Vocabulary Reference · Pre-Sale</div>
+          <div className="section-label">📖 Companion Vocabulary Reference · Reserve Your Copy</div>
           <h2 className="section-title">
             Essential Picture Dictionary
-            <span className="rq-offer__title-accent">4,000+ Words. 125 Scenes. $55 Pre-Sale.</span>
+            <span className="rq-offer__title-accent">4,000+ Words. 125 Scenes. $55 — Reserve Your Copy.</span>
           </h2>
           <p className="section-subtitle" style={{ margin: '0 auto 2.25rem auto', maxWidth: '680px' }}>
             The complete illustrated companion to the Rhythm Quest universe. Built for early learners (Ages 2–7),
@@ -1020,7 +1022,7 @@ const DictionaryPreSaleOffer = () => {
           <div className="rq-offer rq-offer--dict">
             <div className="rq-offer__includes">
               <div className="rq-dict-tag-row">
-                <span className="rq-dict-badge">🌟 Pre-Sale Reservation</span>
+                <span className="rq-dict-badge">🌟 Reserve Your Copy</span>
                 <span className="rq-dict-subbadge">Ages 2–7 · All 7 Lands</span>
               </div>
               <h3 className="rq-offer__includes-title" style={{ marginTop: '0.85rem' }}>
@@ -1077,13 +1079,13 @@ const DictionaryPreSaleOffer = () => {
             </div>
 
             <aside className="rq-offer__price rq-offer__price--dict">
-              <div className="rq-dict-price-badge">SAVE 30% ON PRE-SALE</div>
+              <div className="rq-dict-price-badge">SAVE 30% · RESERVE YOUR COPY</div>
               
               <div className="rq-dict-price-wrap">
                 <span className="rq-dict-retail">$79</span>
                 <span className="rq-offer__amount">$55</span>
               </div>
-              <span className="rq-offer__terms">limited pre-sale pricing · compare at $79</span>
+              <span className="rq-offer__terms">limited reservation pricing · compare at $79</span>
               <p className="rq-offer__math">
                 Over 4,000 words &amp; 125 scenes = <strong>~1.3¢ per illustrated word</strong>.
               </p>
@@ -1094,7 +1096,7 @@ const DictionaryPreSaleOffer = () => {
                 className="btn btn-gold btn-shimmer rq-offer__buy"
                 onClick={handleDictCheckout}
               >
-                <span>Reserve Pre-Sale Order</span>
+                <span>Reserve Your Copy</span>
                 <span className="rq-offer__buy-price">$55</span>
               </a>
 
@@ -1108,7 +1110,7 @@ const DictionaryPreSaleOffer = () => {
                 </span>
               </div>
 
-              <PDPQuestionChips preset="dictionary" label="Pre-Sale Questions?" />
+              <PDPQuestionChips preset="dictionary" label="Questions About Reserving?" />
             </aside>
           </div>
         </RevealSection>
@@ -1124,13 +1126,13 @@ const faqs = [
   {
     id: 'dictionary-presale',
     color: 'var(--color-gold, #FF6F00)',
-    q: 'How does the Essential Picture Dictionary pre-sale work?',
+    q: 'How does reserving the Essential Picture Dictionary work?',
     a: [
-      'The Essential Picture Dictionary is currently in pre-sale at a special price of $55 (compare at $79 retail — save 30%).',
-      'By reserving your pre-sale copy today, you secure priority access to the complete 4,000+ word, 125-scene digital EPUB edition as soon as the final release is live, along with all companion bonuses and future updates.',
-      'By pre-ordering today, you lock in the exclusive $55 price and receive immediate priority delivery upon official release.',
+      'You can reserve your copy of the Essential Picture Dictionary today at a special price of $55 (compare at $79 retail — save 30%).',
+      'By reserving your copy today, you secure priority access to the complete 4,000+ word, 125-scene digital EPUB edition as soon as the final release is live, along with all companion bonuses and future updates.',
+      'Locking in your reservation today guarantees the $55 price and immediate priority delivery upon official release.',
     ],
-    chips: ['$55 Pre-Sale (Save 30%)', '4,000+ Words', 'Priority Access'],
+    chips: ['$55 Reserve Your Copy (Save 30%)', '4,000+ Words', 'Priority Access'],
   },
   {
     id: 'grades',
@@ -1332,8 +1334,8 @@ const RhythmQuestSale = () => {
       {/* ═══ THE OFFER (WORKBOOK) ═══ */}
       <RhythmReadyOffer />
 
-      {/* ═══ COMPANION DICTIONARY PRE-SALE ═══ */}
-      <DictionaryPreSaleOffer />
+      {/* ═══ COMPANION DICTIONARY RESERVE OFFER ═══ */}
+      <DictionaryReserveOffer />
 
       {/* ═══ FAQ ═══ */}
       <RhythmReadyFaq />
@@ -1366,7 +1368,7 @@ const RhythmQuestSale = () => {
               <div className="rq-cta-actions">
                 <RqBuyLink format="print" className="btn btn-gold">Order Physical Print Edition — $45 (Free Shipping)</RqBuyLink>
                 <RqBuyLink format="digital" className="btn btn-outline">Get Instant Digital PDF — $21</RqBuyLink>
-                <a href="#dictionary-presale" className="btn btn-sage">Pre-Order Picture Dictionary — $55 ↓</a>
+                <a href="#dictionary-presale" className="btn btn-sage">Reserve Picture Dictionary — $55 ↓</a>
                 <Link to="/listen" className="btn btn-sage">Get the Free Album First</Link>
               </div>
               <div className="rq-guarantee">

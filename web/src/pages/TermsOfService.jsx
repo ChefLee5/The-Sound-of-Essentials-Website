@@ -60,13 +60,34 @@ const TermsOfService = () => {
             </ul>
           </section>
 
-          <section style={{ marginBottom: '2rem' }}>
-            <h2 style={{ color: 'var(--color-orange, #FF6F00)', fontSize: '1.4rem', marginBottom: '0.8rem' }}>4. Intellectual Property &amp; Educator Licensing</h2>
+          <section id="digital-license" style={{ marginBottom: '2rem' }}>
+            <h2 style={{ color: 'var(--color-orange, #FF6F00)', fontSize: '1.4rem', marginBottom: '0.8rem' }}>
+              4. Digital Product, Cloud Academy &amp; 3D CAD Licensing Schedule
+            </h2>
             <p>
-              All audio recordings, musical compositions, visual characters (including Seriphia and the 14 land heroes), artwork, and pedagogical lesson architectures are the exclusive intellectual property of The Sound of Essentials.
+              All studio recordings, musical compositions, visual characters (Seriphia, the 14 Land Heroes across all 7 Lands, and Lil G), Picture Dictionary entries, Readiness Workbooks, and parametric 3D tactile CAD files (<code>.STL</code>, <code>.3MF</code>, <code>.STEP</code>, <code>.build123d.py</code>) remain the exclusive intellectual property of The Sound of Essentials (&ldquo;SOE&rdquo;). By completing checkout or downloading any SOE digital asset, you agree to the clear license scope below <strong>prior to purchase</strong>:
             </p>
+            <div style={{ background: 'var(--color-bg-cream, #faf9f7)', padding: '1.25rem 1.5rem', borderRadius: 'var(--radius-sm, 12px)', borderLeft: '4px solid var(--color-orange, #FF6F00)', margin: '1rem 0' }}>
+              <ul style={{ paddingLeft: '1.25rem', margin: 0 }}>
+                <li style={{ marginBottom: '0.6rem' }}>
+                  <strong>Tier 1 — Personal Household License ($7 Starter Pack, $19 Ebook, $21/$45 Workbook, $55 Dictionary, $89 Bundle, $29 Tactile POD):</strong> Grants a non-exclusive, non-transferable license for <strong>1 household</strong> (parents/guardians and their children ages 2–7). You may download and print copies strictly for your family&rsquo;s personal educational use.
+                </li>
+                <li style={{ marginBottom: '0.6rem' }}>
+                  <strong>Tier 2 — Cloud Academy Classroom Pod ($199/yr) &amp; School/Clinical Center ($499/yr):</strong> Grants 1 designated classroom (up to 30 students) or 1 single physical school/clinic site (up to 15 educators) rights to print workbook pages and 3D-print <code>.STL</code>/<code>.3MF</code> tactile manipulatives strictly for currently enrolled students/patients.
+                </li>
+                <li style={{ marginBottom: '0.6rem' }}>
+                  <strong>Strictly Prohibited Uses:</strong> You may <strong>not</strong> resell, sub-license, upload to shared drives or educator marketplaces (e.g., Etsy, TeachersPayTeachers), redistribute physical 3D prints made from SOE CAD files for profit, share single-household credentials across schools/teams, or scrape SOE assets for commercial model training without a signed Concord License.
+                </li>
+                <li>
+                  <strong>Unauthorized Use &amp; Retroactive Licensing Remedy:</strong> Unauthorized team sharing, digital redistribution, or commercial resale of SOE digital or 3D-printed assets constitutes material breach and copyright infringement, triggering immediate license revocation, DMCA takedown, and <strong>retroactive commercial/multi-seat licensing fees</strong> billed at our applicable institutional schedule ($199/classroom Pod or $499/campus minimum per unauthorized deployment, or $2,500+ District Concord rate).
+                </li>
+              </ul>
+            </div>
             <p>
-              Purchases grant a single-family or single-classroom non-exclusive license for personal educational use. Institutional, multi-school, or commercial redistribution requires a formal institutional licensing contract.
+              Need multi-classroom, charter network, or custom commercial rights? Apply directly through our{' '}
+              <Link to="/institutions" style={{ color: 'var(--color-orange, #FF6F00)', fontWeight: 600 }}>
+                SOE Institutional Concord Portal
+              </Link>.
             </p>
           </section>
 

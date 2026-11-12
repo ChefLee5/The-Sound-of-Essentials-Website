@@ -29,7 +29,7 @@ const Home = () => {
 
   /* ── All characters (ordered for color contrast & no pairs) ── */
   const carouselOrder = [
-    'Kenji', 'Elias', 'Ezra', 'Ronan', 'Kwame', 'Silas', 'Aiko', 
+    'Kenji', 'Elias', 'Ezra', 'Ronan', 'Kwame', 'Silas', 'Aiko',
     'Felix', 'Selene', 'Nerissa', 'Octavia', 'Amara', 'Vesta', 'Athena'
   ];
 
@@ -175,7 +175,7 @@ const Home = () => {
                     <span className="hero__price-val">{t('home.hero_offer.price_tag')}</span>
                     <span className="hero__price-note">· {t('home.hero_offer.price_note')}</span>
                   </div>
-                  
+
                   <ul className="hero__checkmarks">
                     <li>
                       <span className="check-icon">✓</span>
@@ -227,15 +227,15 @@ const Home = () => {
             <button className="carousel-btn prev-btn" onClick={rotateLeft} aria-label="Previous heroes">
               &#10094;
             </button>
-            <div 
-              className="hero__carousel-spinner" 
+            <div
+              className="hero__carousel-spinner"
               style={{ transform: `rotateY(${rotation}deg)` }}
             >
               {allChars.map((char, i) => (
                 <div
                   key={`${char.name}-${i}`}
                   className="hero__char"
-                  style={{ 
+                  style={{
                     '--char-color': char.color,
                     transform: `rotateY(${i * theta}deg) translateZ(${radius}px)`
                   }}
@@ -261,8 +261,8 @@ const Home = () => {
           <div className="hero__carousel-mobile-only">
             <div className="hero__mobile-scroll">
               {allChars.map((char, i) => (
-                <div 
-                  key={`${char.name}-mobile-${i}`} 
+                <div
+                  key={`${char.name}-mobile-${i}`}
                   className="hero__mobile-card"
                   style={{ '--char-color': char.color }}
                 >
@@ -406,7 +406,7 @@ const Home = () => {
               <span className="text-orange">Tell Their Own Kids to Learn?</span>
             </h2>
             <p className="section-subtitle" style={{ maxWidth: '780px', margin: '0.75rem auto 3rem' }}>
-              The tech leaders engineering artificial intelligence are not rushing their young children to screens. 
+              The tech leaders engineering artificial intelligence are not rushing their young children to screens.
               Instead, they agree on a fundamental truth: before the machine, wire the biological foundation.
             </p>
           </RevealSection>
@@ -532,8 +532,8 @@ const Home = () => {
             </div>
             <div className="lands-preview-grid">
               {lands.map((land) => (
-                <div 
-                  key={land.name} 
+                <div
+                  key={land.name}
                   className="land-mini-card"
                   style={{ '--land-color': land.color }}
                 >
@@ -604,7 +604,7 @@ const Home = () => {
                 “{t('home.credibility.quote')}”
               </KineticHeadline>
               <p className="credibility-sub">{t('home.credibility.sub')}</p>
-              
+
               <div className="credibility-pillars">
                 <div className="credibility-pillar">
                   <span className="cred-icon">🛡️</span>
@@ -653,7 +653,7 @@ const Home = () => {
             <ExpandableGallery />
             <div className="ecosystem-actions" style={{ marginTop: '2.5rem', display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
               <Link to="/workbook#dictionary-presale" className="btn btn-gold btn-shimmer">
-                📚 Explore the Picture Dictionary ($55 Pre-Sale) →
+                📚 Reserve Your Copy of the Picture Dictionary ($55) →
               </Link>
               <Link to="/workbook" className="btn btn-outline">
                 📚 View Workbook &amp; Curriculum ($21) →
@@ -775,7 +775,7 @@ const Home = () => {
               return (
                 <RevealSection key={idx} delay={idx * 0.08}>
                   <div className={`faq-accordion-card glass-card ${isOpen ? 'is-open' : ''}`}>
-                    <button 
+                    <button
                       className="faq-question-btn"
                       onClick={() => toggleFaq(idx)}
                       aria-expanded={isOpen}
@@ -829,7 +829,7 @@ const Home = () => {
                 <img src={assetPath('/assets/marketing/quest-collage.webp')} alt="" className="scene-backdrop__img" />
                 <div className="scene-backdrop__scrim" />
               </div>
-              
+
               <div className="final-cta-content">
                 <div className="cta-icon" aria-hidden="true">🌟</div>
                 <h2 className="final-cta-title">{t('home.final_cta.title')}</h2>

@@ -21,6 +21,8 @@ def test_harmonia_nameplate_watertight_and_child_safe() -> None:
         dfm = res["dfm"]
         assert res["sku"] == "SOE-HARM-NAME-01"
         assert res["child_name"] == "EMMA"
+        assert res["digital_license"]["license_id"] == "SOE-PERSONAL-OR-POD-V1"
+        assert "terms#digital-license" in res["digital_license"]["terms_url"]
         assert Path(res["stl_path"]).exists()
         assert Path(res["build123d_script_path"]).exists()
         assert dfm["watertight_manifold"] is True

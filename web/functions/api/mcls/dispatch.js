@@ -404,6 +404,43 @@ export async function onRequestPost(context) {
       );
     }
 
+    // ── 0D. 8-SEC REEL + VALUE CAPTION + COMMENT-KEYWORD AUTO-DM FUNNEL ──────
+    if (action === 'build_comment_trigger_reel') {
+      const {
+        keyword = 'RHYTHM',
+        offer_angle = 'Pre-Checkout Digital & 3D Tactile Phonics Vault (Ages 2–7)',
+        visual_reference = 'The Sound of Essentials Image Assets/Canonical Master Visuals/Pond Aiko_Kenji.png',
+      } = body;
+
+      const cleanKeyword = String(keyword || 'RHYTHM').trim().toUpperCase().replace(/[^A-Z0-9]/g, '') || 'RHYTHM';
+      const reelPacket = {
+        format: '8-Second Aesthetic Loop + Value Caption + Comment-to-DM Trigger',
+        duration_seconds: 8,
+        audio_track: '19-Track Rhythm Quest Studio Instrumental Snippet (100 BPM)',
+        visual_reference,
+        on_screen_hook_3s: 'Why 15 minutes of screen-free rhythm beats 2 hours of alphabet apps (Ages 2–7)',
+        comment_keyword: cleanKeyword,
+        webhook_endpoint: '/api/webhooks/instagram',
+        caption_body: `${offer_angle}\n\nMost early learning downloads leave parents and teachers guessing—or trap kids in overstimulating screens.\n\nCrafted by a father's heart and a mother's love, The Sound of Essentials: Rhythm Quest pairs 19 studio-recorded songs across 7 Lands with clear Personal & Cloud Academy Classroom licensing.\n\nComment ${cleanKeyword} below and we'll DM you the direct link right away.`,
+        destination_url:
+          cleanKeyword === 'LICENSE' || cleanKeyword === 'PILOT'
+            ? 'https://soelearn.com/terms#digital-license'
+            : 'https://soelearn.com/listen',
+      };
+
+      const review = runAdversarialPreflightReview('MCLS-STUDIO', {
+        title: `8s Comment-Trigger Reel (${cleanKeyword}): ${offer_angle}`,
+        summary: `Instagram Reel + Comment '${cleanKeyword}' auto-DM funnel routed to /listen or /terms.`,
+        target_destination: '/listen',
+        payload: reelPacket,
+      });
+
+      return new Response(
+        JSON.stringify({ success: true, action, reelPacket, review }),
+        { status: 200, headers: { 'Content-Type': 'application/json' } }
+      );
+    }
+
     // ── 1. MCLS GOVERNED NATURAL-LANGUAGE TELEMETRY QUERY (SQL ENGINE) ──────
     if (action === 'query_telemetry') {
       const { question = '' } = body;

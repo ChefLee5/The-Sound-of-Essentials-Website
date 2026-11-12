@@ -69,7 +69,7 @@ const PRODUCT_METADATA = {
     customDescription: 'The Sound of Essentials: Rhythm Quest — Rhythm Ready Workbook (Physical Print Edition). 454-page perfect-bound full-color 8.5" x 11" physical workbook for ages 2 to 7. 400 tactile daily activities across 10 blocks building foundational literacy and STEM. Printed on-demand via Lulu Press with Free US Standard Shipping included.',
   },
   'picture-dictionary': {
-    title: 'The Sound of Essentials: Essential Picture Dictionary (Pre-Sale)',
+    title: 'The Sound of Essentials: Essential Picture Dictionary (Reserve Your Copy)',
     link: `${DOMAIN}/dictionary`,
     image: `${DOMAIN}/assets/marketing/picture-dictionary-cover.webp`,
     category: 'Media > Books > Dictionaries & Thesauruses',
