@@ -1,259 +1,352 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import { Badge } from '@astryxdesign/core/Badge';
+import { Button } from '@astryxdesign/core/Button';
+import { Heading } from '@astryxdesign/core/Heading';
+import { Text } from '@astryxdesign/core/Text';
+import { TextInput } from '@astryxdesign/core/TextInput';
+import SoeAstryxTheme from './SoeAstryxTheme';
+import './ResearchAssistant.css';
+
+const KNOWLEDGE_ENTRIES = [
+  {
+    id: 'clock',
+    keywords: [
+      'clock', 'time', 'celestia', 'elias', 'selene', 'routine', 'hour',
+      'half-hour', 'schedule', '1:00', '12:30', 'reloj', 'hora', 'horloge', 'heure',
+    ],
+    answer:
+      'In "Do You Know What Time It Is?", Elias and Selene count every whole hour from 1:00 to 12:00 and every half-hour from 1:30 to 12:30. Lyrics anchor each count from morning wake-up through lunch and bedtime. When a caregiver points to a wall clock while singing, children ages 2 to 7 connect the spoken number, the beat, and the moving clock hand without screen drills.',
+    source: 'Celestia · Teacher’s Guide',
+  },
+  {
+    id: 'rhythm_not_melody',
+    keywords: [
+      'rhythm', 'melody', 'nature', 'phonolog', 'read', 'scientific reports',
+      'ritmo', 'melodia', 'melodía', 'lectura', 'rythme', 'melodie', 'mélodie',
+    ],
+    answer:
+      'A 2022 study in Nature Scientific Reports found that rhythm perception predicts reading ability through phonological awareness, while melody perception does not carry the same link. Hearing steady intervals trains young ears to slice spoken words into clear syllables before formal reading begins.',
+    source: 'Nature Scientific Reports (2022)',
+  },
+  {
+    id: 'preschool_10min',
+    keywords: [
+      '10 min', 'ten min', 'preschool', 'phonics', 'frontier', 'trial',
+      'daily music', 'preescolar', 'maternelle', 'minut',
+    ],
+    answer:
+      'In a controlled preschool study published in Frontiers in Psychology (2011), just 10 minutes of daily music training built phonological awareness as effectively as a dedicated phonics program. Short daily sessions fit the natural attention span of ages 2 to 7.',
+    source: 'Frontiers in Psychology (2011)',
+  },
+  {
+    id: 'hard_words',
+    keywords: [
+      'hard word', 'syllable', 'segment', 'luminosity', 'athena', 'ezra',
+      'dna', 'gene', 'genome', 'million', 'palabras', 'silab', 'sílab', 'mots', 'syllab',
+    ],
+    answer:
+      '"Hard Words" in Luminosity breaks multi-syllable vocabulary down onto a steady beat, a technique researchers call phonological segmentation. Tapping or stepping each syllable makes long words concrete, and a 2024 Nature Human Behaviour study of over one million people found 16 shared genome regions connecting rhythm skills and language ability.',
+    source: 'Nature Human Behaviour (2024)',
+  },
+  {
+    id: 'pedagogy',
+    keywords: [
+      'dalcroze', 'orff', 'kodaly', 'kodály', 'movement', 'body', 'executive',
+      'sequenc', 'pubmed', 'plos', 'pmc', 'group', 'movimiento', 'mouvement',
+    ],
+    answer:
+      'Active group methods pair sound with whole-body movement instead of passive listening. Combining Dalcroze movement with Orff percussion and Kodaly hand signs builds auditory timing alongside motor focus. Peer-reviewed studies in PubMed (2024), PMC (2019), and PLOS ONE (2015) link these active methods to stronger reading gains in young learners.',
+    source: 'PubMed (2024) · PLOS ONE (2015)',
+  },
+  {
+    id: 'screen_free',
+    keywords: [
+      'screen', 'bpm', 'tempo', '90', '110', 'calm', 'workbook', 'age',
+      '2-7', '2–7', 'tactile', 'pantalla', 'ecran', 'écran',
+    ],
+    answer:
+      'Every SOE track uses organic instrumentation and steady 90 to 110 BPM pacing tuned for ages 2 to 7. Instead of bright screens and fast cuts, parents and teachers pair audio sessions with physical workbooks and printed routine charts.',
+    source: 'SOE Curriculum · Ages 2–7',
+  },
+];
+
+const GENERAL_FALLBACK = {
+  answer:
+    'I can answer questions on rhythm perception, 10-minute preschool music trials, clock-reading songs in Celestia, syllable games in Luminosity, or whole-body music pedagogy. Click one of the starter questions above or ask about any study cited on this page.',
+  source: 'Cited Research Brief',
+};
+
+function resolveLocalResearchAnswer(question) {
+  const normalized = question.toLowerCase();
+  let bestEntry = null;
+  let bestScore = 0;
+
+  for (const entry of KNOWLEDGE_ENTRIES) {
+    let score = 0;
+    for (const kw of entry.keywords) {
+      if (normalized.includes(kw)) score += 1;
+    }
+    if (score > bestScore) {
+      bestScore = score;
+      bestEntry = entry;
+    }
+  }
+
+  return bestEntry && bestScore > 0 ? bestEntry : GENERAL_FALLBACK;
+}
 
 const ResearchAssistant = () => {
-    const { t } = useTranslation();
-    const [userQuestion, setUserQuestion] = useState('');
-    const [messages, setMessages] = useState([]);
-    const [isLoading, setIsLoading] = useState(false);
-    const [error, setError] = useState(null);
-    const scrollRef = useRef(null);
+  const { t } = useTranslation();
+  const [userQuestion, setUserQuestion] = useState('');
+  const [messages, setMessages] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const scrollRef = useRef(null);
 
-    const API_KEY = import.meta.env.VITE_PERPLEXITY_API_KEY;
+  const API_KEY = import.meta.env.VITE_PERPLEXITY_API_KEY;
 
-    useEffect(() => {
-        if (scrollRef.current) {
-            scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
-        }
-    }, [messages, isLoading]);
+  const starterQuestions = [
+    {
+      id: 'clock',
+      shortLabel: t('assistant.chip_clock', 'Clock & Daily Routines'),
+      question: t(
+        'assistant.q_clock',
+        'How does "Do You Know What Time It Is?" teach clock time?'
+      ),
+    },
+    {
+      id: 'rhythm',
+      shortLabel: t('assistant.chip_rhythm', 'Rhythm vs. Melody'),
+      question: t(
+        'assistant.q_rhythm',
+        'Why does the research focus on rhythm instead of melody?'
+      ),
+    },
+    {
+      id: 'preschool',
+      shortLabel: t('assistant.chip_preschool', '10 Minutes a Day'),
+      question: t(
+        'assistant.q_preschool',
+        'How do 10 minutes of daily music compare to phonics drills?'
+      ),
+    },
+    {
+      id: 'hard_words',
+      shortLabel: t('assistant.chip_syllables', 'Hard Words & Syllables'),
+      question: t(
+        'assistant.q_syllables',
+        'How does breaking "Hard Words" to a beat help kids read?'
+      ),
+    },
+  ];
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        if (!userQuestion.trim()) return;
+  useEffect(() => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
+    }
+  }, [messages, isLoading]);
 
-        if (!API_KEY) {
-            setError(t('assistant.error_key'));
-            return;
-        }
+  const submitQuestion = async (rawText) => {
+    const trimmed = rawText.trim();
+    if (!trimmed || isLoading) return;
 
-        const currentQuestion = userQuestion;
-        setUserQuestion('');
-        setMessages(prev => [...prev, { role: 'user', content: currentQuestion }]);
-        setIsLoading(true);
-        setError(null);
+    setUserQuestion('');
+    setMessages((prev) => [...prev, { role: 'user', content: trimmed }]);
+    setIsLoading(true);
 
-        try {
-            const response = await fetch("https://api.perplexity.ai/chat/completions", {
-                method: "POST",
-                headers: {
-                    "Authorization": `Bearer ${API_KEY}`,
-                    "Content-Type": "application/json",
-                    "Accept": "application/json"
-                },
-                body: JSON.stringify({
-                    model: "sonar-pro",
-                    messages: [
-                        { role: "system", content: t('assistant.system_prompt') },
-                        ...messages.slice(-4), // Context window
-                        { role: "user", content: currentQuestion }
-                    ]
-                })
-            });
+    if (!API_KEY) {
+      const localMatch = resolveLocalResearchAnswer(trimmed);
+      setMessages((prev) => [
+        ...prev,
+        { role: 'assistant', content: localMatch.answer, source: localMatch.source },
+      ]);
+      setIsLoading(false);
+      return;
+    }
 
-            if (!response.ok) throw new Error(`API Error: ${response.status}`);
+    try {
+      const response = await fetch('https://api.perplexity.ai/chat/completions', {
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${API_KEY}`,
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          model: 'sonar-pro',
+          messages: [
+            { role: 'system', content: t('assistant.system_prompt') },
+            ...messages.slice(-4).map((m) => ({ role: m.role, content: m.content })),
+            { role: 'user', content: trimmed },
+          ],
+        }),
+      });
 
-            const data = await response.json();
-            const answer = data.choices?.[0]?.message?.content;
+      if (!response.ok) throw new Error(`API Error: ${response.status}`);
 
-            setMessages(prev => [...prev, { role: 'assistant', content: answer }]);
-        } catch (err) {
-            console.error("Research Assistant Error:", err);
-            setError(t('assistant.error_conn'));
-        } finally {
-            setIsLoading(false);
-        }
-    };
+      const data = await response.json();
+      const answer = data.choices?.[0]?.message?.content;
+      if (!answer) throw new Error('Empty response');
 
-    return (
-        <div className="research-assistant glass-card">
-            <div className="assistant-header">
-                <div className="assistant-badge">{t('assistant.badge')}</div>
-                <h3>{t('assistant.title')}</h3>
-                <p>{t('assistant.subtitle')}</p>
+      setMessages((prev) => [
+        ...prev,
+        { role: 'assistant', content: answer, source: 'Live Research Mode' },
+      ]);
+    } catch (err) {
+      console.warn('Research Assistant falling back to local cited brief:', err);
+      const localMatch = resolveLocalResearchAnswer(trimmed);
+      setMessages((prev) => [
+        ...prev,
+        { role: 'assistant', content: localMatch.answer, source: localMatch.source },
+      ]);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    submitQuestion(userQuestion);
+  };
+
+  const handleReset = () => {
+    setMessages([]);
+    setUserQuestion('');
+  };
+
+  const askedQuestions = new Set(
+    messages.filter((m) => m.role === 'user').map((m) => m.content)
+  );
+  const remainingStarters = starterQuestions.filter(
+    (item) => !askedQuestions.has(item.question)
+  );
+
+  return (
+    <SoeAstryxTheme>
+      <div className="research-assistant" aria-label={t('assistant.title', 'Ask About the Method')}>
+        <div className="research-assistant__header">
+          <div className="research-assistant__top-row">
+            <div className="research-assistant__badge-group">
+              <Badge variant="orange" label={t('assistant.badge', 'Research Q&A')} />
+              <Badge
+                variant="neutral"
+                label={API_KEY ? 'Live Research' : t('assistant.mode_cited', 'Cited Research Brief')}
+              />
             </div>
 
-            <div className="chat-window" ref={scrollRef}>
-                <AnimatePresence>
-                    {messages.length === 0 && (
-                        <motion.div
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            className="empty-state"
-                        >
-                            <p>{t('assistant.empty_state')}</p>
-                        </motion.div>
-                    )}
-                    {messages.map((msg, i) => (
-                        <motion.div
-                            key={i}
-                            initial={{ opacity: 0, y: 10 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            className={`message-bubble ${msg.role}`}
-                        >
-                            <div className="bubble-content">{msg.content}</div>
-                        </motion.div>
-                    ))}
-                    {isLoading && (
-                        <motion.div
-                            className="message-bubble assistant loading"
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                        >
-                            <div className="loading-dots">
-                                <span>.</span><span>.</span><span>.</span>
-                            </div>
-                        </motion.div>
-                    )}
-                </AnimatePresence>
-                {error && <div className="error-notice">{error}</div>}
-            </div>
+            {messages.length > 0 && (
+              <Button
+                type="button"
+                variant="ghost"
+                size="sm"
+                label={t('assistant.clear_btn', 'Clear')}
+                onClick={handleReset}
+              />
+            )}
+          </div>
 
-            <form onSubmit={handleSubmit} className="chat-input-area">
-                <input
-                    type="text"
-                    value={userQuestion}
-                    onChange={(e) => setUserQuestion(e.target.value)}
-                    placeholder={t('assistant.placeholder')}
-                    disabled={isLoading}
-                />
-                <button type="submit" className="btn btn-plum" disabled={isLoading || !userQuestion.trim()}>
-                    {isLoading ? '...' : t('assistant.ask_btn')}
-                </button>
-            </form>
-
-            <style>{`
-                .research-assistant {
-                    display: flex;
-                    flex-direction: column;
-                    height: 500px;
-                    overflow: hidden;
-                    border: 1px solid rgba(150, 120, 196, 0.2);
-                    background: rgba(255, 255, 255, 0.05);
-                    backdrop-filter: blur(20px);
-                }
-
-                .assistant-header {
-                    padding: 1.5rem;
-                    border-bottom: 1px solid rgba(255,255,255,0.1);
-                    text-align: center;
-                }
-
-                .assistant-badge {
-                    display: inline-block;
-                    padding: 0.2rem 0.8rem;
-                    background: linear-gradient(135deg, var(--color-purple), var(--color-plum));
-                    color: white;
-                    font-size: 0.65rem;
-                    font-weight: 800;
-                    border-radius: 100px;
-                    letter-spacing: 0.05em;
-                    margin-bottom: 0.5rem;
-                }
-
-                .assistant-header h3 {
-                    margin: 0;
-                    font-size: 1.2rem;
-                    color: var(--color-text-primary);
-                }
-
-                .assistant-header p {
-                    font-size: 0.85rem;
-                    color: var(--color-text-muted);
-                    margin: 0.25rem 0 0 0;
-                }
-
-                .chat-window {
-                    flex: 1;
-                    padding: 1.5rem;
-                    overflow-y: auto;
-                    display: flex;
-                    flex-direction: column;
-                    gap: 1rem;
-                    background: rgba(0,0,0,0.02);
-                }
-
-                .empty-state {
-                    margin: auto;
-                    text-align: center;
-                    color: var(--color-text-muted);
-                    font-style: italic;
-                    font-size: 0.9rem;
-                    max-width: 250px;
-                }
-
-                .message-bubble {
-                    max-width: 85%;
-                    padding: 0.8rem 1.2rem;
-                    border-radius: 1.2rem;
-                    font-size: 0.95rem;
-                    line-height: 1.5;
-                }
-
-                .message-bubble.user {
-                    align-self: flex-end;
-                    background: var(--color-plum);
-                    color: white;
-                    border-bottom-right-radius: 0.2rem;
-                }
-
-                .message-bubble.assistant {
-                    align-self: flex-start;
-                    background: rgba(255,255,255,0.1);
-                    color: var(--color-text-primary);
-                    border-bottom-left-radius: 0.2rem;
-                    border: 1px solid rgba(255,255,255,0.05);
-                }
-
-                .chat-input-area {
-                    padding: 1.2rem;
-                    display: flex;
-                    gap: 0.8rem;
-                    border-top: 1px solid rgba(255,255,255,0.1);
-                }
-
-                .chat-input-area input {
-                    flex: 1;
-                    background: rgba(0,0,0,0.1);
-                    border: 1px solid rgba(255,255,255,0.1);
-                    border-radius: 0.8rem;
-                    padding: 0.8rem 1.2rem;
-                    color: white;
-                    font-family: inherit;
-                }
-
-                .chat-input-area input:focus {
-                    outline: none;
-                    border-color: var(--color-plum);
-                }
-
-                .error-notice {
-                    font-size: 0.8rem;
-                    color: #ff6b6b;
-                    text-align: center;
-                    padding: 0.5rem;
-                    background: rgba(255, 107, 107, 0.1);
-                    border-radius: 0.5rem;
-                }
-
-                .loading-dots span {
-                    display: inline-block;
-                    animation: dash 1.4s infinite;
-                    font-size: 1.5rem;
-                    line-height: 0;
-                }
-
-                @keyframes dash {
-                    0% { opacity: 0.2; transform: translateY(0); }
-                    50% { opacity: 1; transform: translateY(-5px); }
-                    100% { opacity: 0.2; transform: translateY(0); }
-                }
-
-                .loading-dots span:nth-child(2) { animation-delay: 0.2s; }
-                .loading-dots span:nth-child(3) { animation-delay: 0.4s; }
-            `}</style>
+          <Heading level={3} className="research-assistant__title">
+            {t('assistant.title', 'Ask About the Method')}
+          </Heading>
+          <Text size="sm" color="secondary" display="block" className="research-assistant__subtitle">
+            {t(
+              'assistant.subtitle',
+              'Pick a topic below or ask a question about ages 2–7 rhythm, reading readiness, and clock time.'
+            )}
+          </Text>
         </div>
-    );
+
+        <div className="research-assistant__window" ref={scrollRef} aria-live="polite">
+          {messages.length === 0 ? (
+            <div className="research-assistant__empty">
+              <p className="research-assistant__prompt-lead">
+                {t('assistant.empty_state', 'Start with a question:')}
+              </p>
+              <div className="research-starter-list">
+                {starterQuestions.map((item) => (
+                  <button
+                    key={item.id}
+                    type="button"
+                    className="research-starter-btn"
+                    onClick={() => submitQuestion(item.question)}
+                    disabled={isLoading}
+                  >
+                    <span>{item.question}</span>
+                    <span className="research-starter-btn__arrow" aria-hidden="true">
+                      →
+                    </span>
+                  </button>
+                ))}
+              </div>
+            </div>
+          ) : (
+            messages.map((msg, i) => (
+              <div key={i} className={`research-msg ${msg.role}`}>
+                <div>{msg.content}</div>
+                {msg.source && (
+                  <div className="research-msg__source">
+                    <Badge variant="neutral" label={msg.source} />
+                  </div>
+                )}
+              </div>
+            ))
+          )}
+
+          {isLoading && (
+            <div className="research-msg assistant" aria-label="Loading answer">
+              <div className="research-loading-dots">
+                <span>•</span>
+                <span>•</span>
+                <span>•</span>
+              </div>
+            </div>
+          )}
+        </div>
+
+        {messages.length > 0 && remainingStarters.length > 0 && !isLoading && (
+          <div className="research-quick-followups" aria-label="Suggested follow-up questions">
+            {remainingStarters.map((item) => (
+              <button
+                key={item.id}
+                type="button"
+                className="research-followup-chip"
+                onClick={() => submitQuestion(item.question)}
+              >
+                {item.shortLabel}
+              </button>
+            ))}
+          </div>
+        )}
+
+        <form onSubmit={handleSubmit} className="research-assistant__form">
+          <div className="research-assistant__input-wrap">
+            <TextInput
+              type="text"
+              label={t('assistant.placeholder', 'Ask about rhythm, reading, or clock time...')}
+              isLabelHidden
+              value={userQuestion}
+              onChange={(val) => setUserQuestion(val)}
+              placeholder={t(
+                'assistant.placeholder',
+                'Ask about rhythm, reading, or clock time...'
+              )}
+              isDisabled={isLoading}
+              size="md"
+              width="100%"
+            />
+          </div>
+          <Button
+            type="submit"
+            variant="primary"
+            size="md"
+            isLoading={isLoading}
+            isDisabled={isLoading || !userQuestion.trim()}
+            label={t('assistant.ask_btn', 'Ask')}
+          />
+        </form>
+      </div>
+    </SoeAstryxTheme>
+  );
 };
 
 export default ResearchAssistant;
