@@ -61,7 +61,8 @@ export const EmailDownloadGateModal = ({
       kind: downloadItem.kind || 'interest',
       name: name.trim(),
       email: email.trim().toLowerCase(),
-      organizationName: persona === 'parent' ? 'Home Sanctuary' : persona,
+      persona,
+      organizationName: persona === 'parent' ? null : persona,
       message: `Requested Instant Download: ${downloadItem.title} (${downloadItem.filename})`,
       sourcePath: window.location.pathname,
     };

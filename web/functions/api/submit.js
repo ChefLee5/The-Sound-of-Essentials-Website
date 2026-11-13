@@ -19,6 +19,7 @@ export async function onRequestPost(context) {
       kind,
       name,
       email,
+      persona: requestedPersona,
       organizationName,
       message,
       sourcePath,
@@ -103,12 +104,16 @@ export async function onRequestPost(context) {
     const submissionId = neonData?.rows?.[0]?.id;
 
     // 2. Background CRM Contact & Activity Upsert (Resilient & Non-Blocking)
-    const isInstitutional = kind === 'partnership' || kind === 'institutional_qpc' || kind === 'qpc' || Boolean(organizationName);
-    const persona = isInstitutional ? (organizationName ? 'institution' : 'educator') : 'parent';
+    const cleanOrg = organizationName?.trim() || null;
+    const isNonInstitutionalOrg = !cleanOrg || ['home sanctuary', 'parent', 'family'].includes(cleanOrg.toLowerCase());
+    const isInstitutional = kind === 'partnership' || kind === 'institutional_qpc' || kind === 'qpc' || !isNonInstitutionalOrg;
+    const persona = requestedPersona && ['parent', 'educator', 'institution'].includes(requestedPersona)
+      ? requestedPersona
+      : (isInstitutional ? (!isNonInstitutionalOrg ? 'institution' : 'educator') : 'parent');
     try {
       const crmUpsertSql = `
-        INSERT INTO crm_contacts (email, name, organization, persona, lifecycle_stage, source_path, lead_score, updated_at)
-        VALUES ($1, $2, $3, $4, 'lead', $5, 25, CURRENT_TIMESTAMP)
+        INSERT INTO crm_contacts (email, name, organization, persona, lifecycle_stage, source_path, lead_score, last_active_at, updated_at)
+        VALUES ($1, $2, $3, $4, 'lead', $5, 25, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)
         ON CONFLICT (email) DO UPDATE SET
           name = COALESCE(NULLIF($2, 'Rhythm Explorer'), crm_contacts.name),
           organization = COALESCE($3, crm_contacts.organization),
@@ -201,6 +206,8 @@ export async function onRequestPost(context) {
     // 4. Background Brevo Contact Synchronization (Non-blocking)
     const brevoApiKey = env?.BREVO_API_KEY || FALLBACK_BREVO_KEY;
     const targetListId = isInstitutional ? INSTITUTIONAL_BREVO_LIST_ID : (Number(env?.BREVO_LIST_ID) || DEFAULT_BREVO_LIST_ID);
+    let brevoSynced = false;
+    let brevoStatus = brevoApiKey ? 'pending' : 'skipped_missing_api_key';
     if (brevoApiKey) {
       try {
         const contactAttributes = {
@@ -228,10 +235,13 @@ export async function onRequestPost(context) {
 
         let brevoContactId = null;
         if (brevoRes.ok) {
+          brevoSynced = true;
+          brevoStatus = 'synced';
           const resData = await brevoRes.json();
           brevoContactId = resData?.id;
         } else {
           const brevoErrText = await brevoRes.text();
+          brevoStatus = `error_${brevoRes.status}`;
           console.warn('Brevo Sync non-OK status:', brevoRes.status, brevoErrText);
         }
 
@@ -254,12 +264,13 @@ export async function onRequestPost(context) {
           }
         }
       } catch (brevoErr) {
+        brevoStatus = 'network_error';
         console.warn('Brevo Sync notice (non-blocking):', brevoErr);
       }
     }
 
     return new Response(
-      JSON.stringify({ success: true, submissionId }),
+      JSON.stringify({ success: true, submissionId, brevoSynced, brevoStatus, persona }),
       {
         status: 200,
         headers: { 'Content-Type': 'application/json' },
