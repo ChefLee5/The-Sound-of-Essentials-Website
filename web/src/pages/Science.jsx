@@ -282,7 +282,7 @@ const Science = () => {
                             <div className="grid-2 align-center">
                                 <div>
                                     <div className="section-label" style={{ background: 'var(--color-purple)' }}>{t('science.implementation_label')}</div>
-                                    <h2>{t('science.implementation_title_1')} <span className="text-plum">{t('science.implementation_title_2')}</span></h2>
+                                    <h2>{t('science.implementation_title_1')} <span className="text-gold">{t('science.implementation_title_2')}</span></h2>
                                     <p>
                                         {t('science.implementation_desc_1')}
                                     </p>
