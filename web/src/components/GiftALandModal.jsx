@@ -1,21 +1,21 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { Badge } from '@astryxdesign/core/Badge';
+import { Banner } from '@astryxdesign/core/Banner';
+import { Button } from '@astryxdesign/core/Button';
+import { Card } from '@astryxdesign/core/Card';
+import { Dialog, DialogHeader } from '@astryxdesign/core/Dialog';
+import { Layout, LayoutContent, Stack } from '@astryxdesign/core/Layout';
+import { Text } from '@astryxdesign/core/Text';
 import { trackReferralShare } from '../utils/analytics';
 import { assetPath } from '../utils/assetPath';
 import EmailDownloadGateModal from './EmailDownloadGateModal';
+import SoeAstryxTheme from './SoeAstryxTheme';
 import './GiftALandModal.css';
 
-/**
- * GiftALandModal — Viral milestone & referral flywheel component.
- * Gamified reward loop that turns engaged families and teachers into organic ambassadors.
- */
 export const GiftALandModal = ({ isOpen, onClose, triggerLand = 'Harmonia' }) => {
   const [copied, setCopied] = useState(false);
   const [bonusUnlocked, setBonusUnlocked] = useState(false);
   const [isGateOpen, setIsGateOpen] = useState(false);
-
-
-  if (!isOpen) return null;
 
   const origin = typeof window !== 'undefined' ? window.location.origin : 'https://thesoundofessentials.com';
   const shareUrl = `${origin}/listen?utm_source=referral&utm_medium=gift_a_land&utm_campaign=explorer_share`;
@@ -46,7 +46,7 @@ export const GiftALandModal = ({ isOpen, onClose, triggerLand = 'Harmonia' }) =>
       try {
         await navigator.share({
           title: 'The Sound of Essentials: Free 19-Track Musical Quest',
-          text: "Free 19-track album for early learners!",
+          text: 'Free 19-track album for early learners!',
           url: shareUrl,
         });
         setBonusUnlocked(true);
@@ -59,100 +59,107 @@ export const GiftALandModal = ({ isOpen, onClose, triggerLand = 'Harmonia' }) =>
     }
   };
 
+  const handleDownloadBonus = () => {
+    const storedEmail = typeof window !== 'undefined' ? localStorage.getItem('soe_user_email') : null;
+    if (storedEmail && storedEmail.includes('@')) {
+      const link = document.createElement('a');
+      link.href = assetPath('/assets/marketing/gabriel-coloring-sheet.webp');
+      link.download = 'Gabriel-Secret-Bonus-Coloring-Sheet.png';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } else {
+      setIsGateOpen(true);
+    }
+  };
+
+  const supportsNativeShare = typeof navigator !== 'undefined' && Boolean(navigator.share);
+
   return (
-    <AnimatePresence>
-      <div className="gift-modal-backdrop" onClick={onClose}>
-        <motion.div
-          className="gift-modal-card"
-          onClick={(e) => e.stopPropagation()}
-          initial={{ scale: 0.94, opacity: 0, y: 16 }}
-          animate={{ scale: 1, opacity: 1, y: 0 }}
-          exit={{ scale: 0.94, opacity: 0, y: 16 }}
-          transition={{ type: 'spring', damping: 28, stiffness: 320, mass: 0.8 }}
+    <>
+      <SoeAstryxTheme>
+        <Dialog
+          isOpen={isOpen}
+          onOpenChange={(open) => {
+            if (!open && onClose) onClose();
+          }}
+          width={500}
+          purpose="info"
+          aria-label="Harmonic Pioneer Badge Unlocked"
         >
-          <div className="gift-modal-handle" aria-hidden="true" />
-          <button className="gift-modal-close" onClick={onClose} aria-label="Close modal">
-            ✕
-          </button>
+          <Layout padding={6} gap={4}>
+            <DialogHeader
+              title="Harmonic Pioneer Badge Unlocked"
+              subtitle={`You explored ${triggerLand}. Share the free 19-track album to unlock Gabriel's Secret Activity Sheet.`}
+              startContent={
+                <Badge variant="orange" label="Milestone Reached" icon={<span aria-hidden="true">🌟</span>} />
+              }
+              onOpenChange={(open) => {
+                if (!open && onClose) onClose();
+              }}
+              hasDivider
+            />
 
-          <div className="gift-modal-badge-wrap">
-            <span className="gift-modal-badge-icon">🌟</span>
-            <span className="gift-modal-badge-pill">Milestone Reached!</span>
-          </div>
+            <LayoutContent gap={4}>
+              <Text size="sm" color="secondary">
+                Gift this free 19-track album &amp; coloring pack to 2 fellow parents or teachers to unlock the{' '}
+                <strong>Secret Gabriel Bonus Activity Sheet</strong>.
+              </Text>
 
-          <h2 className="gift-modal-title">Harmonic Pioneer Badge Unlocked</h2>
-          <p className="gift-modal-subtitle">
-            You've explored the rhythm of <strong>{triggerLand}</strong>! Gift this free 19-track album &amp; coloring pack to 2 fellow parents or teachers to unlock the <strong>Secret Gabriel Bonus Activity Sheet</strong>.
-          </p>
+              <Card variant="muted" padding={3}>
+                <Stack direction="vertical" gap={3}>
+                  <Button
+                    variant="primary"
+                    size="lg"
+                    width="100%"
+                    label={copied ? '✅ Link Copied!' : '🔗 Copy 1-Click Gift Link'}
+                    onClick={handleCopyLink}
+                  />
 
-          <div className="gift-modal-share-box">
-            <div className="gift-modal-actions">
-              <button
-                className="btn btn-gold btn-shimmer gift-modal-btn"
-                onClick={handleCopyLink}
-              >
-                {copied ? '✅ Link Copied!' : '🔗 Copy 1-Click Gift Link'}
-              </button>
+                  <Button
+                    variant="secondary"
+                    size="lg"
+                    width="100%"
+                    label="💬 Share on WhatsApp"
+                    onClick={handleWhatsAppShare}
+                  />
 
-              <button
-                className="btn btn-outline gift-modal-btn"
-                onClick={handleWhatsAppShare}
-              >
-                💬 Share on WhatsApp
-              </button>
+                  {supportsNativeShare && (
+                    <Button
+                      variant="secondary"
+                      size="lg"
+                      width="100%"
+                      label="📱 More Share Options"
+                      onClick={handleNativeShare}
+                    />
+                  )}
+                </Stack>
+              </Card>
 
-              {typeof navigator !== 'undefined' && navigator.share && (
-                <button
-                  className="btn btn-outline gift-modal-btn"
-                  onClick={handleNativeShare}
-                >
-                  📱 More Share Options
-                </button>
+              {bonusUnlocked ? (
+                <Banner
+                  status="success"
+                  title="🎁 Secret Bonus Unlocked!"
+                  description="Gabriel's Secret Bonus Coloring Sheet is ready for your studio or classroom."
+                  collapsible={false}
+                  endContent={
+                    <Button
+                      variant="primary"
+                      size="sm"
+                      label="⬇️ Download Bonus Sheet"
+                      onClick={handleDownloadBonus}
+                    />
+                  }
+                />
+              ) : (
+                <Text size="xs" color="secondary" className="gift-modal-footer-note">
+                  🔒 <em>Bonus unlocks automatically when you share with your friends.</em>
+                </Text>
               )}
-            </div>
-          </div>
-
-          {bonusUnlocked ? (
-            <motion.div
-              className="gift-modal-bonus-unlocked"
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-            >
-              <div className="gift-modal-bonus-content">
-                <span className="gift-modal-bonus-icon">🎁</span>
-                <div>
-                  <strong>Secret Bonus Unlocked!</strong>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      const storedEmail = typeof window !== 'undefined' ? localStorage.getItem('soe_user_email') : null;
-                      if (storedEmail && storedEmail.includes('@')) {
-                        const link = document.createElement('a');
-                        link.href = assetPath('/assets/marketing/gabriel-coloring-sheet.webp');
-                        link.download = 'Gabriel-Secret-Bonus-Coloring-Sheet.png';
-                        document.body.appendChild(link);
-                        link.click();
-                        document.body.removeChild(link);
-                      } else {
-                        setIsGateOpen(true);
-                      }
-                    }}
-                    className="gift-modal-download-link"
-                    style={{ border: 'none', cursor: 'pointer', display: 'inline-block' }}
-                  >
-                    ⬇️ Download Bonus Coloring Sheet
-                  </button>
-                </div>
-              </div>
-            </motion.div>
-
-          ) : (
-            <p className="gift-modal-footer-note">
-              🔒 <em>Bonus unlocks automatically when you share with your friends.</em>
-            </p>
-          )}
-        </motion.div>
-      </div>
+            </LayoutContent>
+          </Layout>
+        </Dialog>
+      </SoeAstryxTheme>
 
       <EmailDownloadGateModal
         isOpen={isGateOpen}
@@ -164,9 +171,8 @@ export const GiftALandModal = ({ isOpen, onClose, triggerLand = 'Harmonia' }) =>
           kind: 'interest',
         }}
       />
-    </AnimatePresence>
+    </>
   );
 };
 
 export default GiftALandModal;
-

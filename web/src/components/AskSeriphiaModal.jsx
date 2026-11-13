@@ -1,7 +1,35 @@
-import { useState, useEffect, useRef, useCallback, useId } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Badge } from '@astryxdesign/core/Badge';
+import { Banner } from '@astryxdesign/core/Banner';
+import { Button } from '@astryxdesign/core/Button';
+import { Card } from '@astryxdesign/core/Card';
+import { Dialog, DialogHeader } from '@astryxdesign/core/Dialog';
+import { Heading } from '@astryxdesign/core/Heading';
+import { Layout, LayoutContent, Stack } from '@astryxdesign/core/Layout';
+import { Selector } from '@astryxdesign/core/Selector';
+import { Slider } from '@astryxdesign/core/Slider';
+import { Tab, TabList } from '@astryxdesign/core/TabList';
+import { Text } from '@astryxdesign/core/Text';
 import ConcordRoiCalculator from './ConcordRoiCalculator';
+import SoeAstryxTheme from './SoeAstryxTheme';
 import './AskSeriphiaModal.css';
+
+const LAND_OPTIONS = [
+  { value: 'harmonia', label: 'Harmonia (Language, Manners & Phonics)' },
+  { value: 'numeria', label: 'Numeria (Numbers, Counting & Shapes)' },
+  { value: 'vitalis', label: 'Vitalis (Physical Skills, Movement & Breath)' },
+  { value: 'luminosity', label: 'Luminosity (Advanced Language, Civics & Careers)' },
+  { value: 'aquaria', label: 'Aquaria (Water, Emotions & Regulation)' },
+  { value: 'terrasol', label: 'Terrasol (Earth, Nature & Science)' },
+  { value: 'celestia', label: 'Celestia (Sky, Time & Night Cycles)' },
+];
+
+const AGE_OPTIONS = [
+  { value: '2-3', label: 'Ages 2–3 (Toddler Sensory)' },
+  { value: '4-5', label: 'Ages 4–5 (Pre-K Readiness)' },
+  { value: '6-7', label: 'Ages 6–7 (Kindergarten / Grade 1–2)' },
+];
 
 // Canonical 7 Lands mapped to Hero Mentors & Curricular Focus (Strictly Ages 2–7)
 const LAND_LESSON_DATABASE = {
@@ -246,10 +274,6 @@ export default function AskSeriphiaModal() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isPulsing, setIsPulsing] = useState(false);
 
-  const landSelectId = useId();
-  const ageSelectId = useId();
-  const bpmSliderId = useId();
-
   const audioCtxRef = useRef(null);
   const timerRef = useRef(null);
 
@@ -308,18 +332,6 @@ export default function AskSeriphiaModal() {
     };
   }, [isPlaying, bpm, playClick]);
 
-  // Handle ESC key to close modal
-  useEffect(() => {
-    const handleKeyDown = (e) => {
-      if (e.key === 'Escape' && isOpen) {
-        setIsOpen(false);
-        setIsPlaying(false);
-      }
-    };
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [isOpen]);
-
   const currentLandData = LAND_LESSON_DATABASE[selectedLand] || LAND_LESSON_DATABASE.harmonia;
   const currentActivity = currentLandData.activities[selectedAge] || currentLandData.activities['4-5'];
 
@@ -338,6 +350,13 @@ https://thesoundofessentials.com`;
     navigator.clipboard.writeText(textToCopy);
     setCopiedNotification(true);
     setTimeout(() => setCopiedNotification(false), 2500);
+  };
+
+  const handleDialogChange = (open) => {
+    setIsOpen(open);
+    if (!open) {
+      setIsPlaying(false);
+    }
   };
 
   return (
@@ -363,24 +382,20 @@ https://thesoundofessentials.com`;
         </span>
       </button>
 
-      {/* Intelligent UI Modal */}
-      {isOpen && (
-        <div
-          className="seriphia-modal-backdrop"
-          role="dialog"
-          aria-modal="true"
-          aria-labelledby="seriphia-modal-title"
-          onClick={(e) => {
-            if (e.target === e.currentTarget) {
-              setIsOpen(false);
-              setIsPlaying(false);
-            }
-          }}
+      {/* Astryx Dialog Suite */}
+      <SoeAstryxTheme>
+        <Dialog
+          isOpen={isOpen}
+          onOpenChange={handleDialogChange}
+          width={920}
+          maxHeight="90vh"
+          aria-label={t('seriphia.title', 'Seriphia • Learning Concierge')}
         >
-          <div className="seriphia-modal-window" data-lenis-prevent>
-            {/* Modal Header */}
-            <div className="seriphia-modal-header">
-              <div className="seriphia-header-left">
+          <Layout padding={5} gap={4} data-lenis-prevent>
+            <DialogHeader
+              title={t('seriphia.title', 'Seriphia • Learning Concierge')}
+              subtitle={t('seriphia.subtitle', 'Ages 2–7 Tactile & Acoustic Learning Suite')}
+              startContent={
                 <img
                   src="/assets/heroes/seriphia-selfie.webp"
                   alt="Seriphia"
@@ -389,207 +404,188 @@ https://thesoundofessentials.com`;
                     e.currentTarget.style.display = 'none';
                   }}
                 />
-                <div className="seriphia-header-titles">
-                  <h3 id="seriphia-modal-title">{t('seriphia.title', 'Seriphia • Learning Concierge')}</h3>
-                  <p>
-                    <span className="status-dot" />
-                    <span>{t('seriphia.subtitle', 'Ages 2–7 Tactile & Acoustic Learning Suite')}</span>
-                  </p>
-                </div>
-              </div>
-              <button
-                type="button"
-                className="seriphia-close-btn"
-                onClick={() => {
-                  setIsOpen(false);
-                  setIsPlaying(false);
-                }}
-                aria-label="Close modal"
-              >
-                ×
-              </button>
-            </div>
+              }
+              onOpenChange={handleDialogChange}
+              hasDivider
+            />
 
-            {/* Generative Tool Navigation Tabs */}
-            <div className="seriphia-tool-tabs" role="tablist">
-              <button
-                type="button"
-                role="tab"
-                aria-selected={activeTab === 'lesson'}
-                className={`seriphia-tab-btn ${activeTab === 'lesson' ? 'active' : ''}`}
-                onClick={() => setActiveTab('lesson')}
-              >
-                📝 {t('seriphia.tab_lesson', '10-Min Lesson Card')}
-              </button>
-              <button
-                type="button"
-                role="tab"
-                aria-selected={activeTab === 'metronome'}
-                className={`seriphia-tab-btn ${activeTab === 'metronome' ? 'active' : ''}`}
-                onClick={() => setActiveTab('metronome')}
-              >
-                ⏱️ {t('seriphia.tab_metronome', 'Acoustic Metronome (90-110 BPM)')}
-              </button>
-              <button
-                type="button"
-                role="tab"
-                aria-selected={activeTab === 'concord'}
-                className={`seriphia-tab-btn ${activeTab === 'concord' ? 'active' : ''}`}
-                onClick={() => setActiveTab('concord')}
-              >
-                💡 {t('seriphia.tab_concord', 'Concord ROI Calculator')}
-              </button>
-            </div>
+            <TabList
+              role="tablist"
+              value={activeTab}
+              onChange={(val) => setActiveTab(val)}
+              size="md"
+              hasDivider
+            >
+              <Tab
+                value="lesson"
+                panelId="seriphia-panel-lesson"
+                label={t('seriphia.tab_lesson', '10-Min Lesson Card')}
+                icon={<span aria-hidden="true">📝</span>}
+              />
+              <Tab
+                value="metronome"
+                panelId="seriphia-panel-metronome"
+                label={t('seriphia.tab_metronome', 'Acoustic Metronome (90-110 BPM)')}
+                icon={<span aria-hidden="true">⏱️</span>}
+              />
+              <Tab
+                value="concord"
+                panelId="seriphia-panel-concord"
+                label={t('seriphia.tab_concord', 'Concord ROI Calculator')}
+                icon={<span aria-hidden="true">💡</span>}
+              />
+            </TabList>
 
-            {/* Modal Content Body */}
-            <div className="seriphia-modal-body">
+            <LayoutContent gap={4}>
               {/* TAB 1: 10-Minute Tactile Lesson Card Generator */}
               {activeTab === 'lesson' && (
-                <div className="seriphia-lesson-view">
+                <div id="seriphia-panel-lesson" role="tabpanel" className="seriphia-lesson-view">
                   <div className="lesson-extender-controls">
-                    <div className="lesson-select-group">
-                      <label htmlFor={landSelectId}>{t('seriphia.select_land', 'Select 7 Lands & Domain')}</label>
-                      <select
-                        id={landSelectId}
-                        value={selectedLand}
-                        onChange={(e) => setSelectedLand(e.target.value)}
-                      >
-                        <option value="harmonia">Harmonia (Language, Manners & Phonics)</option>
-                        <option value="numeria">Numeria (Numbers, Counting & Shapes)</option>
-                        <option value="vitalis">Vitalis (Physical Skills, Movement & Breath)</option>
-                        <option value="luminosity">Luminosity (Advanced Language, Civics & Careers)</option>
-                        <option value="aquaria">Aquaria (Water, Emotions & Regulation)</option>
-                        <option value="terrasol">Terrasol (Earth, Nature & Science)</option>
-                        <option value="celestia">Celestia (Sky, Time & Night Cycles)</option>
-                      </select>
-                    </div>
+                    <Selector
+                      label={t('seriphia.select_land', 'Select 7 Lands & Domain')}
+                      value={selectedLand}
+                      onChange={(val) => setSelectedLand(val)}
+                      options={LAND_OPTIONS}
+                      width="100%"
+                      size="md"
+                    />
 
-                    <div className="lesson-select-group">
-                      <label htmlFor={ageSelectId}>{t('seriphia.select_age', 'Child Age Group')}</label>
-                      <select
-                        id={ageSelectId}
-                        value={selectedAge}
-                        onChange={(e) => setSelectedAge(e.target.value)}
-                      >
-                        <option value="2-3">Ages 2–3 (Toddler Sensory)</option>
-                        <option value="4-5">Ages 4–5 (Pre-K Readiness)</option>
-                        <option value="6-7">Ages 6–7 (Kindergarten / Grade 1–2)</option>
-                      </select>
-                    </div>
+                    <Selector
+                      label={t('seriphia.select_age', 'Child Age Group')}
+                      value={selectedAge}
+                      onChange={(val) => setSelectedAge(val)}
+                      options={AGE_OPTIONS}
+                      width="100%"
+                      size="md"
+                    />
                   </div>
 
                   {/* Output Card */}
-                  <div className="lesson-card-output">
-                    <span
-                      className="lesson-card-badge"
-                      style={{ background: currentLandData.color }}
-                    >
-                      {currentLandData.name} • Mentors: {currentLandData.heroes}
-                    </span>
-                    <h4>{currentActivity.title}</h4>
-                    <p className="lesson-card-focus">
-                      <strong>Focus:</strong> {currentLandData.domain}
-                    </p>
-
-                    <div className="lesson-section">
-                      <div className="lesson-section-title">🎯 10-Minute Learning Objective</div>
-                      <p>{currentActivity.objective}</p>
-                    </div>
-
-                    <div className="lesson-section">
-                      <div className="lesson-section-title">🥄 Everyday Household Materials</div>
-                      <div className="lesson-materials-pills">
-                        {currentActivity.materials.map((item, idx) => (
-                          <span key={idx} className="lesson-material-pill">
-                            {item}
-                          </span>
-                        ))}
+                  <Card padding={5} className="lesson-card-output">
+                    <Stack direction="vertical" gap={3}>
+                      <div>
+                        <span
+                          className="lesson-card-badge"
+                          style={{ background: currentLandData.color }}
+                        >
+                          {currentLandData.name} • Mentors: {currentLandData.heroes}
+                        </span>
+                        <Heading level={4}>{currentActivity.title}</Heading>
+                        <Text size="sm" color="secondary" display="block">
+                          <strong>Focus:</strong> {currentLandData.domain}
+                        </Text>
                       </div>
-                    </div>
 
-                    <div className="lesson-section">
-                      <div className="lesson-section-title">🗣️ Step-by-Step Caregiver Cadence</div>
-                      <div className="lesson-script-box">{currentActivity.script}</div>
-                    </div>
+                      <div className="lesson-section">
+                        <div className="lesson-section-title">🎯 10-Minute Learning Objective</div>
+                        <Text size="sm" display="block">
+                          {currentActivity.objective}
+                        </Text>
+                      </div>
 
-                    <div className="lesson-section">
-                      <div className="lesson-section-title">🌟 Closing Affirmation</div>
-                      <p style={{ fontStyle: 'italic', color: '#4A5568' }}>{currentActivity.affirmation}</p>
-                    </div>
+                      <div className="lesson-section">
+                        <div className="lesson-section-title">🥄 Everyday Household Materials</div>
+                        <Stack direction="horizontal" gap={2} wrap>
+                          {currentActivity.materials.map((item, idx) => (
+                            <Badge key={idx} variant="neutral" label={item} />
+                          ))}
+                        </Stack>
+                      </div>
 
-                    <div className="lesson-actions">
-                      <button type="button" className="lesson-btn primary" onClick={handleCopyLesson}>
-                        {copiedNotification ? '✔ Copied to Clipboard!' : '📋 Copy Lesson Card'}
-                      </button>
-                      <button
-                        type="button"
-                        className="lesson-btn secondary"
-                        onClick={() => window.print()}
-                      >
-                        🖨️ Print Card
-                      </button>
-                    </div>
-                  </div>
+                      <div className="lesson-section">
+                        <div className="lesson-section-title">🗣️ Step-by-Step Caregiver Cadence</div>
+                        <div className="lesson-script-box">{currentActivity.script}</div>
+                      </div>
+
+                      <div className="lesson-section">
+                        <div className="lesson-section-title">🌟 Closing Affirmation</div>
+                        <Text size="sm" color="secondary" display="block" style={{ fontStyle: 'italic' }}>
+                          {currentActivity.affirmation}
+                        </Text>
+                      </div>
+
+                      <Stack direction="horizontal" gap={2} wrap>
+                        <Button
+                          variant="primary"
+                          size="md"
+                          label={copiedNotification ? '✔ Copied to Clipboard!' : '📋 Copy Lesson Card'}
+                          onClick={handleCopyLesson}
+                        />
+                        <Button
+                          variant="secondary"
+                          size="md"
+                          label="🖨️ Print Card"
+                          onClick={() => window.print()}
+                        />
+                      </Stack>
+                    </Stack>
+                  </Card>
                 </div>
               )}
 
               {/* TAB 2: Sensory Metronome & Rhythm Tapper */}
               {activeTab === 'metronome' && (
-                <div className="metronome-container">
-                  <div className={`metronome-pulse-display ${isPulsing ? 'pulsing' : ''}`}>
-                    {bpm}
-                  </div>
-
-                  <div className="metronome-slider-box">
-                    <div className="metronome-tempo-label">
-                      <label htmlFor={bpmSliderId}>
-                        {t('seriphia.tempo_label', 'Acoustic Calming Cadence')}
-                      </label>
-                      {bpm >= 90 && bpm <= 110 && (
-                        <span className="metronome-tag">✨ Resting Calming Zone</span>
-                      )}
+                <div id="seriphia-panel-metronome" role="tabpanel" className="metronome-container">
+                  <Stack direction="vertical" gap={4} align="center">
+                    <div className={`metronome-pulse-display ${isPulsing ? 'pulsing' : ''}`}>
+                      {bpm}
                     </div>
-                    <input
-                      id={bpmSliderId}
-                      type="range"
-                      min={70}
-                      max={130}
-                      value={bpm}
-                      onChange={(e) => setBpm(Number(e.target.value))}
-                      className="roi-slider"
-                      style={{ maxWidth: '400px', margin: '0.5rem auto' }}
+
+                    <Card variant="muted" padding={4} width="100%">
+                      <Stack direction="vertical" gap={3}>
+                        <Stack direction="horizontal" justify="space-between" align="center" wrap gap={2}>
+                          <Text size="md" weight="bold">
+                            {t('seriphia.tempo_label', 'Acoustic Calming Cadence')}
+                          </Text>
+                          {bpm >= 90 && bpm <= 110 && (
+                            <Badge variant="green" label="✨ Resting Calming Zone" />
+                          )}
+                        </Stack>
+
+                        <Slider
+                          label={t('seriphia.tempo_label', 'Acoustic Calming Cadence')}
+                          isLabelHidden
+                          min={70}
+                          max={130}
+                          step={1}
+                          value={bpm}
+                          onChange={(val) => setBpm(val)}
+                          valueDisplay="text"
+                          formatValue={(v) => `${v} BPM`}
+                          width="100%"
+                          marks={[
+                            { value: 70, label: '70 BPM' },
+                            { value: 90, label: '90' },
+                            { value: 110, label: '110' },
+                            { value: 130, label: '130 BPM' },
+                          ]}
+                        />
+                      </Stack>
+                    </Card>
+
+                    <Button
+                      variant={isPlaying ? 'destructive' : 'primary'}
+                      size="lg"
+                      label={isPlaying ? '⏹ Pause Metronome' : '▶ Start Acoustic Rhythm Pulse'}
+                      onClick={() => setIsPlaying(!isPlaying)}
                     />
-                    <div style={{ fontSize: '0.82rem', color: '#718096', marginTop: '0.5rem' }}>
-                      Range: 70 - 130 BPM
-                    </div>
-                  </div>
 
-                  <button
-                    type="button"
-                    className={`metronome-toggle-btn ${isPlaying ? 'running' : ''}`}
-                    onClick={() => setIsPlaying(!isPlaying)}
-                  >
-                    {isPlaying ? '⏹ Pause Metronome' : '▶ Start Acoustic Rhythm Pulse'}
-                  </button>
-
-                  <div className="metronome-science-callout">
-                    <strong>🧠 The Neuroscience of 90–110 BPM:</strong>
-                    <br />
-                    Research in Dalcroze Eurhythmics and neurological development confirms that steady
-                    auditory tempos between 90 and 110 BPM align with the developing child’s resting
-                    parasympathetic window. Tapping or swaying to this pulse lowers cortisol, facilitates
-                    bilateral motor balance, and anchors phonological speech processing.
-                  </div>
+                    <Banner
+                      status="info"
+                      title="🧠 The Neuroscience of 90–110 BPM"
+                      description="Research in Dalcroze Eurhythmics and neurological development confirms that steady auditory tempos between 90 and 110 BPM align with the developing child’s resting parasympathetic window. Tapping or swaying to this pulse lowers cortisol, facilitates bilateral motor balance, and anchors phonological speech processing."
+                    />
+                  </Stack>
                 </div>
               )}
 
               {/* TAB 3: Concord ROI & Financial Leverage */}
               {activeTab === 'concord' && (
-                <div className="seriphia-concord-view">
+                <div id="seriphia-panel-concord" role="tabpanel" className="seriphia-concord-view">
                   <ConcordRoiCalculator />
                 </div>
               )}
-            </div>
+            </LayoutContent>
 
             {/* Modal Footer */}
             <div className="seriphia-modal-footer">
@@ -597,17 +593,16 @@ https://thesoundofessentials.com`;
                 Need customized support for your classroom or homeschool pod?{' '}
                 <a href="mailto:info@soelearn.com">Email info@soelearn.com</a>
               </div>
-              <a
+              <Button
+                variant="primary"
+                size="md"
                 href="/workbook"
-                className="lesson-btn primary"
-                style={{ textDecoration: 'none' }}
-              >
-                Explore Rhythm Ready Workbook →
-              </a>
+                label="Explore Rhythm Ready Workbook →"
+              />
             </div>
-          </div>
-        </div>
-      )}
+          </Layout>
+        </Dialog>
+      </SoeAstryxTheme>
     </>
   );
 }

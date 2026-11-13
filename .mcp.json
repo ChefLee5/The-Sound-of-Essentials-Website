@@ -5,6 +5,10 @@
       "args": [
         "tools/soe_mcls/mcp_server.py"
       ]
+    },
+    "astryx": {
+      "transport": "http",
+      "url": "https://astryx.atmeta.com/mcp"
     }
   }
 }

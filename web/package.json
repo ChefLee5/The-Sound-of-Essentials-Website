@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "theme:build": "astryx theme build src/themes/soeTheme.ts --out src/themes/soe.css",
     "canon:compile": "node scripts/compile-mcls-canon.mjs",
     "catalog:pinterest": "node scripts/generate-pinterest-catalog.mjs",
     "build": "node scripts/compile-mcls-canon.mjs && node scripts/generate-pinterest-catalog.mjs && vite build",
@@ -18,10 +19,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@astryxdesign/core": "^0.7.15",
+    "@astryxdesign/theme-neutral": "^0.7.15",
     "@gsap/react": "^2.1.2",
     "@octokit/rest": "^22.0.1",
     "@remotion/player": "4.0.427",
     "@splinetool/react-spline": "^4.1.0",
+    "@stylexjs/stylex": "^0.19.2",
     "@supabase/supabase-js": "^2.112.2",
     "animejs": "^4.3.6",
     "axios": "^1.13.5",
@@ -39,6 +43,7 @@
     "remotion": "4.0.427"
   },
   "devDependencies": {
+    "@astryxdesign/cli": "^0.7.15",
     "@eslint/js": "^9.39.1",
     "@types/react": "^19.2.5",
     "@types/react-dom": "^19.2.3",

@@ -1,11 +1,17 @@
 import React, { useState } from 'react';
+import { Banner } from '@astryxdesign/core/Banner';
+import { Button } from '@astryxdesign/core/Button';
+import { Stack } from '@astryxdesign/core/Layout';
+import { Text } from '@astryxdesign/core/Text';
+import { TextInput } from '@astryxdesign/core/TextInput';
 import { submitSoeInterest } from '../services/soeSubmissions';
 import { trackLead } from '../utils/analytics';
 import { setGateUnlocked, isValidEmail } from '../utils/gateAuth';
+import SoeAstryxTheme from './SoeAstryxTheme';
 import './BrevoSubscribeForm.css';
 
 /**
- * BrevoSubscribeForm — Native, accessible, claymorphic email capture component.
+ * BrevoSubscribeForm — Native, accessible email capture component powered by Astryx primitives.
  * Replaces external Beehiiv iframe widgets with zero layout shifts and instant callbacks.
  */
 const BrevoSubscribeForm = ({
@@ -82,63 +88,80 @@ const BrevoSubscribeForm = ({
 
   if (isSuccess && !onSuccess) {
     return (
-      <div className={`brevo-success-message ${className}`.trim()}>
-        <span className="brevo-success-icon">✨</span>
-        <h4>Welcome to the Quest!</h4>
-        <p>Check your inbox for your 19-track album access links.</p>
-      </div>
+      <SoeAstryxTheme className={`brevo-subscribe-wrapper ${className}`.trim()}>
+        <Banner
+          status="success"
+          title="✨ Welcome to the Quest!"
+          description="Check your inbox for your 19-track album access links."
+        />
+      </SoeAstryxTheme>
     );
   }
 
   return (
-    <div className={`brevo-subscribe-wrapper ${className}`.trim()}>
+    <SoeAstryxTheme className={`brevo-subscribe-wrapper ${className}`.trim()}>
       <form onSubmit={handleSubmit} className="brevo-form" noValidate>
         <div className="brevo-input-group">
           {showNameInput && (
-            <input
-              type="text"
-              placeholder="First name..."
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              disabled={isSubmitting}
-              className="brevo-input brevo-input-name"
-              maxLength={60}
-            />
+            <div className="brevo-field-slot brevo-field-name">
+              <TextInput
+                type="text"
+                label="First name"
+                isLabelHidden
+                placeholder="First name..."
+                value={name}
+                onChange={(val) => setName(val)}
+                isDisabled={isSubmitting}
+                size="lg"
+                width="100%"
+                autoComplete="given-name"
+                maxLength={60}
+              />
+            </div>
           )}
 
-          <input
-            type="email"
-            required
-            placeholder={placeholder}
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            disabled={isSubmitting}
-            className="brevo-input brevo-input-email"
-            aria-label="Email address"
-          />
+          <div className="brevo-field-slot brevo-field-email">
+            <TextInput
+              type="email"
+              label="Email address"
+              isLabelHidden
+              isRequired
+              placeholder={placeholder}
+              value={email}
+              onChange={(val) => {
+                setEmail(val);
+                if (errorMsg) setErrorMsg('');
+              }}
+              isDisabled={isSubmitting}
+              size="lg"
+              width="100%"
+              autoComplete="email"
+              status={errorMsg ? { type: 'error' } : undefined}
+            />
+          </div>
 
-          <button
+          <Button
             type="submit"
-            disabled={isSubmitting}
-            className="btn btn-gold btn-shimmer brevo-submit-btn"
-          >
-            {isSubmitting ? (
-              <span className="brevo-loading-dots">
-                <span>.</span><span>.</span><span>.</span>
-              </span>
-            ) : (
-              buttonText
-            )}
-          </button>
+            variant="primary"
+            size="lg"
+            isLoading={isSubmitting}
+            isDisabled={isSubmitting}
+            label={buttonText}
+            className="brevo-submit-btn"
+          />
         </div>
 
-        {errorMsg && <p className="brevo-error-text">{errorMsg}</p>}
+        {errorMsg && (
+          <Stack direction="vertical" gap={1}>
+            <Banner status="error" title={errorMsg} role="alert" />
+          </Stack>
+        )}
 
-        <p className="brevo-disclaimer">
+        <Text size="xs" color="secondary" className="brevo-disclaimer">
           🔒 No spam, ever. Unsubscribe anytime. We respect your family's inbox.
-        </p>
+        </Text>
       </form>
-    </div>
+    </SoeAstryxTheme>
   );
 };
 

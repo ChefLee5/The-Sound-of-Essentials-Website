@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
+import { Button } from '@astryxdesign/core/Button';
+import { Card } from '@astryxdesign/core/Card';
+import { Stack } from '@astryxdesign/core/Layout';
+import { Text } from '@astryxdesign/core/Text';
+import SoeAstryxTheme from './SoeAstryxTheme';
 
 const CookieConsent = () => {
   const { t } = useTranslation();
@@ -54,7 +59,7 @@ const CookieConsent = () => {
   if (!isVisible) return null;
 
   return (
-    <aside 
+    <aside
       aria-label="Privacy and Cookie Consent"
       className="cookie-consent-bar"
       style={{
@@ -64,66 +69,53 @@ const CookieConsent = () => {
         right: '1rem',
         maxWidth: '720px',
         margin: '0 auto',
-        backgroundColor: '#ffffff',
-        border: '1px solid rgba(0, 0, 0, 0.12)',
-        borderRadius: 'var(--radius-md, 20px)',
-        padding: '1.25rem 1.5rem',
-        boxShadow: '0 12px 36px rgba(0, 0, 0, 0.15)',
         zIndex: 9999,
-        display: 'flex',
-        flexDirection: 'column',
-        gap: '0.85rem',
-        fontFamily: 'var(--font-body, "Inter", sans-serif)',
       }}
     >
-      <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
-        <span style={{ fontSize: '1.4rem', lineHeight: 1 }} aria-hidden="true">🛡️</span>
-        <div style={{ flex: 1, fontSize: '0.88rem', color: '#2B2016', lineHeight: 1.55 }}>
-          <strong style={{ color: 'var(--color-orange, #FF6F00)' }}>Privacy &amp; Data Safeguards:</strong>{' '}
-          {t('legal.cookie_banner_text')}{' '}
-          <Link to="/privacy" style={{ color: 'var(--color-orange, #FF6F00)', textDecoration: 'underline', fontWeight: 600 }}>
-            {t('legal.cookie_learn_more')}
-          </Link>
-        </div>
-      </div>
+      <SoeAstryxTheme>
+        <Card elevation="high" padding={4}>
+          <Stack direction="vertical" gap={3}>
+            <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
+              <span style={{ fontSize: '1.35rem', lineHeight: 1 }} aria-hidden="true">
+                🛡️
+              </span>
+              <Text size="sm" style={{ flex: 1, lineHeight: 1.55 }}>
+                <strong style={{ color: 'var(--color-orange, #FF6F00)' }}>
+                  Privacy &amp; Data Safeguards:
+                </strong>{' '}
+                {t('legal.cookie_banner_text')}{' '}
+                <Link
+                  to="/privacy"
+                  style={{
+                    color: '#C65100',
+                    textDecoration: 'underline',
+                    fontWeight: 600,
+                  }}
+                >
+                  {t('legal.cookie_learn_more')}
+                </Link>
+              </Text>
+            </div>
 
-      <div style={{ display: 'flex', gap: '0.6rem', justifyContent: 'flex-end', flexWrap: 'wrap' }}>
-        <button
-          type="button"
-          onClick={handleDecline}
-          style={{
-            background: 'transparent',
-            border: '1.5px solid #d0d5dd',
-            color: '#475467',
-            padding: '0.5rem 1.1rem',
-            borderRadius: 'var(--radius-pill, 50px)',
-            fontSize: '0.84rem',
-            fontWeight: 600,
-            cursor: 'pointer',
-            transition: 'all 0.2s ease',
-          }}
-        >
-          {t('legal.cookie_decline')}
-        </button>
-        <button
-          type="button"
-          onClick={handleAccept}
-          style={{
-            background: 'linear-gradient(135deg, var(--color-green, #4CAF50), var(--color-blue, #1E88E5))',
-            border: 'none',
-            color: '#ffffff',
-            padding: '0.5rem 1.3rem',
-            borderRadius: 'var(--radius-pill, 50px)',
-            fontSize: '0.84rem',
-            fontWeight: 600,
-            cursor: 'pointer',
-            boxShadow: '0 4px 12px rgba(76, 175, 80, 0.25)',
-            transition: 'all 0.2s ease',
-          }}
-        >
-          {t('legal.cookie_accept')}
-        </button>
-      </div>
+            <Stack direction="horizontal" justify="end" gap={2} wrap>
+              <Button
+                type="button"
+                variant="secondary"
+                size="sm"
+                onClick={handleDecline}
+                label={t('legal.cookie_decline')}
+              />
+              <Button
+                type="button"
+                variant="primary"
+                size="sm"
+                onClick={handleAccept}
+                label={t('legal.cookie_accept')}
+              />
+            </Stack>
+          </Stack>
+        </Card>
+      </SoeAstryxTheme>
     </aside>
   );
 };

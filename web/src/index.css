@@ -5,6 +5,8 @@
 
 @import './styles/self-hosted-fonts.css';
 
+@layer reset, astryx-base, astryx-theme;
+
 /* More Sugar — self-hosted display font */
 @font-face {
   font-family: 'More Sugar';
@@ -142,6 +144,7 @@
 }
 
 /* ── Reset & Mobile Base ── */
+@layer reset {
 *,
 *::before,
 *::after {
@@ -237,6 +240,7 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+}
 }
 
 /* ── Layout ── */

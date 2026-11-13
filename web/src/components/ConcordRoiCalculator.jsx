@@ -1,5 +1,15 @@
-import { useState, useId } from 'react';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Badge } from '@astryxdesign/core/Badge';
+import { Banner } from '@astryxdesign/core/Banner';
+import { Button } from '@astryxdesign/core/Button';
+import { Card } from '@astryxdesign/core/Card';
+import { Heading } from '@astryxdesign/core/Heading';
+import { Stack } from '@astryxdesign/core/Layout';
+import { SegmentedControl, SegmentedControlItem } from '@astryxdesign/core/SegmentedControl';
+import { Slider } from '@astryxdesign/core/Slider';
+import { Text } from '@astryxdesign/core/Text';
+import SoeAstryxTheme from './SoeAstryxTheme';
 import './ConcordRoiCalculator.css';
 
 export default function ConcordRoiCalculator({ initialMode = 'school' }) {
@@ -7,9 +17,6 @@ export default function ConcordRoiCalculator({ initialMode = 'school' }) {
   const [mode, setMode] = useState(initialMode); // 'school' | 'family'
   const [units, setUnits] = useState(mode === 'school' ? 4 : 2); // classrooms or children
   const [referrals, setReferrals] = useState(3); // fellow schools or families referred
-
-  const unitsSliderId = useId();
-  const referralsSliderId = useId();
 
   // Mode calculations
   const isSchool = mode === 'school';
@@ -32,151 +39,144 @@ export default function ConcordRoiCalculator({ initialMode = 'school' }) {
   const catalogPoolShare = Math.round(soeAnnualCost * 0.25);
 
   return (
-    <div className="concord-roi-calculator" aria-label="Concord Curriculum ROI Calculator">
-      <div className="roi-header">
-        <div className="roi-pill-tag">
-          <span className="pulse-disc" />
-          <span>{t('roi.pill', 'The Concord Financial Model • 4-Pillar Efficiency')}</span>
-        </div>
-        <h3>{t('roi.heading', 'Early Learning Impact & ROI Calculator')}</h3>
-        <p>
-          {t(
-            'roi.subheading',
-            'Compare the cost of screen-heavy digital subscriptions against our turnkey, acoustic-powered physical curriculum for ages 2–7.'
-          )}
-        </p>
-      </div>
-
-      {/* Mode Switcher */}
-      <div className="roi-mode-switcher" role="tablist" aria-label="Select institution type">
-        <button
-          type="button"
-          role="tab"
-          aria-selected={isSchool}
-          className={`roi-mode-btn ${isSchool ? 'active' : ''}`}
-          onClick={() => {
-            setMode('school');
-            setUnits(4);
-          }}
-        >
-          🏫 {t('roi.mode_school', 'Preschool / Daycare Center')}
-        </button>
-        <button
-          type="button"
-          role="tab"
-          aria-selected={!isSchool}
-          className={`roi-mode-btn ${!isSchool ? 'active' : ''}`}
-          onClick={() => {
-            setMode('family');
-            setUnits(2);
-          }}
-        >
-          🏡 {t('roi.mode_family', 'Homeschool Pod / Family')}
-        </button>
-      </div>
-
-      {/* Interactive Controls */}
-      <div className="roi-controls">
-        <div className="roi-control-group">
-          <div className="roi-control-label">
-            <label htmlFor={unitsSliderId}>
-              {isSchool ? t('roi.classrooms_label', 'Active Classrooms (Ages 2–7)') : t('roi.children_label', 'Children (Ages 2–7)')}
-            </label>
-            <span className="roi-badge-val">
-              {units} {isSchool ? (units === 1 ? 'Room' : 'Rooms') : (units === 1 ? 'Child' : 'Children')}
-            </span>
+    <SoeAstryxTheme>
+      <div className="concord-roi-calculator" aria-label="Concord Curriculum ROI Calculator">
+        <div className="roi-header">
+          <div style={{ marginBottom: '0.75rem' }}>
+            <Badge
+              variant="orange"
+              label={t('roi.pill', 'The Concord Financial Model • 4-Pillar Efficiency')}
+              icon={<span className="pulse-disc" aria-hidden="true" />}
+            />
           </div>
-          <input
-            id={unitsSliderId}
-            type="range"
+          <Heading level={3}>{t('roi.heading', 'Early Learning Impact & ROI Calculator')}</Heading>
+          <Text size="md" color="secondary" display="block">
+            {t(
+              'roi.subheading',
+              'Compare the cost of screen-heavy digital subscriptions against our turnkey, acoustic-powered physical curriculum for ages 2–7.'
+            )}
+          </Text>
+        </div>
+
+        {/* Mode Switcher */}
+        <div style={{ maxWidth: '480px', margin: '0 auto 1.75rem' }}>
+          <SegmentedControl
+            label="Select institution type"
+            value={mode}
+            onChange={(nextMode) => {
+              setMode(nextMode);
+              setUnits(nextMode === 'school' ? 4 : 2);
+            }}
+            layout="fill"
+            size="md"
+          >
+            <SegmentedControlItem
+              value="school"
+              label={t('roi.mode_school', 'Preschool / Daycare Center')}
+              icon={<span aria-hidden="true">🏫</span>}
+            />
+            <SegmentedControlItem
+              value="family"
+              label={t('roi.mode_family', 'Homeschool Pod / Family')}
+              icon={<span aria-hidden="true">🏡</span>}
+            />
+          </SegmentedControl>
+        </div>
+
+        {/* Interactive Controls */}
+        <Stack direction="vertical" gap={4} style={{ marginBottom: '1.75rem' }}>
+          <Slider
+            label={
+              isSchool
+                ? t('roi.classrooms_label', 'Active Classrooms (Ages 2–7)')
+                : t('roi.children_label', 'Children (Ages 2–7)')
+            }
+            description={
+              isSchool
+                ? t('roi.classrooms_hint', 'Typical center: 3–8 classrooms')
+                : t('roi.children_hint', 'Average homeschool pod: 2–5 children')
+            }
             min={1}
             max={isSchool ? 30 : 8}
+            step={1}
             value={units}
-            onChange={(e) => setUnits(Number(e.target.value))}
-            className="roi-slider"
+            onChange={setUnits}
+            valueDisplay="text"
+            formatValue={(v) =>
+              `${v} ${isSchool ? (v === 1 ? 'Room' : 'Rooms') : v === 1 ? 'Child' : 'Children'}`
+            }
+            width="100%"
           />
-          <span className="roi-slider-hint">
-            {isSchool
-              ? t('roi.classrooms_hint', 'Typical center: 3–8 classrooms')
-              : t('roi.children_hint', 'Average homeschool pod: 2–5 children')}
-          </span>
-        </div>
 
-        <div className="roi-control-group">
-          <div className="roi-control-label">
-            <label htmlFor={referralsSliderId}>
-              {t('roi.referrals_label', 'Community Referrals ("Share the Sound")')}
-            </label>
-            <span className="roi-badge-val">{referrals} {t('roi.partners', 'Partners')}</span>
-          </div>
-          <input
-            id={referralsSliderId}
-            type="range"
+          <Slider
+            label={t('roi.referrals_label', 'Community Referrals ("Share the Sound")')}
+            description={t('roi.referrals_hint', 'Fellow educators or families invited to the curriculum')}
             min={0}
             max={isSchool ? 20 : 15}
+            step={1}
             value={referrals}
-            onChange={(e) => setReferrals(Number(e.target.value))}
-            className="roi-slider"
+            onChange={setReferrals}
+            valueDisplay="text"
+            formatValue={(v) => `${v} ${t('roi.partners', 'Partners')}`}
+            width="100%"
           />
-          <span className="roi-slider-hint">
-            {t('roi.referrals_hint', 'Fellow educators or families invited to the curriculum')}
-          </span>
-        </div>
-      </div>
+        </Stack>
 
-      {/* Three Core Metric Cards */}
-      <div className="roi-metrics-grid">
-        <div className="roi-metric-card savings">
-          <div className="roi-metric-icon">💰</div>
-          <div className="roi-metric-label">{t('roi.metric_savings_label', 'Direct Annual Savings')}</div>
-          <div className="roi-metric-value">${netSavings.toLocaleString()}</div>
-          <div className="roi-metric-subtext">
-            {t('roi.metric_savings_sub', 'vs. recurring commercial digital app subscriptions')}
-          </div>
+        {/* Three Core Metric Cards */}
+        <div className="roi-metrics-grid">
+          <Card variant="green" padding={4} className="roi-metric-card savings">
+            <div className="roi-metric-icon">💰</div>
+            <div className="roi-metric-label">{t('roi.metric_savings_label', 'Direct Annual Savings')}</div>
+            <div className="roi-metric-value">${netSavings.toLocaleString()}</div>
+            <div className="roi-metric-subtext">
+              {t('roi.metric_savings_sub', 'vs. recurring commercial digital app subscriptions')}
+            </div>
+          </Card>
+
+          <Card variant="orange" padding={4} className="roi-metric-card bounty">
+            <div className="roi-metric-icon">🤝</div>
+            <div className="roi-metric-label">{t('roi.metric_bounty_label', 'Share the Sound Bounty')}</div>
+            <div className="roi-metric-value">${annualBountyEarnings.toLocaleString()}</div>
+            <div className="roi-metric-subtext">
+              {t('roi.metric_bounty_sub', '35% automated partner distribution directly to your program')}
+            </div>
+          </Card>
+
+          <Card variant="purple" padding={4} className="roi-metric-card pool">
+            <div className="roi-metric-icon">🏛️</div>
+            <div className="roi-metric-label">{t('roi.metric_pool_label', 'Concord Community Pool')}</div>
+            <div className="roi-metric-value">${catalogPoolShare.toLocaleString()}</div>
+            <div className="roi-metric-subtext">
+              {t('roi.metric_pool_sub', '25% of catalog revenue reinvested into acoustic artist & educator grants')}
+            </div>
+          </Card>
         </div>
 
-        <div className="roi-metric-card bounty">
-          <div className="roi-metric-icon">🤝</div>
-          <div className="roi-metric-label">{t('roi.metric_bounty_label', 'Share the Sound Bounty')}</div>
-          <div className="roi-metric-value">${annualBountyEarnings.toLocaleString()}</div>
-          <div className="roi-metric-subtext">
-            {t('roi.metric_bounty_sub', '35% automated partner distribution directly to your program')}
-          </div>
-        </div>
-
-        <div className="roi-metric-card pool">
-          <div className="roi-metric-icon">🏛️</div>
-          <div className="roi-metric-label">{t('roi.metric_pool_label', 'Concord Community Pool')}</div>
-          <div className="roi-metric-value">${catalogPoolShare.toLocaleString()}</div>
-          <div className="roi-metric-subtext">
-            {t('roi.metric_pool_sub', '25% of catalog revenue reinvested into acoustic artist & educator grants')}
-          </div>
-        </div>
-      </div>
-
-      {/* Financial Leverage Formula Explainer */}
-      <div className="roi-formula-banner">
-        <div className="roi-formula-icon">💡</div>
-        <div className="roi-formula-text">
-          <h4>{t('roi.formula_title', 'Sovereign Capital Efficiency (The 4-Pillar Formula)')}</h4>
-          <p>
-            {t(
+        {/* Financial Leverage Formula Explainer */}
+        <div style={{ marginBottom: '1.5rem' }}>
+          <Banner
+            status="info"
+            title={`💡 ${t('roi.formula_title', 'Sovereign Capital Efficiency (The 4-Pillar Formula)')}`}
+            description={t(
               'roi.formula_body',
               'Instead of renting digital screen-time that depletes attention, SOE empowers you to invest once into tangible acoustic workbooks, picture dictionaries, and 432Hz calming music. With automated 35% "Share the Sound" bounties and 100% eligibility for Title I, Head Start ELOF, and State ESA funding, your program becomes a self-funding learning sanctuary.'
             )}
-          </p>
+          />
         </div>
-      </div>
 
-      {/* Action Footer */}
-      <div className="roi-footer-actions">
-        <div className="roi-disclaimer">
-          {t('roi.disclaimer', '*Estimates based on national early learning benchmarks. 100% compliant with NAEYC and ELOF standards for ages 2–7.')}
+        {/* Action Footer */}
+        <div className="roi-footer-actions">
+          <div className="roi-disclaimer">
+            {t('roi.disclaimer', '*Estimates based on national early learning benchmarks. 100% compliant with NAEYC and ELOF standards for ages 2–7.')}
+          </div>
+          <Button
+            variant="primary"
+            size="md"
+            href="/solutions"
+            label={t('roi.cta_btn', 'Explore Institutional Solutions →')}
+          />
         </div>
-        <a href="/solutions" className="roi-cta-btn">
-          {t('roi.cta_btn', 'Explore Institutional Solutions →')}
-        </a>
       </div>
-    </div>
+    </SoeAstryxTheme>
   );
 }
