@@ -100,11 +100,13 @@ const INITIAL_UNITS = [
   {
     unit_key: 'MCLS-PRIME',
     name: 'MCLS-Prime',
-    role: 'Executive Campaign & Telemetry Orchestrator',
+    role: 'Executive Campaign & Telemetry Orchestrator (Chief of Staff)',
     icon: '🧭',
     effort_level: 'high',
     status: 'ready',
-    schedule_cron: 'Daily 08:00 EST',
+    schedule_cron: 'Daily 08:00 EST (0 8 * * *)',
+    reports_to: 'human_founder',
+    branch: 'executive_orchestration',
     description: 'Synthesizes the 5 Master Directives, audits Neon CRM & 90-day cohort LTV telemetry, and dispatches weekly work orders across all MCLS units.',
     instructions: 'Read all 5 Master Directives and live Neon CRM metrics. Identify the highest-leverage bottleneck across Engine A (/listen), Engine B (/workbook), and Institutional School Pilots, then stage an executive action plan.',
   },
@@ -115,9 +117,63 @@ const INITIAL_UNITS = [
     icon: '🔭',
     effort_level: 'high',
     status: 'ready',
-    schedule_cron: 'Mon & Thu 06:00 EST',
+    schedule_cron: 'Mon & Thu 06:00 EST (0 6 * * 1,4)',
+    reports_to: 'MCLS-PRIME',
+    branch: 'intelligence_recon',
     description: 'Audits robots.txt, llms.txt, JSON-LD schemas, and live search/AI citation visibility against incumbent children’s apps.',
     instructions: 'Audit SOE search visibility and AI citation grounding for Ages 2–7 screen-free curriculum queries. Output concrete metadata, FAQ schema, or llms.txt enhancements.',
+  },
+  {
+    unit_key: 'MCLS-INTEL-SCOUT',
+    name: 'MCLS-Intel-Scout',
+    role: 'Parenting & AI Cognitive Science Intelligence Scanner',
+    icon: '🧠',
+    effort_level: 'medium',
+    status: 'ready',
+    schedule_cron: 'Daily 06:00 EST (0 6 * * *)',
+    reports_to: 'MCLS-PRIME',
+    branch: 'intelligence_recon',
+    description: 'Scans high-leverage statements from AI founders (Karpathy, Ng) and pediatric neuroscientists on early screen harm, cognitive offloading, and phonics.',
+    instructions: 'Extract, score (leverage > 85), and export verified quotes with ad hook mappings into the intel vault (docs/soe_ai_parenting_intel_vault.json).',
+  },
+  {
+    unit_key: 'MCLS-STUDIO',
+    name: 'MCLS-Studio',
+    role: '3-Layer Ad Creative & Visual Unit',
+    icon: '🎬',
+    effort_level: 'high',
+    status: 'ready',
+    schedule_cron: 'Tue & Fri 09:00 EST (0 9 * * 2,5)',
+    reports_to: 'MCLS-PRIME',
+    branch: 'creative_cultural_brand',
+    description: 'Produces 3-Layer Meta Ad Bundles (Parent Ache -> Musical/Tactile Solution -> Zero-Risk Invitation) and UGC video briefs with credit cost estimates.',
+    instructions: 'Build a 3-Layer Ad Creative bundle and visual production brief aligned with the active Cultural Delta and Tandem Funnel Engine (A, B, or C).',
+  },
+  {
+    unit_key: 'MCLS-PULSE',
+    name: 'MCLS-Pulse',
+    role: 'Parent & Educator Community Unit',
+    icon: '💬',
+    effort_level: 'medium',
+    status: 'ready',
+    schedule_cron: 'Every 6 Hours (0 */6 * * *)',
+    reports_to: 'MCLS-PRIME',
+    branch: 'creative_cultural_brand',
+    description: 'Monitors parenting, homeschool, Montessori, and screen-fatigue discussions to draft empathetic, value-first Cultural Delta replies.',
+    instructions: 'Locate high-signal parent or educator discussions struggling with cartoon overstimulation or reading readiness (Ages 2–7) and draft a helpful, non-spammy response grounded in the 5 Cultural Deltas.',
+  },
+  {
+    unit_key: 'MCLS-GUARDIAN',
+    name: 'MCLS-Guardian',
+    role: 'Rhythm Guardian & Dual-Horizon Guardrail Sentinel',
+    icon: '🛡️',
+    effort_level: 'high',
+    status: 'ready',
+    schedule_cron: 'Hourly Spend (0 * * * *)',
+    reports_to: 'MCLS-PRIME',
+    branch: 'operations_protection',
+    description: 'Enforces 2026 battle-tested dual-horizon guardrails: protects Engine A value gate from premature kill during Meta 7-day attribution blindness, enforces strict Engine B ROAS, and scales winners by +20%.',
+    instructions: 'Audit Meta and CAPI spend velocity, protect Engine A 90-day gestation window, enforce stop-losses, and stage budget escalations for proven winners.',
   },
   {
     unit_key: 'MCLS-FORGE',
@@ -127,30 +183,10 @@ const INITIAL_UNITS = [
     effort_level: 'xhigh',
     status: 'ready',
     schedule_cron: 'On-Demand / Post-Recon',
+    reports_to: 'MCLS-PRIME',
+    branch: 'operations_protection',
     description: 'Stages canon-verified code patches, meta tags, canonical links, and JSON-LD structured data for 1-click GitHub Pull Requests.',
     instructions: 'Generate clean, canon-compliant React/HTML metadata and JSON-LD patches that pass SOE Helix Gate 1 without any banned entities or age creep.',
-  },
-  {
-    unit_key: 'MCLS-PULSE',
-    name: 'MCLS-Pulse',
-    role: 'Parent & Educator Community Unit',
-    icon: '💬',
-    effort_level: 'medium',
-    status: 'ready',
-    schedule_cron: 'Every 6 Hours',
-    description: 'Monitors parenting, homeschool, Montessori, and screen-fatigue discussions to draft empathetic, value-first Cultural Delta replies.',
-    instructions: 'Locate high-signal parent or educator discussions struggling with cartoon overstimulation or reading readiness (Ages 2–7) and draft a helpful, non-spammy response grounded in the 5 Cultural Deltas.',
-  },
-  {
-    unit_key: 'MCLS-STUDIO',
-    name: 'MCLS-Studio',
-    role: '3-Layer Ad Creative & Visual Unit',
-    icon: '🎬',
-    effort_level: 'high',
-    status: 'ready',
-    schedule_cron: 'Tue & Fri 09:00 EST',
-    description: 'Produces 3-Layer Meta Ad Bundles (Parent Ache -> Musical/Tactile Solution -> Zero-Risk Invitation) and UGC video briefs with credit cost estimates.',
-    instructions: 'Build a 3-Layer Ad Creative bundle and visual production brief aligned with the active Cultural Delta and Tandem Funnel Engine (A, B, or C).',
   },
   {
     unit_key: 'MCLS-CONCORD',
@@ -159,9 +195,24 @@ const INITIAL_UNITS = [
     icon: '🏫',
     effort_level: 'high',
     status: 'ready',
-    schedule_cron: 'Daily 10:00 EST',
+    schedule_cron: 'Daily 10:00 EST (0 10 * * 1-5)',
+    reports_to: 'MCLS-PRIME',
+    branch: 'growth_institutional',
     description: 'Identifies early childhood centers, Head Start consortia, and school district prospects, staging Neon CRM deals and Brevo pilot invitations.',
     instructions: 'Prepare a personalized School Licensing Pilot outreach package for early childhood institutions, highlighting the 7 Developmental Lands and neuro-affirming classroom readiness for Ages 2–7.',
+  },
+  {
+    unit_key: 'MCLS-AUTOPILOT',
+    name: 'MCLS-Autopilot',
+    role: 'Organic Seeding & Ledger Publisher',
+    icon: '🚀',
+    effort_level: 'medium',
+    status: 'ready',
+    schedule_cron: 'Daily 11:00 EST (0 11 * * *)',
+    reports_to: 'MCLS-PRIME',
+    branch: 'growth_institutional',
+    description: 'Orchestrates autonomous scheduled publishing of seed posts and long-form advertorials to Facebook / theme accounts with a ledger preventing duplicates.',
+    instructions: 'Select next unpublished high-leverage advertorial or cultural delta seed; verify published ledger and stage publication.',
   },
 ];
 
@@ -358,17 +409,20 @@ async function ensureMclsSchemaAndSeed(databaseUrl) {
     }
   }
 
-  // Seed units if empty
-  const unitCountRes = await queryNeon(databaseUrl, 'SELECT COUNT(*) as count FROM mcls_units;');
-  if (parseInt(unitCountRes.rows[0]?.count || '0', 10) === 0) {
-    for (const u of INITIAL_UNITS) {
-      await queryNeon(
-        databaseUrl,
-        `INSERT INTO mcls_units (unit_key, name, role, icon, effort_level, status, schedule_cron, description, instructions)
-         VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) ON CONFLICT (unit_key) DO NOTHING;`,
-        [u.unit_key, u.name, u.role, u.icon, u.effort_level, u.status, u.schedule_cron, u.description, u.instructions]
-      );
-    }
+  // Seed or upsert units so new agents from agent-org-chart topology appear
+  for (const u of INITIAL_UNITS) {
+    await queryNeon(
+      databaseUrl,
+      `INSERT INTO mcls_units (unit_key, name, role, icon, effort_level, status, schedule_cron, description, instructions)
+       VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)
+       ON CONFLICT (unit_key) DO UPDATE
+       SET name = EXCLUDED.name,
+           role = EXCLUDED.role,
+           schedule_cron = EXCLUDED.schedule_cron,
+           description = EXCLUDED.description,
+           instructions = EXCLUDED.instructions;`,
+      [u.unit_key, u.name, u.role, u.icon, u.effort_level, u.status, u.schedule_cron, u.description, u.instructions]
+    );
   }
 
   // Seed initial approval cards if empty

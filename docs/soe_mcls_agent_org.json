@@ -1,0 +1,387 @@
+{
+  "$schema": "https://raw.githubusercontent.com/serenakeyitan/agent-org-chart/main/schema.json",
+  "org_name": "The Sound of Essentials: Rhythm Quest — Market Campaign Launch System (SOE-MCLS)",
+  "version": "1.0.0",
+  "archetype": "orchestrator_specialists",
+  "summary": "Production-grade multi-agent organizational chart and autonomous routine topology for SOE-MCLS. Governed by a Chief-of-Staff orchestrator, 5 Master Directives, SOE Helix Gate 1 Canon Verification, and 90-day Dual-Horizon attribution guardrails for Ages 2–7 early childhood curriculum.",
+  "chief_of_staff": "MCLS-PRIME",
+  "human_in_the_loop": {
+    "role": "Founder & Human Commander",
+    "gate": "MCLS Command Approval Gate",
+    "authority": ["budget_elevation", "live_meta_publishing", "github_pr_merge", "school_contract_execution"]
+  },
+  "hierarchy_tree": {
+    "root": "human_founder",
+    "orchestrator": "MCLS-PRIME",
+    "branches": {
+      "intelligence_recon": ["MCLS-RECON", "MCLS-INTEL-SCOUT"],
+      "creative_cultural_brand": ["MCLS-STUDIO", "MCLS-PULSE"],
+      "operations_protection": ["MCLS-GUARDIAN", "MCLS-FORGE"],
+      "growth_institutional": ["MCLS-CONCORD", "MCLS-AUTOPILOT"]
+    }
+  },
+  "agents": [
+    {
+      "id": "MCLS-PRIME",
+      "name": "MCLS-Prime",
+      "role": "Executive Campaign & Telemetry Orchestrator (Chief of Staff)",
+      "reports_to": "human_founder",
+      "branch": "executive_orchestration",
+      "icon": "🧭",
+      "effort_level": "high",
+      "status": "ready",
+      "source_module": "web/functions/api/mcls/dispatch.js",
+      "description": "Synthesizes the 5 Master Directives, audits Neon CRM & 90-day cohort LTV telemetry, and dispatches weekly work orders across all MCLS units.",
+      "data_sources": [
+        "Neon Serverless PostgreSQL (mcls_approvals, mcls_memory_rules)",
+        "Stripe Revenue Telemetry ($0 Free Album Gate, $7 Bump, $35 Workbook, $55 Dictionary)",
+        "Meta Ads Insights API & Brevo CRM Metrics"
+      ],
+      "routines": [
+        {
+          "name": "daily_executive_recon",
+          "cron": "0 8 * * *",
+          "human_readable": "Daily at 08:00 EST",
+          "description": "Reviews the 5 Master Directives and live Neon CRM metrics; identifies the highest-leverage bottleneck across Engine A, Engine B, and School Pilots.",
+          "output_destination": "MCLS Command Approval Gate"
+        },
+        {
+          "name": "weekly_growth_allocator",
+          "cron": "0 9 * * 1",
+          "human_readable": "Mondays at 09:00 EST",
+          "description": "Rebalances growth budget: 70% Engine A (Value Gate), 20% Engine B (Direct Tactile), 10% Engine C (90-day Retargeting Bridge).",
+          "output_destination": "mcls_approvals"
+        }
+      ],
+      "soldier_pattern": {
+        "enabled": false,
+        "note": "Orchestrator runs as a single persistent stateful node to ensure global invariant enforcement."
+      }
+    },
+    {
+      "id": "MCLS-RECON",
+      "name": "MCLS-Recon",
+      "role": "Search & AI Citation Intelligence Unit",
+      "reports_to": "MCLS-PRIME",
+      "branch": "intelligence_recon",
+      "icon": "🔭",
+      "effort_level": "high",
+      "status": "ready",
+      "source_module": "web/functions/api/mcls/dispatch.js",
+      "description": "Audits robots.txt, llms.txt, JSON-LD schemas, and live search/AI citation visibility against incumbent children's apps.",
+      "data_sources": [
+        "public/robots.txt (GPTBot, ClaudeBot, Google-Extended, PerplexityBot)",
+        "public/llms.txt & public/llms-full.txt",
+        "Competitor Comparison Matrix (ABCmouse, Reading Eggs, Hooked on Phonics)",
+        "Google Search Console & Frontier LLM Answers"
+      ],
+      "routines": [
+        {
+          "name": "biweekly_citation_sweep",
+          "cron": "0 6 * * 1,4",
+          "human_readable": "Mon & Thu at 06:00 EST",
+          "description": "Sweeps citation queries for 'screen-free preschool curriculum ages 2-7' and verifies SOE grounding links.",
+          "output_destination": "geo_schema_patch staging in Command Approval Gate"
+        }
+      ],
+      "soldier_pattern": {
+        "enabled": true,
+        "soldier_role": "query_tester",
+        "max_clones": 5,
+        "task": "Parallel querying across multiple LLM endpoints (ChatGPT, Claude, Perplexity, Gemini) to test citation capture."
+      }
+    },
+    {
+      "id": "MCLS-INTEL-SCOUT",
+      "name": "MCLS-Intel-Scout",
+      "role": "Parenting & Cognitive Science Intelligence Scanner",
+      "reports_to": "MCLS-PRIME",
+      "branch": "intelligence_recon",
+      "icon": "🧠",
+      "effort_level": "medium",
+      "status": "ready",
+      "source_module": "tools/soe_ai_parenting_intel_sweep.py",
+      "description": "Scans high-leverage statements from AI founders (Karpathy, Ng) and pediatric neuroscientists on early screen harm, cognitive offloading, and phonics.",
+      "data_sources": [
+        "docs/soe_ai_parenting_intel_vault.json",
+        "Frontier AI Founder Podcasts & Keynotes",
+        "Pediatric Neuroscience Journals on Early Dopamine & Screen Flicker"
+      ],
+      "routines": [
+        {
+          "name": "daily_intel_harvest",
+          "cron": "0 6 * * *",
+          "human_readable": "Daily at 06:00 EST",
+          "description": "Extracts, scores (leverage > 85), and exports verified quotes with ad hook mappings into the intel vault.",
+          "output_destination": "docs/soe_ai_parenting_intel_vault.json"
+        }
+      ],
+      "soldier_pattern": {
+        "enabled": true,
+        "soldier_role": "transcript_chunker",
+        "max_clones": 8,
+        "task": "Rapid chunking and quote extraction from 2-hour longform founder podcasts."
+      }
+    },
+    {
+      "id": "MCLS-STUDIO",
+      "name": "MCLS-Studio",
+      "role": "3-Layer Ad Creative & Visual Unit",
+      "reports_to": "MCLS-PRIME",
+      "branch": "creative_cultural_brand",
+      "icon": "🎬",
+      "effort_level": "high",
+      "status": "ready",
+      "source_module": "tools/soe_mcls/creative_forge.py",
+      "description": "Produces 3-Layer Meta Ad Bundles (Parent Ache -> Musical/Tactile Solution -> Zero-Risk Invitation) and UGC video briefs aligned with active Cultural Deltas.",
+      "data_sources": [
+        "5 Cultural Deltas (Screen vs Sensory, Algorithm vs Handcrafted, Testing vs Arts, etc.)",
+        "6 Production Campaigns (The Enemy, Victory Garden, What They Took, etc.)",
+        "docs/meta_ad_prompt_library_v2.md & docs/meta_ads_import_matrix.csv"
+      ],
+      "routines": [
+        {
+          "name": "creative_refresh_cycle",
+          "cron": "0 9 * * 2,5",
+          "human_readable": "Tue & Fri at 09:00 EST",
+          "description": "Builds 3 fresh ad creative bundles (copy + headline + visual brief) mapped to the weekly priority Cultural Delta.",
+          "output_destination": "meta_ad_bundle staging in Command Approval Gate"
+        }
+      ],
+      "soldier_pattern": {
+        "enabled": true,
+        "soldier_role": "multilingual_localizer",
+        "max_clones": 3,
+        "task": "Simultaneous translation and cultural adaptation across English, Spanish, and French variants without losing cadence."
+      }
+    },
+    {
+      "id": "MCLS-PULSE",
+      "name": "MCLS-Pulse",
+      "role": "Parent & Educator Community Unit",
+      "reports_to": "MCLS-PRIME",
+      "branch": "creative_cultural_brand",
+      "icon": "💬",
+      "effort_level": "medium",
+      "status": "ready",
+      "source_module": "web/functions/api/mcls/dispatch.js",
+      "description": "Monitors parenting, homeschool, Montessori, and screen-fatigue discussions to draft empathetic, value-first Cultural Delta replies.",
+      "data_sources": [
+        "Parenting Forums & Communities (Reddit r/Parenting, r/homeschool)",
+        "Homeschool Curriculum Inquiries & Screen-Fatigue Support Groups",
+        "docs/brevo_5day_nurture_templates.md"
+      ],
+      "routines": [
+        {
+          "name": "community_listening_pulse",
+          "cron": "0 */6 * * *",
+          "human_readable": "Every 6 Hours",
+          "description": "Identifies high-signal discussions struggling with cartoon overstimulation or phonics readiness (Ages 2–7); drafts empathetic responses.",
+          "output_destination": "community_reply staging in Command Approval Gate"
+        }
+      ],
+      "soldier_pattern": {
+        "enabled": false,
+        "note": "Requires careful emotional calibration; replies strictly held to human approval gate."
+      }
+    },
+    {
+      "id": "MCLS-GUARDIAN",
+      "name": "MCLS-Guardian",
+      "role": "Rhythm Guardian & Dual-Horizon Guardrail Sentinel",
+      "reports_to": "MCLS-PRIME",
+      "branch": "operations_protection",
+      "icon": "🛡️",
+      "effort_level": "high",
+      "status": "ready",
+      "source_module": "tools/soe_mcls/rhythm_guardian.py",
+      "description": "Enforces 2026 battle-tested dual-horizon guardrails: protects Engine A value gate from premature kill during Meta 7-day attribution blindness, enforces strict Engine B ROAS, and scales winners by +20%.",
+      "data_sources": [
+        "Meta Ads Insights API (Spend, Leads, Purchases, CTR, Frequency)",
+        "Conversions API (CAPI) & Brevo Telemetry Sync",
+        "90-Day Cohort Attribution Ledger"
+      ],
+      "routines": [
+        {
+          "name": "hourly_spend_stoploss",
+          "cron": "0 * * * *",
+          "human_readable": "Hourly",
+          "description": "Checks spend vs. leads; pauses fatigued ads (spend > $15 with 0 leads); holds learning phase ads; scales validated winners +20%.",
+          "output_destination": "Meta Campaign Optimizer / Approval Ledger"
+        },
+        {
+          "name": "monthly_cohort_ltv_review",
+          "cron": "0 7 1 * *",
+          "human_readable": "1st of Every Month at 07:00 EST",
+          "description": "Evaluates 90-day back-end workbook & dictionary conversion rates of /listen album leads.",
+          "output_destination": "Executive Telemetry Dashboard"
+        }
+      ],
+      "soldier_pattern": {
+        "enabled": false,
+        "note": "Financial guardrail sentinel runs with single-signature authority."
+      }
+    },
+    {
+      "id": "MCLS-FORGE",
+      "name": "MCLS-Forge",
+      "role": "Technical Canon & Repository PR Unit",
+      "reports_to": "MCLS-PRIME",
+      "branch": "operations_protection",
+      "icon": "🛠️",
+      "effort_level": "xhigh",
+      "status": "ready",
+      "source_module": "web/functions/api/mcls/dispatch.js",
+      "description": "Stages canon-verified code patches, meta tags, canonical links, and JSON-LD structured data for 1-click GitHub Pull Requests passing SOE Helix Gate 1.",
+      "data_sources": [
+        "Git Workspace & Codebase Files",
+        "SOE Helix Gate 1 Canon Validator (Ages 2–7 strict, 7 canonical lands, zero retired names)",
+        "Cloudflare Pages Build Verification"
+      ],
+      "routines": [
+        {
+          "name": "post_recon_pr_staging",
+          "cron": "on_demand",
+          "human_readable": "Triggered by Approved Recon Findings",
+          "description": "Transforms approved schema recommendations into ready-to-merge React and JSON-LD code blocks.",
+          "output_destination": "github_pr staging in Command Approval Gate"
+        }
+      ],
+      "soldier_pattern": {
+        "enabled": true,
+        "soldier_role": "patch_verifier",
+        "max_clones": 3,
+        "task": "Multi-file regex linting and build validation before staging PR payloads."
+      }
+    },
+    {
+      "id": "MCLS-CONCORD",
+      "name": "MCLS-Concord",
+      "role": "Institutional QPC & School Pilot Unit",
+      "reports_to": "MCLS-PRIME",
+      "branch": "growth_institutional",
+      "icon": "🏫",
+      "effort_level": "high",
+      "status": "ready",
+      "source_module": "web/functions/api/mcls/dispatch.js",
+      "description": "Identifies early childhood centers, Head Start consortia, and school district prospects; stages Neon CRM deals and Brevo pilot invitations.",
+      "data_sources": [
+        "docs/b2b_school_and_clinic_outreach.md",
+        "Neon CRM Deals Table (Pipeline: school_pilot)",
+        "Brevo B2B List #12 & State DOE Directories"
+      ],
+      "routines": [
+        {
+          "name": "daily_school_prospecting",
+          "cron": "0 10 * * 1-5",
+          "human_readable": "Mon–Fri at 10:00 EST",
+          "description": "Selects 5 target early childhood education organizations; builds personalized 7 Developmental Lands pilot packet.",
+          "output_destination": "school_pilot_outreach staging in Command Approval Gate"
+        }
+      ],
+      "soldier_pattern": {
+        "enabled": true,
+        "soldier_role": "curator_enricher",
+        "max_clones": 10,
+        "task": "Batch enrichment of 50 Micro-Curator contact dossiers and clinic directory profiles."
+      }
+    },
+    {
+      "id": "MCLS-AUTOPILOT",
+      "name": "MCLS-Autopilot",
+      "role": "Organic Seeding & Ledger Publisher",
+      "reports_to": "MCLS-PRIME",
+      "branch": "growth_institutional",
+      "icon": "🚀",
+      "effort_level": "medium",
+      "status": "ready",
+      "source_module": "tools/nanobot_social_autopilot.py",
+      "description": "Orchestrates autonomous scheduled publishing of seed posts and long-form advertorials to Facebook / theme accounts with a ledger preventing duplicates.",
+      "data_sources": [
+        "docs/facebook_seed_catalog.json",
+        "docs/facebook_advertorials_catalog.json",
+        "docs/facebook_published_ledger.json"
+      ],
+      "routines": [
+        {
+          "name": "daily_social_seed_drip",
+          "cron": "0 11 * * *",
+          "human_readable": "Daily at 11:00 EST",
+          "description": "Selects next unpublished high-leverage advertorial or cultural delta seed; checks ledger and stages publication.",
+          "output_destination": "Facebook Page & Published Ledger"
+        }
+      ],
+      "soldier_pattern": {
+        "enabled": false,
+        "note": "Serial drip execution with atomic ledger write lock to prevent duplicate posts."
+      }
+    }
+  ],
+  "governance_invariants": {
+    "age_bracket": "Strictly Ages 2–7 (Pre-K to Grade 2)",
+    "audio_authenticity": "19 master studio recordings, human vocals & warm acoustic arrangements",
+    "cultural_deltas_count": 5,
+    "tandem_funnel_split": {
+      "engine_a_listen_gate": 0.70,
+      "engine_b_direct_tactile": 0.20,
+      "engine_c_retargeting_bridge": 0.10
+    },
+    "human_gate_mandate": "Every external ad spend, code patch, and institutional contract MUST be approved in the Command Approval Gate before live execution."
+  },
+  "grok_bot_mcp_architecture": {
+    "server_name": "soe-mcls-mcp-server",
+    "version": "1.0.0",
+    "entrypoint": "tools/soe_mcls/mcp_server.py",
+    "transport": "stdio",
+    "protocol_version": "2024-11-05",
+    "tools": [
+      {
+        "name": "mcls_forge_ad_bundle",
+        "tier": "tier_1_staging_sandbox",
+        "description": "Builds 3-Layer Meta/Pinterest Ad Variant (Ache -> Solution -> Invitation) with visual prompt briefs."
+      },
+      {
+        "name": "mcls_evaluate_rhythm_guardian",
+        "tier": "tier_1_staging_sandbox",
+        "description": "Evaluates live or simulated metrics against dual-horizon ROAS rules and scales winners +20%."
+      },
+      {
+        "name": "mcls_sweep_ai_parenting_intel",
+        "tier": "tier_0_autonomous_read",
+        "description": "Scans and curates high-leverage quotes from AI founders and neuroscientists into the intel vault."
+      },
+      {
+        "name": "mcls_check_social_autopilot",
+        "tier": "tier_0_autonomous_read",
+        "description": "Inspects social catalog and ledger to prevent duplicate posts and preview the next queued drip."
+      },
+      {
+        "name": "mcls_validate_canon_compliance",
+        "tier": "tier_0_autonomous_read",
+        "description": "Runs SOE Helix Gate 1 pre-flight checks (strict Ages 2–7, zero retired names, audio invariants)."
+      },
+      {
+        "name": "mcls_stage_approval_card",
+        "tier": "tier_1_staging_sandbox",
+        "description": "Stages a proposed action into the Command Approval Gate for human authorization."
+      }
+    ],
+    "security_tiers": {
+      "tier_0_autonomous_read": {
+        "label": "Tier 0: Autonomous Read & Recon",
+        "badge_color": "#2E7D32",
+        "rule": "Zero external mutations; autonomous execution permitted without human gate."
+      },
+      "tier_1_staging_sandbox": {
+        "label": "Tier 1: Staging & Simulation",
+        "badge_color": "#F57C00",
+        "rule": "Internal drafts, PR branches, and proposals stage directly into Command Approval Gate (status: pending)."
+      },
+      "tier_2_human_gated_mutation": {
+        "label": "Tier 2: External Mutation & Elevation",
+        "badge_color": "#D32F2F",
+        "rule": "External ad budget increase, live Facebook publishing, Brevo email sending, and git merges; strictly blocked until authorized by human founder."
+      }
+    }
+  }
+}

@@ -181,13 +181,28 @@ const FALLBACK_UNITS = [
   {
     unit_key: 'MCLS-PRIME',
     name: 'MCLS-Prime',
-    role: 'Executive Campaign & Telemetry Orchestrator',
+    role: 'Executive Campaign & Telemetry Orchestrator (Chief of Staff)',
     icon: '🧭',
     effort_level: 'high',
     status: 'ready',
-    schedule_cron: 'Daily 08:00 EST',
+    security_tier: 'tier_1',
+    mcp_tool: 'mcls_stage_approval_card',
+    tier_rule: 'Synthesizes directives autonomously; all budget proposals stage in Command Approval Gate.',
+    schedule_cron: 'Daily 08:00 EST (0 8 * * *)',
+    reports_to: 'Human Commander / Founder Gate',
+    branch: 'executive_orchestration',
+    data_sources: [
+      'Neon Serverless PostgreSQL (mcls_approvals, mcls_memory_rules)',
+      'Direct Stripe Revenue Telemetry ($0 Free Gate, $35 Workbook, $55 Dictionary)',
+      'Meta Ads Insights API & Brevo CRM Metrics',
+    ],
+    routines: [
+      { name: 'Executive Bottleneck Audit', cron: '0 8 * * *', frequency: 'Daily 08:00 EST', target: 'MCLS Command Approval Gate' },
+      { name: '70/20/10 Budget Rebalancer', cron: '0 9 * * 1', frequency: 'Mondays 09:00 EST', target: 'Tandem Funnel Budget Engine' },
+    ],
+    soldier_pattern: { enabled: false, note: 'Single persistent orchestrator state' },
     description:
-      'Synthesizes the 5 Master Directives, audits Neon CRM & 90-day cohort LTV telemetry, and dispatches weekly work orders.',
+      'Synthesizes the 5 Master Directives, audits Neon CRM & 90-day cohort LTV telemetry, and dispatches weekly work orders across all MCLS units.',
     instructions:
       'Read all 5 Master Directives and live Neon CRM metrics. Identify the highest-leverage opportunity across Engine A, Engine B, and Institutional School Pilots.',
     runs_count: 4,
@@ -199,40 +214,54 @@ const FALLBACK_UNITS = [
     icon: '🔭',
     effort_level: 'high',
     status: 'ready',
-    schedule_cron: 'Mon & Thu 06:00 EST',
+    security_tier: 'tier_0',
+    mcp_tool: 'mcls_validate_canon_compliance',
+    tier_rule: 'Read-only web/llms.txt grounding audits; zero external mutation side effects.',
+    schedule_cron: 'Mon & Thu 06:00 EST (0 6 * * 1,4)',
+    reports_to: 'MCLS-PRIME',
+    branch: 'intelligence_recon',
+    data_sources: [
+      'public/robots.txt (GPTBot, ClaudeBot, Google-Extended, PerplexityBot)',
+      'public/llms.txt & public/llms-full.txt',
+      'Frontier Search & AI Citation Answers',
+    ],
+    routines: [
+      { name: 'Citation & Grounding Sweep', cron: '0 6 * * 1,4', frequency: 'Mon & Thu 06:00 EST', target: 'geo_schema_patch in Approval Gate' },
+    ],
+    soldier_pattern: { enabled: true, soldier_role: 'query_tester', max_clones: 5 },
     description:
-      'Audits robots.txt, llms.txt, JSON-LD schemas, and live search/AI citation visibility for Ages 2–7 curriculum queries.',
+      'Audits robots.txt, llms.txt, JSON-LD schemas, and live search/AI citation visibility against incumbent children’s apps.',
     instructions:
       'Audit SOE search visibility and AI citation grounding for Ages 2–7 screen-free curriculum queries.',
     runs_count: 7,
   },
   {
-    unit_key: 'MCLS-FORGE',
-    name: 'MCLS-Forge',
-    role: 'Technical Canon & Repository PR Unit',
-    icon: '🛠️',
-    effort_level: 'xhigh',
-    status: 'ready',
-    schedule_cron: 'On-Demand / Post-Recon',
-    description:
-      'Stages canon-verified code patches, meta tags, canonical links, and JSON-LD structured data for 1-click repository PRs.',
-    instructions:
-      'Generate clean, canon-compliant React/HTML metadata and JSON-LD patches that pass SOE Helix Gate 1.',
-    runs_count: 3,
-  },
-  {
-    unit_key: 'MCLS-PULSE',
-    name: 'MCLS-Pulse',
-    role: 'Parent & Educator Community Unit',
-    icon: '💬',
+    unit_key: 'MCLS-INTEL-SCOUT',
+    name: 'MCLS-Intel-Scout',
+    role: 'Parenting & AI Cognitive Science Intelligence Scanner',
+    icon: '🧠',
     effort_level: 'medium',
     status: 'ready',
-    schedule_cron: 'Every 6 Hours',
+    security_tier: 'tier_0',
+    mcp_tool: 'mcls_sweep_ai_parenting_intel',
+    tier_rule: 'Autonomous podcast & transcript quote scanner; updates vault with verified quotes.',
+    schedule_cron: 'Daily 06:00 EST (0 6 * * *)',
+    reports_to: 'MCLS-PRIME',
+    branch: 'intelligence_recon',
+    data_sources: [
+      'docs/soe_ai_parenting_intel_vault.json',
+      'AI Founder Keynotes (Karpathy, Ng)',
+      'Pediatric Cognitive Neuroscience Research',
+    ],
+    routines: [
+      { name: 'AI Founder & Neuro Quote Harvest', cron: '0 6 * * *', frequency: 'Daily 06:00 EST', target: 'soe_ai_parenting_intel_vault.json' },
+    ],
+    soldier_pattern: { enabled: true, soldier_role: 'transcript_chunker', max_clones: 8 },
     description:
-      'Monitors parenting, homeschool, Montessori, and screen-fatigue discussions to draft empathetic Cultural Delta replies.',
+      'Scans high-leverage statements from AI founders and neuroscientists on early screen harm, cognitive offloading, and phonics grounding for Ages 2–7.',
     instructions:
-      'Locate high-signal parent or educator discussions struggling with cartoon overstimulation (Ages 2–7) and draft a helpful response.',
-    runs_count: 11,
+      'Extract, score (leverage > 85), and export verified quotes with ad hook mappings into the intel vault.',
+    runs_count: 8,
   },
   {
     unit_key: 'MCLS-STUDIO',
@@ -241,12 +270,111 @@ const FALLBACK_UNITS = [
     icon: '🎬',
     effort_level: 'high',
     status: 'ready',
-    schedule_cron: 'Tue & Fri 09:00 EST',
+    security_tier: 'tier_1',
+    mcp_tool: 'mcls_forge_ad_bundle',
+    tier_rule: 'Builds 3-layer ad variants and prompts; strictly stages in Approval Gate before live spend.',
+    schedule_cron: 'Tue & Fri 09:00 EST (0 9 * * 2,5)',
+    reports_to: 'MCLS-PRIME',
+    branch: 'creative_cultural_brand',
+    data_sources: [
+      '5 Cultural Deltas Matrix',
+      '6 Production Campaigns (The Enemy, Victory Garden, etc.)',
+      'docs/meta_ad_prompt_library_v2.md & docs/meta_ads_import_matrix.csv',
+    ],
+    routines: [
+      { name: '3-Layer Ad Array Refresh', cron: '0 9 * * 2,5', frequency: 'Tue & Fri 09:00 EST', target: 'meta_ad_bundle in Approval Gate' },
+    ],
+    soldier_pattern: { enabled: true, soldier_role: 'multilingual_localizer', max_clones: 3 },
     description:
       'Produces 3-Layer Meta Ad Bundles (Parent Ache -> Musical/Tactile Solution -> Zero-Risk Invitation) and visual briefs.',
     instructions:
       'Build a 3-Layer Ad Creative bundle and visual production brief aligned with the active Cultural Delta.',
     runs_count: 6,
+  },
+  {
+    unit_key: 'MCLS-PULSE',
+    name: 'MCLS-Pulse',
+    role: 'Parent & Educator Community Unit',
+    icon: '💬',
+    effort_level: 'medium',
+    status: 'ready',
+    security_tier: 'tier_1',
+    mcp_tool: 'mcls_stage_approval_card',
+    tier_rule: 'Community listening is autonomous; empathetic response drafts require human founder approval.',
+    schedule_cron: 'Every 6 Hours (0 */6 * * *)',
+    reports_to: 'MCLS-PRIME',
+    branch: 'creative_cultural_brand',
+    data_sources: [
+      'Parenting Forums & Communities (Reddit r/Parenting, r/homeschool)',
+      'Screen-fatigue Support Threads',
+      'docs/brevo_5day_nurture_templates.md',
+    ],
+    routines: [
+      { name: 'Community Listening & Empathetic Responses', cron: '0 */6 * * *', frequency: 'Every 6 Hours', target: 'community_reply in Approval Gate' },
+    ],
+    soldier_pattern: { enabled: false, note: 'Empathetic replies strictly human-gated' },
+    description:
+      'Monitors parenting, homeschool, Montessori, and screen-fatigue discussions to draft empathetic Cultural Delta replies.',
+    instructions:
+      'Locate high-signal parent or educator discussions struggling with cartoon overstimulation (Ages 2–7) and draft a helpful response.',
+    runs_count: 11,
+  },
+  {
+    unit_key: 'MCLS-GUARDIAN',
+    name: 'MCLS-Guardian',
+    role: 'Rhythm Guardian & Dual-Horizon Guardrail Sentinel',
+    icon: '🛡️',
+    effort_level: 'high',
+    status: 'ready',
+    security_tier: 'tier_1',
+    mcp_tool: 'mcls_evaluate_rhythm_guardian',
+    tier_rule: 'Evaluates ROAS autonomously; executing +20% budget scale requires Tier 2 human approval.',
+    schedule_cron: 'Hourly Spend (0 * * * *)',
+    reports_to: 'MCLS-PRIME',
+    branch: 'operations_protection',
+    data_sources: [
+      'Meta Ads Insights API (Spend, Leads, Purchases, CTR)',
+      'Conversions API (CAPI) & Brevo Telemetry Sync',
+      '90-Day Cohort Attribution Ledger',
+    ],
+    routines: [
+      { name: 'Hourly Stop-Loss & Learning Phase Guard', cron: '0 * * * *', frequency: 'Hourly', target: 'Campaign Optimizer / Approval Gate' },
+      { name: 'Monthly 90-Day Cohort LTV Audit', cron: '0 7 1 * *', frequency: 'Monthly (1st)', target: 'Executive Telemetry Dashboard' },
+    ],
+    soldier_pattern: { enabled: false, note: 'Financial sentinel with single-signature authority' },
+    description:
+      'Protects Engine A from premature kills during Meta 7-day attribution blindness, demands strict Engine B ROAS, and scales proven winners by +20%.',
+    instructions:
+      'Audit Meta and CAPI spend velocity, protect Engine A 90-day gestation window, enforce stop-losses, and stage budget escalations.',
+    runs_count: 14,
+  },
+  {
+    unit_key: 'MCLS-FORGE',
+    name: 'MCLS-Forge',
+    role: 'Technical Canon & Repository PR Unit',
+    icon: '🛠️',
+    effort_level: 'xhigh',
+    status: 'ready',
+    security_tier: 'tier_1',
+    mcp_tool: 'mcls_validate_canon_compliance',
+    tier_rule: 'Stages git branches autonomously; merging PRs to main requires Tier 2 human approval.',
+    schedule_cron: 'On-Demand / Post-Recon',
+    reports_to: 'MCLS-PRIME',
+    branch: 'operations_protection',
+    data_sources: [
+      'Git Workspace & Codebase Files',
+      'SOE Helix Gate 1 Canon Validator (Ages 2–7 strict bounds)',
+      'Cloudflare Pages Build Verification',
+    ],
+    routines: [
+      { name: 'Post-Recon Schema & FAQ PR Generator', cron: 'on_demand', frequency: 'Post-Recon Trigger', target: 'github_pr in Approval Gate' },
+    ],
+    soldier_pattern: { enabled: true, soldier_role: 'patch_verifier', max_clones: 3 },
+    description:
+      'Stages canon-verified code patches, meta tags, canonical links, and JSON-LD structured data for 1-click repository PRs.',
+    instructions:
+      'Generate clean, canon-compliant React/HTML metadata and JSON-LD patches that pass SOE Helix Gate 1.',
+    runs_count: 3,
   },
   {
     unit_key: 'MCLS-CONCORD',
@@ -255,12 +383,108 @@ const FALLBACK_UNITS = [
     icon: '🏫',
     effort_level: 'high',
     status: 'ready',
-    schedule_cron: 'Daily 10:00 EST',
+    security_tier: 'tier_1',
+    mcp_tool: 'mcls_stage_approval_card',
+    tier_rule: 'Stages school pilot deals in CRM; firing live outbound Brevo emails requires Tier 2 sign-off.',
+    schedule_cron: 'Daily 10:00 EST (0 10 * * 1-5)',
+    reports_to: 'MCLS-PRIME',
+    branch: 'growth_institutional',
+    data_sources: [
+      'Neon CRM Deals (Pipeline: school_pilot)',
+      'Brevo B2B List #12 & State Early Childhood Directories',
+      'docs/b2b_school_and_clinic_outreach.md',
+    ],
+    routines: [
+      { name: 'Daily School Prospecting & Gap Audit', cron: '0 10 * * 1-5', frequency: 'Mon–Fri 10:00 EST', target: 'school_pilot_outreach in Approval Gate' },
+    ],
+    soldier_pattern: { enabled: true, soldier_role: 'curator_enricher', max_clones: 10 },
     description:
       'Identifies early childhood centers, Head Start consortia, and school district prospects, staging Neon CRM deals and Brevo outreach.',
     instructions:
       'Prepare a personalized School Licensing Pilot outreach package highlighting the 7 Developmental Lands for Ages 2–7.',
     runs_count: 5,
+  },
+  {
+    unit_key: 'MCLS-AUTOPILOT',
+    name: 'MCLS-Autopilot',
+    role: 'Organic Seeding & Ledger Publisher',
+    icon: '🚀',
+    effort_level: 'medium',
+    status: 'ready',
+    security_tier: 'tier_1',
+    mcp_tool: 'mcls_check_social_autopilot',
+    tier_rule: 'Previews queue autonomously; live publishing to Facebook Page requires Tier 2 sign-off.',
+    schedule_cron: 'Daily 11:00 EST (0 11 * * *)',
+    reports_to: 'MCLS-PRIME',
+    branch: 'growth_institutional',
+    data_sources: [
+      'docs/facebook_seed_catalog.json',
+      'docs/facebook_advertorials_catalog.json',
+      'docs/facebook_published_ledger.json',
+    ],
+    routines: [
+      { name: 'Daily Social Drip & Anti-Duplicate Check', cron: '0 11 * * *', frequency: 'Daily 11:00 EST', target: 'Facebook Page & Published Ledger' },
+    ],
+    soldier_pattern: { enabled: false, note: 'Serial drip execution with atomic state lock' },
+    description:
+      'Orchestrates autonomous scheduled publishing of seed posts and long-form advertorials to Facebook / theme accounts with a ledger preventing duplicates.',
+    instructions:
+      'Select next unpublished high-leverage advertorial or cultural delta seed; verify published ledger and stage publication.',
+    runs_count: 9,
+  },
+];
+
+const SECURITY_TIERS = {
+  tier_0: {
+    label: '🟢 Tier 0: Recon',
+    badge: 'Autonomous Read',
+    color: '#1B5E20',
+    bg: '#E8F5E9',
+    border: '#C8E6C9',
+    desc: 'Autonomous read-only; no external state mutations.',
+  },
+  tier_1: {
+    label: '🟡 Tier 1: Staged',
+    badge: 'Internal Sandbox',
+    color: '#B26A00',
+    bg: '#FFF3E0',
+    border: '#FFE0B2',
+    desc: 'Drafts, proposals, and branches staged into Command Approval Gate.',
+  },
+  tier_2: {
+    label: '🔴 Tier 2: Mutation',
+    badge: 'Human-Gated',
+    color: '#C62828',
+    bg: '#FFEBEE',
+    border: '#FFCDD2',
+    desc: 'Live financial spend, publishing, and merges strictly blocked until authorized.',
+  },
+};
+
+const ORG_BRANCHES = [
+  {
+    key: 'recon',
+    title: '🔭 Intelligence & Recon',
+    badge: 'Frontier AI & Citation Scouts',
+    unitKeys: ['MCLS-RECON', 'MCLS-INTEL-SCOUT'],
+  },
+  {
+    key: 'creative',
+    title: '🎬 Creative & Cultural Brand',
+    badge: '3-Layer Copy & Cultural Deltas',
+    unitKeys: ['MCLS-STUDIO', 'MCLS-PULSE'],
+  },
+  {
+    key: 'protection',
+    title: '🛡️ Operations & Protection',
+    badge: 'Dual-Horizon ROAS & Helix Gate 1',
+    unitKeys: ['MCLS-GUARDIAN', 'MCLS-FORGE'],
+  },
+  {
+    key: 'institutional',
+    title: '🏫 Growth & Seeding Network',
+    badge: 'QPC School Deals & Social Drip',
+    unitKeys: ['MCLS-CONCORD', 'MCLS-AUTOPILOT'],
   },
 ];
 
@@ -358,6 +582,11 @@ const CampaignLauncher = () => {
   const [unitPrompts, setUnitPrompts] = useState({});
   const [unitEfforts, setUnitEfforts] = useState({});
   const [dispatchingUnitKey, setDispatchingUnitKey] = useState(null);
+
+  // Agent Org Chart & Routine Topology State (inspired by serenakeyitan/agent-org-chart)
+  const [unitsViewMode, setUnitsViewMode] = useState('org_chart'); // 'org_chart' | 'cards'
+  const [selectedOrgUnitKey, setSelectedOrgUnitKey] = useState('MCLS-PRIME');
+  const [jsonExportCopied, setJsonExportCopied] = useState(false);
 
   // Meta Campaign Selection State
   const [selectedEngine, setSelectedEngine] = useState('ENGINE_A_VALUE_GATE');
@@ -672,6 +901,39 @@ const CampaignLauncher = () => {
     }
   };
 
+  // ── 3B. AGENT ORG CHART EXPORT (PORTABLE SCHEMA) ─────────────────────────
+  const handleExportOrgJson = () => {
+    const orgData = {
+      $schema: 'https://raw.githubusercontent.com/serenakeyitan/agent-org-chart/main/schema.json',
+      org_name: 'The Sound of Essentials: Rhythm Quest — Market Campaign Launch System (SOE-MCLS)',
+      version: '1.0.0',
+      archetype: 'orchestrator_specialists',
+      chief_of_staff: 'MCLS-PRIME',
+      human_in_the_loop: {
+        role: 'Founder & Human Commander',
+        gate: 'MCLS Command Approval Gate',
+      },
+      agents: units.map((u) => ({
+        id: u.unit_key,
+        name: u.name,
+        role: u.role,
+        reports_to: u.reports_to || 'MCLS-PRIME',
+        branch: u.branch || 'specialist',
+        schedule_cron: u.schedule_cron,
+        routines: u.routines || [],
+        data_sources: u.data_sources || [],
+        soldier_pattern: u.soldier_pattern || { enabled: false },
+        description: u.description,
+      })),
+    };
+    const jsonStr = JSON.stringify(orgData, null, 2);
+    if (navigator?.clipboard?.writeText) {
+      navigator.clipboard.writeText(jsonStr);
+      setJsonExportCopied(true);
+      setTimeout(() => setJsonExportCopied(false), 3000);
+    }
+  };
+
   // ── 4. META GRAPH API v21.0 HANDLERS (EDGE NATIVE) ──────────────────────
   const handleVerifyCredentials = async (e) => {
     e.preventDefault();
@@ -925,7 +1187,7 @@ const CampaignLauncher = () => {
           <span className="mcls-badge">SOE Proprietary Autonomous Growth Engine</span>
           <h1 className="mcls-title">Market Campaign Launch System (MCLS)</h1>
           <p className="mcls-subtitle">
-            Unified Canon Directives, 6 Autonomous Execution Units, Human-in-the-Loop Command Approval Gate, and Meta Graph API v21.0 Dispatcher for <em>The Sound of Essentials</em> (Ages 2–7).
+            Unified Canon Directives, {units.length} Autonomous Agent Units (Chief-of-Staff Topology), Human-in-the-Loop Command Approval Gate, and Meta Graph API v21.0 Dispatcher for <em>The Sound of Essentials</em> (Ages 2–7).
           </p>
         </header>
 
@@ -1520,116 +1782,444 @@ const CampaignLauncher = () => {
         )}
 
         {/* ===================================================================
-            DECK 3: MCLS AUTONOMOUS UNITS (6 SPECIALIZED TEAMMATES)
+            DECK 3: MCLS AUTONOMOUS UNITS & MULTI-AGENT ORG CHART
             =================================================================== */}
-        {activeDeck === 'units' && (
-          <div>
-            <div className="mcls-card" style={{ marginBottom: '1.5rem' }}>
-              <div className="mcls-card-title">
-                <span>🤖 SOE MCLS Autonomous Units Roster</span>
-                <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
-                  <label style={{ fontSize: '0.85rem', fontWeight: 700 }}>
-                    Active Cultural Delta:
-                  </label>
-                  <select
-                    className="mcls-select"
-                    style={{ width: 'auto', padding: '0.45rem 0.85rem' }}
-                    value={selectedDelta}
-                    onChange={(e) => setSelectedDelta(e.target.value)}
-                  >
-                    {DELTAS.map((d) => (
-                      <option key={d.id} value={d.id}>
-                        {d.name}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-              <p style={{ fontSize: '0.9rem', color: '#5A4E42', margin: 0 }}>
-                Configure reasoning effort, provide an optional mission directive, and dispatch any MCLS unit. Output lands directly in the <strong>Command Approval Gate</strong>.
-              </p>
-            </div>
+        {activeDeck === 'units' && (() => {
+          const selectedUnit = units.find((u) => u.unit_key === selectedOrgUnitKey) || units[0];
+          const currentEffort = unitEfforts[selectedUnit?.unit_key] || selectedUnit?.effort_level || 'high';
+          const isSelectedRunning = dispatchingUnitKey === selectedUnit?.unit_key;
 
-            <div className="mcls-units-grid">
-              {units.map((unit) => {
-                const currentEffort =
-                  unitEfforts[unit.unit_key] || unit.effort_level || 'high';
-                const isRunning = dispatchingUnitKey === unit.unit_key;
-                return (
-                  <div key={unit.unit_key} className="mcls-unit-card">
-                    <div>
-                      <div className="mcls-unit-top">
-                        <div className="mcls-unit-icon">{unit.icon || '⚡'}</div>
-                        <div>
-                          <h3 className="mcls-unit-name">{unit.name}</h3>
-                          <div className="mcls-unit-role">{unit.role}</div>
-                        </div>
-                      </div>
-
-                      <div className="mcls-pill-row" style={{ marginBottom: '0.75rem' }}>
-                        <span className="mcls-tag pass">● {unit.status.toUpperCase()}</span>
-                        <span className="mcls-tag">Schedule: {unit.schedule_cron}</span>
-                        <span className="mcls-tag">Runs: {unit.runs_count || 1}</span>
-                      </div>
-
-                      <p style={{ fontSize: '0.88rem', color: '#5A4E42', lineHeight: 1.5 }}>
-                        {unit.description}
-                      </p>
-
-                      <div className="mcls-field-group">
-                        <label className="mcls-label">Reasoning Effort</label>
-                        <select
-                          className="mcls-select"
-                          value={currentEffort}
-                          onChange={(e) =>
-                            setUnitEfforts({
-                              ...unitEfforts,
-                              [unit.unit_key]: e.target.value,
-                            })
-                          }
-                        >
-                          <option value="low">Low (Fast Routine Execution)</option>
-                          <option value="medium">Medium (Balanced Synthesis)</option>
-                          <option value="high">High (Deep Strategy &amp; Canon Audit)</option>
-                          <option value="xhigh">xHigh (Maximum Multi-Step Planning)</option>
-                        </select>
-                      </div>
-
-                      <div className="mcls-field-group">
-                        <label className="mcls-label">
-                          Custom Mission Directive (Optional)
-                        </label>
-                        <input
-                          type="text"
-                          className="mcls-input"
-                          placeholder={`e.g. Focus on ${selectedDelta.replace(/_/g, ' ')} for Ages 2–7...`}
-                          value={unitPrompts[unit.unit_key] || ''}
-                          onChange={(e) =>
-                            setUnitPrompts({
-                              ...unitPrompts,
-                              [unit.unit_key]: e.target.value,
-                            })
-                          }
-                        />
-                      </div>
+          return (
+            <div>
+              <div className="mcls-card" style={{ marginBottom: '1.5rem' }}>
+                <div className="mcls-card-title">
+                  <span>🤖 SOE MCLS Multi-Agent Org Chart &amp; Autonomous Units</span>
+                  <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center', flexWrap: 'wrap' }}>
+                    <div className="mcls-view-toggle">
+                      <button
+                        type="button"
+                        className={`mcls-toggle-btn ${unitsViewMode === 'org_chart' ? 'active' : ''}`}
+                        onClick={() => setUnitsViewMode('org_chart')}
+                      >
+                        🏢 Agent Org Chart
+                      </button>
+                      <button
+                        type="button"
+                        className={`mcls-toggle-btn ${unitsViewMode === 'cards' ? 'active' : ''}`}
+                        onClick={() => setUnitsViewMode('cards')}
+                      >
+                        🎛️ Units Roster Grid ({units.length})
+                      </button>
                     </div>
 
                     <button
                       type="button"
-                      className="mcls-btn-launch"
-                      disabled={isRunning}
-                      onClick={() => handleDispatchUnit(unit)}
+                      className="mcls-btn-secondary"
+                      style={{ fontSize: '0.82rem', padding: '0.4rem 0.85rem' }}
+                      onClick={handleExportOrgJson}
+                      title="Export declarative agent org chart JSON schema"
                     >
-                      {isRunning
-                        ? `Running ${unit.name}...`
-                        : `⚡ Dispatch ${unit.name}`}
+                      {jsonExportCopied ? '✓ Copied Org JSON!' : '📥 Export Org JSON'}
                     </button>
+
+                    <div style={{ display: 'flex', gap: '0.4rem', alignItems: 'center' }}>
+                      <label style={{ fontSize: '0.82rem', fontWeight: 700 }}>Delta:</label>
+                      <select
+                        className="mcls-select"
+                        style={{ width: 'auto', padding: '0.35rem 0.75rem', fontSize: '0.85rem' }}
+                        value={selectedDelta}
+                        onChange={(e) => setSelectedDelta(e.target.value)}
+                      >
+                        {DELTAS.map((d) => (
+                          <option key={d.id} value={d.id}>
+                            {d.name}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
                   </div>
-                );
-              })}
+                </div>
+
+                <p style={{ fontSize: '0.88rem', color: '#5A4E42', margin: 0, lineHeight: 1.5 }}>
+                  Declarative multi-agent topology inspired by <strong>serenakeyitan/agent-org-chart</strong>. Features 1 Chief-of-Staff Orchestrator (MCLS-Prime), 4 Functional Branches, 8 Specialist Bots, and Cron-driven Background Routines. Click any node to inspect data sources, cron schedules, or dispatch a routine into the <strong>Command Approval Gate</strong>.
+                </p>
+              </div>
+
+              {unitsViewMode === 'org_chart' ? (
+                <div className="mcls-org-chart-wrapper">
+                  {/* Top Level: Human Authority Gate */}
+                  <div className="mcls-org-tree-level">
+                    <div className="mcls-org-node mcls-org-node-founder">
+                      <div className="mcls-org-node-icon">🛡️</div>
+                      <div className="mcls-org-node-body">
+                        <div className="mcls-org-node-role">Supreme Authority &amp; Gatekeeper</div>
+                        <div className="mcls-org-node-title">Human Commander / Founder Gate</div>
+                        <div className="mcls-org-node-meta">Command Approval Gate • Budget Elevation • Helix Gate 1 Invariant</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Connecting Line */}
+                  <div className="mcls-org-connector-vertical">
+                    <span>↓ Escalations, Approvals &amp; Directives</span>
+                  </div>
+
+                  {/* Level 1: Chief of Staff / Orchestrator */}
+                  <div className="mcls-org-tree-level">
+                    {(() => {
+                      const prime = units.find((u) => u.unit_key === 'MCLS-PRIME') || units[0];
+                      const isSelected = selectedOrgUnitKey === 'MCLS-PRIME';
+                      const primeTier = SECURITY_TIERS[prime.security_tier || 'tier_1'];
+                      return (
+                        <div
+                          className={`mcls-org-node mcls-org-node-prime ${isSelected ? 'selected' : ''}`}
+                          onClick={() => setSelectedOrgUnitKey('MCLS-PRIME')}
+                        >
+                          <div className="mcls-org-node-top">
+                            <span className="mcls-org-badge orchestrator">🧭 Chief of Staff (Central Orchestrator)</span>
+                            <div style={{ display: 'flex', gap: '0.4rem', alignItems: 'center' }}>
+                              <span
+                                className="mcls-tag"
+                                style={{ color: primeTier.color, background: primeTier.bg, borderColor: primeTier.border, fontWeight: 800 }}
+                              >
+                                {primeTier.label}
+                              </span>
+                              <span className="mcls-tag pass">● READY</span>
+                            </div>
+                          </div>
+                          <div className="mcls-org-node-body">
+                            <h3 className="mcls-org-node-name">{prime.name}</h3>
+                            <div className="mcls-org-node-role">{prime.role}</div>
+                            <p className="mcls-org-node-desc">{prime.description}</p>
+                            <div className="mcls-pill-row" style={{ marginTop: '0.5rem' }}>
+                              <span className="mcls-tag">Reports to: Founder Gate</span>
+                              <span className="mcls-tag">Cron: 0 8 * * * (Daily 08:00 EST)</span>
+                              <span className="mcls-tag">Budget: 70/20/10 Allocator</span>
+                              <span className="mcls-tag" style={{ background: '#F3E5F5', color: '#6A1B9A', borderColor: '#E1BEE7' }}>
+                                MCP Tool: {prime.mcp_tool || 'mcls_stage_approval_card'}
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      );
+                    })()}
+                  </div>
+
+                  {/* Connector Line to Branches */}
+                  <div className="mcls-org-connector-vertical">
+                    <span>↓ Delegated Specialist Branches &amp; Background Routines</span>
+                  </div>
+
+                  {/* Level 2: 4 Functional Branches Grid */}
+                  <div className="mcls-org-branches-grid">
+                    {ORG_BRANCHES.map((branch) => {
+                      const branchUnits = units.filter((u) => branch.unitKeys.includes(u.unit_key));
+                      return (
+                        <div key={branch.key} className="mcls-org-branch-column">
+                          <div className="mcls-org-branch-header">
+                            <h4 className="mcls-org-branch-title">{branch.title}</h4>
+                            <span className="mcls-org-branch-badge">{branch.badge}</span>
+                          </div>
+
+                          <div className="mcls-org-branch-nodes">
+                            {branchUnits.map((unit) => {
+                              const isSelected = selectedOrgUnitKey === unit.unit_key;
+                              const unitTier = SECURITY_TIERS[unit.security_tier || 'tier_1'];
+                              return (
+                                <div
+                                  key={unit.unit_key}
+                                  className={`mcls-org-node mcls-org-node-specialist ${isSelected ? 'selected' : ''}`}
+                                  onClick={() => setSelectedOrgUnitKey(unit.unit_key)}
+                                >
+                                  <div className="mcls-org-node-top">
+                                    <div className="mcls-org-node-icon">{unit.icon || '⚡'}</div>
+                                    <div style={{ flex: 1, minWidth: 0 }}>
+                                      <h4 className="mcls-org-node-title">{unit.name}</h4>
+                                      <div className="mcls-org-node-role">{unit.role}</div>
+                                    </div>
+                                  </div>
+
+                                  <div className="mcls-pill-row" style={{ marginTop: '0.4rem' }}>
+                                    <span
+                                      className="mcls-tag"
+                                      style={{ color: unitTier.color, background: unitTier.bg, borderColor: unitTier.border, fontWeight: 700 }}
+                                      title={unitTier.desc}
+                                    >
+                                      {unitTier.label}
+                                    </span>
+                                    <span className="mcls-tag pass">● {unit.status.toUpperCase()}</span>
+                                    <span className="mcls-tag">Cron: {unit.schedule_cron}</span>
+                                  </div>
+
+                                  {unit.soldier_pattern?.enabled && (
+                                    <div style={{ marginTop: '0.35rem', fontSize: '0.74rem', color: '#B26A00', fontWeight: 600 }}>
+                                      ⚡ Soldier Clones: Up to {unit.soldier_pattern.max_clones} workers ({unit.soldier_pattern.soldier_role})
+                                    </div>
+                                  )}
+                                </div>
+                              );
+                            })}
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+
+                  {/* Unit Inspector Drawer / Card */}
+                  {selectedUnit && (
+                    <div className="mcls-card mcls-org-inspector" style={{ marginTop: '2rem' }}>
+                      <div className="mcls-card-title">
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
+                          <span style={{ fontSize: '1.4rem' }}>{selectedUnit.icon || '⚡'}</span>
+                          <div>
+                            <span style={{ fontWeight: 800, fontSize: '1.1rem' }}>{selectedUnit.name}</span>
+                            <span style={{ fontSize: '0.85rem', color: '#7A6D60', marginLeft: '0.5rem' }}>
+                              ({selectedUnit.role})
+                            </span>
+                          </div>
+                        </div>
+                        <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center', flexWrap: 'wrap' }}>
+                          {(() => {
+                            const curTier = SECURITY_TIERS[selectedUnit.security_tier || 'tier_1'];
+                            return (
+                              <span
+                                className="mcls-tag"
+                                style={{ color: curTier.color, background: curTier.bg, borderColor: curTier.border, fontWeight: 800 }}
+                              >
+                                {curTier.label}
+                              </span>
+                            );
+                          })()}
+                          <span className="mcls-tag pass">● {selectedUnit.status.toUpperCase()}</span>
+                          <span className="mcls-tag">Runs: {selectedUnit.runs_count || 1}</span>
+                          <span className="mcls-tag" style={{ background: '#E3F2FD', color: '#1565C0', borderColor: '#BBDEFB' }}>
+                            Reports to: {selectedUnit.reports_to || 'MCLS-PRIME'}
+                          </span>
+                        </div>
+                      </div>
+
+                      <p style={{ fontSize: '0.92rem', color: '#5A4E42', lineHeight: 1.5, margin: '0 0 1rem 0' }}>
+                        {selectedUnit.description}
+                      </p>
+
+                      <div className="mcls-org-inspector-grid">
+                        {/* Data Sources */}
+                        <div className="mcls-org-inspector-box">
+                          <h5 className="mcls-org-inspector-heading">📡 Data Sources &amp; Platforms</h5>
+                          <ul className="mcls-org-sources-list">
+                            {(selectedUnit.data_sources || ['Internal MCLS Directives & Neon DB']).map((src, idx) => (
+                              <li key={idx}>• {src}</li>
+                            ))}
+                          </ul>
+                        </div>
+
+                        {/* Scheduled Routines */}
+                        <div className="mcls-org-inspector-box">
+                          <h5 className="mcls-org-inspector-heading">⏱️ Scheduled Background Routines</h5>
+                          {(selectedUnit.routines && selectedUnit.routines.length > 0) ? (
+                            <div className="mcls-org-routines-list">
+                              {selectedUnit.routines.map((r, idx) => (
+                                <div key={idx} className="mcls-org-routine-item">
+                                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                                    <strong style={{ fontSize: '0.85rem', color: '#2E1C0C' }}>{r.name}</strong>
+                                    <span className="mcls-cron-pill">{r.cron}</span>
+                                  </div>
+                                  <div style={{ fontSize: '0.78rem', color: '#7A6D60', marginTop: '0.2rem' }}>
+                                    Freq: {r.frequency || r.human_readable || 'Scheduled'} • Target: {r.target || r.output_destination || 'Approval Gate'}
+                                  </div>
+                                </div>
+                              ))}
+                            </div>
+                          ) : (
+                            <div style={{ fontSize: '0.85rem', color: '#7A6D60' }}>
+                              Schedule: <code>{selectedUnit.schedule_cron}</code>
+                            </div>
+                          )}
+                        </div>
+
+                        {/* Security Tier & Grok Bot Risk Gate */}
+                        <div className="mcls-org-inspector-box">
+                          <h5 className="mcls-org-inspector-heading">🛡️ Grok Bot Risk Tier &amp; MCP Tool</h5>
+                          {(() => {
+                            const curTier = SECURITY_TIERS[selectedUnit.security_tier || 'tier_1'];
+                            return (
+                              <div style={{ fontSize: '0.82rem', color: '#2E1C0C' }}>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', marginBottom: '0.4rem' }}>
+                                  <span
+                                    className="mcls-tag"
+                                    style={{ color: curTier.color, background: curTier.bg, borderColor: curTier.border, fontWeight: 800 }}
+                                  >
+                                    {curTier.label}
+                                  </span>
+                                  <span style={{ fontSize: '0.76rem', color: '#7A6D60' }}>({curTier.badge})</span>
+                                </div>
+                                <p style={{ margin: '0 0 0.35rem 0', color: '#5A4E42' }}>
+                                  <strong>Rule:</strong> {selectedUnit.tier_rule || curTier.desc}
+                                </p>
+                                <p style={{ margin: 0, color: '#6A1B9A', fontSize: '0.78rem', fontWeight: 700 }}>
+                                  MCP Endpoint: <code>{selectedUnit.mcp_tool || 'mcls_stage_approval_card'}</code>
+                                </p>
+                              </div>
+                            );
+                          })()}
+                        </div>
+
+                        {/* Soldier Scalability */}
+                        <div className="mcls-org-inspector-box">
+                          <h5 className="mcls-org-inspector-heading">👥 Horizontal Scale (Soldier Pattern)</h5>
+                          {selectedUnit.soldier_pattern?.enabled ? (
+                            <div style={{ fontSize: '0.84rem', color: '#2E1C0C' }}>
+                              <p style={{ margin: '0 0 0.35rem 0' }}>
+                                <strong>Status:</strong> Active (Up to {selectedUnit.soldier_pattern.max_clones} parallel clones)
+                              </p>
+                              <p style={{ margin: '0 0 0.35rem 0', color: '#5A4E42' }}>
+                                <strong>Worker Role:</strong> {selectedUnit.soldier_pattern.soldier_role}
+                              </p>
+                              <p style={{ margin: 0, color: '#7A6D60', fontSize: '0.8rem' }}>
+                                <strong>Task:</strong> {selectedUnit.soldier_pattern.task || 'Parallel batch processing & fan-out validation.'}
+                              </p>
+                            </div>
+                          ) : (
+                            <div style={{ fontSize: '0.84rem', color: '#7A6D60' }}>
+                              <p style={{ margin: 0 }}>
+                                <strong>Single-Signature Authority:</strong> {selectedUnit.soldier_pattern?.note || 'Runs as a single persistent stateful node to ensure global invariant enforcement.'}
+                              </p>
+                            </div>
+                          )}
+                        </div>
+                      </div>
+
+                      {/* Interactive Dispatcher Controls */}
+                      <div className="mcls-org-dispatch-tray" style={{ marginTop: '1.25rem' }}>
+                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1rem', marginBottom: '1rem' }}>
+                          <div>
+                            <label className="mcls-label">Reasoning Effort</label>
+                            <select
+                              className="mcls-select"
+                              value={currentEffort}
+                              onChange={(e) =>
+                                setUnitEfforts({
+                                  ...unitEfforts,
+                                  [selectedUnit.unit_key]: e.target.value,
+                                })
+                              }
+                            >
+                              <option value="low">Low (Fast Routine Execution)</option>
+                              <option value="medium">Medium (Balanced Synthesis)</option>
+                              <option value="high">High (Deep Strategy &amp; Canon Audit)</option>
+                              <option value="xhigh">xHigh (Maximum Multi-Step Planning)</option>
+                            </select>
+                          </div>
+                          <div>
+                            <label className="mcls-label">Custom Mission Directive (Optional)</label>
+                            <input
+                              type="text"
+                              className="mcls-input"
+                              placeholder={`Directive for ${selectedUnit.name}...`}
+                              value={unitPrompts[selectedUnit.unit_key] || ''}
+                              onChange={(e) =>
+                                setUnitPrompts({
+                                  ...unitPrompts,
+                                  [selectedUnit.unit_key]: e.target.value,
+                                })
+                              }
+                            />
+                          </div>
+                        </div>
+
+                        <button
+                          type="button"
+                          className="mcls-btn-launch"
+                          disabled={isSelectedRunning}
+                          onClick={() => handleDispatchUnit(selectedUnit)}
+                          style={{ width: '100%', padding: '0.75rem 1.5rem', fontSize: '0.95rem' }}
+                        >
+                          {isSelectedRunning
+                            ? `Dispatching ${selectedUnit.name}...`
+                            : `⚡ Dispatch ${selectedUnit.name} Routine to Command Approval Gate`}
+                        </button>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <div className="mcls-units-grid">
+                  {units.map((unit) => {
+                    const unitEffort = unitEfforts[unit.unit_key] || unit.effort_level || 'high';
+                    const isRunning = dispatchingUnitKey === unit.unit_key;
+                    return (
+                      <div key={unit.unit_key} className="mcls-unit-card">
+                        <div>
+                          <div className="mcls-unit-top">
+                            <div className="mcls-unit-icon">{unit.icon || '⚡'}</div>
+                            <div>
+                              <h3 className="mcls-unit-name">{unit.name}</h3>
+                              <div className="mcls-unit-role">{unit.role}</div>
+                            </div>
+                          </div>
+
+                          <div className="mcls-pill-row" style={{ marginBottom: '0.75rem' }}>
+                            <span className="mcls-tag pass">● {unit.status.toUpperCase()}</span>
+                            <span className="mcls-tag">Schedule: {unit.schedule_cron}</span>
+                            <span className="mcls-tag">Runs: {unit.runs_count || 1}</span>
+                          </div>
+
+                          <p style={{ fontSize: '0.88rem', color: '#5A4E42', lineHeight: 1.5 }}>
+                            {unit.description}
+                          </p>
+
+                          <div className="mcls-field-group">
+                            <label className="mcls-label">Reasoning Effort</label>
+                            <select
+                              className="mcls-select"
+                              value={unitEffort}
+                              onChange={(e) =>
+                                setUnitEfforts({
+                                  ...unitEfforts,
+                                  [unit.unit_key]: e.target.value,
+                                })
+                              }
+                            >
+                              <option value="low">Low (Fast Routine Execution)</option>
+                              <option value="medium">Medium (Balanced Synthesis)</option>
+                              <option value="high">High (Deep Strategy &amp; Canon Audit)</option>
+                              <option value="xhigh">xHigh (Maximum Multi-Step Planning)</option>
+                            </select>
+                          </div>
+
+                          <div className="mcls-field-group">
+                            <label className="mcls-label">Custom Mission Directive (Optional)</label>
+                            <input
+                              type="text"
+                              className="mcls-input"
+                              placeholder={`e.g. Focus on ${selectedDelta.replace(/_/g, ' ')} for Ages 2–7...`}
+                              value={unitPrompts[unit.unit_key] || ''}
+                              onChange={(e) =>
+                                setUnitPrompts({
+                                  ...unitPrompts,
+                                  [unit.unit_key]: e.target.value,
+                                })
+                              }
+                            />
+                          </div>
+                        </div>
+
+                        <button
+                          type="button"
+                          className="mcls-btn-launch"
+                          disabled={isRunning}
+                          onClick={() => handleDispatchUnit(unit)}
+                        >
+                          {isRunning ? `Running ${unit.name}...` : `⚡ Dispatch ${unit.name}`}
+                        </button>
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
             </div>
-          </div>
-        )}
+          );
+        })()}
 
         {/* ===================================================================
             DECK 4: META GRAPH API v21.0 AD DISPATCHER (EDGE NATIVE)

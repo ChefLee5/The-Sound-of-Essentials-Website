@@ -258,6 +258,62 @@ function buildUnitExecutionDraft(unitKey, options = {}) {
       };
     }
 
+    case 'MCLS-GUARDIAN':
+      return {
+        action_type: 'rhythm_guardian_audit',
+        title: `Rhythm Guardian Dual-Horizon Optimization & ROAS Audit (${deltaKey})`,
+        channel: 'Meta CAPI + Direct Stripe Telemetry',
+        target_destination: 'Engine A (Lead CPA <= $2.50) & Engine B (Print ROAS > 1.8x)',
+        delta_alignment: deltaKey,
+        estimated_cost: '$0.00 (Telemetry Check)',
+        summary: `Audits ad spend velocity, preserves Engine A 90-day gestation window from premature pause, flags ad fatigue, and stages +20% scaling on proven winners.${focusNote}`,
+        payload: {
+          guardrails: {
+            max_lead_cpa: 2.50,
+            min_ctr: 0.80,
+            scale_step_ratio: 1.20,
+            protect_90_day_gestation: true,
+          },
+          recommended_action: 'SCALE_WINNERS_AND_HOLD_LEARNING',
+          engine_allocations: { engine_a: '70%', engine_b: '20%', engine_c: '10%' },
+          custom_directive: customPrompt || null,
+        },
+      };
+
+    case 'MCLS-INTEL-SCOUT':
+      return {
+        action_type: 'intel_vault_curation',
+        title: `AI Parenting & Neuroscience Intelligence Sweep (${deltaKey})`,
+        channel: 'Intelligence Vault (docs/soe_ai_parenting_intel_vault.json)',
+        target_destination: 'Creative Forge Copy & B2B Pilot Pitch Deck',
+        delta_alignment: deltaKey,
+        estimated_cost: '$0.00 (Automated Sweep)',
+        summary: `Scans and curates high-leverage quotes from AI founders (Karpathy, Ng) and cognitive pediatric neuroscientists to feed fresh ad hooks for Ages 2–7.${focusNote}`,
+        payload: {
+          scouted_sources: ['Andrej Karpathy (OpenAI/Eureka)', 'Andrew Ng (Google Brain/Coursera)', 'Pediatric Cognitive Research'],
+          target_age_bounds: 'Ages 2–7 (Pre-K to Grade 2)',
+          min_leverage_score: 85.0,
+          custom_directive: customPrompt || null,
+        },
+      };
+
+    case 'MCLS-AUTOPILOT':
+      return {
+        action_type: 'social_seed_drip',
+        title: `Organic Social & Advertorial Drip (${deltaKey})`,
+        channel: 'Facebook Page (ID: 1238685869335542) + Theme Accounts',
+        target_destination: 'Organic Seeding Feed + soelearn.com/listen Bridge',
+        delta_alignment: deltaKey,
+        estimated_cost: '$0.00 (Organic Drip)',
+        summary: `Selects the next unposted high-leverage advertorial or cultural delta seed, verifies anti-duplicate state ledger, and stages publishing.${focusNote}`,
+        payload: {
+          catalog_source: 'docs/facebook_advertorials_catalog.json',
+          ledger_file: 'docs/facebook_published_ledger.json',
+          anti_duplicate_check: 'VERIFIED',
+          custom_directive: customPrompt || null,
+        },
+      };
+
     case 'MCLS-STUDIO':
     default:
       return {
