@@ -54,7 +54,7 @@ We are not building a generic SaaS for random businesses; we are building a dedi
 
 | Growth Pillar | SOE-MCLS Equivalent | SOE Specific Implementation & Canon Alignment |
 | :--- | :--- | :--- |
-| **1. AI Creative Studio** | **SOE Archetype & Asset Forge** | Hard-coded to the **5 Cultural Deltas** (*Screen vs. Sensory, Testing vs. Arts, Algorithm vs. Handcrafted, Institution vs. Sanctuary, Consumption vs. Quest*), the **6 Production Campaigns**, and the **30 Meta Ad Archetypes**. Enforces the **3-Layer Rule**:<br>1. *Emotional Identity / Parent Ache*<br>2. *Tangible Musical/Tactile Solution* (4,232 words, 400 activities, 19 songs)<br>3. *Frictionless Zero-Risk Invitation*.<br>Integrates **Gemini/Fal.ai** for warm, tactile visual generation + **Remotion/FFmpeg** to bind the actual 19-track album stems with kinetic typography in English, Spanish, and French. |
+| **1. AI Creative Studio** | **SOE Archetype & Asset Forge** | Hard-coded to the **5 Cultural Deltas** (*Screen vs. Sensory, Testing vs. Arts, Algorithm vs. Handcrafted, Institution vs. Sanctuary, Consumption vs. Quest*), the **6 Production Campaigns**, and the **30 Meta Ad Archetypes**. Enforces the **3-Layer Rule**:<br>1. *Emotional Identity / Parent Ache*<br>2. *Tangible Musical/Tactile Solution* (4,000+ words, 400 activities, 19 songs)<br>3. *Frictionless Zero-Risk Invitation*.<br>Integrates **Gemini/Fal.ai** for warm, tactile visual generation + **Remotion/FFmpeg** to bind the actual 19-track album stems with kinetic typography in English, Spanish, and French. |
 | **2. Micro-Funnel Engine** | **Direct Web Funnel Router (`soelearn.com`)** | Replaces generic templates with high-speed micro-routes on `soelearn.com` mapped to the originating Cultural Delta:<br>• **Step 1 (Front End):** `/listen` gate ($0 Free 19-Track Album capture).<br>• **Step 2 (In-Cart Bump):** $7 *Quest Starter Pack* (triggers Stripe `setup_future_usage: 'off_session'` to vault the card).<br>• **Step 3 (One-Click Upsells):** $19 *Interactive Ebook* $\rightarrow$ $21/$35 *Rhythm Ready Workbook* $\rightarrow$ $55/$79 *Essential Picture Dictionary* (or $89 *Full Quest Bundle*) + $14.99/mo *Rhythm Pass* continuity. |
 | **3. Meta Launch Automation** | **One-Click Delta Dispatcher** | Automates deployment to Meta Marketing API v21.0. Select a Campaign (e.g., *The Enemy* or *Victory Garden*), choose a language (`EN`, `ES`, `FR`), choose buyer track (**D2C Parents/Caregivers** vs. **B2B ECE Directors/Preschools**), set daily budget, and click **Launch**. Automatically structures CBO campaigns with 3:2:2 creative testing arrays. |
 | **4. CAPI & CRM Pipeline** | **SOE Attribution & Brevo Sync Engine** | Captures `/listen` leads and Stripe webhook events (`payment_intent.succeeded`). Simultaneously fires:<br>1. **Meta CAPI** (`Lead`, `InitiateCheckout`, `Purchase` with exact LTV/cart values and `fbc`/`fbp` cookies).<br>2. **Brevo API v3** (`info@soelearn.com`), routing the contact into the exact segment across the **18-campaign catalog** (6 D2C nurture sequences or 12 B2B outreach sequences) tagged with the exact Cultural Delta that acquired them. |
@@ -283,14 +283,14 @@ PRODUCT_LADDER: Dict[str, Dict[str, Any]] = {
     },
     "DICTIONARY_DIGITAL": {
         "sku": "soe_dict_dig_55",
-        "name": "Essential Picture Dictionary (Digital - 4,232 Words, 157 Scenes)",
+        "name": "Essential Picture Dictionary (Digital - 4,000+ Words, 157 Scenes)",
         "price_cents": 5500,
         "vaults_card": True,
         "is_continuity": False,
     },
     "DICTIONARY_PRINT": {
         "sku": "soe_dict_prt_79",
-        "name": "Essential Picture Dictionary (Print - 4,232 Words, 157 Scenes)",
+        "name": "Essential Picture Dictionary (Print - 4,000+ Words, 157 Scenes)",
         "price_cents": 7900,
         "vaults_card": True,
         "is_continuity": False,
@@ -400,7 +400,7 @@ MULTILINGUAL_TEMPLATES = {
     "en": {
         "SCREEN_VS_SENSORY": {
             "layer_1_ache": "You can see it in their eyes after twenty minutes of algorithmic cartoons—that glazed, overstimulated restlessness that steals the peace right out of your living room.",
-            "layer_2_solution": "Built with a father's heart and a mother's love, The Sound of Essentials replaces screen rot with 19 handcrafted songs, 4,232 illustrated words, and 400 tactile daily quests for ages 2–7.",
+            "layer_2_solution": "Built with a father's heart and a mother's love, The Sound of Essentials replaces screen rot with 19 handcrafted songs, 4,000+ illustrated words, and 400 tactile daily quests for ages 2–7.",
             "layer_3_invitation": "Press play on a calmer home tonight. Unlock all 19 tracks of the Rhythm Quest album 100% free—no app downloads, no algorithms.",
             "headline": "Stream the Free 19-Track Rhythm Quest Album",
         },
@@ -414,7 +414,7 @@ MULTILINGUAL_TEMPLATES = {
     "es": {
         "ALGORITHM_VS_HANDCRAFTED": {
             "layer_1_ache": "Los algoritmos fueron diseñados para capturar la atención de tu hijo antes de que aprenda a leer.",
-            "layer_2_solution": "Creado con el corazón de un padre y el amor de una madre: 19 canciones artesanales, 4,232 palabras ilustradas y 400 actividades táctiles sin pantallas.",
+            "layer_2_solution": "Creado con el corazón de un padre y el amor de una madre: 19 canciones artesanales, 4,000+ palabras ilustradas y 400 actividades táctiles sin pantallas.",
             "layer_3_invitation": "Empieza hoy sin costo. Escucha el álbum completo de 19 canciones de Rhythm Quest totalmente gratis.",
             "headline": "Escucha el Álbum Gratis de 19 Canciones",
         }

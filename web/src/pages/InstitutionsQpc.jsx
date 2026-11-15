@@ -74,7 +74,7 @@ export default function InstitutionsQpc() {
       '@context': 'https://schema.org',
       '@type': 'EducationalOrganization',
       name: 'The Sound of Essentials: Rhythm Quest Institutional Concord',
-      description: 'Turnkey acoustic screen-free early learning curriculum for ages 2–7. 19 original tracks across 7 developmental lands, 400 hands-on readiness activities, and 4,232 vocabulary words crosswalked to Head Start ELOF and NAEYC standards.',
+      description: 'Turnkey acoustic screen-free early learning curriculum for ages 2–7. 19 original tracks across 7 developmental lands, 400 hands-on readiness activities, and 4,000+ vocabulary words crosswalked to Head Start ELOF and NAEYC standards.',
       url: 'https://soelearn.com/institutions',
       email: 'info@soelearn.com',
       audience: {

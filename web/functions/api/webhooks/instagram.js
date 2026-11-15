@@ -34,7 +34,7 @@ const KEYWORD_ROUTES = [
     route_key: 'ENGINE_B_WORKBOOK',
     target_url: 'https://soelearn.com/workbook?utm_source=ig_dm&utm_medium=comment_workbook',
     reply_text:
-      'Here is the 40-Day Rhythm Ready Workbook ($21 digital / $45 print) & 4,232-Word Picture Dictionary for ages 2–7: https://soelearn.com/workbook',
+      'Here is the 40-Day Rhythm Ready Workbook ($21 digital / $45 print) & 4,000+ Word Picture Dictionary for ages 2–7: https://soelearn.com/workbook',
   },
 ];
 

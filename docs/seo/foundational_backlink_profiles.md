@@ -79,7 +79,7 @@ Establish sovereign, indexable foundational links across vetted, high-trust plat
 * **Publisher Name:** The Sound of Essentials Publishing
 * **Website Link:** `https://thesoundofessentials.com/workbook?utm_source=openlibrary&utm_medium=profile&utm_campaign=foundational_backlinks`
 * **Publisher Description:**
-  > Independent educational publisher specializing in tactile, screen-free curriculum, phonics picture dictionaries, and music-synchronized workbooks for early childhood (Ages 2–7). Official catalog includes The Sound of Essentials: Rhythm Ready Workbook (8-Week Readiness Quest) and The Essential Picture Dictionary (4,232 vocabulary words across 125 scenes).
+  > Independent educational publisher specializing in tactile, screen-free curriculum, phonics picture dictionaries, and music-synchronized workbooks for early childhood (Ages 2–7). Official catalog includes The Sound of Essentials: Rhythm Ready Workbook (8-Week Readiness Quest) and The Essential Picture Dictionary (4,000+ vocabulary words across 125 scenes).
 
 ---
 

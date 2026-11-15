@@ -54,3 +54,19 @@ When generating or validating any new asset, reference the official turnaround m
 - `Vesta Ref.jpeg`
 - `Celene Ref.jpeg`
 - `Elias Ref.jpeg`
+
+---
+
+## 3. Code-Animated 3D Explainer & Remotion Style Lock (3D Style Atlas Pipeline)
+
+For explainers, curriculum mechanics, and short-form video reels generated via the **MCLS-STUDIO Video Iteration Pipeline** (`tools/soe_mcls/creative_forge.py`, `web/src/remotion/TactileExplainer.jsx`, and `build_video_iteration` in `web/functions/api/mcls/dispatch.js`), every clip follows the 4-stage loop (**Audio + SRT -> Atlas Style Seed -> Code Iteration -> Crystallized Skill**):
+
+- **Allowed Tactile Physical Presets (Re-skinned to `#FFF8F0` Cream + `#FF6F00` Golden Orange):**
+  - `PAPER_POPUP` (Atlas `#02` Paper Pop-Up): Storybook scenes, `4,000+` illustrated words reveals, `"Crafted by a father's heart and a mother's love"`.
+  - `SOFT_CLAY` (Atlas `#03` Soft Clay): Tactile sensory play & Ages 2–7 phonics mechanics.
+  - `TINY_DIORAMA` (Atlas `#04` Tiny Diorama): 7 Musical Lands overview tiles (`Harmonia`, `Numeria`, `Vitalis`, `Celestia`, `Aquaria`, `Terrasol`, `Luminosity`).
+  - `MARBLE_RUN` (Atlas `#09` Marble Run): Walnut/maple mechanical cause-and-effect explainers for phonological loops.
+  - `PAINTED_STORYBOOK` (Atlas `#13` Painted): Warm golden-hour oil-on-linen storytelling interludes.
+  - `EXPLODED_BUNDLE` (Atlas `#08` Exploded View): `Essential Picture Dictionary` (`$55`/`$79`), `Workbooks` (`$21`/`$35`), and `Full Quest Bundle` (`$89`) teardowns.
+  - `SPOTLIGHT_STAGE` (Atlas `#06` Spotlight Stage) & `LOW_POLY_PAPER` (Atlas `#01` Low-Poly).
+- **Blocked Defaults:** Dark/screen aesthetics (`#07 Neon Sign`, `#11 LED Wall`, `#14 Circuit City`) are **rejected** by default so SOE motion outputs never visually celebrate algorithmic screen-rot unless explicitly flagged for a Layer 1 `"Before"` contrast cut.

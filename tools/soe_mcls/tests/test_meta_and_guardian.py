@@ -75,3 +75,13 @@ def test_rhythm_guardian_adversarial_review_and_anti_shiny_object():
     assert shiny["approved"] is False
     assert shiny["verdict"] == "SHINY_OBJECT_HOLD"
     assert len(shiny["shiny_object_flags"]) >= 2
+
+    # 4. Literal dictionary word count 4,232 -> BLOCKED_CANON
+    literal_count = guardian.review_proposal_adversarial({
+        "unit_key": "MCLS-PULSE",
+        "title": "4,232-word Picture Dictionary",
+        "description": "Ages 2–7 phonics dictionary.",
+        "target_route": "/listen",
+    })
+    assert literal_count["approved"] is False
+    assert literal_count["verdict"] == "BLOCKED_CANON"

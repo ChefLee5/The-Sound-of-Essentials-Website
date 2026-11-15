@@ -13,9 +13,13 @@ Remotion video compositions and video-only helpers belong here.
 Use PascalCase for composition files.
 
 ```txt
+Root.jsx
+index.js
 SOETrailer.jsx
 LyricVideo.jsx
 HeroTeaser.jsx
+TactileExplainer.jsx
+Tactile3DCanvas.jsx
 ```
 
 ## What Does Not Belong Here

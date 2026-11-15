@@ -64,8 +64,8 @@ export const PRESET_CHIPS = {
       icon: '📖',
       question: 'How many words are included?',
       answer:
-        'The Essential Picture Dictionary includes 4,232 essential vocabulary words organized across 157 vibrant illustrated scenes and all 7 developmental Lands.',
-      badge: '4,232 Words · 157 Scenes',
+        'The Essential Picture Dictionary includes 4,000+ essential vocabulary words organized across 157 vibrant illustrated scenes and all 7 developmental Lands.',
+      badge: '4,000+ Words · 157 Scenes',
     },
     {
       id: 'rhythm',

@@ -106,7 +106,7 @@ In addition to the 15 public heroes, the SOE Legacy maintains a 16th character: 
 ### 2.4 The Completed Asset Vault
 SOE enters enterprise expansion with finished, defensible IP assets:
 - **19-Track Master Acoustic Album:** Originally published music recorded live in studio sessions, featuring authentic vocal performances, warm acoustic arrangements, and child-safe cadence.
-- **4,232-Word Essential Picture Dictionary:** 157 illustrated thematic scenes spanning all seven lands. Formatted in EPUB 3 fixed-layout and high-resolution print PDF.
+- **4,000+ Word Essential Picture Dictionary:** 157 illustrated thematic scenes spanning all seven lands. Formatted in EPUB 3 fixed-layout and high-resolution print PDF.
 - **40-Day / 240-Activity Readiness Workbook:** Structured eight-week curriculum connecting daily motor, phonics, and cognitive exercises.
 - **Standards Crosswalk & Compliance Engine:** Native CLI tools generating full pedagogical alignment to Head Start ELOF, NAEYC, and state early learning frameworks.
 
@@ -209,7 +209,7 @@ Because SOE prioritizes tactile development over screens, we have engineered phy
 4. **The Sovereign Slipcase Master Library:**
    - Handcrafted walnut and copper-trimmed slipcase housing:
      - The complete 15-Volume Hero Hardcover Series.
-     - The 4,232-word Essential Picture Dictionary (Deluxe Cloth Hardcover).
+     - The 4,000+ word Essential Picture Dictionary (Deluxe Cloth Hardcover).
      - The 40-Day Readiness Workbook.
      - The 19-Track 180g Copper Vinyl Record and art booklet.
      - The complete set of tactile hardwood rhythm tools.
@@ -256,7 +256,7 @@ The platform provides:
 #### Tier 2: School & Clinical Center License ($499 / year)
 - Designed for private preschools, Head Start centers, and pediatric therapy practices (Speech-Language Pathology and Occupational Therapy).
 - Complete multi-classroom site license (up to 15 educators).
-- Full digital suite of the 4,232-word Essential Picture Dictionary for speech and vocabulary intervention.
+- Full digital suite of the 4,000+ word Essential Picture Dictionary for speech and vocabulary intervention.
 - Clinical Somatic Protocol Guide: using acoustic rhythm and knuckle-tapping for sensory integration and bilateral midline coordination.
 - Monthly downloadable activity zines for student distribution.
 
@@ -278,7 +278,7 @@ English language acquisition represents an enormous international market. Tradit
 
 The Cloud Academy leverages rhythm as a universal language acquisition tool:
 - Rhyme, syllable clapping, and melodic repetition accelerate foreign vocabulary acquisition up to 3 times faster than text-based instruction.
-- The 4,232-word visual dictionary provides instant contextual anchoring across all seven lands.
+- The 4,000+ word visual dictionary provides instant contextual anchoring across all seven lands.
 - Primary international expansion targets: Latin America, Southeast Asia, Japan, the Middle East, and Francophone West Africa.
 
 ---
@@ -386,7 +386,7 @@ The SOE growth strategy follows an intentional escalation hierarchy, moving from
 │                            SOE 4-STAGE ENTERPRISE ESCALATION MATRIX                         │
 ├─────────────────────────────────────────────────────────────────────────────────────────────┤
 │  STAGE 1: Single Product / Proof of Core (Completed)                                        │
-│  - 19-track master album, 4,232-word picture dictionary, 40-day workbook                    │
+│  - 19-track master album, 4,000+ word picture dictionary, 40-day workbook                    │
 │  - React 19 website, audio player, automated standards crosswalk generator                  │
 ├─────────────────────────────────────────────────────────────────────────────────────────────┤
 │  STAGE 2: D2C Funnel & Consumer Proof (Active Deployment)                                   │
@@ -508,7 +508,7 @@ The Concord Treasury operates under strict fiduciary and pedagogical parameters:
 
 The Sound of Essentials was founded on a simple truth: children do not need more flashing pixels or algorithmic attention traps. They need rhythm. They need melody. They need paper, tactile pencils, and the human voice of an educator or parent looking them in the eye.
 
-The tools are built. The acoustic master recordings are finished. The 4,232-word dictionary, 40-day curriculum, and 15-hero literature canon are ready. The business architecture spans from direct-to-consumer funnels to high-margin heirloom publishing, multimillion-dollar state institutional contracts, and tokenized catalog stewardship.
+The tools are built. The acoustic master recordings are finished. The 4,000+ word dictionary, 40-day curriculum, and 15-hero literature canon are ready. The business architecture spans from direct-to-consumer funnels to high-margin heirloom publishing, multimillion-dollar state institutional contracts, and tokenized catalog stewardship.
 
 We now open the doors to **The Concord**.
 

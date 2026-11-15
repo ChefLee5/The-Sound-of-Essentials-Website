@@ -11,7 +11,7 @@ Facebook's feed algorithm prioritizes **time spent on post**, **thoughtful comme
 By contrast, **Long-Form Editorial Posts ("Encapsulated Advertorials")** function like native magazine essays:
 1. **The Vulnerable Hook:** Opens with a relatable parenting ache that stops the scroll (the post-screen meltdown, the $240 wasted on apps, the silent language app).
 2. **The Mechanism / Cognitive Shift:** Deconstructs the dopamine slot machine vs. the auditory critical window (*Sound-Before-Symbol*).
-3. **The Tangible Proof:** 19 master acoustic tracks recorded live in studio sessions, 7 lands, 15 heroes, 4,232 words.
+3. **The Tangible Proof:** 19 master acoustic tracks recorded live in studio sessions, 7 lands, 15 heroes, 4,000+ words.
 4. **Dual Conversion Link:** Direct link to read the full hosted advertorial OR claim the 19-track album free at `soelearn.com/listen`.
 
 ---

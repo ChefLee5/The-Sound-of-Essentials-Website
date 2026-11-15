@@ -85,7 +85,7 @@ const HookedOnPhonicsAlternatives = () => {
           '@type': 'ListItem',
           'position': 4,
           'name': 'The Essential Picture Dictionary',
-          'description': '4,232-word illustrated heirloom volume across 157 semantic scenes, connecting sounds to rich visual storytelling without cartoon minigames.'
+          'description': '4,000+ word illustrated heirloom volume across 157 semantic scenes, connecting sounds to rich visual storytelling without cartoon minigames.'
         },
         {
           '@type': 'ListItem',

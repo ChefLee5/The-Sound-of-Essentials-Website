@@ -23,3 +23,33 @@ def test_multilingual_generation():
     pkg_fr = forge.build_ad_variant("ARC-02", "ALGORITHM_VS_HANDCRAFTED", "VICTORY_GARDEN", language="fr")
     assert "Escucha" in pkg_es["headline"] or "Gratis" in pkg_es["headline"]
     assert "Écoutez" in pkg_fr["headline"] or "Gratuit" in pkg_fr["headline"]
+    assert "4 232" not in pkg_fr["primary_text"]
+    assert "4,000+" in pkg_fr["primary_text"]
+
+
+def test_video_iteration_pipeline_locks_brand_and_srt():
+    forge = CreativeForge()
+    packet = forge.build_video_iteration_packet(
+        topic="How Acoustic Rhythm Wires Early Reading",
+        style_preset="MARBLE_RUN",
+        duration_seconds=15,
+        iteration_notes=["Slow marble drop to match beat 2 SRT cue"],
+    )
+    assert packet["atlas_reference"]["atlas_id"] == "#09"
+    assert packet["brand_tokens"]["surface_cream_hex"] == "#FFF8F0"
+    assert packet["brand_tokens"]["accent_orange_hex"] == "#FF6F00"
+    assert len(packet["stage_1_audio_and_srt"]["srt_cues"]) == 3
+    assert "00:00:00,000 -->" in packet["stage_1_audio_and_srt"]["srt_text"]
+    assert packet["stage_3_code_iteration_loop"]["operator_iteration_notes"] == [
+        "Slow marble drop to match beat 2 SRT cue"
+    ]
+    assert packet["stage_4_crystallized_skill_spec"]["skill_id"] == "soe-video-marble_run"
+
+
+def test_video_iteration_rejects_unapproved_neon_style_by_default():
+    forge = CreativeForge()
+    with pytest.raises(ValueError, match="blocked by SOE Visual Quality Gate"):
+        forge.build_video_iteration_packet(
+            topic="Neon Trap",
+            style_preset="NEON_SIGN",
+        )

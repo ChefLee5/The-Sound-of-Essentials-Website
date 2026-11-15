@@ -113,6 +113,7 @@ class RhythmGuardianOptimizer:
             (r"\b(Marcus|Elena|Reef|Zara|Dara|Sophia|Geometria)\b", "Retired character or land name detected."),
             (r"\bno\s+credit\s+card\s+required\b", "Billing rule violation: never claim 'no credit card required' (card vaulting active)."),
             (r"\bShopify\b", "Stack incompatibility: Shopify is retired; use direct soelearn.com Stripe funnel."),
+            (r"\b4,?232\b", "Marketing copy rule: never use literal '4,232'; uniformly use '4,000+ words'."),
         ]
         for pattern, msg in canon_checks:
             if re.search(pattern, combined_text, flags=re.IGNORECASE):

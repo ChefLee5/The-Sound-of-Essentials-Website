@@ -73,8 +73,8 @@ const PRODUCT_METADATA = {
     link: `${DOMAIN}/dictionary`,
     image: `${DOMAIN}/assets/marketing/picture-dictionary-cover.webp`,
     category: 'Media > Books > Dictionaries & Thesauruses',
-    productType: 'Early Learning > Vocabulary > 4,232 Words Across 125 Full-Color Scenes',
-    customDescription: 'The Sound of Essentials: Essential Picture Dictionary. Foundational visual vocabulary encyclopedia for ages 2 to 7. 4,232 words across 125 full-color illustrated scenes spanning all 7 Lands with phonetic guides and bilingual support.',
+    productType: 'Early Learning > Vocabulary > 4,000+ Words Across 125 Full-Color Scenes',
+    customDescription: 'The Sound of Essentials: Essential Picture Dictionary. Foundational visual vocabulary encyclopedia for ages 2 to 7. 4,000+ words across 125 full-color illustrated scenes spanning all 7 Lands with phonetic guides and bilingual support.',
   },
   'full-quest-bundle': {
     title: 'The Full Quest Digital Learning Bundle (Album + Dictionary + Workbook + Ebook)',

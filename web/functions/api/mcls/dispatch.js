@@ -41,6 +41,7 @@ function verifyCanonCompliance(text) {
     { pattern: /\bno\s+credit\s+card\s+required\b/i, reason: 'Billing canon violation: never claim "no credit card required"' },
     { pattern: /\bShopify\b/i, reason: 'Stack canon violation: Shopify is retired; use direct soelearn.com Stripe funnel' },
     { pattern: /\blive\s+(instrumentation|instruments?|orchestra|music|acoustic|organic)\b/i, reason: 'Canon audio rule: studio-recorded vocals & acoustic arrangements only' },
+    { pattern: /\b4,?232\b/, reason: 'Marketing copy rule: never use literal 4,232; uniformly use "4,000+ words"' },
   ];
 
   const violations = [];
@@ -331,8 +332,10 @@ function buildUnitExecutionDraft(unitKey, options = {}) {
           daily_budget_cents: Number(dailyBudget) * 100,
           headline: 'Stream the Free 19-Track Rhythm Quest Album (Ages 2–7)',
           layer_1: 'You can see it in their eyes after 20 minutes of algorithmic cartoons—that glazed, overstimulated restlessness that steals the peace right out of your home.',
-          layer_2: 'Crafted by a father’s heart and a mother’s love, The Sound of Essentials replaces screen rot with 19 studio-recorded songs, 4,232 illustrated words, and 400 tactile daily quests for ages 2–7.',
+          layer_2: 'Crafted by a father’s heart and a mother’s love, The Sound of Essentials replaces screen rot with 19 studio-recorded songs, 4,000+ illustrated words, and 400 tactile daily quests for ages 2–7.',
           layer_3: 'Press play on a calmer home tonight. Unlock all 19 tracks of the Rhythm Quest album 100% free—no apps, no algorithms.',
+          video_style_preset: 'PAPER_POPUP',
+          video_iteration_pipeline: 'audio_srt -> atlas_seed -> code_iter -> skill_lock',
           custom_directive: customPrompt || null,
         },
       };
@@ -441,7 +444,7 @@ export async function onRequestPost(context) {
         source_text,
         canon_glossary_lock: canonGlossaryLock,
         translation_rules: [
-          'Keep formatting, headings, and numeric counts (19 tracks, 4,232 words, Ages 2–7) exact.',
+          'Keep formatting, headings, and numeric counts (19 tracks, 4,000+ words, Ages 2–7) exact.',
           'Preserve canonical Land and Hero proper names untranslated unless approved in glossary.',
           'Flag every rhyme, syllable-clap pattern, or idiom with 2 natural target-language cadence options.',
         ],
@@ -497,6 +500,70 @@ export async function onRequestPost(context) {
       );
     }
 
+    // ── 0E. 3D STYLE ATLAS + SRT CODE-VIDEO ITERATION PIPELINE ────────────────
+    if (action === 'build_video_iteration') {
+      const ALLOWED_STYLES = {
+        PAPER_POPUP: { atlas_id: '#02', name: 'Paper Pop-Up', category: 'Material worlds' },
+        SOFT_CLAY: { atlas_id: '#03', name: 'Soft Clay', category: 'Material worlds' },
+        TINY_DIORAMA: { atlas_id: '#04', name: 'Tiny Diorama', category: 'Spaces and journeys' },
+        MARBLE_RUN: { atlas_id: '#09', name: 'Marble Run', category: 'Machines that explain' },
+        PAINTED_STORYBOOK: { atlas_id: '#13', name: 'Painted', category: 'Filters over 3D' },
+        EXPLODED_BUNDLE: { atlas_id: '#08', name: 'Exploded View', category: 'Diagrams with depth' },
+        SPOTLIGHT_STAGE: { atlas_id: '#06', name: 'Spotlight Stage', category: 'Spaces and journeys' },
+        LOW_POLY_PAPER: { atlas_id: '#01', name: 'Low-Poly', category: 'Filters over 3D' },
+      };
+
+      const rawStyle = String(body.style_preset || 'PAPER_POPUP').trim().toUpperCase();
+      const preset = ALLOWED_STYLES[rawStyle] || ALLOWED_STYLES.PAPER_POPUP;
+      const topic = String(body.topic || '7 Musical Lands & 4,000+ Illustrated Words (Ages 2–7)');
+      const durationSec = Math.max(8, Math.min(60, Number(body.duration_seconds) || 15));
+      const trackNum = Math.max(1, Math.min(19, Number(body.audio_track_number) || 1));
+      const b1 = Math.max(3, Math.round(durationSec * 0.3));
+      const b2 = Math.max(b1 + 3, Math.round(durationSec * 0.72));
+
+      const videoPacket = {
+        topic,
+        duration_seconds: durationSec,
+        style_preset: ALLOWED_STYLES[rawStyle] ? rawStyle : 'PAPER_POPUP',
+        atlas_reference: preset,
+        brand_tokens: {
+          surface_cream_hex: '#FFF8F0',
+          accent_orange_hex: '#FF6F00',
+          highlight_amber_hex: '#FFB300',
+          canonical_age_range: 'Ages 2–7 (Pre-K to Grade 2)',
+          heritage_motto: "Crafted by a father's heart and a mother's love",
+        },
+        stage_1_audio_and_srt: {
+          audio_track: `SOE Studio Track #${trackNum} + Narration Voiceover`,
+          srt_cues: [
+            { index: 1, start_sec: 0, end_sec: b1, beat: 'LAYER_1_ACHE', text: 'You can see it in their eyes after 20 minutes of algorithmic cartoons.' },
+            { index: 2, start_sec: b1, end_sec: b2, beat: 'LAYER_2_SOLUTION', text: "Crafted by a father's heart and a mother's love—19 studio songs and 4,000+ illustrated words for ages 2–7." },
+            { index: 3, start_sec: b2, end_sec: durationSec, beat: 'LAYER_3_INVITATION', text: 'Stream all 19 Rhythm Quest tracks free at soelearn.com/listen.' },
+          ],
+        },
+        stage_3_code_iteration_axes: [
+          'beat_scene_changes',
+          'physics_and_camera_fixes',
+          'brand_palette_and_hero_lock',
+          'srt_word_timing_tightening',
+        ],
+        stage_4_skill_id: `soe-video-${(ALLOWED_STYLES[rawStyle] ? rawStyle : 'PAPER_POPUP').toLowerCase()}`,
+        remotion_composition: 'TactileExplainer',
+      };
+
+      const review = runAdversarialPreflightReview('MCLS-STUDIO', {
+        title: `Tactile 3D/Code Video Iteration (${preset.atlas_id} ${preset.name}): ${topic}`,
+        summary: `4-stage SRT-synced Three.js/Remotion pipeline (${durationSec}s, Track #${trackNum}) locked to SOE #FFF8F0 / #FF6F00 canon.`,
+        target_destination: '/listen',
+        payload: videoPacket,
+      });
+
+      return new Response(
+        JSON.stringify({ success: true, action, videoPacket, review }),
+        { status: 200, headers: { 'Content-Type': 'application/json' } }
+      );
+    }
+
     // ── 1. MCLS GOVERNED NATURAL-LANGUAGE TELEMETRY QUERY (SQL ENGINE) ──────
     if (action === 'query_telemetry') {
       const { question = '' } = body;
@@ -542,7 +609,13 @@ export async function onRequestPost(context) {
 
     // ── 2. MCLS NATIVE WEB-TO-MARKDOWN EXTRACTOR & CITATION SCOUT ───────────
     if (action === 'extract_markdown') {
-      const { target_url = '', stage_to_gate = false, target_unit = 'MCLS-CONCORD' } = body;
+      const {
+        target_url = '',
+        stage_to_gate = false,
+        target_unit = 'MCLS-CONCORD',
+        previous_hash = '',
+        keywords = [],
+      } = body;
       if (!target_url || !/^https?:\/\//i.test(target_url.trim())) {
         return new Response(
           JSON.stringify({ error: 'Please provide a valid http:// or https:// URL to extract.' }),
@@ -551,10 +624,14 @@ export async function onRequestPost(context) {
       }
 
       const cleanUrl = target_url.trim();
+      const checkedAt = new Date().toISOString();
       let pageTitle = cleanUrl;
       let metaDesc = '';
       let markdownText = '';
       let emailsFound = [];
+      let sourceOutcome = 'changed';
+      let contentHash = '';
+      let fetchError = null;
 
       try {
         const pageRes = await fetch(cleanUrl, {
@@ -563,6 +640,9 @@ export async function onRequestPost(context) {
             Accept: 'text/html,application/xhtml+xml',
           },
         });
+        if (!pageRes.ok) {
+          throw new Error(`HTTP ${pageRes.status}`);
+        }
         const html = await pageRes.text();
 
         const titleMatch = html.match(/<title[^>]*>([\s\S]*?)<\/title>/i);
@@ -579,6 +659,7 @@ export async function onRequestPost(context) {
           .replace(/<style[\s\S]*?<\/style>/gi, '')
           .replace(/<nav[\s\S]*?<\/nav>/gi, '')
           .replace(/<footer[\s\S]*?<\/footer>/gi, '')
+          .replace(/<!--[\s\S]*?-->/g, '')
           .replace(/<h1[^>]*>([\s\S]*?)<\/h1>/gi, '\n# $1\n')
           .replace(/<h2[^>]*>([\s\S]*?)<\/h2>/gi, '\n## $1\n')
           .replace(/<h3[^>]*>([\s\S]*?)<\/h3>/gi, '\n### $1\n')
@@ -589,13 +670,36 @@ export async function onRequestPost(context) {
           .replace(/\n{3,}/g, '\n\n')
           .trim();
 
-        markdownText = `# ${pageTitle}\nSource: ${cleanUrl}\n${metaDesc ? `Description: ${metaDesc}\n` : ''}\n${stripped.slice(0, 3500)}`;
-      } catch (fetchErr) {
-        markdownText = `# Extracted Target Brief: ${cleanUrl}\nNote: Direct fetch encountered "${fetchErr.message}". Synthesized institutional & citation recon profile for MCLS staging.`;
+        const hashInput = new TextEncoder().encode(stripped.replace(/\s+/g, ' '));
+        const digest = await crypto.subtle.digest('SHA-256', hashInput);
+        contentHash = Array.from(new Uint8Array(digest))
+          .map((b) => b.toString(16).padStart(2, '0'))
+          .join('');
+
+        if (previous_hash && previous_hash === contentHash) {
+          sourceOutcome = 'unchanged';
+        }
+
+        // Targeted passage extraction when keywords are specified; avoid blind truncation
+        let bodyExcerpt = stripped.slice(0, 3500);
+        if (Array.isArray(keywords) && keywords.length > 0) {
+          const kwLower = keywords.map((k) => String(k).toLowerCase()).filter(Boolean);
+          const blocks = stripped.split(/\n+/).filter(Boolean);
+          const matched = blocks.filter((b) => kwLower.some((k) => b.toLowerCase().includes(k)));
+          if (matched.length > 0) {
+            bodyExcerpt = matched.join('\n').slice(0, 3500);
+          }
+        }
+
+        markdownText = `# ${pageTitle}\nSource: ${cleanUrl}\nChecked At: ${checkedAt}\n${metaDesc ? `Description: ${metaDesc}\n` : ''}\n${bodyExcerpt}`;
+      } catch (err) {
+        sourceOutcome = 'check_failed';
+        fetchError = err.message;
+        markdownText = `# Check Failed: ${cleanUrl}\nChecked At: ${checkedAt}\nError: "${err.message}". Unresolved — do not treat as unchanged.`;
       }
 
       let stagedCard = null;
-      if (stage_to_gate) {
+      if (stage_to_gate && sourceOutcome === 'changed') {
         const ins = await queryNeon(
           databaseUrl,
           `INSERT INTO mcls_approvals
@@ -611,6 +715,9 @@ export async function onRequestPost(context) {
             `Extracted structured markdown & contact intelligence from ${cleanUrl} for Ages 2–7 curriculum positioning.`,
             JSON.stringify({
               source_url: cleanUrl,
+              checked_at: checkedAt,
+              source_outcome: sourceOutcome,
+              content_hash: contentHash,
               page_title: pageTitle,
               emails_discovered: emailsFound,
               recipient_email: emailsFound[0] || 'info@soelearn.com',
@@ -624,8 +731,12 @@ export async function onRequestPost(context) {
 
       return new Response(
         JSON.stringify({
-          success: true,
+          success: sourceOutcome !== 'check_failed',
           url: cleanUrl,
+          checked_at: checkedAt,
+          source_outcome: sourceOutcome,
+          content_hash: contentHash || null,
+          error: fetchError,
           title: pageTitle,
           emails: emailsFound,
           markdown: markdownText,

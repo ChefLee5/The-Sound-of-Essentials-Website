@@ -1,0 +1,98 @@
+{
+  "topic": "Accurate Letter Sounds Before Guessing Starts (Ad24)",
+  "duration_seconds": 15,
+  "style_preset": "MARBLE_RUN",
+  "atlas_reference": {
+    "atlas_id": "#09",
+    "atlas_name": "Marble Run",
+    "category": "Machines that explain",
+    "format": "Explainer",
+    "materials_and_lighting": "Handmade walnut board with pale maple rails on brass pins, brass paddle gates, swirled glass marbles, and wood-burned glass jars over a warm seamless backdrop.",
+    "soe_use_case": "Biological neural wiring, phonological loops, and cause-and-effect contrast against algorithmic feeds."
+  },
+  "brand_tokens": {
+    "surface_cream_hex": "#FFF8F0",
+    "accent_orange_hex": "#FF6F00",
+    "highlight_amber_hex": "#FFB300",
+    "earth_walnut_hex": "#795548",
+    "garden_green_hex": "#4CAF50",
+    "canonical_age_range": "Ages 2\u20137 (Pre-K to Grade 2)",
+    "heritage_motto": "Crafted by a father's heart and a mother's love",
+    "canonical_scale_claims": [
+      "19 studio-recorded songs",
+      "4,000+ illustrated words",
+      "157 scenes",
+      "400 tactile daily quests",
+      "7 Lands",
+      "15 Heroes"
+    ],
+    "rejected_atlas_styles": [
+      "NEON_SIGN",
+      "LED_WALL",
+      "CIRCUIT_CITY"
+    ]
+  },
+  "stage_1_audio_and_srt": {
+    "audio_source": "SOE Studio Track #1 + Narration Voiceover (SRT-Aligned)",
+    "native_web_audio_sfx": "Soft wooden clack / chime synced at SRT beat transitions (muted under vocals)",
+    "srt_cues": [
+      {
+        "index": 1,
+        "start_sec": 0,
+        "end_sec": 4,
+        "srt_range": "00:00:00,000 --> 00:00:04,000",
+        "beat": "LAYER_1_ACHE",
+        "text": "You can see it in their eyes after twenty minutes of algorithmic cartoons\u2014that glazed, overstimulated restlessness that steals the peace right out of your living room.",
+        "scene_instruction": "Cool desaturated contrast beat before camera pushes into warm tactile world."
+      },
+      {
+        "index": 2,
+        "start_sec": 4,
+        "end_sec": 11,
+        "srt_range": "00:00:04,000 --> 00:00:11,000",
+        "beat": "LAYER_2_SOLUTION",
+        "text": "Built with a father's heart and a mother's love, The Sound of Essentials replaces screen rot with 19 handcrafted songs, 4,000+ illustrated words, and 400 tactile daily quests for ages 2\u20137.",
+        "scene_instruction": "Unfold Marble Run scene in #FFF8F0 cream & #FF6F00 golden light; showcase Ages 2\u20137 tactile quest craft."
+      },
+      {
+        "index": 3,
+        "start_sec": 11,
+        "end_sec": 15,
+        "srt_range": "00:00:11,000 --> 00:00:15,000",
+        "beat": "LAYER_3_INVITATION",
+        "text": "Press play on a calmer home tonight. Unlock all 19 tracks of the Rhythm Quest album 100% free\u2014no app downloads, no algorithms.",
+        "scene_instruction": "Lock end card on soelearn.com/listen with 19-track free album medallion & motif pulse."
+      }
+    ],
+    "srt_text": "1\n00:00:00,000 --> 00:00:04,000\nYou can see it in their eyes after twenty minutes of algorithmic cartoons\u2014that glazed, overstimulated restlessness that steals the peace right out of your living room.\n\n2\n00:00:04,000 --> 00:00:11,000\nBuilt with a father's heart and a mother's love, The Sound of Essentials replaces screen rot with 19 handcrafted songs, 4,000+ illustrated words, and 400 tactile daily quests for ages 2\u20137.\n\n3\n00:00:11,000 --> 00:00:15,000\nPress play on a calmer home tonight. Unlock all 19 tracks of the Rhythm Quest album 100% free\u2014no app downloads, no algorithms."
+  },
+  "stage_2_atlas_style_seed": {
+    "atlas_id": "#09",
+    "atlas_name": "Marble Run",
+    "materials_and_lighting": "Handmade walnut board with pale maple rails on brass pins, brass paddle gates, swirled glass marbles, and wood-burned glass jars over a warm seamless backdrop.",
+    "prompt_seed": "Build a 15-second code-only Three.js / Remotion scene for 'Accurate Letter Sounds Before Guessing Starts (Ad24)' using Futurepedia Style #09 (Marble Run \u2014 Machines that explain). Enforce SOE Brand Tokens: background #FFF8F0, primary accent #FF6F00, highlight #FFB300, audio track #1 instrumental percussion cues, and exact SRT beat timing below. Strict canon: Ages 2\u20137 (Pre-K to Grade 2), 4,000+ illustrated words, zero dark neon cyber-slop.\n\n1\n00:00:00,000 --> 00:00:04,000\nYou can see it in their eyes after twenty minutes of algorithmic cartoons\u2014that glazed, overstimulated restlessness that steals the peace right out of your living room.\n\n2\n00:00:04,000 --> 00:00:11,000\nBuilt with a father's heart and a mother's love, The Sound of Essentials replaces screen rot with 19 handcrafted songs, 4,000+ illustrated words, and 400 tactile daily quests for ages 2\u20137.\n\n3\n00:00:11,000 --> 00:00:15,000\nPress play on a calmer home tonight. Unlock all 19 tracks of the Rhythm Quest album 100% free\u2014no app downloads, no algorithms."
+  },
+  "stage_3_code_iteration_loop": {
+    "editable_axes": [
+      "1_beat_scene_changes",
+      "2_physics_and_camera_fixes",
+      "3_brand_palette_and_hero_lock",
+      "4_srt_word_timing_tightening"
+    ],
+    "operator_iteration_notes": [
+      "Sync 7 marble spheres to 15s Harmonia beat wave"
+    ],
+    "remotion_composition": "TactileExplainer"
+  },
+  "stage_4_crystallized_skill_spec": {
+    "skill_id": "soe-video-marble_run",
+    "locked_palette": [
+      "#FFF8F0",
+      "#FF6F00",
+      "#FFB300"
+    ],
+    "reusable_for_series": true,
+    "destination_url": "https://soelearn.com/listen?utm_source=meta&utm_medium=paid_social&utm_campaign=the_enemy&utm_term=testing_vs_arts&utm_content=ARC-VID-01_en",
+    "headline": "Stream the Free 19-Track Rhythm Quest Album"
+  }
+}

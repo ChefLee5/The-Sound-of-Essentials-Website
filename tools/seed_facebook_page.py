@@ -159,14 +159,14 @@ SEED_POSTS = [
         "is_pinned": False,
         "theme": "Tactile Companions: The Picture Dictionary & Readiness Workbook",
         "delta": "Algorithm vs. Handcrafted",
-        "headline": "Real Books for Little Hands: 4,232 Words & 400 Tactile Quests 📚✍️",
+        "headline": "Real Books for Little Hands: 4,000+ Words & 400 Tactile Quests 📚✍️",
         "image_file": WORKSPACE_ROOT / "rhythm-ready-workbook-cover.png",
         "link": "https://soelearn.com/shop",
         "copy": (
             "What happens when the music stops?\n\n"
             "That's when little fingers turn the page. The Sound of Essentials ecosystem pairs our 19 acoustic songs "
             "with tactile, screen-free physical tools:\n\n"
-            "📖 The Essential Picture Dictionary — 4,232 rich vocabulary words across 157 illustrated storybook scenes. "
+            "📖 The Essential Picture Dictionary — 4,000+ rich vocabulary words across 157 illustrated storybook scenes. "
             "Children search, point, and name real objects without a single blue-light pixel.\n\n"
             "✏️ The 40-Day Rhythm Ready Workbook — 10 daily micro-blocks (just 15–20 minutes/day) featuring rhyming games, "
             "rhythmic clapping, tracing paths, and nature observations.\n\n"

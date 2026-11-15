@@ -262,7 +262,7 @@ export function institutionalFaqSchema() {
         name: 'What materials are included in an institutional or preschool classroom license?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Institutional Concord packages include multi-room acoustic audio site licenses, educator card sets with 10 daily structured blocks (A–J), 400 hands-on readiness activities, the 4,232-word Essential Picture Dictionary, and teacher professional development crosswalk matrices.',
+          text: 'Institutional Concord packages include multi-room acoustic audio site licenses, educator card sets with 10 daily structured blocks (A–J), 400 hands-on readiness activities, the 4,000+ word Essential Picture Dictionary, and teacher professional development crosswalk matrices.',
         },
       },
       {

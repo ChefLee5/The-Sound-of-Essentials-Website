@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
+import { Player } from '@remotion/player';
+import { TactileExplainer, SOE_STYLE_SURFACES } from '../remotion/TactileExplainer';
 import './CampaignLauncher.css';
 
 const EDGE_BACKEND_URL = 'https://soe-website-b7j.pages.dev';
@@ -68,7 +70,7 @@ const ARCHETYPE_PREVIEWS = {
     layer_1:
       'You can see it in their eyes after 20 minutes of algorithmic cartoons—that glazed, overstimulated restlessness that steals the peace right out of your home.',
     layer_2:
-      "Built with a father's heart and a mother's love, The Sound of Essentials replaces screen rot with 19 handcrafted songs, 4,232 illustrated words, and 400 tactile daily quests for ages 2–7.",
+      "Built with a father's heart and a mother's love, The Sound of Essentials replaces screen rot with 19 handcrafted songs, 4,000+ illustrated words, and 400 tactile daily quests for ages 2–7.",
     layer_3:
       'Press play on a calmer home tonight. Unlock all 19 tracks of the Rhythm Quest album 100% free—no apps, no algorithms.',
     headline: 'Stream the Free 19-Track Rhythm Quest Album',
@@ -136,7 +138,7 @@ const FALLBACK_DIRECTIVES = [
       'Governs emotional resonance across every ad, community reply, and institutional brief using the 5 Cultural Deltas.',
     content: `• DELTA 1 — Screen vs. Sensory: Tactile, audio-first learning over overstimulating screen flicker.
 • DELTA 2 — Testing vs. Arts: Rhythm, melody, and joyful mastery over standardized drill.
-• DELTA 3 — Algorithm vs. Handcrafted: Parent-crafted intentionality (4,232 illustrated words, 400 daily quests).
+• DELTA 3 — Algorithm vs. Handcrafted: Parent-crafted intentionality (4,000+ illustrated words, 400 daily quests).
 • DELTA 4 — Institution vs. Sanctuary: Transforming home and classroom into a calm developmental sanctuary.
 • DELTA 5 — Consumption vs. Quest: Active 30-minute daily adventure blocks over passive media consumption.`,
   },
@@ -618,6 +620,8 @@ const CampaignLauncher = () => {
   const [isLaunching, setIsLaunching] = useState(false);
   const [launchResponse, setLaunchResponse] = useState(null);
   const [showPayloadInspector, setShowPayloadInspector] = useState(false);
+  const [videoStylePreset, setVideoStylePreset] = useState('PAPER_POPUP');
+  const [videoPacketResponse, setVideoPacketResponse] = useState(null);
 
   // Remote Bridge, Web-to-Markdown Recon & Governed SQL Telemetry State
   const [memories, setMemories] = useState([
@@ -2418,6 +2422,76 @@ const CampaignLauncher = () => {
                   {selectedEngine === 'ENGINE_B_DIRECT_OFFER'
                     ? 'soelearn.com/workbook'
                     : 'soelearn.com/listen'}
+                </div>
+
+                {/* Live Remotion + 3D Style Atlas Video Iteration Preview */}
+                <div style={{ marginTop: '1rem', borderTop: '1px solid rgba(121,85,72,0.15)', paddingTop: '1rem' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.6rem', gap: '0.5rem', flexWrap: 'wrap' }}>
+                    <span style={{ fontSize: '0.85rem', fontWeight: 700, color: '#4E342E' }}>
+                      🎞️ Tactile Video Iteration Preview (SRT-Synced)
+                    </span>
+                    <select
+                      className="mcls-select"
+                      style={{ width: 'auto', padding: '0.3rem 0.6rem', fontSize: '0.8rem' }}
+                      value={videoStylePreset}
+                      onChange={(e) => setVideoStylePreset(e.target.value)}
+                    >
+                      {Object.entries(SOE_STYLE_SURFACES).map(([key, cfg]) => (
+                        <option key={key} value={key}>{cfg.label}</option>
+                      ))}
+                    </select>
+                  </div>
+                  <div style={{ borderRadius: 14, overflow: 'hidden', border: '1px solid rgba(255,111,0,0.35)' }}>
+                    <Player
+                      component={TactileExplainer}
+                      inputProps={{
+                        topic: currentPreview.headline,
+                        stylePreset: videoStylePreset,
+                        srtCues: [
+                          { index: 1, start_sec: 0, end_sec: 4.5, beat: 'LAYER_1_ACHE', text: currentPreview.layer_1 },
+                          { index: 2, start_sec: 4.5, end_sec: 11, beat: 'LAYER_2_SOLUTION', text: currentPreview.layer_2 },
+                          { index: 3, start_sec: 11, end_sec: 15, beat: 'LAYER_3_INVITATION', text: currentPreview.layer_3 },
+                        ],
+                      }}
+                      durationInFrames={450}
+                      compositionWidth={1080}
+                      compositionHeight={1080}
+                      fps={30}
+                      controls
+                      loop
+                      style={{ width: '100%', aspectRatio: '1 / 1' }}
+                    />
+                  </div>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '0.6rem', gap: '0.5rem' }}>
+                    <button
+                      type="button"
+                      className="mcls-btn-secondary"
+                      onClick={async () => {
+                        try {
+                          const res = await mclsFetch('/api/mcls/dispatch', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({
+                              action: 'build_video_iteration',
+                              topic: currentPreview.headline,
+                              style_preset: videoStylePreset,
+                              duration_seconds: 15,
+                            }),
+                          });
+                          if (res.ok) setVideoPacketResponse(await res.json());
+                        } catch {
+                          setVideoPacketResponse({ videoPacket: { stage_4_skill_id: `soe-video-${videoStylePreset.toLowerCase()}` } });
+                        }
+                      }}
+                    >
+                      🔒 Lock Style Skill &amp; Build SRT Seed
+                    </button>
+                    {videoPacketResponse?.videoPacket?.stage_4_skill_id && (
+                      <span className="mcls-tag pass">
+                        {videoPacketResponse.videoPacket.stage_4_skill_id}
+                      </span>
+                    )}
+                  </div>
                 </div>
               </div>
 

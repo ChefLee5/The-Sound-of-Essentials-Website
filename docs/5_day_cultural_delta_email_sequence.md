@@ -221,7 +221,7 @@ The primary, most effective educational environment on earth was never an instit
 Between ages 2 and 7, children do not need high-stakes testing or corporate surveillance. They need safety, unhurried exposure to language, emotional warmth, and rich physical materials.
 
 To anchor this living room sanctuary, we created **The Essential Picture Dictionary**:
-- **4,232 Real-World Words:** Spanning the complete Oxford Picture Dictionary scope, organized across all 7 Lands.
+- **4,000+ Real-World Words:** Spanning the complete Oxford Picture Dictionary scope, organized across all 7 Lands.
 - **125 Richly Illustrated Double-Page Scenes:** Connecting songs to physical scenes at the kitchen table.
 - **Screen-Free and Tactile:** Built with thick, durable pages designed for little hands to explore for hours.
 - **Neuro-Affirming and Multilingual:** Featuring phonetic guides and early American Sign Language descriptions.

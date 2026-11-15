@@ -46,7 +46,8 @@
     { "pattern": "\\blive\\s+(instrumentation|instruments?|acoustic\\s+instruments?|orchestra|music)\\b", "reason": "Canon restriction: SOE was recorded live, but does NOT have live instrumentation or live music. Never claim live instruments/music." },
     { "pattern": "\\blive\\s+acoustic\\b", "reason": "Canon restriction: No 'live acoustic' claims for instrumentation or music." },
     { "pattern": "\\blive\\s+organic\\b", "reason": "Canon restriction: No 'live organic' claims." },
-    { "pattern": "\\bShopify\\b", "reason": "Shopify is strictly retired. Complete omission of Shopify in our stack. All payments use Direct Stripe API with card vaulting." }
+    { "pattern": "\\bShopify\\b", "reason": "Shopify is strictly retired. Complete omission of Shopify in our stack. All payments use Direct Stripe API with card vaulting." },
+    { "pattern": "\\b4,?232\\b", "reason": "Marketing copy rule: never use the literal word count 4,232 in marketing or site copy; uniformly use '4,000+ words'." }
   ],
   "music_production_canon": {
     "total_tracks": 19,

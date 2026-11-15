@@ -62,7 +62,7 @@ title_page.insert_text(
 
 desc_text = (
     "Welcome to your exclusive preview of the Sound of Essentials Essential Picture Dictionary!\n\n"
-    "This sampler provides a curated preview of the upcoming 125-scene, 4,232-word visual\n"
+    "This sampler provides a curated preview of the upcoming 125-scene, 4,000+ word visual\n"
     "encyclopedia across all Seven Lands of the SOE universe. Handcrafted specifically for the\n"
     "developing brain (Ages 2–7), each page pairs thematic scene vocabulary with sound-before-symbol\n"
     "phonetic scaffolding, multi-sensory co-regulation, and hero mentorship.\n\n"

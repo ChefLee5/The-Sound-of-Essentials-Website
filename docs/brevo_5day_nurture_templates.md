@@ -306,7 +306,7 @@
               <p style="font-size: 16px; color: #333333; margin: 0 0 20px;">To anchor this living room sanctuary, we created <strong>The Essential Picture Dictionary</strong>:</p>
               
               <ul style="font-size: 15px; color: #374151; margin: 0 0 24px; padding-left: 20px;">
-                <li style="margin-bottom: 8px;"><strong>4,232 Real-World Words:</strong> Structured across all 7 Lands for deep thematic immersion.</li>
+                <li style="margin-bottom: 8px;"><strong>4,000+ Real-World Words:</strong> Structured across all 7 Lands for deep thematic immersion.</li>
                 <li style="margin-bottom: 8px;"><strong>125 Illustrated Double-Page Scenes:</strong> Thick, tactile pages built for kitchen-table exploration.</li>
                 <li><strong>Neuro-Affirming Phonics:</strong> Clear phonetic guides and early sign language descriptions.</li>
               </ul>

@@ -15,6 +15,8 @@
     "lint": "eslint .",
     "test:canon": "node scripts/soe-canon-guard.mjs",
     "test:gates": "node scripts/soe-canon-guard.mjs && eslint .",
+    "remotion:studio": "remotion studio src/remotion/index.js",
+    "remotion:render": "remotion render src/remotion/index.js TactileExplainer out/tactile-explainer.mp4 --browser-executable=\"C:/Program Files/Google/Chrome/Application/chrome.exe\" --gl=angle",
     "recon:weekly": "node scripts/weekly-search-recon.mjs",
     "preview": "vite preview"
   },
@@ -23,6 +25,7 @@
     "@astryxdesign/theme-neutral": "^0.7.15",
     "@gsap/react": "^2.1.2",
     "@octokit/rest": "^22.0.1",
+    "@remotion/cli": "^4.0.427",
     "@remotion/player": "4.0.427",
     "@splinetool/react-spline": "^4.1.0",
     "@stylexjs/stylex": "^0.19.2",
@@ -40,7 +43,8 @@
     "react-dom": "^19.2.0",
     "react-i18next": "^16.5.4",
     "react-router-dom": "^7.13.0",
-    "remotion": "4.0.427"
+    "remotion": "4.0.427",
+    "three": "^0.174.0"
   },
   "devDependencies": {
     "@astryxdesign/cli": "^0.7.15",

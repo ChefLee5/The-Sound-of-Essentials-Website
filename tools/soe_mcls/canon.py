@@ -56,14 +56,14 @@ PRODUCT_LADDER: Dict[str, Dict[str, Any]] = {
     },
     "DICTIONARY_DIGITAL": {
         "sku": "soe_dict_dig_55",
-        "name": "Essential Picture Dictionary (Digital - 4,232 Words, 157 Scenes)",
+        "name": "Essential Picture Dictionary (Digital - 4,000+ Words, 157 Scenes)",
         "price_cents": 5500,
         "vaults_card": True,
         "is_continuity": False,
     },
     "DICTIONARY_PRINT": {
         "sku": "soe_dict_prt_79",
-        "name": "Essential Picture Dictionary (Print - 4,232 Words, 157 Scenes)",
+        "name": "Essential Picture Dictionary (Print - 4,000+ Words, 157 Scenes)",
         "price_cents": 7900,
         "vaults_card": True,
         "is_continuity": False,

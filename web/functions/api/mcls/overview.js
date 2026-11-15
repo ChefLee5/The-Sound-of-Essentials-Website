@@ -57,7 +57,7 @@ const INITIAL_DIRECTIVES = [
     content: `Every MCLS unit frames messaging through one of the 5 Cultural Deltas:
 • DELTA 1 — Screen vs. Sensory: Tactile, audio-first learning and physical workbooks over overstimulating screen flicker.
 • DELTA 2 — Testing vs. Arts: Rhythm, melody, and joyful mastery over standardized drill-and-kill worksheets.
-• DELTA 3 — Algorithm vs. Handcrafted: Parent-crafted intentionality (4,232 illustrated words, 400 daily quests) over attention-harvesting feeds.
+• DELTA 3 — Algorithm vs. Handcrafted: Parent-crafted intentionality (4,000+ illustrated words, 400 daily quests) over attention-harvesting feeds.
 • DELTA 4 — Institution vs. Sanctuary: Transforming the living room and classroom into a calm developmental sanctuary.
 • DELTA 5 — Consumption vs. Quest: Active 30-minute daily adventure blocks over passive media consumption.`,
   },
@@ -91,7 +91,7 @@ const INITIAL_DIRECTIVES = [
     summary: 'Synchronized 30-day schedule across Meta 3-Layer Ads, Parent Community Replies, Search Fixes, and School Pilot Outreach.',
     content: `WEEK 1: Deploy Engine A "Screen vs. Sensory" 3-Ad Testing Array; audit llms.txt & FAQ JSON-LD on /workbook and /listen; dispatch 10 School Pilot invitations.
 WEEK 2: Deploy "Algorithm vs. Handcrafted" UGC video brief; publish 3 programmatic educator guides under /guides/:slug; engage 15 homeschool & sensory-parenting community threads.
-WEEK 3: Launch Engine B Direct Tactile showcase for the $55 Picture Dictionary (4,232 words); follow up with warm Album Explorers in Neon CRM via Brevo.
+WEEK 3: Launch Engine B Direct Tactile showcase for the $55 Picture Dictionary (4,000+ words); follow up with warm Album Explorers in Neon CRM via Brevo.
 WEEK 4: Run full 90-day Rhythm Guardian cohort attribution review; refresh top-performing Cultural Delta hooks; expand QPC institutional pilot packet distribution.`,
   },
 ];
@@ -274,7 +274,7 @@ const INITIAL_APPROVALS = [
       daily_budget_cents: 2000,
       headline: 'Stream the Free 19-Track Rhythm Quest Album (Ages 2–7)',
       layer_1: 'You can see it in their eyes after 20 minutes of algorithmic cartoons—that glazed, overstimulated restlessness that steals the peace right out of your home.',
-      layer_2: 'Crafted by a father’s heart and a mother’s love, The Sound of Essentials replaces screen rot with 19 studio-recorded songs, 4,232 illustrated words, and 400 tactile daily quests for ages 2–7.',
+      layer_2: 'Crafted by a father’s heart and a mother’s love, The Sound of Essentials replaces screen rot with 19 studio-recorded songs, 4,000+ illustrated words, and 400 tactile daily quests for ages 2–7.',
       layer_3: 'Press play on a calmer home tonight. Unlock all 19 tracks of the Rhythm Quest album 100% free—no apps, no algorithms.',
     },
   },

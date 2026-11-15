@@ -85,7 +85,7 @@ const AbcMouseAlternatives = () => {
           '@type': 'ListItem',
           'position': 4,
           'name': 'The Essential Picture Dictionary',
-          'description': '4,232-word illustrated storybook volume across 157 scenes, anchoring phonics to rich semantic context without gamified cartoon distractions.'
+          'description': '4,000+ word illustrated storybook volume across 157 scenes, anchoring phonics to rich semantic context without gamified cartoon distractions.'
         },
         {
           '@type': 'ListItem',

@@ -36,12 +36,14 @@ try:
     from soe_mcls.creative_forge import CreativeForge
     from soe_mcls.rhythm_guardian import RhythmGuardianOptimizer
     from soe_mcls.canon import CULTURAL_DELTAS, PRODUCTION_CAMPAIGNS, PRODUCT_LADDER
+    from soe_mcls.ops_harness import verify_evidence_checklist, extract_needed_sections
 except ImportError as e:
     # Fallback if executed directly outside package
     sys.path.insert(0, str(TOOLS_DIR / "soe_mcls"))
     from creative_forge import CreativeForge
     from rhythm_guardian import RhythmGuardianOptimizer
     from canon import CULTURAL_DELTAS, PRODUCTION_CAMPAIGNS, PRODUCT_LADDER
+    from ops_harness import verify_evidence_checklist, extract_needed_sections
 
 # Canon Verification Regexes (Helix Gate 1)
 CANON_CHECKS = [
@@ -51,6 +53,7 @@ CANON_CHECKS = [
     (re.compile(r"\bno\s+credit\s+card\s+required\b", re.IGNORECASE), "Billing invariant violation: never claim 'no credit card required'"),
     (re.compile(r"\bShopify\b", re.IGNORECASE), "Stack invariant violation: Shopify is retired; use direct soelearn.com Stripe funnel"),
     (re.compile(r"\blive\s+(instrumentation|instruments?|orchestra|music|acoustic|organic)\b", re.IGNORECASE), "Audio rule: studio-recorded vocals & acoustic arrangements only"),
+    (re.compile(r"\b4[\s,]?232\b"), "Marketing copy rule: never use literal 4,232; uniformly use '4,000+ words'"),
 ]
 
 def verify_canon_text(text: str) -> Dict[str, Any]:
@@ -202,6 +205,40 @@ MCP_TOOLS: List[Dict[str, Any]] = [
             "required": ["unit_key", "action_type", "title", "summary"]
         },
         "security_tier": "tier_1_staging_sandbox"
+    },
+    {
+        "name": "mcls_verify_done_checklist",
+        "description": "Evidence-Backed Done Gate: Evaluates a brief or proposal with PASS/FAIL/UNKNOWN checks for live source URLs, checked_at timestamps, existing evidence files, and SOE Helix Gate 1 canon rules.",
+        "inputSchema": {
+            "type": "object",
+            "properties": {
+                "content_text": {"type": "string", "description": "Finished brief or copy to verify."},
+                "source_urls": {"type": "array", "items": {"type": "string"}, "description": "Explicit source URLs (optional if embedded in content_text)."},
+                "evidence_paths": {"type": "array", "items": {"type": "string"}, "description": "Local file paths to verify on disk."},
+                "checked_at": {"type": "string", "description": "ISO timestamp when facts were verified."}
+            },
+            "required": ["content_text"]
+        },
+        "security_tier": "tier_0_autonomous_read"
+    },
+    {
+        "name": "mcls_forge_video_iteration",
+        "description": "Pillar 1 Video Pipeline: Generates a 4-stage SOE brand-locked Three.js / Remotion SRT-synced video iteration packet (Audio+SRT -> Tactile 3D Atlas Style Seed -> Code Iteration Axes -> Crystallized Style Skill).",
+        "inputSchema": {
+            "type": "object",
+            "properties": {
+                "topic": {"type": "string", "description": "Explainer or story topic, e.g. 'How Acoustic Rhythm Builds Phonological Loops'."},
+                "style_preset": {"type": "string", "description": "SOE Tactile 3D Atlas preset key (PAPER_POPUP, SOFT_CLAY, TINY_DIORAMA, MARBLE_RUN, PAINTED_STORYBOOK, EXPLODED_BUNDLE, SPOTLIGHT_STAGE, LOW_POLY_PAPER).", "default": "PAPER_POPUP"},
+                "delta": {"type": "string", "default": "SCREEN_VS_SENSORY"},
+                "campaign": {"type": "string", "default": "THE_ENEMY"},
+                "language": {"type": "string", "default": "en"},
+                "audio_track_number": {"type": "integer", "default": 1},
+                "duration_seconds": {"type": "integer", "default": 15},
+                "iteration_notes": {"type": "array", "items": {"type": "string"}, "description": "Optional creator diff notes for Stage 3 code iteration."}
+            },
+            "required": ["topic"]
+        },
+        "security_tier": "tier_1_staging_sandbox"
     }
 ]
 
@@ -317,6 +354,36 @@ def execute_tool(name: str, arguments: Dict[str, Any]) -> Dict[str, Any]:
     elif name == "mcls_validate_canon_compliance":
         text = arguments.get("text", "")
         return verify_canon_text(text)
+
+    elif name == "mcls_forge_video_iteration":
+        forge = CreativeForge()
+        packet = forge.build_video_iteration_packet(
+            topic=arguments.get("topic", "Screen-Free Rhythm Quest Overview"),
+            style_preset=arguments.get("style_preset", "PAPER_POPUP"),
+            delta=arguments.get("delta", "SCREEN_VS_SENSORY"),
+            campaign=arguments.get("campaign", "THE_ENEMY"),
+            language=arguments.get("language", "en"),
+            audio_track_number=int(arguments.get("audio_track_number", 1)),
+            duration_seconds=int(arguments.get("duration_seconds", 15)),
+            iteration_notes=arguments.get("iteration_notes"),
+        )
+        canon_check = verify_canon_text(
+            f"{packet['stage_2_atlas_style_seed']['prompt_seed']} {packet['stage_4_crystallized_skill_spec']['headline']}"
+        )
+        return {
+            "video_iteration_packet": packet,
+            "canon_verification": canon_check,
+            "security_tier": "tier_1_staging_sandbox",
+        }
+
+    elif name == "mcls_verify_done_checklist":
+        return verify_evidence_checklist(
+            content_text=arguments.get("content_text", ""),
+            source_urls=arguments.get("source_urls"),
+            evidence_paths=arguments.get("evidence_paths"),
+            checked_at=arguments.get("checked_at"),
+            canon_checker=verify_canon_text,
+        )
 
     elif name == "mcls_stage_approval_card":
         combined_text = f"{arguments.get('title', '')} {arguments.get('summary', '')} {json.dumps(arguments.get('payload', {}))}"
@@ -475,8 +542,29 @@ def run_self_test():
     assert res6["staged_card"]["status"] == "pending"
     print(f"      ✓ Card Staged: '{res6['staged_card']['title']}' (Status: {res6['staged_card']['status']})")
 
+    # 7. Verify Done Checklist
+    print("[7/8] Testing mcls_verify_done_checklist...")
+    res7 = execute_tool("mcls_verify_done_checklist", {
+        "content_text": "Ages 2–7 curriculum with 4,000+ words at https://soelearn.com/listen",
+        "evidence_paths": [str(Path(__file__).resolve())],
+        "checked_at": "2026-11-13T18:00:00Z",
+    })
+    assert res7["accepted"] is True
+    print(f"      ✓ Checklist Verdict: {res7['verdict']}")
+
+    # 8. Forge Video Iteration Packet
+    print("[8/8] Testing mcls_forge_video_iteration...")
+    res8 = execute_tool("mcls_forge_video_iteration", {
+        "topic": "7 Musical Lands Storybook Reveal",
+        "style_preset": "PAPER_POPUP",
+        "duration_seconds": 15,
+    })
+    assert res8["canon_verification"]["passed"] is True
+    assert res8["video_iteration_packet"]["stage_4_crystallized_skill_spec"]["skill_id"] == "soe-video-paper_popup"
+    print(f"      ✓ Video Skill: {res8['video_iteration_packet']['stage_4_crystallized_skill_spec']['skill_id']} (Canon: {res8['canon_verification']['status']})")
+
     print("\n" + "=" * 65)
-    print("ALL 6 MCP TOOLS PASSED SELF-TEST CLEANLY.")
+    print("ALL 8 MCP TOOLS PASSED SELF-TEST CLEANLY.")
     print("=" * 65)
 
 def main():
