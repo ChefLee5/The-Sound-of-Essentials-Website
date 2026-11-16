@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { RevealSection } from '../hooks/useReveal';
@@ -8,10 +8,15 @@ import { submitSoeInterest } from '../services/soeSubmissions';
 import KineticHeadline from '../components/KineticHeadline';
 import JsonLd from '../components/JsonLd';
 import { universeSchema } from '../utils/schema';
+import { usePageMeta } from '../hooks/usePageMeta';
 
 const JoinQuest = () => {
     const { t } = useTranslation();
-    useEffect(() => { document.title = 'Join the Quest — SOE Rhythm Quest'; }, []);
+    usePageMeta({
+        title: 'Join the Quest — SOE Rhythm Quest',
+        description: 'Join families, homeschoolers, and early childhood educators using The Sound of Essentials: Rhythm Quest for ages 2–7.',
+        canonicalPath: '/join',
+    });
 
     // Contact State
     const [contact, setContact] = useState({ name: '', org: '', email: '', message: '', submitted: false });

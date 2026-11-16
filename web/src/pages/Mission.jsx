@@ -8,6 +8,7 @@ import PhilanthropicDonationSection from '../components/PhilanthropicDonationSec
 import KineticHeadline from '../components/KineticHeadline';
 import JsonLd from '../components/JsonLd';
 import { missionSchema } from '../utils/schema';
+import { usePageMeta } from '../hooks/usePageMeta';
 
 /* ── Reveal Hook ── */
 const useReveal = () => {
@@ -149,7 +150,11 @@ const MissionSceneGallery = () => {
 };
 
 const Mission = () => {
-    React.useEffect(() => { document.title = 'Our Mission — SOE Rhythm Quest'; }, []);
+    usePageMeta({
+        title: 'Our Mission — SOE Rhythm Quest',
+        description: 'Why The Sound of Essentials is building a screen-free, music-first early childhood learning sanctuary for ages 2–7.',
+        canonicalPath: '/mission',
+    });
     return (
         <div className="mission-page">
             <JsonLd data={missionSchema()} />

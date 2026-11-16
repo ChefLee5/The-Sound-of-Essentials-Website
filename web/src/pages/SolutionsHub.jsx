@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { pseoPages } from '../data/pseoData';
 import JsonLd from '../components/JsonLd';
 import KineticHeadline from '../components/KineticHeadline';
+import { usePageMeta } from '../hooks/usePageMeta';
 import './SolutionsHub.css';
 
 const getPageUrl = (p) => {
@@ -11,12 +12,13 @@ const getPageUrl = (p) => {
 };
 
 const SolutionsHub = () => {
+  usePageMeta({
+    title: 'Educational Solutions & Curriculum Frameworks | The Sound of Essentials',
+    description: 'Explore The Sound of Essentials sensory-rich, music-driven curriculum solutions for preschools, speech therapy clinics, and conscious home sanctuaries.',
+    canonicalPath: '/solutions',
+  });
+
   useEffect(() => {
-    document.title = 'Educational Solutions & Curriculum Frameworks | The Sound of Essentials';
-    let metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.content = 'Explore The Sound of Essentials sensory-rich, music-driven curriculum solutions for preschools, speech therapy clinics, and conscious home sanctuaries.';
-    }
     window.scrollTo(0, 0);
   }, []);
 

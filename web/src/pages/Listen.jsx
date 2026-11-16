@@ -25,6 +25,7 @@ import DmOptInBridge from '../components/DmOptInBridge';
 import KineticMusicalAccent from '../components/ui/KineticMusicalAccent';
 import KineticHeadline from '../components/KineticHeadline';
 import PDPQuestionChips from '../components/PDPQuestionChips';
+import { usePageMeta } from '../hooks/usePageMeta';
 import './MediaRoom.css';
 import './Listen.css';
 
@@ -150,9 +151,13 @@ const Listen = () => {
     cover: assetPath(`/assets/track-art/${track.cover}`),
   }));
 
-  useEffect(() => {
-    document.title = "Rhythm Quest 19-Track Album | Screen-Free Sensory Children's Music & Movement Songs for Toddlers & Pre-K";
+  usePageMeta({
+    title: "Rhythm Quest 19-Track Album | Screen-Free Sensory Children's Music & Movement Songs for Toddlers & Pre-K",
+    description: 'Stream all 19 studio-recorded acoustic early learning songs for free ($0). Calm, neuro-affirming rhythm and phonics music for ages 2–7.',
+    canonicalPath: '/listen',
+  });
 
+  useEffect(() => {
     const onMilestone = (e) => {
       if (e?.detail?.land) {
         setGiftLand(e.detail.land);

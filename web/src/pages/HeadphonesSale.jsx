@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { assetPath } from '../utils/assetPath';
 import { trackInitiateCheckout } from '../utils/analytics';
 import KineticHeadline from '../components/KineticHeadline';
+import { usePageMeta } from '../hooks/usePageMeta';
 import './HeadphonesSale.css';
 
 const STRIPE_HEADPHONES_URL = 'https://buy.stripe.com/test_cNi6oH01eacl8gC5IC6Vq07';
@@ -112,6 +113,11 @@ const SPECS = [
 ];
 
 const HeadphonesSale = () => {
+  usePageMeta({
+    title: 'Safe Sensory Headphones (74/85dB) for Ages 2–7 | The Sound of Essentials',
+    description: 'Volume-limited 74/85dB kids headphones with braided tangle-free audio cable designed for screen-free acoustic listening sessions.',
+    canonicalPath: '/headphones',
+  });
   const [selectedVariant, setSelectedVariant] = useState(COLOR_VARIANTS[0]);
   const [activeImage, setActiveImage] = useState(COLOR_VARIANTS[0].image);
 

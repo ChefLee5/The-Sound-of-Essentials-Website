@@ -8,6 +8,7 @@ import { assetPath } from '../utils/assetPath';
 import { gsap } from 'gsap';
 import { Flip } from 'gsap/Flip';
 import KineticHeadline from '../components/KineticHeadline';
+import { usePageMeta } from '../hooks/usePageMeta';
 
 gsap.registerPlugin(Flip);
 
@@ -142,6 +143,11 @@ const CharacterCard = ({ char, index, isExpanded, onToggle }) => {
    ══════════════════════════════════════════════════════════ */
 const Characters = () => {
     const { t } = useTranslation();
+    usePageMeta({
+        title: 'The 15 Hero Mentors & 7 Learning Lands — SOE Rhythm Quest',
+        description: 'Meet Seriphia and the 14 hero mentors across the 7 Learning Lands (Harmonia, Numeria, Vitalis, Celestia, Luminosity, Aquaria, Terrasol) for ages 2–7.',
+        canonicalPath: '/heroes',
+    });
     const [expandedId, setExpandedId] = useState(null);
     const [filter, setFilter] = useState('All');
     const gridRef = React.useRef(null);

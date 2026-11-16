@@ -699,7 +699,7 @@ export const pseoPages = [
       },
       {
         "title": "10x the Scale of Card Sets",
-        "desc": "Our 4,000+ word Picture Dictionary delivers unmatched scope across 157 illustrated everyday environments."
+        "desc": "Our 4,000+ word Picture Dictionary delivers unmatched scope across 125 illustrated everyday environments."
       },
       {
         "title": "Acoustic Authenticity",

@@ -1,4 +1,4 @@
-# Retired Shopify & Deprecated Campaign Endpoints (HTTP 410 Gone: 49.6% Faster SERP Pruning)
+# Retired Shopify & Deprecated Campaign Endpoints (HTTP 410 Gone)
 /products/*                      410!
 /collections/*                   410!
 /cart                            410!
@@ -6,12 +6,26 @@
 /promo/*                         410!
 /shopify/*                       410!
 
-# Pre-Sell Bridge Landing Pages
-/dad-reading-apps-review        /dad-reading-apps-review.html        200
-/education-sovereignty          /education-sovereignty.html          200
-/global-learn-english           /global-learn-english.html           200
-/sing-along-time                /sing-along-time.html                200
+# Redirect legacy routes to canonical URLs
+/universe                        /heroes                              301!
+/characters                      /heroes                              301!
+/media                           /listen                              301!
+/quieter-way                     /story                               301!
+
+# Static Pre-Sell & Editorial HTML Pages
+/story                           /story.html                          200
+/dad-reading-apps-review         /dad-reading-apps-review.html        200
+/education-sovereignty           /education-sovereignty.html          200
+/global-learn-english            /global-learn-english.html           200
+/sing-along-time                 /sing-along-time.html                200
+
+# Competitor Alternative Comparison Guides
+/alternatives/abcmouse           /abcmouse-alternatives.html          200
+/abcmouse-alternatives           /abcmouse-alternatives.html          200
+/alternatives/reading-eggs       /reading-eggs-alternatives.html      200
+/reading-eggs-alternatives       /reading-eggs-alternatives.html      200
+/alternatives/hooked-on-phonics  /hooked-on-phonics-alternatives.html 200
+/hooked-on-phonics-alternatives  /hooked-on-phonics-alternatives.html 200
 
 # Cloudflare Pages SPA rewrite rule
-# Rewrites all unmatched paths to /index.html for React Router DOM client-side routing
 /*    /index.html   200

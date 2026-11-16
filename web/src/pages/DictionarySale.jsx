@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { RevealSection } from '../hooks/useReveal';
 import heroesData from '../data/heroes.json';
@@ -10,6 +10,7 @@ import { trackInitiateCheckout } from '../utils/analytics';
 import KineticHeadline from '../components/KineticHeadline';
 import PDPQuestionChips from '../components/PDPQuestionChips';
 import DigitalLicenseNotice from '../components/DigitalLicenseNotice';
+import { usePageMeta } from '../hooks/usePageMeta';
 import './DictionarySale.css';
 
 /* ── Land-specific stats from the pipeline knowledge base ── */
@@ -88,9 +89,11 @@ const dictPreviews = [
 const DictionarySale = () => {
   const scrollRef = useRef(null);
 
-  useEffect(() => {
-    document.title = 'Essential Picture Dictionary | 4,200+ Words & 157 Visual Scenes for Speech, Vocabulary & Early Literacy';
-  }, []);
+  usePageMeta({
+    title: 'Essential Picture Dictionary | 4,000+ Words & 125 Visual Scenes for Speech, Vocabulary & Early Literacy',
+    description: 'Reserve your copy of The Essential Picture Dictionary: 4,000+ vocabulary words across 125 illustrated scenes in 7 Learning Lands with phonetic guides and ASL sign descriptions.',
+    canonicalPath: '/workbook',
+  });
 
   /* Build the character parade — double the array for seamless loop */
   const carouselOrder = [

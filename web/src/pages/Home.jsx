@@ -5,8 +5,7 @@ import ParallaxHero from '../components/ParallaxHero';
 import { RevealSection } from '../hooks/useReveal';
 
 import heroesData from '../data/heroes.json';
-import JsonLd from '../components/JsonLd';
-import { homeSchema, faqSchema } from '../utils/schema';
+import { usePageMeta } from '../hooks/usePageMeta';
 import ExpandableGallery from '../components/ExpandableGallery';
 import { assetCssUrl, assetPath } from '../utils/assetPath';
 import Floating3DBook from '../components/ui/Floating3DBook';
@@ -22,9 +21,11 @@ import {
 const Home = () => {
   const { t } = useTranslation();
 
-  useEffect(() => {
-    document.title = 'The Sound of Essentials | Screen-Free Early Learning, Preschool Music & Sensory Readiness for Ages 2–7';
-  }, []);
+  usePageMeta({
+    title: 'The Sound of Essentials | Screen-Free Early Learning, Preschool Music & Sensory Readiness for Ages 2–7',
+    description: 'Calm, music-driven early learning ecosystem for ages 2–7. The Anti-Cocomelon: 19 acoustic tracks, 400 screen-free activities, and neuro-affirming pedagogy.',
+    canonicalPath: '/',
+  });
 
   /* ── Interactive State: FAQ Accordion ── */
   const [openFaq, setOpenFaq] = useState(null);
@@ -114,14 +115,8 @@ const Home = () => {
     }
   ];
 
-  const structuredSchemas = [
-    ...homeSchema(),
-    faqSchema(faqItems),
-  ].filter(Boolean);
-
   return (
     <div className="home-page">
-      <JsonLd data={structuredSchemas} />
 
 
       {/* ═══════════════════════════════════════════════════════

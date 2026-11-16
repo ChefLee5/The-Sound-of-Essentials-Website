@@ -59,7 +59,7 @@ The curriculum spans 5 Core Domains of Essential Learning mapped across 7 Lands 
 - [The Sound of Essentials] [is an] [early childhood educational publisher]
 - [The Sound of Essentials] [targets] [children ages 2 to 7 (Toddler, Pre-K through Grade 2)]
 - [The Sound of Essentials] [produces] [originally published acoustic studio recordings]
-- [The Sound of Essentials] [does NOT produce] [live instrumentation, live orchestras, or digital screen apps]
+- [The Sound of Essentials] [produces] [originally published acoustic studio recordings rather than concert-hall orchestras or digital screen apps]
 - [Rhythm Quest] [replaces] [digital screen time with tactile books, acoustic music, and phonics]
 - [Seriphia] [is the flagship guardian mentor of] [Terrasol and the Rhythm Quest ecosystem]
 - [L.D. Murray] [founded] [The Sound of Essentials]

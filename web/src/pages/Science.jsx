@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import ResearchAssistant from '../components/ResearchAssistant';
@@ -7,10 +7,15 @@ import { RevealSection } from '../hooks/useReveal';
 import KineticHeadline from '../components/KineticHeadline';
 import JsonLd from '../components/JsonLd';
 import { scienceSchema } from '../utils/schema';
+import { usePageMeta } from '../hooks/usePageMeta';
 
 const Science = () => {
     const { t } = useTranslation();
-    useEffect(() => { document.title = 'Science of the Sound — SOE Rhythm Quest'; }, []);
+    usePageMeta({
+        title: 'Science of the Sound — SOE Rhythm Quest',
+        description: 'Auditory neuroscience, Sound Before Symbol pedagogy, Dalcroze Eurhythmics, Orff Schulwerk, and Kodály foundations for ages 2–7.',
+        canonicalPath: '/science',
+    });
     return (
         <div className="science-page">
             <JsonLd data={scienceSchema()} />

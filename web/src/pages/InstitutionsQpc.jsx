@@ -6,10 +6,16 @@ import { trackLead } from '../utils/analytics';
 import JsonLd from '../components/JsonLd';
 import KineticHeadline from '../components/KineticHeadline';
 import { institutionalFaqSchema } from '../utils/schema';
+import { usePageMeta } from '../hooks/usePageMeta';
 import './InstitutionsQpc.css';
 
 export default function InstitutionsQpc() {
   const { t } = useTranslation();
+  usePageMeta({
+    title: 'Institutional & Preschool Curriculum Licensing | The Sound of Essentials',
+    description: 'Screen-free tactile rhythm and phonics curriculum licensing for early childhood centers, preschools, and speech therapy clinics (ages 2–7).',
+    canonicalPath: '/institutions',
+  });
 
   // Multi-step QPC state: 1 = Qualifier, 2 = Pitch, 3 = Calendar/Booking
   const [currentStep, setCurrentStep] = useState(1);

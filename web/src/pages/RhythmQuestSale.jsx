@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import { usePageMeta } from '../hooks/usePageMeta';
 import { RevealSection } from '../hooks/useReveal';
 import heroesData from '../data/heroes.json';
 import { assetPath } from '../utils/assetPath';
@@ -1279,9 +1280,14 @@ const RhythmReadyFaq = () => (
    MAIN PAGE COMPONENT
    ═══════════════════════════════════════════════════════════════ */
 const RhythmQuestSale = () => {
-  useEffect(() => {
-    document.title = 'Rhythm Ready Workbook | 8-Week Screen-Free Preschool Readiness & Kindergarten Prep Activities (Ages 2–7)';
-  }, []);
+  const { pathname } = useLocation();
+  const canonicalPath = pathname === '/rhythm-ready' ? '/rhythm-ready' : '/workbook';
+
+  usePageMeta({
+    title: 'Rhythm Ready Workbook | 8-Week Screen-Free Preschool Readiness & Kindergarten Prep Activities (Ages 2–7)',
+    description: 'Explore the 40-day Rhythm Ready Workbook (~400 tactile activities) and Essential Picture Dictionary (4,000+ words across 125 illustrated scenes) for ages 2–7.',
+    canonicalPath,
+  });
 
   const carouselOrder = [
     'Seriphia', 'Kenji', 'Elias', 'Ezra', 'Ronan', 'Kwame', 'Silas', 'Aiko',

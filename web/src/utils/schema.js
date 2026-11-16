@@ -11,7 +11,7 @@ import productsData from '../data/products.json';
 
 const SITE_URL  = 'https://thesoundofessentials.com';
 const SITE_NAME = 'The Sound of Essentials: Rhythm Quest';
-const ORG_LOGO  = `${SITE_URL}/assets/marketing/quest-collage.webp`;
+const ORG_LOGO  = `${SITE_URL}/assets/soe-official-logo.png`;
 
 /* ─────────────────────────────────────────────
  * Home — EducationalOrganization + WebSite
@@ -27,7 +27,18 @@ export function homeSchema() {
       logo: ORG_LOGO,
       description: 'A music-powered educational experience designed for the developing brain. 19 original tracks, 15 heroes, and 7 thematic lands guide children Ages 2–7 (Pre-K through Grade 2) through language, math, movement, science, and more.',
       foundingDate: '2024',
-      sameAs: [],
+      sameAs: [
+        'https://soelearn.com',
+        'https://github.com/ChefLee5/The-Sound-of-Essentials-Website',
+        'https://www.linkedin.com/company/the-sound-of-essentials',
+        'https://thesoundofessentials.bandcamp.com',
+        'https://soundcloud.com/thesoundofessentials',
+        'https://www.crunchbase.com/organization/the-sound-of-essentials',
+        'https://www.behance.net/soundofessentials',
+        'https://openlibrary.org/publishers/The_Sound_of_Essentials_Publishing',
+        'https://thesoundofessentials.substack.com',
+        'https://wellfound.com/company/the-sound-of-essentials',
+      ],
       contactPoint: {
         '@type': 'ContactPoint',
         email: 'info@soelearn.com',

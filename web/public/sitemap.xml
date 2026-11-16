@@ -2,207 +2,229 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://thesoundofessentials.com/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://thesoundofessentials.com/listen</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://thesoundofessentials.com/rhythm-ready</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://thesoundofessentials.com/universe</loc>
-    <lastmod>2026-08-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://thesoundofessentials.com/heroes</loc>
-    <lastmod>2026-08-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://thesoundofessentials.com/workbook</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://thesoundofessentials.com/heroes</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://thesoundofessentials.com/science</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://thesoundofessentials.com/mission</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://thesoundofessentials.com/join</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://thesoundofessentials.com/allies</loc>
-    <lastmod>2026-08-22</lastmod>
+    <loc>https://thesoundofessentials.com/institutions</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thesoundofessentials.com/headphones</loc>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://thesoundofessentials.com/player</loc>
-    <lastmod>2026-08-22</lastmod>
+    <loc>https://thesoundofessentials.com/gallery</loc>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
-  <!-- Native Editorial Story & Pre-Sell Bridge Pages -->
+
+  <!-- Editorial Story & Pre-Sell Guides -->
   <url>
     <loc>https://thesoundofessentials.com/story</loc>
-    <lastmod>2026-09-14</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://thesoundofessentials.com/quieter-way</loc>
-    <lastmod>2026-09-14</lastmod>
+    <loc>https://thesoundofessentials.com/dad-reading-apps-review</loc>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.85</priority>
   </url>
+  <url>
+    <loc>https://thesoundofessentials.com/education-sovereignty</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://thesoundofessentials.com/global-learn-english</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://thesoundofessentials.com/sing-along-time</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
   <!-- Programmatic SEO Solutions Hub & 17 Spokes -->
   <url>
     <loc>https://thesoundofessentials.com/solutions</loc>
-    <lastmod>2026-09-14</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://thesoundofessentials.com/for/early-years-directors</loc>
-    <lastmod>2026-09-14</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://thesoundofessentials.com/for/speech-language-pathologists</loc>
-    <lastmod>2026-09-14</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://thesoundofessentials.com/for/new-educators</loc>
-    <lastmod>2026-09-14</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://thesoundofessentials.com/for/inclusive-classrooms</loc>
-    <lastmod>2026-09-14</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://thesoundofessentials.com/for/curriculum-licensing</loc>
-    <lastmod>2026-09-14</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://thesoundofessentials.com/for/music-enrichment-centers</loc>
-    <lastmod>2026-09-14</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://thesoundofessentials.com/for/child-led-classrooms</loc>
-    <lastmod>2026-09-14</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://thesoundofessentials.com/for/bilingual-early-learners</loc>
-    <lastmod>2026-09-14</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://thesoundofessentials.com/for/pediatric-child-life</loc>
-    <lastmod>2026-09-14</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://thesoundofessentials.com/for/tactile-learning-spaces</loc>
-    <lastmod>2026-09-14</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://thesoundofessentials.com/for/after-school-networks</loc>
-    <lastmod>2026-09-14</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://thesoundofessentials.com/for/preparatory-lower-schools</loc>
-    <lastmod>2026-09-14</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://thesoundofessentials.com/solutions/screen-free-sensory-learning</loc>
-    <lastmod>2026-09-14</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://thesoundofessentials.com/solutions/sensory-meltdown-calming</loc>
-    <lastmod>2026-09-14</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://thesoundofessentials.com/solutions/speech-delay-music-activities</loc>
-    <lastmod>2026-09-14</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://thesoundofessentials.com/guides/acoustic-phonics-vs-rote-worksheets</loc>
-    <lastmod>2026-09-14</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://thesoundofessentials.com/guides/calm-circle-time-transitions</loc>
-    <lastmod>2026-09-14</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- Competitor Alternatives Guides -->
   <url>
     <loc>https://thesoundofessentials.com/alternatives/abcmouse</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://thesoundofessentials.com/alternatives/reading-eggs</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://thesoundofessentials.com/alternatives/hooked-on-phonics</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
