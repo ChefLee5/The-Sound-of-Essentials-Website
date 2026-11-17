@@ -225,7 +225,7 @@ const Listen = () => {
             isPlaying={isUnlocked}
           />
           <p className="section-subtitle listen-hero__subtitle">
-            Build kindergarten-ready focus, phonics, and emotional calm in 10 minutes a day without glowing screens or tablet battles. We gift all 19 studio-recorded acoustic tracks freely ($0) to founding families and educators, ready to pair with our 66-page companion storybook, <em>The Sound of Essentials: Rhythm Quest</em> ($19), and 40-Day Readiness Workbook ($21).
+            Fast cartoons and noisy tablet apps overstimulate young nervous systems, while dry flashcards kill curiosity. As Education Concord advocates for ages 2 to 7, we gift all 19 studio-recorded acoustic tracks (60 to 80 BPM) and our printable <em>First 10 Minutes Tactile Ritual Card</em> freely ($0) so your home or classroom experiences the calm first, ready to pair with our 66-page companion storybook ($19) and 40-Day Readiness Workbook ($21).
           </p>
 
           {isUnlocked ? (
@@ -303,7 +303,7 @@ const Listen = () => {
                   </div>
                   {optinError && <p className="heist-error" role="alert">{optinError}</p>}
                   <p className="heist-guarantee">
-                    🔒 100% Free · Instant streaming player access to all 19 tracks · No spam
+                    🔒 100% Free Living Proof · Instant 19-track streaming + printable 10-Min Tactile Ritual Card · No spam
                   </p>
                 </form>
               </div>

@@ -151,8 +151,8 @@ const MissionSceneGallery = () => {
 
 const Mission = () => {
     usePageMeta({
-        title: 'Our Mission — SOE Rhythm Quest',
-        description: 'Why The Sound of Essentials is building a screen-free, music-first early childhood learning sanctuary for ages 2–7.',
+        title: 'Our Mission & Advocacy Stance — SOE Rhythm Quest',
+        description: 'Our Education Concord advocacy stance: protecting ages 2–7 from passive screen overstimulation and eliminating educator prep burnout through organic acoustic warmth and tactile learning.',
         canonicalPath: '/mission',
     });
     return (
@@ -168,18 +168,19 @@ const Mission = () => {
             <header className="mission-hero">
                 <div className="container text-center">
                     <div className="mission-hero-card animate-fade-up">
-                        <div className="section-label">Our Mission</div>
+                        <div className="section-label">Education Concord · Our Advocacy Stance</div>
                         <KineticHeadline
                             tag="h1"
                             variant="musical-bounce"
                             delay={0.1}
                             scrollTrigger={false}
                         >
-                            A <span className="accent-text">State of Emergency</span>
+                            Advocating for <span className="accent-text">Screen-Free Childhood</span>
                         </KineticHeadline>
                         <p className="section-subtitle">
-                            The world's most vulnerable children are running out of time.
-                            SOE exists to change that equation through the universal language of music.
+                            Parents and educators are caught between passive screen overstimulation and prep burnout.
+                            Through Education Concord, we stand as advocates for the developing brain (ages 2 to 7),
+                            delivering organic acoustic calm and tactile readiness before asking for a dollar.
                         </p>
                     </div>
                 </div>
@@ -201,9 +202,9 @@ const Mission = () => {
                  ══════════════════════════════════════════════════ */}
             <StoryScroll aria-label="The Sound of Essentials — Our Story">
 
-              {/* ── 01: THE ORIGIN ── */}
+              {/* ── 01: THE ORIGIN & ADVOCACY STANCE ── */}
               <FlowSection aria-label="The Origin" style={{ backgroundColor: '#FF6F00', color: '#fff' }}>
-                <p className="flow-section__label">01 — The Origin</p>
+                <p className="flow-section__label">01 — Education Advocacy First</p>
                 <hr className="flow-section__divider" style={{ borderColor: 'rgba(255, 255, 255, 0.35)' }} />
                 <div>
                   <KineticHeadline
@@ -211,36 +212,35 @@ const Mission = () => {
                     className="flow-section__headline"
                     variant="musical-bounce"
                   >
-                    A Solution.<br />
+                    Living Proof.<br />
                     Not<br />
-                    A Sale.
+                    A Pitch.
                   </KineticHeadline>
                 </div>
                 <hr className="flow-section__divider" style={{ borderColor: 'rgba(255, 255, 255, 0.35)' }} />
                 <p className="flow-section__body">
-                  Created with devotion and care, offering an unhurried musical foundation your family can trust.
-                  Our front door is a complete, 19-track album of acoustic music,
-                  gifted 100% free to every family. Foundational sensory learning is a birthright, not a luxury.
-                  We do not ask parents to trust a promise; we give them the living proof first.
+                  Families and early childhood directors are exhausted by ed-tech vendors pitching apps and workbooks.
+                  As Education Concord advocates, we lead with living proof first: gifting all 19 studio-recorded acoustic tracks
+                  and our printable First 10 Minutes Tactile Ritual Card 100% free so your home or classroom hears the calm before spending a dime.
                 </p>
                 <hr className="flow-section__divider" style={{ borderColor: 'rgba(255, 255, 255, 0.35)' }} />
                 <div className="flow-columns">
                   <div className="flow-column">
-                    <p className="flow-column__title">19 Free Tracks</p>
+                    <p className="flow-column__title">19 Free Tracks + Ritual Card</p>
                     <p className="flow-column__text">
-                      A complete original studio album gifted freely to every home, without subscription gates or paywalls.
+                      A complete studio album (60 to 80 BPM) paired with a zero-prep tactile ritual card gifted freely, with zero subscription traps.
                     </p>
                   </div>
                   <div className="flow-column">
-                    <p className="flow-column__title">The Living Solution</p>
+                    <p className="flow-column__title">Zero Prep Burnout</p>
                     <p className="flow-column__text">
-                      An acoustic antidote to screen fatigue, sensory overload, and fractured childhood attention.
+                      Open-and-go classroom and kitchen-table routines aligned to Head Start ELOF, NAEYC, and 50-state early learning standards.
                     </p>
                   </div>
                   <div className="flow-column">
                     <p className="flow-column__title">Ages 2–7 Sanctuary</p>
                     <p className="flow-column__text">
-                      Targeted early immersion during the most critical neural development window of a child&apos;s life.
+                      Protecting early attention spans during the most critical neural development window of a child&apos;s life.
                     </p>
                   </div>
                 </div>
@@ -322,7 +322,7 @@ const Mission = () => {
                   <div className="flow-column">
                     <p className="flow-column__title">7 Lands Universe</p>
                     <p className="flow-column__text">
-                      15 diverse heroes across 5 core developmental domains, brought to life through visionary generative AI artistry and scored with original acoustic music recorded live in studio sessions.
+                      15 diverse heroes across 5 core developmental domains, brought to life through curated visual storytelling and scored with organic acoustic warmth from studio sessions.
                     </p>
                   </div>
                   <div className="flow-column">
@@ -334,9 +334,9 @@ const Mission = () => {
                 </div>
               </FlowSection>
 
-              {/* ── 04: TRUE TITANS ── */}
-              <FlowSection aria-label="True Titans" style={{ backgroundColor: '#faf9f7', color: '#1a1a2e' }}>
-                <p className="flow-section__label">04 — True Titans</p>
+              {/* ── 04: ANALOG IN A DIGITAL WORLD ── */}
+              <FlowSection aria-label="Analog in a Digital World" style={{ backgroundColor: '#faf9f7', color: '#1a1a2e' }}>
+                <p className="flow-section__label">04 — Analog in a Digital World</p>
                 <hr className="flow-section__divider" style={{ borderColor: 'rgba(0,0,0,0.15)' }} />
                 <div>
                   <KineticHeadline
@@ -345,15 +345,15 @@ const Mission = () => {
                     variant="musical-bounce"
                   >
                     Apps Fade.<br />
-                    Truth<br />
+                    Tactile Truth<br />
                     Endures.
                   </KineticHeadline>
                 </div>
                 <hr className="flow-section__divider" style={{ borderColor: 'rgba(0,0,0,0.15)' }} />
                 <p className="flow-section__body">
-                  As parents and educators who lived through the early learning crisis, we understand what the digital industry ignores:
-                  apps fade, algorithms shift, and screens break attention spans. But acoustic harmony, spoken language, and human connection
-                  stay with a child for life. <strong>The Sound of Essentials is an evergreen sanctuary of sound.</strong>
+                  In an age of automated digital noise and fleeting iPad apps, staying analog is our quiet superpower.
+                  Apps fade, algorithms shift, and screens fracture attention spans. Tactile workbooks, wooden spoons tapped on a circle rug,
+                  and organic acoustic songs stay with a child for life. <strong>The Sound of Essentials is an analog sanctuary of sound.</strong>
                 </p>
                 <hr className="flow-section__divider" style={{ borderColor: 'rgba(0,0,0,0.15)' }} />
                 <div className="flow-columns">
@@ -445,8 +445,8 @@ const Mission = () => {
                                 Not mass-produced. Not algorithmic. Measured, cut, and stitched with love.
                             </p>
                             <div style={{ marginTop: '2rem' }}>
-                                <Link to="/media" className="btn btn-gold">
-                                    Explore the Quest →
+                                <Link to="/listen" className="btn btn-gold">
+                                    Unlock Free Album &amp; Ritual Card →
                                 </Link>
                             </div>
                         </div>

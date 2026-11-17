@@ -24,8 +24,8 @@ const SECTIONS = [
   {
     heading: 'The Equitable Exchange',
     paras: [
-      'We do not treat music as background filler. We record acoustic songs that soothe the nervous system and help young minds focus. Our front door is a complete 19-track album, gifted freely to every family, because sensory learning should never be locked behind a paywall.',
-      'When parents choose to bring our physical companion storybook and workbooks into their homes, it is an honest exchange for something tangible that protects their child from screen fatigue. Apps fade, algorithms shift, and hardware breaks down. Acoustic music and shared stories stay in the home for generations.',
+      'As Education Concord advocates, we lead with living proof before purchase. Our front door is a complete 19-track acoustic album (60 to 80 BPM) paired with our printable First 10 Minutes Tactile Ritual Card, gifted freely to every family and classroom.',
+      'When parents and schools choose our physical companion storybook, 40-Day Rhythm Ready Workbook, and Essential Picture Dictionary, it is an honest exchange for analog tools that protect developing attention spans and eliminate teacher prep burnout.',
     ],
   },
   {

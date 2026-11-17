@@ -76,13 +76,13 @@ const getPseoRoute = (p) => {
 const routes = [
   {
     route: '/listen',
-    title: "Rhythm Quest 19-Track Album | Screen-Free Sensory Children's Music & Movement Songs for Toddlers & Pre-K",
-    description: 'Stream all 19 studio-recorded acoustic early learning songs for free ($0). Calm, neuro-affirming rhythm and phonics music for ages 2–7.',
+    title: "Rhythm Quest 19-Track Album | Screen-Free Sensory Children's Music & Tactile Rituals for Ages 2–7",
+    description: 'Build kindergarten-ready focus, phonics, and calm in 10 minutes a day without glowing screens or tablet battles. Unlock all 19 studio-recorded acoustic tracks (60–80 BPM) and our printable First 10 Minutes Tactile Ritual Card free ($0).',
     bodyHtml: layoutShell({
-      badge: 'Free $0 Listening Sanctuary · Ages 2–7',
-      h1: 'The Sound of Essentials: 19-Track Acoustic Learning Album',
+      badge: 'Education Concord · Screen-Free Learning Advocacy (Ages 2–7)',
+      h1: 'Build Kindergarten-Ready Focus, Phonics, and Calm Without Glowing Screens',
       bodyHtml: `
-        <p>Stream all 19 original studio-recorded acoustic educational tracks designed to build phonemic awareness, counting fluency, somatic movement, science curiosity, and emotional self-regulation without screens.</p>
+        <p>Stream all 19 original studio-recorded acoustic tracks (60 to 80 BPM) alongside our printable <em>First 10 Minutes</em> Tactile Ritual Card free ($0) as living proof for your home or classroom.</p>
         <h2>Included Tracks Across the 7 Lands</h2>
         <ul>
           ${tracks.map((tr) => `<li><strong>Track ${String(tr.id).padStart(2, '0')}:</strong> ${escapeHtml(tr.slug.replace(/-/g, ' '))} (${escapeHtml(tr.landId)})</li>`).join('\n          ')}
@@ -157,39 +157,39 @@ const routes = [
   },
   {
     route: '/mission',
-    title: 'Our Mission — SOE Rhythm Quest',
-    description: 'Why The Sound of Essentials is building a screen-free, music-first early childhood learning sanctuary for ages 2–7.',
+    title: 'Our Mission & Advocacy Stance — SOE Rhythm Quest',
+    description: 'Our Education Concord advocacy stance: protecting ages 2–7 from passive screen overstimulation and eliminating educator prep burnout through organic acoustic warmth and tactile learning.',
     bodyHtml: layoutShell({
-      badge: 'Staying on the Path, Always Learning',
-      h1: 'Our Mission: Designed for the Developing Brain, Not the Algorithm',
+      badge: 'Education Concord · Our Advocacy Stance',
+      h1: 'Advocating for Screen-Free Childhood: Living Proof, Not a Pitch',
       bodyHtml: `
-        <p>Founded by L.D. Murray and guided by Seriphia, The Sound of Essentials restores calm, music-driven, tactile learning to homes and early childhood classrooms for ages 2 through 7.</p>
-        <p><a href="/listen">Listen to the Free 19-Track Album</a> &middot; <a href="/science">Read the Pedagogical Science</a></p>
+        <p>Founded by L.D. Murray and guided by Seriphia, The Sound of Essentials stands with families and educators to protect ages 2 through 7 from passive screen overload and prep burnout through organic acoustic warmth and analog tactile rituals.</p>
+        <p><a href="/listen">Unlock the Free 19-Track Album &amp; Ritual Card</a> &middot; <a href="/science">Read the Pedagogical Science</a></p>
       `,
     }),
   },
   {
     route: '/join',
     title: 'Join the Quest — SOE Rhythm Quest',
-    description: 'Join families, homeschoolers, and early childhood educators using The Sound of Essentials: Rhythm Quest for ages 2–7.',
+    description: 'Stand with the Education Concord screen-free early learning sanctuary for ages 2–7. Built for families, homeschoolers, and early childhood educators.',
     bodyHtml: layoutShell({
-      badge: 'Family & Educator Community',
-      h1: 'Join the Rhythm Quest Sanctuary',
+      badge: 'Education Concord Advocacy',
+      h1: 'Stand With the Screen-Free Sanctuary',
       bodyHtml: `
-        <p>Start with the free 19-track acoustic album and 40-page printable coloring book, or inquire about school and preschool licensing for your classrooms.</p>
-        <p><a href="/listen">Unlock the Free Album</a> &middot; <a href="/institutions">Institutional Licensing</a></p>
+        <p>Start with the free 19-track acoustic album and printable 10-minute tactile ritual card, or request a Director Review Pass and 50-state standards crosswalk for your classrooms.</p>
+        <p><a href="/listen">Unlock the Free Album</a> &middot; <a href="/institutions">Institutional Advocacy</a></p>
       `,
     }),
   },
   {
     route: '/solutions',
     title: 'Educational Solutions & Curriculum Frameworks | The Sound of Essentials',
-    description: 'Explore The Sound of Essentials sensory-rich, music-driven curriculum solutions for preschools, speech therapy clinics, and conscious home sanctuaries.',
+    description: 'Eliminating teacher prep burnout and passive screen dependency with turnkey 60–80 BPM acoustic and tactile learning aligned to Head Start ELOF, NAEYC, and 50-state standards (ages 2–7).',
     bodyHtml: layoutShell({
-      badge: 'Solutions Directory',
+      badge: 'Education Concord · Screen-Free Advocacy',
       h1: 'Educational Solutions & Curriculum Frameworks',
       bodyHtml: `
-        <p>Role-specific and classroom-ready screen-free music and phonics frameworks for educators, therapists, and families serving ages 2–7.</p>
+        <p>Zero-prep, screen-free music and tactile frameworks aligned with Head Start ELOF, NAEYC, and 50-state early learning standards for ages 2–7.</p>
         <ul>
           ${pseoPages.map((p) => `<li><a href="${escapeHtml(getPseoRoute(p))}">${escapeHtml(p.h1)}</a> — ${escapeHtml(p.metaDescription)}</li>`).join('\n          ')}
         </ul>
@@ -198,13 +198,13 @@ const routes = [
   },
   {
     route: '/institutions',
-    title: 'Institutional & Preschool Curriculum Licensing | The Sound of Essentials',
-    description: 'Screen-free tactile rhythm and phonics curriculum licensing for early childhood centers, preschools, and speech therapy clinics (ages 2–7).',
+    title: 'Education Concord Institutional Advocacy & Curriculum | The Sound of Essentials',
+    description: 'Deliver 100% Head Start ELOF, NAEYC, and state-aligned multi-sensory learning across all 5 domains without teacher prep burnout or screens (ages 2–7).',
     bodyHtml: layoutShell({
-      badge: 'Preschools, Childcare & Clinics',
-      h1: 'Institutional & Classroom Curriculum Licensing',
+      badge: 'Education Concord · Institutional Advocacy',
+      h1: 'Deliver 100% ELOF, NAEYC & State-Aligned Learning Without Teacher Prep Burnout or Screens',
       bodyHtml: `
-        <p>Turnkey screen-free daily 15–30 minute acoustic rhythm blocks aligned with Head Start ELOF and NAEYC standards, with zero student PII or tablet setup required.</p>
+        <p>Turnkey 10 to 15 minute acoustic rhythm and tactile classroom rituals (60 to 80 BPM) aligned with Head Start ELOF, NAEYC, and 50-state standards, with zero student PII or screen setup required.</p>
         <p><a href="/solutions">Browse All Educator Frameworks</a></p>
       `,
     }),

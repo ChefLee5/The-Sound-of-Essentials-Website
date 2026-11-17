@@ -242,7 +242,7 @@ const RhythmReadyHero = () => {
       <div className="rq-hero__inner">
         <div className="rq-hero__grid">
           <div className="rq-hero__copy">
-            <span className="rq-hero__badge">📚 Workbook &amp; Curriculum · 8 Weeks · 40 Days · K–3</span>
+            <span className="rq-hero__badge">📚 Education Concord · 8 Weeks · 40 Days · Ages 2–7</span>
 
             <KineticHeadline
               tag="h1"
@@ -256,13 +256,13 @@ const RhythmReadyHero = () => {
             </KineticHeadline>
 
             <p className="section-subtitle rq-hero__hook">
-              A multi-sensory, cross-curricular daily learning quest across the Seven Lands.
+              Build kindergarten-ready phonics, focus, and calm without glowing screens or prep burnout.
             </p>
 
             <p className="rq-hero__lede">
-              An 8-week cross-curricular learning journey for Pre-K through 2nd Grade (ages 2 to 7). Ten bite-sized
-              daily blocks spanning phonics, math, science, somatic movement,
-              geography/civics, and reflection. Sound before symbol. Handcrafted for the developing brain.
+              An analog, screen-free 8-week learning journey for Pre-K through Grade 2 (ages 2 to 7). Ten bite-sized
+              daily tactile blocks spanning phonics, math, science, somatic movement,
+              geography/civics, and reflection. Sound before symbol. Paired with our free 19-track acoustic album and 10-minute tactile ritual card.
             </p>
 
             <div className="rq-hero__offer">

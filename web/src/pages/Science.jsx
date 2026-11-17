@@ -23,7 +23,7 @@ const Science = () => {
             <header className="science-hero">
                 <div className="container text-center">
                     <div className="animate-fade-up">
-                        <div className="section-label">Pedagogy & Science</div>
+                        <div className="section-label">Education Concord · Pedagogy &amp; Science</div>
                         <KineticHeadline
                             tag="h1"
                             variant="musical-bounce"
@@ -33,7 +33,7 @@ const Science = () => {
                             Science of the <span className="text-gold">Sound</span>
                         </KineticHeadline>
                         <p className="section-subtitle" style={{ margin: '1rem auto' }}>
-                            Chronicles of the Clock: Understanding the neurological architecture behind every rhythm.
+                            Why we advocate for 60 to 80 BPM organic acoustic rhythm and tactile movement over passive screens during the critical ages 2 to 7 auditory window.
                         </p>
                     </div>
                 </div>

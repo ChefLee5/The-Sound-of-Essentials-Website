@@ -31,21 +31,20 @@ export const PhilanthropicDonationSection = ({ className = '' }) => {
   return (
     <section className={`mission-donation-section ${className}`} id="philanthropy">
       <div className="mission-donation-card text-center">
-        <div className="section-label">Philanthropic Support</div>
+        <div className="section-label">Education Concord Advocacy</div>
         
         <h2>
-          Support Our <span className="accent-text">Mission</span>
+          Sponsor <span className="accent-text">Screen-Free Classrooms</span>
         </h2>
 
         <p className="section-subtitle">
-          Our front door is a complete 19-track acoustic album, gifted 100% free to every family and classroom.
+          Our front door is a complete 19-track acoustic album and 10-minute tactile ritual card, gifted 100% free to every family and classroom.
           Foundational sensory learning is a birthright, not a luxury.
         </p>
 
         <p className="mission-donation-text">
-          We created The Sound of Essentials as an antidote to screen fatigue, sensory overload, and algorithmic dopamine loops.
-          Philanthropic contributions help us remain entirely independent, ad-free, and dedicated to crafting calm, tactile literature
-          and music for children ages 2 to 7.
+          We created The Sound of Essentials as an education advocacy movement against screen fatigue, sensory overload, and teacher prep burnout.
+          Your support helps us equip under-resourced classrooms and families with free, ad-free organic acoustic music and tactile print kits for children ages 2 to 7.
         </p>
 
         {isSuccess && (

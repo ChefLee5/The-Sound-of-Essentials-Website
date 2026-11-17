@@ -58,7 +58,7 @@ const SolutionsHub = () => {
 
       <header className="hub-hero">
         <div className="hub-container">
-          <div className="hub-eyebrow">The Living Ecosystem</div>
+          <div className="hub-eyebrow">Education Concord · Screen-Free Advocacy</div>
           <KineticHeadline
             tag="h1"
             className="hub-title"
@@ -69,7 +69,7 @@ const SolutionsHub = () => {
             Early Learning Solutions &amp; Frameworks
           </KineticHeadline>
           <p className="hub-subtitle">
-            Grounding early childhood in intentional acoustic rhythm, 4,000+ words of vocabulary, and sensory sanctuary across ages 2 to 7.
+            Eliminating teacher prep burnout and passive screen dependency with turnkey 60 to 80 BPM acoustic and tactile learning aligned to Head Start ELOF, NAEYC, and 50-state standards for ages 2 to 7.
           </p>
         </div>
       </header>
@@ -143,7 +143,7 @@ const SolutionsHub = () => {
               Stream Album Free
             </Link>
             <Link to="/rhythm-ready" className="pseo-btn pseo-btn-secondary pseo-btn-lg">
-              Explore 40-Day Workbook ($19)
+              Explore 40-Day Workbook ($21)
             </Link>
           </div>
         </div>

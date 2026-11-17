@@ -12,8 +12,8 @@ import './InstitutionsQpc.css';
 export default function InstitutionsQpc() {
   const { t } = useTranslation();
   usePageMeta({
-    title: 'Institutional & Preschool Curriculum Licensing | The Sound of Essentials',
-    description: 'Screen-free tactile rhythm and phonics curriculum licensing for early childhood centers, preschools, and speech therapy clinics (ages 2–7).',
+    title: 'Education Concord Institutional Advocacy & Curriculum | The Sound of Essentials',
+    description: 'Deliver 100% Head Start ELOF, NAEYC, and state-aligned multi-sensory learning across all 5 domains without teacher prep burnout or screens (ages 2–7).',
     canonicalPath: '/institutions',
   });
 
@@ -302,7 +302,7 @@ export default function InstitutionsQpc() {
             >
               <div className="qpc-card-header">
                 <h2>{t('institutions.step2_title')}</h2>
-                <p>Designed specifically to meet Early Learning Outcomes Framework (ELOF) and NAEYC standards for ages 2 to 7.</p>
+                <p>Our Education Concord advocacy framework delivers 100% Head Start ELOF, NAEYC, and 50-state standards alignment for ages 2 to 7 with zero teacher prep burnout and zero screens.</p>
               </div>
 
               <div className="qpc-pitch-grid">
@@ -394,17 +394,17 @@ export default function InstitutionsQpc() {
               className="qpc-card glass-panel text-center"
             >
               <div className="qpc-confirmation-icon" role="img" aria-label="Celebration">🎉</div>
-              <h2 className="qpc-confirmed-title">Application Confirmed for Review</h2>
+              <h2 className="qpc-confirmed-title">Director Review Pass &amp; Crosswalk Queued</h2>
               <p className="qpc-confirmed-subtitle">
-                Thank you, <strong>{leadName || 'Educator'}</strong>. Your classroom profile ({classroomCount.replace(/_/g, ' ')} rooms) has been queued for institutional review by our ECE curriculum concierge.
+                Thank you, <strong>{leadName || 'Educator'}</strong>. Your classroom profile ({classroomCount.replace(/_/g, ' ')} rooms) has been queued for our Education Concord advocacy team.
               </p>
 
               <div className="qpc-next-steps-card">
                 <h4>What Happens Next:</h4>
                 <ol>
-                  <li>Our curriculum director will review your facility parameters within 24 business hours.</li>
-                  <li>You will receive your customized 50-State ELOF/NAEYC crosswalk exhibit via email.</li>
-                  <li>We will dispatch sample classroom audio modules and educator pilot materials to your team.</li>
+                  <li>An SOE Education Advocate will follow up personally within 24 business hours to ask about your loudest classroom transition.</li>
+                  <li>You will receive your customized 50-State Head Start ELOF / NAEYC crosswalk exhibit via email.</li>
+                  <li>We will send a zero-prep 10-minute Tactile Ritual Card and complimentary Director Review Pass for your teachers to test tomorrow morning.</li>
                 </ol>
               </div>
 

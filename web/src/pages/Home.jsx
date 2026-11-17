@@ -22,8 +22,8 @@ const Home = () => {
   const { t } = useTranslation();
 
   usePageMeta({
-    title: 'The Sound of Essentials | Screen-Free Early Learning, Preschool Music & Sensory Readiness for Ages 2–7',
-    description: 'Calm, music-driven early learning ecosystem for ages 2–7. The Anti-Cocomelon: 19 acoustic tracks, 400 screen-free activities, and neuro-affirming pedagogy.',
+    title: 'The Sound of Essentials | Screen-Free Early Learning Advocacy for Ages 2–7',
+    description: 'Build kindergarten-ready focus, phonics, and calm in 10 minutes a day without glowing screens or teacher prep burnout. 19 studio-recorded acoustic tracks (60–80 BPM), tactile rituals, and 400+ screen-free activities for ages 2–7.',
     canonicalPath: '/',
   });
 
@@ -328,16 +328,15 @@ const Home = () => {
         <div className="container">
           <RevealSection className="text-center">
             <div className="section-label section-label--emergency">
-              ⚠️ The State of Emergency in Early Education
+              🛡️ {t('home.why_label')} · Ages 2–7
             </div>
             <h2 className="section-title">
-              We Are Turning a <span className="text-orange">State of Emergency</span>
+              {t('home.why_title_1')}
               <br />
-              Back Into Joyful Mastery
+              <span className="text-orange">{t('home.why_title_2')}</span>
             </h2>
             <p className="section-subtitle" style={{ maxWidth: '720px', margin: '0.75rem auto 2.75rem' }}>
-              Across the nation and the globe, early literacy is in crisis. While addictive screen algorithms capture
-              developing attention spans, classrooms face historic shortages during the developing brain's most critical auditory wiring window.
+              Parents and educators are fighting the same daily battle: fast digital media fractures young attention spans before kindergarten, while classrooms face historic shortages and prep burnout during the brain&apos;s most critical auditory window.
             </p>
           </RevealSection>
 
@@ -396,22 +395,22 @@ const Home = () => {
           <RevealSection delay={0.4}>
             <div className="emergency-callout glass-card">
               <div className="emergency-callout__content">
-                <div className="emergency-callout__badge">The SOE Intervention</div>
+                <div className="emergency-callout__badge">The Education Concord Stance</div>
                 <h3 className="emergency-callout__headline">
-                  Not More Screen Distraction. Active Rhythm Wiring.
+                  Get Kindergarten-Ready Focus &amp; Calm Without Glowing Screens or Prep Burnout.
                 </h3>
                 <p className="emergency-callout__text">
-                  Children don’t build literacy through passive dopamine loops. They wire durable neural pathways through{' '}
-                  <strong>sound-before-symbol pedagogy, active rhythm, singing, whole-body movement, and joyful storytelling</strong>.
-                  The Sound of Essentials provides homes and classrooms with an open-and-go sanctuary routine.
+                  We step forward as advocates for the developing brain, not another ed-tech app pitch. Children build literacy through{' '}
+                  <strong>organic acoustic warmth (60–80 BPM), sound-before-symbol pedagogy, whole-body movement, and 10-minute tactile rituals</strong>{' '}
+                  that fit seamlessly into any home or classroom.
                 </p>
               </div>
               <div className="emergency-callout__actions">
                 <Link to="/science" className="btn btn-outline">
                   See the Neuroscience &amp; Research →
                 </Link>
-                <Link to="/workbook" className="btn btn-gold btn-shimmer">
-                  Explore the 8-Week Solution ($21) →
+                <Link to="/listen" className="btn btn-gold btn-shimmer">
+                  Unlock Free Album &amp; Ritual Card →
                 </Link>
               </div>
             </div>
@@ -486,8 +485,8 @@ const Home = () => {
             <div className="ai-readiness-banner glass-card">
               <div className="ai-readiness-banner__icon">🛡️</div>
               <div className="ai-readiness-banner__text">
-                <strong>Designed for the developing brain — not the algorithm.</strong>
-                <span> While college computer science enrollment dropped 12.4% this year, foundational human literacy, sensory grounding, and speech mastery remain under 1% unemployment. Give your child the gift of durable, un-cancellable human wiring.</span>
+                <strong>Designed for the developing brain, not the algorithm.</strong>
+                <span> Foundational human literacy, sensory grounding, and spoken language mastery begin before screens ever enter the room. Give your child the gift of durable, analog human wiring for ages 2 to 7.</span>
               </div>
               <Link to="/listen" className="btn btn-gold btn-shimmer ai-readiness-banner__btn">
                 Stream 19 Free Tracks →
@@ -620,7 +619,7 @@ const Home = () => {
         <div className="container">
           <RevealSection>
             <div className="credibility-banner glass-card">
-              <div className="credibility-badge">🌿 OUR STANCE & PROMISE</div>
+              <div className="credibility-badge">🌿 OUR EDUCATION ADVOCACY STANCE</div>
               <KineticHeadline
                 tag="h2"
                 variant="fade-up"
@@ -636,22 +635,22 @@ const Home = () => {
                 <div className="credibility-pillar">
                   <span className="cred-icon">🛡️</span>
                   <div>
-                    <strong>Zero Algorithmic Traps</strong>
-                    <span>No autoplay loops, flashing visuals, or dopamine farming</span>
+                    <strong>Education Advocacy First</strong>
+                    <span>Protecting ages 2–7 from passive screen overstimulation and teacher prep burnout</span>
                   </div>
                 </div>
                 <div className="credibility-pillar">
                   <span className="cred-icon">🎨</span>
                   <div>
-                    <strong>Scratch-Made Fine Arts</strong>
-                    <span>Masterfully produced by seasoned musicians with rich acoustic warmth and authentic vocals recorded live in studio sessions</span>
+                    <strong>Organic Acoustic Warmth</strong>
+                    <span>19 studio-recorded tracks (60–80 BPM) and handcrafted fine arts built for nervous-system safety</span>
                   </div>
                 </div>
                 <div className="credibility-pillar">
                   <span className="cred-icon">🏡</span>
                   <div>
-                    <strong>Sanctuary Learning</strong>
-                    <span>Crafted for calm homes, focused classrooms & deep nervous system safety</span>
+                    <strong>Analog in a Digital World</strong>
+                    <span>Tactile workbooks, illustrated dictionaries, and 10-minute room rituals that endure</span>
                   </div>
                 </div>
               </div>
@@ -890,9 +889,9 @@ const Home = () => {
       {/* ── Mobile Sticky Thumb Zone CTA ── */}
       <StickyThumbCta
         targetUrl="/listen"
-        label="🎧 Unlock 19 Tracks Free →"
-        subtext="100% Free • Instant Access"
-        badge="⚡️ Free Instant Access"
+        label="🎧 Free 19 Tracks + Ritual Card →"
+        subtext="100% Free Living Proof • Ages 2–7"
+        badge="⚡️ Screen-Free Advocacy"
         showThreshold={450}
       />
 

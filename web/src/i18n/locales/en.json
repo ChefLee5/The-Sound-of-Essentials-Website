@@ -60,13 +60,13 @@
             "price_strike": "$19 Value",
             "price_tag": "Free for Founding Families",
             "price_note": "Instant Digital Access · Yours to Keep",
-            "check_1": "19 original acoustic tracks that wire early phonics, math & emotional calm",
-            "check_2": "Master acoustic recordings across all 7 Lands & 5 developmental domains",
-            "check_3": "Instant digital streaming & direct MP3 download access",
-            "check_4": "100% Free Forever · No Subscription Trap · Pairs with Rhythm Quest",
-            "cta_primary": "Claim Your Free 19-Track Album →",
+            "check_1": "19 studio-recorded acoustic tracks (60–80 BPM) that build phonics, math & calm without screens",
+            "check_2": "Includes our printable 'First 10 Minutes' Tactile Ritual Card (zero prep, ordinary room objects)",
+            "check_3": "Spans all 7 Learning Lands & 5 Core Domains aligned to Head Start ELOF & NAEYC",
+            "check_4": "$0 Living Proof First · Zero Ads, Zero Dopamine Loops, Zero Subscription Traps",
+            "cta_primary": "Unlock Free Album & Ritual Card →",
             "cta_secondary": "Pair With the Companion Storybook ($19) →",
-            "guarantee_badge": "Free forever · Instant digital access · Nothing ships"
+            "guarantee_badge": "100% Free Living Proof · Instant Digital Access · Zero Screen Dependency"
         },
         "hero_label": "Neuro-Affirming Media",
         "hero_title_1": "Designed for the developing brain,",
@@ -99,10 +99,10 @@
             "feat_3_desc": "Complete lyrics and phonetic cues for all 19 album tracks so children connect sounds to words naturally.",
             "cta": "Pair With the Rhythm Quest Storybook ($19) →"
         },
-        "why_label": "The Twin Crisis",
-        "why_title_1": "We are turning a State of Emergency",
-        "why_title_2": "back into The Sound of Essentials: Rhythm Quest.",
-        "why_subtitle": "300 million children worldwide cannot read proficiently.",
+        "why_label": "Education Concord Advocacy",
+        "why_title_1": "Protecting Early Attention Spans",
+        "why_title_2": "With Screen-Free Acoustic Mastery.",
+        "why_subtitle": "Replacing passive screen overload and teacher prep burnout with 10-minute acoustic and tactile rituals for ages 2 to 7.",
         "stat_1_val": "300M",
         "stat_1_lab": "Children lack reading proficiency globally",
         "stat_2_val": "44M",
@@ -140,8 +140,8 @@
             }
         },
         "credibility": {
-            "quote": "Crafted by a father's heart and a mother's love. Backed by the science of how kids actually learn.",
-            "sub": "No venture capital. No algorithmic dopamine traps. Just scratch-made fine arts and verified cognitive science."
+            "quote": "Crafted by a father's heart and a mother's love. Standing with families and educators for a screen-free childhood.",
+            "sub": "We lead with education advocacy first, not vendor hype: gifting all 19 studio-recorded acoustic tracks and our 10-minute tactile ritual card as living proof before asking for a dollar."
         },
         "science_trust": {
             "label": "Grounded in Science",
@@ -171,37 +171,37 @@
             "accordion_btn_close": "Hide References ↑"
         },
         "comparison": {
-            "label": "Why SOE?",
+            "label": "The Education Concord Contrast",
             "title_1": "Designed for the Developing Brain,",
             "title_2": "Not the Algorithm",
-            "subtitle": "A clear contrast between intentional sensory education and commercial screen distraction.",
+            "subtitle": "Why Education Concord advocates for analog, tactile mastery over passive screen apps and teacher prep burnout.",
             "col_feature": "Learning Vector",
             "col_soe": "The Sound of Essentials",
             "col_algo": "The Attention Algorithm",
             "row_1_title": "Pedagogical Core",
-            "row_1_soe": "Active rhythm & phonological brain wiring",
+            "row_1_soe": "Active acoustic rhythm & phonological brain wiring",
             "row_1_algo": "Passive flashing dopamine loops",
-            "row_2_title": "World Architecture",
-            "row_2_soe": "Cohesive 7 Lands & 15 Lovable Heroes in the companion storybook",
-            "row_2_algo": "Disjointed mini-games & banner ads",
+            "row_2_title": "Tactile Utility",
+            "row_2_soe": "10-minute room rituals, 7 Lands & 40-Day print workbooks",
+            "row_2_algo": "Disjointed mini-games & tablet dependency",
             "row_3_title": "Nervous System Pacing",
-            "row_3_soe": "Calm, neuro-affirming tempo & intentional pauses",
+            "row_3_soe": "60–80 BPM organic acoustic warmth & intentional pauses",
             "row_3_algo": "High-arousal overstimulation & rapid cuts",
             "row_4_title": "Privacy & Commercialism",
-            "row_4_soe": "100% Ad-Free, Zero Data Tracking",
+            "row_4_soe": "100% Ad-Free, Zero Student PII or Tracking",
             "row_4_algo": "Behavioral tracking & in-app purchase lures",
-            "row_5_title": "Craft & Origin",
-            "row_5_soe": "Crafted by a father's heart and a mother's love, with authentic fine arts",
-            "row_5_algo": "Automated content farm optimization"
+            "row_5_title": "Craft & Educator Care",
+            "row_5_soe": "Crafted by a father's heart and a mother's love, with zero-prep teacher ease",
+            "row_5_algo": "Automated content farms & prep burnout"
         },
         "faq": {
             "label": "Still Curious?",
             "title": "Frequently Asked Questions",
-            "subtitle": "Everything you need to know about the free Deluxe album and the Rhythm Quest ecosystem.",
-            "q1": "Why is the album 100% free?",
-            "a1": "We believe foundational sensory learning is a birthright, not a luxury. That is why the complete 19-track album, The Sound of Essentials: A Musical Learning Experience, is gifted freely to founding families ($0) as our front door. Our commercial pitch is simple and honest: experience the music in your home first. When you are ready to expand the journey, you can pair the music with our physical companion storybook, The Sound of Essentials: Rhythm Quest ($19), and our tactile print workbooks.",
+            "subtitle": "Everything you need to know about our Education Concord stance, free album, and tactile ecosystem.",
+            "q1": "Why is the 19-track album and ritual card 100% free?",
+            "a1": "Because we stand as an Education Concord advocate first, not a software vendor. Foundational sensory learning for ages 2 to 7 is a birthright, not a luxury. That is why we gift all 19 studio-recorded acoustic tracks and our printable 'First 10 Minutes' Tactile Ritual Card freely ($0) so families and educators hear the calm in the room first. When you are ready for deeper tactile mastery, you can pair the music with our 66-page companion storybook ($19) and 40-Day Rhythm Ready Workbook ($21 digital / $45 print).",
             "q2": "How do I get instant digital access?",
-            "a2": "Simply click 'Claim Your Free 19-Track Album' and enter your email. You will immediately receive private streaming access to all 19 tracks and direct audio download links. You can also add the $7 Quest Starter & Coloring Pack for the complete 40-page coloring book and 5-minute transition reset kit.",
+            "a2": "Simply click 'Unlock Free Album & Ritual Card' and enter your email. You will immediately receive private streaming access to all 19 tracks, direct MP3 download links, and our printable 1-page 'First 10 Minutes' Tactile Ritual Card using ordinary room objects. You can also add the $7 Quest Starter & Coloring Pack for the 40-page coloring book and 5-minute transition reset kit.",
             "q3": "What age group is this designed for?",
             "a3": "The Sound of Essentials is designed specifically for children ages 2–7 (Toddler, Pre-K, Kindergarten, 1st & 2nd Grade). It is structured for both home listening and early classroom environments.",
             "q4": "How does musical rhythm build reading skills?",
@@ -212,29 +212,29 @@
         "features": {
             "active": {
                 "title": "Active, Not Passive",
-                "subtitle": "Teacher-in-a-Box",
-                "desc": "Every song and melody is a structured lesson that invites children to move, sing, and practice."
+                "subtitle": "10-Minute Tactile Rituals",
+                "desc": "Every song and melody is a structured lesson that invites children to move, sing, and practice using ordinary room objects."
             },
             "neuro": {
                 "title": "Neuro-Affirming",
                 "subtitle": "Calm by Design",
-                "desc": "Slow pacing, ASMR-focused audio design, and intentional silence."
+                "desc": "60–80 BPM organic acoustic warmth, clean sound design, and intentional pauses."
             },
             "scalable": {
-                "title": "Globally Scalable",
-                "subtitle": "No Teacher Required",
-                "desc": "Built for the 44 million teacher deficit."
+                "title": "Educator-Ready",
+                "subtitle": "Zero Prep Burnout",
+                "desc": "Open-and-go 10-minute tactile rituals that lighten the load on parents and early childhood teachers alike."
             }
         },
         "cta_title": "Biology doesn't wait for systems to fix themselves.",
-        "cta_subtitle": "Open the door to learning with music.",
-        "explore_media": "Start the Free Experience →",
+        "cta_subtitle": "Open the door to screen-free learning with organic acoustic warmth.",
+        "explore_media": "Unlock Free Album & Ritual Card →",
         "final_cta": {
-            "title": "Begin Your Family's Rhythm Quest Today",
-            "subtitle": "19 original songs, 7 learning lands, and daily neuro-affirming activities designed for the developing brain.",
-            "btn_free": "Start the Free Experience →",
-            "btn_quest": "Explore The 7-Land Quest ($19) →",
-            "badge": "Instant Digital Access · Zero Screen Overwhelm · 100% Free to Start"
+            "title": "Build Kindergarten-Ready Focus, Phonics & Calm Without Glowing Screens",
+            "subtitle": "19 studio-recorded acoustic tracks, our printable 10-minute tactile ritual card, and 7 learning lands built for ages 2 to 7.",
+            "btn_free": "Unlock Free Album & Ritual Card →",
+            "btn_quest": "Explore 40-Day Readiness Workbook ($21) →",
+            "badge": "100% Free Living Proof · Zero Screen Dependency · Zero Prep Burnout"
         }
     },
     "universe": {
@@ -623,10 +623,10 @@
         "cta_subtitle": "Experience how these neurological principles translate into joyful melody."
     },
     "join": {
-        "hero_label": "Join the Quest",
-        "hero_title_1": "Become Part of the ",
-        "hero_title_2": "Ecosystem of Support",
-        "hero_subtitle": "Whether you are a parent, educator, community leader, or impact partner, there is a place for you in The Sound of Essentials movement.",
+        "hero_label": "Education Concord Advocacy",
+        "hero_title_1": "Stand With the ",
+        "hero_title_2": "Screen-Free Sanctuary",
+        "hero_subtitle": "We advocate for screen-free early childhood readiness (ages 2 to 7) and zero-prep support for educators. Whether you are a parent, preschool director, or community partner, join the Education Concord movement.",
         "stay_connected": "Stay Connected",
         "newsletter_desc": "Get weekly neuro-affirming activities, exclusive music drops, and updates on the Rhythm Quest journey delivered straight to your inbox.",
         "welcome_quest": "Welcome to the Quest!",
@@ -641,12 +641,12 @@
         "find_your_role_1": "Find Your ",
         "find_your_role_2": "Role",
         "find_your_role_3": " in the Quest",
-        "audience_1_title": "Parents & Caregivers",
-        "audience_1_desc": "Seeking safe, intentional screen-time alternatives? SOE transforms passive media into active developmental experiences. Subscribe for weekly activities you can do at home.",
-        "audience_2_title": "Educators & Community Leaders",
-        "audience_2_desc": "Looking for a scalable curriculum? Our \"Teacher-in-a-Box\" model lets you deploy SOE in your classroom, community center, or micro-franchise with zero specialized training.",
-        "audience_3_title": "Impact Investors & NGOs",
-        "audience_3_desc": "Funding solutions for the global early education crisis? SOE delivers music-driven intervention that reaches communities where traditional infrastructure falls short.",
+        "audience_1_title": "Parents & Homeschool Families",
+        "audience_1_desc": "Tired of tablet battles and post-screen meltdowns? Protect your child's attention span with 10-minute acoustic and tactile rituals built for ages 2 to 7.",
+        "audience_2_title": "Educators & Preschool Directors",
+        "audience_2_desc": "Eliminate weekend lesson-prep burnout. Deploy 100% Head Start ELOF, NAEYC, and state-aligned 10-minute tactile rituals across all 5 core domains with zero screens.",
+        "audience_3_title": "Education Advocates & Community Partners",
+        "audience_3_desc": "Championing kindergarten readiness equity without screen dependency? Partner with Education Concord to bring organic acoustic learning to classrooms and families.",
         "partnerships_label": "Contact & Partnerships",
         "direct_contact_label": "Direct Contact",
         "direct_contact_title": "Get in Touch With Our Team",
@@ -826,8 +826,8 @@
     "listen": {
         "ethicalHeistBadge": "EDUCATION CONCORD · FOUNDING PASS",
         "ethicalHeistTitle": "Build Kindergarten-Ready Focus, Phonics, and Calm in 10 Minutes a Day Without Glowing Screens or Tablet Battles",
-        "ethicalHeistSubtitle": "Fast cartoons and noisy apps overstimulate young nervous systems. Unlock all 19 studio-recorded acoustic master tracks (60 to 80 BPM) across all 7 Lands for ages 2 to 7. Gifted freely ($0) today.",
-        "ethicalHeistCta": "UNLOCK ALL 19 TRACKS FREE ($0)",
+        "ethicalHeistSubtitle": "Unlock all 19 studio-recorded acoustic tracks (60 to 80 BPM) across all 7 Lands plus our printable 'First 10 Minutes' Tactile Ritual Card for ages 2 to 7. Gifted freely ($0) today as living proof for your home or classroom.",
+        "ethicalHeistCta": "UNLOCK 19 TRACKS + RITUAL CARD FREE ($0)",
         "orDivider": "ALSO AVAILABLE",
         "dmCtaTitle": "Also Connect via Instagram DM",
         "dmCtaSubtitle": "Get the 19 master tracks delivered to your Instagram in addition to email",
@@ -855,15 +855,15 @@
         "next_btn": "Proceed to Curriculum Pitch →",
         "step2_title": "Step 2: The Turnkey Acoustic Classroom System",
         "feature1_title": "19 Master Acoustic Tracks",
-        "feature1_desc": "Recorded live in studio sessions. Daily morning acoustic rhythms for circle time, transitions, and phonics.",
+        "feature1_desc": "Crafted with organic acoustic warmth (60 to 80 BPM) for calm circle time, smooth transitions, and zero-prep phonics.",
         "feature2_title": "50-State ELOF & NAEYC Crosswalk",
         "feature2_desc": "Full standards alignment across all 5 core developmental domains for ages 2–7.",
         "feature3_title": "Printable Educator & Student Kits",
-        "feature3_desc": "Tactile, screen-free workbooks and laminated learning cards for immediate classroom deployment.",
-        "step3_title": "Step 3: Schedule Institutional Concierge Review",
-        "step3_subtitle": "Speak directly with an SOE Curriculum Specialist to review licensing, procurement, and pilot kits.",
-        "book_call": "Schedule Priority Curriculum Call",
-        "direct_email": "Or email institutional licensing directly at: info@soelearn.com"
+        "feature3_desc": "Tactile, screen-free workbooks and 10-minute ritual cards for immediate, zero-prep classroom deployment.",
+        "step3_title": "Step 3: Request Your Director Review Pass & State Crosswalk",
+        "step3_subtitle": "Partner directly with an SOE Education Advocate to receive your 50-state alignment brief, 10-minute tactile ritual cards, and classroom pilot options.",
+        "book_call": "Request Director Pass & Crosswalk →",
+        "direct_email": "Or email our Education Advocacy team directly at: info@soelearn.com"
     },
     "concierge": {
         "online": "Educator Concierge Active",

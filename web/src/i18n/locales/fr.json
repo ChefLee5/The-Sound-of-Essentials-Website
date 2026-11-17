@@ -60,13 +60,13 @@
             "price_strike": "Valeur de 19$",
             "price_tag": "Gratuit pour les Familles Fondatrices",
             "price_note": "Accès Numérique Immédiat · À Vous pour Toujours",
-            "check_1": "19 chansons originales qui enseignent la phonétique, les maths et les sciences",
-            "check_2": "Enregistrements acoustiques de maître à travers les 7 Terres et 5 domaines de développement",
-            "check_3": "Diffusion numérique instantanée et téléchargement audio MP3 direct",
-            "check_4": "Accès 100% Gratuit à l'Album · Envoi Immédiat par Email",
-            "cta_primary": "Commencer l'Expérience Gratuite →",
-            "cta_secondary": "Explorer The Seven Land Quest ($19) →",
-            "guarantee_badge": "Gratuit pour toujours · Accès numérique immédiat · Aucun envoi physique"
+            "check_1": "19 pistes acoustiques enregistrées en studio (60–80 BPM) pour la phonétique, le calcul et le calme sans écran",
+            "check_2": "Inclut notre fiche imprimable '10 Premières Minutes' de rituel tactile (zéro préparation, objets du quotidien)",
+            "check_3": "Couvre les 7 Terres et les 5 domaines de développement alignés sur Head Start ELOF & NAEYC",
+            "check_4": "0 $ Preuve Vivante d'Abord · Zéro Publicité, Zéro Boucle Dopaminergique, Zéro Piège d'Abonnement",
+            "cta_primary": "Débloquer l'Album Gratuit & Fiche Rituel →",
+            "cta_secondary": "Associer au Livre de Contes ($19) →",
+            "guarantee_badge": "100 % Preuve Vivante Gratuite · Accès Numérique Immédiat · Zéro Dépendance aux Écrans"
         },
         "hero_label": "Médias Neuro-Affirmants",
         "hero_title_1": "Conçu pour le cerveau en développement,",
@@ -99,10 +99,10 @@
             "feat_3_desc": "Paroles complètes, repères phonétiques et dialogues pour les 19 pistes de l'album musical.",
             "cta": "Obtenir le Livre de Contes ($19) →"
         },
-        "why_label": "La Double Crise",
-        "why_title_1": "Nous transformons un État d'Urgence",
-        "why_title_2": "en Sound of Essentials: Rhythm Quest.",
-        "why_subtitle": "300 millions d'enfants dans le monde ne savent pas lire correctement.",
+        "why_label": "Plaidoyer Education Concord",
+        "why_title_1": "Protéger l'Attention des Tout-Petits",
+        "why_title_2": "Par la Maîtrise Acoustique Sans Écran.",
+        "why_subtitle": "Remplacer la surcharge d'écrans passifs et l'épuisement des enseignants par des rituels acoustiques et tactiles de 10 minutes pour les 2 à 7 ans.",
         "stat_1_val": "300M",
         "stat_1_lab": "Enfants privés de compétences fondamentales en lecture",
         "stat_2_val": "44M",
@@ -140,8 +140,8 @@
             }
         },
         "credibility": {
-            "quote": "Façonné par le cœur d'un père et l'amour d'une mère. Fondé sur la science des apprentissages réels des enfants.",
-            "sub": "Aucun capital-risque. Aucun piège algorithmique à dopamine. Uniquement des beaux-arts artisanaux et une science cognitive validée."
+            "quote": "Façonné par le cœur d'un père et l'amour d'une mère. Aux côtés des familles et des éducateurs pour une enfance sans écran.",
+            "sub": "Nous plaçons le plaidoyer éducatif avant tout discours commercial : nous offrons les 19 pistes acoustiques et notre fiche rituel tactile de 10 minutes comme preuve vivante avant de demander un dollar."
         },
         "science_trust": {
             "label": "Fondé sur la Science",
@@ -171,70 +171,70 @@
             "accordion_btn_close": "Masquer les Références ↑"
         },
         "comparison": {
-            "label": "Pourquoi SOE ?",
-            "title_1": "Conçu pour le Cerveau en Développement —",
+            "label": "Le Contraste Education Concord",
+            "title_1": "Conçu pour le Cerveau en Développement,",
             "title_2": "Pas pour l'Algorithme",
-            "subtitle": "Un contraste évident entre une éducation sensorielle bienveillante et la distraction commerciale des écrans.",
+            "subtitle": "Pourquoi Education Concord défend la maîtrise analogique et tactile face aux applications passives et à l'épuisement de préparation.",
             "col_feature": "Vecteur Pédagogique",
             "col_soe": "The Sound of Essentials",
             "col_algo": "L'Algorithme d'Attention",
             "row_1_title": "Cœur Pédagogique",
-            "row_1_soe": "Stimulation neuronale active par le rythme et la phonétique",
+            "row_1_soe": "Stimulation neuronale active par le rythme acoustique et la phonétique",
             "row_1_algo": "Boucles passives et flashs de dopamine",
-            "row_2_title": "Univers Narratif",
-            "row_2_soe": "7 Contrées cohérentes et 15 Héros mentors",
-            "row_2_algo": "Mini-jeux décousus et publicités intrusives",
+            "row_2_title": "Utilité Tactile",
+            "row_2_soe": "Rituels de 10 minutes, 7 Contrées et cahiers imprimés sur 40 jours",
+            "row_2_algo": "Mini-jeux décousus et dépendance aux tablettes",
             "row_3_title": "Rythme Nerveux",
-            "row_3_soe": "Tempo apaisé, neuro-affirmant et silences intentionnels",
+            "row_3_soe": "Chaleur acoustique organique (60–80 BPM) et pauses intentionnelles",
             "row_3_algo": "Surstimulation et coupures visuelles frénétiques",
             "row_4_title": "Confidentialité & Respect",
-            "row_4_soe": "100% Sans Pub, Zéro Traçage de Données",
+            "row_4_soe": "100% Sans Pub, Zéro Donnée Personnelle d'Élève",
             "row_4_algo": "Traçage comportemental et incitations d'achats in-app",
-            "row_5_title": "Origine & Artisanat",
-            "row_5_soe": "Façonné par le cœur d'un père et l'amour d'une mère, avec de véritables beaux-arts",
-            "row_5_algo": "Optimisation automatisée de fermes de contenu"
+            "row_5_title": "Savoir-Faire & Soin Éducatif",
+            "row_5_soe": "Façonné par le cœur d'un père et l'amour d'une mère, sans surcharge de préparation",
+            "row_5_algo": "Fermes de contenu automatisées et épuisement professionnel"
         },
         "faq": {
             "label": "Encore des Questions ?",
             "title": "Foire Aux Questions",
-            "subtitle": "Tout ce que vous devez savoir sur l'album Deluxe gratuit et l'écosystème Rhythm Quest.",
-            "q1": "Pourquoi The Sound of Essentials Deluxe est-il entièrement gratuit ?",
-            "a1": "The Sound of Essentials a été créé comme un don authentique aux familles. L'édition Deluxe demeure gratuite afin que chaque enfant bénéficie d'un éveil sensoriel et musical fondamental. L'accès numérique immédiat ne nécessite qu'un email, avec des matériels d'apprentissage et éditions physiques optionnels disponibles à la commande.",
+            "subtitle": "Tout ce que vous devez savoir sur notre position Education Concord, l'album gratuit et l'écosystème tactile.",
+            "q1": "Pourquoi l'album de 19 pistes et la fiche rituel sont-ils 100 % gratuits ?",
+            "a1": "Parce que nous sommes d'abord un mouvement de plaidoyer éducatif (Education Concord), pas un vendeur de logiciels. L'éveil sensoriel fondamental de 2 à 7 ans est un droit, pas un luxe. C'est pourquoi nous offrons nos 19 pistes acoustiques enregistrées en studio et notre fiche imprimable '10 Premières Minutes' (0 $) afin que familles et classes ressentent le calme d'abord. Quand vous souhaitez aller plus loin, vous pouvez associer la musique à notre livre de contes de 66 pages (19 $) et au cahier Rhythm Ready sur 40 jours (21 $ numérique / 45 $ imprimé).",
             "q2": "Comment obtenir l'accès numérique immédiat ?",
-            "a2": "Cliquez simplement sur 'Commencer l'Expérience Gratuite' et saisissez votre adresse email. Vous recevrez instantanément l'accès privé aux 19 pistes audio et les liens de téléchargement direct. Vous pouvez également ajouter le Pack de Démarrage et Coloriage à 7 $ pour obtenir le livre de coloriage de 40 pages et le kit de transition.",
+            "a2": "Cliquez sur 'Débloquer l'Album Gratuit & Fiche Rituel' et saisissez votre email. Vous recevrez immédiatement l'accès privé aux 19 pistes audio, les liens MP3 directs et notre fiche imprimable de rituel tactile de 10 minutes avec des objets ordinaires. Vous pouvez aussi ajouter le Pack de Démarrage et Coloriage à 7 $.",
             "q3": "À quelle tranche d'âge ce programme s'adresse-t-il ?",
             "a3": "The Sound of Essentials est spécialement conçu pour les enfants de 2 à 7 ans (de la Toute Petite Section au CE1). Il convient aussi bien au foyer qu'aux classes d'éveil.",
             "q4": "Comment le rythme aide-t-il l'enfant à apprendre à lire ?",
             "a4": "Les publications scientifiques dans Nature Scientific Reports confirment que la discrimination rythmique développe le traitement temporel cérébral : le mécanisme fondamental servant à découper syllabes et phonèmes lors de l'apprentissage de la lecture.",
-            "q5": "Qu'est-ce que The Seven Land Quest ($19) ?",
-            "a5": "The Seven Land Quest est notre guide d'accompagnement sur 7 semaines. Il prolonge les 19 chansons à travers 400 activités interactives, des jeux corporels, des cartes d'aventure à imprimer et des étapes rythmiques hebdomadaires."
+            "q5": "Qu'est-ce que le Livre de Contes Rhythm Quest ($19) ?",
+            "a5": "The Sound of Essentials : Rhythm Quest est le livre compagnon officiel de 66 pages qui présente nos 15 héros dans les 7 Contrées, avec les paroles complètes des 19 pistes et une approche du son avant le symbole."
         },
         "features": {
             "active": {
                 "title": "Actif, Pas Passif",
-                "subtitle": "Enseignant-en-Boîte",
-                "desc": "Chaque chanson et mélodie est une leçon structurée qui invite les enfants à bouger, chanter et s'exercer."
+                "subtitle": "Rituels Tactiles de 10 Minutes",
+                "desc": "Chaque chanson et mélodie est une leçon structurée qui invite les enfants à bouger, chanter et pratiquer avec des objets du quotidien."
             },
             "neuro": {
                 "title": "Neuro-Affirmant",
                 "subtitle": "Calme par Conception",
-                "desc": "Un rythme lent, un design audio axé sur l'ASMR et un silence intentionnel."
+                "desc": "Chaleur acoustique organique à 60–80 BPM, design audio épuré et silences intentionnels."
             },
             "scalable": {
-                "title": "Mondialement Évolutif",
-                "subtitle": "Aucun Enseignant Requis",
-                "desc": "Conçu pour le déficit d'enseignants."
+                "title": "Pensé pour les Éducateurs",
+                "subtitle": "Zéro Surcharge de Préparation",
+                "desc": "Des rituels tactiles prêts à l'emploi en 10 minutes qui allègent la charge des parents comme des enseignants."
             }
         },
         "cta_title": "La biologie n'attend pas que les systèmes se réparent d'eux-mêmes.",
-        "cta_subtitle": "Ouvrez la porte aux apprentissages par la musique.",
-        "explore_media": "Commencer l'Expérience Gratuite →",
+        "cta_subtitle": "Ouvrez la porte aux apprentissages sans écran grâce à la chaleur acoustique organique.",
+        "explore_media": "Débloquer l'Album Gratuit & Fiche Rituel →",
         "final_cta": {
-            "title": "Commencez la Quête du Rythme de Votre Famille",
-            "subtitle": "19 chansons originales, 7 contrées d'apprentissage et des activités quotidiennes neuro-affirmatives conçues pour le cerveau en développement.",
-            "btn_free": "Commencer l'Expérience Gratuite →",
-            "btn_quest": "Explorer La Quête des 7 Contrées (19 $) →",
-            "badge": "Accès Numérique Immédiat · Sans Surcharge d'Écran · 100 % Gratuit pour Commencer"
+            "title": "Développez Attention, Phonétique et Calme Sans Écrans Lumineux",
+            "subtitle": "19 pistes acoustiques enregistrées en studio, notre fiche rituel tactile de 10 minutes et 7 contrées d'apprentissage conçues pour les 2 à 7 ans.",
+            "btn_free": "Débloquer l'Album Gratuit & Fiche Rituel →",
+            "btn_quest": "Explorer le Cahier 40 Jours (21 $) →",
+            "badge": "100 % Preuve Vivante Gratuite · Zéro Dépendance aux Écrans · Zéro Surcharge de Préparation"
         }
     },
     "universe": {
@@ -623,10 +623,10 @@
         "cta_subtitle": "Découvrez comment ces principes neurologiques se traduisent en mélodies joyeuses."
     },
     "join": {
-        "hero_label": "Rejoignez l'Aventure",
-        "hero_title_1": "Faites partie de l' ",
-        "hero_title_2": "Écosystème de Soutien",
-        "hero_subtitle": "Que vous soyez parent, éducateur, leader communautaire ou investisseur à impact, il y a une place pour vous dans le mouvement The Sound of Essentials : Rhythm Quest.",
+        "hero_label": "Plaidoyer Education Concord",
+        "hero_title_1": "Rejoignez le ",
+        "hero_title_2": "Sanctuaire Sans Écran",
+        "hero_subtitle": "Nous défendons l'éveil sans écran (2 à 7 ans) et le soutien sans surcharge pour les éducateurs. Parents, directeurs d'école ou partenaires, rejoignez le mouvement Education Concord.",
         "stay_connected": "Restez Connecté",
         "newsletter_desc": "Recevez chaque semaine des activités neuro-affirmatives, des sorties musicales exclusives et des nouvelles de Rhythm Quest, directement dans votre boîte de réception.",
         "welcome_quest": "Bienvenue dans l'Aventure !",
@@ -641,12 +641,12 @@
         "find_your_role_1": "Trouvez votre ",
         "find_your_role_2": "Rôle",
         "find_your_role_3": " dans l'aventure",
-        "audience_1_title": "Parents et aidants",
-        "audience_1_desc": "Vous cherchez des alternatives sûres et intentionnelles au temps d'écran ? SOE transforme les médias passifs en expériences de développement actives. Abonnez-vous pour des activités hebdomadaires à faire à la maison.",
-        "audience_2_title": "Éducateurs et leaders communautaires",
-        "audience_2_desc": "Vous cherchez un programme évolutif ? Notre modèle « Teacher-in-a-Box » vous permet de déployer SOE dans votre classe ou centre communautaire sans formation spécialisée.",
-        "audience_3_title": "Investisseurs à impact et ONG",
-        "audience_3_desc": "Vous financez des solutions pour la crise mondiale de l'éducation préscolaire ? SOE est conçu pour un impact à grande échelle, une intervention musicale qui fonctionne là où les infrastructures traditionnelles ne peuvent atteindre.",
+        "audience_1_title": "Parents & Familles en Instruction à Domicile",
+        "audience_1_desc": "Fatigués des conflits liés aux tablettes ? Protégez l'attention de votre enfant avec des rituels acoustiques et tactiles de 10 minutes conçus pour les 2 à 7 ans.",
+        "audience_2_title": "Éducateurs & Directeurs de Maternelle",
+        "audience_2_desc": "Éliminez l'épuisement de préparation le week-end. Déployez des rituels tactiles de 10 minutes alignés sur Head Start ELOF et NAEYC dans les 5 domaines, sans écran.",
+        "audience_3_title": "Défenseurs de l'Éducation & Partenaires",
+        "audience_3_desc": "Engagés pour l'équité d'éveil sans dépendance numérique ? Collaborez avec Education Concord pour apporter la chaleur acoustique organique aux classes et familles.",
         "partnerships_label": "Contact et Partenariats",
         "direct_contact_label": "Contact Direct",
         "direct_contact_title": "Contactez Notre Équipe",
@@ -826,8 +826,8 @@
     "listen": {
         "ethicalHeistBadge": "EDUCATION CONCORD · ACCÈS FONDATEUR",
         "ethicalHeistTitle": "Développez l'attention, la phonétique et le calme en 10 minutes par jour sans écrans lumineux ni conflits liés aux tablettes",
-        "ethicalHeistSubtitle": "Les dessins animés rapides et les applications bruyantes saturent le système nerveux des tout-petits. Débloquez les 19 pistes acoustiques enregistrées en studio (60 à 80 BPM) à travers les 7 Terres pour les 2 à 7 ans. Offert gratuitement (0 $) aujourd'hui.",
-        "ethicalHeistCta": "DÉVERROUILLER LES 19 PISTES GRATUITEMENT (0 $)",
+        "ethicalHeistSubtitle": "Débloquez les 19 pistes acoustiques enregistrées en studio (60 à 80 BPM) à travers les 7 Terres ainsi que notre fiche imprimable '10 Premières Minutes' de rituel tactile pour les 2 à 7 ans. Offert gratuitement (0 $) aujourd'hui comme preuve vivante.",
+        "ethicalHeistCta": "DÉBLOQUER 19 PISTES + FICHE RITUEL (0 $)",
         "orDivider": "ÉGALEMENT DISPONIBLE",
         "dmCtaTitle": "Connectez-vous aussi par Instagram DM",
         "dmCtaSubtitle": "Recevez les 19 pistes sur votre Instagram en plus de votre e-mail",
@@ -855,15 +855,15 @@
         "next_btn": "Découvrir le programme pédagogique →",
         "step2_title": "Étape 2 : Le système acoustique clé en main en classe",
         "feature1_title": "19 pistes acoustiques de référence",
-        "feature1_desc": "Enregistrées en studio. Rythmes acoustiques quotidiens pour les rassemblements et la phonétique.",
+        "feature1_desc": "Façonnées avec une chaleur acoustique organique (60 à 80 BPM) pour des rassemblements calmes, des transitions fluides et une phonétique sans préparation.",
         "feature2_title": "Alignement sur les normes ELOF et NAEYC",
         "feature2_desc": "Alignement sur les 5 domaines de développement pour les enfants de 2 à 7 ans.",
         "feature3_title": "Kits imprimables pour éducateurs et élèves",
-        "feature3_desc": "Cahiers d'exercices tactiles sans écran et fiches pédagogiques pour la classe.",
-        "step3_title": "Étape 3 : Planifier une consultation pédagogique",
-        "step3_subtitle": "Échangez directement avec un spécialiste pédagogique de SOE pour les licences et kits pilotes.",
-        "book_call": "Réserver un appel pédagogique prioritaire",
-        "direct_email": "Ou écrivez directement à l'équipe institutionnelle : info@soelearn.com"
+        "feature3_desc": "Cahiers d'exercices tactiles sans écran et fiches rituelles de 10 minutes pour un déploiement immédiat sans surcharge.",
+        "step3_title": "Étape 3 : Demandez votre Passe Direction & Référentiel d'État",
+        "step3_subtitle": "Collaborez directement avec un Défenseur Éducatif SOE pour recevoir votre référentiel d'alignement, les fiches tactiles de 10 minutes et les options pilotes.",
+        "book_call": "Demander Passe Direction & Référentiel →",
+        "direct_email": "Ou écrivez directement à notre équipe Plaidoyer Éducatif : info@soelearn.com"
     },
     "concierge": {
         "online": "Conciergerie éducative active",

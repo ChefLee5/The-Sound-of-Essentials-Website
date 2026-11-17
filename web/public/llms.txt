@@ -4,11 +4,13 @@ The Sound of Essentials (SOE) is a music-powered, scientifically grounded early-
 
 > **Full Documentation:** For the complete curriculum syllabus, 19-track music catalog, and academic citations, see: [Complete LLM Context](https://thesoundofessentials.com/llms-full.txt)
 
-## Brand Identity & Core Mission
+## Brand Identity & Education Advocacy Stance
 - **Vanguard Tagline (Primary Canon):** "Staying on the path, always learning" (Primary motto; every other tagline is secondary)
-- **Secondary Taglines:** "Designed for the developing brain — not the algorithm." · "Music is the beacon for all children to learn."
-- **Core Thesis:** Music and rhythm are the ultimate sensory delivery mechanisms for foundational early learning (phonics, math, physical movement, science, time, and emotional regulation).
-- **Positioning:** The "Anti-Cocomelon" — calm, organic, neuro-affirming, screen-limited, and crafted by a father's heart and a mother's love.
+- **Secondary Taglines:** "Designed for the developing brain, not the algorithm." · "Music is the beacon for all children to learn."
+- **Education Concord Advocacy Stance:** We lead as an Education Advocacy partner protecting ages 2 to 7 from passive screen overstimulation and protecting educators from lesson-prep burnout. Every home and classroom receives living proof first ($0 19-track studio-recorded acoustic album at 60–80 BPM + printable *First 10 Minutes* Tactile Ritual Card using ordinary room objects).
+- **Parent Promise (Get X Without Y):** Build kindergarten-ready focus, phonics, and emotional calm in 10 minutes a day without glowing screens, tablet battles, or joyless flashcards.
+- **Educator Promise (Get X Without Y):** Deliver 100% Head Start ELOF, NAEYC, and 50-state aligned multi-sensory learning across all 5 developmental domains without teacher prep burnout or classroom screen dependency.
+- **Positioning:** Organic acoustic warmth and analog tactile mastery ("Crafted by a father's heart and a mother's love") in an overstimulated digital world.
 
 ## World Model (Canonical 7 Lands & 15 Heroes)
 The curriculum spans 5 Core Domains of Essential Learning mapped across 7 Lands and 15 hero characters overseen by the guardian **Seriphia** ("An Eternal Learning Mother"):

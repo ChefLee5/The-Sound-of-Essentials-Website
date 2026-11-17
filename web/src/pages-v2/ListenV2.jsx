@@ -71,7 +71,7 @@ const ListenV2 = () => {
       >
         <div className="v2-container v2-text-center">
           <RevealV2>
-            <span className="v2-label">Free preview · 19 tracks</span>
+            <span className="v2-label">Education Concord · Free Living Proof · 19 Tracks</span>
           </RevealV2>
           <CharSplitText tag="h1" className="v2-display v2-display--section" stagger={24}>
             Hear What Learning Sounds Like
@@ -82,8 +82,8 @@ const ListenV2 = () => {
             isPlaying={isUnlocked}
           />
           <RevealV2 className="v2-reveal--delay-2">
-            <p className="v2-serif-italic" style={{ fontSize: 'clamp(1.1rem, 2vw, 1.5rem)', marginTop: '1rem' }}>
-              Designed for the developing brain — not the algorithm.
+            <p className="v2-serif-italic" style={{ fontSize: 'clamp(1.1rem, 2vw, 1.5rem)', marginTop: '1rem', maxWidth: '680px', marginInline: 'auto' }}>
+              Build kindergarten-ready focus, phonics, and calm in 10 minutes a day without glowing screens or tablet battles.
             </p>
           </RevealV2>
         </div>

@@ -51,7 +51,7 @@ const HomeV2 = () => {
             </div>
 
             <p className="v2-serif-italic" style={{ fontSize: 'clamp(1.25rem, 2.4vw, 1.9rem)', maxWidth: '620px', lineHeight: 1.4 }}>
-              A scientifically grounded, music-driven ecosystem for early childhood development.
+              Screen-free early learning advocacy for ages 2 to 7: build kindergarten-ready focus, phonics, and calm in 10 minutes a day without glowing screens or prep burnout.
             </p>
           </RevealV2>
         </div>
@@ -193,16 +193,15 @@ const HomeV2 = () => {
               </div>
               <div className="v2-split__right">
                 <p className="v2-body v2-body--lg">
-                  In a world of dopamine-driven feeds and disposable content, we are building
-                  something slower and sturdier — a calm, neuro-affirming place where every
-                  child can learn at their own pace.
+                  In a world of passive tablet apps and teacher prep burnout, Education Concord
+                  advocates for an analog sanctuary where children ages 2 to 7 build real neural
+                  readiness through organic acoustic warmth (60–80 BPM) and tactile play.
                 </p>
                 <p className="v2-body">
-                  The Sound of Essentials began as lullabies and grew into an entire universe:
-                  heroes, lands, songs, and stories, all stitched together by a single
-                  belief — that early learning should feel like play, and sound like music.
+                  We lead with living proof first: gifting all 19 studio-recorded acoustic tracks and
+                  our printable 10-minute tactile ritual card before asking for a dollar.
                 </p>
-                <Link to="/v2/mission" className="v2-split__link">Our Mission →</Link>
+                <Link to="/v2/mission" className="v2-split__link">Our Advocacy Stance →</Link>
               </div>
             </div>
           </RevealV2>
