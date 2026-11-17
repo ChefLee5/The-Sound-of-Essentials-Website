@@ -72,7 +72,12 @@ const Science = () => {
                         ))}
                     </div>
                     <RevealSection className="text-center">
-                        <p className="pedagogy-validated">{t('science.pedagogy_validated')}<sup>[1]</sup></p>
+                        <p className="pedagogy-validated">
+                            {t('science.pedagogy_validated')}{' '}
+                            <sup>
+                                <a href="#ref-1">[1]</a>, <a href="#ref-12">[12]</a>
+                            </sup>
+                        </p>
                     </RevealSection>
                 </div>
             </section>
@@ -99,7 +104,7 @@ const Science = () => {
                             <div className="glass-card science-card">
                                 <div className="science-card__icon">🥁</div>
                                 <h3>{t('science.rhythm_cards.rhythm_not_melody.title')}</h3>
-                                <p>{t('science.rhythm_cards.rhythm_not_melody.desc')}<sup>[2]</sup></p>
+                                <p>{t('science.rhythm_cards.rhythm_not_melody.desc')}<sup><a href="#ref-2">[2]</a></sup></p>
                             </div>
                         </RevealSection>
 
@@ -107,7 +112,7 @@ const Science = () => {
                             <div className="glass-card science-card">
                                 <div className="science-card__icon">📖</div>
                                 <h3>{t('science.rhythm_cards.preschool.title')}</h3>
-                                <p>{t('science.rhythm_cards.preschool.desc')}<sup>[3]</sup></p>
+                                <p>{t('science.rhythm_cards.preschool.desc')}<sup><a href="#ref-3">[3]</a></sup></p>
                             </div>
                         </RevealSection>
 
@@ -115,13 +120,18 @@ const Science = () => {
                             <div className="glass-card science-card">
                                 <div className="science-card__icon">🧬</div>
                                 <h3>{t('science.rhythm_cards.genetics.title')}</h3>
-                                <p>{t('science.rhythm_cards.genetics.desc')}<sup>[4]</sup></p>
+                                <p>{t('science.rhythm_cards.genetics.desc')}<sup><a href="#ref-4">[4]</a></sup></p>
                             </div>
                         </RevealSection>
                     </div>
 
                     <RevealSection className="text-center">
-                        <p className="equity-note">{t('science.equity_note')}<sup>[5]</sup></p>
+                        <p className="equity-note">
+                            {t('science.equity_note')}{' '}
+                            <sup>
+                                <a href="#ref-5">[5]</a>, <a href="#ref-12">[12]</a>
+                            </sup>
+                        </p>
                     </RevealSection>
                 </div>
             </section>
@@ -217,7 +227,7 @@ const Science = () => {
                                     {t('science.beyond2_title_1')} <span className="text-sage">{t('science.beyond2_title_2')}</span>
                                 </KineticHeadline>
                                 <p>
-                                    {t('science.beyond2_desc_1')}<sup>[2][6]</sup>
+                                    {t('science.beyond2_desc_1')}<sup><a href="#ref-2">[2]</a><a href="#ref-6">[6]</a></sup>
                                 </p>
                                 <p style={{ marginTop: '1rem' }}>
                                     {t('science.beyond2_desc_2')}
@@ -317,17 +327,18 @@ const Science = () => {
                             <h2 style={{ marginBottom: '0.5rem' }}>{t('science.references_title_1')} <span className="text-gold">{t('science.references_title_2')}</span></h2>
                             <p className="section-subtitle" style={{ marginBottom: '2rem' }}>{t('science.references_subtitle')}</p>
                             <ol className="references-list">
-                                <li>Scoping Review of Music Interventions Aimed at Improving Reading Skills in Children with Reading Disabilities. <em>PubMed</em> (2024). <a href="https://pubmed.ncbi.nlm.nih.gov/38683748/" target="_blank" rel="noopener noreferrer">pubmed.ncbi.nlm.nih.gov</a></li>
-                                <li>Rhythm but not melody processing helps reading via phonological awareness. <em>Nature Scientific Reports</em> (2022). <a href="https://www.nature.com/articles/s41598-022-15596-7" target="_blank" rel="noopener noreferrer">nature.com</a></li>
-                                <li>The Effect of a Music Program on Phonological Awareness in Preschoolers. <em>Frontiers in Psychology</em> (2011). <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3121007/" target="_blank" rel="noopener noreferrer">pmc.ncbi.nlm.nih.gov</a></li>
-                                <li>Genome-wide study of musical rhythm and language/reading skills, 1M+ individuals. <em>Nature Human Behaviour</em> (2024). <a href="https://neurosciencenews.com/genetics-music-language-28151/" target="_blank" rel="noopener noreferrer">nature.com / neurosciencenews.com</a></li>
-                                <li>Neural correlates of phonological processing in children; music training and reading achievement. <em>PMC</em> (2019). <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6481189/" target="_blank" rel="noopener noreferrer">pmc.ncbi.nlm.nih.gov</a></li>
-                                <li>Music Training Increases Phonological Awareness and Reading Skills in Developmental Dyslexia (RCT). <em>PLOS ONE</em> (2015). <a href="https://amu.hal.science/hal-01236724/document" target="_blank" rel="noopener noreferrer">amu.hal.science</a></li>
-                                <li>Cognitive Musical Training (CMT) for children with dyslexia: A randomized controlled trial. <em>Frontiers in Psychology</em> (2016). <a href="https://doi.org/10.3389/fpsyg.2016.00026" target="_blank" rel="noopener noreferrer">doi:10.3389/fpsyg.2016.00026</a></li>
-                                <li>Brain Architecture &amp; Neural Plasticity in Early Childhood (Ages 0–7). <em>Harvard Center on the Developing Child</em> (2024). <a href="https://developingchild.harvard.edu" target="_blank" rel="noopener noreferrer">developingchild.harvard.edu</a></li>
-                                <li>The Nation’s Report Card: 4th-Grade Reading Assessment. <em>National Center for Education Statistics (NAEP)</em> (2024). <a href="https://www.nationsreportcard.gov/reading/" target="_blank" rel="noopener noreferrer">nationsreportcard.gov</a></li>
-                                <li>The State of Global Learning Poverty &amp; The 44 Million Global Teacher Shortage. <em>UNESCO &amp; World Bank</em> (2024). <a href="https://www.unesco.org/gem-report" target="_blank" rel="noopener noreferrer">unesco.org</a></li>
-                                <li>Growth-Mindset Supportive Language (GMSL) and intrinsic motivation in early learning environments. <em>Proceedings of the National Academy of Sciences (PNAS)</em> (2023). <a href="https://doi.org/10.1073/pnas.2217743120" target="_blank" rel="noopener noreferrer">pnas.org</a></li>
+                                <li id="ref-1">Diouf Lewis, J., &amp; Kim, S. J. Scoping Review of Music Interventions Aimed at Improving Reading Skills in Children with Specific Learning Disorders in Reading. <em>Journal of Music Therapy / PubMed</em> (2024). <a href="https://pubmed.ncbi.nlm.nih.gov/38683748/" target="_blank" rel="noopener noreferrer">pubmed.ncbi.nlm.nih.gov</a></li>
+                                <li id="ref-2">Rhythm but not melody processing helps reading via phonological awareness. <em>Nature Scientific Reports</em> (2022). <a href="https://www.nature.com/articles/s41598-022-15596-7" target="_blank" rel="noopener noreferrer">nature.com</a></li>
+                                <li id="ref-3">The Effect of a Music Program on Phonological Awareness in Preschoolers. <em>Frontiers in Psychology</em> (2011). <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3121007/" target="_blank" rel="noopener noreferrer">pmc.ncbi.nlm.nih.gov</a></li>
+                                <li id="ref-4">Genome-wide study of musical rhythm and language/reading skills, 1M+ individuals. <em>Nature Human Behaviour</em> (2024). <a href="https://neurosciencenews.com/genetics-music-language-28151/" target="_blank" rel="noopener noreferrer">nature.com / neurosciencenews.com</a></li>
+                                <li id="ref-5">Zuk, J., et al. Neural correlates of phonological processing: Disrupted in children with dyslexia and enhanced in musically trained children. <em>Developmental Cognitive Neuroscience / PMC</em> (2018). <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6481189/" target="_blank" rel="noopener noreferrer">pmc.ncbi.nlm.nih.gov</a></li>
+                                <li id="ref-6">Music Training Increases Phonological Awareness and Reading Skills in Developmental Dyslexia (RCT). <em>PLOS ONE</em> (2015). <a href="https://amu.hal.science/hal-01236724/document" target="_blank" rel="noopener noreferrer">amu.hal.science</a></li>
+                                <li id="ref-7">Cognitive Musical Training (CMT) for children with dyslexia: A randomized controlled trial. <em>Frontiers in Psychology</em> (2016). <a href="https://doi.org/10.3389/fpsyg.2016.00026" target="_blank" rel="noopener noreferrer">doi:10.3389/fpsyg.2016.00026</a></li>
+                                <li id="ref-8">Brain Architecture &amp; Neural Plasticity in Early Childhood (Ages 0–7). <em>Harvard Center on the Developing Child</em> (2024). <a href="https://developingchild.harvard.edu" target="_blank" rel="noopener noreferrer">developingchild.harvard.edu</a></li>
+                                <li id="ref-9">The Nation’s Report Card: 4th-Grade Reading Assessment. <em>National Center for Education Statistics (NAEP)</em> (2024). <a href="https://www.nationsreportcard.gov/reading/" target="_blank" rel="noopener noreferrer">nationsreportcard.gov</a></li>
+                                <li id="ref-10">The State of Global Learning Poverty &amp; The 44 Million Global Teacher Shortage. <em>UNESCO &amp; World Bank</em> (2024). <a href="https://www.unesco.org/gem-report" target="_blank" rel="noopener noreferrer">unesco.org</a></li>
+                                <li id="ref-11">Growth-Mindset Supportive Language (GMSL) and intrinsic motivation in early learning environments. <em>Proceedings of the National Academy of Sciences (PNAS)</em> (2023). <a href="https://doi.org/10.1073/pnas.2217743120" target="_blank" rel="noopener noreferrer">pnas.org</a></li>
+                                <li id="ref-12">Slater, J., et al. Longitudinal Effects of Group Music Instruction on Literacy Skills in Low-Income Children. <em>PLOS ONE</em> (2014). <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4237413/" target="_blank" rel="noopener noreferrer">pmc.ncbi.nlm.nih.gov</a></li>
                             </ol>
                         </div>
                     </RevealSection>
@@ -503,20 +514,31 @@ const Science = () => {
                     padding: 4rem;
                 }
 
-                .pedagogy-validated {
-                    margin-top: 2rem;
-                    font-size: 0.95rem;
-                    color: rgba(255, 255, 255, 0.75);
-                    font-style: italic;
+                .pedagogy-validated,
+                .equity-note {
+                    margin: 2.25rem auto 0;
+                    max-width: 760px;
+                    padding: 1rem 1.5rem;
+                    font-size: 0.98rem;
+                    line-height: 1.65;
+                    color: rgba(255, 255, 255, 0.94);
+                    background: rgba(15, 18, 48, 0.62);
+                    backdrop-filter: blur(12px);
+                    -webkit-backdrop-filter: blur(12px);
+                    border: 1px solid rgba(255, 255, 255, 0.22);
+                    border-radius: 16px;
+                    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+                    font-style: normal;
                 }
 
-                .equity-note {
-                    margin: 3rem auto 0;
-                    max-width: 640px;
-                    font-size: 1.1rem;
-                    line-height: 1.7;
-                    color: rgba(255, 255, 255, 0.92);
-                    font-style: italic;
+                .science-page sup a {
+                    color: #FFD54F;
+                    text-decoration: none;
+                    font-weight: 700;
+                }
+
+                .science-page sup a:hover {
+                    text-decoration: underline;
                 }
 
                 .references-block {
