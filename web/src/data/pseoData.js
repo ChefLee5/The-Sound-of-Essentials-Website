@@ -1,8 +1,11 @@
 // ── The Sound of Essentials: Programmatic SEO (pSEO) Data Engine ──
 // Pure Category, Sensory, and Pedagogical Solutions (100% Trademark-Free)
 // Generated for SEO Indexation, Rich JSON-LD Schema, and Persona Landing Hub
+import geoGuidesData from './geoGuides.json' with { type: 'json' };
 
-export const pseoPages = [
+export const geoGuides = Array.isArray(geoGuidesData) ? geoGuidesData : [];
+
+const corePseoPages = [
   {
     "slug": "early-years-directors",
     "type": "for",
@@ -1262,6 +1265,8 @@ export const pseoPages = [
     }
   }
 ];
+
+export const pseoPages = [...corePseoPages, ...geoGuides];
 
 export const getPseoBySlug = (slug) => pseoPages.find(p => p.slug === slug);
 export const getPseoByType = (type) => pseoPages.filter(p => p.type === type);

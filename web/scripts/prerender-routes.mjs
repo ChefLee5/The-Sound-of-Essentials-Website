@@ -21,6 +21,7 @@ import { pseoPages } from '../src/data/pseoData.js';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const WEB_ROOT = path.resolve(__dirname, '..');
+const PUBLIC_DIR = path.resolve(WEB_ROOT, 'public');
 const DIST_DIR = path.resolve(WEB_ROOT, 'dist');
 const SITE_URL = 'https://thesoundofessentials.com';
 
@@ -35,6 +36,91 @@ function escapeHtml(str) {
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;');
+}
+
+function extractPublicMainHtml(filename) {
+  const filePath = path.resolve(PUBLIC_DIR, filename);
+  if (!fs.existsSync(filePath)) {
+    throw new Error(`Prerender source HTML missing: public/${filename}`);
+  }
+  const raw = fs.readFileSync(filePath, 'utf8');
+  const mainMatch = raw.match(/<main[^>]*>([\s\S]*?)<\/main>/i);
+  const articleMatch = !mainMatch ? raw.match(/<article[^>]*>([\s\S]*?)<\/article>/i) : null;
+  const bodyMatch = !mainMatch && !articleMatch ? raw.match(/<body[^>]*>([\s\S]*?)<\/body>/i) : null;
+  const extracted = (mainMatch || articleMatch || bodyMatch)?.[1];
+  if (!extracted || extracted.trim().length < 100) {
+    throw new Error(`Failed to extract semantic <main> HTML from public/${filename}`);
+  }
+  return extracted
+    .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, '')
+    .replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi, '')
+    .replace(/\sdata-testid="[^"]*"/gi, '')
+    .trim();
+}
+
+function buildComparisonFaqSchema(competitorName) {
+  return {
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: `Why are parents and educators seeking screen-free alternatives to ${competitorName}?`,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Many families and early educators experience behavioral overstimulation, screen fatigue, and passive tap-and-guess mechanics with tablet-based apps. Screen-free alternatives like The Sound of Essentials: Rhythm Quest ground learning in acoustic musical rhythm, fine-motor pencil grip, and sensory tactile exploration for ages 2–7.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How does auditory and music-powered learning compare to visual tablet apps?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Peer-reviewed research in Nature Scientific Reports demonstrates that rhythm discrimination directly trains the temporal processing networks in the brain responsible for phonemic segmentation—the root foundation of reading proficiency—without inducing dopamine-spiking screen addiction.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How much time does each daily Sound of Essentials lesson take?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Lessons are designed as focused 10 to 15 minute screen-free daily blocks, making them sustainable for busy parents and seamless for preschool circle time.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What is the starting price to begin The Sound of Essentials?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'The full 19-track Deluxe album is gifted 100% free ($0). Families and schools can pair the music with the $19 Rhythm Quest companion book and physical print workbooks with zero recurring subscription lock-in.',
+        },
+      },
+    ],
+  };
+}
+
+function layoutEditorialShell(innerMainHtml) {
+  return `
+    <header style="max-width: 960px; margin: 0 auto; padding: 2rem 1.5rem 1rem;">
+      <nav aria-label="Main Navigation">
+        <a href="/" style="font-weight: 700; color: #FF6F00; text-decoration: none; font-size: 1.25rem; display: inline-block; margin-bottom: 0.5rem;">The Sound of Essentials: Rhythm Quest</a>
+        <div style="margin-top: 0.5rem; font-size: 0.92rem; display: flex; gap: 0.6rem 1rem; flex-wrap: wrap;">
+          <a href="/listen" style="padding: 0.25rem 0.5rem; text-decoration: none; color: #2B2016;">Free 19-Track Album</a>
+          <a href="/rhythm-ready" style="padding: 0.25rem 0.5rem; text-decoration: none; color: #2B2016;">Rhythm Ready Workbook</a>
+          <a href="/workbook" style="padding: 0.25rem 0.5rem; text-decoration: none; color: #2B2016;">Picture Dictionary</a>
+          <a href="/heroes" style="padding: 0.25rem 0.5rem; text-decoration: none; color: #2B2016;">15 Hero Mentors &amp; 7 Lands</a>
+          <a href="/science" style="padding: 0.25rem 0.5rem; text-decoration: none; color: #2B2016;">Science of Sound</a>
+          <a href="/solutions" style="padding: 0.25rem 0.5rem; text-decoration: none; color: #2B2016;">Solutions Directory</a>
+          <a href="/mission" style="padding: 0.25rem 0.5rem; text-decoration: none; color: #2B2016;">Our Mission</a>
+        </div>
+      </nav>
+    </header>
+    <main style="max-width: 960px; margin: 0 auto; padding: 1rem 1.5rem 3rem; line-height: 1.7; color: #2B2016; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+      ${innerMainHtml}
+    </main>
+    <footer style="max-width: 960px; margin: 0 auto; padding: 2rem 1.5rem; border-top: 1px solid #E2E8F0; font-size: 0.88rem; color: #64748B;">
+      <p>&copy; 2026 The Sound of Essentials. Designed for Ages 2–7 (Pre-K to Grade 2). <a href="/privacy" style="color: #475569;">Privacy</a> &middot; <a href="/terms" style="color: #475569;">Terms</a> &middot; <a href="/dmca" style="color: #475569;">DMCA</a></p>
+    </footer>
+  `.trim();
 }
 
 function layoutShell({ h1, badge, bodyHtml }) {
@@ -263,17 +349,387 @@ const routes = [
       bodyHtml: `<p>Intellectual property and DMCA safe harbor contact information for The Sound of Essentials.</p>`,
     }),
   },
+  // ── Editorial Story & Sovereign Pre-Sell Bridge Routes ───────────────────
+  {
+    route: '/story',
+    title: 'More Moms Are Pulling Their Kids Off the Apps for a Quieter Way to Learn to Read — and It Starts with Sound, Not Screens | The Sound of Essentials',
+    description: 'Leaving behind the frenetic noise of autoplay loops, our quest enters a neuro-affirming sanctuary—anchoring early childhood literacy and math to calm, acoustic rhythms during the brain\'s golden window.',
+    bodyHtml: layoutEditorialShell(extractPublicMainHtml('story.html')),
+    extraSchemas: [
+      {
+        '@type': 'Article',
+        headline: 'More Moms Are Pulling Their Kids Off the Apps for a Quieter Way to Learn to Read — and It Starts with Sound, Not Screens',
+        description: 'Leaving behind the frenetic noise of autoplay loops, our quest enters a neuro-affirming sanctuary—anchoring early childhood literacy and math to calm, acoustic rhythms during the brain\'s golden window, completely free from ads, algorithms, and dopamine traps.',
+        author: {
+          '@type': 'Person',
+          name: 'Ivy W.',
+          jobTitle: 'Early Literacy & Pediatric Sound Contributor',
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: 'The Sound of Essentials',
+          url: SITE_URL,
+        },
+        datePublished: '2026-09-13',
+        dateModified: '2026-09-14',
+        mainEntityOfPage: `${SITE_URL}/story`,
+      },
+    ],
+  },
+  {
+    route: '/dad-reading-apps-review',
+    title: 'I Spent $240 on Top-Rated Reading Apps. Here Are 5 Reasons I Deleted Every Single One. | The Sound of Essentials',
+    description: 'A software engineer and father reviews why gamified reading apps fail phonemic decoding and how an acoustic, screen-free rhythm quest rewired his child\'s reading confidence.',
+    bodyHtml: layoutEditorialShell(extractPublicMainHtml('dad-reading-apps-review.html')),
+    extraSchemas: [
+      {
+        '@type': 'Article',
+        headline: 'I Spent $240 on Top-Rated Reading Apps. Here Are 5 Reasons I Deleted Every Single One.',
+        description: 'A software engineer and father reviews why gamified reading apps fail phonemic decoding and how acoustic rhythm restored reading confidence.',
+        author: {
+          '@type': 'Person',
+          name: 'David Vance',
+          jobTitle: 'Software Engineer & Father',
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: 'The Sound of Essentials',
+          url: SITE_URL,
+        },
+        mainEntityOfPage: `${SITE_URL}/dad-reading-apps-review`,
+      },
+    ],
+  },
+  {
+    route: '/education-sovereignty',
+    title: 'The Sovereign Child: Why the Fall of the Federal Department of Education Is Returning Early Learning to the Living Room Sanctuary | The Sound of Essentials',
+    description: 'How early childhood education is decentralizing from standardized institutional screens into living room sanctuaries powered by acoustic rhythm and whole-body phonics.',
+    bodyHtml: layoutEditorialShell(extractPublicMainHtml('education-sovereignty.html')),
+    extraSchemas: [
+      {
+        '@type': 'Article',
+        headline: 'The Sovereign Child: Why the Fall of the Federal Department of Education Is Returning Early Learning to the Living Room Sanctuary',
+        author: {
+          '@type': 'Person',
+          name: 'Sarah Jenkins',
+          jobTitle: 'Senior Educational Journalist & Mother',
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: 'The Sound of Essentials',
+          url: SITE_URL,
+        },
+        mainEntityOfPage: `${SITE_URL}/education-sovereignty`,
+      },
+    ],
+  },
+  {
+    route: '/global-learn-english',
+    title: 'Sound Before Symbol: How Natural Acoustic Cadence Teaches English Without Screen Fatigue | The Sound of Essentials',
+    description: 'Why global bilingual families are switching from gamified screen apps to natural acoustic cadence for English language acquisition in children ages 2–7.',
+    bodyHtml: layoutEditorialShell(extractPublicMainHtml('global-learn-english.html')),
+    extraSchemas: [
+      {
+        '@type': 'Article',
+        headline: 'Sound Before Symbol: How Natural Acoustic Cadence Teaches English Without Screen Fatigue',
+        author: {
+          '@type': 'Person',
+          name: 'Natalia Rostova',
+          jobTitle: 'Multilingual Pedagogy Specialist',
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: 'The Sound of Essentials',
+          url: SITE_URL,
+        },
+        mainEntityOfPage: `${SITE_URL}/global-learn-english`,
+      },
+    ],
+  },
+  {
+    route: '/sing-along-time',
+    title: 'The 90–110 BPM Reset: Why Rhythm Scaffolds Language, Motor Coordination, and Focus | The Sound of Essentials',
+    description: 'Pediatric specialists and early educators explore how tempo-regulated acoustic music (90–110 BPM) regulates the parasympathetic nervous system and builds speech fluency in children ages 2–7.',
+    bodyHtml: layoutEditorialShell(extractPublicMainHtml('sing-along-time.html')),
+    extraSchemas: [
+      {
+        '@type': 'Article',
+        headline: 'The 90–110 BPM Reset: Why Rhythm Scaffolds Language, Motor Coordination, and Focus',
+        author: {
+          '@type': 'Person',
+          name: 'Dr. Julian Vance & Early Learning Collective',
+          jobTitle: 'Developmental Neuro-Rhythm Researchers',
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: 'The Sound of Essentials',
+          url: SITE_URL,
+        },
+        mainEntityOfPage: `${SITE_URL}/sing-along-time`,
+      },
+    ],
+  },
+  // ── Competitor Alternative & Comparison Guides ───────────────────────────
+  {
+    route: '/alternatives/abcmouse',
+    title: 'The 5 Best ABCmouse Alternatives for Screen-Free Early Literacy in 2026 | The Sound of Essentials',
+    description: 'Tired of tablet battles, guessing games, and monthly app subscriptions? Explore the 5 best screen-free ABCmouse alternatives for ages 2–7, ranked by phonics decoding retention, calm nervous-system regulation, and genuine reading mastery.',
+    bodyHtml: layoutEditorialShell(extractPublicMainHtml('abcmouse-alternatives.html')),
+    extraSchemas: [
+      {
+        '@type': 'Article',
+        headline: 'The 5 Best ABCmouse Alternatives for Screen-Free Early Literacy in 2026',
+        description: 'An objective parent and educator guide reviewing the 5 best screen-free ABCmouse alternatives for children ages 2–7, ranked by phonics decoding retention, sensory nervous-system regulation, and sustainable engagement.',
+        url: `${SITE_URL}/alternatives/abcmouse`,
+        author: {
+          '@type': 'Person',
+          name: 'Sarah Jenkins',
+          jobTitle: 'Early Childhood Curriculum Specialist',
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: 'The Sound of Essentials',
+          url: SITE_URL,
+        },
+        datePublished: '2026-10-06',
+        dateModified: '2026-10-06',
+      },
+      {
+        '@type': 'ItemList',
+        name: 'Top 5 ABCmouse Alternatives for Screen-Free Early Literacy',
+        numberOfItems: 5,
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'The Sound of Essentials: Rhythm Quest',
+            description: 'Complete auditory learning ecosystem featuring 19 master acoustic tracks across 7 lands, teaching sound-before-symbol phonemic awareness with zero screens.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'The Screen-Free Audio Sanctuary',
+            description: 'Safe-volume sensory headphone player and dedicated acoustic listening environment designed to replace bedtime tablet struggles.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: 'The Rhythm Ready Tactile Workbook',
+            description: 'Physical 8-week readiness quest with 10 structured daily blocks (A–J) and 400 hands-on activities building fine-motor muscle memory.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 4,
+            name: 'The Essential Picture Dictionary',
+            description: '4,000+ word illustrated storybook volume across 125 scenes, anchoring phonics to rich semantic context without gamified cartoon distractions.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 5,
+            name: 'SOE Educator & Classroom Concord',
+            description: 'Turnkey 10-15 minute screen-free classroom lesson extensions aligned with Head Start ELOF and NAEYC early childhood standards.',
+          },
+        ],
+      },
+      buildComparisonFaqSchema('ABCmouse'),
+    ],
+  },
+  {
+    route: '/alternatives/reading-eggs',
+    title: 'The 5 Best Reading Eggs Alternatives for Screen-Free Phonics & Reading (2026 Parent Guide) | The Sound of Essentials',
+    description: 'Looking for Reading Eggs alternatives? Discover the 5 best screen-free phonics and reading programs for ages 2–7, ranked by phonemic decoding retention, sensory calm, and real paper reading mastery.',
+    bodyHtml: layoutEditorialShell(extractPublicMainHtml('reading-eggs-alternatives.html')),
+    extraSchemas: [
+      {
+        '@type': 'Article',
+        headline: 'The 5 Best Reading Eggs Alternatives for Screen-Free Phonics & Reading in 2026',
+        description: 'An objective parent and educator review evaluating the 5 best screen-free Reading Eggs alternatives for children ages 2–7, ranked by phonics decoding retention, calm sensory nervous-system regulation, and genuine paper book reading skills.',
+        url: `${SITE_URL}/alternatives/reading-eggs`,
+        author: {
+          '@type': 'Person',
+          name: 'Sarah Jenkins',
+          jobTitle: 'Early Childhood Curriculum Specialist',
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: 'The Sound of Essentials',
+          url: SITE_URL,
+        },
+        datePublished: '2026-10-06',
+        dateModified: '2026-10-06',
+      },
+      {
+        '@type': 'ItemList',
+        name: 'Top 5 Reading Eggs Alternatives for Screen-Free Phonics',
+        numberOfItems: 5,
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'The Sound of Essentials: Rhythm Quest',
+            description: 'Premier auditory early literacy ecosystem featuring 19 master acoustic tracks across 7 learning lands, teaching sound-before-symbol phonemic awareness with zero screens.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'The Rhythm Ready Tactile Workbook',
+            description: 'Physical 8-week readiness quest with 10 structured daily blocks (A–J) and 400 hands-on activities that build physical handwriting muscle memory.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: 'The Screen-Free Audio Sanctuary',
+            description: 'Safe-volume sensory headphone listening player and acoustic storytelling system designed to replace evening tablet drill fatigue.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 4,
+            name: 'The Essential Picture Dictionary',
+            description: '4,000+ word illustrated storybook volume across 125 scenes, anchoring phonics to rich semantic context without gamified cartoon distractions.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 5,
+            name: 'SOE Educator & Classroom Concord',
+            description: 'Turnkey 10-15 minute screen-free classroom lesson extensions aligned with Head Start ELOF and NAEYC early childhood standards.',
+          },
+        ],
+      },
+      buildComparisonFaqSchema('Reading Eggs'),
+    ],
+  },
+  {
+    route: '/alternatives/hooked-on-phonics',
+    title: 'The 5 Best Hooked on Phonics Screen-Free Alternatives in 2026 | The Sound of Essentials',
+    description: 'Looking for screen-free Hooked on Phonics alternatives? Discover the top 5 auditory and tactile reading programs for ages 2–7, ranked by phonemic decoding retention, hands-on handwriting, and zero tablet dependency.',
+    bodyHtml: layoutEditorialShell(extractPublicMainHtml('hooked-on-phonics-alternatives.html')),
+    extraSchemas: [
+      {
+        '@type': 'Article',
+        headline: 'The 5 Best Hooked on Phonics Screen-Free Alternatives in 2026',
+        description: 'An objective parent and educator review evaluating the 5 best screen-free Hooked on Phonics alternatives for early literacy (ages 2–7), ranked by phonemic decoding retention, motor handwriting integration, and zero tablet dependency.',
+        url: `${SITE_URL}/alternatives/hooked-on-phonics`,
+        author: {
+          '@type': 'Person',
+          name: 'Sarah Jenkins',
+          jobTitle: 'Early Childhood Curriculum Specialist',
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: 'The Sound of Essentials',
+          url: SITE_URL,
+        },
+        datePublished: '2026-10-06',
+        dateModified: '2026-10-06',
+      },
+      {
+        '@type': 'ItemList',
+        name: 'Top 5 Hooked on Phonics Screen-Free Alternatives',
+        numberOfItems: 5,
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'The Sound of Essentials: Rhythm Quest',
+            description: 'Premier screen-free auditory phonics ecosystem featuring 19 master acoustic tracks across 7 learning lands, teaching sound-before-symbol decoding with zero tablet screens.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'The Rhythm Ready Tactile Workbook',
+            description: 'Physical 8-week readiness quest with 10 structured daily blocks (A–J) and 400 hands-on activities building genuine handwriting muscle memory on paper.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: 'The Screen-Free Audio Sanctuary',
+            description: 'Safe-volume sensory headphone system and offline acoustic player engineered to replace evening app battles with calming nervous-system regulation.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 4,
+            name: 'The Essential Picture Dictionary',
+            description: '4,000+ word illustrated heirloom volume across 125 semantic scenes, connecting sounds to rich visual storytelling without cartoon minigames.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 5,
+            name: 'SOE Educator & Classroom Concord',
+            description: 'Turnkey 10-15 minute screen-free classroom lesson extensions aligned with Head Start ELOF and NAEYC early childhood standards.',
+          },
+        ],
+      },
+      buildComparisonFaqSchema('Hooked on Phonics'),
+    ],
+  },
   ...pseoPages.map((p) => {
     const route = getPseoRoute(p);
+    const canonicalUrl = `${SITE_URL}${route}`;
+    const extraSchemas = [];
+    if (p.source === 'mcls-pulse' || p.directAnswer) {
+      extraSchemas.push({
+        '@type': 'BlogPosting',
+        headline: p.h1,
+        description: p.metaDescription,
+        url: canonicalUrl,
+        datePublished: p.datePublished || '2026-11-19',
+        dateModified: p.dateModified || p.datePublished || '2026-11-19',
+        author: {
+          '@type': 'Person',
+          name: p.author?.name || 'Seriphia & The Sound of Essentials Early Childhood Research Council',
+          jobTitle: p.author?.jobTitle || 'Early Learning Specialists & Pediatric Sound Neuro-Affirming Team',
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: 'The Sound of Essentials',
+          url: SITE_URL,
+        },
+        mainEntityOfPage: canonicalUrl,
+      });
+    }
+    if (Array.isArray(p.faqs) && p.faqs.length > 0) {
+      extraSchemas.push({
+        '@type': 'FAQPage',
+        mainEntity: p.faqs.map((f) => ({
+          '@type': 'Question',
+          name: f.q,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: f.a,
+          },
+        })),
+      });
+    }
     return {
       route,
       title: p.metaTitle || `${p.h1} | The Sound of Essentials`,
       description: p.metaDescription,
+      extraSchemas,
       bodyHtml: layoutShell({
         badge: p.badge,
         h1: p.h1,
         bodyHtml: `
-          <p>${escapeHtml(p.metaDescription)}</p>
+          ${p.author ? `
+            <div class="author-byline" itemscope itemtype="https://schema.org/Person">
+              <span>Curated &amp; Reviewed by: </span>
+              <strong itemprop="name">${escapeHtml(p.author.name)}</strong>
+              ${p.author.jobTitle ? ` — <span itemprop="jobTitle">${escapeHtml(p.author.jobTitle)}</span>` : ''}
+              ${p.datePublished ? ` · Updated ${escapeHtml(p.dateModified || p.datePublished)}` : ''}
+            </div>
+          ` : ''}
+          ${p.directAnswer ? `
+            <section aria-label="Direct Answer">
+              <p><strong>Direct Answer:</strong> ${escapeHtml(p.directAnswer)}</p>
+            </section>
+          ` : `<p>${escapeHtml(p.metaDescription)}</p>`}
+          ${Array.isArray(p.factBullets) && p.factBullets.length > 0 ? `
+            <section>
+              <h2>Core Developmental Specifications (Ages 2–7)</h2>
+              <ul>
+                ${p.factBullets.map((fact) => `<li>${escapeHtml(fact)}</li>`).join('\n                ')}
+              </ul>
+            </section>
+          ` : ''}
           ${p.deltaSummary ? `
             <section>
               <h2>Challenge &amp; Sound-Before-Symbol Approach</h2>
@@ -287,6 +743,21 @@ const routes = [
               <h2>Key Benefits</h2>
               <ul>
                 ${p.benefits.map((b) => `<li><strong>${escapeHtml(b.title)}:</strong> ${escapeHtml(b.desc)}</li>`).join('\n                ')}
+              </ul>
+            </section>
+          ` : ''}
+          ${p.ctaBlock ? `
+            <section>
+              <h2>${escapeHtml(p.ctaBlock.heading)}</h2>
+              <p>${escapeHtml(p.ctaBlock.body)}</p>
+              <p><a href="${escapeHtml(p.ctaBlock.buttonUrl)}">${escapeHtml(p.ctaBlock.buttonText)}</a></p>
+            </section>
+          ` : ''}
+          ${Array.isArray(p.internalLinks) && p.internalLinks.length > 0 ? `
+            <section>
+              <h2>Connected Rhythm Quest Resources</h2>
+              <ul>
+                ${p.internalLinks.map((lnk) => `<li><strong>${escapeHtml(lnk.category)}:</strong> <a href="${escapeHtml(lnk.url)}">${escapeHtml(lnk.label)}</a></li>`).join('\n                ')}
               </ul>
             </section>
           ` : ''}
@@ -313,8 +784,7 @@ let generatedCount = 0;
 
 for (const item of routes) {
   const canonicalUrl = `${SITE_URL}${item.route}`;
-  const pageSchema = JSON.stringify({
-    '@context': 'https://schema.org',
+  const webPageNode = {
     '@type': 'WebPage',
     name: item.title,
     description: item.description,
@@ -325,45 +795,56 @@ for (const item of routes) {
       name: 'The Sound of Essentials: Rhythm Quest',
       url: `${SITE_URL}/`,
     },
-  });
+  };
+  const pageSchema = JSON.stringify(
+    Array.isArray(item.extraSchemas) && item.extraSchemas.length > 0
+      ? {
+          '@context': 'https://schema.org',
+          '@graph': [webPageNode, ...item.extraSchemas],
+        }
+      : {
+          '@context': 'https://schema.org',
+          ...webPageNode,
+        }
+  );
 
   let html = baseHtml
-    .replace(/<title>[\s\S]*?<\/title>/, `<title>${escapeHtml(item.title)}</title>`)
+    .replace(/<title>[\s\S]*?<\/title>/, () => `<title>${escapeHtml(item.title)}</title>`)
     .replace(
       /<meta name="description"[\s\S]*?content="[^"]*"\s*\/>/,
-      `<meta name="description"\n    content="${escapeHtml(item.description)}" />`
+      () => `<meta name="description"\n    content="${escapeHtml(item.description)}" />`
     )
     .replace(
       /<link rel="canonical" href="[^"]*"\s*\/>/,
-      `<link rel="canonical" href="${escapeHtml(canonicalUrl)}" />`
+      () => `<link rel="canonical" href="${escapeHtml(canonicalUrl)}" />`
     )
     .replace(
       /<meta property="og:title" content="[^"]*"\s*\/>/,
-      `<meta property="og:title" content="${escapeHtml(item.title)}" />`
+      () => `<meta property="og:title" content="${escapeHtml(item.title)}" />`
     )
     .replace(
       /<meta property="og:description"[\s\S]*?content="[^"]*"\s*\/>/,
-      `<meta property="og:description"\n    content="${escapeHtml(item.description)}" />`
+      () => `<meta property="og:description"\n    content="${escapeHtml(item.description)}" />`
     )
     .replace(
       /<meta property="og:url" content="[^"]*"\s*\/>/,
-      `<meta property="og:url" content="${escapeHtml(canonicalUrl)}" />`
+      () => `<meta property="og:url" content="${escapeHtml(canonicalUrl)}" />`
     )
     .replace(
       /<meta name="twitter:title" content="[^"]*"\s*\/>/,
-      `<meta name="twitter:title" content="${escapeHtml(item.title)}" />`
+      () => `<meta name="twitter:title" content="${escapeHtml(item.title)}" />`
     )
     .replace(
       /<meta name="twitter:description"[\s\S]*?content="[^"]*"\s*\/>/,
-      `<meta name="twitter:description"\n    content="${escapeHtml(item.description)}" />`
+      () => `<meta name="twitter:description"\n    content="${escapeHtml(item.description)}" />`
     )
     .replace(
       /<script type="application\/ld\+json">[\s\S]*?<\/script>/,
-      `<script type="application/ld+json">${pageSchema}</script>`
+      () => `<script type="application/ld+json">${pageSchema}</script>`
     )
     .replace(
       /<div id="root">[\s\S]*?<\/div>\s*(?=<\/body>)/,
-      `<div id="root">\n    ${item.bodyHtml}\n  </div>\n\n`
+      () => `<div id="root">\n    ${item.bodyHtml}\n  </div>\n\n`
     );
 
   if (html.includes('The 5 Core Domains &amp; 7 Lands Curriculum') && item.route !== '/') {

@@ -228,4 +228,19 @@
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
+
+  <!-- BEGIN MCLS GEO GUIDES -->
+  <url>
+    <loc>https://thesoundofessentials.com/guides/the-freeze-guess-cvc-blending-wall-sound-first</loc>
+    <lastmod>2026-11-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://thesoundofessentials.com/guides/swiping-paper-books-the-tablet-dopamine-crash</loc>
+    <lastmod>2026-11-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <!-- END MCLS GEO GUIDES -->
 </urlset>

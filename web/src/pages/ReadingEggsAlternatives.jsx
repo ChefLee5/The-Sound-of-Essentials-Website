@@ -7,7 +7,7 @@ const ReadingEggsAlternatives = () => {
   const [iframeHeight, setIframeHeight] = useState('3600px');
 
   useEffect(() => {
-    document.title = 'The 5 Best Reading Eggs Alternatives for Screen-Free Phonics & Reading (2026 Parent Guide) | The Sound of Essentials.com';
+    document.title = 'The 5 Best Reading Eggs Alternatives for Screen-Free Phonics & Reading (2026 Parent Guide) | The Sound of Essentials';
 
     let metaDesc = document.querySelector('meta[name="description"]');
     if (!metaDesc) {

@@ -9,20 +9,25 @@
  *    pricing, and community tokenization / Concord grounding.
  * 3. Audits public/sitemap.xml URL coverage against active routes.
  * 4. Audits structured JSON-LD schemas across key landing pages.
- * 5. Generates reports/weekly-search-recon-report.md with actionable work orders.
+ * 5. Audits sitemap.xml <-> prerender-routes.mjs parity, dist/ HTML outputs,
+ *    and SERP title/description hygiene (no emojis, valid JSON-LD, self-canonicals).
+ * 6. Generates reports/weekly-search-recon-report.md with actionable work orders.
  * ============================================================================
  */
 
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { pseoPages } from '../src/data/pseoData.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const WEB_ROOT = path.resolve(__dirname, '..');
 const PUBLIC_DIR = path.resolve(WEB_ROOT, 'public');
 const SRC_DIR = path.resolve(WEB_ROOT, 'src');
+const DIST_DIR = path.resolve(WEB_ROOT, 'dist');
 const REPORTS_DIR = path.resolve(WEB_ROOT, 'reports');
+const SITE_URL = 'https://thesoundofessentials.com';
 
 // Ensure reports directory exists
 if (!fs.existsSync(REPORTS_DIR)) {
@@ -41,13 +46,14 @@ const auditResults = {
     llmGrounding: 100,
     sitemapHealth: 100,
     schemaDepth: 100,
+    prerenderParity: 100,
   },
   findings: [],
   workOrders: [],
 };
 
 // ── 1. ROBOTS.TXT AUDIT ───────────────────────────────────────────────
-console.log('[1/4] Auditing robots.txt AI Bot Permissions...');
+console.log('[1/5] Auditing robots.txt AI Bot Permissions...');
 const robotsPath = path.resolve(PUBLIC_DIR, 'robots.txt');
 const requiredBots = [
   'GPTBot',
@@ -96,7 +102,7 @@ if (!fs.existsSync(robotsPath)) {
 }
 
 // ── 2. LLMS.TXT & LLMS-FULL.TXT AUDIT ─────────────────────────────────
-console.log('\n[2/4] Auditing llms.txt & llms-full.txt Grounding Quality...');
+console.log('\n[2/5] Auditing llms.txt & llms-full.txt Grounding Quality...');
 const llmsPath = path.resolve(PUBLIC_DIR, 'llms.txt');
 const llmsFullPath = path.resolve(PUBLIC_DIR, 'llms-full.txt');
 
@@ -143,7 +149,7 @@ if (!fs.existsSync(llmsPath) || !fs.existsSync(llmsFullPath)) {
 }
 
 // ── 3. SITEMAP COVERAGE AUDIT ─────────────────────────────────────────
-console.log('\n[3/4] Auditing sitemap.xml URL Freshness...');
+console.log('\n[3/5] Auditing sitemap.xml URL Freshness...');
 const sitemapPath = path.resolve(PUBLIC_DIR, 'sitemap.xml');
 if (!fs.existsSync(sitemapPath)) {
   auditResults.scores.sitemapHealth = 0;
@@ -179,7 +185,7 @@ if (!fs.existsSync(sitemapPath)) {
 }
 
 // ── 4. STRUCTURED DATA & SCHEMA COVERAGE AUDIT ────────────────────────
-console.log('\n[4/4] Auditing Structured Data & JSON-LD Schemas in src/...');
+console.log('\n[4/5] Auditing Structured Data & JSON-LD Schemas in src/...');
 function scanDir(dir, fileList = []) {
   const entries = fs.readdirSync(dir, { withFileTypes: true });
   for (const entry of entries) {
@@ -213,14 +219,165 @@ for (const file of sourceFiles) {
 
 console.log(`  ✔ Discovered ${schemaCount} schema components/pages with schema types: ${[...schemaTypesFound].join(', ') || 'JsonLd component'}`);
 
+// ── 5. SITEMAP <-> PRERENDER PARITY & SERP HYGIENE AUDIT ──────────────
+console.log('\n[5/5] Auditing Sitemap <-> Prerender Parity & SERP Hygiene...');
+const prerenderScriptPath = path.resolve(__dirname, 'prerender-routes.mjs');
+
+if (!fs.existsSync(sitemapPath) || !fs.existsSync(prerenderScriptPath)) {
+  auditResults.scores.prerenderParity = 0;
+  auditResults.findings.push({
+    category: 'prerender',
+    status: 'FAIL',
+    message: 'Cannot verify parity: public/sitemap.xml or scripts/prerender-routes.mjs is missing.',
+  });
+  auditResults.workOrders.push('Ensure both public/sitemap.xml and scripts/prerender-routes.mjs exist.');
+} else {
+  const sitemapXml = fs.readFileSync(sitemapPath, 'utf8');
+  const sitemapRoutes = [...sitemapXml.matchAll(/<loc>\s*([^<\s]+)\s*<\/loc>/gi)]
+    .map((m) => m[1].replace(SITE_URL, '').replace(/\/+$/, '') || '/')
+    .filter((r) => r !== '/');
+
+  const prerenderSource = fs.readFileSync(prerenderScriptPath, 'utf8');
+  const explicitPrerenderRoutes = [...prerenderSource.matchAll(/route:\s*['"]([^'"]+)['"]/g)].map(
+    (m) => m[1].replace(/\/+$/, '')
+  );
+  const dynamicPseoRoutes = pseoPages.map((p) => {
+    const prefix = p.type === 'for' ? '/for/' : p.type === 'solution' ? '/solutions/' : '/guides/';
+    return `${prefix}${p.slug}`;
+  });
+  const prerenderedSet = new Set([...explicitPrerenderRoutes, ...dynamicPseoRoutes]);
+
+  const unprerenderedSitemapRoutes = sitemapRoutes.filter((r) => !prerenderedSet.has(r));
+
+  if (unprerenderedSitemapRoutes.length > 0) {
+    auditResults.scores.prerenderParity = Math.max(
+      0,
+      auditResults.scores.prerenderParity - unprerenderedSitemapRoutes.length * 10
+    );
+    auditResults.findings.push({
+      category: 'prerender',
+      status: 'FAIL',
+      message: `${unprerenderedSitemapRoutes.length} sitemap route(s) missing from prerender-routes.mjs: ${unprerenderedSitemapRoutes.join(', ')}`,
+    });
+    auditResults.workOrders.push(
+      `Add missing sitemap route(s) to scripts/prerender-routes.mjs: ${unprerenderedSitemapRoutes.join(', ')}`
+    );
+    console.log(`  ✖ Missing from prerender-routes.mjs (${unprerenderedSitemapRoutes.length}): ${unprerenderedSitemapRoutes.join(', ')}`);
+  } else {
+    console.log(`  ✔ 100% sitemap <-> prerender script parity (${sitemapRoutes.length}/${sitemapRoutes.length} routes covered)`);
+    auditResults.findings.push({
+      category: 'prerender',
+      status: 'PASS',
+      message: `All ${sitemapRoutes.length} non-root sitemap routes are configured in prerender-routes.mjs.`,
+    });
+  }
+
+  // Verify built dist/<route>/index.html outputs & SERP hygiene when dist/ is present
+  if (fs.existsSync(path.join(DIST_DIR, 'index.html'))) {
+    const missingDistRoutes = [];
+    const canonicalMismatches = [];
+    const invalidJsonLdRoutes = [];
+    const emojiMetaRoutes = [];
+    const emojiRegex = /\p{Extended_Pictographic}/u;
+
+    for (const route of sitemapRoutes) {
+      const distHtmlPath = path.join(DIST_DIR, route.replace(/^\//, ''), 'index.html');
+      if (!fs.existsSync(distHtmlPath)) {
+        missingDistRoutes.push(route);
+        continue;
+      }
+      const html = fs.readFileSync(distHtmlPath, 'utf8');
+      const expectedCanonical = `${SITE_URL}${route}`;
+      if (!html.includes(`<link rel="canonical" href="${expectedCanonical}"`)) {
+        canonicalMismatches.push(route);
+      }
+      const jsonLdMatch = html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/i);
+      if (!jsonLdMatch) {
+        invalidJsonLdRoutes.push(route);
+      } else {
+        try {
+          JSON.parse(jsonLdMatch[1]);
+        } catch {
+          invalidJsonLdRoutes.push(route);
+        }
+      }
+      const titleText = (html.match(/<title>([\s\S]*?)<\/title>/i) || [, ''])[1];
+      const descText = (html.match(/<meta name="description"[\s\S]*?content="([^"]*)"/i) || [, ''])[1];
+      if (emojiRegex.test(titleText) || emojiRegex.test(descText)) {
+        emojiMetaRoutes.push(route);
+      }
+    }
+
+    if (missingDistRoutes.length > 0) {
+      auditResults.scores.prerenderParity = Math.max(0, auditResults.scores.prerenderParity - 25);
+      auditResults.findings.push({
+        category: 'prerender',
+        status: 'WARN',
+        message: `dist/ is stale — ${missingDistRoutes.length} route HTML file(s) missing: ${missingDistRoutes.join(', ')}`,
+      });
+      auditResults.workOrders.push('Run `npm run build` to regenerate all prerendered dist/<route>/index.html pages.');
+      console.log(`  ! dist/ missing ${missingDistRoutes.length} route HTML file(s) — run npm run build`);
+    } else {
+      console.log(`  ✔ All ${sitemapRoutes.length} sitemap routes verified built in dist/<route>/index.html`);
+    }
+
+    if (canonicalMismatches.length > 0) {
+      auditResults.scores.prerenderParity = Math.max(0, auditResults.scores.prerenderParity - 20);
+      auditResults.findings.push({
+        category: 'prerender',
+        status: 'FAIL',
+        message: `Canonical URL mismatch in dist/ for: ${canonicalMismatches.join(', ')}`,
+      });
+      auditResults.workOrders.push(`Fix self-referencing canonical tags for: ${canonicalMismatches.join(', ')}`);
+    }
+
+    if (invalidJsonLdRoutes.length > 0) {
+      auditResults.scores.prerenderParity = Math.max(0, auditResults.scores.prerenderParity - 20);
+      auditResults.findings.push({
+        category: 'prerender',
+        status: 'FAIL',
+        message: `Missing or invalid JSON-LD in dist/ for: ${invalidJsonLdRoutes.join(', ')}`,
+      });
+      auditResults.workOrders.push(`Fix JSON-LD serialization for: ${invalidJsonLdRoutes.join(', ')}`);
+    }
+
+    if (emojiMetaRoutes.length > 0) {
+      auditResults.scores.prerenderParity = Math.max(0, auditResults.scores.prerenderParity - 10);
+      auditResults.findings.push({
+        category: 'prerender',
+        status: 'WARN',
+        message: `SERP hygiene (Rule B3): Emoji detected in <title> or <meta description> for: ${emojiMetaRoutes.join(', ')}`,
+      });
+      auditResults.workOrders.push(`Strip emojis from SERP titles/descriptions on: ${emojiMetaRoutes.join(', ')}`);
+    }
+
+    if (
+      missingDistRoutes.length === 0 &&
+      canonicalMismatches.length === 0 &&
+      invalidJsonLdRoutes.length === 0 &&
+      emojiMetaRoutes.length === 0
+    ) {
+      console.log('  ✔ Zero canonical mismatches, zero invalid JSON-LD blocks, zero SERP meta emojis');
+      auditResults.findings.push({
+        category: 'prerender',
+        status: 'PASS',
+        message: 'All built dist/ route HTML pages passed self-canonical, valid JSON-LD, and zero-emoji SERP hygiene checks.',
+      });
+    }
+  } else {
+    console.log('  ℹ Skipping dist/ artifact check (run `npm run build` first to verify built HTML outputs)');
+  }
+}
+
 const overallScore = Math.round(
-  (auditResults.scores.crawlerAccess * 0.25) +
-  (auditResults.scores.llmGrounding * 0.35) +
-  (auditResults.scores.sitemapHealth * 0.20) +
-  (auditResults.scores.schemaDepth * 0.20)
+  (auditResults.scores.crawlerAccess * 0.20) +
+  (auditResults.scores.llmGrounding * 0.25) +
+  (auditResults.scores.sitemapHealth * 0.15) +
+  (auditResults.scores.schemaDepth * 0.15) +
+  (auditResults.scores.prerenderParity * 0.25)
 );
 
-// ── 5. GENERATE MARKDOWN WORK ORDER REPORT ─────────────────────────────
+// ── 6. GENERATE MARKDOWN WORK ORDER REPORT ─────────────────────────────
 const reportContent = `# SOE Agentic Search Recon & Autonomous Work Order
 **Generated:** ${auditResults.dateString} (${auditResults.timestamp})  
 **Overall Search Readiness Score:** **${overallScore} / 100**  
@@ -234,6 +391,7 @@ const reportContent = `# SOE Agentic Search Recon & Autonomous Work Order
 | **LLM Context & Grounding** | ${auditResults.scores.llmGrounding}/100 | ${auditResults.scores.llmGrounding >= 90 ? '🟢 Optimal' : '🟡 Review'} |
 | **Sitemap Health & Indexing** | ${auditResults.scores.sitemapHealth}/100 | ${auditResults.scores.sitemapHealth >= 90 ? '🟢 Optimal' : '🟡 Review'} |
 | **Structured Data & Schema** | ${auditResults.scores.schemaDepth}/100 | ${auditResults.scores.schemaDepth >= 90 ? '🟢 Optimal' : '🟡 Review'} |
+| **Prerender & SERP Parity** | ${auditResults.scores.prerenderParity}/100 | ${auditResults.scores.prerenderParity >= 90 ? '🟢 Optimal' : '🟡 Review'} |
 
 ---
 

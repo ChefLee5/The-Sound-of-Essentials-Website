@@ -7,7 +7,7 @@ const AbcMouseAlternatives = () => {
   const [iframeHeight, setIframeHeight] = useState('3600px');
 
   useEffect(() => {
-    document.title = 'The 5 Best ABCmouse Alternatives for Screen-Free Early Literacy in 2026 | The Sound of Essentials.com';
+    document.title = 'The 5 Best ABCmouse Alternatives for Screen-Free Early Literacy in 2026 | The Sound of Essentials';
 
     let metaDesc = document.querySelector('meta[name="description"]');
     if (!metaDesc) {

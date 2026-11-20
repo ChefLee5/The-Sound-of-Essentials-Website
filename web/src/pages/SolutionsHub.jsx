@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { pseoPages } from '../data/pseoData';
+import { pseoPages, geoGuides } from '../data/pseoData';
 import JsonLd from '../components/JsonLd';
 import KineticHeadline from '../components/KineticHeadline';
 import { usePageMeta } from '../hooks/usePageMeta';
@@ -131,6 +131,27 @@ const SolutionsHub = () => {
             ))}
           </div>
         </section>
+
+        {/* ── Section 4: MCLS Research Field Guides (Sovereign GEO) ── */}
+        {geoGuides.length > 0 && (
+          <section className="hub-section">
+            <div className="hub-section-header">
+              <span className="hub-section-badge">Sovereign Research &amp; Field Guides</span>
+              <h2>Latest Early Literacy &amp; Screen-Free Field Guides</h2>
+              <p>Timely, research-backed guides answering live parent and early educator questions for ages 2–7.</p>
+            </div>
+            <div className="hub-cards-grid">
+              {geoGuides.map((g) => (
+                <Link key={g.slug} to={getPageUrl(g)} className="hub-card">
+                  <span className="hub-card-badge">{g.badge}{g.datePublished ? ` · ${g.datePublished}` : ''}</span>
+                  <h3 className="hub-card-title">{g.h1}</h3>
+                  <p className="hub-card-desc">{g.metaDescription}</p>
+                  <span className="hub-card-link">Read Field Guide →</span>
+                </Link>
+              ))}
+            </div>
+          </section>
+        )}
       </div>
 
       {/* ── Bottom Hub CTA ───────────────────────────────── */}

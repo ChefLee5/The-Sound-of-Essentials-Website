@@ -84,6 +84,12 @@ The curriculum spans 5 Core Domains of Essential Learning mapped across 7 Lands 
   - Sovereign Concord Patron Node ($2,500, bespoke master trunk + 0.1% catalog royalty split).
 - **"Share the Sound" Ambassador Program:** Frictionless parent and educator referral loop offering 30% to 35% bounties when families ascend from the free 19-track album gift to the $19 ebook, $35 print workbook, and $14.99/mo Rhythm Pass.
 
+<!-- BEGIN MCLS GEO GUIDES -->
+## Latest MCLS Research Field Guides (Sovereign GEO)
+- [Phonics That Flows Before Flashcards: The Freeze & Guess CVC Blending Wall (Sound-First Rhythm vs. Choppy Segmenting) (Ages 2–7)](https://thesoundofessentials.com/guides/the-freeze-guess-cvc-blending-wall-sound-first): Get effortless sound blending without choppy flashcard drills or guessing tears. Discover how 10 to 15 minutes of screen-free acoustic rhythm and tactile quests support children ages 2–7 in the Land of Harmonia. (Published 2026-11-19 · Land of Harmonia)
+- [Real Music & Tactile Books — Zero Screen Crash: Swiping Paper Books & The Tablet Dopamine Crash (Ages 2–7)](https://thesoundofessentials.com/guides/swiping-paper-books-the-tablet-dopamine-crash): Build calm print readiness without the iPad dopamine crash. Discover how 10 to 15 minutes of screen-free acoustic rhythm and tactile quests support children ages 2–7 in the Land of Aquaria. (Published 2026-11-19 · Land of Aquaria)
+<!-- END MCLS GEO GUIDES -->
+
 ## Official Entity Profiles & Authority Nodes
 - [Bandcamp Official Catalog](https://thesoundofessentials.bandcamp.com): Discography, acoustic tracks, and digital album downloads.
 - [SoundCloud Streaming Hub](https://soundcloud.com/thesoundofessentials): Audio stream gateway and early listening previews.

@@ -101,7 +101,31 @@ const ProgrammaticPersonaPage = () => {
           'text': faq.a
         }
       }))
-    }
+    },
+    ...(page.source === 'mcls-pulse' || page.directAnswer
+      ? [
+          {
+            '@context': 'https://schema.org',
+            '@type': 'BlogPosting',
+            'headline': page.h1,
+            'description': page.metaDescription,
+            'url': `https://thesoundofessentials.com${getPageUrl(page)}`,
+            'datePublished': page.datePublished || '2026-11-19',
+            'dateModified': page.dateModified || page.datePublished || '2026-11-19',
+            'author': {
+              '@type': 'Person',
+              'name': page.author?.name || 'Seriphia & The Sound of Essentials Early Childhood Research Council',
+              'jobTitle': page.author?.jobTitle || 'Early Learning Specialists & Pediatric Sound Neuro-Affirming Team'
+            },
+            'publisher': {
+              '@type': 'Organization',
+              'name': 'The Sound of Essentials',
+              'url': 'https://thesoundofessentials.com'
+            },
+            'mainEntityOfPage': `https://thesoundofessentials.com${getPageUrl(page)}`
+          }
+        ]
+      : [])
   ];
 
   // Related internal links (spokes)
@@ -133,6 +157,28 @@ const ProgrammaticPersonaPage = () => {
           </div>
           <h1 className="pseo-hero-title">{page.h1}</h1>
           <p className="pseo-hero-desc">{page.metaDescription}</p>
+
+          {page.author && (
+            <div className="pseo-author-byline" itemScope itemType="https://schema.org/Person">
+              <span>Curated &amp; Reviewed by </span>
+              <strong itemProp="name">{page.author.name}</strong>
+              {page.author.jobTitle && (
+                <span className="pseo-author-role" itemProp="jobTitle">
+                  {' '}· {page.author.jobTitle}
+                </span>
+              )}
+              {page.datePublished && (
+                <span className="pseo-author-date"> · Updated {page.dateModified || page.datePublished}</span>
+              )}
+            </div>
+          )}
+
+          {page.directAnswer && (
+            <section className="pseo-direct-answer" aria-label="Direct Answer Summary">
+              <div className="pseo-direct-answer-label">Direct Answer · Sound-Before-Symbol Summary</div>
+              <p className="pseo-direct-answer-text">{page.directAnswer}</p>
+            </section>
+          )}
 
           <div className="pseo-quote-card">
             <p className="pseo-quote-text">{page.quote}</p>
@@ -184,6 +230,60 @@ const ProgrammaticPersonaPage = () => {
           </div>
         </div>
       </section>
+
+      {/* ── Discrete Evidence Facts & Brand Icon CTA (GEO/AEO Blueprint C2/C3/D1) ── */}
+      {Array.isArray(page.factBullets) && page.factBullets.length > 0 && (
+        <section className="pseo-section pseo-geo-facts-section">
+          <div className="pseo-container">
+            <div className="pseo-section-header">
+              <span className="pseo-section-eyebrow">Empirical Research &amp; Developmental Facts</span>
+              <h2 className="pseo-section-title">Core Developmental Specifications (Ages 2–7)</h2>
+            </div>
+            <ul className="pseo-fact-bullets">
+              {page.factBullets.map((fact, idx) => (
+                <li key={idx} className="pseo-fact-item">
+                  <span className="pseo-fact-marker" aria-hidden="true">◆</span>
+                  <span>{fact}</span>
+                </li>
+              ))}
+            </ul>
+
+            {page.ctaBlock && (
+              <div className="pseo-brand-cta-block">
+                <div className="pseo-brand-cta-icon-wrap">
+                  <img
+                    src={assetPath('/assets/soe-official-logo.png')}
+                    alt="The Sound of Essentials Emblem"
+                    className="pseo-brand-cta-icon"
+                  />
+                </div>
+                <div className="pseo-brand-cta-copy">
+                  <span className="pseo-brand-cta-eyebrow">{page.ctaBlock.eyebrow}</span>
+                  <h3>{page.ctaBlock.heading}</h3>
+                  <p>{page.ctaBlock.body}</p>
+                </div>
+                <Link to={page.ctaBlock.buttonUrl} className="pseo-btn pseo-btn-primary">
+                  {page.ctaBlock.buttonText}
+                </Link>
+              </div>
+            )}
+
+            {Array.isArray(page.internalLinks) && page.internalLinks.length > 0 && (
+              <div className="pseo-ecosystem-links">
+                <h3 className="pseo-ecosystem-links-title">Connected Rhythm Quest Resources</h3>
+                <div className="pseo-ecosystem-links-grid">
+                  {page.internalLinks.map((lnk, idx) => (
+                    <Link key={idx} to={lnk.url} className="pseo-ecosystem-link-card">
+                      <span className="pseo-ecosystem-link-cat">{lnk.category}</span>
+                      <span className="pseo-ecosystem-link-lbl">{lnk.label} →</span>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        </section>
+      )}
 
       {/* ── Track & Sensory Spotlight ───────────────────── */}
       <section className="pseo-section pseo-track-spotlight">
@@ -362,7 +462,7 @@ const ProgrammaticPersonaPage = () => {
           </div>
           <div className="pseo-hub-link-row">
             <Link to="/solutions" className="pseo-view-all-link">
-              View All 17 Educational Solutions in the Hub →
+              View All {pseoPages.length} Educational Solutions &amp; Field Guides in the Hub →
             </Link>
           </div>
         </div>
