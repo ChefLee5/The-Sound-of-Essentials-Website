@@ -1375,7 +1375,7 @@ const RhythmQuestSale = () => {
                 <RqBuyLink format="print" className="btn btn-gold">Order Physical Print Edition — $45 (Free Shipping)</RqBuyLink>
                 <RqBuyLink format="digital" className="btn btn-outline">Get Instant Digital PDF — $21</RqBuyLink>
                 <a href="#dictionary-presale" className="btn btn-sage">Reserve Picture Dictionary — $55 ↓</a>
-                <Link to="/listen" className="btn btn-sage">Get the Free Album First</Link>
+                <Link to="/listen" className="btn btn-sage">Experience the 19-Track Album First</Link>
               </div>
               <div className="rq-guarantee">
                 <span>🔒</span> 454-page physical print includes Free US Shipping via Lulu POD · Digital PDF delivers immediately

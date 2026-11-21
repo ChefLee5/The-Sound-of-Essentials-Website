@@ -7,6 +7,7 @@
     "dev": "vite",
     "theme:build": "astryx theme build src/themes/soeTheme.ts --out src/themes/soe.css",
     "canon:compile": "node scripts/compile-mcls-canon.mjs",
+    "icons:compile": "node scripts/compile-soe-icons.mjs",
     "catalog:pinterest": "node scripts/generate-pinterest-catalog.mjs",
     "geo:sync": "node scripts/sync-geo-guides.mjs",
     "build": "node scripts/compile-mcls-canon.mjs && node scripts/generate-pinterest-catalog.mjs && node scripts/sync-geo-guides.mjs && vite build && node scripts/prerender-routes.mjs",
@@ -45,6 +46,9 @@
     "react-i18next": "^16.5.4",
     "react-router-dom": "^7.13.0",
     "remotion": "4.0.427",
+    "runeicons": "^0.1.0",
+    "runeicons-brands": "^0.1.0",
+    "runeicons-react": "^0.1.0",
     "three": "^0.174.0"
   },
   "devDependencies": {

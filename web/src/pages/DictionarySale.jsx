@@ -11,6 +11,7 @@ import KineticHeadline from '../components/KineticHeadline';
 import PDPQuestionChips from '../components/PDPQuestionChips';
 import DigitalLicenseNotice from '../components/DigitalLicenseNotice';
 import { usePageMeta } from '../hooks/usePageMeta';
+import { SoeIcon, LandIcon } from '../components/ui/SoeIcon';
 import './DictionarySale.css';
 
 /* ── Land-specific stats from the pipeline knowledge base ── */
@@ -36,12 +37,12 @@ const dictLandNames = {
 };
 
 const features = [
-  { icon: '📖', title: '4,000+ Words', desc: 'Organized across 125 illustrated scenes spanning the full Oxford Picture Dictionary scope.', color: '#FF6F00' },
-  { icon: '🔤', title: 'Phonetic Guides', desc: 'Every word includes pronunciation support — Sound Before Symbol, always.', color: '#4CAF50' },
-  { icon: '🌍', title: 'Bilingual EN/ES', desc: 'Built-in bilingual framework with space for home language equity.', color: '#1E88E5' },
-  { icon: '🗺️', title: '7 Lands', desc: 'From Harmonia to Celestia — vocabulary embedded in a living, character-driven world.', color: '#7B1FA2' },
-  { icon: '👨‍👩‍👧', title: 'Parent/Teacher Guide', desc: 'Includes pedagogical tips, activity ideas, and a complete A-Z visual glossary.', color: '#c4785a' },
-  { icon: '🧠', title: 'Neuro-Affirming', desc: 'Designed for developing brains — not algorithms. Calm, rich, no overstimulation.', color: '#FFB300' },
+  { icon: 'documents-book-bookmark', title: '4,000+ Words', desc: 'Organized across 125 illustrated scenes spanning the full Oxford Picture Dictionary scope.', color: '#FF6F00' },
+  { icon: 'senses-ear', title: 'Phonetic Guides', desc: 'Every word includes pronunciation support — Sound Before Symbol, always.', color: '#4CAF50' },
+  { icon: 'other-globe', title: 'Bilingual EN/ES', desc: 'Built-in bilingual framework with space for home language equity.', color: '#1E88E5' },
+  { icon: 'tools-map', title: '7 Lands', desc: 'From Harmonia to Celestia — vocabulary embedded in a living, character-driven world.', color: '#7B1FA2' },
+  { icon: 'identity-users', title: 'Parent/Teacher Guide', desc: 'Includes pedagogical tips, activity ideas, and a complete A-Z visual glossary.', color: '#c4785a' },
+  { icon: 'tools-sparkles', title: 'Neuro-Affirming', desc: 'Designed for developing brains — not algorithms. Calm, rich, no overstimulation.', color: '#FFB300' },
 ];
 
 const testimonials = [
@@ -210,7 +211,9 @@ const DictionarySale = () => {
             {features.map((f, i) => (
               <RevealSection key={f.title} delay={i * 0.1}>
                 <div className="dict-feature-card" style={{ '--feat-color': f.color }}>
-                  <div className="dict-feature-card__icon">{f.icon}</div>
+                  <div className="dict-feature-card__icon" style={{ color: f.color }}>
+                    <SoeIcon name={f.icon} type="duotone" size={28} />
+                  </div>
                   <h3 className="dict-feature-card__title">{f.title}</h3>
                   <p className="dict-feature-card__desc">{f.desc}</p>
                 </div>
@@ -274,7 +277,9 @@ const DictionarySale = () => {
                     className="dict-land-card"
                     style={{ '--land-color': land.color }}
                   >
-                    <span className="dict-land-card__icon">{land.icon}</span>
+                    <span className="dict-land-card__icon">
+                      <LandIcon landId={land.id} variant="glass" size={32} />
+                    </span>
                     <h4 className="dict-land-card__name">{displayName}</h4>
                     <p className="dict-land-card__focus">{land.focus}</p>
                     <span className="dict-land-card__stats">

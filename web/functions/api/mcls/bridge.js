@@ -1,37 +1,29 @@
 /**
  * Cloudflare Pages Function: /api/mcls/bridge
  * Proprietary SOE Market Campaign Launch System (MCLS) — Remote Command Bridge (JSON-RPC 2.0 / MCP).
- * Allows authorized voice, IDE, or chat clients to query MCLS directives,
- * verify SOE Canon compliance, and stage autonomous unit runs into the Approval Gate.
+ * Unified MCP endpoint giving voice, IDE, or external coworker runtimes (Rerun / Claude / Cursor)
+ * full parity across directives, canon verification, Creative Forge, Rhythm Guardian,
+ * Foreman multi-unit goal compilation, webhook triggers, and browser takeover checkpoints.
  */
 
-const FALLBACK_DB_URL = 'postgresql://neondb_owner:npg_ks2SarDnOB1E@ep-wandering-voice-ae85papv.c-2.us-east-2.aws.neon.tech/neondb?sslmode=require';
+import {
+  DEFAULT_NEON_DB_URL,
+  queryNeon,
+  verifyCanonCompliance,
+  evaluateRhythmGuardian,
+  buildAdBundle,
+  compileForemanPlan,
+  buildWebhookReactiveDraft,
+  buildBrowserTakeoverDraft,
+} from '../../../lib/mclsCore.js';
 
-async function queryNeon(databaseUrl, sql, params = []) {
-  const finalUrl = databaseUrl || FALLBACK_DB_URL;
-  const urlObj = new URL(finalUrl);
-  const neonHttpEndpoint = `https://${urlObj.host}/sql`;
-
-  const res = await fetch(neonHttpEndpoint, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'Neon-Connection-String': finalUrl,
-    },
-    body: JSON.stringify({ query: sql, params }),
-  });
-
-  if (!res.ok) {
-    const err = await res.text();
-    throw new Error(`MCLS Bridge DB Error: ${err}`);
-  }
-  return res.json();
-}
+const FALLBACK_DB_URL = DEFAULT_NEON_DB_URL;
 
 const MCLS_BRIDGE_TOOLS = [
   {
     name: 'mcls_get_directives',
-    description: 'Returns the 5 SOE MCLS Master Strategy Directives and Canonical World Contract (Ages 2–7, 7 Lands, 5 Cultural Deltas).',
+    description:
+      'Returns the 5 SOE MCLS Master Strategy Directives and Canonical World Contract (Ages 2–7, 7 Lands, 5 Cultural Deltas).',
     inputSchema: {
       type: 'object',
       properties: {},
@@ -39,7 +31,8 @@ const MCLS_BRIDGE_TOOLS = [
   },
   {
     name: 'mcls_list_pending_approvals',
-    description: 'Lists all pending Human-in-the-Loop approval cards staged by MCLS Autonomous Units.',
+    description:
+      'Lists all pending Human-in-the-Loop approval cards staged by MCLS Autonomous Units.',
     inputSchema: {
       type: 'object',
       properties: {
@@ -49,7 +42,8 @@ const MCLS_BRIDGE_TOOLS = [
   },
   {
     name: 'mcls_verify_canon_copy',
-    description: 'Audits draft marketing, curriculum, or ad copy against SOE Helix Gate 1 Canon rules (Ages 2–7, zero banned entities).',
+    description:
+      'Audits draft marketing, curriculum, or ad copy against SOE Helix Gate 1 Canon rules (Ages 2–7, zero banned entities).',
     inputSchema: {
       type: 'object',
       properties: {
@@ -60,53 +54,190 @@ const MCLS_BRIDGE_TOOLS = [
   },
   {
     name: 'mcls_stage_unit_task',
-    description: 'Stages a new task for an MCLS Autonomous Unit (MCLS-PRIME, MCLS-RECON, MCLS-FORGE, MCLS-PULSE, MCLS-STUDIO, MCLS-CONCORD). Always pauses in the Approval Gate before going live.',
+    description:
+      'Stages a new task for an MCLS Autonomous Unit (MCLS-PRIME, MCLS-RECON, MCLS-FORGE, MCLS-PULSE, MCLS-STUDIO, MCLS-CONCORD). Always pauses in the Approval Gate before going live.',
     inputSchema: {
       type: 'object',
       properties: {
         unit_key: {
           type: 'string',
-          enum: ['MCLS-PRIME', 'MCLS-RECON', 'MCLS-FORGE', 'MCLS-PULSE', 'MCLS-STUDIO', 'MCLS-CONCORD'],
+          enum: [
+            'MCLS-PRIME',
+            'MCLS-RECON',
+            'MCLS-FORGE',
+            'MCLS-PULSE',
+            'MCLS-STUDIO',
+            'MCLS-CONCORD',
+            'MCLS-GUARDIAN',
+            'MCLS-INTEL-SCOUT',
+            'MCLS-AUTOPILOT',
+          ],
         },
         delta_key: {
           type: 'string',
-          enum: ['SCREEN_VS_SENSORY', 'ALGORITHM_VS_HANDCRAFTED', 'TESTING_VS_ARTS', 'INSTITUTION_VS_SANCTUARY', 'CONSUMPTION_VS_QUEST'],
+          enum: [
+            'SCREEN_VS_SENSORY',
+            'ALGORITHM_VS_HANDCRAFTED',
+            'TESTING_VS_ARTS',
+            'INSTITUTION_VS_SANCTUARY',
+            'CONSUMPTION_VS_QUEST',
+          ],
         },
         directive_note: { type: 'string', description: 'Specific campaign or objective instructions' },
       },
       required: ['unit_key', 'directive_note'],
     },
   },
+  {
+    name: 'mcls_forge_ad_bundle',
+    description:
+      'Edge Parity: Builds a canon-verified 3-Layer Meta/Pinterest Ad Variant (Ache -> Solution -> Zero-Risk Invitation) in PAUSED safety state.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        archetype_id: { type: 'string', default: 'ARC-01' },
+        delta: {
+          type: 'string',
+          enum: [
+            'SCREEN_VS_SENSORY',
+            'ALGORITHM_VS_HANDCRAFTED',
+            'TESTING_VS_ARTS',
+            'INSTITUTION_VS_SANCTUARY',
+            'CONSUMPTION_VS_QUEST',
+          ],
+          default: 'SCREEN_VS_SENSORY',
+        },
+        campaign: { type: 'string', default: 'THE_ENEMY' },
+        language: { type: 'string', enum: ['en', 'es', 'fr'], default: 'en' },
+        buyer_track: { type: 'string', enum: ['D2C', 'B2B'], default: 'D2C' },
+        engine_type: {
+          type: 'string',
+          enum: ['ENGINE_A_VALUE_GATE', 'ENGINE_B_DIRECT_OFFER'],
+          default: 'ENGINE_A_VALUE_GATE',
+        },
+      },
+    },
+  },
+  {
+    name: 'mcls_evaluate_rhythm_guardian',
+    description:
+      'Edge Parity: Evaluates ad performance metrics against dual-horizon Engine A (<= $2.50 Lead CPA, 90-day protection) & Engine B ROAS guardrails.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        ad_metrics: {
+          type: 'array',
+          description: 'Array of ad metric objects ({ ad_id, spend, leads, purchases, ctr, current_budget_cents, engine_type }).',
+          items: { type: 'object' },
+        },
+      },
+      required: ['ad_metrics'],
+    },
+  },
+  {
+    name: 'mcls_foreman_compile_goal',
+    description:
+      'Foreman Compiler: Converts a plain-English growth goal into a canon-verified multi-unit MCLS execution plan and optionally stages approval cards in Neon.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        goal: { type: 'string', description: 'Plain-English campaign or B2B growth goal.' },
+        delta_key: { type: 'string', default: 'SCREEN_VS_SENSORY' },
+        campaign_key: { type: 'string', default: 'THE_ENEMY' },
+        engine_type: { type: 'string', default: 'ENGINE_A_VALUE_GATE' },
+        daily_budget: { type: 'number', default: 20 },
+        stage_cards: { type: 'boolean', default: true },
+      },
+      required: ['goal'],
+    },
+  },
+  {
+    name: 'mcls_trigger_webhook_event',
+    description:
+      'Event Trigger: Translates a business/funnel webhook (e.g., stripe.checkout.completed, brevo.b2b_reply, funnel.cpa_spike, portal.takeover_needed) into a gated MCLS approval card.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        event_type: { type: 'string' },
+        source: { type: 'string', default: 'mcp_bridge' },
+        event_data: { type: 'object' },
+        stage_card: { type: 'boolean', default: true },
+      },
+      required: ['event_type'],
+    },
+  },
+  {
+    name: 'mcls_stage_browser_takeover',
+    description:
+      'Coworker Box Handoff: Stages a Tier 2 browser checkpoint card in mcls_approvals when an authenticated portal/UI workflow pauses for 2FA, CAPTCHA, or final human review.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        unit_key: { type: 'string', default: 'MCLS-CONCORD' },
+        target_url: { type: 'string' },
+        checkpoint_reason: { type: 'string', default: 'FINAL_PORTAL_SUBMIT' },
+        task_summary: { type: 'string' },
+        vnc_or_worker_url: { type: 'string' },
+        resume_instructions: { type: 'string' },
+      },
+      required: ['target_url', 'task_summary'],
+    },
+  },
 ];
 
-function auditCanonCopy(text = '') {
-  const issues = [];
-  if (/\bAges?\s*2\s*[-–—]\s*8\b/i.test(text)) {
-    issues.push('Age creep detected: must be strictly Ages 2–7 (Pre-K to Grade 2).');
-  }
-  if (/\bGrade\s*3\b/i.test(text)) {
-    issues.push('Grade ceiling violation: Grade 2 is the canonical ceiling.');
-  }
-  if (/\blive\s+(instrumentation|instruments?|orchestra|music|acoustic|organic)\b/i.test(text)) {
-    issues.push('Audio production canon violation: describe as 19 master studio recordings with authentic human vocals and warm acoustic arrangements.');
-  }
-  return {
-    canon_status: issues.length === 0 ? 'PASS' : 'BLOCKED',
-    issues,
-  };
+function jsonResponse(payload, status = 200) {
+  return new Response(JSON.stringify(payload), {
+    status,
+    headers: { 'Content-Type': 'application/json' },
+  });
+}
+
+function mcpTextResponse(id, data) {
+  return jsonResponse({
+    jsonrpc: '2.0',
+    id,
+    result: {
+      content: [{ type: 'text', text: JSON.stringify(data, null, 2) }],
+    },
+  });
+}
+
+async function insertApprovalDraft(databaseUrl, draft) {
+  const ins = await queryNeon(
+    databaseUrl,
+    `INSERT INTO mcls_approvals
+      (unit_key, action_type, title, channel, target_destination, delta_alignment, canon_status, estimated_cost, status, summary, payload)
+     VALUES ($1, $2, $3, $4, $5, $6, $7, $8, 'pending', $9, $10)
+     RETURNING *;`,
+    [
+      draft.unit_key,
+      draft.action_type,
+      draft.title,
+      draft.channel,
+      draft.target_destination,
+      draft.delta_alignment || 'SCREEN_VS_SENSORY',
+      draft.canon_status || 'PASS',
+      draft.estimated_cost || '$0.00 (Staged)',
+      draft.summary,
+      JSON.stringify({
+        ...(draft.payload || {}),
+        canon_verification: draft.preflight || null,
+      }),
+    ]
+  );
+  return ins.rows?.[0] || null;
 }
 
 export async function onRequestGet() {
-  return new Response(
-    JSON.stringify({
-      bridge: 'SOE Market Campaign Launch System (MCLS) Remote Bridge',
-      protocol: 'JSON-RPC 2.0 / MCP Streamable HTTP',
-      status: 'ONLINE',
-      safety_invariant: 'All public publishing, repository PRs, and paid media dispatches pause in mcls_approvals for operator authorization.',
-      tools: MCLS_BRIDGE_TOOLS,
-    }),
-    { status: 200, headers: { 'Content-Type': 'application/json' } }
-  );
+  return jsonResponse({
+    bridge: 'SOE Market Campaign Launch System (MCLS) Remote Bridge',
+    protocol: 'JSON-RPC 2.0 / MCP Streamable HTTP',
+    version: '2.5.0',
+    status: 'ONLINE',
+    safety_invariant:
+      'All public publishing, repository PRs, browser submissions, and paid media dispatches pause in mcls_approvals for operator authorization.',
+    tools: MCLS_BRIDGE_TOOLS,
+  });
 }
 
 export async function onRequestPost(context) {
@@ -117,32 +248,26 @@ export async function onRequestPost(context) {
     const { id = 1, method, params = {} } = body;
 
     if (method === 'initialize') {
-      return new Response(
-        JSON.stringify({
-          jsonrpc: '2.0',
-          id,
-          result: {
-            protocolVersion: '2025-03-26',
-            serverInfo: {
-              name: 'soe-mcls-command-bridge',
-              version: '2.4.0',
-            },
-            capabilities: { tools: {} },
+      return jsonResponse({
+        jsonrpc: '2.0',
+        id,
+        result: {
+          protocolVersion: '2025-03-26',
+          serverInfo: {
+            name: 'soe-mcls-command-bridge',
+            version: '2.5.0',
           },
-        }),
-        { status: 200, headers: { 'Content-Type': 'application/json' } }
-      );
+          capabilities: { tools: {} },
+        },
+      });
     }
 
     if (method === 'tools/list') {
-      return new Response(
-        JSON.stringify({
-          jsonrpc: '2.0',
-          id,
-          result: { tools: MCLS_BRIDGE_TOOLS },
-        }),
-        { status: 200, headers: { 'Content-Type': 'application/json' } }
-      );
+      return jsonResponse({
+        jsonrpc: '2.0',
+        id,
+        result: { tools: MCLS_BRIDGE_TOOLS },
+      });
     }
 
     if (method === 'tools/call') {
@@ -150,17 +275,11 @@ export async function onRequestPost(context) {
       const args = params.arguments || {};
 
       if (toolName === 'mcls_get_directives') {
-        const res = await queryNeon(databaseUrl, 'SELECT directive_key, doc_number, title, category, summary, content FROM mcls_directives ORDER BY doc_number ASC;');
-        return new Response(
-          JSON.stringify({
-            jsonrpc: '2.0',
-            id,
-            result: {
-              content: [{ type: 'text', text: JSON.stringify(res.rows, null, 2) }],
-            },
-          }),
-          { status: 200, headers: { 'Content-Type': 'application/json' } }
+        const res = await queryNeon(
+          databaseUrl,
+          'SELECT directive_key, doc_number, title, category, summary, content FROM mcls_directives ORDER BY doc_number ASC;'
         );
+        return mcpTextResponse(id, res.rows);
       }
 
       if (toolName === 'mcls_list_pending_approvals') {
@@ -171,89 +290,92 @@ export async function onRequestPost(context) {
            FROM mcls_approvals WHERE status = 'pending' ORDER BY created_at DESC LIMIT $1;`,
           [limit]
         );
-        return new Response(
-          JSON.stringify({
-            jsonrpc: '2.0',
-            id,
-            result: {
-              content: [{ type: 'text', text: JSON.stringify(res.rows, null, 2) }],
-            },
-          }),
-          { status: 200, headers: { 'Content-Type': 'application/json' } }
-        );
+        return mcpTextResponse(id, res.rows);
       }
 
       if (toolName === 'mcls_verify_canon_copy') {
-        const check = auditCanonCopy(args.copy_text || '');
-        return new Response(
-          JSON.stringify({
-            jsonrpc: '2.0',
-            id,
-            result: {
-              content: [{ type: 'text', text: JSON.stringify(check, null, 2) }],
-            },
-          }),
-          { status: 200, headers: { 'Content-Type': 'application/json' } }
-        );
+        const check = verifyCanonCompliance(args.copy_text || '');
+        return mcpTextResponse(id, {
+          canon_status: check.status,
+          passed: check.passed,
+          issues: check.violations,
+        });
       }
 
       if (toolName === 'mcls_stage_unit_task') {
         const unitKey = args.unit_key || 'MCLS-PRIME';
         const deltaKey = args.delta_key || 'SCREEN_VS_SENSORY';
         const note = args.directive_note || 'Staged via MCLS Remote Bridge';
-        const canon = auditCanonCopy(note);
+        const canon = verifyCanonCompliance(note);
 
-        const ins = await queryNeon(
-          databaseUrl,
-          `INSERT INTO mcls_approvals
-            (unit_key, action_type, title, channel, target_destination, delta_alignment, canon_status, estimated_cost, status, summary, payload)
-           VALUES ($1, 'bridge_staged_task', $2, 'MCLS Remote Bridge', 'Awaiting Operator Authorization', $3, $4, '$0.00 (Staged)', 'pending', $5, $6)
-           RETURNING *;`,
-          [
-            unitKey,
-            `[${unitKey}] ${note.slice(0, 120)}`,
-            deltaKey,
-            canon.canon_status,
-            `Staged via MCLS Remote Command Bridge: ${note}`,
-            JSON.stringify({ directive_note: note, canon_audit: canon }),
-          ]
-        );
-
-        return new Response(
-          JSON.stringify({
-            jsonrpc: '2.0',
-            id,
-            result: {
-              content: [{ type: 'text', text: JSON.stringify(ins.rows[0], null, 2) }],
-            },
-          }),
-          { status: 200, headers: { 'Content-Type': 'application/json' } }
-        );
+        const row = await insertApprovalDraft(databaseUrl, {
+          unit_key: unitKey,
+          action_type: 'bridge_staged_task',
+          title: `[${unitKey}] ${note.slice(0, 120)}`,
+          channel: 'MCLS Remote Bridge',
+          target_destination: 'Awaiting Operator Authorization',
+          delta_alignment: deltaKey,
+          canon_status: canon.status,
+          estimated_cost: '$0.00 (Staged)',
+          summary: `Staged via MCLS Remote Command Bridge: ${note}`,
+          payload: { directive_note: note, canon_audit: canon },
+        });
+        return mcpTextResponse(id, row);
       }
 
-      return new Response(
-        JSON.stringify({
+      if (toolName === 'mcls_forge_ad_bundle') {
+        return mcpTextResponse(id, buildAdBundle(args));
+      }
+
+      if (toolName === 'mcls_evaluate_rhythm_guardian') {
+        return mcpTextResponse(id, evaluateRhythmGuardian(args.ad_metrics || []));
+      }
+
+      if (toolName === 'mcls_foreman_compile_goal') {
+        const plan = compileForemanPlan(args);
+        const shouldStage = args.stage_cards !== false;
+        const approvals = [];
+        if (shouldStage) {
+          for (const task of plan.tasks) {
+            const row = await insertApprovalDraft(databaseUrl, task);
+            if (row) approvals.push(row);
+          }
+        }
+        return mcpTextResponse(id, { plan, staged_count: approvals.length, approvals });
+      }
+
+      if (toolName === 'mcls_trigger_webhook_event') {
+        const draft = buildWebhookReactiveDraft(args);
+        const approval =
+          args.stage_card !== false ? await insertApprovalDraft(databaseUrl, draft) : null;
+        return mcpTextResponse(id, { draft, approval });
+      }
+
+      if (toolName === 'mcls_stage_browser_takeover') {
+        const draft = buildBrowserTakeoverDraft(args);
+        const approval = await insertApprovalDraft(databaseUrl, draft);
+        return mcpTextResponse(id, { draft, approval });
+      }
+
+      return jsonResponse(
+        {
           jsonrpc: '2.0',
           id,
           error: { code: -32601, message: `Unknown MCLS tool: ${toolName}` },
-        }),
-        { status: 400, headers: { 'Content-Type': 'application/json' } }
+        },
+        400
       );
     }
 
-    return new Response(
-      JSON.stringify({
+    return jsonResponse(
+      {
         jsonrpc: '2.0',
         id,
         error: { code: -32600, message: 'Unsupported JSON-RPC method' },
-      }),
-      { status: 400, headers: { 'Content-Type': 'application/json' } }
+      },
+      400
     );
   } catch (err) {
-    return new Response(JSON.stringify({ error: err.message }), {
-      status: 500,
-      headers: { 'Content-Type': 'application/json' },
-    });
+    return jsonResponse({ error: err.message }, 500);
   }
 }
-

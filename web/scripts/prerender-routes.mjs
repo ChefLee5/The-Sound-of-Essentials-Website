@@ -17,6 +17,14 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { pseoPages } from '../src/data/pseoData.js';
+import {
+  ALL_RESOURCE_PILLARS,
+  RESOURCE_ARTICLES,
+  RESOURCE_AUTHOR,
+  RESOURCE_PILLARS,
+  getArticlesByPillar,
+  getPillarById,
+} from '../src/data/resourcesData.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -104,7 +112,8 @@ function layoutEditorialShell(innerMainHtml) {
       <nav aria-label="Main Navigation">
         <a href="/" style="font-weight: 700; color: #FF6F00; text-decoration: none; font-size: 1.25rem; display: inline-block; margin-bottom: 0.5rem;">The Sound of Essentials: Rhythm Quest</a>
         <div style="margin-top: 0.5rem; font-size: 0.92rem; display: flex; gap: 0.6rem 1rem; flex-wrap: wrap;">
-          <a href="/listen" style="padding: 0.25rem 0.5rem; text-decoration: none; color: #2B2016;">Free 19-Track Album</a>
+          <a href="/listen" style="padding: 0.25rem 0.5rem; text-decoration: none; color: #2B2016;">The 19-Track Album</a>
+          <a href="/resources" style="padding: 0.25rem 0.5rem; text-decoration: none; color: #2B2016;">Learning Library</a>
           <a href="/rhythm-ready" style="padding: 0.25rem 0.5rem; text-decoration: none; color: #2B2016;">Rhythm Ready Workbook</a>
           <a href="/workbook" style="padding: 0.25rem 0.5rem; text-decoration: none; color: #2B2016;">Picture Dictionary</a>
           <a href="/heroes" style="padding: 0.25rem 0.5rem; text-decoration: none; color: #2B2016;">15 Hero Mentors &amp; 7 Lands</a>
@@ -129,7 +138,8 @@ function layoutShell({ h1, badge, bodyHtml }) {
       <nav aria-label="Main Navigation">
         <a href="/" style="font-weight: 700; color: #FF6F00; text-decoration: none; font-size: 1.25rem; display: inline-block; margin-bottom: 0.5rem;">The Sound of Essentials: Rhythm Quest</a>
         <div style="margin-top: 0.5rem; font-size: 0.92rem; display: flex; gap: 0.6rem 1rem; flex-wrap: wrap;">
-          <a href="/listen" style="padding: 0.25rem 0.5rem; text-decoration: none; color: #2B2016;">Free 19-Track Album</a>
+          <a href="/listen" style="padding: 0.25rem 0.5rem; text-decoration: none; color: #2B2016;">The 19-Track Album</a>
+          <a href="/resources" style="padding: 0.25rem 0.5rem; text-decoration: none; color: #2B2016;">Learning Library</a>
           <a href="/rhythm-ready" style="padding: 0.25rem 0.5rem; text-decoration: none; color: #2B2016;">Rhythm Ready Workbook</a>
           <a href="/workbook" style="padding: 0.25rem 0.5rem; text-decoration: none; color: #2B2016;">Picture Dictionary</a>
           <a href="/heroes" style="padding: 0.25rem 0.5rem; text-decoration: none; color: #2B2016;">15 Hero Mentors &amp; 7 Lands</a>
@@ -767,6 +777,154 @@ const routes = [
               ${p.faqs.map((f) => `<h3>${escapeHtml(f.q)}</h3><p>${escapeHtml(f.a)}</p>`).join('\n              ')}
             </section>
           ` : ''}
+        `,
+      }),
+    };
+  }),
+  // ── 4-Part SOE Learning Library + 5 Series Pillars + 22 Guides ──────────
+  {
+    route: '/resources',
+    title: 'The Learning Library — 4-Part Screen-Free Guides for Ages 2–7 | SOE',
+    description:
+      'Practical guides, daily sound-play rituals, kindergarten readiness checklists, and classroom blueprints that extend The Sound of Essentials for ages 2–7.',
+    extraSchemas: [
+      {
+        '@type': 'CollectionPage',
+        name: 'The Sound of Essentials Learning Library (Ages 2–7)',
+        url: `${SITE_URL}/resources`,
+        description:
+          'Curated 4-part screen-free early childhood learning library covering Sound Foundations, Play & Daily Practice, Kindergarten Readiness, and Home & Classroom Systems for ages 2–7.',
+      },
+    ],
+    bodyHtml: layoutShell({
+      badge: 'Rhythm Quest Library · Ages 2–7',
+      h1: 'The Learning Library',
+      bodyHtml: `
+        <p>Practical guides, daily rituals, and classroom blueprints to deepen your Rhythm Quest journey—organized in four connected stages.</p>
+        ${RESOURCE_PILLARS.map((pillar) => {
+          const items = getArticlesByPillar(pillar.id).slice(0, 5);
+          return `
+            <section>
+              <h2><a href="${escapeHtml(pillar.path)}">${escapeHtml(pillar.partLabel)}</a></h2>
+              <p>${escapeHtml(pillar.description)}</p>
+              <ul>
+                ${items.map((a) => `<li><a href="/resources/${escapeHtml(a.slug)}">${escapeHtml(a.title)}</a> (${a.readTimeMinutes} min read)</li>`).join('\n                ')}
+              </ul>
+            </section>
+          `;
+        }).join('\n')}
+        <section>
+          <h2><a href="/resources/notes">The SOE Sound Notes Archive</a></h2>
+          <p>Weekly 5-minute sound-play notes from Seriphia, dual-published for families and early educators of ages 2–7.</p>
+        </section>
+      `,
+    }),
+  },
+  ...ALL_RESOURCE_PILLARS.map((pillar) => {
+    const items = getArticlesByPillar(pillar.id);
+    const canonicalUrl = `${SITE_URL}${pillar.path}`;
+    return {
+      route: pillar.path,
+      title: `${pillar.partLabel} — SOE Resources (Ages 2–7)`,
+      description: pillar.description,
+      extraSchemas: [
+        {
+          '@type': 'CollectionPage',
+          name: pillar.partLabel,
+          url: canonicalUrl,
+          description: pillar.description,
+        },
+        {
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Resources', item: `${SITE_URL}/resources` },
+            { '@type': 'ListItem', position: 2, name: pillar.shortTitle, item: canonicalUrl },
+          ],
+        },
+      ],
+      bodyHtml: layoutShell({
+        badge: `${pillar.cardKicker} · ${items.length} Guides`,
+        h1: pillar.partLabel,
+        bodyHtml: `
+          <p>${escapeHtml(pillar.description)}</p>
+          <ul>
+            ${items.map((a) => `<li><a href="/resources/${escapeHtml(a.slug)}"><strong>${escapeHtml(a.title)}</strong></a> (${a.readTimeMinutes} min read) — ${escapeHtml(a.description)}</li>`).join('\n            ')}
+          </ul>
+          <p><a href="${escapeHtml(pillar.offerBridge.ctaUrl)}">${escapeHtml(pillar.offerBridge.ctaLabel)}</a> &middot; <a href="/resources">Back to Resources Hub</a></p>
+        `,
+      }),
+    };
+  }),
+  ...RESOURCE_ARTICLES.map((article) => {
+    const pillar = getPillarById(article.pillarId);
+    const route = `/resources/${article.slug}`;
+    const canonicalUrl = `${SITE_URL}${route}`;
+    const extraSchemas = [
+      {
+        '@type': 'Article',
+        headline: article.title,
+        description: article.description,
+        url: canonicalUrl,
+        datePublished: article.publishedAt,
+        dateModified: article.updatedAt || article.publishedAt,
+        author: {
+          '@type': 'Person',
+          name: RESOURCE_AUTHOR.name,
+          jobTitle: RESOURCE_AUTHOR.role,
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: 'The Sound of Essentials',
+          url: SITE_URL,
+        },
+        mainEntityOfPage: canonicalUrl,
+        articleSection: pillar?.partLabel || 'SOE Resources',
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Resources', item: `${SITE_URL}/resources` },
+          ...(pillar
+            ? [{ '@type': 'ListItem', position: 2, name: pillar.shortTitle, item: `${SITE_URL}${pillar.path}` }]
+            : []),
+          { '@type': 'ListItem', position: pillar ? 3 : 2, name: article.title, item: canonicalUrl },
+        ],
+      },
+    ];
+    if (Array.isArray(article.faqs) && article.faqs.length > 0) {
+      extraSchemas.push({
+        '@type': 'FAQPage',
+        mainEntity: article.faqs.map((f) => ({
+          '@type': 'Question',
+          name: f.q,
+          acceptedAnswer: { '@type': 'Answer', text: f.a },
+        })),
+      });
+    }
+    return {
+      route,
+      title: article.metaTitle || `${article.title} | SOE Resources`,
+      description: article.description,
+      extraSchemas,
+      bodyHtml: layoutShell({
+        badge: `${pillar?.partLabel || 'SOE Resources'} · ${article.readTimeMinutes} min read · Ages 2–7`,
+        h1: article.title,
+        bodyHtml: `
+          <p><strong>Key Takeaway:</strong> ${escapeHtml(article.directAnswer)}</p>
+          ${article.sections
+            .map(
+              (sec) => `
+            <section>
+              <h2>${escapeHtml(sec.heading)}</h2>
+              ${(sec.paragraphs || []).map((p) => `<p>${escapeHtml(p)}</p>`).join('\n              ')}
+              ${Array.isArray(sec.bullets) && sec.bullets.length > 0 ? `<ul>${sec.bullets.map((b) => `<li>${escapeHtml(b)}</li>`).join('')}</ul>` : ''}
+              ${sec.callout ? `<blockquote><strong>${escapeHtml(sec.callout.title)}:</strong> ${escapeHtml(sec.callout.text)}</blockquote>` : ''}
+            </section>
+          `
+            )
+            .join('\n')}
+          ${Array.isArray(article.faqs) && article.faqs.length > 0 ? `<section><h2>Common Questions</h2>${article.faqs.map((f) => `<h3>${escapeHtml(f.q)}</h3><p>${escapeHtml(f.a)}</p>`).join('')}</section>` : ''}
+          <p><a href="/listen">Experience the 19-Track Album</a> &middot; <a href="/resources">Explore All 4 Parts</a></p>
         `,
       }),
     };

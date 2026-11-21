@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { assetPath } from '../utils/assetPath';
+import { SoeIcon } from './ui/SoeIcon';
 
 const Navbar = () => {
   const { t, i18n } = useTranslation();
@@ -60,10 +61,10 @@ const Navbar = () => {
     { to: '/heroes',     label: t('navbar.heroes') },
     { to: '/science',    label: t('navbar.science') },
     { to: '/listen',     label: t('navbar.media') },
-    { to: '/workbook',   label: '📘 Workbook' },
-    { to: '/headphones', label: '🎧 Headphones' },
-    { to: '/gallery',    label: '📖 Gallery' },
-    { to: '/join',       label: '✉️ ' + t('navbar.contact', 'Contact') },
+    { to: '/resources',  label: 'Resources', icon: 'documents-library' },
+    { to: '/workbook',   label: 'Workbook', icon: 'documents-book-bookmark' },
+    { to: '/headphones', label: 'Headphones', icon: 'senses-ear' },
+    { to: '/gallery',    label: 'Gallery', icon: 'playback-images' },
   ];
 
   const isActive = (to) =>
@@ -85,7 +86,9 @@ const Navbar = () => {
             alt="The Sound of Essentials Official Logo"
             className="navbar__logo-img"
           />
-          <div className="navbar__logo-sparkle" aria-hidden="true">✨</div>
+          <div className="navbar__logo-sparkle" aria-hidden="true">
+            <SoeIcon name="tools-sparkles" type="fill" size={13} style={{ color: '#FF6F00' }} />
+          </div>
         </div>
         <span className="navbar__logo-wordmark">
           <span className="navbar__logo-soe">The Sound of Essentials</span>
@@ -104,25 +107,24 @@ const Navbar = () => {
             onClick={() => setMenuOpen(false)}
             aria-label="Close menu"
           >
-            ✕
+            <SoeIcon name="indicators-x" size={20} />
           </button>
         </div>
 
-        {navLinks.map(({ to, label }) => (
-          <Link
-            key={to}
-            to={to}
-            className={`navbar__link ${isActive(to) ? 'navbar__link--active' : ''}`}
-            aria-current={isActive(to) ? 'page' : undefined}
-          >
-            {label}
-          </Link>
-        ))}
-
-        {/* CTA inside mobile drawer */}
-        <Link to="/listen" className="navbar__cta-btn navbar__cta-btn--mobile">
-          🎧 Listen Free
-        </Link>
+        {navLinks.map(({ to, label, icon }) => {
+          const active = isActive(to);
+          return (
+            <Link
+              key={to}
+              to={to}
+              className={`navbar__link ${active ? 'navbar__link--active' : ''}`}
+              aria-current={active ? 'page' : undefined}
+            >
+              {icon && <SoeIcon name={icon} type={active ? 'fill' : 'normal'} size={15} />}
+              <span>{label}</span>
+            </Link>
+          );
+        })}
       </div>
 
       {/* ── Right controls ── */}
@@ -138,7 +140,9 @@ const Navbar = () => {
           >
             <span className="navbar__lang-flag">{currentLangObj.flag}</span>
             <span className="navbar__lang-code">{currentLangObj.short}</span>
-            <span className={`navbar__lang-chevron ${langOpen ? 'navbar__lang-chevron--open' : ''}`}>▾</span>
+            <span className={`navbar__lang-chevron ${langOpen ? 'navbar__lang-chevron--open' : ''}`}>
+              <SoeIcon name="arrows-chevron-down" size={13} />
+            </span>
           </button>
 
           {langOpen && (
@@ -153,16 +157,16 @@ const Navbar = () => {
                 >
                   <span className="navbar__lang-option-flag">{l.flag}</span>
                   <span className="navbar__lang-option-label">{l.label}</span>
-                  {l.code === currentLang && <span className="navbar__lang-option-check">✓</span>}
+                  {l.code === currentLang && (
+                    <span className="navbar__lang-option-check">
+                      <SoeIcon name="indicators-check" size={14} />
+                    </span>
+                  )}
                 </button>
               ))}
             </div>
           )}
         </div>
-
-        <Link to="/listen" className="navbar__cta-btn">
-          🎧 Listen Free
-        </Link>
 
         {/* Mobile hamburger */}
         <button
@@ -341,6 +345,9 @@ const Navbar = () => {
         }
 
         .navbar__link {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.35rem;
           font-family: var(--font-display);
           font-weight: 600;
           font-size: 0.88rem;
@@ -375,11 +382,6 @@ const Navbar = () => {
           border-radius: 99px;
         }
 
-        /* Hide mobile-only CTA on desktop */
-        .navbar__cta-btn--mobile {
-          display: none;
-        }
-
         /* ── Right controls ── */
         .navbar__right {
           display: flex;
@@ -389,6 +391,9 @@ const Navbar = () => {
         }
 
         .navbar__cta-btn {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.4rem;
           font-family: var(--font-display);
           font-weight: 700;
           font-size: 0.88rem;
@@ -401,6 +406,11 @@ const Navbar = () => {
           transition: transform 0.2s ease, box-shadow 0.2s ease;
           white-space: nowrap;
           box-shadow: 0 2px 10px rgba(76,175,80,0.3);
+        }
+
+        /* Hide mobile-only CTA on desktop (declared after .navbar__cta-btn so cascade wins) */
+        .navbar__cta-btn.navbar__cta-btn--mobile {
+          display: none;
         }
 
         .navbar__cta-btn:hover {
@@ -537,7 +547,7 @@ const Navbar = () => {
           }
 
           /* Mobile CTA inside drawer */
-          .navbar__cta-btn--mobile {
+          .navbar__cta-btn.navbar__cta-btn--mobile {
             display: inline-flex;
             align-items: center;
             justify-content: center;
@@ -573,10 +583,48 @@ const Navbar = () => {
           }
         }
 
+        @media (max-width: 1440px) and (min-width: 841px) {
+          .navbar {
+            padding: 0 1.15rem;
+          }
+          .navbar__links {
+            gap: 0.1rem;
+          }
+          .navbar__link {
+            font-size: 0.8rem;
+            padding: 0.4rem 0.46rem;
+            gap: 0.25rem;
+          }
+          .navbar__right {
+            gap: 0.45rem;
+          }
+          .navbar__lang-btn {
+            padding: 0.38rem 0.65rem;
+            font-size: 0.78rem;
+          }
+          .navbar__cta-btn {
+            padding: 0.45rem 0.95rem;
+            font-size: 0.8rem;
+          }
+        }
+
+        @media (max-width: 1320px) and (min-width: 841px) {
+          .navbar__logo-sub {
+            display: none;
+          }
+          .navbar__logo-soe {
+            font-size: 0.76rem;
+          }
+          .navbar__link {
+            font-size: 0.78rem;
+            padding: 0.38rem 0.4rem;
+          }
+        }
+
         @media (max-width: 1024px) and (min-width: 841px) {
           .navbar__link {
-            font-size: 0.82rem;
-            padding: 0.4rem 0.55rem;
+            font-size: 0.76rem;
+            padding: 0.36rem 0.36rem;
           }
         }
 

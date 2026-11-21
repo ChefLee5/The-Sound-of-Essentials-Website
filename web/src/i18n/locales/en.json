@@ -55,18 +55,18 @@
         "hero_offer": {
             "eyebrow": "EDUCATION CONCORD · SCREEN-FREE LEARNING ADVOCACY (AGES 2–7)",
             "title_main": "The Sound of Essentials: A Musical Learning Experience",
-            "title_highlight": "(Free Album)",
-            "subtitle": "Build kindergarten-ready focus, phonics, and calm in 10 minutes a day without glowing screens or tablet battles. We gift all 19 studio-recorded acoustic songs freely to founding families and classrooms so children ages 2 to 7 absorb language, counting, and emotional balance naturally.",
-            "price_strike": "$19 Value",
-            "price_tag": "Free for Founding Families",
+            "title_highlight": "The 19-Track Album",
+            "subtitle": "Build kindergarten-ready focus, phonics, and calm in 10 minutes a day without glowing screens or tablet battles. We gift all 19 studio-recorded acoustic songs to founding families and classrooms so children ages 2 to 7 absorb language, counting, and emotional balance naturally.",
+            "price_strike": "Founding Edition",
+            "price_tag": "Gifted to Founding Families",
             "price_note": "Instant Digital Access · Yours to Keep",
             "check_1": "19 studio-recorded acoustic tracks (60–80 BPM) that build phonics, math & calm without screens",
             "check_2": "Includes our printable 'First 10 Minutes' Tactile Ritual Card (zero prep, ordinary room objects)",
             "check_3": "Spans all 7 Learning Lands & 5 Core Domains aligned to Head Start ELOF & NAEYC",
-            "check_4": "$0 Living Proof First · Zero Ads, Zero Dopamine Loops, Zero Subscription Traps",
-            "cta_primary": "Unlock Free Album & Ritual Card →",
+            "check_4": "Living Proof First · Zero Ads, Zero Dopamine Loops, Zero Subscription Traps",
+            "cta_primary": "Experience the Album & Ritual Card →",
             "cta_secondary": "Pair With the Companion Storybook ($19) →",
-            "guarantee_badge": "100% Free Living Proof · Instant Digital Access · Zero Screen Dependency"
+            "guarantee_badge": "Founding Family Gift · Instant Digital Access · Zero Screen Dependency"
         },
         "hero_label": "Neuro-Affirming Media",
         "hero_title_1": "Designed for the developing brain,",
@@ -228,13 +228,13 @@
         },
         "cta_title": "Biology doesn't wait for systems to fix themselves.",
         "cta_subtitle": "Open the door to screen-free learning with organic acoustic warmth.",
-        "explore_media": "Unlock Free Album & Ritual Card →",
+        "explore_media": "Enter the Listening Room →",
         "final_cta": {
             "title": "Build Kindergarten-Ready Focus, Phonics & Calm Without Glowing Screens",
             "subtitle": "19 studio-recorded acoustic tracks, our printable 10-minute tactile ritual card, and 7 learning lands built for ages 2 to 7.",
-            "btn_free": "Unlock Free Album & Ritual Card →",
+            "btn_free": "Experience the 19-Track Album →",
             "btn_quest": "Explore 40-Day Readiness Workbook ($21) →",
-            "badge": "100% Free Living Proof · Zero Screen Dependency · Zero Prep Burnout"
+            "badge": "Founding Family Gift · Zero Screen Dependency · Zero Prep Burnout"
         }
     },
     "universe": {
@@ -826,8 +826,8 @@
     "listen": {
         "ethicalHeistBadge": "EDUCATION CONCORD · FOUNDING PASS",
         "ethicalHeistTitle": "Build Kindergarten-Ready Focus, Phonics, and Calm in 10 Minutes a Day Without Glowing Screens or Tablet Battles",
-        "ethicalHeistSubtitle": "Unlock all 19 studio-recorded acoustic tracks (60 to 80 BPM) across all 7 Lands plus our printable 'First 10 Minutes' Tactile Ritual Card for ages 2 to 7. Gifted freely ($0) today as living proof for your home or classroom.",
-        "ethicalHeistCta": "UNLOCK 19 TRACKS + RITUAL CARD FREE ($0)",
+        "ethicalHeistSubtitle": "Receive all 19 studio-recorded acoustic tracks (60 to 80 BPM) across all 7 Lands plus our printable 'First 10 Minutes' Tactile Ritual Card for ages 2 to 7—our open gift to founding families and classrooms.",
+        "ethicalHeistCta": "RECEIVE THE 19-TRACK ALBUM & RITUAL CARD",
         "orDivider": "ALSO AVAILABLE",
         "dmCtaTitle": "Also Connect via Instagram DM",
         "dmCtaSubtitle": "Get the 19 master tracks delivered to your Instagram in addition to email",

@@ -53,6 +53,16 @@ const ScrollToTop = () => {
         }
     };
 
+    const isCockpitRoute =
+        pathname === '/mcls' ||
+        pathname === '/launcher' ||
+        pathname.startsWith('/admin') ||
+        pathname.startsWith('/crm');
+
+    if (isCockpitRoute) {
+        return null;
+    }
+
     return (
         <button
             className={`scroll-top-btn ${visible ? 'scroll-top-btn--visible' : ''}`}

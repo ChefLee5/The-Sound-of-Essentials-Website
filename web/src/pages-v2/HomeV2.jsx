@@ -4,6 +4,7 @@ import { assetPath } from '../utils/assetPath';
 import FullSection from '../components-v2/FullSection';
 import CharSplitText from '../components-v2/CharSplitText';
 import { RevealV2 } from '../hooks/useScrollReveal';
+import { SoeIcon } from '../components/ui/SoeIcon';
 
 /**
  * HomeV2 — Flagship cinematic homepage.
@@ -123,7 +124,7 @@ const HomeV2 = () => {
                 aria-label="Email address"
               />
               <button type="submit" className="v2-btn v2-btn--gold">
-                Listen Free
+                Experience the Album
               </button>
             </form>
             <p className="v2-email-meta">Streaming now · Ages 2–7 · No app required</p>
@@ -153,14 +154,16 @@ const HomeV2 = () => {
           <RevealV2 className="v2-reveal--delay-2">
             <div className="v2-domain-strip">
               {[
-                { icon: '🗣️', name: 'Language' },
-                { icon: '🔢', name: 'Numeracy' },
-                { icon: '🤸', name: 'Motor Skills' },
-                { icon: '🔬', name: 'Science' },
-                { icon: '💛', name: 'Social-Emotional' },
+                { icon: 'glass-bubble', name: 'Language' },
+                { icon: 'glass-pie-chart-1-2', name: 'Numeracy' },
+                { icon: 'glass-zap-2', name: 'Motor Skills' },
+                { icon: 'glass-earth-2', name: 'Science' },
+                { icon: 'glass-heart-2-2', name: 'Social-Emotional' },
               ].map((d) => (
                 <div className="v2-domain-item" key={d.name}>
-                  <span className="v2-domain-icon">{d.icon}</span>
+                  <span className="v2-domain-icon">
+                    <SoeIcon name={d.icon} type="glass" size={32} />
+                  </span>
                   <span className="v2-domain-name">{d.name}</span>
                 </div>
               ))}

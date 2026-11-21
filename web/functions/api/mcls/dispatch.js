@@ -5,96 +5,16 @@
  * and stages cards into the Neon PostgreSQL mcls_approvals ledger.
  */
 
-const FALLBACK_DB_URL = 'postgresql://neondb_owner:npg_ks2SarDnOB1E@ep-wandering-voice-ae85papv.c-2.us-east-2.aws.neon.tech/neondb?sslmode=require';
+import {
+  DEFAULT_NEON_DB_URL,
+  queryNeon,
+  runAdversarialPreflightReview,
+  compileForemanPlan,
+  buildWebhookReactiveDraft,
+  buildBrowserTakeoverDraft,
+} from '../../../lib/mclsCore.js';
 
-async function queryNeon(databaseUrl, sql, params = []) {
-  const finalUrl = databaseUrl || FALLBACK_DB_URL;
-  const urlObj = new URL(finalUrl);
-  const neonHttpEndpoint = `https://${urlObj.host}/sql`;
-
-  const res = await fetch(neonHttpEndpoint, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'Neon-Connection-String': finalUrl,
-    },
-    body: JSON.stringify({ query: sql, params }),
-  });
-
-  if (!res.ok) {
-    const err = await res.text();
-    throw new Error(`MCLS Dispatch DB Error: ${err}`);
-  }
-  return res.json();
-}
-
-/**
- * SOE Helix Gate 1 Runtime Canon Verifier + Adversarial "Review This" Gate
- * Ensures zero banned entities, retired names, age-creep, AI slop, or
- * shiny-object off-funnel drift enter any MCLS output before Neon staging.
- */
-function verifyCanonCompliance(text) {
-  const checks = [
-    { pattern: /\bAges?\s*2\s*[-–—]\s*8\b/i, reason: 'Canon age must be strictly Ages 2–7 (Pre-K to Grade 2)' },
-    { pattern: /\bGrade\s*3\b/i, reason: 'Canon ceiling is Grade 2' },
-    { pattern: /\b(Marcus|Elena|Reef|Zara|Dara|Sophia|Geometria)\b/i, reason: 'Retired character or land name detected' },
-    { pattern: /\bno\s+credit\s+card\s+required\b/i, reason: 'Billing canon violation: never claim "no credit card required"' },
-    { pattern: /\bShopify\b/i, reason: 'Stack canon violation: Shopify is retired; use direct soelearn.com Stripe funnel' },
-    { pattern: /\blive\s+(instrumentation|instruments?|orchestra|music|acoustic|organic)\b/i, reason: 'Canon audio rule: studio-recorded vocals & acoustic arrangements only' },
-    { pattern: /\b4,?232\b/, reason: 'Marketing copy rule: never use literal 4,232; uniformly use "4,000+ words"' },
-  ];
-
-  const violations = [];
-  for (const c of checks) {
-    if (c.pattern.test(text || '')) {
-      violations.push(c.reason);
-    }
-  }
-
-  return {
-    passed: violations.length === 0,
-    status: violations.length === 0 ? 'PASS' : 'BLOCKED',
-    violations,
-  };
-}
-
-function runAdversarialPreflightReview(unitKey, draft, options = {}) {
-  const combinedText = `${draft.title || ''} ${draft.summary || ''} ${draft.target_destination || ''} ${JSON.stringify(draft.payload || {})}`;
-  const canon = verifyCanonCompliance(combinedText);
-  const slopWarnings = [];
-  const shinyObjectFlags = [];
-
-  if (unitKey === 'MCLS-STUDIO' && /\b(stock\s+photo|generic\s+illustration|purple\s+gradient|claymorphism)\b/i.test(combinedText)) {
-    slopWarnings.push('Visual slop breach: off-brand generic or purple-gradient styling requested.');
-  }
-
-  const validDestinations = [
-    '/listen', '/workbook', '/rhythm-ready', '/dictionary-sale', '/bundle',
-    '/institutions', '/cloud-academy', '/tactile', '/qpc', 'school_pilot',
-    'llms.txt', 'solutionshub', 'engine a', 'brevo', 'slant3d', 'build123d',
-  ];
-  const destLower = `${draft.target_destination || ''} ${options.customPrompt || ''}`.toLowerCase();
-  if (draft.target_destination && !validDestinations.some((v) => destLower.includes(v)) && !/^https?:\/\//i.test(draft.target_destination)) {
-    shinyObjectFlags.push(`Unverified funnel destination '${draft.target_destination}' outside core SOE revenue lanes.`);
-  }
-  if (/\b(crypto|real\s+estate|dropship|linktree|multi-link)\b/i.test(combinedText)) {
-    shinyObjectFlags.push('Shiny-Object Drift: off-mission venture or Linktree dilution detected.');
-  }
-
-  let verdict = 'PASS';
-  if (!canon.passed) verdict = 'BLOCKED';
-  else if (shinyObjectFlags.length > 0) verdict = 'SHINY_OBJECT_HOLD';
-  else if (slopWarnings.length > 0) verdict = 'CAUTION';
-
-  return {
-    passed: verdict === 'PASS',
-    status: canon.status,
-    verdict,
-    violations: canon.violations,
-    slop_warnings: slopWarnings,
-    shiny_object_flags: shinyObjectFlags,
-  };
-}
+const FALLBACK_DB_URL = DEFAULT_NEON_DB_URL;
 
 async function fetchLiveSearchContext(query, braveKey) {
   if (!braveKey) return null;
@@ -342,6 +262,32 @@ function buildUnitExecutionDraft(unitKey, options = {}) {
   }
 }
 
+async function stageApprovalCard(databaseUrl, draft) {
+  const ins = await queryNeon(
+    databaseUrl,
+    `INSERT INTO mcls_approvals
+      (unit_key, action_type, title, channel, target_destination, delta_alignment, canon_status, estimated_cost, status, summary, payload)
+     VALUES ($1, $2, $3, $4, $5, $6, $7, $8, 'pending', $9, $10)
+     RETURNING *;`,
+    [
+      draft.unit_key,
+      draft.action_type,
+      draft.title,
+      draft.channel,
+      draft.target_destination,
+      draft.delta_alignment || 'SCREEN_VS_SENSORY',
+      draft.canon_status || 'PASS',
+      draft.estimated_cost || '$0.00 (Staged)',
+      draft.summary,
+      JSON.stringify({
+        ...(draft.payload || {}),
+        canon_verification: draft.preflight || null,
+      }),
+    ]
+  );
+  return ins.rows?.[0] || null;
+}
+
 export async function onRequestPost(context) {
   try {
     const { request, env } = context;
@@ -367,6 +313,79 @@ export async function onRequestPost(context) {
       );
       return new Response(
         JSON.stringify({ success: true, unit_key, review }),
+        { status: 200, headers: { 'Content-Type': 'application/json' } }
+      );
+    }
+
+    // ── 0A. FOREMAN GOAL COMPILER (MULTI-UNIT CAMPAIGN PLANNER) ────────────
+    if (action === 'foreman_compile') {
+      const {
+        goal = '',
+        delta_key = 'SCREEN_VS_SENSORY',
+        campaign_key = 'THE_ENEMY',
+        engine_type = 'ENGINE_A_VALUE_GATE',
+        daily_budget = 20,
+        stage_cards = true,
+      } = body;
+
+      const plan = compileForemanPlan({
+        goal,
+        delta_key,
+        campaign_key,
+        engine_type,
+        daily_budget,
+      });
+
+      const stagedApprovals = [];
+      if (stage_cards) {
+        for (const task of plan.tasks) {
+          const row = await stageApprovalCard(databaseUrl, task);
+          if (row) stagedApprovals.push(row);
+          await queryNeon(
+            databaseUrl,
+            `UPDATE mcls_units SET runs_count = runs_count + 1, last_run_at = CURRENT_TIMESTAMP WHERE unit_key = $1;`,
+            [task.unit_key]
+          ).catch(() => {});
+        }
+      }
+
+      return new Response(
+        JSON.stringify({
+          success: true,
+          plan,
+          staged_count: stagedApprovals.length,
+          approvals: stagedApprovals,
+        }),
+        { status: 200, headers: { 'Content-Type': 'application/json' } }
+      );
+    }
+
+    // ── 0A2. WEBHOOK-TRIGGERED REACTIVE DISPATCH ───────────────────────────
+    if (action === 'webhook_trigger') {
+      const { event_type = '', source = 'external_webhook', event_data = {}, stage_card = true } = body;
+      const draft = buildWebhookReactiveDraft({ event_type, source, event_data });
+      const approval = stage_card ? await stageApprovalCard(databaseUrl, draft) : null;
+
+      if (approval) {
+        await queryNeon(
+          databaseUrl,
+          `UPDATE mcls_units SET runs_count = runs_count + 1, last_run_at = CURRENT_TIMESTAMP WHERE unit_key = $1;`,
+          [draft.unit_key]
+        ).catch(() => {});
+      }
+
+      return new Response(
+        JSON.stringify({ success: true, draft, approval }),
+        { status: 200, headers: { 'Content-Type': 'application/json' } }
+      );
+    }
+
+    // ── 0A3. BROWSER COWORKER TAKEOVER CHECKPOINT ──────────────────────────
+    if (action === 'stage_browser_takeover') {
+      const draft = buildBrowserTakeoverDraft(body);
+      const approval = await stageApprovalCard(databaseUrl, draft);
+      return new Response(
+        JSON.stringify({ success: true, draft, approval }),
         { status: 200, headers: { 'Content-Type': 'application/json' } }
       );
     }

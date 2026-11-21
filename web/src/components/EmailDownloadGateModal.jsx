@@ -14,6 +14,7 @@ import { submitSoeInterest } from '../services/soeSubmissions';
 import { triggerBrowserDownload } from '../utils/deliveryUrl';
 import { trackLead, trackInitiateCheckout } from '../utils/analytics';
 import { setGateUnlocked, isValidEmail } from '../utils/gateAuth';
+import { SoeIcon } from './ui/SoeIcon';
 import './EmailDownloadGateModal.css';
 
 const STRIPE_BUMP_URL = 'https://buy.stripe.com/test_8x2aEXbJW0BLcwS0oi6Vq01';
@@ -44,10 +45,17 @@ const BumpOfferCard = ({ variant = 'inline', onAction }) => {
       <div className="email-gate-bump-head">
         <Badge
           variant="orange"
+          icon={
+            <SoeIcon
+              name={isSuccessVariant ? 'nature-moon' : 'other-zap'}
+              type="fill"
+              size={13}
+            />
+          }
           label={
             isSuccessVariant
-              ? '🌙 PARENT SANCTUARY UPGRADE'
-              : '⚡ SPECIAL IN-CART BUMP • 75% OFF'
+              ? 'PARENT SANCTUARY UPGRADE'
+              : 'SPECIAL IN-CART BUMP • 75% OFF'
           }
         />
         <span className="email-gate-bump-price">$7</span>

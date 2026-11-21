@@ -3,29 +3,39 @@
  * Automatically syncs successful Stripe checkouts into Neon PostgreSQL CRM and Brevo.
  */
 
-const FALLBACK_DB_URL = 'postgresql://neondb_owner:npg_ks2SarDnOB1E@ep-wandering-voice-ae85papv.c-2.us-east-2.aws.neon.tech/neondb?sslmode=require';
+import { DEFAULT_NEON_DB_URL, queryNeon, buildWebhookReactiveDraft } from '../../../lib/mclsCore.js';
+
+const FALLBACK_DB_URL = DEFAULT_NEON_DB_URL;
 const DEFAULT_BREVO_BUYERS_LIST_ID = 3; // SOE_Buyers
 
-async function queryNeon(databaseUrl, sql, params = []) {
-  const finalUrl = databaseUrl || FALLBACK_DB_URL;
-  const urlObj = new URL(finalUrl);
-  const host = urlObj.host;
-  const neonHttpEndpoint = `https://${host}/sql`;
-
-  const res = await fetch(neonHttpEndpoint, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'Neon-Connection-String': finalUrl,
-    },
-    body: JSON.stringify({ query: sql, params }),
-  });
-
-  if (!res.ok) {
-    const err = await res.text();
-    throw new Error(`Neon error: ${err}`);
+async function stageMclsReactiveCard(databaseUrl, eventType, eventData) {
+  try {
+    const draft = buildWebhookReactiveDraft({
+      event_type: eventType,
+      source: 'stripe_webhook',
+      event_data: eventData,
+    });
+    await queryNeon(
+      databaseUrl,
+      `INSERT INTO mcls_approvals
+        (unit_key, action_type, title, channel, target_destination, delta_alignment, canon_status, estimated_cost, status, summary, payload)
+       VALUES ($1, $2, $3, $4, $5, $6, $7, $8, 'pending', $9, $10);`,
+      [
+        draft.unit_key,
+        draft.action_type,
+        draft.title,
+        draft.channel,
+        draft.target_destination,
+        draft.delta_alignment || 'SCREEN_VS_SENSORY',
+        draft.canon_status || 'PASS',
+        draft.estimated_cost || '$0.00 (Staged)',
+        draft.summary,
+        JSON.stringify(draft.payload || {}),
+      ]
+    );
+  } catch (err) {
+    console.warn('MCLS reactive webhook staging warning:', err);
   }
-  return res.json();
 }
 
 async function addContactToBrevo(apiKey, email, fullName, listId) {
@@ -182,6 +192,25 @@ export async function onRequestPost(context) {
           await addContactToBrevo(brevoApiKey, email, fullName, brevoBuyersListId);
         }
       }
+
+      // 5. Reactive MCLS Guardrail Signal (high-ticket Engine B conversions >= $35 or bundles)
+      if (orderTotal >= 35 || String(session.client_reference_id || '').includes('BUNDLE')) {
+        await stageMclsReactiveCard(databaseUrl, 'stripe.checkout.completed', {
+          order_total: orderTotal,
+          client_reference_id: session.client_reference_id || 'SOE-ORDER',
+          session_id: session.id,
+        });
+      }
+    }
+
+    // Handle expired checkouts to stage MCLS recovery audit
+    if (event.type === 'checkout.session.expired') {
+      const session = event.data?.object || {};
+      await stageMclsReactiveCard(databaseUrl, 'stripe.checkout.expired', {
+        session_id: session.id || null,
+        order_total: (session.amount_total || 0) / 100,
+        client_reference_id: session.client_reference_id || '',
+      });
     }
 
     return new Response(JSON.stringify({ received: true }), {

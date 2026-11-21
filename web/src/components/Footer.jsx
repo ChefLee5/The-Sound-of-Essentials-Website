@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { assetPath } from '../utils/assetPath';
+import { SoeIcon, SoeBrandLogo, LandIcon } from './ui/SoeIcon';
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -24,29 +25,20 @@ const Footer = () => {
             <p className="footer__tagline">{t('footer.tagline')}</p>
             <div className="footer__social">
               <a href="https://youtube.com/@soundofessentials" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-                </svg>
+                <SoeBrandLogo name="youtube" size={20} />
               </a>
               <a href="https://www.tiktok.com/@soe.learn" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" />
-                </svg>
+                <SoeBrandLogo name="tiktok" size={18} />
               </a>
               <a href="https://instagram.com/soundofessentials" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-                </svg>
+                <SoeBrandLogo name="instagram" size={18} />
               </a>
             </div>
 
             {/* Direct Email Badge */}
             <div className="footer__email-badge">
               <a href="mailto:info@soelearn.com" className="footer__email-pill" title="Email us directly">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                  <polyline points="22,6 12,13 2,6" />
-                </svg>
+                <SoeIcon name="messaging-mail" size={15} />
                 <span>info@soelearn.com</span>
               </a>
             </div>
@@ -55,33 +47,34 @@ const Footer = () => {
           {/* Curriculum Lands Directory */}
           <div className="footer__col">
             <h4 className="footer__heading">Curriculum Lands</h4>
-            <Link to="/universe#harmonia" className="footer__link">🎵 Harmonia (Language)</Link>
-            <Link to="/universe#numeria" className="footer__link">🔢 Numeria (Math)</Link>
-            <Link to="/universe#vitalis" className="footer__link">🏃 Vitalis (Movement)</Link>
-            <Link to="/universe#luminosity" className="footer__link">💡 Luminosity (Civics)</Link>
-            <Link to="/universe#aquaria" className="footer__link">🌊 Aquaria (Emotional Calm)</Link>
-            <Link to="/universe#terrasol" className="footer__link">🌱 Terrasol (Science)</Link>
-            <Link to="/universe#celestia" className="footer__link">⏳ Celestia (Time)</Link>
+            <Link to="/universe#harmonia" className="footer__link"><LandIcon landId="harmonia" variant="normal" tinted={false} size={15} /> Harmonia (Language)</Link>
+            <Link to="/universe#numeria" className="footer__link"><LandIcon landId="numeria" variant="normal" tinted={false} size={15} /> Numeria (Math)</Link>
+            <Link to="/universe#vitalis" className="footer__link"><LandIcon landId="vitalis" variant="normal" tinted={false} size={15} /> Vitalis (Movement)</Link>
+            <Link to="/universe#luminosity" className="footer__link"><LandIcon landId="luminosity" variant="normal" tinted={false} size={15} /> Luminosity (Civics)</Link>
+            <Link to="/universe#aquaria" className="footer__link"><LandIcon landId="aquaria" variant="normal" tinted={false} size={15} /> Aquaria (Emotional Calm)</Link>
+            <Link to="/universe#terrasol" className="footer__link"><LandIcon landId="terrasol" variant="normal" tinted={false} size={15} /> Terrasol (Science)</Link>
+            <Link to="/universe#celestia" className="footer__link"><LandIcon landId="celestia" variant="normal" tinted={false} size={15} /> Celestia (Time)</Link>
           </div>
 
           {/* Shop & Quest Products (Prices Stripped to Prevent SERP Disqualification) */}
           <div className="footer__col">
             <h4 className="footer__heading">Core Products</h4>
-            <Link to="/listen" className="footer__link">🎧 Free 19-Track Album</Link>
-            <Link to="/rhythm-ready" className="footer__link">📚 Rhythm Ready Workbook</Link>
-            <Link to="/workbook#dictionary-presale" className="footer__link">📖 Essential Picture Dictionary</Link>
-            <Link to="/starter-pack" className="footer__link">🌟 Quest Starter Bedtime Kit</Link>
-            <Link to="/gallery" className="footer__link">🎨 Storybook Gallery</Link>
+            <Link to="/listen" className="footer__link"><SoeIcon name="senses-ear" size={15} /> The 19-Track Album</Link>
+            <Link to="/rhythm-ready" className="footer__link"><SoeIcon name="documents-book-bookmark" size={15} /> Rhythm Ready Workbook</Link>
+            <Link to="/workbook#dictionary-presale" className="footer__link"><SoeIcon name="documents-library" size={15} /> Essential Picture Dictionary</Link>
+            <Link to="/starter-pack" className="footer__link"><SoeIcon name="tools-star" size={15} /> Quest Starter Bedtime Kit</Link>
+            <Link to="/gallery" className="footer__link"><SoeIcon name="playback-images" size={15} /> Storybook Gallery</Link>
           </div>
 
           {/* Research & Standards Authority */}
           <div className="footer__col">
             <h4 className="footer__heading">Research &amp; Standards</h4>
-            <Link to="/science" className="footer__link">🔬 Sound Before Symbol</Link>
-            <Link to="/solutions" className="footer__link">🏛️ Head Start &amp; NAEYC</Link>
-            <Link to="/solutions#ece-directors" className="footer__link">🏫 School &amp; Clinic Licensing</Link>
-            <Link to="/ally-annex" className="footer__link">🤝 Educational Partners</Link>
-            <Link to="/mission" className="footer__link">🧭 Our Mission</Link>
+            <Link to="/resources" className="footer__link"><SoeIcon name="documents-library" size={15} /> Learning Library</Link>
+            <Link to="/science" className="footer__link"><SoeIcon name="metrics-activity" size={15} /> Sound Before Symbol</Link>
+            <Link to="/solutions" className="footer__link"><SoeIcon name="layouts-columns-3" size={15} /> Head Start &amp; NAEYC</Link>
+            <Link to="/solutions#ece-directors" className="footer__link"><SoeIcon name="tools-house" size={15} /> School &amp; Clinic Licensing</Link>
+            <Link to="/ally-annex" className="footer__link"><SoeIcon name="senses-hand" size={15} /> Educational Partners</Link>
+            <Link to="/mission" className="footer__link"><SoeIcon name="tools-map" size={15} /> Our Mission</Link>
           </div>
 
           {/* Stay Connected */}
@@ -99,8 +92,10 @@ const Footer = () => {
                 href="mailto:info@soelearn.com"
                 className="footer__contact-us-btn"
                 title="Send an email to info@soelearn.com"
+                style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '0.4rem' }}
               >
-                ✉️ Email Us
+                <SoeIcon name="messaging-mail" size={15} />
+                <span>Email Us</span>
               </a>
             </div>
           </div>
@@ -117,13 +112,15 @@ const Footer = () => {
             <Link to="/privacy" className="footer__bottom-link">Privacy Policy</Link>
             <Link to="/terms" className="footer__bottom-link">Terms of Service</Link>
             <Link to="/dmca" className="footer__bottom-link">DMCA Notice</Link>
-            <a href="mailto:info@soelearn.com" className="footer__bottom-link footer__bottom-email">
-              ✉️ info@soelearn.com
+            <a href="mailto:info@soelearn.com" className="footer__bottom-link footer__bottom-email" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.3rem' }}>
+              <SoeIcon name="messaging-mail" size={13} />
+              <span>info@soelearn.com</span>
             </a>
             <Link to="/join" className="footer__bottom-link">{t('navbar.contact', 'Contact Us')}</Link>
             <Link to="/mission" className="footer__bottom-link">{t('navbar.mission')}</Link>
             <Link to="/admin/crm" className="footer__bottom-link" style={{ opacity: 0.8, display: 'inline-flex', alignItems: 'center', gap: '0.25rem' }}>
-              🔐 Admin CRM
+              <SoeIcon name="identity-lock" size={13} />
+              <span>Admin CRM</span>
             </Link>
           </div>
         </div>
@@ -222,7 +219,7 @@ const Footer = () => {
         }
 
         .footer__social a {
-          color: rgba(255,255,255,0.85);
+          color: #2B2016;
           transition: all var(--transition-med);
           display: flex;
           align-items: center;
@@ -230,16 +227,16 @@ const Footer = () => {
           width: 44px;
           height: 44px;
           border-radius: var(--radius-full);
-          background: rgba(255,255,255,0.12);
-          border: 1.5px solid rgba(255,255,255,0.25);
+          background: rgba(255,255,255,0.92);
+          border: 1.5px solid rgba(255,255,255,0.65);
+          box-shadow: 0 2px 8px rgba(0,0,0,0.12);
         }
 
         .footer__social a:hover {
-          color: #ffffff;
-          background: rgba(255,255,255,0.22);
-          border-color: rgba(255,255,255,0.5);
+          background: #ffffff;
+          border-color: #ffffff;
           transform: translateY(-2px);
-          box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+          box-shadow: 0 4px 14px rgba(0,0,0,0.2);
         }
 
         .footer__email-badge {

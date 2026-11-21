@@ -5,29 +5,10 @@
  * Repository Patch Staging, and Meta Ads Manager.
  */
 
-const FALLBACK_DB_URL = 'postgresql://neondb_owner:npg_ks2SarDnOB1E@ep-wandering-voice-ae85papv.c-2.us-east-2.aws.neon.tech/neondb?sslmode=require';
+import { DEFAULT_NEON_DB_URL, queryNeon } from '../../../lib/mclsCore.js';
+
+const FALLBACK_DB_URL = DEFAULT_NEON_DB_URL;
 const BREVO_SENDER_ID = 2; // The Sound of Essentials <info@soelearn.com>
-
-async function queryNeon(databaseUrl, sql, params = []) {
-  const finalUrl = databaseUrl || FALLBACK_DB_URL;
-  const urlObj = new URL(finalUrl);
-  const neonHttpEndpoint = `https://${urlObj.host}/sql`;
-
-  const res = await fetch(neonHttpEndpoint, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'Neon-Connection-String': finalUrl,
-    },
-    body: JSON.stringify({ query: sql, params }),
-  });
-
-  if (!res.ok) {
-    const err = await res.text();
-    throw new Error(`MCLS Authorize DB Error: ${err}`);
-  }
-  return res.json();
-}
 
 export async function onRequestPost(context) {
   try {
@@ -205,6 +186,12 @@ export async function onRequestPost(context) {
     } else if (card.action_type === 'github_canon_pr' || card.action_type === 'geo_schema_patch' || card.action_type === 'geo_citation_audit') {
       receipt.steps.push('Verified public/llms.txt and JSON-LD schema compliance (Ages 2–7, 7 Lands, 19 Studio Tracks)');
       receipt.steps.push(`Committed canonical work order to MCLS repository ledger (${card.target_destination})`);
+    } else if (card.action_type === 'browser_takeover_handoff') {
+      receipt.steps.push(`Verified human browser takeover checkpoint (${payload.checkpoint_reason || 'FINAL_PORTAL_SUBMIT'}) at ${payload.target_url || card.target_destination}`);
+      receipt.steps.push('Authorized browser worker session resume & submission');
+    } else if (card.action_type.startsWith('webhook_')) {
+      receipt.steps.push(`Executed webhook-reactive action (${card.action_type}) from ${payload.source || 'webhook'}`);
+      receipt.steps.push(`Synced attribution & follow-up state for ${card.target_destination}`);
     } else {
       receipt.steps.push(`Authorized and logged ${card.action_type} for ${card.target_destination}`);
     }

@@ -38,6 +38,7 @@ The curriculum spans 5 Core Domains of Essential Learning mapped across 7 Lands 
 
 ## Website Routes & Canonical Links
 - [Home Experience](https://thesoundofessentials.com/): Core entry with the brand story, 5 domains layout, book features, and primary CTAs.
+- [The Learning Library (4-Part Guides for Ages 2–7)](https://thesoundofessentials.com/resources): Structured 4-part screen-free early learning library for ages 2–7 covering [Part 1: Sound Foundations](https://thesoundofessentials.com/resources/foundations), [Part 2: Play & Daily Practice](https://thesoundofessentials.com/resources/play), [Part 3: Kindergarten Readiness](https://thesoundofessentials.com/resources/readiness), [Part 4: Home & Classroom Systems](https://thesoundofessentials.com/resources/classrooms), and [The SOE Sound Notes Archive](https://thesoundofessentials.com/resources/notes).
 - [Free 19-Track Album Experience](https://thesoundofessentials.com/listen): Lead magnet gateway and streaming player for the 19-track album.
 - [Rhythm Ready 8-Week Readiness Quest](https://thesoundofessentials.com/rhythm-ready): Dedicated sales and curriculum breakdown for the 8-Week Rhythm Ready Workbook.
 - [The Seven Lands Global Sound Map](https://thesoundofessentials.com/universe): Interactive global sound map and explorer for the 7 Lands.

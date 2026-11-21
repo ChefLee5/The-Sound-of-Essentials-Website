@@ -226,7 +226,7 @@ const Mission = () => {
                 <hr className="flow-section__divider" style={{ borderColor: 'rgba(255, 255, 255, 0.35)' }} />
                 <div className="flow-columns">
                   <div className="flow-column">
-                    <p className="flow-column__title">19 Free Tracks + Ritual Card</p>
+                    <p className="flow-column__title">19-Track Album + Ritual Card</p>
                     <p className="flow-column__text">
                       A complete studio album (60 to 80 BPM) paired with a zero-prep tactile ritual card gifted freely, with zero subscription traps.
                     </p>
@@ -401,7 +401,7 @@ const Mission = () => {
                 </p>
                 <hr className="flow-section__divider" style={{ borderColor: 'rgba(255,255,255,0.3)' }} />
                 <p className="flow-section__body flow-section__body--right">
-                  Listen free. See if it fits.
+                  Listen as our guest. See if it fits.
                   Your child will know in one song.
                 </p>
                 <div style={{ marginTop: '2.5rem', textAlign: 'right' }}>
@@ -446,7 +446,7 @@ const Mission = () => {
                             </p>
                             <div style={{ marginTop: '2rem' }}>
                                 <Link to="/listen" className="btn btn-gold">
-                                    Unlock Free Album &amp; Ritual Card →
+                                    Experience the Album &amp; Ritual Card →
                                 </Link>
                             </div>
                         </div>

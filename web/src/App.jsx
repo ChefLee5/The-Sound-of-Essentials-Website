@@ -47,6 +47,9 @@ const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
 const TermsOfService = lazy(() => import('./pages/TermsOfService'));
 const DmcaPolicy = lazy(() => import('./pages/DmcaPolicy'));
 const InstitutionsQpc = lazy(() => import('./pages/InstitutionsQpc'));
+const ResourcesHub = lazy(() => import('./pages/ResourcesHub'));
+const ResourcePillarPage = lazy(() => import('./pages/ResourcePillarPage'));
+const ResourceArticlePage = lazy(() => import('./pages/ResourceArticlePage'));
 import CookieConsent from './components/CookieConsent';
 import AskSeriphiaModal from './components/AskSeriphiaModal';
 
@@ -82,12 +85,13 @@ const App = () => {
     }
   }, []);
   const isV2 = location.pathname === '/v2' || location.pathname.startsWith('/v2/');
-  const isAdmin = location.pathname.startsWith('/admin') || location.pathname.startsWith('/crm');
+  const isMcls = location.pathname === '/mcls' || location.pathname === '/launcher';
+  const isAdmin = location.pathname.startsWith('/admin') || location.pathname.startsWith('/crm') || isMcls;
 
   return (
     <div className="app">
       {!isV2 && !isAdmin && showSplash && <SplashScreen onFinished={handleSplashFinished} />}
-      {!isV2 && <CanvasBackground />}
+      {!isV2 && !isMcls && <CanvasBackground />}
       <ScrollToTop />
       {!isV2 && !isAdmin && <Navbar />}
       <main>
@@ -139,6 +143,14 @@ const App = () => {
                 <Route path="/mcls"       element={<AnimatedPage><CampaignLauncher /></AnimatedPage>} />
                 <Route path="/order-success" element={<AnimatedPage><OrderSuccess /></AnimatedPage>} />
                 <Route path="/download"   element={<AnimatedPage><OrderSuccess /></AnimatedPage>} />
+                {/* 4-Part "Start Here." Resources Hub & Weekly Sound Notes */}
+                <Route path="/resources" element={<AnimatedPage><ResourcesHub /></AnimatedPage>} />
+                <Route path="/resources/foundations" element={<AnimatedPage><ResourcePillarPage pillarId="foundations" /></AnimatedPage>} />
+                <Route path="/resources/play" element={<AnimatedPage><ResourcePillarPage pillarId="play" /></AnimatedPage>} />
+                <Route path="/resources/readiness" element={<AnimatedPage><ResourcePillarPage pillarId="readiness" /></AnimatedPage>} />
+                <Route path="/resources/classrooms" element={<AnimatedPage><ResourcePillarPage pillarId="classrooms" /></AnimatedPage>} />
+                <Route path="/resources/notes" element={<AnimatedPage><ResourcePillarPage pillarId="notes" /></AnimatedPage>} />
+                <Route path="/resources/:slug" element={<AnimatedPage><ResourceArticlePage /></AnimatedPage>} />
                 {/* Programmatic SEO Solutions Engine */}
                 <Route path="/solutions" element={<AnimatedPage><SolutionsHub /></AnimatedPage>} />
                 <Route path="/institutions" element={<AnimatedPage><InstitutionsQpc /></AnimatedPage>} />

@@ -5,6 +5,7 @@ import CharSplitText from '../components-v2/CharSplitText';
 import { RevealV2 } from '../hooks/useScrollReveal';
 import heroes from '../data/heroes.json';
 import lands from '../data/lands.json';
+import { LandIcon } from '../components/ui/SoeIcon';
 import { gsap } from 'gsap';
 import { Flip } from 'gsap/Flip';
 
@@ -100,9 +101,10 @@ const HeroesV2 = () => {
                 key={land.id}
                 className={`v2-btn ${activeLand === land.id ? 'v2-btn--gold' : 'v2-btn--outline'}`}
                 onClick={() => handleFilterChange(land.id)}
-                style={{ fontSize: '0.78rem', padding: '0.55rem 1.4rem' }}
+                style={{ fontSize: '0.78rem', padding: '0.55rem 1.4rem', display: 'inline-flex', alignItems: 'center', gap: '0.4rem' }}
               >
-                {land.icon} {land.name}
+                <LandIcon landId={land.id} variant={activeLand === land.id ? 'fill' : 'duotone'} tinted={activeLand !== land.id} size={15} />
+                <span>{land.name}</span>
               </button>
             ))}
           </div>

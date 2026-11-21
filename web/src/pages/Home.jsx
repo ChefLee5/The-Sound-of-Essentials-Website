@@ -17,6 +17,7 @@ import {
   SparklesText,
   ShimmerButton,
 } from '../components/ui/MagicOfferPrimitives';
+import { SoeIcon, LandIcon } from '../components/ui/SoeIcon';
 
 const Home = () => {
   const { t } = useTranslation();
@@ -68,22 +69,22 @@ const Home = () => {
 
   /* ── 5 Developmental Domains ── */
   const domains = [
-    { icon: '🗣️', title: t('home.domains.language.title'), desc: t('home.domains.language.desc'), color: '#4CAF50', accent: 'rgba(76,175,80,0.12)' },
-    { icon: '🧠', title: t('home.domains.cognitive.title'), desc: t('home.domains.cognitive.desc'), color: '#1E88E5', accent: 'rgba(30,136,229,0.12)' },
-    { icon: '🤸', title: t('home.domains.physical.title'), desc: t('home.domains.physical.desc'), color: '#FF6F00', accent: 'rgba(255,111,0,0.12)' },
-    { icon: '🔬', title: t('home.domains.science.title'), desc: t('home.domains.science.desc'), color: '#7B1FA2', accent: 'rgba(123,31,162,0.12)' },
-    { icon: '💛', title: t('home.domains.social_emotional.title'), desc: t('home.domains.social_emotional.desc'), color: '#FFB300', accent: 'rgba(255,179,0,0.12)' },
+    { icon: 'messaging-message-circle', title: t('home.domains.language.title'), desc: t('home.domains.language.desc'), color: '#4CAF50', accent: 'rgba(76,175,80,0.12)' },
+    { icon: 'other-puzzle', title: t('home.domains.cognitive.title'), desc: t('home.domains.cognitive.desc'), color: '#1E88E5', accent: 'rgba(30,136,229,0.12)' },
+    { icon: 'metrics-activity', title: t('home.domains.physical.title'), desc: t('home.domains.physical.desc'), color: '#FF6F00', accent: 'rgba(255,111,0,0.12)' },
+    { icon: 'nature-earth', title: t('home.domains.science.title'), desc: t('home.domains.science.desc'), color: '#7B1FA2', accent: 'rgba(123,31,162,0.12)' },
+    { icon: 'tools-heart', title: t('home.domains.social_emotional.title'), desc: t('home.domains.social_emotional.desc'), color: '#FFB300', accent: 'rgba(255,179,0,0.12)' },
   ];
 
   /* ── 7 Musical Lands Mini-Previews ── */
   const lands = [
-    { name: 'Harmonia', focus: 'Language & Manners', heroes: 'Kenji & Aiko', color: '#5fb685', icon: '🎵' },
-    { name: 'Numeria', focus: 'Numbers & Math', heroes: 'Kwame & Octavia', color: '#5ba4c9', icon: '🔢' },
-    { name: 'Vitalis', focus: 'Physical & Movement', heroes: 'Felix & Amara', color: '#FF8A65', icon: '🏃' },
-    { name: 'Celestia', focus: 'Time & Seasons', heroes: 'Elias & Selene', color: '#9678c4', icon: '⏳' },
-    { name: 'Luminosity', focus: 'Advanced Language', heroes: 'Athena & Ezra', color: '#f5c43a', icon: '💡' },
-    { name: 'Aquaria', focus: 'Water & Emotion', heroes: 'Nerissa & Ronan', color: '#4dd0e1', icon: '🌊' },
-    { name: 'Terrasol', focus: 'Science & Nature', heroes: 'Vesta & Silas', color: '#8d6e63', icon: '🌱' },
+    { id: 'harmonia', name: 'Harmonia', focus: 'Language & Manners', heroes: 'Kenji & Aiko', color: '#5fb685' },
+    { id: 'numeria', name: 'Numeria', focus: 'Numbers & Math', heroes: 'Kwame & Octavia', color: '#5ba4c9' },
+    { id: 'vitalis', name: 'Vitalis', focus: 'Physical & Movement', heroes: 'Felix & Amara', color: '#FF8A65' },
+    { id: 'celestia', name: 'Celestia', focus: 'Time & Seasons', heroes: 'Elias & Selene', color: '#9678c4' },
+    { id: 'luminosity', name: 'Luminosity', focus: 'Advanced Language', heroes: 'Athena & Ezra', color: '#f5c43a' },
+    { id: 'aquaria', name: 'Aquaria', focus: 'Water & Emotion', heroes: 'Nerissa & Ronan', color: '#4dd0e1' },
+    { id: 'terrasol', name: 'Terrasol', focus: 'Science & Nature', heroes: 'Vesta & Silas', color: '#8d6e63' },
   ];
 
   /* ── FAQ items ── */
@@ -91,27 +92,27 @@ const Home = () => {
     {
       q: t('home.faq.q1'),
       a: t('home.faq.a1'),
-      icon: '🎵'
+      icon: 'playback-volume-2'
     },
     {
       q: t('home.faq.q2'),
       a: t('home.faq.a2'),
-      icon: '📩'
+      icon: 'messaging-mail'
     },
     {
       q: t('home.faq.q3'),
       a: t('home.faq.a3'),
-      icon: '👨‍👩‍👧'
+      icon: 'identity-users'
     },
     {
       q: t('home.faq.q4'),
       a: t('home.faq.a4'),
-      icon: '🧠'
+      icon: 'other-puzzle'
     },
     {
       q: t('home.faq.q5'),
       a: t('home.faq.a5'),
-      icon: '🗺️'
+      icon: 'tools-map'
     }
   ];
 
@@ -143,7 +144,10 @@ const Home = () => {
                 </div>
 
                 <div className="hero__eyebrow">
-                  <span className="hero__badge">✨ {t('home.hero_offer.eyebrow')}</span>
+                  <span className="hero__badge" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem' }}>
+                    <SoeIcon name="tools-sparkles" type="fill" size={15} style={{ color: '#FF6F00' }} />
+                    <span>{t('home.hero_offer.eyebrow')}</span>
+                  </span>
                 </div>
                 <h1 className="hero__title">
                   <KineticHeadline
@@ -240,7 +244,7 @@ const Home = () => {
                 <Floating3DBook
                   imageSrc="/assets/marketing/soe-deluxe-cover.webp"
                   altText="The Sound of Essentials Deluxe 19-Track Album Cover"
-                  badgeText="🎵 Free 19-Track Album • Stream Now"
+                  badgeText="🎵 The 19-Track Deluxe Album • Listen Now"
                   to="/listen"
                 />
               </div>
@@ -410,7 +414,7 @@ const Home = () => {
                   See the Neuroscience &amp; Research →
                 </Link>
                 <Link to="/listen" className="btn btn-gold btn-shimmer">
-                  Unlock Free Album &amp; Ritual Card →
+                  Experience the Album &amp; Ritual Card →
                 </Link>
               </div>
             </div>
@@ -489,7 +493,7 @@ const Home = () => {
                 <span> Foundational human literacy, sensory grounding, and spoken language mastery begin before screens ever enter the room. Give your child the gift of durable, analog human wiring for ages 2 to 7.</span>
               </div>
               <Link to="/listen" className="btn btn-gold btn-shimmer ai-readiness-banner__btn">
-                Stream 19 Free Tracks →
+                Enter the Listening Room →
               </Link>
             </div>
           </RevealSection>
@@ -526,7 +530,9 @@ const Home = () => {
               <div className="quest-pillars-grid">
                 <RevealSection delay={0.15}>
                   <div className="glass-card quest-pillar-card">
-                    <div className="quest-pillar__icon">🗺️</div>
+                    <div className="quest-pillar__icon" style={{ color: '#FF6F00' }}>
+                      <SoeIcon name="tools-map" type="duotone" size={30} />
+                    </div>
                     <h3 className="quest-pillar__title">{t('home.quest_offer.feat_1_title')}</h3>
                     <p className="quest-pillar__desc">{t('home.quest_offer.feat_1_desc')}</p>
                   </div>
@@ -534,7 +540,9 @@ const Home = () => {
 
                 <RevealSection delay={0.2}>
                   <div className="glass-card quest-pillar-card quest-pillar-card--highlight">
-                    <div className="quest-pillar__icon">🎯</div>
+                    <div className="quest-pillar__icon" style={{ color: '#FF6F00' }}>
+                      <SoeIcon name="indicators-circle-dot" type="duotone" size={30} />
+                    </div>
                     <h3 className="quest-pillar__title">{t('home.quest_offer.feat_2_title')}</h3>
                     <p className="quest-pillar__desc">{t('home.quest_offer.feat_2_desc')}</p>
                   </div>
@@ -542,7 +550,9 @@ const Home = () => {
 
                 <RevealSection delay={0.25}>
                   <div className="glass-card quest-pillar-card">
-                    <div className="quest-pillar__icon">🏅</div>
+                    <div className="quest-pillar__icon" style={{ color: '#FF6F00' }}>
+                      <SoeIcon name="tools-star" type="duotone" size={30} />
+                    </div>
                     <h3 className="quest-pillar__title">{t('home.quest_offer.feat_3_title')}</h3>
                     <p className="quest-pillar__desc">{t('home.quest_offer.feat_3_desc')}</p>
                   </div>
@@ -554,7 +564,11 @@ const Home = () => {
           {/* 7 Lands Mini Carousel/Grid */}
           <RevealSection delay={0.35}>
             <div className="lands-preview-swipe-hint-wrap">
-              <span className="lands-preview-swipe-hint">👆 Swipe across the 7 Lands →</span>
+              <span className="lands-preview-swipe-hint" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.35rem' }}>
+                <SoeIcon name="senses-hand" type="normal" size={14} />
+                <span>Swipe across the 7 Lands</span>
+                <SoeIcon name="arrows-arrow-right" type="normal" size={14} />
+              </span>
             </div>
             <div className="lands-preview-grid">
               {lands.map((land) => (
@@ -563,7 +577,9 @@ const Home = () => {
                   className="land-mini-card"
                   style={{ '--land-color': land.color }}
                 >
-                  <span className="land-mini-card__icon">{land.icon}</span>
+                  <span className="land-mini-card__icon">
+                    <LandIcon landId={land.id} variant="glass" size={30} />
+                  </span>
                   <strong className="land-mini-card__name">{land.name}</strong>
                   <span className="land-mini-card__focus">{land.focus}</span>
                   <span className="land-mini-card__heroes">{land.heroes}</span>
@@ -600,7 +616,9 @@ const Home = () => {
               <RevealSection key={d.title} delay={i * 0.1}>
                 <div className="glass-card domain-card" style={{ '--domain-color': d.color, '--domain-accent': d.accent }}>
                   <div className="domain-card__icon-wrap">
-                    <span className="domain-card__icon">{d.icon}</span>
+                    <span className="domain-card__icon" style={{ color: d.color }}>
+                      <SoeIcon name={d.icon} type="duotone" size={28} />
+                    </span>
                   </div>
                   <h4 className="domain-card__title">{d.title}</h4>
                   <p className="domain-card__desc">{d.desc}</p>
@@ -619,7 +637,10 @@ const Home = () => {
         <div className="container">
           <RevealSection>
             <div className="credibility-banner glass-card">
-              <div className="credibility-badge">🌿 OUR EDUCATION ADVOCACY STANCE</div>
+              <div className="credibility-badge" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem' }}>
+                <SoeIcon name="nature-earth" type="duotone" size={16} />
+                <span>OUR EDUCATION ADVOCACY STANCE</span>
+              </div>
               <KineticHeadline
                 tag="h2"
                 variant="fade-up"
@@ -633,21 +654,27 @@ const Home = () => {
 
               <div className="credibility-pillars">
                 <div className="credibility-pillar">
-                  <span className="cred-icon">🛡️</span>
+                  <span className="cred-icon" style={{ color: '#FF6F00' }}>
+                    <SoeIcon name="identity-shield-check" type="duotone" size={26} />
+                  </span>
                   <div>
                     <strong>Education Advocacy First</strong>
                     <span>Protecting ages 2–7 from passive screen overstimulation and teacher prep burnout</span>
                   </div>
                 </div>
                 <div className="credibility-pillar">
-                  <span className="cred-icon">🎨</span>
+                  <span className="cred-icon" style={{ color: '#FF6F00' }}>
+                    <SoeIcon name="tools-pencil" type="duotone" size={26} />
+                  </span>
                   <div>
                     <strong>Organic Acoustic Warmth</strong>
                     <span>19 studio-recorded tracks (60–80 BPM) and handcrafted fine arts built for nervous-system safety</span>
                   </div>
                 </div>
                 <div className="credibility-pillar">
-                  <span className="cred-icon">🏡</span>
+                  <span className="cred-icon" style={{ color: '#FF6F00' }}>
+                    <SoeIcon name="tools-house" type="duotone" size={26} />
+                  </span>
                   <div>
                     <strong>Analog in a Digital World</strong>
                     <span>Tactile workbooks, illustrated dictionaries, and 10-minute room rituals that endure</span>
@@ -665,7 +692,10 @@ const Home = () => {
       <section className="section book-feature-section text-center">
         <div className="container">
           <RevealSection className="text-center">
-            <div className="section-label">📚 The Companion Ecosystem</div>
+            <div className="section-label" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem' }}>
+              <SoeIcon name="documents-library" type="duotone" size={16} />
+              <span>The Companion Ecosystem</span>
+            </div>
             <KineticHeadline tag="h2" className="section-title" variant="musical-bounce">
               Every Word Has a World Behind It
             </KineticHeadline>
@@ -678,11 +708,15 @@ const Home = () => {
           <RevealSection delay={0.2}>
             <ExpandableGallery />
             <div className="ecosystem-actions" style={{ marginTop: '2.5rem', display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-              <Link to="/workbook#dictionary-presale" className="btn btn-gold btn-shimmer">
-                📚 Reserve Your Copy of the Picture Dictionary ($55) →
+              <Link to="/workbook#dictionary-presale" className="btn btn-gold btn-shimmer" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.45rem' }}>
+                <SoeIcon name="documents-library" type="fill" size={17} />
+                <span>Reserve Your Copy of the Picture Dictionary ($55)</span>
+                <SoeIcon name="arrows-arrow-right" size={16} />
               </Link>
-              <Link to="/workbook" className="btn btn-outline">
-                📚 View Workbook &amp; Curriculum ($21) →
+              <Link to="/workbook" className="btn btn-outline" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.45rem' }}>
+                <SoeIcon name="documents-book-bookmark" type="duotone" size={17} />
+                <span>View Workbook &amp; Curriculum ($21)</span>
+                <SoeIcon name="arrows-arrow-right" size={16} />
               </Link>
             </div>
           </RevealSection>
@@ -711,11 +745,17 @@ const Home = () => {
                   <tr>
                     <th className="th-feature">{t('home.comparison.col_feature')}</th>
                     <th className="th-soe">
-                      <span className="th-badge">✨ Grounded in Science</span>
+                      <span className="th-badge" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.35rem' }}>
+                        <SoeIcon name="tools-sparkles" type="fill" size={13} />
+                        <span>Grounded in Science</span>
+                      </span>
                       {t('home.comparison.col_soe')}
                     </th>
                     <th className="th-algo">
-                      <span className="th-badge-algo">⚠️ Screen Distraction</span>
+                      <span className="th-badge-algo" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.35rem' }}>
+                        <SoeIcon name="indicators-triangle-alert" type="fill" size={13} />
+                        <span>Screen Distraction</span>
+                      </span>
                       {t('home.comparison.col_algo')}
                     </th>
                   </tr>
@@ -806,9 +846,13 @@ const Home = () => {
                       onClick={() => toggleFaq(idx)}
                       aria-expanded={isOpen}
                     >
-                      <span className="faq-question-icon">{item.icon}</span>
+                      <span className="faq-question-icon" style={{ color: '#FF6F00', display: 'inline-flex', alignItems: 'center' }}>
+                        <SoeIcon name={item.icon} type="duotone" size={20} />
+                      </span>
                       <span className="faq-question-text">{item.q}</span>
-                      <span className="faq-toggle-arrow">{isOpen ? '−' : '+'}</span>
+                      <span className="faq-toggle-arrow" style={{ display: 'inline-flex', alignItems: 'center' }}>
+                        <SoeIcon name={isOpen ? 'indicators-minus' : 'indicators-plus'} size={16} />
+                      </span>
                     </button>
                     {isOpen && (
                       <div className="faq-answer-pane animate-fade-in">
@@ -824,7 +868,9 @@ const Home = () => {
           {/* FAQ Direct Contact Card */}
           <RevealSection delay={0.4} className="text-center">
             <div className="faq-contact-card glass-card" style={{ maxWidth: '680px', margin: '2.5rem auto 0', padding: '2rem', textAlign: 'center' }}>
-              <span style={{ fontSize: '2rem', display: 'block', marginBottom: '0.5rem' }}>💬</span>
+              <span style={{ display: 'inline-flex', marginBottom: '0.65rem', color: '#FF6F00' }}>
+                <SoeIcon name="glass-bubble" type="glass" size={38} />
+              </span>
               <h3 style={{ fontSize: '1.25rem', fontFamily: 'var(--font-heading)', color: 'var(--color-text-dark, #2B2016)', marginBottom: '0.4rem' }}>
                 Still Have Questions?
               </h3>
@@ -833,10 +879,12 @@ const Home = () => {
               </p>
               <div style={{ display: 'flex', justifyContent: 'center', gap: '0.8rem', flexWrap: 'wrap' }}>
                 <a href="mailto:info@soelearn.com" className="btn btn-gold" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem' }}>
-                  ✉️ Email Us: info@soelearn.com
+                  <SoeIcon name="messaging-mail" type="fill" size={16} />
+                  <span>Email Us: info@soelearn.com</span>
                 </a>
-                <Link to="/join" className="btn btn-outline">
-                  Contact &amp; Partnerships →
+                <Link to="/join" className="btn btn-outline" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem' }}>
+                  <span>Contact &amp; Partnerships</span>
+                  <SoeIcon name="arrows-arrow-right" size={15} />
                 </Link>
               </div>
             </div>
