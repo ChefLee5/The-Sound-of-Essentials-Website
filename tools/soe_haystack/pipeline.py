@@ -37,6 +37,23 @@ class InvertedIndexBM25:
                 if "standards" in doc.meta:
                     score += 0.4
 
+            # Exact strategy code match (e.g., S-30, S-5, D-1)
+            code = str(doc.meta.get("code", "")).lower()
+            if code and code in q_tokens:
+                score += 1.0
+
+            # Critical Thinking & Socratic Inquiry boosting
+            ct_hints = ("socratic", "critical thinking", "wonder circle", "assumption", "fairmind", "strategy", "remodel", "intellectual")
+            if any(h in q_lower for h in ct_hints):
+                if doc.meta.get("type") in {
+                    "critical_thinking_strategy",
+                    "socratic_quest",
+                    "remodelled_unit",
+                    "intellectual_standard",
+                    "socratic_taxonomy",
+                }:
+                    score += 0.35
+
             if score > 0:
                 doc_copy = Document(
                     id=doc.id,

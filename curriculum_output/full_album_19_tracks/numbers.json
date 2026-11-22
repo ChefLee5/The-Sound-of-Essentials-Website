@@ -7,8 +7,8 @@
   "land_color": "#7fb685",
   "domain_icon": "🔢",
   "hero_guides": "Kwame & Octavia",
-  "age_group": "Ages 2–7 (Pre-K to Grade 1)",
-  "duration": "10–15 Minutes",
+  "age_group": "Ages 2–7 (Pre-K to Grade 2)",
+  "duration": "15 Minutes",
   "materials": [
     "10 wooden blocks, counting stones, or dried large pasta shells per pair",
     "Two wooden spoons or hands"
@@ -16,6 +16,38 @@
   "quest_mission": "Step through the Golden Gates of Numeria with Kwame and Octavia to build tactile towers using the Sacred Count.",
   "rhythm_ignition": "Call-and-response clapping percussion:\n• Teacher: 'One clap. Follow me!' ➔ [CLAP!]\n• Children: 'ONE!' ➔ [CLAP!]\n• Increment through the track up to 10 claps with steady crescendo and group cheering.",
   "tactile_ritual": "The Tactile Stone Pyramid:\n1. Children work in pairs with 10 physical stones or blocks on a cloth mat.\n2. As the track counts each number, children place exactly one physical stone down with an audible 'tap'.\n3. On 'One' tap one stone. On 'Two' add a stone. At 'Ten' assemble the stones into a complete pyramid (4-3-2-1 base).\n4. Stand up and deliver a triumphant 10-beat group drumroll on knees.",
+  "socratic_wonder_circle": {
+    "duration": "4 Minutes",
+    "rhythm_cue": "Three-Beat Detective Knock (90 BPM: Tap-Tap-Tap — 'Count & Check the Criteria!')",
+    "wait_time_rule": "Hold a calm 4-beat pause after every question before inviting responses.",
+    "strategies_activated": [
+      "S-10",
+      "S-15",
+      "S-29",
+      "S-31",
+      "S-34"
+    ],
+    "intellectual_standards": [
+      "Precision",
+      "Accuracy",
+      "Relevance"
+    ],
+    "prompts": [
+      "Refining Generalizations (S-10): If we rearrange our 10 pyramid stones into one long line instead of a triangle, did the number of stones change or stay exactly 10? Prove it!",
+      "Distinguishing Relevant from Irrelevant Facts (S-31): Suppose Kwame has 4 gray stones, 3 smooth wooden blocks, and is wearing a blue shirt—which details matter for counting the total pieces, and which detail is a decoy?",
+      "Recognizing Contradictions (S-34): If someone claps 7 times while saying '10 stones!', how can our ears and fingers spot the mismatch right away?"
+    ],
+    "age_tier_scaffolds": {
+      "Sprouts (Ages 2–4)": "Touch and move one stone per clap so hands and voice always match.",
+      "Pathfinders (Ages 4–5)": "Check whether spreading 5 stones far apart changes how many stones there are.",
+      "Wayfarers (Ages 6–7)": "Spot the decoy detail in a live counting riddle and explain why it does not affect the sum."
+    },
+    "remodelled_unit_refs": [
+      "Unit #7: A Toy for Mike (PDF p.140)",
+      "Unit #50: Linear Measurement (PDF p.248)",
+      "Unit #69: Word Problems (PDF p.288)"
+    ]
+  },
   "domain_spider": {
     "language": "Cardinal number words articulated clearly with precise 1-to-1 phonemic emphasis.",
     "cognitive": "One-to-one correspondence and spatial conservation of quantity (10 items remain 10 regardless of arrangement).",

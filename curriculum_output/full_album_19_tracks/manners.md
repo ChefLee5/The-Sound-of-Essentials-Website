@@ -1,6 +1,7 @@
 # 🤝 Track 10: Manners
 > **The Sound of Essentials: Rhythm Quest** | **Land:** Harmonia (`#d4a843`)  
-> **Hero Guides:** Kenji & Aiko | **Age Range:** Ages 2–7 (Pre-K to Grade 1) | **Duration:** 10–15 Minutes
+> **Hero Guides:** Kenji & Aiko | **Sovereign Guardian:** Seriphia  
+> **Age Range:** Ages 2–7 (Pre-K to Grade 2) | **Duration:** 15 Minutes (4-Step *Rhythm-to-Reason* Ritual)
 
 ---
 
@@ -15,7 +16,7 @@ Visit the Tea Gardens of Harmonia with Kenji and Aiko to master the Magic Keys o
 
 ---
 
-## 2. 🥁 The Rhythm Ignition (2 Minutes)
+## 2. 🥁 Step 1: The Rhythm Ignition (2 Minutes)
 The Reciprocal Courtesies Chant:
 • 'When you receive, say Thank You!' ➔ 'Then I’ll say You’re Welcome!'
 • 'Yes, Please!' ➔ 'Excuse Me!' ➔ 'No, Thank You!' ➔ 'I’m Sorry!'
@@ -23,7 +24,7 @@ The Reciprocal Courtesies Chant:
 
 ---
 
-## 3. 🖐️ Tactile Discovery Ritual (7 Minutes)
+## 3. 🖐️ Step 2: Tactile Discovery Ritual (7 Minutes)
 The Passing Bowl Ceremony:
 1. Children sit in an unbroken circle on the rug.
 2. Child 1 gently passes a flower or smooth stone in a bowl to Child 2 with two hands, making soft eye contact and saying: 'For you, my friend.'
@@ -33,7 +34,25 @@ The Passing Bowl Ceremony:
 
 ---
 
-## 4. 🌐 The 5-Domain Spider
+## 4. 💬 Step 3: Seriphia's Socratic Wonder Circle (4 Minutes)
+> **Rhythm Cue:** Passing Bowl Silent Dialogue (85 BPM: Echo Friend's Words Before Answering)  
+> **Wait-Time Rule:** Hold a calm 4-beat pause after every question before inviting responses.  
+> **Critical Thinking Strategies Activated:** `S-6`, `S-14`, `S-21`, `S-22`, `S-28` | **Intellectual Standards:** Clarity, Fairmindedness, Consistency
+
+1. Clarifying Word Meaning (S-14): What is the difference between saying a quick robotic 'Sorry!' and showing a true, caring repair after bumping a friend?
+2. Listening Critically (S-22): When a friend passes the bowl and says 'No, thank you' politely, how can we echo their boundary back with respect?
+3. Intellectual Courage (S-6): Why does it sometimes take real courage to say 'Excuse me' or 'No, thank you' kindly when everyone else is rushing?
+
+### Developmental Band Scaffolds (Ages 2–7)
+- **Sprouts (Ages 2–4):** Practice warm eye contact and two-handed giving while saying 'Thank you' and 'You're welcome'.
+- **Pathfinders (Ages 4–5):** Role-play both a rushed 'Sorry' and a caring 'Are you okay? Let me help pick it up' repair.
+- **Wayfarers (Ages 6–7):** Clarify how courteous boundaries ('No, thank you') protect both self-respect and friendship.
+
+*Linked Paul/Binker/Weil Remodelled Units:* Unit #1: Evaluative Thinking (PDF p.128), Unit #3: Corduroy (PDF p.132), Unit #5: Goldilocks and the Three Bears I (PDF p.136), Unit #6: Goldilocks II (PDF p.138)
+
+---
+
+## 5. 🌐 Step 4: The 5-Domain Spider (2-Minute Whole-Child Closure)
 - **🗣️ Language & Early Literacy:** Pragmatic prosocial phrases ('Thank you', 'You're welcome', 'Excuse me', 'I'm sorry') with authentic inflection.
 - **🔢 Cognitive & Mathematics:** Theory of mind—understanding the emotional impact of polite words on another person's feelings.
 - **🤸 Physical & Motor Skills:** Bilateral two-handed grasp and delicate passing coordination without dropping fragile contents.
@@ -42,7 +61,7 @@ The Passing Bowl Ceremony:
 
 ---
 
-## 5. 🌟 Parent / Teacher Whisper (1 Sentence)
+## 6. 🌟 Seriphia's Parent / Teacher Whisper (1 Sentence)
 *Practicing two-handed giving paired with direct eye contact releases oxytocin in both giver and receiver, replacing dominance-seeking classroom behaviors with communal trust.*
 
 ---
@@ -56,4 +75,4 @@ The Passing Bowl Ceremony:
 | **Kindergarten Readiness** | Applies situational courtesy formulas ('Please', 'Thank you', 'Excuse me') in peer interactions without prompting. |
 
 ---
-*© The Sound of Essentials: Rhythm Quest. Proprietary Screen-Free Sensory Learning Curriculum.*
+*© The Sound of Essentials: Rhythm Quest. Proprietary Screen-Free Sensory & Socratic Learning Curriculum (`soelearn.com`).*

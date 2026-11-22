@@ -8,9 +8,9 @@
 
 **Organizational Structure & Personas:**
 - **Artist Collective:** SOE is an *artist collective* of musicians, vocalists, acoustic artisans, and educators.
-- **Founder Role (L.D. Murray):** L.D. Murray is the **Founder** in a **strategic background role**. L.D. Murray is *not* an artist, *not* a performer, and *never* front-facing on-camera/acoustic performance talent.
+- **Stake Owner Role (L.D. Murray):** L.D. Murray is the **stake owner** in a **strictly behind-the-scenes role**. L.D. Murray is *not* an artist, *not* a performer, and **not a mentioned player** in external emails, marketing copy, or front-facing communications.
 - **Art Director (Danielle Alexis):** Danielle Alexis is the **Art Director**, governing visual development, character lore integrity, racial diversity canon, illustration aesthetics, and visual world-building across all 7 Lands.
-- **Lead Marketer & Sovereign Guide (Seriphia):** **Seriphia** is the primary forefront persona and **Lead Marketer**. She brings wisdom to teach the early learners and inspire parents in the essentials of learning.
+- **Brand Ambassador, Face & Voice (Seriphia):** **Seriphia** is the **face, voice, and Brand Ambassador** of The Sound of Essentials (Lead Marketer & Sovereign Guide). She brings wisdom to teach the early learners and inspire parents in the essentials of learning.
 - **The Heroes:** Early learners learn directly from the **15 Character Heroes** across the 7 Lands.
 - **Sovereign Startup Structure:** SOE operates as an independent sovereign artist collective with **100% music publishing and master sound recording ownership** across all 19 tracks. The enterprise enforces **zero platform renting**: Shopify is strictly retired, audio streams directly on owned web audio infrastructure (`soelearn.com/listen`), direct Stripe card vaulting captures post-purchase upsells, and print fulfillment is automated on-demand via Lulu API with zero inventory debt.
 - **Vanguard Tagline (Primary Canon):** ***"Staying on the path, always learning."*** *(Non-negotiable primary motto; every other tagline or axiom is strictly secondary).*

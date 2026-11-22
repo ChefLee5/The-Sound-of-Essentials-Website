@@ -7,8 +7,8 @@
   "land_color": "#c4785a",
   "domain_icon": "🤸",
   "hero_guides": "Felix & Amara",
-  "age_group": "Ages 2–7 (Pre-K to Grade 1)",
-  "duration": "10–15 Minutes",
+  "age_group": "Ages 2–7 (Pre-K to Grade 2)",
+  "duration": "15 Minutes",
   "materials": [
     "A washcloth, silk scarf, or bare hands",
     "Soft carpet or floor mat"
@@ -16,6 +16,37 @@
   "quest_mission": "Travel with Amara and Felix to the Canopy of Vitalis to breathe like great ancient trees and awaken our somatic awareness.",
   "rhythm_ignition": "Teacher models the 4-count Ocean Inhale:\n• 'Breathe in through your nose (1, 2, 3, 4)... Breathe out through your mouth (wooosh!).'\n• Children hold their hands in front of their mouths to feel the warm tactile rush of their own breath.",
   "tactile_ritual": "Canopy Rise & Root Grounding:\n1. Children place a scarf or washcloth on their heads.\n2. Reach both arms high into the sky on tiptoes—stretching toward the sun without letting the scarf fall (proprioceptive control).\n3. Slowly bend at the waist without bending the knees to touch toes, letting the scarf drift gently to the floor.\n4. Pick up the scarf with toes of the left foot, then the right foot, testing balance and plantar fine motor grip.",
+  "socratic_wonder_circle": {
+    "duration": "4 Minutes",
+    "rhythm_cue": "4-Count Breath Anchor (75 BPM: Inhale 1-2-3-4, Exhale Wooosh — Notice Before Acting)",
+    "wait_time_rule": "Hold a calm 4-beat pause after every question before inviting responses.",
+    "strategies_activated": [
+      "S-1",
+      "S-7",
+      "S-8",
+      "S-9",
+      "S-27"
+    ],
+    "intellectual_standards": [
+      "Clarity",
+      "Consistency",
+      "Adequacy"
+    ],
+    "prompts": [
+      "Thinking Independently (S-1): Before looking at a neighbor, how can you listen to your own muscles and breath to find your steady balance while holding the scarf?",
+      "Intellectual Perseverance (S-8): When touching your toes or picking up the scarf with your toes feels wobbly, what happens when we slow our breath and try a second time?",
+      "Comparing Ideals with Actual Practice (S-27): We say calm breathing helps when we feel frustrated—how can we remember to use our 4-count stretch breath during a real hard moment?"
+    ],
+    "age_tier_scaffolds": {
+      "Sprouts (Ages 2–4)": "Feel warm breath on your palm and name whether your body feels 'wiggly' or 'calm'.",
+      "Pathfinders (Ages 4–5)": "Invent one original slow-tree stretch independently before mirroring a partner.",
+      "Wayfarers (Ages 6–7)": "Connect bodily practice (slow exhale) directly to thinking clearly before answering a tricky question."
+    },
+    "remodelled_unit_refs": [
+      "Unit #33: Emotions: Anger (PDF p.199)",
+      "Unit #52: Making Things Move (PDF p.252)"
+    ]
+  },
   "domain_spider": {
     "language": "Verbalize somatic sensations ('tight', 'soft', 'rooted', 'reaching') matching physical movement.",
     "cognitive": "Spatial awareness of body boundaries (kinesphere) and vertical/horizontal body axis orientation.",

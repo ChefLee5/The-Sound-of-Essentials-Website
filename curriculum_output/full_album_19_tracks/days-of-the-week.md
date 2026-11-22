@@ -1,6 +1,7 @@
 # 📅 Track 2: Days Of The Week
 > **The Sound of Essentials: Rhythm Quest** | **Land:** Celestia (`#9678c4`)  
-> **Hero Guides:** Elias & Selene | **Age Range:** Ages 2–7 (Pre-K to Grade 1) | **Duration:** 10–15 Minutes
+> **Hero Guides:** Elias & Selene | **Sovereign Guardian:** Seriphia  
+> **Age Range:** Ages 2–7 (Pre-K to Grade 2) | **Duration:** 15 Minutes (4-Step *Rhythm-to-Reason* Ritual)
 
 ---
 
@@ -15,14 +16,14 @@ Ascend the Starlight Observatories of Celestia with Elias and Selene to weave th
 
 ---
 
-## 2. 🥁 The Rhythm Ignition (2 Minutes)
+## 2. 🥁 Step 1: The Rhythm Ignition (2 Minutes)
 Rhythmic finger-clicking and knee-slapping cadence singing the 7-day chorus:
 • 'Sunday, Monday, Tuesday, Wednesday... Thursday, Friday, Saturday!'
 • Alternate clicking fingers on right hand for daytime, left hand for nighttime.
 
 ---
 
-## 3. 🖐️ Tactile Discovery Ritual (7 Minutes)
+## 3. 🖐️ Step 2: Tactile Discovery Ritual (7 Minutes)
 The 7-Day Sun Wheel:
 1. Place a circular paper plate or tray representing the sun in the center.
 2. Children take 7 clothespins or ribbon pieces representing the 7 days.
@@ -32,7 +33,25 @@ The 7-Day Sun Wheel:
 
 ---
 
-## 4. 🌐 The 5-Domain Spider
+## 4. 💬 Step 3: Seriphia's Socratic Wonder Circle (4 Minutes)
+> **Rhythm Cue:** Domino Clap Ripple Around the Circle (100 BPM: Yesterday -> Today -> Tomorrow)  
+> **Wait-Time Rule:** Hold a calm 4-beat pause after every question before inviting responses.  
+> **Critical Thinking Strategies Activated:** `S-11`, `S-12`, `S-13`, `S-35` | **Intellectual Standards:** Logic, Completeness, Significance
+
+1. Analogous Transfer (S-11): How is the 7-day wheel of Sunday through Saturday just like a circle of seasons or a clock face that keeps returning?
+2. Clarifying Core Cycles (S-13): What changes from daytime clouds to sparkling night stars while Earth turns, and what stays steady every single week?
+3. Exploring Consequences (S-35): If our week had no predictable rhythm of rest days and learning days, what ripple would happen to our bodies and community?
+
+### Developmental Band Scaffolds (Ages 2–7)
+- **Sprouts (Ages 2–4):** Move the golden star pin one space forward and whisper 'yesterday' and 'today'.
+- **Pathfinders (Ages 4–5):** Name one routine that happens on the same day every week and why knowing it feels safe.
+- **Wayfarers (Ages 6–7):** Map a 3-step consequence chain showing how preparing on Sunday evening changes Monday morning.
+
+*Linked Paul/Binker/Weil Remodelled Units:* Unit #40: Does Earth Move? (PDF p.215)
+
+---
+
+## 5. 🌐 Step 4: The 5-Domain Spider (2-Minute Whole-Child Closure)
 - **🗣️ Language & Early Literacy:** Temporal sequencing vocabulary ('yesterday', 'today', 'tomorrow') and ordinal temporal order.
 - **🔢 Cognitive & Mathematics:** Understanding circular, cyclical time patterns versus linear progression.
 - **🤸 Physical & Motor Skills:** Hand-eye coordination and bilateral pincer pinch strength when attaching clothespins.
@@ -41,7 +60,7 @@ The 7-Day Sun Wheel:
 
 ---
 
-## 5. 🌟 Parent / Teacher Whisper (1 Sentence)
+## 6. 🌟 Seriphia's Parent / Teacher Whisper (1 Sentence)
 *Cyclical physical sequencing rituals anchor episodic memory in the hippocampus, giving children internal temporal stability that drastically reduces transition anxiety.*
 
 ---
@@ -55,4 +74,4 @@ The 7-Day Sun Wheel:
 | **Kindergarten Readiness** | Recalls temporal calendar sequence through melodic memory; articulates days in forward ordinal order. |
 
 ---
-*© The Sound of Essentials: Rhythm Quest. Proprietary Screen-Free Sensory Learning Curriculum.*
+*© The Sound of Essentials: Rhythm Quest. Proprietary Screen-Free Sensory & Socratic Learning Curriculum (`soelearn.com`).*

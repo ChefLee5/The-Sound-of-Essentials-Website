@@ -7,8 +7,8 @@
   "land_color": "#7fb685",
   "domain_icon": "💯",
   "hero_guides": "Kwame & Octavia",
-  "age_group": "Ages 2–7 (Pre-K to Grade 1)",
-  "duration": "10–15 Minutes",
+  "age_group": "Ages 2–7 (Pre-K to Grade 2)",
+  "duration": "15 Minutes",
   "materials": [
     "Household rhythm sticks or wooden spoons",
     "Sensory mat or carpet circle"
@@ -16,6 +16,36 @@
   "quest_mission": "Join Kwame & Octavia in Numeria on an acoustic sensory quest to explore One Hundred.",
   "rhythm_ignition": "Teacher models a steady 2-minute rhythmic call-and-response beat to 'One Hundred', synchronizing clapping and vocal chanting with the children.",
   "tactile_ritual": "The Hands-On Sensory Discovery:\n1. Children gather in a circle with tactile items.\n2. Follow the musical cues of One Hundred to touch, sort, and move in rhythmic unison.\n3. Pair high-reach movements with deep somatic exhalations.\n4. Freeze in quiet stillness at the final chord.",
+  "socratic_wonder_circle": {
+    "duration": "4 Minutes",
+    "rhythm_cue": "100 BPM Decuple Clap-Check (10-20-30... Spot the Structure!)",
+    "wait_time_rule": "Hold a calm 4-beat pause after every question before inviting responses.",
+    "strategies_activated": [
+      "S-10",
+      "S-15",
+      "S-29",
+      "S-31",
+      "S-34"
+    ],
+    "intellectual_standards": [
+      "Precision",
+      "Logic",
+      "Completeness"
+    ],
+    "prompts": [
+      "Noting Structural Similarities & Differences (S-29): How is counting by tens (10, 20, 30... 100) like counting 1 to 10—and what makes ten-bundles faster and more reliable?",
+      "Developing Evaluation Criteria (S-15): If we have a giant jar of 100 beans, what criteria make a counting method fair and easy to double-check without losing track?",
+      "Refining Generalizations (S-10): Does a bigger pile ALWAYS have more items than a neat stack of 100 small stones? How could big blocks trick our eyes?"
+    ],
+    "age_tier_scaffolds": {
+      "Sprouts (Ages 2–4)": "Drop 10 stones into a cup together and cheer each full bundle of ten.",
+      "Pathfinders (Ages 4–5)": "Compare a loose messy pile of 20 beans with two neat 10-stone rows to check accuracy.",
+      "Wayfarers (Ages 6–7)": "Design a rule for verifying a 100-item count and explain why visual volume can mislead."
+    },
+    "remodelled_unit_refs": [
+      "Unit #68: Bar Graph (PDF p.286)"
+    ]
+  },
   "domain_spider": {
     "language": "Articulate clear auditory phrasing and target vocabulary connected to One Hundred.",
     "cognitive": "Identify rhythmic patterns, tempo shifts, and conceptual categories in Numeria.",

@@ -98,6 +98,17 @@ class SOEHaystackEngine:
             "compliance_ready": True,
         }
 
+    def query_critical_thinking(self, query: str, top_k: int = 5) -> Dict[str, Any]:
+        """Search SOE's 35 Critical Thinking Strategies, 7 Socratic Quests, 70 Remodelled Units, and Intellectual Standards."""
+        res = self.pipeline.run(query=f"socratic critical thinking {query}", top_k=top_k)
+        return {
+            "status": "SUCCESS",
+            "query": query,
+            "matches": res["citations"],
+            "total_matches": len(res["citations"]),
+            "age_bracket": "Strictly Ages 2–7 (Pre-K to Grade 2)",
+        }
+
     def triage_support_email(self, email_body: str) -> Dict[str, Any]:
         """Drafts empathetic, grounded responses for incoming Brevo CRM support emails."""
         res = self.pipeline.run(query=email_body, top_k=3)

@@ -7,8 +7,8 @@
   "land_color": "#d4a843",
   "domain_icon": "🤝",
   "hero_guides": "Kenji & Aiko",
-  "age_group": "Ages 2–7 (Pre-K to Grade 1)",
-  "duration": "10–15 Minutes",
+  "age_group": "Ages 2–7 (Pre-K to Grade 2)",
+  "duration": "15 Minutes",
   "materials": [
     "A small wooden bowl or tea cup per child",
     "Smooth stones or flowers to pass"
@@ -16,6 +16,39 @@
   "quest_mission": "Visit the Tea Gardens of Harmonia with Kenji and Aiko to master the Magic Keys of kindness and respectful communication.",
   "rhythm_ignition": "The Reciprocal Courtesies Chant:\n• 'When you receive, say Thank You!' ➔ 'Then I’ll say You’re Welcome!'\n• 'Yes, Please!' ➔ 'Excuse Me!' ➔ 'No, Thank You!' ➔ 'I’m Sorry!'\n• Practice vocal tone modulation: whispering with warmth, not shouting.",
   "tactile_ritual": "The Passing Bowl Ceremony:\n1. Children sit in an unbroken circle on the rug.\n2. Child 1 gently passes a flower or smooth stone in a bowl to Child 2 with two hands, making soft eye contact and saying: 'For you, my friend.'\n3. Child 2 receives with two hands: 'Thank you, [Name]!'\n4. Child 1 responds with an open smile: 'You are welcome.'\n5. Repeat around the entire circle until every child has experienced the giving and receiving loop.",
+  "socratic_wonder_circle": {
+    "duration": "4 Minutes",
+    "rhythm_cue": "Passing Bowl Silent Dialogue (85 BPM: Echo Friend's Words Before Answering)",
+    "wait_time_rule": "Hold a calm 4-beat pause after every question before inviting responses.",
+    "strategies_activated": [
+      "S-6",
+      "S-14",
+      "S-21",
+      "S-22",
+      "S-28"
+    ],
+    "intellectual_standards": [
+      "Clarity",
+      "Fairmindedness",
+      "Consistency"
+    ],
+    "prompts": [
+      "Clarifying Word Meaning (S-14): What is the difference between saying a quick robotic 'Sorry!' and showing a true, caring repair after bumping a friend?",
+      "Listening Critically (S-22): When a friend passes the bowl and says 'No, thank you' politely, how can we echo their boundary back with respect?",
+      "Intellectual Courage (S-6): Why does it sometimes take real courage to say 'Excuse me' or 'No, thank you' kindly when everyone else is rushing?"
+    ],
+    "age_tier_scaffolds": {
+      "Sprouts (Ages 2–4)": "Practice warm eye contact and two-handed giving while saying 'Thank you' and 'You're welcome'.",
+      "Pathfinders (Ages 4–5)": "Role-play both a rushed 'Sorry' and a caring 'Are you okay? Let me help pick it up' repair.",
+      "Wayfarers (Ages 6–7)": "Clarify how courteous boundaries ('No, thank you') protect both self-respect and friendship."
+    },
+    "remodelled_unit_refs": [
+      "Unit #1: Evaluative Thinking (PDF p.128)",
+      "Unit #3: Corduroy (PDF p.132)",
+      "Unit #5: Goldilocks and the Three Bears I (PDF p.136)",
+      "Unit #6: Goldilocks II (PDF p.138)"
+    ]
+  },
   "domain_spider": {
     "language": "Pragmatic prosocial phrases ('Thank you', 'You're welcome', 'Excuse me', 'I'm sorry') with authentic inflection.",
     "cognitive": "Theory of mind—understanding the emotional impact of polite words on another person's feelings.",

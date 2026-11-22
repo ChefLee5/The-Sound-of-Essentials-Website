@@ -7,8 +7,8 @@
   "land_color": "#d4a843",
   "domain_icon": "🗣️",
   "hero_guides": "Kenji & Aiko",
-  "age_group": "Ages 2–7 (Pre-K to Grade 1)",
-  "duration": "10–15 Minutes",
+  "age_group": "Ages 2–7 (Pre-K to Grade 2)",
+  "duration": "15 Minutes",
   "materials": [
     "Sand trays, sensory salt bins, or sandpaper letter cards",
     "Smooth river pebbles"
@@ -16,6 +16,37 @@
   "quest_mission": "Explore the Echoing Caves of Harmonia with Kenji and Aiko to discover the hidden beat inside every letter of the alphabet.",
   "rhythm_ignition": "The Syncopated Phonics Beat:\n• Instead of rushing L-M-N-O-P, follow the Remix syncopated drumbreak:\n• 'A A A... B B B... C C C... D... E E F F... G G!'\n• Children bounce on their heels to the triple-pulse rhythm.",
   "tactile_ritual": "Sensory Letter Sculpting:\n1. Provide a shallow tray filled with colored cornmeal or beach sand.\n2. As the remix repeats letter clusters, children trace the letter with their index finger in the sand.\n3. Shake the tray gently left-to-right (tactile reset) on the beat drop.\n4. Place a pebble at the starting point of the letter stroke to anchor proper top-to-bottom stroke direction.",
+  "socratic_wonder_circle": {
+    "duration": "4 Minutes",
+    "rhythm_cue": "Open-Palm Echo Tap (95 BPM: Slow down the sound — Echo back clearly)",
+    "wait_time_rule": "Hold a calm 4-beat pause after every question before inviting responses.",
+    "strategies_activated": [
+      "S-6",
+      "S-14",
+      "S-21",
+      "S-22",
+      "S-28"
+    ],
+    "intellectual_standards": [
+      "Precision",
+      "Clarity",
+      "Consistency"
+    ],
+    "prompts": [
+      "Clarifying Word & Sound Boundaries (S-14): Why did our Remix slow down L-M-N-O-P instead of rushing them into one blurry sound?",
+      "Listening Critically (S-22): Close your eyes as a friend taps a letter rhythm in the sand—can you echo back the exact sound you heard without peeking?",
+      "Thinking Vocabulary (S-28): What is the difference between hearing a letter's NAME and testing the SOUND that letter makes inside your own name?"
+    ],
+    "age_tier_scaffolds": {
+      "Sprouts (Ages 2–4)": "Clap one crisp beat per letter in the child's first name with zero rush.",
+      "Pathfinders (Ages 4–5)": "Echo a partner's chosen letter sound back accurately before tracing it in sand.",
+      "Wayfarers (Ages 6–7)": "Compare two letters that look or sound similar (like b/d or m/n) using precise sensory descriptors."
+    },
+    "remodelled_unit_refs": [
+      "Unit #2: Listening Ears (PDF p.130)",
+      "Unit #21: Adjectives (PDF p.168)"
+    ]
+  },
   "domain_spider": {
     "language": "Phonemic isolation and distinct letter-name articulation without melodic slur.",
     "cognitive": "Pattern recognition between auditory rhythm breaks and visual grapheme shapes.",

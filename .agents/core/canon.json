@@ -34,7 +34,12 @@
     "id": "seriphia",
     "name": "Seriphia",
     "title": "Guardian of the Sound",
+    "role": "Face, voice, and Brand Ambassador of The Sound of Essentials (Lead Marketer & Sovereign Guide)",
     "appearance": "Black woman with gentle, discerning eyes, thin gold-rimmed circular glasses, subtle faint gold halo of light, elegant cream/ivory linen robe with subtle gold embroidery."
+  },
+  "stake_owner_policy": {
+    "stake_owner": "L.D. (Lee) Murray",
+    "public_presence": "Behind-the-scenes stake owner only. Not a mentioned player in external emails, brand sign-offs, or public-facing copy; Seriphia is the face and voice of SOE."
   },
   "banned_entities": [
     { "pattern": "\\bMarcus\\b", "reason": "Retired character (Marcus was retired in July 2026 canon)" },

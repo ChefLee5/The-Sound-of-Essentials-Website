@@ -84,7 +84,7 @@ def list_catalog(category: str):
 @click.argument("track")
 @click.option("--format", "-f", "output_format", type=click.Choice(["md", "html", "json", "all"]), default="md", help="Output format.")
 @click.option("--output-dir", "-o", default=".", help="Directory to save output files.")
-@click.option("--age-group", default="Ages 2–7 (Pre-K to Grade 1)", help="Target age group.")
+@click.option("--age-group", default="Ages 2–7 (Pre-K to Grade 2)", help="Target age group.")
 @click.option("--stdout", is_flag=True, help="Print content directly to stdout.")
 def generate_lesson(track: str, output_format: str, output_dir: str, age_group: str, stdout: bool):
     """Generate a single 10–15 min screen-free lesson package for a track."""
@@ -135,7 +135,7 @@ def generate_lesson(track: str, output_format: str, output_dir: str, age_group: 
 @click.option("--land", help="Generate all tracks for a specific Land (e.g., vitalis, numeria, harmonia).")
 @click.option("--format", "-f", "output_format", type=click.Choice(["md", "html", "json", "all"]), default="all", help="Output format.")
 @click.option("--output-dir", "-o", default="./curriculum_batch", help="Output directory for the package.")
-@click.option("--age-group", default="Ages 2–7 (Pre-K to Grade 1)", help="Target age group.")
+@click.option("--age-group", default="Ages 2–7 (Pre-K to Grade 2)", help="Target age group.")
 def batch_generate(all_tracks: bool, land: Optional[str], output_format: str, output_dir: str, age_group: str):
     """Batch-produce multi-lesson classroom curriculum packages."""
     if not all_tracks and not land:
@@ -298,6 +298,10 @@ def interactive_repl():
             click.echo(f"\n🎯 MISSION:\n{lesson.quest_mission}")
             click.echo(f"\n🥁 RHYTHM IGNITION (2 Min):\n{lesson.rhythm_ignition}")
             click.echo(f"\n🖐️ TACTILE DISCOVERY (7 Min):\n{lesson.tactile_ritual}")
+            swc = lesson.socratic_wonder_circle
+            click.secho(f"\n💬 SERIPHIA'S SOCRATIC WONDER CIRCLE ({swc.duration} | {', '.join(swc.strategies_activated)}):", fg="magenta", bold=True)
+            for idx, prompt in enumerate(swc.prompts, start=1):
+                click.echo(f"  {idx}. {prompt}")
             click.secho(f"\n🌟 TEACHER WHISPER:\n{lesson.teacher_whisper}\n", fg="yellow")
         else:
             click.secho(f"Unrecognized track or command: '{cmd}'. Type 'list' or 'help'.", fg="red")

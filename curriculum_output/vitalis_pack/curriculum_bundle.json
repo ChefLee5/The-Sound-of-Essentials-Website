@@ -8,8 +8,8 @@
     "land_color": "#c4785a",
     "domain_icon": "🤸",
     "hero_guides": "Felix & Amara",
-    "age_group": "Ages 2–7 (Pre-K to Grade 1)",
-    "duration": "10–15 Minutes",
+    "age_group": "Ages 2–7 (Pre-K to Grade 2)",
+    "duration": "15 Minutes",
     "materials": [
       "A washcloth, silk scarf, or bare hands",
       "Soft carpet or floor mat"
@@ -17,6 +17,37 @@
     "quest_mission": "Travel with Amara and Felix to the Canopy of Vitalis to breathe like great ancient trees and awaken our somatic awareness.",
     "rhythm_ignition": "Teacher models the 4-count Ocean Inhale:\n• 'Breathe in through your nose (1, 2, 3, 4)... Breathe out through your mouth (wooosh!).'\n• Children hold their hands in front of their mouths to feel the warm tactile rush of their own breath.",
     "tactile_ritual": "Canopy Rise & Root Grounding:\n1. Children place a scarf or washcloth on their heads.\n2. Reach both arms high into the sky on tiptoes—stretching toward the sun without letting the scarf fall (proprioceptive control).\n3. Slowly bend at the waist without bending the knees to touch toes, letting the scarf drift gently to the floor.\n4. Pick up the scarf with toes of the left foot, then the right foot, testing balance and plantar fine motor grip.",
+    "socratic_wonder_circle": {
+      "duration": "4 Minutes",
+      "rhythm_cue": "4-Count Breath Anchor (75 BPM: Inhale 1-2-3-4, Exhale Wooosh — Notice Before Acting)",
+      "wait_time_rule": "Hold a calm 4-beat pause after every question before inviting responses.",
+      "strategies_activated": [
+        "S-1",
+        "S-7",
+        "S-8",
+        "S-9",
+        "S-27"
+      ],
+      "intellectual_standards": [
+        "Clarity",
+        "Consistency",
+        "Adequacy"
+      ],
+      "prompts": [
+        "Thinking Independently (S-1): Before looking at a neighbor, how can you listen to your own muscles and breath to find your steady balance while holding the scarf?",
+        "Intellectual Perseverance (S-8): When touching your toes or picking up the scarf with your toes feels wobbly, what happens when we slow our breath and try a second time?",
+        "Comparing Ideals with Actual Practice (S-27): We say calm breathing helps when we feel frustrated—how can we remember to use our 4-count stretch breath during a real hard moment?"
+      ],
+      "age_tier_scaffolds": {
+        "Sprouts (Ages 2–4)": "Feel warm breath on your palm and name whether your body feels 'wiggly' or 'calm'.",
+        "Pathfinders (Ages 4–5)": "Invent one original slow-tree stretch independently before mirroring a partner.",
+        "Wayfarers (Ages 6–7)": "Connect bodily practice (slow exhale) directly to thinking clearly before answering a tricky question."
+      },
+      "remodelled_unit_refs": [
+        "Unit #33: Emotions: Anger (PDF p.199)",
+        "Unit #52: Making Things Move (PDF p.252)"
+      ]
+    },
     "domain_spider": {
       "language": "Verbalize somatic sensations ('tight', 'soft', 'rooted', 'reaching') matching physical movement.",
       "cognitive": "Spatial awareness of body boundaries (kinesphere) and vertical/horizontal body axis orientation.",
@@ -51,8 +82,8 @@
     "land_color": "#c4785a",
     "domain_icon": "💪",
     "hero_guides": "Felix & Amara",
-    "age_group": "Ages 2–7 (Pre-K to Grade 1)",
-    "duration": "10–15 Minutes",
+    "age_group": "Ages 2–7 (Pre-K to Grade 2)",
+    "duration": "15 Minutes",
     "materials": [
       "Floor tape / chalk line (optional)",
       "Wooden rhythm sticks or bare hands/feet"
@@ -60,6 +91,39 @@
     "quest_mission": "Join Felix and Amara in Vitalis to form the Sovereign Cadet March and restore focused harmony to our classroom.",
     "rhythm_ignition": "Teacher leads a crisp 100 BPM military-style cadence with chest-pats and foot-stomps:\n• Chant: 'Left, left, left-right-left! Wisdom is more precious than gold!'\n• Children mirror the exact rhythm with alternating knee-taps while chanting the count '1, 2, 3, 4!'",
     "tactile_ritual": "The Bilateral March & Statue Reset:\n1. Children line up along the carpet edge or circle-time rug.\n2. Step 1 (March): March in place, lifting knees high to touch opposite elbows (bilateral midline crossing).\n3. Step 2 (Shake-Off): On the lyric cue 'We want to shake!', shake left arm, right arm, left leg, right leg for 4 counts each to discharge excess kinetic energy.\n4. Step 3 (Sovereign Freeze): On the beat drop, freeze completely still like an ancient mountain in Vitalis for 5 slow breaths.\n5. Sit down in unison on the rug without speaking a single word.",
+    "socratic_wonder_circle": {
+      "duration": "4 Minutes",
+      "rhythm_cue": "110 BPM Freeze-and-Think Cadence (Left-Right-Freeze — Hold 4 Quiet Beats)",
+      "wait_time_rule": "Hold a calm 4-beat pause after every question before inviting responses.",
+      "strategies_activated": [
+        "S-1",
+        "S-7",
+        "S-8",
+        "S-9",
+        "S-27"
+      ],
+      "intellectual_standards": [
+        "Consistency",
+        "Significance",
+        "Logic"
+      ],
+      "prompts": [
+        "Comparing Ideals with Practice (S-27): Our Drill Time chant says 'Wisdom is more precious than gold'—what does choosing wisdom look like with our feet, hands, and voice right now?",
+        "Intellectual Perseverance (S-8): During the rapid shake-off and sudden Sovereign Freeze, why is stopping on cue harder than keeping moving—and how does practice strengthen self-control?",
+        "Confidence in Reason (S-9): Why does staying on a steady, thoughtful path together help everyone learn better than rushing without listening?"
+      ],
+      "age_tier_scaffolds": {
+        "Sprouts (Ages 2–4)": "Notice the difference between fast shaking hands and still mountain hands.",
+        "Pathfinders (Ages 4–5)": "Explain one way practicing the freeze helps you pause before grabbing or shouting.",
+        "Wayfarers (Ages 6–7)": "Compare 'gold' (something shiny) with 'wisdom' (knowing how to act fairly and thoughtfully)."
+      },
+      "remodelled_unit_refs": [
+        "Unit #4: The Gingerbread Man (PDF p.134)",
+        "Unit #13: Two Ways to Win (PDF p.152)",
+        "Unit #22: Listening Game (PDF p.170)",
+        "Unit #31: Rules (PDF p.195)"
+      ]
+    },
     "domain_spider": {
       "language": "Articulate crisp cadence chant ('Left, left, left-right-left; Sound off! 1, 2, 3, 4!') with vocal projection.",
       "cognitive": "Auditory response inhibition—processing sudden musical cues to switch from rapid shaking to absolute stillness.",

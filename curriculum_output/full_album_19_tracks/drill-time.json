@@ -7,8 +7,8 @@
   "land_color": "#c4785a",
   "domain_icon": "💪",
   "hero_guides": "Felix & Amara",
-  "age_group": "Ages 2–7 (Pre-K to Grade 1)",
-  "duration": "10–15 Minutes",
+  "age_group": "Ages 2–7 (Pre-K to Grade 2)",
+  "duration": "15 Minutes",
   "materials": [
     "Floor tape / chalk line (optional)",
     "Wooden rhythm sticks or bare hands/feet"
@@ -16,6 +16,39 @@
   "quest_mission": "Join Felix and Amara in Vitalis to form the Sovereign Cadet March and restore focused harmony to our classroom.",
   "rhythm_ignition": "Teacher leads a crisp 100 BPM military-style cadence with chest-pats and foot-stomps:\n• Chant: 'Left, left, left-right-left! Wisdom is more precious than gold!'\n• Children mirror the exact rhythm with alternating knee-taps while chanting the count '1, 2, 3, 4!'",
   "tactile_ritual": "The Bilateral March & Statue Reset:\n1. Children line up along the carpet edge or circle-time rug.\n2. Step 1 (March): March in place, lifting knees high to touch opposite elbows (bilateral midline crossing).\n3. Step 2 (Shake-Off): On the lyric cue 'We want to shake!', shake left arm, right arm, left leg, right leg for 4 counts each to discharge excess kinetic energy.\n4. Step 3 (Sovereign Freeze): On the beat drop, freeze completely still like an ancient mountain in Vitalis for 5 slow breaths.\n5. Sit down in unison on the rug without speaking a single word.",
+  "socratic_wonder_circle": {
+    "duration": "4 Minutes",
+    "rhythm_cue": "110 BPM Freeze-and-Think Cadence (Left-Right-Freeze — Hold 4 Quiet Beats)",
+    "wait_time_rule": "Hold a calm 4-beat pause after every question before inviting responses.",
+    "strategies_activated": [
+      "S-1",
+      "S-7",
+      "S-8",
+      "S-9",
+      "S-27"
+    ],
+    "intellectual_standards": [
+      "Consistency",
+      "Significance",
+      "Logic"
+    ],
+    "prompts": [
+      "Comparing Ideals with Practice (S-27): Our Drill Time chant says 'Wisdom is more precious than gold'—what does choosing wisdom look like with our feet, hands, and voice right now?",
+      "Intellectual Perseverance (S-8): During the rapid shake-off and sudden Sovereign Freeze, why is stopping on cue harder than keeping moving—and how does practice strengthen self-control?",
+      "Confidence in Reason (S-9): Why does staying on a steady, thoughtful path together help everyone learn better than rushing without listening?"
+    ],
+    "age_tier_scaffolds": {
+      "Sprouts (Ages 2–4)": "Notice the difference between fast shaking hands and still mountain hands.",
+      "Pathfinders (Ages 4–5)": "Explain one way practicing the freeze helps you pause before grabbing or shouting.",
+      "Wayfarers (Ages 6–7)": "Compare 'gold' (something shiny) with 'wisdom' (knowing how to act fairly and thoughtfully)."
+    },
+    "remodelled_unit_refs": [
+      "Unit #4: The Gingerbread Man (PDF p.134)",
+      "Unit #13: Two Ways to Win (PDF p.152)",
+      "Unit #22: Listening Game (PDF p.170)",
+      "Unit #31: Rules (PDF p.195)"
+    ]
+  },
   "domain_spider": {
     "language": "Articulate crisp cadence chant ('Left, left, left-right-left; Sound off! 1, 2, 3, 4!') with vocal projection.",
     "cognitive": "Auditory response inhibition—processing sudden musical cues to switch from rapid shaking to absolute stillness.",

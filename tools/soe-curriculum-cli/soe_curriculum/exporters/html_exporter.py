@@ -17,6 +17,14 @@ def export_html(lesson: LessonExtension) -> str:
     materials_html = "".join([f"<li>{_escape(m)}</li>" for m in lesson.materials]) or "<li>Ordinary classroom items</li>"
     elof_badges = "".join([f'<span class="badge elof">{_escape(c)}</span>' for c in lesson.standards.elof_codes])
     naeyc_badges = "".join([f'<span class="badge naeyc">{_escape(s)}</span>' for s in lesson.standards.naeyc_standards])
+    swc = lesson.socratic_wonder_circle
+    strategy_badges = "".join([f'<span class="badge socratic">{_escape(s)}</span>' for s in swc.strategies_activated])
+    socratic_prompts_html = "".join([f"<li>{_escape(p)}</li>" for p in swc.prompts])
+    scaffolds_html = "".join(
+        [f'<div class="scaffold-item"><strong>{_escape(tier)}</strong>{_escape(cue)}</div>' for tier, cue in swc.age_tier_scaffolds.items()]
+    )
+    standards_pills_str = ", ".join(swc.intellectual_standards) if swc.intellectual_standards else "Clarity, Accuracy"
+    units_str = ", ".join(swc.remodelled_unit_refs) if swc.remodelled_unit_refs else "Canonical Land Socratic Alignment"
 
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -224,6 +232,53 @@ def export_html(lesson: LessonExtension) -> str:
 
     .badge.elof {{ background: #E0E7FF; color: #3730A3; }}
     .badge.naeyc {{ background: #FEF3C7; color: #92400E; }}
+    .badge.socratic {{ background: #EDE9FE; color: #5B21B6; }}
+
+    .socratic-box {{
+      background: #FAF5FF;
+      border: 1px solid #DDD6FE;
+      border-left: 4px solid #7C3AED;
+      border-radius: 8px;
+      padding: 16px 18px;
+      font-size: 14px;
+    }}
+
+    .socratic-meta {{
+      font-size: 12px;
+      color: #5B21B6;
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }}
+
+    .socratic-prompts {{
+      margin: 10px 0 14px 20px;
+      line-height: 1.6;
+    }}
+
+    .socratic-prompts li {{
+      margin-bottom: 6px;
+    }}
+
+    .scaffold-grid {{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 8px;
+      margin-top: 8px;
+    }}
+
+    .scaffold-item {{
+      background: #FFFFFF;
+      border: 1px solid #E9D5FF;
+      border-radius: 6px;
+      padding: 8px 10px;
+      font-size: 12px;
+    }}
+
+    .scaffold-item strong {{
+      display: block;
+      color: #5B21B6;
+      margin-bottom: 2px;
+    }}
 
     .footer {{
       text-align: center;
@@ -281,9 +336,29 @@ def export_html(lesson: LessonExtension) -> str:
         <div class="ritual-box">{_escape(lesson.tactile_ritual)}</div>
       </section>
 
+      <!-- Seriphia's Socratic Wonder Circle -->
+      <section class="section">
+        <h2 class="section-title">4. 💬 Seriphia's Socratic Wonder Circle ({_escape(swc.duration)})</h2>
+        <div class="socratic-box">
+          <div class="socratic-meta">
+            <div><strong>Rhythm Cue:</strong> {_escape(swc.rhythm_cue)} &middot; <strong>Wait-Time:</strong> {_escape(swc.wait_time_rule)}</div>
+            <div style="margin-top: 6px;"><strong>Strategies:</strong> {strategy_badges} &middot; <strong>Standards:</strong> {_escape(standards_pills_str)}</div>
+          </div>
+          <ol class="socratic-prompts">
+            {socratic_prompts_html}
+          </ol>
+          <div class="scaffold-grid">
+            {scaffolds_html}
+          </div>
+          <div style="margin-top: 10px; font-size: 12px; color: #6B7280;">
+            <em>Linked Paul/Binker/Weil Remodelled Units:</em> {_escape(units_str)}
+          </div>
+        </div>
+      </section>
+
       <!-- 5-Domain Spider -->
       <section class="section">
-        <h2 class="section-title">4. 🌐 The 5-Domain Spider</h2>
+        <h2 class="section-title">5. 🌐 The 5-Domain Spider (2-Minute Closure)</h2>
         <div class="spider-grid">
           <div class="spider-item">
             <strong>🗣️ Language & Phonics</strong>
@@ -310,7 +385,7 @@ def export_html(lesson: LessonExtension) -> str:
 
       <!-- Parent/Teacher Whisper -->
       <section class="section">
-        <h2 class="section-title">5. 🌟 Parent / Teacher Whisper</h2>
+        <h2 class="section-title">6. 🌟 Seriphia's Parent / Teacher Whisper</h2>
         <div class="whisper-box">"{_escape(lesson.teacher_whisper)}"</div>
       </section>
 

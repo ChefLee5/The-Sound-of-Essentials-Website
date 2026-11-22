@@ -20,8 +20,8 @@ Always use **Ages 2–7** (ES: "2 a 7 años", FR: "2 à 7 ans") across all copy,
 Use vanilla CSS with custom properties (`index.css`).
 
 ### 5. Persona Separation
-- L.D. Murray is Founder in a strategic background role (never front-facing artist).
-- Seriphia is Lead Marketer and Sovereign Guide.
+- **Seriphia** is the face, voice, and Brand Ambassador of The Sound of Essentials (Lead Marketer & Sovereign Guide). Public-facing emails, storytelling, and brand communications speak through Seriphia.
+- **L.D. (Lee) Murray** is the stake owner in a strictly behind-the-scenes role—never a front-facing artist and never a mentioned player in external emails or public copy.
 - Learners learn directly from the 15 Character Heroes across the 7 Lands.
 
 ### 6. ASD-STE100 Voice Standard (De-Fluffing & Stoic Clarity)
@@ -31,3 +31,11 @@ All B2B institutional communications, curriculum instructions, and system copy m
 - Absolute ban on AI tropes (*delve*, *testament*, *tapestry*, *seamless*, *game-changer*, *holistic*, *elevate*, *foster*).
 - Zero negative contrast staging ("Not X, but Y").
 - Full canon rule: [.agents/rules/asd-ste100-voice-standard.md](file:///c:/Users/ldmur/Downloads/The-Sound-of-Essentials-Website/.agents/rules/asd-ste100-voice-standard.md).
+
+### 7. Owned Domains & Startup Sovereignty SOP
+SOE owns `thesoundofessentials.com` (brand and storefront) and `soelearn.com` (learning ecosystem and short QR/utility links).
+- Route all physical product URLs and QR codes through SOE-owned domains.
+- Store all user, family, classroom, and media assets on SOE-controlled infrastructure.
+- Choose commodity, open-standard, or self-hosted primitives over third-party white-label SaaS lock-in.
+- Shopify is strictly retired across SOE; never recommend Shopify apps or plugins.
+

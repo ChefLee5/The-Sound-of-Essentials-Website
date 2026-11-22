@@ -154,3 +154,49 @@ def test_40_day_workbook_block_k_bijection_and_injection(tmp_path):
     assert "Seriphia says:" in w1d1_k["tip"]
 
 
+def test_19_album_tracks_socratic_wonder_circle_upgrade(tmp_path):
+    from soe_curriculum.engine import CurriculumEngine
+    from soe_curriculum.exporters import export_markdown, export_html, export_json
+
+    engine = CurriculumEngine()
+    lessons = engine.generate_all_lessons()
+    assert len(lessons) == 19
+
+    for lesson in lessons:
+        swc = lesson.socratic_wonder_circle
+        assert swc.duration == "4 Minutes"
+        assert len(swc.prompts) == 3, f"Track {lesson.track_slug} must have 3 Socratic prompts"
+        assert len(swc.strategies_activated) >= 3
+        assert set(swc.age_tier_scaffolds.keys()) == {
+            "Sprouts (Ages 2–4)",
+            "Pathfinders (Ages 4–5)",
+            "Wayfarers (Ages 6–7)",
+        }
+
+        # Every activated strategy must belong to the track's canonical Land's 5 strategies
+        land_allowed = {s.code for s in get_strategies_by_land(land_id=lesson.land_id)}
+        assert set(swc.strategies_activated).issubset(land_allowed), (
+            f"Track {lesson.track_slug} ({lesson.land_id}) used non-Land strategies: "
+            f"{set(swc.strategies_activated) - land_allowed}"
+        )
+
+        # Verify Markdown, HTML, and JSON exporters render Step 3 cleanly
+        md = export_markdown(lesson)
+        html_out = export_html(lesson)
+        json_out = json.loads(export_json(lesson))
+        assert "Seriphia's Socratic Wonder Circle" in md
+        assert "Seriphia's Socratic Wonder Circle" in html_out
+        assert "socratic_wonder_circle" in json_out
+        assert len(json_out["socratic_wonder_circle"]["prompts"]) == 3
+
+    # Also verify CLI batch export produces complete 19-track upgraded bundle
+    runner = CliRunner()
+    out_dir = tmp_path / "album_19"
+    res = runner.invoke(main, ["batch", "--all", "-f", "all", "-o", str(out_dir)])
+    assert res.exit_code == 0
+    bundle = json.loads((out_dir / "curriculum_bundle.json").read_text(encoding="utf-8"))
+    assert len(bundle) == 19
+    assert all("socratic_wonder_circle" in item for item in bundle)
+
+
+

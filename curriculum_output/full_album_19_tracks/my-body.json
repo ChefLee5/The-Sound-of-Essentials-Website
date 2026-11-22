@@ -7,8 +7,8 @@
   "land_color": "#5fb685",
   "domain_icon": "🔬",
   "hero_guides": "Vesta & Silas",
-  "age_group": "Ages 2–7 (Pre-K to Grade 1)",
-  "duration": "10–15 Minutes",
+  "age_group": "Ages 2–7 (Pre-K to Grade 2)",
+  "duration": "15 Minutes",
   "materials": [
     "A hand mirror or partner",
     "Stickers or soft felt dots"
@@ -16,6 +16,39 @@
   "quest_mission": "Team up with Vesta and Silas in Terrasol to map the living architecture of our strong, healthy bodies.",
   "rhythm_ignition": "Rhythmic Body Tapping Chant:\n• 'What’s on your face? Eyes, nose, mouth, chin!' [Tap each feature with fingertip]\n• 'Don’t forget about your forehead, cheeks, and two ears!' [Gentle cup over ears]",
   "tactile_ritual": "The Head-to-Toe Somatosensory Scan:\n1. Verse 1 (Face): Children look in mirror or pair with a buddy, touching each facial feature.\n2. Verse 2 (Upper Body): Cross arms over chest to tap shoulders ('butterfly tap'), slide down to elbows, wrists, and wiggle all 10 fingertips.\n3. Verse 3 (Lower Body): Tap hips, thighs, pat knees, grasp ankles, and stomp 10 individual toes.\n4. Bridge (Living Vitality): Inhale deeply, placing right hand on heart to feel the physical cardiac pulse.",
+  "socratic_wonder_circle": {
+    "duration": "4 Minutes",
+    "rhythm_cue": "Butterfly Heart-Tap Check (95 BPM: Feel the Pulse — Observe Before Inferring)",
+    "wait_time_rule": "Hold a calm 4-beat pause after every question before inviting responses.",
+    "strategies_activated": [
+      "S-5",
+      "S-18",
+      "S-30",
+      "S-32",
+      "S-33"
+    ],
+    "intellectual_standards": [
+      "Accuracy",
+      "Completeness",
+      "Logic"
+    ],
+    "prompts": [
+      "Evaluating Evidence (S-33): Place your palm over your heart before jumping and after 10 jumps—what direct physical evidence tells you how movement changes your heartbeat?",
+      "Evaluating Explanations (S-18): Our song says we keep our bodies strong by 'consuming living foods, stretching, and keeping our hearts right'—why do all three work together instead of just one?",
+      "Plausible Inferences (S-32): If your eyes are closed and you touch your forehead, chin, and elbows, how does your brain still know exactly where each body part is?"
+    ],
+    "age_tier_scaffolds": {
+      "Sprouts (Ages 2–4)": "Tap eyes, ears, nose, and hands while naming what each sense helps us notice.",
+      "Pathfinders (Ages 4–5)": "Compare heartbeat speed resting vs. marching and report what your hand actually felt.",
+      "Wayfarers (Ages 6–7)": "Connect living whole foods, water, rest, and movement as a testable cause-and-effect health system."
+    },
+    "remodelled_unit_refs": [
+      "Unit #11: Messages Without Words (PDF p.148)",
+      "Unit #32: About Families & Needs and Wants (PDF p.197)",
+      "Unit #44: The Health Department (PDF p.223)",
+      "Unit #54: Using Your Senses (PDF p.256)"
+    ]
+  },
   "domain_spider": {
     "language": "Accurate anatomical vocabulary (chin, forehead, neck, ankles, thighs, living foods).",
     "cognitive": "Spatial top-to-bottom ordering and bilateral bodily symmetry (left ear vs. right ear).",

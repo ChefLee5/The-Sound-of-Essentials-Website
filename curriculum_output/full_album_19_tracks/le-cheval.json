@@ -7,8 +7,8 @@
   "land_color": "#d4897a",
   "domain_icon": "🇫🇷",
   "hero_guides": "Athena & Ezra",
-  "age_group": "Ages 2–7 (Pre-K to Grade 1)",
-  "duration": "10–15 Minutes",
+  "age_group": "Ages 2–7 (Pre-K to Grade 2)",
+  "duration": "15 Minutes",
   "materials": [
     "Two clean plastic cups or coconut halves per child (for hooves)",
     "A wide open circle rug"
@@ -16,6 +16,38 @@
   "quest_mission": "Ride with Athena and Ezra across the Plains of Luminosity to study the majestic strength of the horse in French and English.",
   "rhythm_ignition": "French Call-and-Response Trotting Rhythm:\n• Chant: 'Deux accrets le cheval, fort et puissant!'\n• Tap coconut halves or cups together on floor: [Clip-clop, clip-clop, clip-clop!]",
   "tactile_ritual": "Equine Gaits Exploration:\n1. Children hold two cups facing downward on the floor.\n2. Gait 1 (Walk - Slow): Four distinct beats [1 - 2 - 3 - 4] on the carpet.\n3. Gait 2 (Trot - Two-beat): Alternating diagonal taps [1-2, 1-2, 1-2].\n4. Gait 3 (Gallop - Three-beat syncopation): [Ba-da-BUM! Ba-da-BUM!].\n5. Test equine panoramic vision: Stand tall and turn eyes left and right without moving head (peripheral vision challenge).",
+  "socratic_wonder_circle": {
+    "duration": "4 Minutes",
+    "rhythm_cue": "Passing Bowl & Two-Finger Chin Tap (85 BPM Waltz: 'Ask the Root Question')",
+    "wait_time_rule": "Hold a calm 4-beat pause after every question before inviting responses.",
+    "strategies_activated": [
+      "S-16",
+      "S-17",
+      "S-19",
+      "S-20",
+      "S-24"
+    ],
+    "intellectual_standards": [
+      "Depth",
+      "Fairmindedness",
+      "Significance"
+    ],
+    "prompts": [
+      "Questioning Deeply (S-17): The song tells us the horse ('le cheval') can see almost all the way around its body—why does a grazing animal need wide panoramic vision?",
+      "Generating Solutions (S-19): If two riders speak different languages (French and English), what fair, respectful ways can they communicate and care for the same horse together?",
+      "Evaluating Rules & Strength (S-20): The lyric calls the horse 'fort et puissant' (strong and powerful)—what makes using strength wise and protective instead of bossy?"
+    ],
+    "age_tier_scaffolds": {
+      "Sprouts (Ages 2–4)": "Notice how hands move gently when brushing a gentle horse vs. loud stomping.",
+      "Pathfinders (Ages 4–5)": "Test wide side-vision without turning your head and explain how it helps horses stay safe.",
+      "Wayfarers (Ages 6–7)": "Hold a 3-turn Socratic circle weighing how physical strength pairs with gentle stewardship."
+    },
+    "remodelled_unit_refs": [
+      "Unit #17: The Horse Was in the Parlor (PDF p.160)",
+      "Unit #36: Schools in India (PDF p.206)",
+      "Unit #61: Comparing Man to Animals (PDF p.270)"
+    ]
+  },
   "domain_spider": {
     "language": "French vocabulary acquisition ('le cheval', 'fort', 'puissant') and equine gait terminology.",
     "cognitive": "Auditory tempo discrimination (accelerando from 4-beat walk to 3-beat syncopated gallop).",

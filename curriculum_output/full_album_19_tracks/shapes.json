@@ -7,8 +7,8 @@
   "land_color": "#5fb685",
   "domain_icon": "🔷",
   "hero_guides": "Vesta & Silas",
-  "age_group": "Ages 2–7 (Pre-K to Grade 1)",
-  "duration": "10–15 Minutes",
+  "age_group": "Ages 2–7 (Pre-K to Grade 2)",
+  "duration": "15 Minutes",
   "materials": [
     "Household rhythm sticks or wooden spoons",
     "Sensory mat or carpet circle"
@@ -16,6 +16,39 @@
   "quest_mission": "Join Vesta & Silas in Terrasol on an acoustic sensory quest to explore Shapes.",
   "rhythm_ignition": "Teacher models a steady 2-minute rhythmic call-and-response beat to 'Shapes', synchronizing clapping and vocal chanting with the children.",
   "tactile_ritual": "The Hands-On Sensory Discovery:\n1. Children gather in a circle with tactile items.\n2. Follow the musical cues of Shapes to touch, sort, and move in rhythmic unison.\n3. Pair high-reach movements with deep somatic exhalations.\n4. Freeze in quiet stillness at the final chord.",
+  "socratic_wonder_circle": {
+    "duration": "4 Minutes",
+    "rhythm_cue": "Three-Beat Detective Knock (95 BPM: Count the Sides — Test the Rule!)",
+    "wait_time_rule": "Hold a calm 4-beat pause after every question before inviting responses.",
+    "strategies_activated": [
+      "S-5",
+      "S-18",
+      "S-30",
+      "S-32",
+      "S-33"
+    ],
+    "intellectual_standards": [
+      "Precision",
+      "Consistency",
+      "Accuracy"
+    ],
+    "prompts": [
+      "Testing Assumptions (S-30): If we tilt a square onto one corner so it looks like a diamond, is it STILL a square? Let's test our song's rule ('four equal sides' and square corners)!",
+      "Evaluating Evidence (S-33): How do our fingers prove the difference between a flat circle drawn on paper and a 3D sphere (ball) we can roll across the rug?",
+      "Evaluating Theories (S-18): Why do honeybees build hexagons and bridges use triangles—what happens when we gently press on a wooden-stick triangle versus a square?"
+    ],
+    "age_tier_scaffolds": {
+      "Sprouts (Ages 2–4)": "Trace round vs. pointy edges with fingers on real household objects.",
+      "Pathfinders (Ages 4–5)": "Rotate a square block on its corner and count its 4 equal sides to check if its shape changed.",
+      "Wayfarers (Ages 6–7)": "Test structural stability of a triangle vs. square and compare 2D shapes against 3D cubes/spheres."
+    },
+    "remodelled_unit_refs": [
+      "Unit #26: Tools (Remodel I — Independent Categorization) (PDF p.186)",
+      "Unit #27: Tools (Remodel II — Iterative Fulton Workshop) (PDF p.187)",
+      "Unit #43: City Park (PDF p.221)",
+      "Unit #57: Magnets (PDF p.262)"
+    ]
+  },
   "domain_spider": {
     "language": "Articulate clear auditory phrasing and target vocabulary connected to Shapes.",
     "cognitive": "Identify rhythmic patterns, tempo shifts, and conceptual categories in Terrasol.",

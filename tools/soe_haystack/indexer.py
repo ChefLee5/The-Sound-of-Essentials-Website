@@ -39,8 +39,9 @@ CANONICAL_TRACK_METADATA: Dict[int, Dict[str, Any]] = {
 class SOEKnowledgeIndexer:
     """Indexes canonical SOE ecosystem data into typed Haystack Document representations."""
 
-    def __init__(self, data_dir: str = None):
+    def __init__(self, data_dir: str = None, foundation_path: str = None):
         self.data_dir = data_dir or haystack_config.DATA_DIR
+        self.foundation_path = foundation_path or haystack_config.CRITICAL_THINKING_FOUNDATION_PATH
 
     def load_json_safe(self, filename: str) -> Any:
         path = os.path.join(self.data_dir, filename)
@@ -50,6 +51,16 @@ class SOEKnowledgeIndexer:
                     return json.load(f)
             except Exception as e:
                 print(f"Warning: could not read {filename}: {e}")
+        return None
+
+    def load_critical_thinking_foundation(self) -> Any:
+        """Load the exported SOE Critical Thinking Curriculum foundation JSON if present."""
+        if self.foundation_path and os.path.exists(self.foundation_path):
+            try:
+                with open(self.foundation_path, "r", encoding="utf-8") as f:
+                    return json.load(f)
+            except Exception as e:
+                print(f"Warning: could not read critical thinking foundation: {e}")
         return None
 
     def build_track_documents(self) -> List[Document]:
@@ -239,6 +250,190 @@ class SOEKnowledgeIndexer:
             docs.append(Document(id=l["id"], content=content, meta=meta))
         return docs
 
+    def build_critical_thinking_documents(self) -> List[Document]:
+        """Index the SOE Critical Thinking & Socratic Inquiry Curriculum foundation JSON."""
+        data = self.load_critical_thinking_foundation()
+        if not isinstance(data, dict):
+            return []
+
+        docs: List[Document] = []
+
+        # 1. 35 Core Critical Thinking Strategies (S-1..S-35)
+        for s in data.get("strategies_35", []):
+            code = s.get("code", "")
+            formal = s.get("formal_name", "")
+            land_name = s.get("land_name", "Sanctuary")
+            hero_guides = s.get("hero_guides", "Seriphia")
+            category = s.get("category", "Critical Thinking")
+            standards = s.get("elof_naeyc_alignment", "")
+            content = (
+                f"Critical Thinking Strategy {code}: {formal} ({category}). "
+                f"Land: {land_name} ({hero_guides}). "
+                f"Child Voice: {s.get('child_voice', '')} "
+                f"Socratic Spark: {s.get('socratic_spark', '')} "
+                f"Rhythm & Tactile Mechanic: {s.get('rhythm_tactile_mechanic', '')} "
+                f"Standards Alignment: {standards}. Ages 2–7."
+            )
+            docs.append(
+                Document(
+                    id=f"ct_strategy_{code.lower()}",
+                    content=content,
+                    meta={
+                        "type": "critical_thinking_strategy",
+                        "code": code,
+                        "title": f"{code}: {formal} ({land_name})",
+                        "domain": f"Critical Thinking • {category} ({land_name})",
+                        "land": land_name,
+                        "hero_guides": hero_guides,
+                        "standards": standards,
+                        "url": "https://soelearn.com/science",
+                        "age_bracket": "Strictly Ages 2–7 (Pre-K to Grade 2)",
+                    },
+                )
+            )
+
+        # 2. 4 Supplemental Early-Primary Dimensions (D-1..D-4)
+        for sup in data.get("supplemental_dimensions_4", []):
+            code = sup.get("code", "")
+            formal = sup.get("formal_name", "")
+            guardian = sup.get("guardian", "Seriphia")
+            content = (
+                f"Critical Thinking Supplemental Dimension {code}: {formal}. "
+                f"Category: {sup.get('category', '')}. Guardian: {guardian}. "
+                f"SOE Integration: {sup.get('soe_integration', '')} Ages 2–7."
+            )
+            docs.append(
+                Document(
+                    id=f"ct_supplement_{code.lower()}",
+                    content=content,
+                    meta={
+                        "type": "critical_thinking_strategy",
+                        "code": code,
+                        "title": f"{code}: {formal} ({guardian})",
+                        "domain": "Critical Thinking • Seriphia Canopy",
+                        "land": "Sanctuary",
+                        "url": "https://soelearn.com/science",
+                        "age_bracket": "Strictly Ages 2–7 (Pre-K to Grade 2)",
+                    },
+                )
+            )
+
+        # 3. 7 Flagship SOE Socratic Quest Modules
+        quests = data.get("flagship_soe_socratic_quests", {})
+        if isinstance(quests, dict):
+            for land_key, q in quests.items():
+                land_name = q.get("land_name", land_key.capitalize())
+                strats = ", ".join(q.get("strategies_activated", []))
+                wonder_text = " ".join(q.get("socratic_wonder_circle", []))
+                standards_str = " | ".join(q.get("institutional_standards", []))
+                content = (
+                    f"SOE Socratic Quest ({q.get('quest_id', land_key)}): {land_name} with {q.get('hero_guides', 'Seriphia')}. "
+                    f"Paired Album Track: {q.get('paired_track_title', '')} ({q.get('paired_track_slug', '')}). "
+                    f"Strategies Activated: {strats}. "
+                    f"Quest Mission: {q.get('quest_mission', '')} "
+                    f"Rhythm Ignition: {q.get('rhythm_ignition', '')} "
+                    f"Tactile Discovery Ritual: {q.get('tactile_discovery_ritual', '')} "
+                    f"Seriphia's Socratic Wonder Circle: {wonder_text} "
+                    f"Seriphia Whisper: {q.get('seriphia_whisper', '')} "
+                    f"Institutional Standards: {standards_str}."
+                )
+                docs.append(
+                    Document(
+                        id=f"ct_quest_{land_key}",
+                        content=content,
+                        meta={
+                            "type": "socratic_quest",
+                            "quest_id": q.get("quest_id", land_key),
+                            "title": f"Socratic Quest: {land_name} ({q.get('paired_track_title', '')})",
+                            "domain": f"Socratic Inquiry • {land_name}",
+                            "land": land_name,
+                            "track_slug": q.get("paired_track_slug", ""),
+                            "strategies": q.get("strategies_activated", []),
+                            "standards": standards_str,
+                            "url": "https://soelearn.com/listen",
+                            "age_bracket": "Strictly Ages 2–7 (Pre-K to Grade 2)",
+                        },
+                    )
+                )
+
+        # 4. 70 Remodelled Instructional Units
+        for u in data.get("remodelled_units_70", []):
+            uid = u.get("unit_id")
+            strats = ", ".join(u.get("strategies", []))
+            land_id = u.get("soe_land_id", "terrasol")
+            track_slug = u.get("soe_track_slug", "")
+            content = (
+                f"Remodelled Critical Thinking Unit #{uid}: {u.get('source_title', '')} "
+                f"({u.get('source_domain', '')}). Strategies: {strats}. "
+                f"SOE Land: {land_id.capitalize()}, Paired Track: {track_slug}, "
+                f"Tier: {u.get('soe_age_tier', 'Ages 2–7')}. "
+                f"Screen-Free Tactile Remodel: {u.get('soe_remodel_summary', '')}"
+            )
+            docs.append(
+                Document(
+                    id=f"ct_unit_{uid}",
+                    content=content,
+                    meta={
+                        "type": "remodelled_unit",
+                        "unit_id": uid,
+                        "title": f"Unit #{uid}: {u.get('source_title', '')} ({land_id.capitalize()})",
+                        "domain": f"Critical Thinking • {u.get('source_domain', '')}",
+                        "land": land_id.capitalize(),
+                        "track_slug": track_slug,
+                        "strategies": u.get("strategies", []),
+                        "url": "https://soelearn.com/science",
+                        "age_bracket": u.get("soe_age_tier", "Strictly Ages 2–7 (Pre-K to Grade 2)"),
+                    },
+                )
+            )
+
+        # 5. 12 Universal Intellectual Standards
+        for idx, std in enumerate(data.get("universal_intellectual_standards", []), start=1):
+            name = std.get("standard", "")
+            content = (
+                f"Universal Intellectual Standard: {name} ({std.get('contrast', '')}). "
+                f"Seriphia Socratic Prompt: {std.get('seriphia_prompt', '')} Ages 2–7."
+            )
+            docs.append(
+                Document(
+                    id=f"ct_standard_{idx}_{name.lower()}",
+                    content=content,
+                    meta={
+                        "type": "intellectual_standard",
+                        "title": f"Intellectual Standard: {name}",
+                        "domain": "Critical Thinking • Universal Standards",
+                        "url": "https://soelearn.com/science",
+                        "age_bracket": "Strictly Ages 2–7 (Pre-K to Grade 2)",
+                    },
+                )
+            )
+
+        # 6. 6 Socratic Questioning Taxonomy Categories
+        for idx, cat in enumerate(data.get("socratic_questioning_taxonomy", []), start=1):
+            cat_name = cat.get("category", "")
+            prompts = " ".join(cat.get("child_prompts", []))
+            content = (
+                f"Socratic Questioning Taxonomy: {cat_name}. "
+                f"Rhythm Cue: {cat.get('rhythm_cue', '')}. "
+                f"Child Prompts (Ages 2–7): {prompts}"
+            )
+            docs.append(
+                Document(
+                    id=f"ct_socratic_cat_{idx}",
+                    content=content,
+                    meta={
+                        "type": "socratic_taxonomy",
+                        "title": f"Socratic Taxonomy: {cat_name}",
+                        "domain": "Critical Thinking • Socratic Questioning",
+                        "rhythm_cue": cat.get("rhythm_cue", ""),
+                        "url": "https://soelearn.com/science",
+                        "age_bracket": "Strictly Ages 2–7 (Pre-K to Grade 2)",
+                    },
+                )
+            )
+
+        return docs
+
     def get_all_documents(self) -> List[Document]:
         all_docs = []
         all_docs.extend(self.build_track_documents())
@@ -246,4 +441,5 @@ class SOEKnowledgeIndexer:
         all_docs.extend(self.build_land_documents())
         all_docs.extend(self.build_product_documents())
         all_docs.extend(self.build_sensory_lesson_documents())
+        all_docs.extend(self.build_critical_thinking_documents())
         return all_docs
