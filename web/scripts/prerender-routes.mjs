@@ -297,12 +297,13 @@ const routes = [
   {
     route: '/institutions',
     title: 'Education Concord Institutional Advocacy & Curriculum | The Sound of Essentials',
-    description: 'Deliver 100% Head Start ELOF, NAEYC, and state-aligned multi-sensory learning across all 5 domains without teacher prep burnout or screens (ages 2–7).',
+    description: 'Deliver screen-free multi-sensory learning aligned with Head Start ELOF, NAEYC, state standards, and international early-childhood guidelines across all 5 domains without teacher prep burnout (ages 2–7).',
     bodyHtml: layoutShell({
       badge: 'Education Concord · Institutional Advocacy',
-      h1: 'Deliver 100% ELOF, NAEYC & State-Aligned Learning Without Teacher Prep Burnout or Screens',
+      h1: 'Deliver Screen-Free Learning Aligned With Domestic & Global Early-Childhood Guidelines Across All 5 Domains',
       bodyHtml: `
-        <p>Turnkey 10 to 15 minute acoustic rhythm and tactile classroom rituals (60 to 80 BPM) aligned with Head Start ELOF, NAEYC, and 50-state standards, with zero student PII or screen setup required.</p>
+        <p>Turnkey 10 to 15 minute acoustic rhythm and tactile classroom rituals (60 to 80 BPM) designed in alignment with Head Start ELOF, NAEYC, state early-learning frameworks, and leading international screen-free guidelines (WHO under-5, Singapore Grow Well SG, India IAP, China MOE, and Caribbean ECC), with zero student PII or screen setup required.</p>
+        <p><em>Independent Policy Alignment: SOE is an independent curriculum designed in alignment with publicly published frameworks; alignment reflects pedagogical design and does not imply government or intergovernmental endorsement.</em></p>
         <p><a href="/solutions">Browse All Educator Frameworks</a></p>
       `,
     }),

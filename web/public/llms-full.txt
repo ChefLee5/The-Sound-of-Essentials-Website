@@ -90,10 +90,11 @@
 1. **Dalcroze Eurhythmics:** Uses physical body motion to internalize musical rhythm and language cadence.
 2. **Orff Schulwerk:** Integrates rhythm, speech, movement, and play-based improvisation.
 3. **Kodály Method:** Sequential sound-before-symbol music literacy and solfège ear training.
-4. **National Standards Alignment:**
-   - Head Start Early Learning Outcomes Framework (ELOF) across all infant/toddler and preschool domains.
-   - NAEYC Developmentally Appropriate Practice (DAP) standards.
-   - State Early Childhood Education (ECE) alignment for the 28 State-Approved Curriculum States.
+4. **Domestic & International Policy Alignment:**
+   - Head Start Early Learning Outcomes Framework (ELOF) across all 5 core developmental domains (ages 2–7).
+   - NAEYC Developmentally Appropriate Practice (DAP) standards and state early-childhood learning frameworks.
+   - International screen-free early-childhood health and learning guidelines, including WHO Under-5 Screen Guidelines, AAP & India IAP pediatric screen recommendations, Singapore MOH/ECDA *Grow Well SG*, China MOE early-childhood myopia prevention measures, and Jamaica ECC pillars.
+   - *Independent Alignment Note:* SOE is an independent curriculum designed in alignment with publicly published frameworks; alignment reflects pedagogical design and does not imply government or intergovernmental endorsement.
 5. **Neuroscience of Rhythm in Literacy:**
    - *Nature Scientific Reports (2020):* Neural entrainment to linguistic rhythm predicts phonological awareness and reading readiness.
    - *Auditory Processing in Early Childhood:* Temporal jitter discrimination in the auditory cortex directly correlates with phonemic segmentation ability.
