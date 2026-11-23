@@ -234,7 +234,7 @@ const Mission = () => {
                   <div className="flow-column">
                     <p className="flow-column__title">Zero Prep Burnout</p>
                     <p className="flow-column__text">
-                      Open-and-go classroom and kitchen-table routines aligned to Head Start ELOF, NAEYC, and 50-state early learning standards.
+                      Open-and-go classroom and kitchen-table routines aligned with Head Start ELOF, NAEYC, state frameworks, and leading international screen-free early-childhood guidelines.
                     </p>
                   </div>
                   <div className="flow-column">

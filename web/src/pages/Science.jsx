@@ -318,6 +318,26 @@ const Science = () => {
                 </div>
             </section>
 
+            {/* ── Global & Domestic Screen-Free Policy Alignment ── */}
+            <section className="section">
+                <div className="container">
+                    <RevealSection>
+                        <div className="implementation-block glass-card">
+                            <div className="section-label" style={{ background: 'var(--color-orange)' }}>Global &amp; Domestic Policy Alignment</div>
+                            <h2 style={{ marginBottom: '1rem' }}>
+                                Aligned With Leading <span className="text-gold">Screen-Free Guidelines</span>
+                            </h2>
+                            <p>
+                                Strictly built for ages 2 to 7, the Rhythm Quest curriculum aligns independently with published public-health and early-learning standards worldwide: <strong>WHO Under-5 Screen Guidelines</strong><sup><a href="#ref-13">[13]</a></sup>, <strong>AAP &amp; India IAP Pediatric Screen Recommendations</strong><sup><a href="#ref-15">[15]</a></sup>, <strong>Singapore MOH/ECDA <em>Grow Well SG</em></strong><sup><a href="#ref-14">[14]</a></sup>, <strong>China MOE Early-Childhood Myopia Prevention Measures</strong><sup><a href="#ref-16">[16]</a></sup>, <strong>Head Start ELOF &amp; NAEYC</strong>, and <strong>Jamaica ECC Early-Learning Pillars</strong>.
+                            </p>
+                            <p style={{ marginTop: '1rem', fontSize: '0.85rem', opacity: 0.85 }}>
+                                The Sound of Essentials (SOE) is an independent curriculum designed in alignment with publicly published early-childhood health and learning guidelines. Alignment reflects pedagogical design and does not imply formal endorsement, accreditation, or sponsorship by any government agency or intergovernmental body.
+                            </p>
+                        </div>
+                    </RevealSection>
+                </div>
+            </section>
+
             {/* ── References ── */}
             <section className="section">
                 <div className="container">
@@ -339,6 +359,10 @@ const Science = () => {
                                 <li id="ref-10">The State of Global Learning Poverty &amp; The 44 Million Global Teacher Shortage. <em>UNESCO &amp; World Bank</em> (2024). <a href="https://www.unesco.org/gem-report" target="_blank" rel="noopener noreferrer">unesco.org</a></li>
                                 <li id="ref-11">Growth-Mindset Supportive Language (GMSL) and intrinsic motivation in early learning environments. <em>Proceedings of the National Academy of Sciences (PNAS)</em> (2023). <a href="https://doi.org/10.1073/pnas.2217743120" target="_blank" rel="noopener noreferrer">pnas.org</a></li>
                                 <li id="ref-12">Slater, J., et al. Longitudinal Effects of Group Music Instruction on Literacy Skills in Low-Income Children. <em>PLOS ONE</em> (2014). <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4237413/" target="_blank" rel="noopener noreferrer">pmc.ncbi.nlm.nih.gov</a></li>
+                                <li id="ref-13">World Health Organization (WHO). <em>Guidelines on physical activity, sedentary behaviour and sleep for children under 5 years of age</em> (2019). <a href="https://www.who.int/publications/i/item/9789241550536" target="_blank" rel="noopener noreferrer">who.int</a></li>
+                                <li id="ref-14">Singapore Ministry of Health (MOH) &amp; Early Childhood Development Agency (ECDA). <em>Grow Well SG — Guidance on Screen Use in Children</em> (2025). <a href="https://www.ecda.gov.sg" target="_blank" rel="noopener noreferrer">ecda.gov.sg</a></li>
+                                <li id="ref-15">Indian Academy of Pediatrics (IAP). <em>Guidelines on Screen Time and Digital Wellness in Infants, Children and Adolescents</em>. <a href="https://www.iapindia.org" target="_blank" rel="noopener noreferrer">iapindia.org</a></li>
+                                <li id="ref-16">Ministry of Education of the People&apos;s Republic of China (MOE). <em>Eight Measures on Early-Childhood Myopia Prevention and Control</em> (Nov 2024). <a href="http://en.moe.gov.cn/news/press_releases/202411/t20241118_1163560.html" target="_blank" rel="noopener noreferrer">en.moe.gov.cn</a></li>
                             </ol>
                         </div>
                     </RevealSection>

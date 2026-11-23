@@ -249,7 +249,7 @@ export function institutionalFaqSchema() {
         name: 'How does The Sound of Essentials align with Head Start ELOF and State Early Learning Standards?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'The Sound of Essentials: Rhythm Quest delivers turnkey 10–15 minute screen-free classroom lesson extensions across all 5 Core Domains (Language & Literacy, Cognition & Math, Physical & Perceptual Motor, Scientific Inquiry, and Social-Emotional Development). All modules are crosswalked to Head Start ELOF, NAEYC standards, and 28 State-Approved Early Learning Guidelines.',
+          text: 'The Sound of Essentials: Rhythm Quest delivers turnkey 10–15 minute screen-free classroom lesson extensions across all 5 Core Domains (Language & Literacy, Cognition & Math, Physical & Perceptual Motor, Scientific Inquiry, and Social-Emotional Development). All modules are designed in alignment with Head Start ELOF, NAEYC standards, state early learning guidelines, and leading international screen-free early-childhood frameworks (including WHO under-5 guidelines).',
         },
       },
       {

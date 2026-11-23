@@ -680,7 +680,19 @@ const Home = () => {
                     <span>Tactile workbooks, illustrated dictionaries, and 10-minute room rituals that endure</span>
                   </div>
                 </div>
+                <div className="credibility-pillar">
+                  <span className="cred-icon" style={{ color: '#FF6F00' }}>
+                    <SoeIcon name="nature-earth" type="duotone" size={26} />
+                  </span>
+                  <div>
+                    <strong>Global &amp; Domestic Policy-Aligned</strong>
+                    <span>Designed in alignment with WHO under-5 screen guidelines, pediatric screen recommendations, Head Start ELOF, and NAEYC (ages 2–7)</span>
+                  </div>
+                </div>
               </div>
+              <p className="credibility-compliance-note">
+                The Sound of Essentials (SOE) is an independent curriculum designed in alignment with publicly published early-childhood health and learning guidelines. Alignment reflects pedagogical design and does not imply government or intergovernmental endorsement.
+              </p>
             </div>
           </RevealSection>
         </div>
@@ -1887,9 +1899,18 @@ const Home = () => {
 
         .credibility-pillars {
           display: grid;
-          grid-template-columns: repeat(3, 1fr);
+          grid-template-columns: repeat(2, 1fr);
           gap: 1.5rem;
           text-align: left;
+        }
+
+        .credibility-compliance-note {
+          margin: 1.5rem auto 0;
+          font-size: 0.78rem;
+          color: var(--color-text-secondary);
+          opacity: 0.85;
+          max-width: 760px;
+          line-height: 1.5;
         }
 
         .credibility-pillar {

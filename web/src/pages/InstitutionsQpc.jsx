@@ -13,7 +13,7 @@ export default function InstitutionsQpc() {
   const { t } = useTranslation();
   usePageMeta({
     title: 'Education Concord Institutional Advocacy & Curriculum | The Sound of Essentials',
-    description: 'Deliver 100% Head Start ELOF, NAEYC, and state-aligned multi-sensory learning across all 5 domains without teacher prep burnout or screens (ages 2–7).',
+    description: 'Deliver screen-free multi-sensory learning aligned with Head Start ELOF, NAEYC, state standards, and international early-childhood guidelines across all 5 domains without teacher prep burnout (ages 2–7).',
     canonicalPath: '/institutions',
   });
 
@@ -80,7 +80,7 @@ export default function InstitutionsQpc() {
       '@context': 'https://schema.org',
       '@type': 'EducationalOrganization',
       name: 'The Sound of Essentials: Rhythm Quest Institutional Concord',
-      description: 'Turnkey acoustic screen-free early learning curriculum for ages 2–7. 19 original tracks across 7 developmental lands, 400 hands-on readiness activities, and 4,000+ vocabulary words crosswalked to Head Start ELOF and NAEYC standards.',
+      description: 'Turnkey acoustic screen-free early learning curriculum for ages 2–7. 19 original tracks across 7 developmental lands, 400 hands-on readiness activities, and 4,000+ vocabulary words designed in alignment with Head Start ELOF, NAEYC standards, and leading international screen-free early-childhood guidelines.',
       url: 'https://soelearn.com/institutions',
       email: 'info@soelearn.com',
       audience: {
@@ -302,7 +302,7 @@ export default function InstitutionsQpc() {
             >
               <div className="qpc-card-header">
                 <h2>{t('institutions.step2_title')}</h2>
-                <p>Our Education Concord advocacy framework delivers 100% Head Start ELOF, NAEYC, and 50-state standards alignment for ages 2 to 7 with zero teacher prep burnout and zero screens.</p>
+                <p>Our Education Concord advocacy framework is designed in alignment with Head Start ELOF, NAEYC, state early-learning frameworks, and leading international screen-free guidance (including WHO under-5 recommendations, pediatric guidance, Singapore Grow Well SG, and Caribbean ECC pillars) for ages 2 to 7 — with zero teacher prep burnout and zero screens.</p>
               </div>
 
               <div className="qpc-pitch-grid">
@@ -324,6 +324,7 @@ export default function InstitutionsQpc() {
                   <p>{t('institutions.feature3_desc')}</p>
                 </article>
               </div>
+              <p className="qpc-compliance-note">{t('institutions.compliance_note')}</p>
 
               {/* Application Form */}
               <div className="qpc-booking-box">
