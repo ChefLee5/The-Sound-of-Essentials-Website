@@ -1,6 +1,6 @@
 # SOE Agentic Search Recon & Autonomous Work Order
-**Generated:** November 20, 2026 (2026-11-20T19:24:53.617Z)  
-**Overall Search Readiness Score:** **100 / 100**  
+**Generated:** November 23, 2026 (2026-11-23T06:21:42.418Z)  
+**Overall Search Readiness Score:** **75 / 100**  
 
 ---
 
@@ -11,7 +11,7 @@
 | **LLM Context & Grounding** | 100/100 | 🟢 Optimal |
 | **Sitemap Health & Indexing** | 100/100 | 🟢 Optimal |
 | **Structured Data & Schema** | 100/100 | 🟢 Optimal |
-| **Prerender & SERP Parity** | 100/100 | 🟢 Optimal |
+| **Prerender & SERP Parity** | 0/100 | 🟡 Review |
 
 ---
 
@@ -19,13 +19,12 @@
 - **[PASS]** (robots): All 7 frontier AI crawlers allowed.
 - **[PASS]** (llms): The Concord tokenization and Share the Sound grounded in llms.txt.
 - **[PASS]** (sitemap): All critical routes present in sitemap.
-- **[PASS]** (prerender): All 38 non-root sitemap routes are configured in prerender-routes.mjs.
-- **[PASS]** (prerender): All built dist/ route HTML pages passed self-canonical, valid JSON-LD, and zero-emoji SERP hygiene checks.
+- **[FAIL]** (prerender): 27 sitemap route(s) missing from prerender-routes.mjs: /resources/foundations, /resources/play, /resources/readiness, /resources/classrooms, /resources/notes, /resources/sound-before-symbol-guide-ages-2-7, /resources/first-10-minutes-screen-free-music-routine, /resources/meet-the-7-learning-lands-and-15-heroes, /resources/why-60-to-80-bpm-calms-early-learners, /resources/screen-free-listening-setup-car-bedtime, /resources/five-minute-phonics-games-for-toddlers, /resources/transition-songs-end-morning-bedtime-battles, /resources/tactile-coloring-and-audio-focus-habit, /resources/picture-books-without-quizzing-vocabulary, /resources/bilingual-rhythm-exposure-english-french-spanish, /resources/phonemic-awareness-milestones-ages-2-to-7, /resources/blending-and-segmenting-sounds-through-music, /resources/screen-free-kindergarten-readiness-checklist, /resources/eight-week-summer-bridge-plan-ages-4-7, /resources/rhythmic-counting-shapes-time-numeria, /resources/screen-free-alternatives-to-tablet-reading-apps, /resources/preschool-circle-time-blueprint-no-music-specialist, /resources/head-start-elof-naeyc-alignment-guide, /resources/home-classroom-continuity-qr-parent-bridge, /resources/education-sovereignty-owning-your-childs-attention, /resources/note-01-ten-calm-minutes-before-screens, /resources/note-02-clapping-syllables-at-the-dinner-table
 
 ---
 
 ### Weekly Pull Request Work Orders (Self-Improving Backlog)
-✔ **Zero pending work orders.** All search feeds, LLM grounding files, and crawler endpoints are in 100% canonical alignment!
+1. [ ] Add missing sitemap route(s) to scripts/prerender-routes.mjs: /resources/foundations, /resources/play, /resources/readiness, /resources/classrooms, /resources/notes, /resources/sound-before-symbol-guide-ages-2-7, /resources/first-10-minutes-screen-free-music-routine, /resources/meet-the-7-learning-lands-and-15-heroes, /resources/why-60-to-80-bpm-calms-early-learners, /resources/screen-free-listening-setup-car-bedtime, /resources/five-minute-phonics-games-for-toddlers, /resources/transition-songs-end-morning-bedtime-battles, /resources/tactile-coloring-and-audio-focus-habit, /resources/picture-books-without-quizzing-vocabulary, /resources/bilingual-rhythm-exposure-english-french-spanish, /resources/phonemic-awareness-milestones-ages-2-to-7, /resources/blending-and-segmenting-sounds-through-music, /resources/screen-free-kindergarten-readiness-checklist, /resources/eight-week-summer-bridge-plan-ages-4-7, /resources/rhythmic-counting-shapes-time-numeria, /resources/screen-free-alternatives-to-tablet-reading-apps, /resources/preschool-circle-time-blueprint-no-music-specialist, /resources/head-start-elof-naeyc-alignment-guide, /resources/home-classroom-continuity-qr-parent-bridge, /resources/education-sovereignty-owning-your-childs-attention, /resources/note-01-ten-calm-minutes-before-screens, /resources/note-02-clapping-syllables-at-the-dinner-table
 
 ---
 
