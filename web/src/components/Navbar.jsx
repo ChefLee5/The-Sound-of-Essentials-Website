@@ -65,6 +65,7 @@ const Navbar = () => {
     { to: '/workbook',   label: 'Workbook', icon: 'documents-book-bookmark' },
     { to: '/headphones', label: 'Headphones', icon: 'senses-ear' },
     { to: '/gallery',    label: 'Gallery', icon: 'playback-images' },
+    { to: '/join',       label: t('navbar.contact', 'Contact'), icon: 'messaging-mail' },
   ];
 
   const isActive = (to) =>
@@ -621,7 +622,10 @@ const Navbar = () => {
           }
         }
 
-        @media (max-width: 1024px) and (min-width: 841px) {
+        @media (max-width: 1120px) and (min-width: 841px) {
+          .navbar__logo-wordmark {
+            display: none;
+          }
           .navbar__link {
             font-size: 0.76rem;
             padding: 0.36rem 0.36rem;

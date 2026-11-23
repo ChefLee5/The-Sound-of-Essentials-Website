@@ -120,6 +120,7 @@ function layoutEditorialShell(innerMainHtml) {
           <a href="/science" style="padding: 0.25rem 0.5rem; text-decoration: none; color: #2B2016;">Science of Sound</a>
           <a href="/solutions" style="padding: 0.25rem 0.5rem; text-decoration: none; color: #2B2016;">Solutions Directory</a>
           <a href="/mission" style="padding: 0.25rem 0.5rem; text-decoration: none; color: #2B2016;">Our Mission</a>
+          <a href="/join" style="padding: 0.25rem 0.5rem; text-decoration: none; color: #2B2016;">Contact Us</a>
         </div>
       </nav>
     </header>
@@ -146,6 +147,7 @@ function layoutShell({ h1, badge, bodyHtml }) {
           <a href="/science" style="padding: 0.25rem 0.5rem; text-decoration: none; color: #2B2016;">Science of Sound</a>
           <a href="/solutions" style="padding: 0.25rem 0.5rem; text-decoration: none; color: #2B2016;">Solutions Directory</a>
           <a href="/mission" style="padding: 0.25rem 0.5rem; text-decoration: none; color: #2B2016;">Our Mission</a>
+          <a href="/join" style="padding: 0.25rem 0.5rem; text-decoration: none; color: #2B2016;">Contact Us</a>
         </div>
       </nav>
     </header>
