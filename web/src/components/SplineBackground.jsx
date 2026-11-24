@@ -15,13 +15,14 @@ import { useEffect, useRef } from 'react';
  * pointer-events: none          → all site interactions unaffected
  */
 
-// ── Palette: mirrors the CSS design tokens ──────────────────────
+// ── Palette: canonical 7 Lands + SOE Amber ──────────────────────
 const COLORS = {
-  green:  { r: 76,  g: 175, b: 80  },
-  purple: { r: 123, g: 31,  b: 162 },
-  orange: { r: 255, g: 111, b: 0   },
-  blue:   { r: 30,  g: 136, b: 229 },
-  yellow: { r: 255, g: 179, b: 0   },
+  harmonia:   { r: 212, g: 168, b: 67  },
+  numeria:    { r: 127, g: 182, b: 133 },
+  vitalis:    { r: 196, g: 120, b: 90  },
+  aquaria:    { r: 91,  g: 164, b: 201 },
+  celestia:   { r: 150, g: 120, b: 196 },
+  amber:      { r: 255, g: 111, b: 0   },
 };
 const ORB_PALETTE = Object.values(COLORS);
 

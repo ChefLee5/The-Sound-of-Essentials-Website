@@ -67,24 +67,24 @@ const Home = () => {
     return () => clearInterval(interval);
   }, [theta]);
 
-  /* ── 5 Developmental Domains ── */
+  /* ── 5 Developmental Domains (canonical 7-Land + SOE Amber palette) ── */
   const domains = [
-    { icon: 'messaging-message-circle', title: t('home.domains.language.title'), desc: t('home.domains.language.desc'), color: '#4CAF50', accent: 'rgba(76,175,80,0.12)' },
-    { icon: 'other-puzzle', title: t('home.domains.cognitive.title'), desc: t('home.domains.cognitive.desc'), color: '#1E88E5', accent: 'rgba(30,136,229,0.12)' },
+    { icon: 'messaging-message-circle', title: t('home.domains.language.title'), desc: t('home.domains.language.desc'), color: '#7FB685', accent: 'rgba(127,182,133,0.14)' },
+    { icon: 'other-puzzle', title: t('home.domains.cognitive.title'), desc: t('home.domains.cognitive.desc'), color: '#5BA4C9', accent: 'rgba(91,164,201,0.14)' },
     { icon: 'metrics-activity', title: t('home.domains.physical.title'), desc: t('home.domains.physical.desc'), color: '#FF6F00', accent: 'rgba(255,111,0,0.12)' },
-    { icon: 'nature-earth', title: t('home.domains.science.title'), desc: t('home.domains.science.desc'), color: '#7B1FA2', accent: 'rgba(123,31,162,0.12)' },
-    { icon: 'tools-heart', title: t('home.domains.social_emotional.title'), desc: t('home.domains.social_emotional.desc'), color: '#FFB300', accent: 'rgba(255,179,0,0.12)' },
+    { icon: 'nature-earth', title: t('home.domains.science.title'), desc: t('home.domains.science.desc'), color: '#9678C4', accent: 'rgba(150,120,196,0.14)' },
+    { icon: 'tools-heart', title: t('home.domains.social_emotional.title'), desc: t('home.domains.social_emotional.desc'), color: '#D4A843', accent: 'rgba(212,168,67,0.14)' },
   ];
 
-  /* ── 7 Musical Lands Mini-Previews ── */
+  /* ── 7 Musical Lands Mini-Previews (canonical CONSTRAINTS.md colors) ── */
   const lands = [
-    { id: 'harmonia', name: 'Harmonia', focus: 'Language & Manners', heroes: 'Kenji & Aiko', color: '#5fb685' },
-    { id: 'numeria', name: 'Numeria', focus: 'Numbers & Math', heroes: 'Kwame & Octavia', color: '#5ba4c9' },
-    { id: 'vitalis', name: 'Vitalis', focus: 'Physical & Movement', heroes: 'Felix & Amara', color: '#FF8A65' },
-    { id: 'celestia', name: 'Celestia', focus: 'Time & Seasons', heroes: 'Elias & Selene', color: '#9678c4' },
-    { id: 'luminosity', name: 'Luminosity', focus: 'Advanced Language', heroes: 'Athena & Ezra', color: '#f5c43a' },
-    { id: 'aquaria', name: 'Aquaria', focus: 'Water & Emotion', heroes: 'Nerissa & Ronan', color: '#4dd0e1' },
-    { id: 'terrasol', name: 'Terrasol', focus: 'Science & Nature', heroes: 'Vesta & Silas', color: '#8d6e63' },
+    { id: 'harmonia', name: 'Harmonia', focus: 'Language & Manners', heroes: 'Kenji & Aiko', color: '#D4A843' },
+    { id: 'numeria', name: 'Numeria', focus: 'Numbers & Math', heroes: 'Kwame & Octavia', color: '#7FB685' },
+    { id: 'vitalis', name: 'Vitalis', focus: 'Physical & Movement', heroes: 'Felix & Amara', color: '#C4785A' },
+    { id: 'celestia', name: 'Celestia', focus: 'Time & Seasons', heroes: 'Elias & Selene', color: '#9678C4' },
+    { id: 'luminosity', name: 'Luminosity', focus: 'Advanced Language', heroes: 'Athena & Ezra', color: '#D4897A' },
+    { id: 'aquaria', name: 'Aquaria', focus: 'Water & Emotion', heroes: 'Nerissa & Ronan', color: '#5BA4C9' },
+    { id: 'terrasol', name: 'Terrasol', focus: 'Science & Nature', heroes: 'Vesta & Silas', color: '#5FB685' },
   ];
 
   /* ── FAQ items ── */
@@ -883,10 +883,10 @@ const Home = () => {
               <span style={{ display: 'inline-flex', marginBottom: '0.65rem', color: '#FF6F00' }}>
                 <SoeIcon name="glass-bubble" type="glass" size={38} />
               </span>
-              <h3 style={{ fontSize: '1.25rem', fontFamily: 'var(--font-heading)', color: 'var(--color-text-dark, #2B2016)', marginBottom: '0.4rem' }}>
+              <h3 style={{ fontSize: '1.25rem', fontFamily: 'var(--font-heading)', color: 'var(--color-text-primary)', marginBottom: '0.4rem' }}>
                 Still Have Questions?
               </h3>
-              <p style={{ fontSize: '0.92rem', color: 'var(--color-text-secondary, #555)', maxWidth: '480px', margin: '0 auto 1.25rem', lineHeight: 1.6 }}>
+              <p style={{ fontSize: '0.92rem', color: 'var(--color-text-secondary)', maxWidth: '480px', margin: '0 auto 1.25rem', lineHeight: 1.6 }}>
                 We're always happy to help parents, educators, and schools. Reach out directly anytime.
               </p>
               <div style={{ display: 'flex', justifyContent: 'center', gap: '0.8rem', flexWrap: 'wrap' }}>
@@ -934,9 +934,9 @@ const Home = () => {
                   <span>🔒 {t('home.final_cta.badge')}</span>
                 </div>
 
-                <div style={{ marginTop: '1.25rem', fontSize: '0.85rem', color: 'rgba(255,255,255,0.85)' }}>
+                <div style={{ marginTop: '1.25rem', fontSize: '0.85rem', color: 'var(--color-text-secondary)' }}>
                   Questions or custom school inquiries? Email us directly at{' '}
-                  <a href="mailto:info@soelearn.com" style={{ color: '#ffffff', textDecoration: 'underline', fontWeight: 700 }}>
+                  <a href="mailto:info@soelearn.com" style={{ color: '#C45000', textDecoration: 'underline', fontWeight: 700 }}>
                     info@soelearn.com
                   </a>
                 </div>
@@ -983,8 +983,47 @@ const Home = () => {
 
         .home-page {
           position: relative;
-          overflow: hidden;
+          overflow-x: clip;
+          --color-text-primary: #E65100;
+          --color-text-secondary: #D96200;
+          --color-text-muted: rgba(230, 81, 0, 0.72);
+          --color-text-dark: #E65100;
+          --color-text-dark-secondary: #D96200;
           color: var(--color-text-primary);
+        }
+
+        .home-page .btn-gold,
+        .home-page .magic-shimmer-btn {
+          color: #FFFFFF;
+          text-shadow: 0 1px 2px rgba(178, 72, 0, 0.45);
+        }
+
+        .home-page .section-subtitle,
+        .home-page .hero__subtitle,
+        .home-page .credibility-sub,
+        .home-page .final-cta-subtitle {
+          background: linear-gradient(90deg, #E65100 0%, #9C27B0 34%, #1E88E5 68%, #2E7D32 100%);
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+          color: #E65100;
+        }
+
+        .home-page .text-orange,
+        .home-page .text-gold {
+          color: #FF6F00;
+        }
+
+        .home-page .text-purple {
+          color: #8E24AA;
+        }
+
+        .home-page .text-blue {
+          color: #1E88E5;
+        }
+
+        .home-page .text-green {
+          color: #2E7D32;
         }
 
         .home-page::before {
@@ -993,8 +1032,9 @@ const Home = () => {
           inset: 0;
           width: 100vw;
           height: 100vh;
-          z-index: -1;
+          z-index: -2;
           background: ${assetCssUrl('/assets/soe-music-orbit-wide.webp')} center top / cover no-repeat;
+          filter: saturate(0.92) brightness(1.03);
           will-change: transform;
         }
 
@@ -1011,14 +1051,16 @@ const Home = () => {
           position: fixed;
           inset: 0;
           z-index: -1;
-          background: linear-gradient(
-            180deg,
-            rgba(255, 248, 240, 0.22) 0%,
-            rgba(255, 252, 245, 0.18) 25%,
-            rgba(255, 250, 240, 0.38) 55%,
-            rgba(250, 245, 235, 0.65) 80%,
-            rgba(245, 240, 225, 0.85) 100%
-          );
+          background:
+            radial-gradient(ellipse 75% 48% at 50% 24%, rgba(255, 248, 240, 0.22) 0%, rgba(255, 248, 240, 0.56) 65%, rgba(255, 248, 240, 0.82) 100%),
+            linear-gradient(
+              180deg,
+              rgba(255, 248, 240, 0.34) 0%,
+              rgba(255, 249, 241, 0.42) 28%,
+              rgba(255, 248, 240, 0.82) 60%,
+              rgba(252, 246, 236, 0.94) 84%,
+              rgba(255, 248, 240, 0.98) 100%
+            );
           pointer-events: none;
         }
 
@@ -1031,6 +1073,18 @@ const Home = () => {
           padding-top: 40px;
           position: relative;
           overflow: hidden;
+        }
+
+        .hero::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          height: 140px;
+          background: linear-gradient(180deg, transparent 0%, rgba(255, 248, 240, 0.65) 60%, rgba(255, 248, 240, 0.94) 100%);
+          pointer-events: none;
+          z-index: 1;
         }
 
         .hero__copy-wrap {
@@ -1286,15 +1340,19 @@ const Home = () => {
           font-family: var(--font-heading);
           font-weight: 800;
           font-size: 0.85rem;
-          color: #B25E00;
+          color: #E65100;
           letter-spacing: 0.04em;
         }
 
         .hero__brand-crest-tagline {
           font-family: var(--font-body);
-          font-weight: 600;
+          font-weight: 700;
           font-size: 0.72rem;
-          color: #4A5568;
+          background: linear-gradient(90deg, #E65100 0%, #9C27B0 36%, #1E88E5 68%, #2E7D32 100%);
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+          color: #E65100;
         }
 
         .hero__eyebrow {
@@ -1515,7 +1573,7 @@ const Home = () => {
         /* 3D Character Cylinder Carousel */
         .hero__carousel-scene {
           position: relative;
-          z-index: 1;
+          z-index: 2;
           width: 100%;
           height: 440px;
           perspective: 1200px;
@@ -1523,9 +1581,11 @@ const Home = () => {
           align-items: center;
           justify-content: center;
           overflow: hidden;
-          background: rgba(255,255,255,0.35);
-          backdrop-filter: blur(8px);
-          -webkit-backdrop-filter: blur(8px);
+          background: linear-gradient(180deg, rgba(255, 248, 240, 0.38) 0%, rgba(255, 248, 240, 0.62) 100%);
+          backdrop-filter: blur(10px);
+          -webkit-backdrop-filter: blur(10px);
+          border-top: 1px solid rgba(255, 255, 255, 0.65);
+          border-bottom: 1px solid rgba(43, 32, 22, 0.06);
           margin-top: 1rem;
           mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
           -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
@@ -1540,27 +1600,30 @@ const Home = () => {
         }
 
         .carousel-btn {
-          background: rgba(0,0,0,0.6);
-          color: white;
-          border: 1px solid rgba(255,255,255,0.2);
+          background: rgba(255, 255, 255, 0.90);
+          color: #E65100;
+          border: 1px solid rgba(255, 111, 0, 0.22);
           width: 48px;
           height: 48px;
           border-radius: 50%;
-          font-size: 1.4rem;
+          font-size: 1.25rem;
           cursor: pointer;
           position: absolute;
           z-index: 100;
-          transition: all 0.3s ease;
+          transition: all 0.25s ease;
           display: flex;
           align-items: center;
           justify-content: center;
-          box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+          backdrop-filter: blur(8px);
+          -webkit-backdrop-filter: blur(8px);
+          box-shadow: 0 8px 22px rgba(43, 32, 22, 0.12);
         }
 
         .carousel-btn:hover {
-          background: rgba(0,0,0,0.9);
-          transform: scale(1.1);
-          border-color: rgba(255,255,255,0.5);
+          background: #FF6F00;
+          color: #FFFFFF;
+          transform: scale(1.08);
+          border-color: #FF6F00;
         }
 
         .prev-btn { left: 5%; }
@@ -1649,17 +1712,17 @@ const Home = () => {
           justify-content: space-between;
           position: relative;
           border-radius: var(--radius-xl);
-          background: linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.80));
-          border: 1.5px solid rgba(255, 255, 255, 0.85);
-          box-shadow: inset 0 1.5px 1.5px 0 rgba(255, 255, 255, 0.9), 0 8px 28px -4px rgba(0, 0, 0, 0.06);
-          backdrop-filter: blur(16px) saturate(160%);
-          -webkit-backdrop-filter: blur(16px) saturate(160%);
+          background: linear-gradient(160deg, rgba(255, 255, 255, 0.97), rgba(255, 250, 244, 0.94));
+          border: 1px solid rgba(43, 32, 22, 0.08);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.95), 0 12px 30px -10px rgba(43, 32, 22, 0.08);
+          backdrop-filter: blur(12px);
+          -webkit-backdrop-filter: blur(12px);
         }
 
         .voice-card--featured {
-          border: 2px solid rgba(150, 120, 196, 0.35);
-          background: linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(150, 120, 196, 0.12));
-          box-shadow: inset 0 1.5px 1.5px 0 rgba(255, 255, 255, 0.9), 0 12px 32px -4px rgba(150, 120, 196, 0.15);
+          border: 1.5px solid rgba(150, 120, 196, 0.35);
+          background: linear-gradient(160deg, rgba(255, 255, 255, 0.98), rgba(247, 242, 255, 0.94));
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.95), 0 14px 34px -8px rgba(150, 120, 196, 0.16);
         }
 
         .voice-card__quote-mark {
@@ -1754,17 +1817,17 @@ const Home = () => {
           padding: 2rem 1.5rem;
           text-align: center;
           border-radius: var(--radius-xl);
-          background: linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.80));
-          border: 1.5px solid rgba(255, 255, 255, 0.85);
-          box-shadow: inset 0 1.5px 1.5px 0 rgba(255, 255, 255, 0.9), 0 8px 28px -4px rgba(0, 0, 0, 0.06);
-          backdrop-filter: blur(16px) saturate(160%);
-          -webkit-backdrop-filter: blur(16px) saturate(160%);
+          background: linear-gradient(160deg, rgba(255, 255, 255, 0.97), rgba(255, 250, 244, 0.94));
+          border: 1px solid rgba(43, 32, 22, 0.08);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.95), 0 12px 30px -10px rgba(43, 32, 22, 0.08);
+          backdrop-filter: blur(12px);
+          -webkit-backdrop-filter: blur(12px);
         }
 
         .quest-pillar-card--highlight {
-          border: 2px solid rgba(255, 179, 0, 0.4);
-          background: linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(255, 179, 0, 0.10));
-          box-shadow: inset 0 1.5px 1.5px 0 rgba(255, 255, 255, 0.9), 0 12px 32px -4px rgba(255, 179, 0, 0.15);
+          border: 1.5px solid rgba(212, 168, 67, 0.4);
+          background: linear-gradient(160deg, rgba(255, 255, 255, 0.98), rgba(255, 248, 232, 0.95));
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.95), 0 14px 34px -8px rgba(212, 168, 67, 0.18);
         }
 
         .quest-pillar__icon {
@@ -1829,12 +1892,12 @@ const Home = () => {
           text-align: center;
           padding: 2rem 1.25rem;
           border-radius: var(--radius-xl);
-          border: 1.5px solid rgba(255, 255, 255, 0.85);
+          border: 1px solid rgba(43, 32, 22, 0.08);
           border-top: 4px solid var(--domain-color);
-          background: linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.80));
-          box-shadow: inset 0 1.5px 1.5px 0 rgba(255, 255, 255, 0.9), 0 8px 28px -4px rgba(0, 0, 0, 0.06);
-          backdrop-filter: blur(16px) saturate(160%);
-          -webkit-backdrop-filter: blur(16px) saturate(160%);
+          background: linear-gradient(160deg, rgba(255, 255, 255, 0.97), rgba(255, 250, 244, 0.94));
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.95), 0 12px 30px -10px rgba(43, 32, 22, 0.08);
+          backdrop-filter: blur(12px);
+          -webkit-backdrop-filter: blur(12px);
           transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
@@ -1939,13 +2002,13 @@ const Home = () => {
           padding: 2rem;
           border-left: 4px solid var(--color-blue);
           border-radius: var(--radius-xl);
-          background: linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.80));
-          border-right: 1.5px solid rgba(255, 255, 255, 0.85);
-          border-top: 1.5px solid rgba(255, 255, 255, 0.85);
-          border-bottom: 1.5px solid rgba(255, 255, 255, 0.85);
-          box-shadow: inset 0 1.5px 1.5px 0 rgba(255, 255, 255, 0.9), 0 8px 28px -4px rgba(0, 0, 0, 0.06);
-          backdrop-filter: blur(16px) saturate(160%);
-          -webkit-backdrop-filter: blur(16px) saturate(160%);
+          background: linear-gradient(160deg, rgba(255, 255, 255, 0.97), rgba(255, 250, 244, 0.94));
+          border-right: 1px solid rgba(43, 32, 22, 0.08);
+          border-top: 1px solid rgba(43, 32, 22, 0.08);
+          border-bottom: 1px solid rgba(43, 32, 22, 0.08);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.95), 0 12px 30px -10px rgba(43, 32, 22, 0.08);
+          backdrop-filter: blur(12px);
+          -webkit-backdrop-filter: blur(12px);
         }
 
         .science-card__tag {
@@ -1969,12 +2032,90 @@ const Home = () => {
           line-height: 1.6;
         }
 
+        /* ── Section Backdrop Rhythm (Frosted Vellum & Soft Land Washes) ── */
+        .home-page .section {
+          position: relative;
+          isolation: isolate;
+        }
+
+        .home-page .section > .container {
+          position: relative;
+          z-index: 1;
+        }
+
+        .quest-feature-section,
+        .book-feature-section,
+        .credibility-section,
+        .faq-section,
+        .final-cta-section {
+          background: linear-gradient(180deg, rgba(255, 248, 240, 0.88) 0%, rgba(252, 246, 236, 0.94) 55%, rgba(255, 248, 240, 0.9) 100%);
+          backdrop-filter: blur(12px);
+          -webkit-backdrop-filter: blur(12px);
+        }
+
+        .quest-feature-section::before {
+          content: '';
+          position: absolute;
+          inset: 0;
+          background: radial-gradient(ellipse 60% 50% at 20% 25%, rgba(212, 168, 67, 0.10), transparent 70%);
+          pointer-events: none;
+          z-index: 0;
+        }
+
+        .credibility-section::before {
+          content: '';
+          position: absolute;
+          inset: 0;
+          background: radial-gradient(ellipse 65% 55% at 80% 40%, rgba(127, 182, 133, 0.10), transparent 70%);
+          pointer-events: none;
+          z-index: 0;
+        }
+
+        .book-feature-section::before {
+          content: '';
+          position: absolute;
+          inset: 0;
+          background: radial-gradient(ellipse 65% 50% at 50% 20%, rgba(255, 111, 0, 0.06), transparent 70%);
+          pointer-events: none;
+          z-index: 0;
+        }
+
         /* ── Emergency in Education Section ── */
         .emergency-section {
           padding: 5.5rem 0 5rem;
-          background: radial-gradient(ellipse at 50% 15%, rgba(255, 111, 0, 0.07), transparent 75%);
-          border-bottom: 1px solid var(--color-border);
+          background: linear-gradient(180deg, rgba(255, 248, 240, 0.92) 0%, rgba(250, 244, 234, 0.96) 55%, rgba(255, 248, 240, 0.93) 100%);
+          backdrop-filter: blur(14px);
+          -webkit-backdrop-filter: blur(14px);
+          border-top: 1px solid rgba(255, 255, 255, 0.75);
+          border-bottom: 1px solid rgba(43, 32, 22, 0.07);
           position: relative;
+          overflow: hidden;
+        }
+
+        .emergency-section::before {
+          content: '';
+          position: absolute;
+          width: 620px;
+          height: 620px;
+          top: -220px;
+          left: -140px;
+          border-radius: 50%;
+          background: radial-gradient(circle, rgba(212, 168, 67, 0.12) 0%, rgba(255, 111, 0, 0.05) 45%, transparent 72%);
+          pointer-events: none;
+          z-index: 0;
+        }
+
+        .emergency-section::after {
+          content: '';
+          position: absolute;
+          width: 560px;
+          height: 560px;
+          bottom: -200px;
+          right: -120px;
+          border-radius: 50%;
+          background: radial-gradient(circle, rgba(91, 164, 201, 0.11) 0%, rgba(127, 182, 133, 0.05) 45%, transparent 72%);
+          pointer-events: none;
+          z-index: 0;
         }
 
         .section-label--emergency {
@@ -1982,9 +2123,9 @@ const Home = () => {
           align-items: center;
           gap: 0.4rem;
           padding: 0.35rem 0.95rem;
-          background: rgba(220, 38, 38, 0.08);
-          color: #dc2626;
-          border: 1px solid rgba(220, 38, 38, 0.22);
+          background: rgba(196, 80, 0, 0.09);
+          color: #B84200;
+          border: 1px solid rgba(196, 80, 0, 0.22);
           border-radius: 50px;
           font-size: 0.82rem;
           font-weight: 700;
@@ -2001,24 +2142,27 @@ const Home = () => {
 
         .emergency-stat-card {
           padding: 2.25rem 1.6rem;
-          border-radius: var(--radius-2xl);
+          border-radius: var(--radius-2xl, 28px);
           text-align: left;
           display: flex;
           flex-direction: column;
-          background: linear-gradient(145deg, rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0.82));
-          border: 1.5px solid rgba(255, 255, 255, 0.9);
-          box-shadow: 0 10px 30px -6px rgba(0, 0, 0, 0.05);
-          transition: transform 0.25s ease, box-shadow 0.25s ease;
+          background: linear-gradient(160deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 250, 244, 0.95) 100%);
+          border: 1px solid rgba(43, 32, 22, 0.08);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.95), 0 14px 34px -10px rgba(43, 32, 22, 0.08), 0 2px 6px rgba(255, 111, 0, 0.04);
+          backdrop-filter: blur(8px);
+          -webkit-backdrop-filter: blur(8px);
+          transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
         }
 
         .emergency-stat-card:hover {
           transform: translateY(-4px);
-          box-shadow: 0 18px 40px -8px rgba(255, 111, 0, 0.12);
+          border-color: rgba(255, 111, 0, 0.24);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 1), 0 20px 42px -10px rgba(43, 32, 22, 0.12), 0 4px 12px rgba(255, 111, 0, 0.08);
         }
 
         .emergency-stat-card--highlight {
-          border-color: rgba(34, 197, 94, 0.35);
-          background: linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(240, 253, 244, 0.75));
+          border-color: rgba(95, 182, 133, 0.35);
+          background: linear-gradient(160deg, rgba(255, 255, 255, 0.98) 0%, rgba(242, 250, 245, 0.95) 100%);
         }
 
         .emergency-stat-icon {
@@ -2056,22 +2200,25 @@ const Home = () => {
           font-weight: 700;
           text-transform: uppercase;
           letter-spacing: 0.05em;
-          color: var(--color-text-secondary);
-          opacity: 0.75;
-          border-top: 1px solid rgba(0, 0, 0, 0.06);
+          color: var(--color-text-muted);
+          border-top: 1px solid rgba(43, 32, 22, 0.07);
           padding-top: 0.75rem;
         }
 
         .emergency-callout {
           padding: 2.5rem 2.75rem;
-          border-radius: var(--radius-2xl);
+          border-radius: var(--radius-2xl, 28px);
           display: flex;
           align-items: center;
           justify-content: space-between;
           gap: 2.5rem;
-          background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 248, 240, 0.92));
-          border: 1.5px solid rgba(255, 111, 0, 0.22);
-          box-shadow: 0 16px 40px -8px rgba(255, 111, 0, 0.08);
+          background:
+            radial-gradient(ellipse 55% 110% at 92% 50%, rgba(255, 179, 0, 0.10) 0%, transparent 72%),
+            linear-gradient(145deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 249, 241, 0.96) 100%);
+          border: 1px solid rgba(255, 111, 0, 0.20);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.98), 0 18px 42px -12px rgba(43, 32, 22, 0.09), 0 4px 12px rgba(255, 111, 0, 0.05);
+          backdrop-filter: blur(10px);
+          -webkit-backdrop-filter: blur(10px);
         }
 
         .emergency-callout__content {
@@ -2119,6 +2266,20 @@ const Home = () => {
         .ai-readiness-section {
           padding: 5rem 0;
           position: relative;
+          background: linear-gradient(180deg, rgba(255, 248, 240, 0.90) 0%, rgba(248, 244, 251, 0.93) 50%, rgba(255, 248, 240, 0.92) 100%);
+          backdrop-filter: blur(12px);
+          -webkit-backdrop-filter: blur(12px);
+          border-bottom: 1px solid rgba(43, 32, 22, 0.06);
+          overflow: hidden;
+        }
+
+        .ai-readiness-section::before {
+          content: '';
+          position: absolute;
+          inset: 0;
+          background: radial-gradient(ellipse 55% 45% at 78% 18%, rgba(150, 120, 196, 0.10), transparent 72%);
+          pointer-events: none;
+          z-index: 0;
         }
 
         .section-label--ai-readiness {
@@ -2136,10 +2297,12 @@ const Home = () => {
 
         .ai-readiness-card {
           padding: 2.25rem 2rem;
-          border-radius: var(--radius-2xl);
-          background: linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(255, 248, 240, 0.90));
-          border: 1.5px solid rgba(255, 111, 0, 0.18);
-          box-shadow: 0 16px 36px -8px rgba(255, 111, 0, 0.08);
+          border-radius: var(--radius-2xl, 28px);
+          background: linear-gradient(160deg, rgba(255, 255, 255, 0.98), rgba(255, 250, 244, 0.94));
+          border: 1px solid rgba(43, 32, 22, 0.08);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.96), 0 14px 34px -10px rgba(43, 32, 22, 0.08);
+          backdrop-filter: blur(10px);
+          -webkit-backdrop-filter: blur(10px);
           display: flex;
           flex-direction: column;
           height: 100%;
@@ -2250,11 +2413,11 @@ const Home = () => {
           overflow-x: auto;
           padding: 1.5rem;
           border-radius: var(--radius-xl);
-          background: linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.82));
-          border: 1.5px solid rgba(255, 255, 255, 0.85);
-          box-shadow: inset 0 1.5px 1.5px 0 rgba(255, 255, 255, 0.9), 0 8px 28px -4px rgba(0, 0, 0, 0.06);
-          backdrop-filter: blur(16px) saturate(160%);
-          -webkit-backdrop-filter: blur(16px) saturate(160%);
+          background: linear-gradient(160deg, rgba(255, 255, 255, 0.97), rgba(255, 250, 244, 0.94));
+          border: 1px solid rgba(43, 32, 22, 0.08);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.95), 0 14px 34px -10px rgba(43, 32, 22, 0.08);
+          backdrop-filter: blur(12px);
+          -webkit-backdrop-filter: blur(12px);
         }
 
         .comparison-table {
@@ -2343,11 +2506,11 @@ const Home = () => {
           padding: 0;
           overflow: hidden;
           border-radius: var(--radius-xl);
-          background: linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.80));
-          border: 1.5px solid rgba(255, 255, 255, 0.85);
-          box-shadow: inset 0 1.5px 1.5px 0 rgba(255, 255, 255, 0.9), 0 6px 20px -4px rgba(0, 0, 0, 0.05);
-          backdrop-filter: blur(16px) saturate(160%);
-          -webkit-backdrop-filter: blur(16px) saturate(160%);
+          background: linear-gradient(160deg, rgba(255, 255, 255, 0.97), rgba(255, 250, 244, 0.94));
+          border: 1px solid rgba(43, 32, 22, 0.08);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.95), 0 10px 26px -8px rgba(43, 32, 22, 0.07);
+          backdrop-filter: blur(12px);
+          -webkit-backdrop-filter: blur(12px);
           transition: border-color 0.2s ease, box-shadow 0.2s ease;
         }
 
