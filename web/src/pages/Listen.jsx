@@ -225,7 +225,7 @@ const Listen = () => {
             isPlaying={isUnlocked}
           />
           <p className="section-subtitle listen-hero__subtitle">
-            Fast cartoons and noisy tablet apps overstimulate young nervous systems, while dry flashcards kill curiosity. As Education Concord advocates for ages 2 to 7, we gift all 19 studio-recorded acoustic tracks (60 to 80 BPM) and our printable <em>First 10 Minutes Tactile Ritual Card</em> freely ($0) so your home or classroom experiences the calm first, ready to pair with our 66-page companion storybook ($19) and 40-Day Readiness Workbook ($21).
+            Tablets overstimulate young minds, and flashcards bore them. Give ages 2 to 7 a calmer way to build focus and early reading with 19 studio-recorded acoustic songs in 10 minutes a day.
           </p>
 
           {isUnlocked ? (
@@ -289,7 +289,7 @@ const Listen = () => {
                       required
                       value={directEmail}
                       onChange={(e) => setDirectEmail(e.target.value)}
-                      placeholder="Enter your email to unlock all 19 tracks..."
+                      placeholder="Enter your email to listen free..."
                       className="heist-email-input"
                       aria-label="Parent email address"
                     />
@@ -303,7 +303,7 @@ const Listen = () => {
                   </div>
                   {optinError && <p className="heist-error" role="alert">{optinError}</p>}
                   <p className="heist-guarantee">
-                    🔒 100% Free Living Proof · Instant 19-track streaming + printable 10-Min Tactile Ritual Card · No spam
+                    🔒 100% Free ($0) · Instant 19-track streaming + printable 10-Min Ritual Card · No spam
                   </p>
                 </form>
               </div>

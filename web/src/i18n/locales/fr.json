@@ -824,10 +824,10 @@
         }
     },
     "listen": {
-        "ethicalHeistBadge": "EDUCATION CONCORD · ACCÈS FONDATEUR",
-        "ethicalHeistTitle": "Développez l'attention, la phonétique et le calme en 10 minutes par jour sans écrans lumineux ni conflits liés aux tablettes",
-        "ethicalHeistSubtitle": "Débloquez les 19 pistes acoustiques enregistrées en studio (60 à 80 BPM) à travers les 7 Terres ainsi que notre fiche imprimable '10 Premières Minutes' de rituel tactile pour les 2 à 7 ans. Offert gratuitement (0 $) aujourd'hui comme preuve vivante.",
-        "ethicalHeistCta": "DÉBLOQUER 19 PISTES + FICHE RITUEL (0 $)",
+        "ethicalHeistBadge": "EDUCATION CONCORD · ACCÈS GRATUIT",
+        "ethicalHeistTitle": "Écoutez les 19 titres gratuitement (0 $)",
+        "ethicalHeistSubtitle": "Entrez votre e-mail pour écouter immédiatement les 7 Terres et recevoir notre fiche imprimable 10 Premières Minutes.",
+        "ethicalHeistCta": "Écouter gratuitement",
         "orDivider": "ÉGALEMENT DISPONIBLE",
         "dmCtaTitle": "Connectez-vous aussi par Instagram DM",
         "dmCtaSubtitle": "Recevez les 19 pistes sur votre Instagram en plus de votre e-mail",

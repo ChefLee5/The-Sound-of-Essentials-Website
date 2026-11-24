@@ -71,14 +71,6 @@ const Science = () => {
                             </RevealSection>
                         ))}
                     </div>
-                    <RevealSection className="text-center">
-                        <p className="pedagogy-validated">
-                            {t('science.pedagogy_validated')}{' '}
-                            <sup>
-                                <a href="#ref-1">[1]</a>, <a href="#ref-12">[12]</a>
-                            </sup>
-                        </p>
-                    </RevealSection>
                 </div>
             </section>
 
@@ -124,15 +116,6 @@ const Science = () => {
                             </div>
                         </RevealSection>
                     </div>
-
-                    <RevealSection className="text-center">
-                        <p className="equity-note">
-                            {t('science.equity_note')}{' '}
-                            <sup>
-                                <a href="#ref-5">[5]</a>, <a href="#ref-12">[12]</a>
-                            </sup>
-                        </p>
-                    </RevealSection>
                 </div>
             </section>
 
@@ -536,23 +519,6 @@ const Science = () => {
 
                 .implementation-block {
                     padding: 4rem;
-                }
-
-                .pedagogy-validated,
-                .equity-note {
-                    margin: 2.25rem auto 0;
-                    max-width: 760px;
-                    padding: 1rem 1.5rem;
-                    font-size: 0.98rem;
-                    line-height: 1.65;
-                    color: rgba(255, 255, 255, 0.94);
-                    background: rgba(15, 18, 48, 0.62);
-                    backdrop-filter: blur(12px);
-                    -webkit-backdrop-filter: blur(12px);
-                    border: 1px solid rgba(255, 255, 255, 0.22);
-                    border-radius: 16px;
-                    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
-                    font-style: normal;
                 }
 
                 .science-page sup a {
