@@ -21,7 +21,6 @@ import { GiftALandModal } from '../components/GiftALandModal';
 import { trackLead, trackInitiateCheckout } from '../utils/analytics';
 import { submitSoeInterest } from '../services/soeSubmissions';
 import { isGateUnlocked, setGateUnlocked, getCapturedEmail, isValidEmail } from '../utils/gateAuth';
-import DmOptInBridge from '../components/DmOptInBridge';
 import KineticMusicalAccent from '../components/ui/KineticMusicalAccent';
 import KineticHeadline from '../components/KineticHeadline';
 import PDPQuestionChips from '../components/PDPQuestionChips';
@@ -326,8 +325,6 @@ const Listen = () => {
                   📚 Rhythm Ready Workbook ($21) →
                 </Link>
               </div>
-
-              <DmOptInBridge />
 
               <ProofInThePause variant="compact" />
             </>
