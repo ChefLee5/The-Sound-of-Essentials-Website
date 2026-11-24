@@ -1034,7 +1034,7 @@ const Home = () => {
           height: 100vh;
           z-index: -2;
           background: ${assetCssUrl('/assets/soe-music-orbit-wide.webp')} center top / cover no-repeat;
-          filter: saturate(0.92) brightness(1.03);
+          filter: saturate(0.88) brightness(0.92);
           will-change: transform;
         }
 
@@ -1051,16 +1051,13 @@ const Home = () => {
           position: fixed;
           inset: 0;
           z-index: -1;
-          background:
-            radial-gradient(ellipse 75% 48% at 50% 24%, rgba(255, 248, 240, 0.22) 0%, rgba(255, 248, 240, 0.56) 65%, rgba(255, 248, 240, 0.82) 100%),
-            linear-gradient(
-              180deg,
-              rgba(255, 248, 240, 0.34) 0%,
-              rgba(255, 249, 241, 0.42) 28%,
-              rgba(255, 248, 240, 0.82) 60%,
-              rgba(252, 246, 236, 0.94) 84%,
-              rgba(255, 248, 240, 0.98) 100%
-            );
+          background: linear-gradient(
+            180deg,
+            rgba(248, 238, 224, 0.24) 0%,
+            rgba(248, 238, 224, 0.28) 32%,
+            rgba(248, 238, 224, 0.54) 62%,
+            rgba(246, 236, 220, 0.72) 100%
+          );
           pointer-events: none;
         }
 
@@ -1081,8 +1078,8 @@ const Home = () => {
           left: 0;
           right: 0;
           bottom: 0;
-          height: 140px;
-          background: linear-gradient(180deg, transparent 0%, rgba(255, 248, 240, 0.65) 60%, rgba(255, 248, 240, 0.94) 100%);
+          height: 110px;
+          background: linear-gradient(180deg, transparent 0%, rgba(248, 238, 224, 0.45) 100%);
           pointer-events: none;
           z-index: 1;
         }
@@ -2048,9 +2045,9 @@ const Home = () => {
         .credibility-section,
         .faq-section,
         .final-cta-section {
-          background: linear-gradient(180deg, rgba(255, 248, 240, 0.88) 0%, rgba(252, 246, 236, 0.94) 55%, rgba(255, 248, 240, 0.9) 100%);
-          backdrop-filter: blur(12px);
-          -webkit-backdrop-filter: blur(12px);
+          background: linear-gradient(180deg, rgba(248, 238, 224, 0.46) 0%, rgba(246, 236, 220, 0.58) 55%, rgba(248, 238, 224, 0.50) 100%);
+          backdrop-filter: blur(10px);
+          -webkit-backdrop-filter: blur(10px);
         }
 
         .quest-feature-section::before {
@@ -2083,11 +2080,11 @@ const Home = () => {
         /* ── Emergency in Education Section ── */
         .emergency-section {
           padding: 5.5rem 0 5rem;
-          background: linear-gradient(180deg, rgba(255, 248, 240, 0.92) 0%, rgba(250, 244, 234, 0.96) 55%, rgba(255, 248, 240, 0.93) 100%);
-          backdrop-filter: blur(14px);
-          -webkit-backdrop-filter: blur(14px);
-          border-top: 1px solid rgba(255, 255, 255, 0.75);
-          border-bottom: 1px solid rgba(43, 32, 22, 0.07);
+          background: linear-gradient(180deg, rgba(248, 238, 224, 0.50) 0%, rgba(245, 235, 220, 0.62) 55%, rgba(248, 238, 224, 0.54) 100%);
+          backdrop-filter: blur(12px);
+          -webkit-backdrop-filter: blur(12px);
+          border-top: 1px solid rgba(255, 255, 255, 0.45);
+          border-bottom: 1px solid rgba(230, 81, 0, 0.10);
           position: relative;
           overflow: hidden;
         }
@@ -2266,10 +2263,10 @@ const Home = () => {
         .ai-readiness-section {
           padding: 5rem 0;
           position: relative;
-          background: linear-gradient(180deg, rgba(255, 248, 240, 0.90) 0%, rgba(248, 244, 251, 0.93) 50%, rgba(255, 248, 240, 0.92) 100%);
+          background: linear-gradient(180deg, rgba(248, 238, 224, 0.48) 0%, rgba(244, 238, 248, 0.58) 50%, rgba(248, 238, 224, 0.52) 100%);
           backdrop-filter: blur(12px);
           -webkit-backdrop-filter: blur(12px);
-          border-bottom: 1px solid rgba(43, 32, 22, 0.06);
+          border-bottom: 1px solid rgba(230, 81, 0, 0.08);
           overflow: hidden;
         }
 
