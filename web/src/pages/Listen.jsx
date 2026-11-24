@@ -198,6 +198,86 @@ const Listen = () => {
     }
   }, [searchParams, setSearchParams]);
 
+  const peripheralOfferings = [
+    {
+      id: 'starter-pack',
+      icon: '🎨',
+      price: '$7',
+      name: 'Quest Starter & Coloring Pack',
+      desc: '40-page printable coloring book plus a 432Hz bedtime calming track.',
+      cta: 'Get Starter Pack →',
+      href: STRIPE_STARTER_PACK_URL,
+      onClick: handleStarterPackClick,
+    },
+    {
+      id: 'companion-storybook',
+      icon: '📖',
+      price: '$19',
+      name: 'Companion Storybook',
+      desc: '66-page illustrated story introducing all 15 heroes across 7 Lands.',
+      cta: 'Explore Storybook →',
+      to: '/gallery',
+    },
+    {
+      id: 'rhythm-ready-workbook',
+      icon: '📚',
+      price: '$21',
+      name: 'Rhythm Ready Workbook',
+      desc: '40 daily screen-free lessons building early reading and school readiness.',
+      cta: 'Get Workbook →',
+      to: '/rhythm-ready',
+    },
+  ];
+
+  const renderPeripheralCard = (item) => {
+    const content = (
+      <>
+        <div className="listen-peripheral-card__top">
+          <span className="listen-peripheral-card__icon" aria-hidden="true">{item.icon}</span>
+          <span className="listen-peripheral-card__price">{item.price}</span>
+        </div>
+        <h4 className="listen-peripheral-card__name">{item.name}</h4>
+        <p className="listen-peripheral-card__desc">{item.desc}</p>
+        <span className="listen-peripheral-card__cta">{item.cta}</span>
+      </>
+    );
+
+    if (item.href) {
+      return (
+        <a
+          key={item.id}
+          href={item.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={item.onClick}
+          className="listen-peripheral-card"
+        >
+          {content}
+        </a>
+      );
+    }
+
+    return (
+      <Link key={item.id} to={item.to} className="listen-peripheral-card">
+        {content}
+      </Link>
+    );
+  };
+
+  const peripheralOfferingsSection = (
+    <div className="listen-peripherals">
+      <div className="listen-peripherals__header">
+        <h3 className="listen-peripherals__title">Pair the Songs With Hands-On Companions</h3>
+        <p className="listen-peripherals__subtitle">
+          Bring the 19 tracks off the screen with printed books and tactile activities.
+        </p>
+      </div>
+      <div className="listen-peripherals__grid">
+        {peripheralOfferings.map(renderPeripheralCard)}
+      </div>
+    </div>
+  );
+
   // ──────────────────────────────────────────────────────────────
   // RENDER
   // ──────────────────────────────────────────────────────────────
@@ -228,45 +308,31 @@ const Listen = () => {
           </p>
 
           {isUnlocked ? (
-            <div style={{ margin: '1.5rem auto 1rem auto', display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap', alignItems: 'center' }}>
-              <MagneticPill intensity={0.25}>
-                <button
-                  type="button"
-                  onClick={handleLaunchPlayerClick}
-                  className="btn btn-gold btn-shimmer"
-                  style={{ fontSize: '1.05rem', padding: '0.9rem 2.5rem', cursor: 'pointer', border: 'none' }}
+            <>
+              <div style={{ margin: '1.5rem auto 1rem auto', display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap', alignItems: 'center' }}>
+                <MagneticPill intensity={0.25}>
+                  <button
+                    type="button"
+                    onClick={handleLaunchPlayerClick}
+                    className="btn btn-gold btn-shimmer"
+                    style={{ fontSize: '1.05rem', padding: '0.9rem 2.5rem', cursor: 'pointer', border: 'none' }}
+                  >
+                    🎧 Launch 19-Track Player →
+                  </button>
+                </MagneticPill>
+                <a
+                  href={assetPath('/assets/SOE_First_10_Minutes_Tactile_Ritual_Card.html')}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-outline"
+                  style={{ fontSize: '1rem', padding: '0.85rem 1.8rem', background: 'rgba(255, 255, 255, 0.92)', borderColor: '#FF6F00', color: '#FF6F00', fontWeight: 700, cursor: 'pointer', textDecoration: 'none' }}
                 >
-                  🎧 Launch 19-Track Player →
-                </button>
-              </MagneticPill>
-              <a
-                href={assetPath('/assets/SOE_First_10_Minutes_Tactile_Ritual_Card.html')}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-outline"
-                style={{ fontSize: '1rem', padding: '0.85rem 1.8rem', background: 'rgba(255, 255, 255, 0.92)', borderColor: '#FF6F00', color: '#FF6F00', fontWeight: 700, cursor: 'pointer', textDecoration: 'none' }}
-              >
-                🖨️ First 10-Min Tactile Ritual Card (Free) →
-              </a>
-              <a
-                href={STRIPE_STARTER_PACK_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={handleStarterPackClick}
-                className="btn btn-outline"
-                style={{ fontSize: '1rem', padding: '0.85rem 1.8rem', background: 'rgba(255, 255, 255, 0.8)', cursor: 'pointer', textDecoration: 'none' }}
-              >
-                🎨 {t('listen.starterPackCta', 'Quest Starter & Coloring Pack ($7) →')}
-              </a>
+                  🖨️ First 10-Min Tactile Ritual Card (Free) →
+                </a>
+              </div>
 
-              <Link to="/gallery" className="btn btn-outline" style={{ fontSize: '1rem', padding: '0.85rem 1.8rem', background: 'rgba(255, 255, 255, 0.8)' }}>
-                📖 Companion Storybook ($19) →
-              </Link>
-
-              <Link to="/rhythm-ready" className="btn btn-outline" style={{ fontSize: '1rem', padding: '0.85rem 1.8rem', background: 'rgba(255, 255, 255, 0.8)' }}>
-                📚 Rhythm Ready Workbook ($21) →
-              </Link>
-            </div>
+              {peripheralOfferingsSection}
+            </>
           ) : (
             <>
               <div className="ethical-heist-callout">
@@ -307,24 +373,7 @@ const Listen = () => {
                 </form>
               </div>
 
-              <div style={{ margin: '1.25rem auto 1rem auto', display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap', alignItems: 'center' }}>
-                <a
-                  href={STRIPE_STARTER_PACK_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={handleStarterPackClick}
-                  className="btn btn-outline"
-                  style={{ fontSize: '1rem', padding: '0.85rem 1.8rem', background: 'rgba(255, 255, 255, 0.8)', cursor: 'pointer', textDecoration: 'none' }}
-                >
-                  🎨 {t('listen.starterPackCta', 'Quest Starter & Coloring Pack ($7) →')}
-                </a>
-                <Link to="/gallery" className="btn btn-outline" style={{ fontSize: '1rem', padding: '0.85rem 1.8rem', background: 'rgba(255, 255, 255, 0.8)' }}>
-                  📖 Companion Storybook ($19) →
-                </Link>
-                <Link to="/rhythm-ready" className="btn btn-outline" style={{ fontSize: '1rem', padding: '0.85rem 1.8rem', background: 'rgba(255, 255, 255, 0.8)' }}>
-                  📚 Rhythm Ready Workbook ($21) →
-                </Link>
-              </div>
+              {peripheralOfferingsSection}
 
               <ProofInThePause variant="compact" />
             </>
