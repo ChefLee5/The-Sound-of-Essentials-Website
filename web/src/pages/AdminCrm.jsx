@@ -320,6 +320,7 @@ const AdminCrm = () => {
   };
 
   const handleSimulateTikTokOrder = async () => {
+    if (!import.meta.env.DEV) return;
     try {
       const res = await crmFetch('/api/admin/crm/dropship', {
         method: 'POST',
@@ -719,8 +720,9 @@ const AdminCrm = () => {
     setTimeout(() => setIsCopied(false), 2500);
   };
 
-  // Simulate Inbound Lead
+  // Simulate Inbound Lead (dev-only so production clicks cannot pollute Neon/Brevo)
   const handleSimulateLead = async () => {
+    if (!import.meta.env.DEV) return;
     const randomId = Math.floor(Math.random() * 9000) + 1000;
     const sampleEmails = [
       `curriculum.pilot.${randomId}@earlylearning.edu`,
@@ -822,9 +824,11 @@ const AdminCrm = () => {
           <a href="/mcls" className="btn btn-outline btn-sm" style={{ background: '#FFF8F0', borderColor: '#FF6F00', color: '#D84315', textDecoration: 'none', fontWeight: 700 }} title="Open SOE Market Campaign Launch System (MCLS)">
             🚀 MCLS Command
           </a>
-          <button onClick={handleSimulateLead} className="btn btn-outline btn-sm" style={{ background: '#fff', borderColor: '#FF6F00', color: '#FF6F00' }} title="Simulate an incoming lead or order write to Neon">
-            ⚡ Ingest Live Lead
-          </button>
+          {import.meta.env.DEV && (
+            <button onClick={handleSimulateLead} className="btn btn-outline btn-sm" style={{ background: '#fff', borderColor: '#FF6F00', color: '#FF6F00' }} title="Simulate an incoming lead or order write to Neon (dev only)">
+              ⚡ Ingest Live Lead
+            </button>
+          )}
           <button onClick={() => setShowAddContactModal(true)} className="btn btn-gold btn-sm">
             + New Contact
           </button>
@@ -1219,9 +1223,11 @@ const AdminCrm = () => {
                 </span>
               </div>
               <div style={{ display: 'flex', gap: '0.75rem' }}>
-                <button onClick={handleSimulateTikTokOrder} className="btn btn-outline btn-sm" style={{ background: '#fff' }}>
-                  + Simulate TikTok Order
-                </button>
+                {import.meta.env.DEV && (
+                  <button onClick={handleSimulateTikTokOrder} className="btn btn-outline btn-sm" style={{ background: '#fff' }}>
+                    + Simulate TikTok Order
+                  </button>
+                )}
                 <button onClick={fetchDropshipData} className="btn btn-gold btn-sm">
                   🔄 Refresh Orders
                 </button>

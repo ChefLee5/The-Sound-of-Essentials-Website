@@ -8,6 +8,8 @@ const FALLBACK_DB_URL = 'postgresql://neondb_owner:npg_ks2SarDnOB1E@ep-wandering
 const FALLBACK_BREVO_KEY = '';
 const DEFAULT_BREVO_LIST_ID = 2; // SOE_Album_Listeners
 const INSTITUTIONAL_BREVO_LIST_ID = 12; // SOE_Inbound_Institutional_Inquiries
+const WELCOME_TEMPLATE_ID = 6; // SOE Nurture 00 - Free Gift Delivery & Welcome
+const MUSIC_WELCOME_KINDS = ['interest', 'album_unlock', 'lead'];
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export async function onRequestPost(context) {
@@ -105,11 +107,10 @@ export async function onRequestPost(context) {
 
     // 2. Background CRM Contact & Activity Upsert (Resilient & Non-Blocking)
     const cleanOrg = organizationName?.trim() || null;
-    const isNonInstitutionalOrg = !cleanOrg || ['home sanctuary', 'parent', 'family'].includes(cleanOrg.toLowerCase());
-    const isInstitutional = kind === 'partnership' || kind === 'institutional_qpc' || kind === 'qpc' || !isNonInstitutionalOrg;
-    const persona = requestedPersona && ['parent', 'educator', 'institution'].includes(requestedPersona)
+    const isInstitutional = kind === 'institutional_qpc' || kind === 'qpc' || requestedPersona === 'institution';
+    const persona = requestedPersona && ['parent', 'educator', 'institution', 'ally', 'creator'].includes(requestedPersona)
       ? requestedPersona
-      : (isInstitutional ? (!isNonInstitutionalOrg ? 'institution' : 'educator') : 'parent');
+      : (isInstitutional ? 'institution' : (kind === 'partnership' ? 'ally' : 'parent'));
     try {
       const crmUpsertSql = `
         INSERT INTO crm_contacts (email, name, organization, persona, lifecycle_stage, source_path, lead_score, last_active_at, updated_at)
@@ -147,9 +148,11 @@ export async function onRequestPost(context) {
         const contactId = crmContact?.rows?.[0]?.id;
 
         if (contactId) {
-          const activityTitle = isInstitutional 
-            ? `Institutional / Partnership Inquiry: ${organizationName || normalizedName}`
-            : `Album Unlocked & Lead Captured`;
+          const activityTitle = isInstitutional
+            ? `Institutional / School Pilot Inquiry: ${cleanOrg || normalizedName}`
+            : (kind === 'partnership'
+              ? `Partnership / Contact Inquiry: ${cleanOrg || normalizedName}`
+              : `Album Unlocked & Lead Captured`);
 
           await fetch(neonHttpEndpoint, {
             method: 'POST',
@@ -203,11 +206,13 @@ export async function onRequestPost(context) {
       console.warn('CRM contact/activity sync notice (non-blocking):', crmErr);
     }
 
-    // 4. Background Brevo Contact Synchronization (Non-blocking)
+    // 4. Background Brevo Contact Synchronization & Welcome Email (Non-blocking)
     const brevoApiKey = env?.BREVO_API_KEY || FALLBACK_BREVO_KEY;
     const targetListId = isInstitutional ? INSTITUTIONAL_BREVO_LIST_ID : (Number(env?.BREVO_LIST_ID) || DEFAULT_BREVO_LIST_ID);
     let brevoSynced = false;
     let brevoStatus = brevoApiKey ? 'pending' : 'skipped_missing_api_key';
+    let welcomeEmailSent = false;
+    let welcomeEmailStatus = brevoApiKey ? 'not_applicable' : 'skipped_missing_api_key';
     if (brevoApiKey) {
       try {
         const contactAttributes = {
@@ -237,12 +242,52 @@ export async function onRequestPost(context) {
         if (brevoRes.ok) {
           brevoSynced = true;
           brevoStatus = 'synced';
-          const resData = await brevoRes.json();
-          brevoContactId = resData?.id;
+          const rawBrevoBody = await brevoRes.text();
+          if (rawBrevoBody) {
+            try {
+              const resData = JSON.parse(rawBrevoBody);
+              brevoContactId = resData?.id || null;
+            } catch {
+              brevoContactId = null;
+            }
+          }
         } else {
           const brevoErrText = await brevoRes.text();
           brevoStatus = `error_${brevoRes.status}`;
           console.warn('Brevo Sync non-OK status:', brevoRes.status, brevoErrText);
+        }
+
+        // Send Template 6 ("SOE Nurture 00 - Free Gift Delivery & Welcome") for music opt-ins
+        if (!isInstitutional && MUSIC_WELCOME_KINDS.includes(kind)) {
+          try {
+            const recipient = { email: normalizedEmail };
+            if (normalizedName && normalizedName !== 'Rhythm Explorer') {
+              recipient.name = normalizedName;
+            }
+            const smtpRes = await fetch('https://api.brevo.com/v3/smtp/email', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                Accept: 'application/json',
+                'api-key': brevoApiKey,
+              },
+              body: JSON.stringify({
+                to: [recipient],
+                templateId: WELCOME_TEMPLATE_ID,
+              }),
+            });
+            if (smtpRes.ok) {
+              welcomeEmailSent = true;
+              welcomeEmailStatus = 'sent';
+            } else {
+              const smtpErrText = await smtpRes.text();
+              welcomeEmailStatus = `error_${smtpRes.status}`;
+              console.warn('Brevo welcome template send warning:', smtpRes.status, smtpErrText);
+            }
+          } catch (smtpErr) {
+            welcomeEmailStatus = 'network_error';
+            console.warn('Brevo welcome template network notice:', smtpErr);
+          }
         }
 
         // If message is provided, log CRM note in Brevo
@@ -270,7 +315,7 @@ export async function onRequestPost(context) {
     }
 
     return new Response(
-      JSON.stringify({ success: true, submissionId, brevoSynced, brevoStatus, persona }),
+      JSON.stringify({ success: true, submissionId, brevoSynced, brevoStatus, welcomeEmailSent, welcomeEmailStatus, persona }),
       {
         status: 200,
         headers: { 'Content-Type': 'application/json' },
