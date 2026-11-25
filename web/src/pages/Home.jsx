@@ -73,7 +73,7 @@ const Home = () => {
     { icon: 'other-puzzle', title: t('home.domains.cognitive.title'), desc: t('home.domains.cognitive.desc'), color: '#5BA4C9', accent: 'rgba(91,164,201,0.14)' },
     { icon: 'metrics-activity', title: t('home.domains.physical.title'), desc: t('home.domains.physical.desc'), color: '#FF6F00', accent: 'rgba(255,111,0,0.12)' },
     { icon: 'nature-earth', title: t('home.domains.science.title'), desc: t('home.domains.science.desc'), color: '#9678C4', accent: 'rgba(150,120,196,0.14)' },
-    { icon: 'tools-heart', title: t('home.domains.social_emotional.title'), desc: t('home.domains.social_emotional.desc'), color: '#D4A843', accent: 'rgba(212,168,67,0.14)' },
+    { icon: 'identity-users', title: t('home.domains.social_emotional.title'), desc: t('home.domains.social_emotional.desc'), color: '#D4A843', accent: 'rgba(212,168,67,0.14)' },
   ];
 
   /* ── 7 Musical Lands Mini-Previews (canonical CONSTRAINTS.md colors) ── */
@@ -1034,7 +1034,6 @@ const Home = () => {
           height: 100vh;
           z-index: -2;
           background: ${assetCssUrl('/assets/soe-music-orbit-wide.webp')} center top / cover no-repeat;
-          filter: saturate(0.88) brightness(0.92);
           will-change: transform;
         }
 
@@ -1051,13 +1050,7 @@ const Home = () => {
           position: fixed;
           inset: 0;
           z-index: -1;
-          background: linear-gradient(
-            180deg,
-            rgba(248, 238, 224, 0.24) 0%,
-            rgba(248, 238, 224, 0.28) 32%,
-            rgba(248, 238, 224, 0.54) 62%,
-            rgba(246, 236, 220, 0.72) 100%
-          );
+          background: rgba(255, 248, 240, 0.16);
           pointer-events: none;
         }
 
@@ -1070,18 +1063,6 @@ const Home = () => {
           padding-top: 40px;
           position: relative;
           overflow: hidden;
-        }
-
-        .hero::after {
-          content: '';
-          position: absolute;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          height: 110px;
-          background: linear-gradient(180deg, transparent 0%, rgba(248, 238, 224, 0.45) 100%);
-          pointer-events: none;
-          z-index: 1;
         }
 
         .hero__copy-wrap {
@@ -2029,10 +2010,11 @@ const Home = () => {
           line-height: 1.6;
         }
 
-        /* ── Section Backdrop Rhythm (Frosted Vellum & Soft Land Washes) ── */
+        /* ── Section Backdrop Rhythm (Crisp Background Continuity) ── */
         .home-page .section {
           position: relative;
           isolation: isolate;
+          background: transparent;
         }
 
         .home-page .section > .container {
@@ -2044,75 +2026,30 @@ const Home = () => {
         .book-feature-section,
         .credibility-section,
         .faq-section,
-        .final-cta-section {
-          background: linear-gradient(180deg, rgba(248, 238, 224, 0.46) 0%, rgba(246, 236, 220, 0.58) 55%, rgba(248, 238, 224, 0.50) 100%);
-          backdrop-filter: blur(10px);
-          -webkit-backdrop-filter: blur(10px);
+        .final-cta-section,
+        .home-page .glow-sage,
+        .home-page .glow-plum {
+          background: transparent;
         }
 
-        .quest-feature-section::before {
-          content: '';
-          position: absolute;
-          inset: 0;
-          background: radial-gradient(ellipse 60% 50% at 20% 25%, rgba(212, 168, 67, 0.10), transparent 70%);
-          pointer-events: none;
-          z-index: 0;
-        }
-
-        .credibility-section::before {
-          content: '';
-          position: absolute;
-          inset: 0;
-          background: radial-gradient(ellipse 65% 55% at 80% 40%, rgba(127, 182, 133, 0.10), transparent 70%);
-          pointer-events: none;
-          z-index: 0;
-        }
-
+        .quest-feature-section::before,
+        .credibility-section::before,
         .book-feature-section::before {
-          content: '';
-          position: absolute;
-          inset: 0;
-          background: radial-gradient(ellipse 65% 50% at 50% 20%, rgba(255, 111, 0, 0.06), transparent 70%);
-          pointer-events: none;
-          z-index: 0;
+          display: none;
         }
 
         /* ── Emergency in Education Section ── */
         .emergency-section {
           padding: 5.5rem 0 5rem;
-          background: linear-gradient(180deg, rgba(248, 238, 224, 0.50) 0%, rgba(245, 235, 220, 0.62) 55%, rgba(248, 238, 224, 0.54) 100%);
-          backdrop-filter: blur(12px);
-          -webkit-backdrop-filter: blur(12px);
-          border-top: 1px solid rgba(255, 255, 255, 0.45);
-          border-bottom: 1px solid rgba(230, 81, 0, 0.10);
+          background: transparent;
+          border-bottom: 1px solid rgba(230, 81, 0, 0.08);
           position: relative;
           overflow: hidden;
         }
 
-        .emergency-section::before {
-          content: '';
-          position: absolute;
-          width: 620px;
-          height: 620px;
-          top: -220px;
-          left: -140px;
-          border-radius: 50%;
-          background: radial-gradient(circle, rgba(212, 168, 67, 0.12) 0%, rgba(255, 111, 0, 0.05) 45%, transparent 72%);
-          pointer-events: none;
-          z-index: 0;
-        }
-
+        .emergency-section::before,
         .emergency-section::after {
-          content: '';
-          position: absolute;
-          width: 560px;
-          height: 560px;
-          bottom: -200px;
-          right: -120px;
-          border-radius: 50%;
-          background: radial-gradient(circle, rgba(91, 164, 201, 0.11) 0%, rgba(127, 182, 133, 0.05) 45%, transparent 72%);
-          pointer-events: none;
-          z-index: 0;
+          display: none;
         }
 
         .section-label--emergency {
@@ -2263,20 +2200,13 @@ const Home = () => {
         .ai-readiness-section {
           padding: 5rem 0;
           position: relative;
-          background: linear-gradient(180deg, rgba(248, 238, 224, 0.48) 0%, rgba(244, 238, 248, 0.58) 50%, rgba(248, 238, 224, 0.52) 100%);
-          backdrop-filter: blur(12px);
-          -webkit-backdrop-filter: blur(12px);
+          background: transparent;
           border-bottom: 1px solid rgba(230, 81, 0, 0.08);
           overflow: hidden;
         }
 
         .ai-readiness-section::before {
-          content: '';
-          position: absolute;
-          inset: 0;
-          background: radial-gradient(ellipse 55% 45% at 78% 18%, rgba(150, 120, 196, 0.10), transparent 72%);
-          pointer-events: none;
-          z-index: 0;
+          display: none;
         }
 
         .section-label--ai-readiness {
@@ -2577,7 +2507,7 @@ const Home = () => {
         .scene-backdrop__scrim {
           position: absolute;
           inset: 0;
-          background: radial-gradient(circle at center, rgba(255, 248, 240, 0.7) 0%, rgba(255, 248, 240, 0.96) 100%);
+          background: radial-gradient(circle at center, rgba(255, 248, 240, 0.45) 0%, rgba(255, 248, 240, 0.78) 100%);
         }
 
         .final-cta-content {
