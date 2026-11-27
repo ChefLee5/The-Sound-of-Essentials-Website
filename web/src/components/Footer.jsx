@@ -16,8 +16,12 @@ const Footer = () => {
           <div className="footer__brand">
             <div className="footer__logo">
               <img
-                src={assetPath('/assets/soe-official-logo.webp')}
+                src={assetPath('/assets/soe-official-logo-96.webp')}
                 alt="SOE Logo"
+                width="36"
+                height="36"
+                loading="lazy"
+                decoding="async"
                 className="footer__logo-img"
               />
               <span>Sound of Essentials: <span className="logo-accent-cursive">Rhythm Quest</span></span>
@@ -26,12 +30,15 @@ const Footer = () => {
             <div className="footer__social">
               <a href="https://youtube.com/@soundofessentials" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
                 <SoeBrandLogo name="youtube" size={20} />
+                <span className="sr-only">YouTube</span>
               </a>
               <a href="https://www.tiktok.com/@soe.learn" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
                 <SoeBrandLogo name="tiktok" size={18} />
+                <span className="sr-only">TikTok</span>
               </a>
               <a href="https://instagram.com/soundofessentials" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                 <SoeBrandLogo name="instagram" size={18} />
+                <span className="sr-only">Instagram</span>
               </a>
             </div>
 
@@ -46,40 +53,40 @@ const Footer = () => {
 
           {/* Curriculum Lands Directory */}
           <div className="footer__col">
-            <h4 className="footer__heading">Curriculum Lands</h4>
-            <Link to="/universe#harmonia" className="footer__link"><LandIcon landId="harmonia" variant="normal" tinted={false} size={15} /> Harmonia (Language)</Link>
-            <Link to="/universe#numeria" className="footer__link"><LandIcon landId="numeria" variant="normal" tinted={false} size={15} /> Numeria (Math)</Link>
-            <Link to="/universe#vitalis" className="footer__link"><LandIcon landId="vitalis" variant="normal" tinted={false} size={15} /> Vitalis (Movement)</Link>
-            <Link to="/universe#luminosity" className="footer__link"><LandIcon landId="luminosity" variant="normal" tinted={false} size={15} /> Luminosity (Civics)</Link>
-            <Link to="/universe#aquaria" className="footer__link"><LandIcon landId="aquaria" variant="normal" tinted={false} size={15} /> Aquaria (Emotional Calm)</Link>
-            <Link to="/universe#terrasol" className="footer__link"><LandIcon landId="terrasol" variant="normal" tinted={false} size={15} /> Terrasol (Science)</Link>
-            <Link to="/universe#celestia" className="footer__link"><LandIcon landId="celestia" variant="normal" tinted={false} size={15} /> Celestia (Time)</Link>
+            <h3 className="footer__heading">Curriculum Lands</h3>
+            <Link to="/heroes#harmonia" className="footer__link"><LandIcon landId="harmonia" variant="normal" tinted={false} size={15} /> Harmonia (Language)</Link>
+            <Link to="/heroes#numeria" className="footer__link"><LandIcon landId="numeria" variant="normal" tinted={false} size={15} /> Numeria (Math)</Link>
+            <Link to="/heroes#vitalis" className="footer__link"><LandIcon landId="vitalis" variant="normal" tinted={false} size={15} /> Vitalis (Movement)</Link>
+            <Link to="/heroes#luminosity" className="footer__link"><LandIcon landId="luminosity" variant="normal" tinted={false} size={15} /> Luminosity (Civics)</Link>
+            <Link to="/heroes#aquaria" className="footer__link"><LandIcon landId="aquaria" variant="normal" tinted={false} size={15} /> Aquaria (Emotional Calm)</Link>
+            <Link to="/heroes#terrasol" className="footer__link"><LandIcon landId="terrasol" variant="normal" tinted={false} size={15} /> Terrasol (Science)</Link>
+            <Link to="/heroes#celestia" className="footer__link"><LandIcon landId="celestia" variant="normal" tinted={false} size={15} /> Celestia (Time)</Link>
           </div>
 
           {/* Shop & Quest Products (Prices Stripped to Prevent SERP Disqualification) */}
           <div className="footer__col">
-            <h4 className="footer__heading">Core Products</h4>
+            <h3 className="footer__heading">Core Products</h3>
             <Link to="/listen" className="footer__link"><SoeIcon name="senses-ear" size={15} /> The 19-Track Album</Link>
             <Link to="/rhythm-ready" className="footer__link"><SoeIcon name="documents-book-bookmark" size={15} /> Rhythm Ready Workbook</Link>
             <Link to="/workbook#dictionary-presale" className="footer__link"><SoeIcon name="documents-library" size={15} /> Essential Picture Dictionary</Link>
-            <Link to="/starter-pack" className="footer__link"><SoeIcon name="tools-star" size={15} /> Quest Starter Bedtime Kit</Link>
+            <Link to="/listen" className="footer__link"><SoeIcon name="tools-star" size={15} /> Quest Starter Bedtime Kit</Link>
             <Link to="/gallery" className="footer__link"><SoeIcon name="playback-images" size={15} /> Storybook Gallery</Link>
           </div>
 
           {/* Research & Standards Authority */}
           <div className="footer__col">
-            <h4 className="footer__heading">Research &amp; Standards</h4>
+            <h3 className="footer__heading">Research &amp; Standards</h3>
             <Link to="/resources" className="footer__link"><SoeIcon name="documents-library" size={15} /> Learning Library</Link>
             <Link to="/science" className="footer__link"><SoeIcon name="metrics-activity" size={15} /> Sound Before Symbol</Link>
             <Link to="/solutions" className="footer__link"><SoeIcon name="layouts-columns-3" size={15} /> Head Start &amp; NAEYC</Link>
-            <Link to="/solutions#ece-directors" className="footer__link"><SoeIcon name="tools-house" size={15} /> School &amp; Clinic Licensing</Link>
-            <Link to="/ally-annex" className="footer__link"><SoeIcon name="senses-hand" size={15} /> Educational Partners</Link>
+            <Link to="/institutions" className="footer__link"><SoeIcon name="tools-house" size={15} /> School &amp; Clinic Licensing</Link>
+            <Link to="/institutions" className="footer__link"><SoeIcon name="senses-hand" size={15} /> Institutional Advocacy</Link>
             <Link to="/mission" className="footer__link"><SoeIcon name="tools-map" size={15} /> Our Mission</Link>
           </div>
 
           {/* Stay Connected */}
           <div className="footer__col">
-            <h4 className="footer__heading">{t('footer.stay_connected')}</h4>
+            <h3 className="footer__heading">{t('footer.stay_connected')}</h3>
             <p className="footer__newsletter-text">{t('footer.weekly_activities')}</p>
             <div className="footer__btn-group">
               <Link
@@ -118,10 +125,6 @@ const Footer = () => {
             </a>
             <Link to="/join" className="footer__bottom-link">{t('navbar.contact', 'Contact Us')}</Link>
             <Link to="/mission" className="footer__bottom-link">{t('navbar.mission')}</Link>
-            <Link to="/admin/crm" className="footer__bottom-link" style={{ opacity: 0.8, display: 'inline-flex', alignItems: 'center', gap: '0.25rem' }}>
-              <SoeIcon name="identity-lock" size={13} />
-              <span>Admin CRM</span>
-            </Link>
           </div>
         </div>
       </div>
@@ -246,11 +249,12 @@ const Footer = () => {
         .footer__email-pill {
           display: inline-flex;
           align-items: center;
+          min-height: 44px;
           gap: 0.45rem;
           background: rgba(255, 255, 255, 0.16);
           border: 1.5px solid rgba(255, 255, 255, 0.35);
           color: #ffffff;
-          padding: 0.45rem 0.9rem;
+          padding: 0.5rem 0.95rem;
           border-radius: var(--radius-xl, 99px);
           font-family: var(--font-display, inherit);
           font-weight: 700;
@@ -271,7 +275,7 @@ const Footer = () => {
         .footer__col {
           display: flex;
           flex-direction: column;
-          gap: 0.55rem;
+          gap: 0.15rem;
         }
 
         .footer__heading {
@@ -281,16 +285,18 @@ const Footer = () => {
           letter-spacing: 0.12em;
           text-transform: uppercase;
           color: rgba(255,255,255,0.55);
-          margin-bottom: 0.6rem;
+          margin-bottom: 0.4rem;
         }
 
         .footer__link {
           font-size: 0.9rem;
-          color: rgba(255,255,255,0.8);
+          color: rgba(255,255,255,0.85);
           transition: color var(--transition-med);
           display: inline-flex;
           align-items: center;
-          gap: 0.3rem;
+          min-height: 44px;
+          padding: 0.25rem 0;
+          gap: 0.35rem;
         }
 
         .footer__link:hover {
@@ -315,7 +321,8 @@ const Footer = () => {
           display: inline-flex;
           align-items: center;
           justify-content: center;
-          padding: 0.6rem 1.4rem;
+          min-height: 44px;
+          padding: 0.65rem 1.4rem;
           background: linear-gradient(135deg, var(--color-green), var(--color-blue));
           color: #fff;
           font-family: var(--font-heading);
@@ -337,7 +344,8 @@ const Footer = () => {
           display: inline-flex;
           align-items: center;
           justify-content: center;
-          padding: 0.55rem 1.2rem;
+          min-height: 44px;
+          padding: 0.6rem 1.25rem;
           background: rgba(255, 255, 255, 0.15);
           border: 1.5px solid rgba(255, 255, 255, 0.35);
           color: #ffffff;
@@ -381,12 +389,17 @@ const Footer = () => {
 
         .footer__bottom-links {
           display: flex;
-          gap: 1.5rem;
+          flex-wrap: wrap;
+          gap: 0.5rem 1.25rem;
         }
 
         .footer__bottom-link {
+          display: inline-flex;
+          align-items: center;
+          min-height: 44px;
+          padding: 0.25rem 0.15rem;
           font-size: 0.8rem;
-          color: rgba(255,255,255,0.55);
+          color: rgba(255,255,255,0.72);
           transition: color var(--transition-med);
         }
 

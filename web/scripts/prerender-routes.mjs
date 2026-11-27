@@ -1018,4 +1018,49 @@ for (const item of routes) {
   generatedCount++;
 }
 
-console.log(`✔ Prerendered ${generatedCount} route HTML pages in dist/<route>/index.html`);
+// Emit static dist/404.html with explicit noindex so unmapped edge paths return true HTTP 404
+const notFoundTitle = 'Page Not Found — The Sound of Essentials: Rhythm Quest';
+const notFoundDesc =
+  'Return to the Rhythm Quest sanctuary: stream the free 19-track acoustic album, open the Learning Library, or explore the 8-week Rhythm Ready Workbook for ages 2–7.';
+const notFoundBody = layoutShell({
+  badge: '404 · Off the Beaten Path',
+  h1: "Let's Guide You Back to the Sound",
+  bodyHtml: `
+    <p>That link or QR code path does not match an active page. Choose a destination below to stream the free 19-track album or open classroom and home resources for ages 2–7.</p>
+    <ul>
+      <li><a href="/listen"><strong>Stream the Free 19-Track Acoustic Album</strong></a></li>
+      <li><a href="/resources"><strong>Open the 4-Part Learning Library</strong></a></li>
+      <li><a href="/rhythm-ready"><strong>Explore the 8-Week Rhythm Ready Workbook</strong></a></li>
+      <li><a href="/institutions"><strong>Educator &amp; Classroom Frameworks</strong></a></li>
+    </ul>
+  `,
+});
+
+const notFoundHtml = baseHtml
+  .replace(/<title>[\s\S]*?<\/title>/, () => `<title>${escapeHtml(notFoundTitle)}</title>`)
+  .replace(
+    /<meta name="description"[\s\S]*?content="[^"]*"\s*\/>/,
+    () =>
+      `<meta name="description"\n    content="${escapeHtml(notFoundDesc)}" />\n  <meta name="robots" content="noindex, nofollow" />`
+  )
+  .replace(/<link rel="canonical" href="[^"]*"\s*\/>\s*/, () => '')
+  .replace(
+    /<meta property="og:title" content="[^"]*"\s*\/>/,
+    () => `<meta property="og:title" content="${escapeHtml(notFoundTitle)}" />`
+  )
+  .replace(
+    /<meta property="og:description"[\s\S]*?content="[^"]*"\s*\/>/,
+    () => `<meta property="og:description"\n    content="${escapeHtml(notFoundDesc)}" />`
+  )
+  .replace(
+    /<script type="application\/ld\+json">[\s\S]*?<\/script>/,
+    () => ''
+  )
+  .replace(
+    /<div id="root">[\s\S]*?<\/div>\s*(?=<\/body>)/,
+    () => `<div id="root">\n    ${notFoundBody}\n  </div>\n\n`
+  );
+
+fs.writeFileSync(path.join(DIST_DIR, '404.html'), notFoundHtml, 'utf8');
+
+console.log(`✔ Prerendered ${generatedCount} route HTML pages in dist/<route>/index.html + dist/404.html`);

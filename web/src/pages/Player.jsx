@@ -12,6 +12,7 @@ import { trackLead } from '../utils/analytics';
 import { triggerQuestCelebration, TiltCard } from '../components/ui/DesignSpells';
 import { isGateUnlocked, setGateUnlocked, getCapturedEmail, isValidEmail } from '../utils/gateAuth';
 import KineticHeadline from '../components/KineticHeadline';
+import { usePageMeta } from '../hooks/usePageMeta';
 
 const Player = () => {
   const { t } = useTranslation();
@@ -21,6 +22,14 @@ const Player = () => {
 
   // ── Gate State (strictly verified against captured email) ────
   const [isUnlocked, setIsUnlocked] = useState(() => isGateUnlocked());
+
+  usePageMeta({
+    title: isUnlocked
+      ? 'Now Playing — SOE Rhythm Quest'
+      : 'Unlock 19 Tracks — SOE Rhythm Quest',
+    canonicalPath: null,
+    noindex: true,
+  });
 
   // ── 19 Canonical Tracks Data ────────────────────────────────
   const tracks = useMemo(() => {

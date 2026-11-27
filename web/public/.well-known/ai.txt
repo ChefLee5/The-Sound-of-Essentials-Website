@@ -1,7 +1,7 @@
 # AI Agent Discovery Specification (ai.txt)
 # The Sound of Essentials: Rhythm Quest
 # Canonical Domain: https://thesoundofessentials.com
-# Secondary Domain: https://soelearn.com
+# Utility / Print QR Alias (308 Redirect): https://soelearn.com
 
 # Context Documents
 context: https://thesoundofessentials.com/llms.txt

@@ -1,100 +1,114 @@
-// Meta Pixel + GA4 + Pinterest Tag loaders.
-//
-// Listen.jsx already fires window.fbq('track', 'Lead') and window.gtag('event',
-// 'generate_lead') on a successful album unlock. Neither global existed — index.html
-// loaded Microsoft Clarity and nothing else — so every one of those calls was a no-op
-// and no conversion on the funnel was ever measurable.
-//
-// IDs come from env so they differ per environment and never sit in git:
-//   VITE_META_PIXEL_ID=1234567890
-//   VITE_GA4_MEASUREMENT_ID=G-XXXXXXXXXX
-//   VITE_PINTEREST_TAG_ID=2612345678901
-// Missing ID = that tag simply does not load. No placeholder ever ships.
+/**
+ * SOE Sovereign Opt-In Analytics Loader
+ *
+ * COPPA & Family Privacy Safeguard:
+ * - Zero third-party scripts (GA4, Clarity, GTM, or ad-network pixels) execute
+ *   until the user explicitly grants consent (`soe_privacy_consent === 'granted'`).
+ * - First-party UTM parameter persistence (`soe_attribution_data`) operates
+ *   locally without external sub-processors.
+ * - Even after opt-in, Google signals and ad personalization remain strictly disabled.
+ */
 
 import { initAutoTracking } from '../utils/analytics';
 
-const META_PIXEL_ID = import.meta.env.VITE_META_PIXEL_ID;
-const GA4_ID = import.meta.env.VITE_GA4_MEASUREMENT_ID;
-const PINTEREST_TAG_ID = import.meta.env.VITE_PINTEREST_TAG_ID;
+const GA4_ID = import.meta.env.VITE_GA4_MEASUREMENT_ID || 'G-H5977S1HY4';
+const CLARITY_ID = import.meta.env.VITE_CLARITY_ID || 'wcdgngeqcm';
+const CONSENT_STORAGE_KEY = 'soe_privacy_consent';
 
-function loadMetaPixel(id) {
-  // Meta's own snippet, kept verbatim so it stays diffable against their docs.
-  !function (f, b, e, v, n, t, s) {
-    if (f.fbq) return; n = f.fbq = function () {
-      n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-    };
-    if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = [];
-    t = b.createElement(e); t.async = !0; t.src = v;
-    s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s)
-  }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
-  window.fbq('init', id);
-  window.fbq('track', 'PageView');
+let ga4Loaded = false;
+let clarityLoaded = false;
+
+export function hasAnalyticsConsent() {
+  if (typeof window === 'undefined') return false;
+  try {
+    return localStorage.getItem(CONSENT_STORAGE_KEY) === 'granted';
+  } catch {
+    return false;
+  }
 }
 
-function loadGa4(id) {
-  const s = document.createElement('script');
-  s.async = true;
-  s.src = `https://www.googletagmanager.com/gtag/js?id=${id}`;
-  document.head.appendChild(s);
+function loadPrivacyMaskedGa4(id) {
+  if (!id || ga4Loaded || typeof document === 'undefined') return;
+  ga4Loaded = true;
 
   window.dataLayer = window.dataLayer || [];
-  // gtag must forward `arguments`, so this cannot be an arrow function.
-  window.gtag = function () { window.dataLayer.push(arguments); };
+  window.gtag =
+    window.gtag ||
+    function () {
+      window.dataLayer.push(arguments);
+    };
+
+  window.gtag('consent', 'default', {
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+    analytics_storage: 'granted',
+  });
+
+  const s = document.createElement('script');
+  s.async = true;
+  s.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(id)}`;
+  document.head.appendChild(s);
+
   window.gtag('js', new Date());
-  window.gtag('config', id);
+  window.gtag('config', id, {
+    anonymize_ip: true,
+    allow_google_signals: false,
+    allow_ad_personalization_signals: false,
+  });
 }
 
-function loadPinterestTag(id) {
-  // Pinterest's official Tag snippet
-  !function (e) {
-    if (!window.pintrk) {
-      window.pintrk = function () {
-        window.pintrk.queue.push(Array.prototype.slice.call(arguments));
+function loadConsentedClarity(id) {
+  if (!id || clarityLoaded || typeof document === 'undefined') return;
+  clarityLoaded = true;
+
+  (function (c, l, a, r, i, t, y) {
+    c[a] =
+      c[a] ||
+      function () {
+        (c[a].q = c[a].q || []).push(arguments);
       };
-      var n = window.pintrk;
-      n.queue = [];
-      n.version = '3.0';
-      var t = document.createElement('script');
-      t.async = !0;
-      t.src = e;
-      var r = document.getElementsByTagName('script')[0];
-      r.parentNode.insertBefore(t, r);
+    c[a]('consent', true);
+    t = l.createElement(r);
+    t.async = 1;
+    t.src = 'https://www.clarity.ms/tag/' + i;
+    y = l.getElementsByTagName(r)[0];
+    if (y && y.parentNode) {
+      y.parentNode.insertBefore(t, y);
+    } else {
+      l.head.appendChild(t);
     }
-  }('https://s.pinimg.com/ct/core.js');
-  window.pintrk('load', id);
-  window.pintrk('page');
+  })(window, document, 'clarity', 'script', CLARITY_ID);
+}
+
+export function enableConsentedAnalytics() {
+  if (typeof window === 'undefined') return;
+  loadPrivacyMaskedGa4(GA4_ID);
+  loadConsentedClarity(CLARITY_ID);
+  initAutoTracking();
+}
+
+export function disableConsentedAnalytics() {
+  if (typeof window === 'undefined') return;
+  if (typeof window.clarity === 'function') {
+    window.clarity('consent', false);
+  }
+  if (typeof window.gtag === 'function') {
+    window.gtag('consent', 'update', {
+      analytics_storage: 'denied',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+    });
+  }
 }
 
 export function initAnalytics() {
   if (typeof window === 'undefined') return;
-
-  // 1. Always guarantee dataLayer exists for Google Tag Manager (GTM-N2NKDFW6)
   window.dataLayer = window.dataLayer || [];
 
-  // 2. Safe gtag fallback if direct gtag calls are made anywhere
-  if (!window.gtag) {
-    window.gtag = function () { window.dataLayer.push(arguments); };
-  }
-
-  // 3. Initialize automatic click tracking for CTAs and outbound links
-  initAutoTracking();
-
-  if (META_PIXEL_ID) {
-    loadMetaPixel(META_PIXEL_ID);
-  } else if (import.meta.env.DEV) {
-    console.info('[analytics] VITE_META_PIXEL_ID not set — Meta Pixel direct loader skipped.');
-  }
-
-  if (GA4_ID) {
-    loadGa4(GA4_ID);
-  } else if (import.meta.env.DEV) {
-    console.info('[analytics] VITE_GA4_MEASUREMENT_ID not set — GA4 can be configured via GTM container.');
-  }
-
-  if (PINTEREST_TAG_ID) {
-    loadPinterestTag(PINTEREST_TAG_ID);
-  } else if (import.meta.env.DEV) {
-    console.info('[analytics] VITE_PINTEREST_TAG_ID not set — Pinterest Tag direct loader skipped.');
+  // Strictly enforce opt-in before loading any external analytics scripts
+  if (hasAnalyticsConsent()) {
+    enableConsentedAnalytics();
   }
 }
-

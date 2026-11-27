@@ -6,21 +6,89 @@
     { "source": "/universe", "destination": "/heroes", "permanent": true },
     { "source": "/characters", "destination": "/heroes", "permanent": true },
     { "source": "/media", "destination": "/listen", "permanent": true },
-    { "source": "/quieter-way", "destination": "/story", "permanent": true }
+    { "source": "/starter-pack", "destination": "/listen", "permanent": true },
+    { "source": "/qr", "destination": "/listen", "permanent": true },
+    { "source": "/ritual", "destination": "/listen", "permanent": true },
+    { "source": "/music-u/:slug*", "destination": "/listen", "permanent": true },
+    { "source": "/curriculum", "destination": "/rhythm-ready", "permanent": true },
+    { "source": "/rhythmready", "destination": "/rhythm-ready", "permanent": true },
+    { "source": "/rhythm-quest", "destination": "/rhythm-ready", "permanent": true },
+    { "source": "/rhythmquest", "destination": "/rhythm-ready", "permanent": true },
+    { "source": "/start", "destination": "/rhythm-ready", "permanent": true },
+    { "source": "/dictionary", "destination": "/workbook#dictionary-presale", "permanent": true },
+    { "source": "/shop", "destination": "/headphones", "permanent": true },
+    { "source": "/sensory-headphones", "destination": "/headphones", "permanent": true },
+    { "source": "/classroom", "destination": "/institutions", "permanent": true },
+    { "source": "/enterprise", "destination": "/institutions", "permanent": true },
+    { "source": "/qpc", "destination": "/institutions", "permanent": true },
+    { "source": "/ally-annex", "destination": "/institutions", "permanent": true },
+    { "source": "/allies", "destination": "/", "permanent": true },
+    { "source": "/about", "destination": "/mission", "permanent": true },
+    { "source": "/quieter-way", "destination": "/story", "permanent": true },
+    { "source": "/advertorial", "destination": "/story", "permanent": true },
+    { "source": "/story.html", "destination": "/story", "permanent": true },
+    { "source": "/dad-review", "destination": "/dad-reading-apps-review", "permanent": true },
+    { "source": "/dad-reading-apps-review.html", "destination": "/dad-reading-apps-review", "permanent": true },
+    { "source": "/sovereign-child", "destination": "/education-sovereignty", "permanent": true },
+    { "source": "/education-sovereignty.html", "destination": "/education-sovereignty", "permanent": true },
+    { "source": "/sound-before-symbol", "destination": "/global-learn-english", "permanent": true },
+    { "source": "/global-learn-english.html", "destination": "/global-learn-english", "permanent": true },
+    { "source": "/rhythm-reset", "destination": "/sing-along-time", "permanent": true },
+    { "source": "/sing-along-time.html", "destination": "/sing-along-time", "permanent": true },
+    { "source": "/abcmouse-alternatives", "destination": "/alternatives/abcmouse", "permanent": true },
+    { "source": "/abcmouse-alternatives.html", "destination": "/alternatives/abcmouse", "permanent": true },
+    { "source": "/compare/abcmouse", "destination": "/alternatives/abcmouse", "permanent": true },
+    { "source": "/reading-eggs-alternatives", "destination": "/alternatives/reading-eggs", "permanent": true },
+    { "source": "/reading-eggs-alternatives.html", "destination": "/alternatives/reading-eggs", "permanent": true },
+    { "source": "/compare/reading-eggs", "destination": "/alternatives/reading-eggs", "permanent": true },
+    { "source": "/hooked-on-phonics-alternatives", "destination": "/alternatives/hooked-on-phonics", "permanent": true },
+    { "source": "/hooked-on-phonics-alternatives.html", "destination": "/alternatives/hooked-on-phonics", "permanent": true },
+    { "source": "/compare/hooked-on-phonics", "destination": "/alternatives/hooked-on-phonics", "permanent": true },
+    { "source": "/admin", "destination": "/admin/crm", "permanent": true },
+    { "source": "/crm", "destination": "/admin/crm", "permanent": true }
   ],
   "rewrites": [
     { "source": "/api/:path*", "destination": "https://soe-website-b7j.pages.dev/api/:path*" },
-    { "source": "/story", "destination": "/story.html" },
-    { "source": "/dad-reading-apps-review", "destination": "/dad-reading-apps-review.html" },
-    { "source": "/education-sovereignty", "destination": "/education-sovereignty.html" },
-    { "source": "/global-learn-english", "destination": "/global-learn-english.html" },
-    { "source": "/sing-along-time", "destination": "/sing-along-time.html" },
-    { "source": "/alternatives/abcmouse", "destination": "/abcmouse-alternatives.html" },
-    { "source": "/abcmouse-alternatives", "destination": "/abcmouse-alternatives.html" },
-    { "source": "/alternatives/reading-eggs", "destination": "/reading-eggs-alternatives.html" },
-    { "source": "/reading-eggs-alternatives", "destination": "/reading-eggs-alternatives.html" },
-    { "source": "/alternatives/hooked-on-phonics", "destination": "/hooked-on-phonics-alternatives.html" },
-    { "source": "/hooked-on-phonics-alternatives", "destination": "/hooked-on-phonics-alternatives.html" },
-    { "source": "/((?!api/).*)", "destination": "/index.html" }
+    { "source": "/player", "destination": "/index.html" },
+    { "source": "/order-success", "destination": "/index.html" },
+    { "source": "/download", "destination": "/index.html" },
+    { "source": "/ads", "destination": "/index.html" },
+    { "source": "/ads-showcase", "destination": "/index.html" },
+    { "source": "/campaigns", "destination": "/index.html" },
+    { "source": "/launcher", "destination": "/index.html" },
+    { "source": "/mcls", "destination": "/index.html" },
+    { "source": "/admin/crm", "destination": "/index.html" },
+    { "source": "/admin/crm/:path*", "destination": "/index.html" },
+    { "source": "/v2", "destination": "/index.html" },
+    { "source": "/v2/:path*", "destination": "/index.html" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" }
+      ]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/(player|order-success|download|mcls|launcher|ads|ads-showcase|campaigns|v2|404)",
+      "headers": [
+        { "key": "X-Robots-Tag", "value": "noindex, nofollow" }
+      ]
+    },
+    {
+      "source": "/(admin|crm|v2)/:path*",
+      "headers": [
+        { "key": "X-Robots-Tag", "value": "noindex, nofollow" }
+      ]
+    }
   ]
 }

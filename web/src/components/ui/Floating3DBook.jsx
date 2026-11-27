@@ -1,14 +1,14 @@
 import React, { useRef, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { assetPath } from '../../utils/assetPath';
 
 export const Floating3DBook = ({
-  imageSrc = '/assets/marketing/soe-album-storybook-cover.webp',
+  imageSrc = '/assets/marketing/soe-album-storybook-cover-600.webp',
   altText = 'The Sound of Essentials Rhythm Quest Storybook & Album Cover',
   badgeText = '📖 Storybook Gallery • Click to Explore',
   to = '/gallery',
+  priority = false,
 }) => {
-  const navigate = useNavigate();
   const cardRef = useRef(null);
   const [isHovered, setIsHovered] = useState(false);
   const [shinePos, setShinePos] = useState({ x: 50, y: 50 });
@@ -21,14 +21,11 @@ export const Floating3DBook = ({
     const x = e.clientX - left;
     const y = e.clientY - top;
 
-    // Calculate rotation angles (up to 16 deg on X/Y)
     const rotateX = ((y - height / 2) / height) * -16;
     const rotateY = ((x - width / 2) / width) * 16;
 
-    // Apply 3D transform with depth and subtle scale
     card.style.transform = `perspective(1200px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) scale3d(1.04, 1.04, 1.04)`;
 
-    // Calculate dynamic specular glare position
     const shineX = (x / width) * 100;
     const shineY = (y / height) * 100;
     setShinePos({ x: shineX, y: shineY });
@@ -42,41 +39,23 @@ export const Floating3DBook = ({
     const card = cardRef.current;
     if (!card) return;
     setIsHovered(false);
-    // Smooth reset
     card.style.transform = 'perspective(1200px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
   };
 
-  const handleClick = (e) => {
-    e.preventDefault();
-    if (to) {
-      navigate(to);
-    }
-  };
-
   return (
-    <div
+    <Link
+      to={to}
       className="hero__3d-book-container"
-      role="button"
-      tabIndex={0}
-      aria-label={`${altText} - Click to view gallery`}
-      onClick={handleClick}
-      onKeyDown={(e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          handleClick(e);
-        }
-      }}
       style={{
         perspective: '1200px',
         cursor: 'pointer',
         display: 'inline-block',
-        outline: 'none',
+        textDecoration: 'none',
       }}
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      {/* Radiant ambient sun/gold background glow */}
       <div
         className="hero__3d-book-glow"
         aria-hidden="true"
@@ -87,7 +66,6 @@ export const Floating3DBook = ({
         }}
       />
 
-      {/* 3D Preserved Card Shell */}
       <div
         ref={cardRef}
         className="hero__3d-book-card"
@@ -98,7 +76,6 @@ export const Floating3DBook = ({
             : 'transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.5s ease',
         }}
       >
-        {/* Layer 1: Frame background with backdrop blur */}
         <div
           className="hero__3d-book-frame"
           style={{
@@ -106,7 +83,6 @@ export const Floating3DBook = ({
             transformStyle: 'preserve-3d',
           }}
         >
-          {/* Layer 2: High-res Cover Image with depth elevation */}
           <div
             className="hero__3d-book-img-wrap"
             style={{
@@ -120,12 +96,12 @@ export const Floating3DBook = ({
               className="hero__3d-book-img"
               width="400"
               height="400"
-              fetchPriority="high"
-              loading="eager"
+              fetchPriority={priority ? 'high' : 'auto'}
+              loading={priority ? 'eager' : 'lazy'}
+              decoding={priority ? 'sync' : 'async'}
               style={{ aspectRatio: '1 / 1' }}
             />
 
-            {/* Specular Glare / Holographic Light Sheen */}
             <div
               className="hero__3d-book-glare"
               aria-hidden="true"
@@ -139,7 +115,6 @@ export const Floating3DBook = ({
           </div>
         </div>
 
-        {/* Layer 3: Floating Badge with maximum depth pop */}
         <div
           className="hero__3d-book-badge-wrap"
           style={{
@@ -152,7 +127,7 @@ export const Floating3DBook = ({
           </span>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

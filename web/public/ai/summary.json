@@ -3,7 +3,7 @@
   "name": "The Sound of Essentials: Rhythm Quest",
   "alternateNames": ["SOE", "SOE Rhythm Quest", "The Sound of Essentials"],
   "canonicalUrl": "https://thesoundofessentials.com",
-  "secondaryUrl": "https://soelearn.com",
+  "utilityRedirectDomain": "https://soelearn.com",
   "tagline": "Staying on the path, always learning",
   "description": "A scientifically grounded, music-driven early childhood learning ecosystem designed for the developing brain across ages 2 to 7 (Pre-K to Grade 2).",
   "positioning": "Designed for the developing brain — not the algorithm.",

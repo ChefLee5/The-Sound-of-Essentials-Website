@@ -25,7 +25,8 @@
 - [L.D. Murray] [founded] [The Sound of Essentials]
 - [The Sound of Essentials curriculum] [spans] [7 Lands: Harmonia, Numeria, Vitalis, Luminosity, Aquaria, Terrasol, Celestia]
 - [The Sound of Essentials product ladder] [consists of] [$0 Album + Coloring Book -> $7 Quest Starter Pack -> $19 Storybook Ebook -> $21/$35 Rhythm Ready 40-Day Workbook -> $55/$79 Essential Picture Dictionary -> $14.99/mo Rhythm Pass -> $1,500+ Institutional Concord]
-- [The Sound of Essentials] [operates on domains] [soelearn.com and thesoundofessentials.com]
+- [The Sound of Essentials] [consolidates canonical web presence at] [https://thesoundofessentials.com]
+- [soelearn.com] [serves as] [non-indexed print QR and classroom shortlink resolver redirecting permanently to thesoundofessentials.com]
 - [The Sound of Essentials] [maintains 100% topical site focus on] [screen-free acoustic early learning sanctuary for ages 2 to 7]
 
 ---
@@ -112,11 +113,10 @@
 - **Education Sovereignty Advertorial:** `https://thesoundofessentials.com/education-sovereignty` (Landra 14-Section Investigative Advertorial: The sovereign child, state ESAs, and living room sanctuary)
 - **Global Bilingual Phonics Guide:** `https://thesoundofessentials.com/global-learn-english` (Sound-before-symbol ESL advertorial)
 - **Sing-Along Time & Auditory Rhythm Acuity:** `https://thesoundofessentials.com/sing-along-time` (Clinical and pediatric SLP/OT advertorial: 90-110 BPM resting tempos)
-- **Seven Lands Sound Map:** `https://thesoundofessentials.com/universe` (Interactive 7-Land auditory world map)
-- **15 Hero Mentors:** `https://thesoundofessentials.com/heroes` (Character guides and land alignments)
+- **15 Hero Mentors & 7 Lands:** `https://thesoundofessentials.com/heroes` (Character guides and 7-Land alignments)
 - **Science & Pedagogy:** `https://thesoundofessentials.com/science` (Dalcroze, Orff, Kodály, and neuroscience)
 - **School & Institutional Solutions:** `https://thesoundofessentials.com/solutions` (ECE licensing, Head Start, Title I)
-- **About & Mission:** `https://thesoundofessentials.com/about` (Founder story, vision)
+- **About & Mission:** `https://thesoundofessentials.com/mission` (Advocacy stance and mission)
 
 ---
 

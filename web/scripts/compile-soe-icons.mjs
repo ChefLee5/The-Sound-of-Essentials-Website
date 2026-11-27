@@ -166,6 +166,30 @@ for (const id of CURATED_ICONS) {
   iconsMap[id] = variants;
 }
 
+function inlineSvgClassStyles(rawMarkup) {
+  let markup = cleanMarkup(rawMarkup).replace(/var\(--hds-color-text-solid\)/g, 'currentColor');
+  const styleBlocks = [];
+  markup = markup.replace(/<style[^>]*>([\s\S]*?)<\/style>/gi, (_, cssText) => {
+    styleBlocks.push(cssText);
+    return '';
+  });
+  for (const css of styleBlocks) {
+    const ruleRegex = /\.([A-Za-z0-9_-]+)\s*\{\s*([^}]+)\}/g;
+    let match;
+    while ((match = ruleRegex.exec(css)) !== null) {
+      const cls = match[1];
+      const decls = match[2];
+      const fillMatch = decls.match(/fill\s*:\s*([^;]+)/i);
+      if (fillMatch) {
+        const fillVal = fillMatch[1].trim();
+        const classAttrRegex = new RegExp(`\\bclass="${cls}"`, 'g');
+        markup = markup.replace(classAttrRegex, `fill="${fillVal}"`);
+      }
+    }
+  }
+  return markup.replace(/<defs>\s*<\/defs>/gi, '');
+}
+
 const brandsMap = {};
 for (const slug of CURATED_BRANDS) {
   const brand = getBrand(slug);
@@ -175,7 +199,7 @@ for (const slug of CURATED_BRANDS) {
   brandsMap[slug] = {
     name: brand.name,
     viewBox: brand.viewBox,
-    markup: cleanMarkup(brand.markup).replace(/var\(--hds-color-text-solid\)/g, 'currentColor'),
+    markup: inlineSvgClassStyles(brand.markup),
   };
 }
 

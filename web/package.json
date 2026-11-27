@@ -8,6 +8,7 @@
     "theme:build": "astryx theme build src/themes/soeTheme.ts --out src/themes/soe.css",
     "canon:compile": "node scripts/compile-mcls-canon.mjs",
     "icons:compile": "node scripts/compile-soe-icons.mjs",
+    "assets:optimize": "node scripts/optimize-seo-assets.mjs",
     "catalog:pinterest": "node scripts/generate-pinterest-catalog.mjs",
     "geo:sync": "node scripts/sync-geo-guides.mjs",
     "build": "node scripts/compile-mcls-canon.mjs && node scripts/generate-pinterest-catalog.mjs && node scripts/sync-geo-guides.mjs && vite build && node scripts/prerender-routes.mjs",

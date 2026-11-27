@@ -3,10 +3,10 @@ import { useEffect } from 'react';
 const SITE_URL = 'https://thesoundofessentials.com';
 
 /**
- * Synchronizes document title, meta description, canonical link, and Open Graph
- * metadata on client-side route transitions.
+ * Synchronizes document title, meta description, canonical link, robots directives,
+ * and Open Graph metadata on client-side route transitions.
  */
-export function usePageMeta({ title, description, canonicalPath }) {
+export function usePageMeta({ title, description, canonicalPath, noindex = false }) {
   useEffect(() => {
     if (title) {
       document.title = title;
@@ -31,6 +31,18 @@ export function usePageMeta({ title, description, canonicalPath }) {
       if (twDesc) twDesc.setAttribute('content', description);
     }
 
+    let robotsMeta = document.querySelector('meta[name="robots"]');
+    if (noindex) {
+      if (!robotsMeta) {
+        robotsMeta = document.createElement('meta');
+        robotsMeta.name = 'robots';
+        document.head.appendChild(robotsMeta);
+      }
+      robotsMeta.setAttribute('content', 'noindex, nofollow');
+    } else if (robotsMeta) {
+      robotsMeta.remove();
+    }
+
     if (canonicalPath) {
       const normalized = canonicalPath.startsWith('/') ? canonicalPath : `/${canonicalPath}`;
       const fullUrl = `${SITE_URL}${normalized}`;
@@ -50,6 +62,9 @@ export function usePageMeta({ title, description, canonicalPath }) {
         document.head.appendChild(ogUrl);
       }
       ogUrl.setAttribute('content', fullUrl);
+    } else if (noindex) {
+      const canonical = document.querySelector('link[rel="canonical"]');
+      if (canonical) canonical.remove();
     }
-  }, [title, description, canonicalPath]);
+  }, [title, description, canonicalPath, noindex]);
 }

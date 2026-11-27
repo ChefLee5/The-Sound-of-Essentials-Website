@@ -19,7 +19,7 @@ import './ExpandableGallery.css';
 const PHOTOS = [
   {
     id: 'occupations',
-    src: assetPath('/assets/dictionary/land6-occupations-careers.png'),
+    src: assetPath('/assets/dictionary/land6-occupations-careers.webp'),
     alt: 'Luminosity — Occupations & Careers',
     rotation: -15,
     x: -90,
@@ -28,7 +28,7 @@ const PHOTOS = [
   },
   {
     id: 'wild-animals',
-    src: assetPath('/assets/dictionary/land3-wild-animals.png'),
+    src: assetPath('/assets/dictionary/land3-wild-animals.webp'),
     alt: 'Terrasol — Wild Animals',
     rotation: -3,
     x: -10,
@@ -37,7 +37,7 @@ const PHOTOS = [
   },
   {
     id: 'solar-system',
-    src: assetPath('/assets/dictionary/land7-the-solar-system.png'),
+    src: assetPath('/assets/dictionary/land7-the-solar-system.webp'),
     alt: 'Celestia — The Solar System',
     rotation: 12,
     x: 75,
@@ -46,32 +46,32 @@ const PHOTOS = [
   },
   {
     id: 'shapes',
-    src: assetPath('/assets/dictionary/land2-shapes-geometry.png'),
+    src: assetPath('/assets/dictionary/land2-shapes-geometry.webp'),
     alt: 'Numeria — Shapes & Geometry',
   },
   {
     id: 'garden',
-    src: assetPath('/assets/dictionary/land3-the-garden.png'),
+    src: assetPath('/assets/dictionary/land3-the-garden.webp'),
     alt: 'Terrasol — The Garden',
   },
   {
     id: 'transportation',
-    src: assetPath('/assets/dictionary/land4-transportation.png'),
+    src: assetPath('/assets/dictionary/land4-transportation.webp'),
     alt: 'Aquaria — Transportation',
   },
   {
     id: 'community-helpers',
-    src: assetPath('/assets/dictionary/land6-community-helpers-services.png'),
+    src: assetPath('/assets/dictionary/land6-community-helpers-services.webp'),
     alt: 'Luminosity — Community Helpers',
   },
   {
     id: 'planet-earth',
-    src: assetPath('/assets/dictionary/land7-planet-earth.png'),
+    src: assetPath('/assets/dictionary/land7-planet-earth.webp'),
     alt: 'Celestia — Planet Earth',
   },
   {
     id: 'produce-market',
-    src: assetPath('/assets/dictionary/land5-the-produce-market.png'),
+    src: assetPath('/assets/dictionary/land5-the-produce-market.webp'),
     alt: 'Vitalis — The Produce Market',
   },
 ];
@@ -192,7 +192,10 @@ export default function ExpandableGallery() {
                         src={photo.src}
                         alt={photo.alt}
                         className="xg__card-img"
-                        loading={isPrimary ? 'eager' : 'lazy'}
+                        width="640"
+                        height="640"
+                        loading="lazy"
+                        decoding="async"
                         draggable="false"
                       />
                     </motion.div>

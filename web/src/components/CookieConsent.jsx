@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import { Button } from '@astryxdesign/core/Button';
-import { Card } from '@astryxdesign/core/Card';
-import { Stack } from '@astryxdesign/core/Layout';
-import { Text } from '@astryxdesign/core/Text';
-import SoeAstryxTheme from './SoeAstryxTheme';
+import { enableConsentedAnalytics, disableConsentedAnalytics } from '../lib/analytics';
+import { trackPageView } from '../utils/analytics';
 
 const CookieConsent = () => {
   const { t } = useTranslation();
@@ -17,11 +14,10 @@ const CookieConsent = () => {
       if (!consent) {
         setIsVisible(true);
         document.body.classList.add('has-cookie-consent');
-      } else if (consent === 'granted' && typeof window !== 'undefined' && window.clarity) {
-        window.clarity('consent', true);
+      } else if (consent === 'granted') {
+        enableConsentedAnalytics();
       }
     } catch {
-      // Fallback if localStorage is inaccessible
       setIsVisible(false);
     }
 
@@ -33,11 +29,10 @@ const CookieConsent = () => {
   const handleAccept = () => {
     try {
       localStorage.setItem('soe_privacy_consent', 'granted');
-      if (typeof window !== 'undefined' && window.clarity) {
-        window.clarity('consent', true);
-      }
+      enableConsentedAnalytics();
+      trackPageView(window.location.pathname + window.location.search, document.title);
     } catch {
-      // ignore
+      // ignore storage errors
     }
     document.body.classList.remove('has-cookie-consent');
     setIsVisible(false);
@@ -46,11 +41,9 @@ const CookieConsent = () => {
   const handleDecline = () => {
     try {
       localStorage.setItem('soe_privacy_consent', 'declined');
-      if (typeof window !== 'undefined' && window.clarity) {
-        window.clarity('consent', false);
-      }
+      disableConsentedAnalytics();
     } catch {
-      // ignore
+      // ignore storage errors
     }
     document.body.classList.remove('has-cookie-consent');
     setIsVisible(false);
@@ -59,63 +52,144 @@ const CookieConsent = () => {
   if (!isVisible) return null;
 
   return (
-    <aside
-      aria-label="Privacy and Cookie Consent"
-      className="cookie-consent-bar"
-      style={{
-        position: 'fixed',
-        bottom: '1rem',
-        left: '1rem',
-        right: '1rem',
-        maxWidth: '720px',
-        margin: '0 auto',
-        zIndex: 9999,
-      }}
-    >
-      <SoeAstryxTheme>
-        <Card elevation="high" padding={4}>
-          <Stack direction="vertical" gap={3}>
-            <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
-              <span style={{ fontSize: '1.35rem', lineHeight: 1 }} aria-hidden="true">
-                🛡️
-              </span>
-              <Text size="sm" style={{ flex: 1, lineHeight: 1.55 }}>
-                <strong style={{ color: 'var(--color-orange, #FF6F00)' }}>
-                  Privacy &amp; Data Safeguards:
-                </strong>{' '}
-                {t('legal.cookie_banner_text')}{' '}
-                <Link
-                  to="/privacy"
-                  style={{
-                    color: '#C65100',
-                    textDecoration: 'underline',
-                    fontWeight: 600,
-                  }}
-                >
-                  {t('legal.cookie_learn_more')}
-                </Link>
-              </Text>
-            </div>
+    <aside aria-label="Privacy and Cookie Consent" className="cookie-consent-bar">
+      <div className="cookie-consent-card">
+        <div className="cookie-consent-copy">
+          <span className="cookie-consent-icon" aria-hidden="true">
+            🛡️
+          </span>
+          <div className="cookie-consent-body">
+            <p className="cookie-consent-text">
+              <strong style={{ color: '#C2410C' }}>Privacy &amp; Data Safeguards:</strong>{' '}
+              {t('legal.cookie_banner_text')}
+            </p>
+            <Link to="/privacy" className="cookie-consent-link">
+              {t('legal.cookie_learn_more')}
+            </Link>
+          </div>
+        </div>
 
-            <Stack direction="horizontal" justify="end" gap={2} wrap>
-              <Button
-                type="button"
-                variant="secondary"
-                size="sm"
-                onClick={handleDecline}
-                label={t('legal.cookie_decline')}
-              />
-              <Button
-                type="button"
-                variant="primary"
-                size="sm"
-                onClick={handleAccept}
-                label={t('legal.cookie_accept')}
-              />
-            </Stack>
-          </Stack>
-        </Card>
-      </SoeAstryxTheme>
+        <div className="cookie-consent-actions">
+          <button
+            type="button"
+            className="cookie-consent-btn cookie-consent-btn--secondary"
+            onClick={handleDecline}
+          >
+            {t('legal.cookie_decline')}
+          </button>
+          <button
+            type="button"
+            className="cookie-consent-btn cookie-consent-btn--primary"
+            onClick={handleAccept}
+          >
+            {t('legal.cookie_accept')}
+          </button>
+        </div>
+      </div>
+
+      <style>{`
+        .cookie-consent-bar {
+          position: fixed;
+          bottom: 1rem;
+          left: 1rem;
+          right: 1rem;
+          max-width: 720px;
+          margin: 0 auto;
+          z-index: 9999;
+        }
+
+        .cookie-consent-card {
+          background: rgba(255, 255, 255, 0.98);
+          border: 1.5px solid rgba(255, 111, 0, 0.24);
+          border-radius: 24px;
+          padding: 1.15rem 1.35rem;
+          box-shadow: 0 18px 42px rgba(43, 32, 22, 0.16), 0 2px 8px rgba(0, 0, 0, 0.06);
+          display: flex;
+          flex-direction: column;
+          gap: 0.9rem;
+        }
+
+        .cookie-consent-copy {
+          display: flex;
+          align-items: flex-start;
+          gap: 0.75rem;
+        }
+
+        .cookie-consent-icon {
+          font-size: 1.3rem;
+          line-height: 1.2;
+          flex-shrink: 0;
+        }
+
+        .cookie-consent-body {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .cookie-consent-text {
+          margin: 0;
+          font-family: var(--font-body, 'Inter', sans-serif);
+          font-size: 0.88rem;
+          line-height: 1.55;
+          color: #2B2016;
+          max-width: none;
+        }
+
+        .cookie-consent-link {
+          color: #C2410C;
+          text-decoration: underline;
+          font-family: var(--font-body, 'Inter', sans-serif);
+          font-size: 0.86rem;
+          font-weight: 700;
+          display: inline-flex;
+          align-items: center;
+          min-height: 44px;
+          min-width: 44px;
+          padding: 0 0.25rem;
+          margin-left: -0.25rem;
+        }
+
+        .cookie-consent-actions {
+          display: flex;
+          justify-content: flex-end;
+          gap: 0.65rem;
+          flex-wrap: wrap;
+        }
+
+        .cookie-consent-btn {
+          min-height: 44px;
+          padding: 0.55rem 1.25rem;
+          border-radius: 50px;
+          font-family: var(--font-heading, 'Fredoka', sans-serif);
+          font-size: 0.86rem;
+          font-weight: 600;
+          cursor: pointer;
+          transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+        }
+
+        .cookie-consent-btn--secondary {
+          background: #F4EDE2;
+          color: #2B2016;
+          border: 1px solid rgba(43, 32, 22, 0.14);
+        }
+
+        .cookie-consent-btn--secondary:hover {
+          background: #EBE0D0;
+        }
+
+        .cookie-consent-btn--primary {
+          background: #C2410C;
+          color: #FFFFFF;
+          border: 1px solid #9A3412;
+          box-shadow: 0 4px 12px rgba(194, 65, 12, 0.28);
+        }
+
+        .cookie-consent-btn--primary:hover {
+          background: #9A3412;
+          transform: translateY(-1px);
+        }
+      `}</style>
     </aside>
   );
 };

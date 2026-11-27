@@ -1,5 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import { Outlet } from 'react-router-dom';
+import '../styles/v2.css';
 import NavbarV2 from './NavbarV2';
 import FooterV2 from './FooterV2';
 import SplashV2 from './SplashV2';

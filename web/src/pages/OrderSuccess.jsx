@@ -7,9 +7,15 @@ import { FULFILLMENT_FILES, getDeliveryUrl, triggerBrowserDownload } from '../ut
 import { setGateUnlocked, isValidEmail } from '../utils/gateAuth';
 import { trackPurchase } from '../utils/analytics';
 import KineticHeadline from '../components/KineticHeadline';
+import { usePageMeta } from '../hooks/usePageMeta';
 import './OrderSuccess.css';
 
 const OrderSuccess = () => {
+  usePageMeta({
+    title: 'Your Quest Has Begun! — Sound of Essentials',
+    canonicalPath: null,
+    noindex: true,
+  });
   const [searchParams] = useSearchParams();
   const rawSessionId = searchParams.get('session_id');
   const [orderId] = useState(() => (

@@ -43,9 +43,10 @@ const Home = () => {
 
   const allChars = carouselOrder.map(name => {
     const h = heroesData.find(char => char.name === name);
+    const baseName = (h?.name || name).toUpperCase();
     return {
       name: h?.name || name,
-      file: `${(h?.name || name).toUpperCase()}.webp`,
+      file: `${baseName}-320.webp`,
       color: h?.carouselColor || '#FF6F00',
       note: h?.carouselNote || '♪',
     };
@@ -55,17 +56,29 @@ const Home = () => {
   const theta = 360 / numChars;
   const radius = Math.round(80 / Math.tan(Math.PI / numChars)) + 60;
   const [rotation, setRotation] = useState(0);
+  const [isMobileCarousel, setIsMobileCarousel] = useState(() =>
+    typeof window !== 'undefined' ? window.innerWidth < 768 : false
+  );
 
   const rotateLeft = () => setRotation(r => r + theta);
   const rotateRight = () => setRotation(r => r - theta);
 
   useEffect(() => {
-    if (typeof window !== 'undefined' && window.innerWidth < 768) return;
+    if (typeof window === 'undefined') return undefined;
+    const mq = window.matchMedia('(max-width: 767px)');
+    const syncViewport = () => setIsMobileCarousel(mq.matches);
+    syncViewport();
+    mq.addEventListener('change', syncViewport);
+    return () => mq.removeEventListener('change', syncViewport);
+  }, []);
+
+  useEffect(() => {
+    if (isMobileCarousel) return undefined;
     const interval = setInterval(() => {
       setRotation(r => r - theta);
     }, 3200);
     return () => clearInterval(interval);
-  }, [theta]);
+  }, [theta, isMobileCarousel]);
 
   /* ── 5 Developmental Domains (canonical 7-Land + SOE Amber palette) ── */
   const domains = [
@@ -133,9 +146,11 @@ const Home = () => {
                 {/* Official Brand Logo Seal */}
                 <div className="hero__brand-crest">
                   <img
-                    src={assetPath('/assets/soe-official-logo.webp')}
+                    src={assetPath('/assets/soe-official-logo-96.webp')}
                     alt="The Sound of Essentials Official Crest"
                     className="hero__brand-crest-img"
+                    width="44"
+                    height="44"
                   />
                   <div className="hero__brand-crest-text">
                     <span className="hero__brand-crest-title">THE SOUND OF ESSENTIALS</span>
@@ -242,75 +257,84 @@ const Home = () => {
               {/* Hero Visual: 3D Interactive Floating Album Cover Showcase */}
               <div className="hero__visual animate-fade-up">
                 <Floating3DBook
-                  imageSrc="/assets/marketing/soe-deluxe-cover.webp"
+                  imageSrc="/assets/marketing/soe-deluxe-cover-600.webp"
                   altText="The Sound of Essentials Deluxe 19-Track Album Cover"
                   badgeText="🎵 The 19-Track Deluxe Album • Listen Now"
                   to="/listen"
+                  priority={true}
                 />
               </div>
             </div>
           </div>
         </div>
 
-        {/* 3D Character Cylinder Carousel */}
+        {/* 3D Character Cylinder Carousel (single active viewport branch to halve image DOM/requests) */}
         <div className="hero__carousel-scene">
-          <div className="hero__carousel-desktop-only">
-            <button className="carousel-btn prev-btn" onClick={rotateLeft} aria-label="Previous heroes">
-              &#10094;
-            </button>
-            <div
-              className="hero__carousel-spinner"
-              style={{ transform: `rotateY(${rotation}deg)` }}
-            >
-              {allChars.map((char, i) => (
-                <div
-                  key={`${char.name}-${i}`}
-                  className="hero__char"
-                  style={{
-                    '--char-color': char.color,
-                    transform: `rotateY(${i * theta}deg) translateZ(${radius}px)`
-                  }}
-                >
-                  <div className="hero__char-note">{char.note}</div>
-                  <img
-                    src={assetPath(`/assets/characters/${char.file}`)}
-                    alt={char.name}
-                    className="hero__char-img"
-                    loading={i < 7 ? 'eager' : 'lazy'}
-                    draggable="false"
-                  />
-                  <div className="hero__char-label">{char.name}</div>
-                </div>
-              ))}
+          {!isMobileCarousel ? (
+            <div className="hero__carousel-desktop-only">
+              <button className="carousel-btn prev-btn" onClick={rotateLeft} aria-label="Previous heroes">
+                &#10094;
+              </button>
+              <div
+                className="hero__carousel-spinner"
+                style={{ transform: `rotateY(${rotation}deg)` }}
+              >
+                {allChars.map((char, i) => (
+                  <div
+                    key={`${char.name}-${i}`}
+                    className="hero__char"
+                    style={{
+                      '--char-color': char.color,
+                      transform: `rotateY(${i * theta}deg) translateZ(${radius}px)`
+                    }}
+                  >
+                    <div className="hero__char-note">{char.note}</div>
+                    <img
+                      src={assetPath(`/assets/characters/${char.file}`)}
+                      alt={char.name}
+                      className="hero__char-img"
+                      width="320"
+                      height="573"
+                      loading="lazy"
+                      decoding="async"
+                      draggable="false"
+                    />
+                    <div className="hero__char-label">{char.name}</div>
+                  </div>
+                ))}
+              </div>
+              <button className="carousel-btn next-btn" onClick={rotateRight} aria-label="Next heroes">
+                &#10095;
+              </button>
             </div>
-            <button className="carousel-btn next-btn" onClick={rotateRight} aria-label="Next heroes">
-              &#10095;
-            </button>
-          </div>
-
-          {/* Mobile Swipeable Card Deck */}
-          <div className="hero__carousel-mobile-only">
-            <div className="hero__mobile-scroll">
-              {allChars.map((char, i) => (
-                <div
-                  key={`${char.name}-mobile-${i}`}
-                  className="hero__mobile-card"
-                  style={{ '--char-color': char.color }}
-                >
-                  <div className="hero__mobile-card-note">{char.note}</div>
-                  <img
-                    src={assetPath(`/assets/characters/${char.file}`)}
-                    alt={char.name}
-                    className="hero__mobile-card-img"
-                  />
-                  <div className="hero__mobile-card-label">{char.name}</div>
-                </div>
-              ))}
+          ) : (
+            <div className="hero__carousel-mobile-only">
+              <div className="hero__mobile-scroll">
+                {allChars.map((char, i) => (
+                  <div
+                    key={`${char.name}-mobile-${i}`}
+                    className="hero__mobile-card"
+                    style={{ '--char-color': char.color }}
+                  >
+                    <div className="hero__mobile-card-note">{char.note}</div>
+                    <img
+                      src={assetPath(`/assets/characters/${char.file}`)}
+                      alt={char.name}
+                      className="hero__mobile-card-img"
+                      width="320"
+                      height="573"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <div className="hero__mobile-card-label">{char.name}</div>
+                  </div>
+                ))}
+              </div>
+              <div className="hero__mobile-swipe-hint">
+                <span>👆 Swipe to explore mentors →</span>
+              </div>
             </div>
-            <div className="hero__mobile-swipe-hint">
-              <span>👆 Swipe to explore mentors →</span>
-            </div>
-          </div>
+          )}
         </div>
 
         {/* Info Strip */}
@@ -519,10 +543,11 @@ const Home = () => {
           <div className="quest-showcase-grid">
             <RevealSection delay={0.1} className="quest-showcase__book-col">
               <Floating3DBook
-                imageSrc="/assets/marketing/soe-album-storybook-cover.webp"
+                imageSrc="/assets/marketing/soe-album-storybook-cover-600.webp"
                 altText="The Sound of Essentials Rhythm Quest Storybook"
                 badgeText="📖 Storybook Gallery • Click to Explore"
                 to="/gallery"
+                priority={false}
               />
             </RevealSection>
 
@@ -620,7 +645,7 @@ const Home = () => {
                       <SoeIcon name={d.icon} type="duotone" size={28} />
                     </span>
                   </div>
-                  <h4 className="domain-card__title">{d.title}</h4>
+                  <h3 className="domain-card__title">{d.title}</h3>
                   <p className="domain-card__desc">{d.desc}</p>
                 </div>
               </RevealSection>
@@ -912,7 +937,15 @@ const Home = () => {
           <RevealSection>
             <div className="final-cta-card glass-card">
               <div className="scene-backdrop" aria-hidden="true">
-                <img src={assetPath('/assets/marketing/quest-collage.webp')} alt="" className="scene-backdrop__img" />
+                <img
+                  src={assetPath('/assets/marketing/quest-collage.webp')}
+                  alt=""
+                  width="960"
+                  height="644"
+                  loading="lazy"
+                  decoding="async"
+                  className="scene-backdrop__img"
+                />
                 <div className="scene-backdrop__scrim" />
               </div>
 
@@ -936,7 +969,18 @@ const Home = () => {
 
                 <div style={{ marginTop: '1.25rem', fontSize: '0.85rem', color: 'var(--color-text-secondary)' }}>
                   Questions or custom school inquiries? Email us directly at{' '}
-                  <a href="mailto:info@soelearn.com" style={{ color: '#C45000', textDecoration: 'underline', fontWeight: 700 }}>
+                  <a
+                    href="mailto:info@soelearn.com"
+                    style={{
+                      color: '#C45000',
+                      textDecoration: 'underline',
+                      fontWeight: 700,
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      minHeight: '44px',
+                      padding: '0.25rem 0.35rem',
+                    }}
+                  >
                     info@soelearn.com
                   </a>
                 </div>

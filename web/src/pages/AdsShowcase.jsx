@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { assetPath } from '../utils/assetPath';
 import { ADS_DATA } from '../data/adsData';
+import { usePageMeta } from '../hooks/usePageMeta';
 import './AdsShowcase.css';
 
 const DELTAS = [
@@ -15,6 +16,11 @@ const DELTAS = [
 const WAVES = ['All Waves', 'Wave 1', 'Wave 2', 'Wave 3', 'Wave 4', 'Wave 5'];
 
 const AdsShowcase = () => {
+  usePageMeta({
+    title: 'Ad Campaign Showcase — The Sound of Essentials',
+    canonicalPath: null,
+    noindex: true,
+  });
   const [selectedDelta, setSelectedDelta] = useState('All Deltas');
   const [selectedWave, setSelectedWave] = useState('All Waves');
   const [searchQuery, setSearchQuery] = useState('');

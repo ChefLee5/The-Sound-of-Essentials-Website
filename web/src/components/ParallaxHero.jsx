@@ -110,7 +110,7 @@ const ParallaxHero = ({ variant = 'home' }) => {
 
     const elements = variant === 'universe' ? universeElements : homeElements;
     const bgMap = {
-        home: assetPath('/assets/backgrounds/bg1.png'),
+        home: assetPath('/assets/backgrounds/bg1-blur.webp'),
         universe: assetPath('/assets/backgrounds/bg2.png'),
         media: assetPath('/assets/backgrounds/bg3.png'),
     };

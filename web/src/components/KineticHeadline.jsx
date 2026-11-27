@@ -8,19 +8,8 @@ gsap.registerPlugin(SplitText, ScrollTrigger);
 
 /**
  * KineticHeadline — GreenSock SplitText-powered typography for SOE.
- * Provides musical, playful character and word reveals synchronized with Lenis and ScrollTrigger.
- *
- * @param {string|React.ReactNode} children — Text content to split and animate
- * @param {string} [tag='h2'] — Semantic HTML heading or text tag
- * @param {'musical-bounce'|'fade-up'|'mask-slide'|'wave'} [variant='musical-bounce'] — Animation style
- * @param {'chars,words'|'words'|'lines'} [type='chars,words'] — Split configuration
- * @param {number} [stagger=0.025] — Stagger delay between tokens in seconds
- * @param {number} [duration=0.8] — Tween duration in seconds
- * @param {number} [delay=0] — Additional delay in seconds before animation begins
- * @param {boolean} [scrollTrigger=true] — Whether animation is triggered on scroll entry
- * @param {string} [start='top 88%'] — ScrollTrigger start position
- * @param {string} [className=''] — Additional CSS class names
- * @param {React.CSSProperties} [style={}] — Inline styles
+ * Preserves a clean, unbroken accessible text node for screen readers, crawlers,
+ * and agentic accessibility trees while animating an aria-hidden visual clone.
  */
 export const KineticHeadline = ({
   children,
@@ -36,7 +25,7 @@ export const KineticHeadline = ({
   style = {},
   ...props
 }) => {
-  const containerRef = useRef(null);
+  const visualRef = useRef(null);
   const [reducedMotion, setReducedMotion] = useState(false);
 
   useEffect(() => {
@@ -49,10 +38,9 @@ export const KineticHeadline = ({
 
   useGSAP(
     () => {
-      const el = containerRef.current;
+      const el = visualRef.current;
       if (!el || reducedMotion) return;
 
-      // Extract raw text or verify element is splittable
       const text = el.innerText || el.textContent;
       if (!text || text.trim().length === 0) return;
 
@@ -60,12 +48,13 @@ export const KineticHeadline = ({
       try {
         split = new SplitText(el, {
           type,
+          aria: 'none',
           charsClass: 'kinetic-char',
           wordsClass: 'kinetic-word',
           linesClass: 'kinetic-line',
         });
+        el.removeAttribute('aria-label');
       } catch {
-        // Fallback gracefully if splitting is prevented by DOM structure
         return;
       }
 
@@ -146,14 +135,14 @@ export const KineticHeadline = ({
         }
       };
     },
-    { scope: containerRef, dependencies: [children, variant, reducedMotion] }
+    { scope: visualRef, dependencies: [children, variant, reducedMotion] }
   );
 
   const Tag = tag;
+  const isPlainText = typeof children === 'string' || typeof children === 'number';
 
   return (
     <Tag
-      ref={containerRef}
       className={`kinetic-headline kinetic-headline--${variant} ${className}`}
       style={{
         display: tag === 'span' ? 'inline-block' : 'block',
@@ -161,7 +150,18 @@ export const KineticHeadline = ({
       }}
       {...props}
     >
-      {children}
+      {isPlainText ? (
+        <>
+          <span className="sr-only">{children}</span>
+          <span ref={visualRef} aria-hidden="true" style={{ display: 'inline' }}>
+            {children}
+          </span>
+        </>
+      ) : (
+        <span ref={visualRef} style={{ display: 'inline' }}>
+          {children}
+        </span>
+      )}
     </Tag>
   );
 };

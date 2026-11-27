@@ -80,11 +80,14 @@ const Navbar = () => {
       aria-label="Main navigation"
     >
       {/* ── Logo ── */}
-      <Link to="/" className="navbar__logo" aria-label={t('app_title')}>
+      <Link to="/" className="navbar__logo">
         <div className="navbar__logo-icon-wrap">
           <img
-            src={assetPath('/assets/soe-official-logo.webp')}
-            alt="The Sound of Essentials Official Logo"
+            src={assetPath('/assets/soe-official-logo-96.webp')}
+            alt=""
+            aria-hidden="true"
+            width="40"
+            height="40"
             className="navbar__logo-img"
           />
           <div className="navbar__logo-sparkle" aria-hidden="true">
@@ -96,6 +99,7 @@ const Navbar = () => {
           <span className="navbar__logo-sub">A Musical Learning Experience</span>
           <span className="navbar__logo-shine" aria-hidden="true" />
         </span>
+        <span className="sr-only">The Sound of Essentials</span>
       </Link>
 
       {/* ── Desktop center links ── */}
@@ -136,7 +140,7 @@ const Navbar = () => {
             type="button"
             className="navbar__lang-btn"
             onClick={() => setLangOpen(!langOpen)}
-            aria-label={t('navbar.toggle_lang', 'Select Language')}
+            aria-label={`${currentLangObj.short} — ${t('navbar.toggle_lang', 'Select Language')}`}
             aria-expanded={langOpen}
           >
             <span className="navbar__lang-flag">{currentLangObj.flag}</span>
@@ -226,6 +230,8 @@ const Navbar = () => {
           display: flex;
           align-items: center;
           gap: 0.55rem;
+          min-height: 44px;
+          min-width: 44px;
           text-decoration: none;
           flex-shrink: 0;
         }
@@ -348,6 +354,7 @@ const Navbar = () => {
         .navbar__link {
           display: inline-flex;
           align-items: center;
+          min-height: 44px;
           gap: 0.35rem;
           font-family: var(--font-display);
           font-weight: 600;
@@ -707,6 +714,7 @@ const Navbar = () => {
         .navbar__lang-btn {
           display: inline-flex;
           align-items: center;
+          min-height: 44px;
           gap: 0.4rem;
           padding: 0.45rem 0.85rem;
           background: rgba(255, 255, 255, 0.85);
