@@ -1,6 +1,6 @@
 /**
  * Cloudflare Pages Function: /api/tactile/order
- * SOE Cloud Academy & Direct Stripe -> Slant 3D REST API Print-on-Demand Bridge.
+ * SOE Cloud Academy & Direct Square -> Slant 3D REST API Print-on-Demand Bridge.
  * Captures verified physical shipping addresses (legally unlocking $14.99/mo The Rhythm Pass)
  * with $0 upfront manufacturing inventory (Made in the land of America).
  */
@@ -151,15 +151,17 @@ export async function onRequestPost(context) {
         customer_name = '',
         customer_email = '',
         shipping_address = {},
+        payment_id = '',
         payment_intent_id = '',
         stl_url = `https://soelearn.com/cad/${sku.toLowerCase()}.stl`,
         color = 'Orange',
         quantity = 1,
       } = body;
 
-      if (!payment_intent_id || !shipping_address?.address_line_1 || !shipping_address?.postal_code) {
+      const verifiedPaymentId = payment_id || payment_intent_id;
+      if (!verifiedPaymentId || !shipping_address?.address_line_1 || !shipping_address?.postal_code) {
         return jsonResponse(
-          { error: 'Direct Stripe payment_intent_id and verified shipping_address are required to unlock physical fulfillment.' },
+          { error: 'Direct Square payment_id (or payment_intent_id) and verified shipping_address are required to unlock physical fulfillment.' },
           400
         );
       }

@@ -6,6 +6,8 @@
     { "source": "/universe", "destination": "/heroes", "permanent": true },
     { "source": "/characters", "destination": "/heroes", "permanent": true },
     { "source": "/media", "destination": "/listen", "permanent": true },
+    { "source": "/seriphia-signal", "destination": "/signal", "permanent": true },
+    { "source": "/distress-call", "destination": "/signal", "permanent": true },
     { "source": "/starter-pack", "destination": "/listen", "permanent": true },
     { "source": "/qr", "destination": "/listen", "permanent": true },
     { "source": "/ritual", "destination": "/listen", "permanent": true },

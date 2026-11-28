@@ -21,6 +21,7 @@ const Science    = lazy(() => import('./pages/Science'));
 const RhythmQuestSale = lazy(() => import('./pages/RhythmQuestSale'));
 const HeadphonesSale = lazy(() => import('./pages/HeadphonesSale'));
 const Listen     = lazy(() => import('./pages/Listen'));
+const SeriphiaSignal = lazy(() => import('./pages/SeriphiaSignal'));
 const Player     = lazy(() => import('./pages/Player'));
 const OrderSuccess = lazy(() => import('./pages/OrderSuccess'));
 const Gallery    = lazy(() => import('./pages/Gallery'));
@@ -100,6 +101,9 @@ const App = () => {
                 <Route path="/mission"    element={<AnimatedPage><Mission /></AnimatedPage>} />
                 <Route path="/about"      element={<Navigate to="/mission" replace />} />
                 <Route path="/listen"     element={<AnimatedPage><Listen /></AnimatedPage>} />
+                <Route path="/signal"     element={<AnimatedPage><SeriphiaSignal /></AnimatedPage>} />
+                <Route path="/seriphia-signal" element={<Navigate to="/signal" replace />} />
+                <Route path="/distress-call"   element={<Navigate to="/signal" replace />} />
                 <Route path="/qr"         element={<Navigate to="/listen" replace />} />
                 <Route path="/ritual"     element={<Navigate to="/listen" replace />} />
                 <Route path="/join"       element={<AnimatedPage><JoinQuest /></AnimatedPage>} />

@@ -6,22 +6,23 @@ try:
         PROJECT_NAME: str = "SOE Market Campaign Launch System"
         BASE_DOMAIN: str = "https://soelearn.com"
         
-        # Meta API
+        # Meta API (Cooldown due to automation limits; kept paused)
         META_ACCESS_TOKEN: str = "mock_meta_token"
         META_AD_ACCOUNT_ID: str = "act_000000000"
         META_PIXEL_ID: str = "000000000000"
         META_PAGE_ID: str = "000000000000"
         META_API_VERSION: str = "v21.0"
-        
+        META_AUTOMATION_STATUS: str = "PAUSED_AUTOMATION_COOLDOWN"
+
         # Stripe
         STRIPE_SECRET_KEY: str = "sk_test_mock"
         STRIPE_WEBHOOK_SECRET: str = "whsec_mock"
-        
+
         # Brevo CRM
         BREVO_API_KEY: str = "xkeysib-mock"
         BREVO_SENDER_EMAIL: str = "info@soelearn.com"
         BREVO_SENDER_NAME: str = "The Sound of Essentials"
-        
+
         # AI Creative Providers
         GEMINI_API_KEY: str = "mock_gemini_key"
         FAL_KEY: str = "mock_fal_key"
@@ -31,6 +32,21 @@ try:
         PINTEREST_AD_ACCOUNT_ID: str = "000000000000"
         PINTEREST_TAG_ID: str = "000000000000"
         PINTEREST_API_VERSION: str = "v5"
+
+        # Google Ads API
+        GOOGLE_ADS_CUSTOMER_ID: str = "000-000-0000"
+        GOOGLE_ADS_DEVELOPER_TOKEN: str = "mock_google_dev_token"
+        GOOGLE_ADS_CONVERSION_ID: str = ""
+
+        # X.com Ads & AT Protocol
+        X_ADS_ACCOUNT_ID: str = "mock_x_ads_acct"
+        X_BEARER_TOKEN: str = "mock_x_bearer_token"
+        ATPROTO_HANDLE: str = ""
+        ATPROTO_APP_PASSWORD: str = ""
+
+        # Reddit Ads API v3
+        REDDIT_AD_ACCOUNT_ID: str = "mock_reddit_acct"
+        REDDIT_ACCESS_TOKEN: str = "mock_reddit_token"
 
         model_config = SettingsConfigDict(env_file=".env", extra="ignore")
 
@@ -45,6 +61,7 @@ except ImportError:
         META_PIXEL_ID: str = os.getenv("META_PIXEL_ID", "000000000000")
         META_PAGE_ID: str = os.getenv("META_PAGE_ID", "000000000000")
         META_API_VERSION: str = os.getenv("META_API_VERSION", "v21.0")
+        META_AUTOMATION_STATUS: str = os.getenv("META_AUTOMATION_STATUS", "PAUSED_AUTOMATION_COOLDOWN")
         STRIPE_SECRET_KEY: str = os.getenv("STRIPE_SECRET_KEY", "sk_test_mock")
         STRIPE_WEBHOOK_SECRET: str = os.getenv("STRIPE_WEBHOOK_SECRET", "whsec_mock")
         BREVO_API_KEY: str = os.getenv("BREVO_API_KEY", "xkeysib-mock")
@@ -56,5 +73,14 @@ except ImportError:
         PINTEREST_AD_ACCOUNT_ID: str = os.getenv("PINTEREST_AD_ACCOUNT_ID", "000000000000")
         PINTEREST_TAG_ID: str = os.getenv("PINTEREST_TAG_ID", "000000000000")
         PINTEREST_API_VERSION: str = os.getenv("PINTEREST_API_VERSION", "v5")
+        GOOGLE_ADS_CUSTOMER_ID: str = os.getenv("GOOGLE_ADS_CUSTOMER_ID", "000-000-0000")
+        GOOGLE_ADS_DEVELOPER_TOKEN: str = os.getenv("GOOGLE_ADS_DEVELOPER_TOKEN", "mock_google_dev_token")
+        GOOGLE_ADS_CONVERSION_ID: str = os.getenv("GOOGLE_ADS_CONVERSION_ID", "")
+        X_ADS_ACCOUNT_ID: str = os.getenv("X_ADS_ACCOUNT_ID", "mock_x_ads_acct")
+        X_BEARER_TOKEN: str = os.getenv("X_BEARER_TOKEN", "mock_x_bearer_token")
+        ATPROTO_HANDLE: str = os.getenv("ATPROTO_HANDLE", "")
+        ATPROTO_APP_PASSWORD: str = os.getenv("ATPROTO_APP_PASSWORD", "")
+        REDDIT_AD_ACCOUNT_ID: str = os.getenv("REDDIT_AD_ACCOUNT_ID", "mock_reddit_acct")
+        REDDIT_ACCESS_TOKEN: str = os.getenv("REDDIT_ACCESS_TOKEN", "mock_reddit_token")
 
     settings = FallbackSettings()

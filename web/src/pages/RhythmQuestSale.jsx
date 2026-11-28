@@ -6,7 +6,8 @@ import heroesData from '../data/heroes.json';
 import { assetPath } from '../utils/assetPath';
 import ProofInThePause from '../components/ui/ProofInThePause';
 import StickyThumbCta from '../components/ui/StickyThumbCta';
-import { trackInitiateCheckout, appendUtmsToUrl } from '../utils/analytics';
+import { trackInitiateCheckout } from '../utils/analytics';
+import { useSquareCheckoutAction } from '../utils/checkout';
 import ConciergeBadge from '../components/ConciergeBadge';
 import KineticHeadline from '../components/KineticHeadline';
 import PDPQuestionChips from '../components/PDPQuestionChips';
@@ -16,38 +17,41 @@ import { productsSchema, faqSchema } from '../utils/schema';
 import './RhythmQuestSale.css';
 
 /**
- * Stripe Payment Links for The Rhythm Ready Workbook:
+ * Square Checkout actions for The Rhythm Ready Workbook:
  * - $21 Digital Download
  * - $45 Physical Print-on-Demand (POD via Lulu with Free US Shipping)
  */
-const CHECKOUT_DIGITAL_URL = 'https://buy.stripe.com/test_eVqbJ18xKcktbsOfjc6Vq02';
-const CHECKOUT_PRINT_URL = 'https://buy.stripe.com/test_3cI9ATeW8dox2Wi0oi6Vq03';
-
-/** The page's primary buy control. Supports digital ($21) and physical print ($45). */
 const RqBuyLink = ({ className = '', format = 'digital', children, onClick }) => {
-  const targetUrl = format === 'print' ? CHECKOUT_PRINT_URL : CHECKOUT_DIGITAL_URL;
-  const checkoutUrlWithUtms = useMemo(() => appendUtmsToUrl(targetUrl), [targetUrl]);
-  const isAbsolute = /^https?:\/\//i.test(targetUrl);
+  const handle = format === 'print' ? 'rhythm-ready-workbook-print' : 'rhythm-ready-workbook-digital';
+  const { href, notice, handleClick: launchSquare } = useSquareCheckoutAction({
+    handle,
+    onTrack: () => {
+      trackInitiateCheckout({
+        sku: format === 'print' ? 'SOE-RQ-WORKBOOK-PRT' : 'SOE-RQ-WORKBOOK-DIG',
+        name: format === 'print'
+          ? 'Rhythm Ready Workbook (Physical Print · $45 Free Shipping)'
+          : 'Rhythm Ready Workbook (Digital · $21)',
+        price: format === 'print' ? 45.00 : 21.00,
+      });
+    },
+  });
 
   const handleClick = (e) => {
-    trackInitiateCheckout({
-      sku: format === 'print' ? 'SOE-RQ-WORKBOOK-PRT' : 'SOE-RQ-WORKBOOK-DIG',
-      name: format === 'print'
-        ? 'Rhythm Ready Workbook (Physical Print · $45 Free Shipping)'
-        : 'Rhythm Ready Workbook (Digital · $21)',
-      price: format === 'print' ? 45.00 : 21.00,
-    });
     if (onClick) onClick(e);
+    launchSquare(e);
   };
 
-  return isAbsolute ? (
-    <a href={checkoutUrlWithUtms} rel="noopener" className={className} onClick={handleClick}>
-      {children}
-    </a>
-  ) : (
-    <Link to={checkoutUrlWithUtms} className={className} onClick={handleClick}>
-      {children}
-    </Link>
+  return (
+    <>
+      <a href={href} rel="noopener" className={className} onClick={handleClick}>
+        {children}
+      </a>
+      {notice && (
+        <p role="status" style={{ fontSize: '0.82rem', color: '#B45309', marginTop: '0.5rem' }}>
+          {notice}
+        </p>
+      )}
+    </>
   );
 };
 
@@ -995,13 +999,15 @@ const RhythmReadyOffer = () => {
    DICTIONARY RESERVE OFFER COMPONENT
    ═══════════════════════════════════════════════════════════════ */
 const DictionaryReserveOffer = () => {
-  const handleDictCheckout = () => {
-    trackInitiateCheckout({
-      sku: 'SOE-DICTIONARY',
-      name: 'Essential Picture Dictionary ($55 Reserve Your Copy)',
-      price: 55.00,
-    });
-  };
+  const dictCheckout = useSquareCheckoutAction({
+    handle: 'essential-picture-dictionary-presale',
+    onTrack: () =>
+      trackInitiateCheckout({
+        sku: 'SOE-DICTIONARY',
+        name: 'Essential Picture Dictionary ($55 Reserve Your Copy)',
+        price: 55.00,
+      }),
+  });
 
   return (
     <section className="rq-offer-section rq-dict-section section" id="dictionary-presale">
@@ -1092,14 +1098,20 @@ const DictionaryReserveOffer = () => {
               </p>
 
               <a
-                href="https://buy.stripe.com/test_14AfZhcO02JT40m9YS6Vq06"
+                href={dictCheckout.href}
                 rel="noopener"
                 className="btn btn-gold btn-shimmer rq-offer__buy"
-                onClick={handleDictCheckout}
+                onClick={dictCheckout.handleClick}
+                aria-busy={dictCheckout.isLaunching}
               >
-                <span>Reserve Your Copy</span>
+                <span>{dictCheckout.isLaunching ? 'Opening Square Checkout...' : 'Reserve Your Copy'}</span>
                 <span className="rq-offer__buy-price">$55</span>
               </a>
+              {dictCheckout.notice && (
+                <p role="status" style={{ fontSize: '0.82rem', color: '#B45309', marginTop: '0.5rem' }}>
+                  {dictCheckout.notice}
+                </p>
+              )}
 
               <p className="rq-offer__nudge">Priority fulfillment queue · Reserved digital edition.</p>
 

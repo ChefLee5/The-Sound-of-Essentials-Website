@@ -19,6 +19,7 @@ import StickyThumbCta from '../components/ui/StickyThumbCta';
 import EmailDownloadGateModal from '../components/EmailDownloadGateModal';
 import { GiftALandModal } from '../components/GiftALandModal';
 import { trackLead, trackInitiateCheckout } from '../utils/analytics';
+import { useSquareCheckoutAction } from '../utils/checkout';
 import { submitSoeInterest } from '../services/soeSubmissions';
 import { isGateUnlocked, setGateUnlocked, getCapturedEmail, isValidEmail } from '../utils/gateAuth';
 import KineticMusicalAccent from '../components/ui/KineticMusicalAccent';
@@ -27,8 +28,6 @@ import PDPQuestionChips from '../components/PDPQuestionChips';
 import { usePageMeta } from '../hooks/usePageMeta';
 import './MediaRoom.css';
 import './Listen.css';
-
-const STRIPE_STARTER_PACK_URL = 'https://buy.stripe.com/test_8x2aEXbJW0BLcwS0oi6Vq01';
 
 const Listen = () => {
   const { t } = useTranslation();
@@ -126,6 +125,11 @@ const Listen = () => {
     });
   };
 
+  const starterPackCheckout = useSquareCheckoutAction({
+    handle: 'quest-starter-pack',
+    onTrack: handleStarterPackClick,
+  });
+
   const handleCopyShareLink = () => {
     try {
       const url = typeof window !== 'undefined' ? `${window.location.origin}/listen` : 'https://thesoundofessentials.com/listen';
@@ -205,9 +209,10 @@ const Listen = () => {
       price: '$7',
       name: 'Quest Starter & Coloring Pack',
       desc: '40-page printable coloring book plus a 432Hz bedtime calming track.',
-      cta: 'Get Starter Pack →',
-      href: STRIPE_STARTER_PACK_URL,
-      onClick: handleStarterPackClick,
+      cta: starterPackCheckout.isLaunching ? 'Opening Square...' : 'Get Starter Pack →',
+      href: starterPackCheckout.href,
+      onClick: starterPackCheckout.handleClick,
+      notice: starterPackCheckout.notice,
     },
     {
       id: 'companion-storybook',
@@ -247,12 +252,15 @@ const Listen = () => {
         <a
           key={item.id}
           href={item.href}
-          target="_blank"
-          rel="noopener noreferrer"
           onClick={item.onClick}
           className="listen-peripheral-card"
         >
           {content}
+          {item.notice && (
+            <span role="status" style={{ display: 'block', fontSize: '0.78rem', color: '#B45309', marginTop: '0.45rem' }}>
+              {item.notice}
+            </span>
+          )}
         </a>
       );
     }

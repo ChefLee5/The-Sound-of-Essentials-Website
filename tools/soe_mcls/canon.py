@@ -17,6 +17,29 @@ PRODUCTION_CAMPAIGNS = {
     "VICTORY_GARDEN": "Victory Garden",
 }
 
+SIGNAL_CAMPAIGNS = {
+    "SERIPHIA_SIGNAL": "The Seriphia Signal",
+}
+
+ALL_CAMPAIGNS = {
+    **PRODUCTION_CAMPAIGNS,
+    **SIGNAL_CAMPAIGNS,
+}
+
+ACTIVE_AD_CHANNEL_SPLIT = {
+    "GOOGLE": 0.40,
+    "PINTEREST": 0.25,
+    "X": 0.20,
+    "REDDIT": 0.15,
+}
+
+CHANNEL_MAX_LEAD_CPA = {
+    "PINTEREST": 1.80,
+    "GOOGLE": 2.50,
+    "X": 2.25,
+    "REDDIT": 2.25,
+}
+
 PRODUCT_LADDER: Dict[str, Dict[str, Any]] = {
     "FREE_ALBUM": {
         "sku": "soe_free_19_album",

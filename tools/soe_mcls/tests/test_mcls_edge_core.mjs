@@ -186,3 +186,52 @@ test('Edge /api/mcls/dispatch supports foreman_compile and webhook_trigger dry m
   assert.equal(dispatchBody.draft.unit_key, 'MCLS-CONCORD');
   assert.equal(dispatchBody.draft.canon_status, 'PASS');
 });
+
+test('Adversarial preflight allows canonical /signal + x402 Web3 protocols and blocks Star Wars IP', () => {
+  const web3Allowed = runAdversarialPreflightReview('MCLS-PRIME', {
+    title: 'Activate Seriphia Signal with x402, ERC-8004, WebMCP, and Base USDC rails',
+    summary: 'Agentic website dispatch for Ages 2–7 curriculum via Education Concord',
+    target_destination: '/signal',
+    payload: { protocol: 'x402' },
+  });
+  assert.equal(web3Allowed.passed, true);
+  assert.equal(web3Allowed.verdict, 'PASS');
+
+  const ipBlocked = verifyCanonCompliance('Princess Leia Star Wars distress hologram');
+  assert.equal(ipBlocked.passed, false);
+  assert.equal(ipBlocked.status, 'BLOCKED');
+});
+
+test('Multi-channel MCLS core supports Pinterest $1.80 CPA guardrail and Seriphia Signal routing', () => {
+  const res = evaluateRhythmGuardian([
+    {
+      ad_id: 'pin_tight',
+      channel: 'PINTEREST',
+      engine_type: 'ENGINE_A_VALUE_GATE',
+      spend: 20,
+      leads: 10,
+      ctr: 0.5,
+      current_budget_cents: 1500,
+    },
+    {
+      ad_id: 'x_win',
+      channel: 'X',
+      engine_type: 'ENGINE_A_VALUE_GATE',
+      spend: 18,
+      leads: 9,
+      ctr: 1.9,
+      current_budget_cents: 1000,
+    },
+  ]);
+  assert.equal(res.decisions.pin_tight.action, 'PAUSE');
+  assert.equal(res.decisions.x_win.action, 'SCALE_BUDGET');
+
+  const signalBundle = buildAdBundle({
+    campaign: 'SERIPHIA_SIGNAL',
+    channel: 'reddit',
+    delta: 'SCREEN_VS_SENSORY',
+  });
+  assert.match(signalBundle.ad_variant.destination_url, /^https:\/\/soelearn\.com\/signal\?utm_source=reddit/);
+});
+
+

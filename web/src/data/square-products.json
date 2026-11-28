@@ -1,0 +1,123 @@
+{
+  "sound-of-essentials-rhythm-quest-storybook": {
+    "productKey": "rhythm-quest-storybook",
+    "sku": "SOE-RQ-EBOOK",
+    "name": "The Sound of Essentials: Rhythm Quest (Storybook)",
+    "price": 19,
+    "priceCents": 1900,
+    "type": "one_time",
+    "collectShipping": false,
+    "squareItemId": "",
+    "squareVariationId": "",
+    "url": ""
+  },
+  "quest-starter-pack": {
+    "productKey": "coloring-book",
+    "sku": "SOE-STARTER-PACK",
+    "name": "The Quest Starter & Coloring Pack: 40-Page Coloring Book, 432Hz Reset Track & Transition Kit",
+    "price": 7,
+    "priceCents": 700,
+    "type": "one_time",
+    "collectShipping": false,
+    "squareItemId": "",
+    "squareVariationId": "",
+    "url": ""
+  },
+  "rhythm-ready-workbook-digital": {
+    "productKey": "rhythm-ready-workbook",
+    "sku": "SOE-RR-DIGITAL",
+    "name": "SOE Rhythm Quest: Rhythm Ready Workbook (Digital)",
+    "price": 21,
+    "priceCents": 2100,
+    "type": "one_time",
+    "collectShipping": false,
+    "squareItemId": "",
+    "squareVariationId": "",
+    "url": ""
+  },
+  "rhythm-ready-workbook-print": {
+    "productKey": "rhythm-ready-workbook",
+    "sku": "SOE-RR-PRINT",
+    "name": "SOE Rhythm Quest: Rhythm Ready Workbook (Physical Print)",
+    "price": 45,
+    "priceCents": 4500,
+    "type": "one_time",
+    "collectShipping": true,
+    "squareItemId": "",
+    "squareVariationId": "",
+    "url": ""
+  },
+  "complete-quest-pack": {
+    "productKey": "full-quest-bundle",
+    "sku": "SOE-QUEST-PACK",
+    "name": "The Complete Quest Pack",
+    "price": 49,
+    "priceCents": 4900,
+    "type": "one_time",
+    "collectShipping": false,
+    "squareItemId": "",
+    "squareVariationId": "",
+    "url": ""
+  },
+  "the-rhythm-pass": {
+    "productKey": "rhythm-quest-storybook",
+    "sku": "SOE-RHYTHM-PASS",
+    "name": "The Rhythm Pass (Monthly Membership)",
+    "price": 14.99,
+    "priceCents": 1499,
+    "type": "recurring",
+    "collectShipping": true,
+    "squareItemId": "",
+    "squareVariationId": "",
+    "squareSubscriptionPlanId": "",
+    "url": ""
+  },
+  "essential-picture-dictionary-presale": {
+    "productKey": "picture-dictionary",
+    "sku": "SOE-DICT-PRESALE",
+    "name": "SOE Rhythm Quest: Essential Picture Dictionary (Reserve Your Copy)",
+    "price": 55,
+    "priceCents": 5500,
+    "type": "one_time",
+    "collectShipping": false,
+    "squareItemId": "",
+    "squareVariationId": "",
+    "url": ""
+  },
+  "soe-sensory-headphones": {
+    "productKey": "soe-sensory-headphones",
+    "sku": "SOE-HP-85DB",
+    "name": "AWATRUE HK05 Safe Sensory Kids Headphones (74/85dB Dual Limit)",
+    "price": 24.99,
+    "priceCents": 2499,
+    "type": "one_time",
+    "collectShipping": true,
+    "squareItemId": "",
+    "squareVariationId": "",
+    "url": ""
+  },
+  "soe-headphones-workbook-bundle": {
+    "productKey": "soe-headphones-workbook-bundle",
+    "sku": "SOE-HP-WB-BUNDLE",
+    "name": "SOE Sensory Listening & Workbook Bundle (Headphones + 8-Week Workbook)",
+    "price": 39,
+    "priceCents": 3900,
+    "type": "one_time",
+    "collectShipping": true,
+    "squareItemId": "",
+    "squareVariationId": "",
+    "url": ""
+  },
+  "soe-philanthropic-donation": {
+    "productKey": "rhythm-quest-storybook",
+    "sku": "SOE-PHILANTHROPY-MISSION",
+    "name": "SOE Mission: Philanthropic Early Learning Donation",
+    "price": "custom",
+    "priceCents": 5000,
+    "type": "donation",
+    "collectShipping": false,
+    "squareItemId": "",
+    "squareVariationId": "",
+    "url": ""
+  }
+}

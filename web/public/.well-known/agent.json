@@ -1,0 +1,66 @@
+{
+  "name": "Seriphia — The Sound of Essentials Sovereign Guide",
+  "description": "Agent-to-Agent (A2A) discovery card for The Sound of Essentials: Rhythm Quest — a screen-free, music-driven early childhood curriculum for ages 2–7 across 7 Lands and 15 Hero Mentors.",
+  "url": "https://thesoundofessentials.com",
+  "version": "2.0.0",
+  "provider": {
+    "organization": "The Sound of Essentials",
+    "url": "https://thesoundofessentials.com",
+    "supportEmail": "info@soelearn.com"
+  },
+  "documentationUrl": "https://thesoundofessentials.com/llms-full.txt",
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false,
+    "stateTransitionHistory": true,
+    "webMcp": true,
+    "x402Payments": true,
+    "erc8004Provenance": true
+  },
+  "endpoints": {
+    "mcpBridge": "https://thesoundofessentials.com/api/mcls/bridge",
+    "x402Catalog": "https://thesoundofessentials.com/api/agent/catalog",
+    "x402Purchase": "https://thesoundofessentials.com/api/agent/purchase",
+    "farcasterFrame": "https://thesoundofessentials.com/api/frames/signal",
+    "erc8004Registration": "https://thesoundofessentials.com/.well-known/erc8004.json",
+    "signalLanding": "https://thesoundofessentials.com/signal",
+    "qrResolverDomain": "https://soelearn.com"
+  },
+  "defaultInputModes": ["text/plain", "application/json"],
+  "defaultOutputModes": ["text/plain", "application/json"],
+  "skills": [
+    {
+      "id": "seriphia_recommend_pathway",
+      "name": "Recommend Ages 2–7 Learning Pathway",
+      "description": "Maps a child age (2–7) and developmental focus (phonics, numeracy, motor, sensory regulation, bilingual, or pod classroom) to the matching SOE Land, Hero Mentors, studio track, and printable field guide.",
+      "tags": ["ages-2-7", "early-childhood", "phonics", "sensory-regulation"],
+      "examples": [
+        "Recommend a 10-minute screen-free phonics and sensory reset for a 4-year-old."
+      ]
+    },
+    {
+      "id": "seriphia_unlock_free_signal",
+      "name": "Unlock Free 19-Track Acoustic Signal ($0)",
+      "description": "Submits a parent or educator email to unlock all 19 master studio recordings (60–110 BPM) and three printable screen-free guides via /api/submit.",
+      "tags": ["lead-magnet", "free-signal", "audio", "printables"]
+    },
+    {
+      "id": "seriphia_crosswalk_standards",
+      "name": "Early Childhood Standards Crosswalk",
+      "description": "Matches SOE 7-Land rituals and 400 workbook blocks to Head Start ELOF, NAEYC, WHO under-5 screen guidelines, Singapore Grow Well SG, India IAP, and Caribbean ECC frameworks.",
+      "tags": ["elof", "naeyc", "institutions", "micro-schools"]
+    },
+    {
+      "id": "seriphia_x402_digital_acquire",
+      "name": "Acquire Digital Curriculum via x402 (Base USDC)",
+      "description": "Discovers and settles instant digital SKUs ($7 Starter Pack, $9 Heritage Packs, $19 Storybook, $21 Digital Workbook, $29 Educator 4-Stem Pack, $49 Complete Quest Pack, $55 Picture Dictionary reservation) via HTTP 402.",
+      "tags": ["x402", "base-usdc", "digital-delivery"]
+    },
+    {
+      "id": "seriphia_generate_referral_link",
+      "name": "Share the Sound Referral Link Generator",
+      "description": "Builds canonical soelearn.com/signal?ref=<code> links for the 30%–35% Share the Sound Ambassador loop.",
+      "tags": ["referral", "education-concord", "soelearn"]
+    }
+  ]
+}

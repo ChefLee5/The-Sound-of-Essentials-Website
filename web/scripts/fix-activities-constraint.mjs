@@ -9,7 +9,7 @@ async function fixConstraint() {
   const host = urlObj.host;
   const neonHttpEndpoint = `https://${host}/sql`;
 
-  const sql = `ALTER TABLE crm_activities ADD CONSTRAINT crm_activities_activity_type_check CHECK (activity_type IN ('album_unlock', 'form_submit', 'shopify_order', 'stripe_order', 'stripe_checkout', 'quest_milestone', 'admin_note', 'note', 'email_sent', 'email_outreach', 'call_log', 'call', 'meeting', 'task_complete'));`;
+  const sql = `ALTER TABLE crm_activities DROP CONSTRAINT IF EXISTS crm_activities_activity_type_check; ALTER TABLE crm_activities ADD CONSTRAINT crm_activities_activity_type_check CHECK (activity_type IN ('album_unlock', 'form_submit', 'shopify_order', 'stripe_order', 'stripe_checkout', 'square_order', 'square_checkout', 'quest_milestone', 'admin_note', 'note', 'email_sent', 'email_outreach', 'call_log', 'call', 'meeting', 'task_complete'));`;
 
   console.log('Adding expanded crm_activities_activity_type_check constraint...');
   const response = await fetch(neonHttpEndpoint, {

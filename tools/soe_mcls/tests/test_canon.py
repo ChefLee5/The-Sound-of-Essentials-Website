@@ -34,3 +34,19 @@ def test_three_layer_ad_validation():
     invalid_ad = {"layer_1_ache": "Buy now", "layer_2_solution": "", "layer_3_invitation": "Click"}
     with pytest.raises(ValueError, match="violates the SOE 3-Layer Rule"):
         validate_three_layer_ad(invalid_ad)
+
+
+def test_signal_campaigns_and_channel_split():
+    from soe_mcls.canon import (
+        SIGNAL_CAMPAIGNS,
+        ALL_CAMPAIGNS,
+        ACTIVE_AD_CHANNEL_SPLIT,
+        CHANNEL_MAX_LEAD_CPA,
+    )
+
+    assert SIGNAL_CAMPAIGNS["SERIPHIA_SIGNAL"] == "The Seriphia Signal"
+    assert "SERIPHIA_SIGNAL" in ALL_CAMPAIGNS
+    assert abs(sum(ACTIVE_AD_CHANNEL_SPLIT.values()) - 1.0) < 1e-9
+    assert ACTIVE_AD_CHANNEL_SPLIT["GOOGLE"] == 0.40
+    assert CHANNEL_MAX_LEAD_CPA["PINTEREST"] == 1.80
+

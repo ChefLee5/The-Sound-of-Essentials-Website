@@ -34,7 +34,7 @@ dlv_names = [
     "cta_text", "cta_location", "cta_url",
     "track_id", "track_title",
     "item_name", "item_id", "value", "currency", "ecommerce",
-    "utm_source", "utm_medium", "utm_campaign"
+    "utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content"
 ]
 
 variables = []

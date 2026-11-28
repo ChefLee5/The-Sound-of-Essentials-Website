@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The 5 Neural Pathways Built in Rhythm Quest | Ages 2–7 Field Guide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-cream: #FFF8F0;
+      --card-white: #FFFFFF;
+      --brand-orange: #FF6F00;
+      --brand-orange-soft: #FFF0E0;
+      --terrasol-green: #5fb685;
+      --terrasol-soft: #ECFDF5;
+      --aquaria-blue: #5ba4c9;
+      --aquaria-soft: #EFF8FC;
+      --harmonia-gold: #d4a843;
+      --vitalis-clay: #c4785a;
+      --celestia-plum: #9678c4;
+      --text-dark: #1F2937;
+      --text-muted: #4B5563;
+      --border-warm: #F3E5D8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg-cream);
+      color: var(--text-dark);
+      line-height: 1.55;
+      padding: 24px 16px 48px;
+    }
+
+    h1, h2, h3, .pill-badge, .btn-pill {
+      font-family: 'Fredoka', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    .toolbar {
+      max-width: 880px;
+      margin: 0 auto 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 22px;
+      border-radius: 50px;
+      font-size: 14.5px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .btn-pill:hover {
+      transform: translateY(-1px);
+    }
+
+    .btn-orange {
+      background-color: var(--brand-orange);
+      color: #FFFFFF;
+      box-shadow: 0 4px 14px rgba(255, 111, 0, 0.28);
+    }
+
+    .btn-outline {
+      background-color: var(--card-white);
+      color: var(--text-dark);
+      border: 2px solid var(--border-warm);
+    }
+
+    .sheet {
+      max-width: 880px;
+      margin: 0 auto;
+      background: var(--card-white);
+      border-radius: 24px;
+      border: 2px solid var(--border-warm);
+      box-shadow: 0 12px 32px rgba(31, 41, 55, 0.06);
+      overflow: hidden;
+    }
+
+    .sheet-header {
+      background: linear-gradient(135deg, #FF6F00 0%, #FF8F00 100%);
+      color: #FFFFFF;
+      padding: 28px 32px;
+    }
+
+    .header-pills {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .pill-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 14px;
+      border-radius: 50px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+    }
+
+    .pill-frosted {
+      background: rgba(255, 255, 255, 0.22);
+      color: #FFFFFF;
+    }
+
+    .pill-green {
+      background: var(--terrasol-green);
+      color: #FFFFFF;
+    }
+
+    .sheet-title {
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 6px;
+    }
+
+    .sheet-subtitle {
+      font-size: 14.5px;
+      opacity: 0.96;
+      font-weight: 500;
+    }
+
+    .sheet-body {
+      padding: 28px 32px;
+    }
+
+    .section {
+      margin-bottom: 24px;
+    }
+
+    .section:last-child {
+      margin-bottom: 0;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 16.5px;
+      font-weight: 700;
+      color: var(--brand-orange);
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      margin-bottom: 10px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid var(--bg-cream);
+    }
+
+    .callout-box {
+      background: var(--brand-orange-soft);
+      border-left: 5px solid var(--brand-orange);
+      padding: 14px 18px;
+      border-radius: 0 14px 14px 0;
+      font-size: 14.5px;
+      color: #7C2D12;
+    }
+
+    .pathways-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    .pathway-card {
+      background: var(--bg-cream);
+      border: 1.5px solid var(--border-warm);
+      border-left-width: 6px;
+      border-radius: 16px;
+      padding: 14px 18px;
+    }
+
+    .pathway-card.harmonia { border-left-color: var(--harmonia-gold); }
+    .pathway-card.numeria  { border-left-color: #7fb685; }
+    .pathway-card.vitalis  { border-left-color: var(--vitalis-clay); }
+    .pathway-card.aquaria  { border-left-color: var(--aquaria-blue); }
+    .pathway-card.celestia { border-left-color: var(--celestia-plum); }
+
+    .pathway-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+
+    .pathway-head h3 {
+      font-size: 16.5px;
+      color: var(--text-dark);
+    }
+
+    .land-chip {
+      font-size: 12px;
+      font-weight: 700;
+      padding: 3px 11px;
+      border-radius: 50px;
+      background: #FFFFFF;
+      border: 1px solid var(--border-warm);
+      color: var(--text-dark);
+    }
+
+    .pathway-card p {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    .pathway-practice {
+      font-size: 13px;
+      color: var(--text-dark);
+      background: #FFFFFF;
+      border-radius: 10px;
+      padding: 8px 12px;
+      border: 1px solid var(--border-warm);
+    }
+
+    .protocol-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+    }
+
+    .protocol-step {
+      background: var(--aquaria-soft);
+      border: 1.5px solid #BAE6FD;
+      border-radius: 14px;
+      padding: 14px;
+      font-size: 13.5px;
+    }
+
+    .protocol-step strong {
+      display: block;
+      font-family: 'Fredoka', sans-serif;
+      font-size: 15px;
+      color: #0369A1;
+      margin-bottom: 4px;
+    }
+
+    .foundation-note {
+      background: var(--terrasol-soft);
+      border: 1.5px solid #A7F3D0;
+      border-radius: 14px;
+      padding: 14px 18px;
+      font-size: 13.5px;
+      color: #065F46;
+    }
+
+    .next-step-banner {
+      margin-top: 18px;
+      background: var(--bg-cream);
+      border: 2px dashed var(--brand-orange);
+      border-radius: 16px;
+      padding: 16px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .next-step-text {
+      font-size: 13.5px;
+      max-width: 560px;
+    }
+
+    .next-step-text strong {
+      color: var(--brand-orange);
+      font-size: 15px;
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .sheet-footer {
+      text-align: center;
+      font-size: 11.5px;
+      color: var(--text-muted);
+      padding: 16px 24px;
+      background: var(--bg-cream);
+      border-top: 1.5px solid var(--border-warm);
+      line-height: 1.6;
+    }
+
+    @media print {
+      body {
+        background: #FFFFFF;
+        padding: 0;
+      }
+      .toolbar {
+        display: none !important;
+      }
+      .sheet {
+        box-shadow: none;
+        border: 1px solid #D1D5DB;
+        max-width: 100%;
+        border-radius: 12px;
+      }
+      .sheet-header,
+      .callout-box,
+      .pathway-card,
+      .protocol-step,
+      .foundation-note,
+      .pill-badge {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      @page {
+        size: letter portrait;
+        margin: 1cm;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="toolbar">
+    <a href="/signal" class="btn-pill btn-outline">&larr; Back to The Seriphia Signal</a>
+    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+      <a href="/listen" class="btn-pill btn-outline">Stream Free 19-Track Album</a>
+      <button type="button" onclick="window.print()" class="btn-pill btn-orange">Print / Save Field Guide (PDF)</button>
+    </div>
+  </div>
+
+  <article class="sheet">
+    <header class="sheet-header">
+      <div class="header-pills">
+        <span class="pill-badge pill-frosted">The Seriphia Signal · Neuro-Parenting Field Guide</span>
+        <span class="pill-badge pill-green">Ages 2–7 · Screen-Free · 60–110 BPM</span>
+      </div>
+      <h1 class="sheet-title">The 5 Neural Pathways Built in Rhythm Quest</h1>
+      <p class="sheet-subtitle">
+        Applied Sound-Before-Symbol Architecture Across the 7 Lands · Guided by Seriphia and 14 Land Heroes
+      </p>
+    </header>
+
+    <main class="sheet-body">
+      <section class="section">
+        <h2 class="section-title">1. Why Sound Must Come Before Print Symbols (Ages 2–7)</h2>
+        <div class="callout-box">
+          <strong>Core Principle — Sound Before Symbol:</strong> Young brains decode speech rhythms and phonemes by ear long before eyes track printed letters. Fast-cut screen apps reward visual guessing and spike dopamine. The Sound of Essentials delivers <strong>19 master studio recordings with authentic human vocals and warm acoustic arrangements</strong> calibrated to steady 60–110 BPM tempos, wiring attention and phonemic precision without screen flicker.
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">2. The 5 Developmental Neural Pathways Across the 7 Lands</h2>
+        <div class="pathways-grid">
+          <div class="pathway-card harmonia">
+            <div class="pathway-head">
+              <h3>Pathway 1: Auditory Phonemic Decoding</h3>
+              <span class="land-chip">Harmonia · Kenji &amp; Aiko</span>
+            </div>
+            <p>Clear vocal phrasing and predictable meter train the ear to separate syllables, initial consonants, and vowel lengths before reading guessing habits form.</p>
+            <div class="pathway-practice">
+              <strong>Daily Anchor:</strong> Play Track 03 (<em>Alphabet Song Remix</em>) and clap once per syllable on everyday household words.
+            </div>
+          </div>
+
+          <div class="pathway-card numeria">
+            <div class="pathway-head">
+              <h3>Pathway 2: Spatial &amp; Proportional Reasoning</h3>
+              <span class="land-chip">Numeria · Kwame &amp; Octavia</span>
+            </div>
+            <p>Beat intervals, call-and-response counting, and rhythmic grouping link musical timing directly to number sense, geometric patterns, and working memory.</p>
+            <div class="pathway-practice">
+              <strong>Daily Anchor:</strong> Play Track 08 (<em>Numbers</em>) while stacking blocks or sorting household objects into beat groups.
+            </div>
+          </div>
+
+          <div class="pathway-card vitalis">
+            <div class="pathway-head">
+              <h3>Pathway 3: Bilateral Midline Motor Integration</h3>
+              <span class="land-chip">Vitalis · Felix &amp; Amara</span>
+            </div>
+            <p>Cross-body marches, left-to-right hand taps, and balanced reaching connect left and right brain hemispheres, supporting directional reading flow and steady pencil grip.</p>
+            <div class="pathway-practice">
+              <strong>Daily Anchor:</strong> Play Track 06 (<em>Let's Stretch</em>) or Track 07 (<em>Drill Time</em>) and tap left knee with right hand on the downbeat.
+            </div>
+          </div>
+
+          <div class="pathway-card aquaria">
+            <div class="pathway-head">
+              <h3>Pathway 4: Autonomic &amp; Emotional Co-Regulation</h3>
+              <span class="land-chip">Aquaria · Nerissa &amp; Ronan</span>
+            </div>
+            <p>Unhurried 60–80 BPM resting tempos and extended six-count exhales quiet nervous-system arousal after noisy transitions or screen fatigue.</p>
+            <div class="pathway-practice">
+              <strong>Daily Anchor:</strong> Play Track 14 (<em>The Ocean</em>) or Track 18 (<em>Rain</em>) during wind-down while tracing calm wave shapes on paper.
+            </div>
+          </div>
+
+          <div class="pathway-card celestia">
+            <div class="pathway-head">
+              <h3>Pathway 5: Temporal, Ecological &amp; Socratic Wonder</h3>
+              <span class="land-chip">Celestia, Terrasol &amp; Luminosity · Elias, Selene, Vesta, Silas, Athena &amp; Ezra</span>
+            </div>
+            <p>Narrative songs about days, seasons, weather, and community invite children to ask questions aloud instead of passively tapping answers.</p>
+            <div class="pathway-practice">
+              <strong>Daily Anchor:</strong> Play Track 02 (<em>Days of the Week</em>) or Track 12 (<em>Changes</em>) and ask one open "why" question together at breakfast.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">3. The 10-Minute Living Room Protocol</h2>
+        <div class="protocol-grid">
+          <div class="protocol-step">
+            <strong>Minutes 1–3 · Settle the Room</strong>
+            Put phones and tablets out of sight. Start a 60–80 BPM resting track and take three slow breaths together.
+          </div>
+          <div class="protocol-step">
+            <strong>Minutes 4–7 · Move &amp; Decode</strong>
+            Clap syllables, cross the midline, or trace lines on paper with crayons while vocals lead the pace.
+          </div>
+          <div class="protocol-step">
+            <strong>Minutes 8–10 · Socratic Spark</strong>
+            Ask your child to retell one image or sound from the song in their own words before moving to the next block.
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">4. Pedagogical Lineage &amp; Continue the Quest</h2>
+        <div class="foundation-note">
+          <strong>Established Foundations:</strong> Guided by <strong>Seriphia</strong>, The Sound of Essentials unites Dalcroze Eurhythmics (whole-body meter), Orff Schulwerk (speech rhythm and movement), and the Kod&aacute;ly Method (vocal ear training) across all 5 developmental domains for ages 2–7. <em>Staying on the path, always learning.</em>
+        </div>
+
+        <div class="next-step-banner">
+          <div class="next-step-text">
+            <strong>Turn Daily Songs Into a 40-Day Screen-Free Routine</strong>
+            Start with all 19 studio tracks free ($0) on <b>/signal</b> or <b>/listen</b>, add the $7 Quest Starter &amp; Coloring Pack, step into the $21 Digital / $45 Physical Print <em>Rhythm Ready Workbook</em>, or reserve your copy of the $55 <em>Essential Picture Dictionary</em> (4,000+ words across 125 scenes). Instant digital delivery, lifetime family access, and dedicated support.
+          </div>
+          <a href="/rhythm-ready" class="btn-pill btn-orange">Explore Workbook ($21 / $45) &rarr;</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="sheet-footer">
+      <div><strong>The Sound of Essentials Collective</strong> · Voiced by Seriphia · Crafted by a father's heart and a mother's love · Ages 2–7 (Pre-K to Grade 2) · <a href="/signal" style="color: #FF6F00; text-decoration: none;">thesoundofessentials.com/signal</a></div>
+      <div style="margin-top: 6px;">The Sound of Essentials (SOE) is an independent curriculum designed in alignment with publicly published early-childhood health and learning guidelines (including Head Start ELOF, NAEYC, WHO under-5 screen guidelines, AAP pediatric recommendations, Singapore Grow Well SG, India IAP, and Caribbean ECC pillars). Alignment reflects pedagogical design and does not imply formal endorsement, accreditation, or sponsorship by any government agency or intergovernmental body.</div>
+    </footer>
+  </article>
+
+</body>
+</html>

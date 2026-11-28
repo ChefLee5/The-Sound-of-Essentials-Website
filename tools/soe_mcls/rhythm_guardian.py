@@ -7,6 +7,14 @@ class RhythmGuardianOptimizer:
     - Demands strict short-term ROAS for Direct-to-Print Showcase (Engine B).
     """
 
+    CHANNEL_CPA_TARGETS = {
+        "PINTEREST": 1.80,
+        "GOOGLE": 2.50,
+        "X": 2.25,
+        "REDDIT": 2.25,
+        "META": 2.50,
+    }
+
     def __init__(
         self,
         max_lead_cpa_dollars: float = 2.50,
@@ -19,12 +27,21 @@ class RhythmGuardianOptimizer:
         self.min_spend = min_spend_for_decision_dollars
         self.scale_step = scale_step_ratio
 
+    def get_channel_allocation(self) -> Dict[str, Any]:
+        return {
+            "meta_status": "PAUSED_AUTOMATION_COOLDOWN",
+            "active_split": {"GOOGLE": 0.40, "PINTEREST": 0.25, "X": 0.20, "REDDIT": 0.15},
+            "max_lead_cpa_by_channel": self.CHANNEL_CPA_TARGETS,
+        }
+
     def evaluate_ads(self, ad_metrics: List[Dict[str, Any]]) -> Dict[str, Dict[str, Any]]:
         decisions: Dict[str, Dict[str, Any]] = {}
 
         for row in ad_metrics:
             ad_id = row["ad_id"]
             engine_type = row.get("engine_type", "ENGINE_A_VALUE_GATE")
+            channel = str(row.get("channel", "")).strip().upper()
+            channel_max_cpa = self.CHANNEL_CPA_TARGETS.get(channel, self.max_lead_cpa)
             spend = float(row.get("spend", 0.0))
             leads = int(row.get("leads", 0))
             purchases = int(row.get("purchases", 0))
@@ -38,7 +55,7 @@ class RhythmGuardianOptimizer:
                 }
                 continue
 
-            # Engine A: Top-of-Funnel Value Gate (/listen Free Album)
+            # Engine A: Top-of-Funnel Value Gate (/listen or /signal Free Album)
             if engine_type == "ENGINE_A_VALUE_GATE":
                 lead_cpa = (spend / leads) if leads > 0 else 999.0
                 if leads == 0 and spend >= (self.min_spend * 1.5):
@@ -46,17 +63,17 @@ class RhythmGuardianOptimizer:
                         "action": "PAUSE",
                         "reason": f"Engine A Stop-Loss: Spend=${spend:.2f} with 0 leads (CTR={ctr:.2f}%).",
                     }
-                elif lead_cpa > self.max_lead_cpa and ctr < self.min_ctr:
+                elif lead_cpa > channel_max_cpa and ctr < self.min_ctr:
                     decisions[ad_id] = {
                         "action": "PAUSE",
-                        "reason": f"Engine A Fatigue: Lead CPA=${lead_cpa:.2f} (target <= ${self.max_lead_cpa:.2f}), CTR={ctr:.2f}%.",
+                        "reason": f"Engine A Fatigue: Lead CPA=${lead_cpa:.2f} (target <= ${channel_max_cpa:.2f}), CTR={ctr:.2f}%.",
                     }
-                elif leads >= 5 and lead_cpa <= self.max_lead_cpa:
+                elif leads >= 5 and lead_cpa <= channel_max_cpa:
                     new_budget = int(round(current_budget * self.scale_step))
                     decisions[ad_id] = {
                         "action": "SCALE_BUDGET",
                         "new_budget_cents": new_budget,
-                        "reason": f"Engine A Winner: Lead CPA=${lead_cpa:.2f} <= ${self.max_lead_cpa:.2f}. Scaling +20%.",
+                        "reason": f"Engine A Winner: Lead CPA=${lead_cpa:.2f} <= ${channel_max_cpa:.2f}. Scaling +20%.",
                     }
                 else:
                     decisions[ad_id] = {
@@ -114,6 +131,7 @@ class RhythmGuardianOptimizer:
             (r"\bno\s+credit\s+card\s+required\b", "Billing rule violation: never claim 'no credit card required' (card vaulting active)."),
             (r"\bShopify\b", "Stack incompatibility: Shopify is retired; use direct soelearn.com Stripe funnel."),
             (r"\b4,?232\b", "Marketing copy rule: never use literal '4,232'; uniformly use '4,000+ words'."),
+            (r"\b(star\s*wars|princess\s*leia|obi[-\s]?wan|jedi|skywalker|lucasfilm)\b", "Canon IP rule: mythic signal is influence-only; never use Star Wars trademarks."),
         ]
         for pattern, msg in canon_checks:
             if re.search(pattern, combined_text, flags=re.IGNORECASE):
@@ -128,17 +146,18 @@ class RhythmGuardianOptimizer:
 
         # Gate 3: Anti-Shiny-Object & Funnel Focus Advisor
         valid_funnel_anchors = [
-            "/listen", "/workbook", "/rhythm-ready", "/dictionary-sale",
-            "/bundle", "/institutions", "/cloud-academy", "/tactile", "/qpc",
-            "school_pilot", "llms.txt", "brevo", "slant3d", "build123d",
+            "/listen", "/signal", "/downloads/", "/science", "/workbook", "/rhythm-ready",
+            "/dictionary-sale", "/bundle", "/institutions", "/cloud-academy", "/tactile",
+            "/qpc", "school_pilot", "llms.txt", "agent.json", "x402", "erc-8004",
+            "farcaster", "brevo", "slant3d", "build123d",
         ]
         if target_route and not any(anchor in target_route.lower() for anchor in valid_funnel_anchors):
             shiny_object_flags.append(
-                f"Off-funnel destination '{target_route}': proposals must route to /listen, /workbook, /dictionary-sale, /institutions, /cloud-academy, or llms.txt."
+                f"Off-funnel destination '{target_route}': proposals must route to /listen, /signal, /workbook, /dictionary-sale, /institutions, /cloud-academy, or llms.txt."
             )
 
         distraction_patterns = [
-            (r"\b(crypto|synthetic\s+stock|real\s+estate|trucking|dropship)\b", "Shiny Object Drift: unrelated venture keyword detected."),
+            (r"\b(memecoin|shitcoin|crypto\s*token|crypto\s*pump|synthetic\s+stock|real\s+estate|trucking|dropship)\b", "Shiny Object Drift: unrelated venture keyword detected."),
             (r"\b(linktree|multi-link)\b", "Conversion dilution: single-destination funnel routing required (Lesson #24)."),
         ]
         for pattern, msg in distraction_patterns:

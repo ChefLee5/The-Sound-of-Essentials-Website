@@ -181,8 +181,23 @@ export async function onRequestPost(context) {
       }
     } else if (card.action_type === 'meta_ad_bundle') {
       receipt.steps.push('Verified 3-Layer Cultural Delta copy against SOE Helix Gate 1 (Ages 2–7)');
-      receipt.steps.push('Dispatched Meta Graph API v21.0 bundle in PAUSED safety state');
+      receipt.steps.push('Recorded Meta Ads payload in PAUSED cooldown state (automation limits respected)');
       receipt.steps.push('Activated 90-Day Rhythm Guardian attribution tracking on destination URLs');
+    } else if (
+      [
+        'multichannel_signal_bundle',
+        'google_ad_bundle',
+        'pinterest_ad_bundle',
+        'x_ad_bundle',
+        'reddit_ad_bundle',
+      ].includes(card.action_type)
+    ) {
+      receipt.steps.push('Verified multi-channel Seriphia Signal copy against SOE Helix Gate 1 (Ages 2–7)');
+      receipt.steps.push('Staged 40% Google / 25% Pinterest / 20% X / 15% Reddit campaigns in PAUSED review state');
+      receipt.steps.push(`Synchronized UTM & Rhythm Guardian CPA guardrails toward ${card.target_destination}`);
+    } else if (card.action_type === 'web3_social_dispatch') {
+      receipt.steps.push('Verified Farcaster Frame v2 (/api/frames/signal) and AT Protocol post copy');
+      receipt.steps.push(`Logged protocol-native Seriphia Signal drop to ${card.target_destination}`);
     } else if (card.action_type === 'github_canon_pr' || card.action_type === 'geo_schema_patch' || card.action_type === 'geo_citation_audit') {
       receipt.steps.push('Verified public/llms.txt and JSON-LD schema compliance (Ages 2–7, 7 Lands, 19 Studio Tracks)');
       receipt.steps.push(`Committed canonical work order to MCLS repository ledger (${card.target_destination})`);

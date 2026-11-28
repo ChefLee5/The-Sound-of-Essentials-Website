@@ -11,7 +11,8 @@ import { audioUrl } from '../utils/audioUrl';
 import { triggerNoteBurst } from '../components/ui/DesignSpells';
 import JsonLd from '../components/JsonLd';
 import { mediaRoomSchema } from '../utils/schema';
-import { trackAudioPlay } from '../utils/analytics';
+import { trackAudioPlay, trackInitiateCheckout } from '../utils/analytics';
+import { useSquareCheckoutAction } from '../utils/checkout';
 import EmailDownloadGateModal from '../components/EmailDownloadGateModal';
 import { triggerBrowserDownload } from '../utils/deliveryUrl';
 import './MediaRoom.css';
@@ -427,6 +428,16 @@ const MediaRoom = () => {
   const [isGateOpen, setIsGateOpen] = useState(false);
   const [gateItem, setGateItem] = useState(null);
 
+  const starterPackCheckout = useSquareCheckoutAction({
+    handle: 'quest-starter-pack',
+    onTrack: () =>
+      trackInitiateCheckout({
+        sku: 'SOE-STARTER-PACK',
+        name: 'The Quest Starter & Coloring Pack: 40-Page Coloring Book, 432Hz Reset Track & Transition Kit',
+        price: 7.00,
+      }),
+  });
+
   const handleDownloadColoringPage = (index) => {
     const item = {
       title: `SOE Coloring Page #${index + 1}`,
@@ -620,13 +631,18 @@ const MediaRoom = () => {
                 </button>
 
                 <a
-                  href="https://buy.stripe.com/test_8x2aEXbJW0BLcwS0oi6Vq01"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href={starterPackCheckout.href}
+                  onClick={starterPackCheckout.handleClick}
+                  aria-busy={starterPackCheckout.isLaunching}
                   className="btn btn-gold"
                 >
-                  {t('media.pre_order_coloring')}
+                  {starterPackCheckout.isLaunching ? 'Opening Square Checkout...' : t('media.pre_order_coloring')}
                 </a>
+                {starterPackCheckout.notice && (
+                  <p role="status" style={{ fontSize: '0.82rem', color: '#B45309', marginTop: '0.4rem' }}>
+                    {starterPackCheckout.notice}
+                  </p>
+                )}
               </div>
             </div>
           </RevealSection>

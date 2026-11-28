@@ -88,6 +88,42 @@ PINTEREST_PINS = [
         "image_file": "pinterest-pins/pin05_fifty_percent_grading_floor.png",
         "keywords": ["montessori at home toddler", "waldorf inspired learning", "kindergarten homeschool curriculum", "tactile learning activities"],
     },
+    {
+        "id": "pin_06_neural_pathways",
+        "board_id": "board_phonics_early_reading",
+        "title": "The 5 Neural Pathways Built Without Screens (Ages 2–7 Field Guide)",
+        "description": "Free printable neuro-parenting chart mapping auditory phonics, math timing, midline movement, calming rests, and Socratic wonder across 7 Lands. Guided by Seriphia at soelearn.com/signal.",
+        "destination_url": f"{settings.BASE_DOMAIN}/signal?utm_source=pinterest&utm_medium=pin&utm_campaign=seriphia_signal&utm_content=5_neural_pathways",
+        "image_file": "pinterest-pins/pin06_five_neural_pathways_2x3.png",
+        "keywords": ["screen free phonics", "brain architecture toddler", "auditory phonemic awareness", "early reading science"],
+    },
+    {
+        "id": "pin_07_sensory_regulation",
+        "board_id": "board_morning_basket_rhythms",
+        "title": "60–80 BPM Sensory Reset: Screen-Free Transition Checklist (Ages 2–7)",
+        "description": "Calm after-school or post-screen restlessness in 10 minutes with predictable rhythmic pacing and ordinary room objects. Free Sensory & Acoustic Regulation Guide + 19 studio tracks at soelearn.com/signal.",
+        "destination_url": f"{settings.BASE_DOMAIN}/signal?utm_source=pinterest&utm_medium=pin&utm_campaign=seriphia_signal&utm_content=sensory_regulation",
+        "image_file": "pinterest-pins/pin07_sensory_regulation_checklist_2x3.png",
+        "keywords": ["sensory regulation toddler", "calming music preschool", "screen free transition", "adhd toddler routine"],
+    },
+    {
+        "id": "pin_08_pod_circle_time",
+        "board_id": "board_homeschool_montessori",
+        "title": "Zero-Prep 15-Min Co-Op & Preschool Circle Time Ritual (Ages 2–7)",
+        "description": "Designed for micro-school pods, Montessori classrooms, and Pre-K teachers. Includes Head Start ELOF & NAEYC alignment plus free 19-track studio recordings and tactile ritual card.",
+        "destination_url": f"{settings.BASE_DOMAIN}/institutions?utm_source=pinterest&utm_medium=pin&utm_campaign=seriphia_signal&utm_content=pod_circle_time",
+        "image_file": "pinterest-pins/pin08_pod_circle_time_2x3.png",
+        "keywords": ["homeschool co op curriculum", "preschool circle time ideas", "micro school early learning", "montessori circle time"],
+    },
+    {
+        "id": "pin_09_seasonal_quest",
+        "board_id": "board_free_printables",
+        "title": "40-Day Screen-Free Kindergarten Readiness Quest Across 7 Lands",
+        "description": "Replace plastic craft box clutter with 10 calm daily blocks (A–J), 19 studio songs, and tactile workbooks ($21 Digital / $45 Physical Print with Free US Shipping). Unlock all 19 songs free first at soelearn.com/signal.",
+        "destination_url": f"{settings.BASE_DOMAIN}/signal?utm_source=pinterest&utm_medium=pin&utm_campaign=seriphia_signal&utm_content=seasonal_quest",
+        "image_file": "pinterest-pins/pin09_seven_lands_readiness_2x3.png",
+        "keywords": ["kindergarten readiness workbook", "seasonal homeschool rhythm", "40 day preschool quest", "screen free workbook"],
+    },
 ]
 
 class PinterestCampaignLauncher:

@@ -2,12 +2,11 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { assetPath } from '../utils/assetPath';
 import { trackInitiateCheckout } from '../utils/analytics';
+import { useSquareCheckoutAction } from '../utils/checkout';
 import KineticHeadline from '../components/KineticHeadline';
 import { usePageMeta } from '../hooks/usePageMeta';
 import './HeadphonesSale.css';
 
-const STRIPE_HEADPHONES_URL = 'https://buy.stripe.com/test_cNi6oH01eacl8gC5IC6Vq07';
-const STRIPE_BUNDLE_URL = 'https://buy.stripe.com/test_28E00j9BOacldAWc706Vq08';
 const TIKTOK_SHOP_URL = 'https://www.tiktok.com/@soe.learn';
 const USER_MANUAL_PDF_URL = 'https://ae-pic-a1.aliexpress-media.com/kf/Sdfedac9d9a044afba00bc28557b25b3cR.pdf';
 
@@ -134,6 +133,30 @@ const HeadphonesSale = () => {
     trackInitiateCheckout({ sku, name, price });
   };
 
+  const headphonesCheckout = useSquareCheckoutAction({
+    handle: 'soe-sensory-headphones',
+    variantId: selectedVariant.id,
+    variantLabel: selectedVariant.name,
+    onTrack: () =>
+      handleCheckoutClick(
+        `AWATRUE-HK05-${selectedVariant.id}`,
+        `AWATRUE HK05 Kids Headphones (${selectedVariant.name})`,
+        24.99
+      ),
+  });
+
+  const bundleCheckout = useSquareCheckoutAction({
+    handle: 'soe-headphones-workbook-bundle',
+    variantId: selectedVariant.id,
+    variantLabel: selectedVariant.name,
+    onTrack: () =>
+      handleCheckoutClick(
+        `SOE-HP-WB-BUNDLE-${selectedVariant.id}`,
+        `Headphones + Workbook Bundle (${selectedVariant.name})`,
+        39.00
+      ),
+  });
+
   return (
     <div className="hp-page">
       <div className="hp-container">
@@ -239,13 +262,19 @@ const HeadphonesSale = () => {
 
               <div className="hp-cta-group">
                 <a
-                  href={`${STRIPE_HEADPHONES_URL}${STRIPE_HEADPHONES_URL.includes('?') ? '&' : '?'}client_reference_id=${encodeURIComponent(`AWATRUE-HK05-${selectedVariant.id}`)}`}
-                  className="btn-stripe-pay"
-                  onClick={() => handleCheckoutClick(`AWATRUE-HK05-${selectedVariant.id}`, `AWATRUE HK05 Kids Headphones (${selectedVariant.name})`, 24.99)}
+                  href={headphonesCheckout.href}
+                  className="btn-stripe-pay btn-square-pay"
+                  onClick={headphonesCheckout.handleClick}
+                  aria-busy={headphonesCheckout.isLaunching}
                 >
-                  <span>⚡ Order with Stripe Checkout</span>
+                  <span>{headphonesCheckout.isLaunching ? 'Opening Square Checkout...' : '⚡ Order with Square Checkout'}</span>
                   <span style={{ opacity: 0.9, fontSize: '0.95rem' }}>($24.99)</span>
                 </a>
+                {headphonesCheckout.notice && (
+                  <p role="status" style={{ fontSize: '0.84rem', color: '#B45309', margin: 0 }}>
+                    {headphonesCheckout.notice}
+                  </p>
+                )}
 
                 <a
                   href={TIKTOK_SHOP_URL}
@@ -372,13 +401,19 @@ const HeadphonesSale = () => {
               Save $30.99 + Free Shipping
             </p>
             <a
-              href={`${STRIPE_BUNDLE_URL}${STRIPE_BUNDLE_URL.includes('?') ? '&' : '?'}client_reference_id=${encodeURIComponent(`SOE-BUNDLE-${selectedVariant.id}`)}`}
-              className="btn-stripe-pay"
+              href={bundleCheckout.href}
+              className="btn-stripe-pay btn-square-pay"
               style={{ width: '100%' }}
-              onClick={() => handleCheckoutClick(`SOE-HP-WB-BUNDLE-${selectedVariant.id}`, `Headphones + Workbook Bundle (${selectedVariant.name})`, 39.00)}
+              onClick={bundleCheckout.handleClick}
+              aria-busy={bundleCheckout.isLaunching}
             >
-              Get The Bundle · $39 →
+              {bundleCheckout.isLaunching ? 'Opening Square Checkout...' : 'Get The Bundle · $39 →'}
             </a>
+            {bundleCheckout.notice && (
+              <p role="status" style={{ fontSize: '0.82rem', color: '#B45309', marginTop: '0.6rem', marginBottom: 0 }}>
+                {bundleCheckout.notice}
+              </p>
+            )}
           </div>
         </section>
 

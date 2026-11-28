@@ -13,10 +13,15 @@ import { initAutoTracking } from '../utils/analytics';
 
 const GA4_ID = import.meta.env.VITE_GA4_MEASUREMENT_ID || 'G-H5977S1HY4';
 const CLARITY_ID = import.meta.env.VITE_CLARITY_ID || 'wcdgngeqcm';
+const GOOGLE_ADS_ID = import.meta.env.VITE_GOOGLE_ADS_ID || '';
+const PINTEREST_TAG_ID = import.meta.env.VITE_PINTEREST_TAG_ID || '';
+const X_PIXEL_ID = import.meta.env.VITE_X_PIXEL_ID || '';
+const REDDIT_PIXEL_ID = import.meta.env.VITE_REDDIT_PIXEL_ID || '';
 const CONSENT_STORAGE_KEY = 'soe_privacy_consent';
 
 let ga4Loaded = false;
 let clarityLoaded = false;
+let adChannelsLoaded = false;
 
 export function hasAnalyticsConsent() {
   if (typeof window === 'undefined') return false;
@@ -81,10 +86,62 @@ function loadConsentedClarity(id) {
   })(window, document, 'clarity', 'script', CLARITY_ID);
 }
 
+function loadConsentedChannelTags() {
+  if (adChannelsLoaded || typeof document === 'undefined') return;
+  adChannelsLoaded = true;
+
+  if (GOOGLE_ADS_ID && typeof window.gtag === 'function') {
+    window.gtag('config', GOOGLE_ADS_ID, { allow_enhanced_conversions: false });
+  }
+
+  if (PINTEREST_TAG_ID && !window.pintrk) {
+    window.pintrk = function () {
+      window.pintrk.queue.push(Array.prototype.slice.call(arguments));
+    };
+    window.pintrk.queue = [];
+    window.pintrk.version = '3.0';
+    const ps = document.createElement('script');
+    ps.async = true;
+    ps.src = 'https://s.pinimg.com/ct/core.js';
+    document.head.appendChild(ps);
+    window.pintrk('load', PINTEREST_TAG_ID);
+    window.pintrk('page');
+  }
+
+  if (X_PIXEL_ID && !window.twq) {
+    window.twq = function () {
+      window.twq.exe ? window.twq.exe.apply(window.twq, arguments) : window.twq.queue.push(arguments);
+    };
+    window.twq.version = '1.1';
+    window.twq.queue = [];
+    const xs = document.createElement('script');
+    xs.async = true;
+    xs.src = 'https://static.ads-twitter.com/uwt.js';
+    document.head.appendChild(xs);
+    window.twq('config', X_PIXEL_ID);
+  }
+
+  if (REDDIT_PIXEL_ID && !window.rdt) {
+    window.rdt = function () {
+      window.rdt.sendEvent
+        ? window.rdt.sendEvent.apply(window.rdt, arguments)
+        : window.rdt.callQueue.push(arguments);
+    };
+    window.rdt.callQueue = [];
+    const rs = document.createElement('script');
+    rs.async = true;
+    rs.src = 'https://www.redditstatic.com/ads/pixel.js';
+    document.head.appendChild(rs);
+    window.rdt('init', REDDIT_PIXEL_ID);
+    window.rdt('track', 'PageVisit');
+  }
+}
+
 export function enableConsentedAnalytics() {
   if (typeof window === 'undefined') return;
   loadPrivacyMaskedGa4(GA4_ID);
   loadConsentedClarity(CLARITY_ID);
+  loadConsentedChannelTags();
   initAutoTracking();
 }
 

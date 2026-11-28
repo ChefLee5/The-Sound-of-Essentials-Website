@@ -50,7 +50,7 @@
       "7-Land printable tactile rhythm cue cards (visual transition schedule)",
       "Refrigerator 1-page 'Daily Rhythm Dial' victory card",
       "Printable phonics lyric sheets & hero character badges",
-      "Instant download + Direct Stripe card vaulting pass"
+      "Instant download + Direct Square checkout pass"
     ],
     "ageRange": "Ages 2–7",
     "gradeRange": "Pre-K to Grade 2",
@@ -67,7 +67,7 @@
     ],
     "funnelStage": "order-bump",
     "status": "available",
-    "storeUrl": "https://buy.stripe.com/test_8x2aEXbJW0BLcwS0oi6Vq01"
+    "storeUrl": "/listen"
   },
   {
     "id": "rhythm-quest-ebook",
@@ -99,7 +99,7 @@
     ],
     "funnelStage": "lead-offer",
     "status": "available",
-    "storeUrl": "https://buy.stripe.com/test_7sYcN5cO04S168uc706Vq00"
+    "storeUrl": "/rhythm-quest"
   },
   {
     "id": "rhythm-quest-storybook-print",
@@ -166,8 +166,8 @@
     ],
     "funnelStage": "core-offer",
     "status": "available",
-    "storeUrl": "https://buy.stripe.com/test_eVqbJ18xKcktbsOfjc6Vq02",
-    "printStoreUrl": "https://buy.stripe.com/test_3cI9ATeW8dox2Wi0oi6Vq03"
+    "storeUrl": "/rhythm-ready",
+    "printStoreUrl": "/rhythm-ready"
   },
   {
     "id": "picture-dictionary",
@@ -202,7 +202,7 @@
     ],
     "funnelStage": "premium-offer",
     "status": "reserve",
-    "storeUrl": "https://buy.stripe.com/test_14AfZhcO02JT40m9YS6Vq06"
+    "storeUrl": "/workbook"
   },
   {
     "id": "full-quest-bundle",
@@ -243,7 +243,7 @@
     ],
     "funnelStage": "bundle-offer",
     "status": "available",
-    "storeUrl": "https://buy.stripe.com/test_5kQ9AT4hubgp0Oafjc6Vq04"
+    "storeUrl": "/workbook"
   },
   {
     "id": "soe-sensory-headphones",
@@ -334,7 +334,7 @@
     ],
     "funnelStage": "hardware-offer",
     "status": "available",
-    "storeUrl": "https://buy.stripe.com/test_cNi6oH01eacl8gC5IC6Vq07",
+    "storeUrl": "/headphones",
     "tiktokShopUrl": "https://www.tiktok.com/@soe.learn"
   },
   {
@@ -368,7 +368,7 @@
     ],
     "funnelStage": "hardware-bundle-offer",
     "status": "available",
-    "storeUrl": "https://buy.stripe.com/test_28E00j9BOacldAWc706Vq08",
+    "storeUrl": "/headphones",
     "tiktokShopUrl": "https://www.tiktok.com/@soe.learn"
   },
   {

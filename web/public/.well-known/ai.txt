@@ -7,6 +7,11 @@
 context: https://thesoundofessentials.com/llms.txt
 context-full: https://thesoundofessentials.com/llms-full.txt
 summary: https://thesoundofessentials.com/ai/summary.json
+agent-card: https://thesoundofessentials.com/.well-known/agent.json
+erc8004: https://thesoundofessentials.com/.well-known/erc8004.json
+x402-catalog: https://thesoundofessentials.com/api/agent/catalog
+farcaster-frame: https://thesoundofessentials.com/api/frames/signal
+signal: https://thesoundofessentials.com/signal
 
 # Brand Identity
 name: The Sound of Essentials: Rhythm Quest

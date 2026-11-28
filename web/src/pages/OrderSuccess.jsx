@@ -17,9 +17,14 @@ const OrderSuccess = () => {
     noindex: true,
   });
   const [searchParams] = useSearchParams();
-  const rawSessionId = searchParams.get('session_id');
+  const rawSessionId = searchParams.get('session_id') || searchParams.get('transactionId') || searchParams.get('orderId');
+  const provider = (searchParams.get('provider') || '').toLowerCase();
   const [orderId] = useState(() => (
-    searchParams.get('order_id') || searchParams.get('id') || (rawSessionId ? `STRIPE-${rawSessionId.slice(-8).toUpperCase()}` : `SOE-${Math.floor(100000 + Math.random() * 900000)}`)
+    searchParams.get('order_id') ||
+    searchParams.get('id') ||
+    (rawSessionId
+      ? `${provider === 'square' ? 'SQUARE' : 'ORDER'}-${rawSessionId.slice(-8).toUpperCase()}`
+      : `SOE-${Math.floor(100000 + Math.random() * 900000)}`)
   ));
   const customerEmail = searchParams.get('email') || '';
   const productKey = searchParams.get('product') || 'rhythm-quest-storybook';

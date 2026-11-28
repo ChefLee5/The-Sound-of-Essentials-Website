@@ -15,6 +15,8 @@ const LEGACY_301_REDIRECTS = {
   '/universe': '/heroes',
   '/characters': '/heroes',
   '/media': '/listen',
+  '/seriphia-signal': '/signal',
+  '/distress-call': '/signal',
   '/starter-pack': '/listen',
   '/qr': '/listen',
   '/ritual': '/listen',

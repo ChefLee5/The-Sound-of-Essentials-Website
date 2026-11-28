@@ -27,7 +27,7 @@ export const CANON_CHECKS = [
   },
   {
     pattern: /\bShopify\b/i,
-    reason: 'Stack canon violation: Shopify is retired; use direct soelearn.com Stripe funnel',
+    reason: 'Stack canon violation: Shopify is retired; use direct soelearn.com Square funnel',
   },
   {
     pattern: /\blive\s+(instrumentation|instruments?|orchestra|music|acoustic|organic)\b/i,
@@ -37,10 +37,21 @@ export const CANON_CHECKS = [
     pattern: /\b4,?232\b/,
     reason: 'Marketing copy rule: never use literal 4,232; uniformly use "4,000+ words"',
   },
+  {
+    pattern: /\b(star\s*wars|princess\s*leia|obi[-\s]?wan|jedi|skywalker|lucasfilm)\b/i,
+    reason: 'Canon IP rule: mythic signal is influence-only; never use Star Wars trademarks',
+  },
 ];
 
 const VALID_FUNNEL_DESTINATIONS = [
   '/listen',
+  '/signal',
+  '/downloads/',
+  '/science',
+  '/sing-along-time',
+  '/global-learn-english',
+  '/education-sovereignty',
+  '/alternatives/',
   '/workbook',
   '/rhythm-ready',
   '/dictionary-sale',
@@ -59,6 +70,16 @@ const VALID_FUNNEL_DESTINATIONS = [
   'slant3d',
   'build123d',
   'meta ads',
+  'google ads',
+  'pinterest',
+  'x.com',
+  'reddit',
+  'farcaster',
+  'atproto',
+  'x402',
+  'erc-8004',
+  'webmcp',
+  'agent.json',
   'awaiting operator',
 ];
 
@@ -169,35 +190,35 @@ const FOREMAN_UNIT_RULES = [
   },
   {
     unit_key: 'MCLS-STUDIO',
-    keywords: /\b(ad|ads|meta|pinterest|creative|video|hook|bundle|campaign|workbook|dictionary|launch|funnel)\b/i,
-    action_type: 'meta_ad_bundle',
-    channel: 'Meta Ads Manager v21.0 + Visual Production',
-    target_destination: 'soelearn.com/listen',
-    role_summary: 'Forges 3-Layer Cultural Delta ad array in PAUSED safety state.',
+    keywords: /\b(ad|ads|google|youtube|pinterest|x\.com|reddit|farcaster|atproto|creative|video|hook|bundle|campaign|signal|workbook|dictionary|launch|funnel)\b/i,
+    action_type: 'multichannel_signal_bundle',
+    channel: 'Google (40%) + Pinterest (25%) + X (20%) + Reddit (15%)',
+    target_destination: 'soelearn.com/signal',
+    role_summary: 'Forges 3-Layer Cultural Delta multi-channel campaign bundles in PAUSED safety state (Meta on cooldown).',
   },
   {
     unit_key: 'MCLS-PULSE',
-    keywords: /\b(community|reddit|x\.com|twitter|reply|email|nurture|brevo|parent|homeschool|dispatch|social)\b/i,
+    keywords: /\b(community|reddit|x\.com|twitter|bluesky|atproto|farcaster|reply|email|nurture|brevo|parent|homeschool|dispatch|social)\b/i,
     action_type: 'community_reply',
-    channel: 'Parent & Homeschool Communities + Sanctuary Dispatch',
-    target_destination: 'soelearn.com/listen',
-    role_summary: 'Drafts empathetic A/B/C social trio + Sanctuary Dispatch founder outline.',
+    channel: 'Reddit Subreddits + X-Pulse + AT Protocol',
+    target_destination: 'soelearn.com/signal',
+    role_summary: 'Drafts empathetic A/B/C social trio + Reddit/X community value replies.',
   },
   {
     unit_key: 'MCLS-AUTOPILOT',
-    keywords: /\b(facebook|drip|seed|advertorial|organic\s*post|ledger)\b/i,
-    action_type: 'social_seed_drip',
-    channel: 'Facebook Page + Theme Accounts',
-    target_destination: 'soelearn.com/listen',
-    role_summary: 'Queues next deduplicated advertorial drip from published ledger.',
+    keywords: /\b(drip|seed|advertorial|organic\s*post|ledger|farcaster|atproto|pinterest)\b/i,
+    action_type: 'web3_social_dispatch',
+    channel: 'Farcaster Frame v2 + AT Protocol + Pinterest Organic Boards',
+    target_destination: 'soelearn.com/signal',
+    role_summary: 'Queues deduplicated Seriphia Signal drops across Farcaster, AT Protocol, and Pinterest.',
   },
   {
     unit_key: 'MCLS-GUARDIAN',
-    keywords: /\b(roas|cpa|budget|scale|pause|stoploss|stop-loss|guardian|stripe|checkout|telemetry|metrics|spend)\b/i,
+    keywords: /\b(roas|cpa|budget|scale|pause|stoploss|stop-loss|guardian|square|stripe|x402|telemetry|metrics|spend)\b/i,
     action_type: 'rhythm_guardian_audit',
-    channel: 'Meta CAPI + Direct Stripe Telemetry',
-    target_destination: 'Engine A (/listen) & Engine B (/workbook)',
-    role_summary: 'Enforces dual-horizon CPA <= $2.50 & +20% winner scaling guardrails.',
+    channel: 'Google / Pinterest / X / Reddit + Direct Square & x402 Telemetry',
+    target_destination: 'Engine A (/signal & /listen) & Engine B (/workbook)',
+    role_summary: 'Enforces channel-aware CPA ceilings (Pinterest <= $1.80, Google <= $2.50, X/Reddit <= $2.25) & +20% scaling.',
   },
 ];
 
@@ -269,7 +290,7 @@ export function runAdversarialPreflightReview(unitKey, draft = {}, options = {})
     );
   }
 
-  if (/\b(crypto|real\s+estate|dropship|linktree|multi-link)\b/i.test(combinedText)) {
+  if (/\b(memecoin|shitcoin|crypto\s*token|crypto\s*pump|forex|day\s*trading|real\s+estate|dropship|linktree|multi-link)\b/i.test(combinedText)) {
     shinyObjectFlags.push('Shiny-Object Drift: off-mission venture or Linktree dilution detected.');
   }
 
@@ -288,11 +309,19 @@ export function runAdversarialPreflightReview(unitKey, draft = {}, options = {})
   };
 }
 
+export const CHANNEL_CPA_TARGETS = {
+  PINTEREST: 1.8,
+  GOOGLE: 2.5,
+  X: 2.25,
+  REDDIT: 2.25,
+  META: 2.5,
+};
+
 /**
  * Dual-Horizon Rhythm Guardian evaluator (JS parity with tools/soe_mcls/rhythm_guardian.py).
  */
 export function evaluateRhythmGuardian(adMetrics = [], config = {}) {
-  const maxLeadCpa = Number(config.max_lead_cpa_dollars ?? 2.5);
+  const defaultMaxLeadCpa = Number(config.max_lead_cpa_dollars ?? 2.5);
   const minCtr = Number(config.min_ctr_percent ?? 0.8);
   const minSpend = Number(config.min_spend_for_decision_dollars ?? 10.0);
   const scaleStep = Number(config.scale_step_ratio ?? 1.2);
@@ -303,6 +332,8 @@ export function evaluateRhythmGuardian(adMetrics = [], config = {}) {
     if (!row || !row.ad_id) continue;
     const adId = String(row.ad_id);
     const engineType = row.engine_type || 'ENGINE_A_VALUE_GATE';
+    const channelKey = String(row.channel || '').trim().toUpperCase();
+    const maxLeadCpa = CHANNEL_CPA_TARGETS[channelKey] ?? defaultMaxLeadCpa;
     const spend = Number(row.spend ?? 0);
     const leads = Number(row.leads ?? 0);
     const purchases = Number(row.purchases ?? 0);
@@ -367,7 +398,8 @@ export function evaluateRhythmGuardian(adMetrics = [], config = {}) {
     evaluated_ads_count: Object.keys(decisions).length,
     decisions,
     guardrails_applied: {
-      max_lead_cpa: maxLeadCpa,
+      max_lead_cpa: defaultMaxLeadCpa,
+      channel_max_lead_cpa: CHANNEL_CPA_TARGETS,
       min_ctr: minCtr,
       min_spend_for_decision: minSpend,
       scale_step_ratio: scaleStep,
@@ -384,6 +416,7 @@ export function buildAdBundle(options = {}) {
     archetype_id = 'ARC-01',
     delta = 'SCREEN_VS_SENSORY',
     campaign = 'THE_ENEMY',
+    channel = 'google',
     language = 'en',
     buyer_track = 'D2C',
     engine_type = 'ENGINE_A_VALUE_GATE',
@@ -398,9 +431,12 @@ export function buildAdBundle(options = {}) {
       ? 'https://soelearn.com/institutions'
       : engine_type === 'ENGINE_B_DIRECT_OFFER'
         ? 'https://soelearn.com/workbook'
-        : 'https://soelearn.com/listen';
+        : campaign === 'SERIPHIA_SIGNAL'
+          ? 'https://soelearn.com/signal'
+          : 'https://soelearn.com/listen';
 
-  const destinationUrl = `${baseDestination}?utm_source=meta&utm_medium=mcls&utm_campaign=${campaign.toLowerCase()}&utm_term=${delta.toLowerCase()}&utm_content=${archetype_id.toLowerCase()}`;
+  const normalizedChannel = String(channel || 'google').toLowerCase().trim();
+  const destinationUrl = `${baseDestination}?utm_source=${encodeURIComponent(normalizedChannel)}&utm_medium=mcls&utm_campaign=${campaign.toLowerCase()}&utm_term=${delta.toLowerCase()}&utm_content=${archetype_id.toLowerCase()}`;
   const fullCopy = `${copy.layer_1_ache}\n\n${copy.layer_2_solution}\n\n${copy.layer_3_invitation}`;
   const canonCheck = verifyCanonCompliance(`${copy.headline} ${fullCopy}`);
 
@@ -409,6 +445,7 @@ export function buildAdBundle(options = {}) {
       archetype_id,
       delta,
       campaign,
+      channel: normalizedChannel,
       language,
       buyer_track,
       engine_type,
@@ -422,7 +459,7 @@ export function buildAdBundle(options = {}) {
     },
     canon_verification: canonCheck,
     security_tier: 'tier_1_staging_sandbox',
-    gate_action: 'Stage in Command Approval Gate before live Meta API spend.',
+    gate_action: `Stage in Command Approval Gate before live ${normalizedChannel} spend.`,
   };
 }
 
@@ -544,11 +581,12 @@ export function buildBrowserTakeoverDraft(options = {}) {
 
 /**
  * Event/Webhook -> Reactive MCLS Task Mapper.
- * Converts Stripe, Brevo, Guardian, or Browser Worker webhooks into gated MCLS approval drafts.
+ * Converts Square, Stripe, Brevo, Guardian, or Browser Worker webhooks into gated MCLS approval drafts.
  */
 export function buildWebhookReactiveDraft(options = {}) {
   const { event_type = '', source = 'webhook', event_data = {} } = options;
   const normalizedEvent = String(event_type || '').toLowerCase().trim();
+  const providerLabel = source.includes('square') || normalizedEvent.startsWith('square.') ? 'Square' : 'Direct';
 
   if (
     normalizedEvent === 'portal.takeover_needed' ||
@@ -569,6 +607,9 @@ export function buildWebhookReactiveDraft(options = {}) {
   }
 
   if (
+    normalizedEvent === 'square.checkout.completed' ||
+    normalizedEvent === 'square.payment.completed' ||
+    normalizedEvent === 'payment.updated' ||
     normalizedEvent === 'stripe.checkout.completed' ||
     normalizedEvent === 'checkout.session.completed'
   ) {
@@ -584,11 +625,11 @@ export function buildWebhookReactiveDraft(options = {}) {
           unit_key: unitKey,
           action_type: 'webhook_roas_signal',
           title: `Engine B Conversion Signal ($${orderTotal.toFixed(2)}) — ${skuRef}`,
-          channel: 'Stripe Direct Webhook -> MCLS-Guardian',
+          channel: `${providerLabel} Webhook -> MCLS-Guardian`,
           target_destination: 'https://soelearn.com/workbook',
           delta_alignment: 'SCREEN_VS_SENSORY',
           estimated_cost: '$0.00 (Telemetry Evaluation)',
-          summary: `Direct Stripe purchase ($${orderTotal.toFixed(2)}) detected for ${skuRef}. Stage +20% Engine B scale check and 90-day cohort attribution sync.`,
+          summary: `${providerLabel} purchase ($${orderTotal.toFixed(2)}) detected for ${skuRef}. Stage +20% Engine B scale check and 90-day cohort attribution sync.`,
           payload: {
             source,
             event_type: normalizedEvent,
@@ -601,7 +642,7 @@ export function buildWebhookReactiveDraft(options = {}) {
           unit_key: unitKey,
           action_type: 'webhook_nurture_followup',
           title: `Engine A Value-Gate / Bump Signal ($${orderTotal.toFixed(2)}) — ${skuRef}`,
-          channel: 'Stripe Direct Webhook -> MCLS-Pulse',
+          channel: `${providerLabel} Webhook -> MCLS-Pulse`,
           target_destination: 'https://soelearn.com/listen',
           delta_alignment: 'SCREEN_VS_SENSORY',
           estimated_cost: '$0.00 (Nurture Signal)',
@@ -620,19 +661,20 @@ export function buildWebhookReactiveDraft(options = {}) {
   }
 
   if (
+    normalizedEvent === 'square.checkout.expired' ||
     normalizedEvent === 'stripe.checkout.expired' ||
     normalizedEvent === 'checkout.session.expired'
   ) {
     const draft = {
       unit_key: 'MCLS-GUARDIAN',
       action_type: 'webhook_checkout_recovery',
-      title: 'Abandoned Direct Stripe Checkout Audit (/listen -> /workbook)',
-      channel: 'Stripe Direct Webhook -> MCLS-Guardian',
+      title: 'Abandoned Direct Checkout Audit (/listen -> /workbook)',
+      channel: `${providerLabel} Webhook -> MCLS-Guardian`,
       target_destination: 'https://soelearn.com/listen',
       delta_alignment: 'SCREEN_VS_SENSORY',
       estimated_cost: '$0.00 (Recovery Draft)',
       summary:
-        'Expired Stripe checkout session detected. Stage friction review and compliant Brevo recovery outline (Ages 2–7).',
+        'Expired checkout session detected. Stage friction review and compliant Brevo recovery outline (Ages 2–7).',
       payload: {
         source,
         event_type: normalizedEvent,

@@ -323,7 +323,8 @@
   gap: 0.85rem;
 }
 
-.btn-stripe-pay {
+.btn-stripe-pay,
+.btn-square-pay {
   background: #FF6F00;
   color: #FFFFFF;
   padding: 1rem 1.75rem;
@@ -342,7 +343,8 @@
   cursor: pointer;
 }
 
-.btn-stripe-pay:hover {
+.btn-stripe-pay:hover,
+.btn-square-pay:hover {
   background: #E66400;
   transform: translateY(-2px);
   box-shadow: 0 8px 22px rgba(255, 111, 0, 0.45);

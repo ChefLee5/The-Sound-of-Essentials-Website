@@ -7,6 +7,7 @@ import { assetPath } from '../utils/assetPath';
 import ProofInThePause from '../components/ui/ProofInThePause';
 import StickyThumbCta from '../components/ui/StickyThumbCta';
 import { trackInitiateCheckout } from '../utils/analytics';
+import { useSquareCheckoutAction } from '../utils/checkout';
 import KineticHeadline from '../components/KineticHeadline';
 import PDPQuestionChips from '../components/PDPQuestionChips';
 import DigitalLicenseNotice from '../components/DigitalLicenseNotice';
@@ -89,6 +90,26 @@ const dictPreviews = [
 
 const DictionarySale = () => {
   const scrollRef = useRef(null);
+
+  const dictCheckout = useSquareCheckoutAction({
+    handle: 'essential-picture-dictionary-presale',
+    onTrack: () =>
+      trackInitiateCheckout({
+        sku: 'SOE-DICTIONARY',
+        name: 'Essential Picture Dictionary',
+        price: 55.00,
+      }),
+  });
+
+  const bundleCheckout = useSquareCheckoutAction({
+    handle: 'complete-quest-pack',
+    onTrack: () =>
+      trackInitiateCheckout({
+        sku: 'SOE-QUEST-PACK',
+        name: 'The Full Quest Bundle',
+        price: 49.00,
+      }),
+  });
 
   usePageMeta({
     title: 'Essential Picture Dictionary | 4,000+ Words & 125 Visual Scenes for Speech, Vocabulary & Early Literacy',
@@ -390,13 +411,19 @@ const DictionarySale = () => {
                   <li>✓ Reserve your copy · Delivered upon release</li>
                 </ul>
                 <a
-                  href="https://buy.stripe.com/test_14AfZhcO02JT40m9YS6Vq06"
+                  href={dictCheckout.href}
                   rel="noopener"
                   className="btn btn-gold"
-                  onClick={() => trackInitiateCheckout({ sku: 'SOE-DICTIONARY', name: 'Essential Picture Dictionary', price: 55.00 })}
+                  onClick={dictCheckout.handleClick}
+                  aria-busy={dictCheckout.isLaunching}
                 >
-                  Reserve Your Copy ($55) →
+                  {dictCheckout.isLaunching ? 'Opening Square Checkout...' : 'Reserve Your Copy ($55) →'}
                 </a>
+                {dictCheckout.notice && (
+                  <p role="status" style={{ fontSize: '0.82rem', color: '#B45309', marginTop: '0.5rem' }}>
+                    {dictCheckout.notice}
+                  </p>
+                )}
               </div>
 
               {/* Tier 2: The Full Quest Bundle — Featured */}
@@ -420,13 +447,19 @@ const DictionarySale = () => {
                   <li>✓ Bonus printable activity sheets &amp; parent guide</li>
                 </ul>
                 <a
-                  href="https://buy.stripe.com/test_5kQ9AT4hubgp0Oafjc6Vq04"
+                  href={bundleCheckout.href}
                   rel="noopener"
                   className="btn btn-gold btn-shimmer"
-                  onClick={() => trackInitiateCheckout({ sku: 'SOE-QUEST-PACK', name: 'The Full Quest Bundle', price: 49.00 })}
+                  onClick={bundleCheckout.handleClick}
+                  aria-busy={bundleCheckout.isLaunching}
                 >
-                  Get Full Bundle ($49) →
+                  {bundleCheckout.isLaunching ? 'Opening Square Checkout...' : 'Get Full Bundle ($49) →'}
                 </a>
+                {bundleCheckout.notice && (
+                  <p role="status" style={{ fontSize: '0.82rem', color: '#B45309', marginTop: '0.5rem' }}>
+                    {bundleCheckout.notice}
+                  </p>
+                )}
               </div>
             </div>
 

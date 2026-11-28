@@ -14,10 +14,9 @@ import { submitSoeInterest } from '../services/soeSubmissions';
 import { triggerBrowserDownload } from '../utils/deliveryUrl';
 import { trackLead, trackInitiateCheckout } from '../utils/analytics';
 import { setGateUnlocked, isValidEmail } from '../utils/gateAuth';
+import { useSquareCheckoutAction } from '../utils/checkout';
 import { SoeIcon } from './ui/SoeIcon';
 import './EmailDownloadGateModal.css';
-
-const STRIPE_BUMP_URL = 'https://buy.stripe.com/test_8x2aEXbJW0BLcwS0oi6Vq01';
 
 const PERSONA_OPTIONS = [
   { value: 'parent', label: '🏡 Parent / Caregiver' },
@@ -31,8 +30,13 @@ const PERSONA_OPTIONS = [
  * Shared $7 Quest Starter & Coloring Pack bump offer card used in both
  * the pre-capture form and post-capture confirmation state.
  */
-const BumpOfferCard = ({ variant = 'inline', onAction }) => {
+const BumpOfferCard = ({ variant = 'inline', onAction, customerEmail = '' }) => {
   const isSuccessVariant = variant === 'success';
+  const { href, isLaunching, notice, handleClick } = useSquareCheckoutAction({
+    handle: 'quest-starter-pack',
+    customerEmail,
+    onTrack: onAction,
+  });
 
   return (
     <div
@@ -86,19 +90,30 @@ const BumpOfferCard = ({ variant = 'inline', onAction }) => {
       </Text>
 
       <Button
-        href={STRIPE_BUMP_URL}
-        target="_blank"
-        rel="noopener noreferrer"
-        onClick={onAction}
+        href={href}
+        onClick={handleClick}
+        isLoading={isLaunching}
+        isDisabled={isLaunching}
         variant={isSuccessVariant ? 'primary' : 'secondary'}
         size="md"
         width="100%"
         label={
-          isSuccessVariant
-            ? '⚡ Order Quest Starter & Coloring Pack ($7 Stripe Checkout) →'
-            : '➕ Add Quest Starter & Coloring Pack ($7) →'
+          isLaunching
+            ? 'Opening Square Checkout...'
+            : isSuccessVariant
+              ? '⚡ Order Quest Starter & Coloring Pack ($7 Square Checkout) →'
+              : '➕ Add Quest Starter & Coloring Pack ($7) →'
         }
       />
+
+      {notice && (
+        <Banner
+          status="info"
+          role="status"
+          title={notice}
+          collapsible={false}
+        />
+      )}
     </div>
   );
 };
@@ -326,7 +341,7 @@ export const EmailDownloadGateModal = ({
                         width="100%"
                       />
 
-                      <BumpOfferCard variant="inline" onAction={handleBumpClick} />
+                      <BumpOfferCard variant="inline" onAction={handleBumpClick} customerEmail={email} />
 
                       <Button
                         type="submit"
@@ -351,7 +366,7 @@ export const EmailDownloadGateModal = ({
                 </Stack>
               ) : (
                 <Stack gap={4} align="center" className="email-gate-success-box">
-                  <BumpOfferCard variant="success" onAction={handleBumpClick} />
+                  <BumpOfferCard variant="success" onAction={handleBumpClick} customerEmail={email} />
 
                   <Button
                     type="button"

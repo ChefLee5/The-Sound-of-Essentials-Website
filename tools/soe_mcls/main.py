@@ -7,9 +7,19 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 import httpx
 from soe_mcls.config import settings
-from soe_mcls.canon import PRODUCT_LADDER, CULTURAL_DELTAS, PRODUCTION_CAMPAIGNS
+from soe_mcls.canon import (
+    PRODUCT_LADDER,
+    CULTURAL_DELTAS,
+    PRODUCTION_CAMPAIGNS,
+    SIGNAL_CAMPAIGNS,
+    ACTIVE_AD_CHANNEL_SPLIT,
+    CHANNEL_MAX_LEAD_CPA,
+)
 from soe_mcls.meta_launcher import MetaCampaignLauncher
 from soe_mcls.pinterest_launcher import PinterestCampaignLauncher, PINTEREST_BOARDS, PINTEREST_PINS
+from soe_mcls.google_ads_launcher import GoogleAdsCampaignLauncher
+from soe_mcls.x_ads_launcher import XAdsAndPulseLauncher
+from soe_mcls.reddit_ads_launcher import RedditAdsAndCrawlerLauncher
 from soe_mcls.funnel_engine import FunnelCheckoutService
 from soe_mcls.capi_brevo_sync import TelemetrySyncEngine
 from soe_mcls.rhythm_guardian import RhythmGuardianOptimizer
@@ -78,6 +88,9 @@ RUNTIME_PINTEREST_CONFIG = {
 
 launcher = MetaCampaignLauncher(dry_run=True)
 pinterest_launcher = PinterestCampaignLauncher(dry_run=True)
+google_launcher = GoogleAdsCampaignLauncher(dry_run=True)
+x_launcher = XAdsAndPulseLauncher(dry_run=True)
+reddit_launcher = RedditAdsAndCrawlerLauncher(dry_run=True)
 funnel_service = FunnelCheckoutService(mock_mode=True)
 sync_engine = TelemetrySyncEngine()
 guardian = RhythmGuardianOptimizer()
@@ -131,11 +144,34 @@ class HaystackQueryRequest(BaseModel):
 class HaystackEmailTriageRequest(BaseModel):
     email_body: str
 
+class GoogleLaunchRequest(BaseModel):
+    campaign_name: str = "SOE_Search_Coliseum_Intent_US"
+    daily_budget_cents: int = 2000
+    stag_keys: Optional[List[str]] = None
+    include_youtube_shorts: bool = True
+
+class XLaunchRequest(BaseModel):
+    campaign_name: str = "SOE_X_Seriphia_Signal_US"
+    daily_budget_cents: int = 1000
+    thread_ids: Optional[List[str]] = None
+
+class RedditLaunchRequest(BaseModel):
+    campaign_name: str = "SOE_Reddit_Seriphia_Signal_US"
+    daily_budget_cents: int = 1000
+    subreddits: Optional[List[str]] = None
+
+class RedditCrawlRequest(BaseModel):
+    threads: List[Dict[str, str]]
+
 @app.get("/api/v1/canon")
 def get_canon_state():
     return {
         "deltas": CULTURAL_DELTAS,
         "campaigns": PRODUCTION_CAMPAIGNS,
+        "signal_campaigns": SIGNAL_CAMPAIGNS,
+        "active_channel_split": ACTIVE_AD_CHANNEL_SPLIT,
+        "channel_max_cpa": CHANNEL_MAX_LEAD_CPA,
+        "meta_status": settings.META_AUTOMATION_STATUS,
         "product_ladder": PRODUCT_LADDER,
     }
 
@@ -470,3 +506,56 @@ def charge_vaulted_upsell(req: UpsellChargeRequest):
         sku_key=req.sku_key,
     )
     return {"status": "CHARGED", "charge": charge}
+
+
+# --- MULTI-CHANNEL PIVOT ENDPOINTS (GOOGLE / X.COM / REDDIT / COOLDOWN) ---
+
+@app.get("/api/v1/channels/status")
+def get_multichannel_status():
+    return {
+        "meta": {"status": settings.META_AUTOMATION_STATUS, "budget_share": 0.0},
+        "active_split": ACTIVE_AD_CHANNEL_SPLIT,
+        "max_lead_cpa": CHANNEL_MAX_LEAD_CPA,
+        "web3_social": ["Farcaster Frame v2 (/api/frames/signal)", "AT Protocol (app.bsky.feed.post)"],
+    }
+
+@app.post("/api/v1/google/launch")
+def launch_google_campaign(req: GoogleLaunchRequest):
+    bundle = google_launcher.prepare_google_campaign_launch(
+        campaign_name=req.campaign_name,
+        daily_budget_cents=req.daily_budget_cents,
+        stag_keys=req.stag_keys,
+        include_youtube_shorts=req.include_youtube_shorts,
+    )
+    dispatch = google_launcher.dispatch_campaign(bundle)
+    return {"status": dispatch["status"], "bundle": bundle, "dispatch_details": dispatch}
+
+@app.post("/api/v1/x/launch")
+def launch_x_campaign(req: XLaunchRequest):
+    bundle = x_launcher.prepare_x_campaign_launch(
+        campaign_name=req.campaign_name,
+        daily_budget_cents=req.daily_budget_cents,
+        thread_ids=req.thread_ids,
+    )
+    dispatch = x_launcher.dispatch_campaign(bundle)
+    return {
+        "status": dispatch["status"],
+        "bundle": bundle,
+        "atproto_post": x_launcher.build_atproto_signal_post(),
+        "dispatch_details": dispatch,
+    }
+
+@app.post("/api/v1/reddit/launch")
+def launch_reddit_campaign(req: RedditLaunchRequest):
+    bundle = reddit_launcher.prepare_reddit_campaign_launch(
+        campaign_name=req.campaign_name,
+        daily_budget_cents=req.daily_budget_cents,
+        subreddits=req.subreddits,
+    )
+    dispatch = reddit_launcher.dispatch_campaign(bundle)
+    return {"status": dispatch["status"], "bundle": bundle, "dispatch_details": dispatch}
+
+@app.post("/api/v1/reddit/crawl")
+def crawl_reddit_signals(req: RedditCrawlRequest):
+    scored = reddit_launcher.score_and_filter_threads(req.threads)
+    return {"matched_count": len(scored), "staged_replies": scored}

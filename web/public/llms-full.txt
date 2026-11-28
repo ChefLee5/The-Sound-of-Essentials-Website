@@ -76,10 +76,10 @@
 
 ## 4. Product Catalog & Canonical Pricing
 
-- **Gate 1 Lead Magnet ($0):** Deluxe 19-Track Album + Printable 40-Page Coloring Book.
+- **Gate 1 Lead Magnet ($0):** [The Seriphia Signal](https://thesoundofessentials.com/signal) & Deluxe 19-Track Album + 3 Printable Field Guides (*First 10 Minutes Tactile Ritual Card*, *5 Neural Pathways Field Guide*, *Sensory & Acoustic Regulation Guide*).
 - **In-Cart Bump ($7):** The Quest Starter Pack: 5-Minute Daily Bedtime & Transition Reset Kit (7-Land Tactile Cue Cards, Refrigerator Dial, Lyric Sheets & 432Hz Calming Track).
-- **Gate 2 Tripwire ($19):** SOE Rhythm Quest Illustrated Ebook (66-page storybook).
-- **Core Curriculum ($21 Digital / $35 Print):** SOE Rhythm Quest: Rhythm Ready Workbook (8 weeks, 40 days, ~400 activities).
+- **Gate 2 Tripwire ($19 Digital / $35 Physical Print):** SOE Rhythm Quest Companion Storybook (66-page storybook).
+- **Core Curriculum ($21 Digital / $45 Physical Print):** SOE Rhythm Quest: Rhythm Ready Workbook (8 weeks, 40 days, ~400 activities).
 - **High-Value Bundle ($49 / $89):** The Complete Quest Pack (Ebook + Picture Dictionary Digital + Masters).
 - **Flagship Reference ($55 Sale / $79 Compare-at):** The Essential Picture Dictionary (4,000+ words, 125 scenes, ASL descriptions).
 - **Membership ($14.99/mo):** The Rhythm Pass (Monthly quest drops & live sing-alongs).
@@ -105,6 +105,7 @@
 ## 6. Website Routes & Canonical Gateways
 
 - **Home:** `https://thesoundofessentials.com/` (Core overview, 5 domains, hero mentors, primary entry)
+- **The Seriphia Signal:** `https://thesoundofessentials.com/signal` (Ages 2–7 lifeline, 19-track unlock, 3 printable guides, 5 Sanctuary Frequencies)
 - **Free Album Experience:** `https://thesoundofessentials.com/listen` (Lead magnet delivery, streaming player)
 - **Rhythm Ready Workbook:** `https://thesoundofessentials.com/rhythm-ready` (8-week readiness quest)
 - **Essential Picture Dictionary:** `https://thesoundofessentials.com/workbook#dictionary-presale` (4,000+ words, 125 scenes)
@@ -130,6 +131,12 @@
 - **AI Summary Endpoint:** `https://thesoundofessentials.com/ai/summary.json`
 - **AI FAQ Endpoint:** `https://thesoundofessentials.com/ai/faq.json`
 - **AI Discovery:** `https://thesoundofessentials.com/.well-known/ai.txt`
+- **A2A AgentCard:** `https://thesoundofessentials.com/.well-known/agent.json`
+- **ERC-8004 Registration:** `https://thesoundofessentials.com/.well-known/erc8004.json`
+- **x402 Digital Catalog:** `https://thesoundofessentials.com/api/agent/catalog`
+- **x402 Purchase Endpoint:** `https://thesoundofessentials.com/api/agent/purchase`
+- **Farcaster Frame v2:** `https://thesoundofessentials.com/api/frames/signal`
+- **WebMCP Browser Registration:** `navigator.modelContext` (`seriphia_recommend_pathway`, `seriphia_unlock_free_signal`, `seriphia_crosswalk_standards`, `seriphia_generate_referral_link`)
 
 ---
 

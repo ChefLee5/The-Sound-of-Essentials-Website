@@ -71,7 +71,7 @@ const PrivacyPolicy = () => {
             <p>We only collect information deliberately provided by adult users:</p>
             <ul style={{ paddingLeft: '1.5rem', marginTop: '0.5rem' }}>
               <li><strong>Contact Information:</strong> Adult name and email address provided during opt-in for album access, curriculum guides, or educator inquiries.</li>
-              <li><strong>Order &amp; Billing Data:</strong> Direct payment processing is tokenized securely via PCI-DSS certified payment processors (Stripe). SOE never stores raw credit card numbers or CVV codes on our servers.</li>
+              <li><strong>Order &amp; Billing Data:</strong> Direct payment processing is tokenized securely via PCI-DSS certified payment processors (Square). SOE never stores raw credit card numbers or CVV codes on our servers.</li>
               <li><strong>Shipping Details:</strong> Physical mailing addresses captured solely for print workbook deliveries.</li>
             </ul>
           </section>

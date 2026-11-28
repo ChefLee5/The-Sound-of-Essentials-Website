@@ -1,0 +1,49 @@
+{
+  "type": "https://eips.ethereum.org/EIPS/eip-8004#registration-v1",
+  "name": "Seriphia — The Sound of Essentials",
+  "description": "Sovereign Guide and Brand Ambassador for The Sound of Essentials: Rhythm Quest — delivering 19 master studio recordings with authentic human vocals and warm acoustic arrangements, 4,000+ illustrated words, and screen-free early learning for ages 2–7 (Pre-K to Grade 2).",
+  "image": "https://thesoundofessentials.com/assets/characters/SERIPHIA.webp",
+  "externalUrl": "https://thesoundofessentials.com/signal",
+  "active": true,
+  "x402Support": true,
+  "supportedTrust": [
+    "reputation",
+    "crypto-economic",
+    "provenance-attestation"
+  ],
+  "services": [
+    {
+      "name": "A2A",
+      "endpoint": "https://thesoundofessentials.com/.well-known/agent.json",
+      "version": "2.0.0"
+    },
+    {
+      "name": "MCP",
+      "endpoint": "https://thesoundofessentials.com/api/mcls/bridge",
+      "version": "2.5.0"
+    },
+    {
+      "name": "x402",
+      "endpoint": "https://thesoundofessentials.com/api/agent/catalog",
+      "version": "1"
+    },
+    {
+      "name": "WebMCP",
+      "endpoint": "https://thesoundofessentials.com/signal",
+      "version": "1"
+    },
+    {
+      "name": "FarcasterFrame",
+      "endpoint": "https://thesoundofessentials.com/api/frames/signal",
+      "version": "next"
+    }
+  ],
+  "provenance": {
+    "organization": "The Sound of Essentials",
+    "ageBoundary": "Ages 2–7 (Pre-K to Grade 2)",
+    "catalogUpcGtin12": "885000556098",
+    "audioAttestation": "100% original studio-recorded human vocals and warm acoustic arrangements across 19 tracks (60–110 BPM); zero generative audio synthesis.",
+    "policyAlignment": "Independent curriculum designed in alignment with Head Start ELOF, NAEYC, WHO under-5 screen guidelines, AAP & India IAP recommendations, Singapore Grow Well SG, and Caribbean ECC pillars.",
+    "concordStewardship": "Education Concord 25% master catalog royalty pool and 30%–35% Share the Sound ambassador referral alignment."
+  }
+}

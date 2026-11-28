@@ -91,11 +91,16 @@ const MCLS_BRIDGE_TOOLS = [
   {
     name: 'mcls_forge_ad_bundle',
     description:
-      'Edge Parity: Builds a canon-verified 3-Layer Meta/Pinterest Ad Variant (Ache -> Solution -> Zero-Risk Invitation) in PAUSED safety state.',
+      'Edge Parity: Builds a canon-verified 3-Layer Ad Variant (Google, Pinterest, X, Reddit, or Farcaster) in PAUSED safety state.',
     inputSchema: {
       type: 'object',
       properties: {
         archetype_id: { type: 'string', default: 'ARC-01' },
+        channel: {
+          type: 'string',
+          enum: ['google', 'pinterest', 'x', 'reddit', 'farcaster', 'meta'],
+          default: 'google',
+        },
         delta: {
           type: 'string',
           enum: [
@@ -107,7 +112,7 @@ const MCLS_BRIDGE_TOOLS = [
           ],
           default: 'SCREEN_VS_SENSORY',
         },
-        campaign: { type: 'string', default: 'THE_ENEMY' },
+        campaign: { type: 'string', default: 'SERIPHIA_SIGNAL' },
         language: { type: 'string', enum: ['en', 'es', 'fr'], default: 'en' },
         buyer_track: { type: 'string', enum: ['D2C', 'B2B'], default: 'D2C' },
         engine_type: {
@@ -154,7 +159,7 @@ const MCLS_BRIDGE_TOOLS = [
   {
     name: 'mcls_trigger_webhook_event',
     description:
-      'Event Trigger: Translates a business/funnel webhook (e.g., stripe.checkout.completed, brevo.b2b_reply, funnel.cpa_spike, portal.takeover_needed) into a gated MCLS approval card.',
+      'Event Trigger: Translates a business/funnel webhook (e.g., square.checkout.completed, brevo.b2b_reply, funnel.cpa_spike, portal.takeover_needed) into a gated MCLS approval card.',
     inputSchema: {
       type: 'object',
       properties: {

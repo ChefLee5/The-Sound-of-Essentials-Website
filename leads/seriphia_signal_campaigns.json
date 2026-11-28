@@ -1,0 +1,152 @@
+{
+  "schema_version": "2026.11.signal",
+  "sender": {
+    "brevo_sender_id": 2,
+    "email": "info@soelearn.com",
+    "reply_to": "info@soelearn.com"
+  },
+  "guardrails": {
+    "age_bracket": "Strictly Ages 2 to 7 (Pre-K to Grade 2)",
+    "touch_cap": 3,
+    "b2b_touch1_min_words": 60,
+    "b2b_touch1_max_words": 90,
+    "max_subject_chars": 29,
+    "max_sentence_words": 20,
+    "policy_disclosure": "The Sound of Essentials is an independent creative curriculum designed in alignment with early learning frameworks, not affiliated with or endorsed by government agencies."
+  },
+  "sequences": {
+    "d2c_seriphia_signal": {
+      "id": "d2c_seriphia_signal",
+      "audience": "Families & Caregivers (Ages 2 to 7)",
+      "from_name": "Seriphia",
+      "destination_url": "https://thesoundofessentials.com/signal",
+      "touches": [
+        {
+          "touch": 1,
+          "delay_days": 0,
+          "subject": "An urgent signal for home",
+          "body": "Hello {{first_name}},\n\nA distress call is sounding across early learning. Screens steal attention before young brains wire their core pathways.\n\nI am Seriphia, and our 19-track Rhythm Quest album is free for every family at https://soelearn.com/listen today.\n\nClaim the free Five Neural Pathways Guide and Sensory Regulation Guide at https://thesoundofessentials.com/signal. Pair calm 90 BPM acoustic rhythm with tactile play for children ages 2 to 7.\n\nKeep the beat alive,\nSeriphia\nThe Sound of Essentials"
+        },
+        {
+          "touch": 2,
+          "delay_days": 3,
+          "subject": "Two guides plus $7 starter",
+          "body": "Hello {{first_name}},\n\nDid you grab your two free signal guides yet? Visit https://thesoundofessentials.com/signal to download both the Five Neural Pathways Guide and the Sensory Regulation Guide.\n\nFor offline practice at ages 2 to 7, unlock the $7 Parent Starter Pack. You can also explore our $19 Digital Storybook and $21 Digital Workbook.\n\nEvery beat replaces screen fatigue with steady vocal co-regulation.\n\nWith warmth,\nSeriphia"
+        },
+        {
+          "touch": 3,
+          "delay_days": 7,
+          "subject": "Print books and rhythm tools",
+          "body": "Hello {{first_name}},\n\nHere is our final signal note this week. Tactile print books anchor early learning without battery distractions.\n\nExplore our Print Storybook ($35) or Print Workbook ($45). You can also reserve your copy of the Picture Dictionary ($55).\n\nStart with the free audio and guides at https://thesoundofessentials.com/signal.\n\nCrafted by a father's heart and a mother's love.\n\nWith care,\nSeriphia"
+        }
+      ]
+    },
+    "b2b_pod_clinic_signal": {
+      "id": "b2b_pod_clinic_signal",
+      "audience": "Preschools, Micro-School Pods, and Pediatric OT/SLP Clinics",
+      "from_name": "The Sound of Essentials Institutional Team",
+      "destination_url": "https://thesoundofessentials.com/signal",
+      "touches": [
+        {
+          "touch": 1,
+          "delay_days": 0,
+          "subject": "Calm pre-K rhythm routines",
+          "body": "Hello {{contact_name}},\n\nDirectors at {{organization}} face rising transition burnout among children ages 2 to 7. Our independent curriculum is designed in alignment with Head Start ELOF and NAEYC literacy goals using zero screens.\n\nWe offer free streaming of all 19 Rhythm Quest tracks at https://soelearn.com/listen, plus two printable educator guides at https://thesoundofessentials.com/signal.\n\nWould you like our Sensory Regulation Guide and a 10-minute classroom transition ritual for your team this week?\n\nRespectfully,\nThe Sound of Essentials Institutional Team"
+        },
+        {
+          "touch": 2,
+          "delay_days": 4,
+          "subject": "Zero-screen transition tool",
+          "body": "Hello {{contact_name}},\n\nFollowing up on our note for {{organization}}. Clinics and micro-school pods use our 90 BPM acoustic tracks to steady transitions before phonics or speech blocks.\n\nWe also provide our ECE Lesson Extender and printable Sensory Regulation Guide at no cost at https://thesoundofessentials.com/signal.\n\nReply with your room size or therapy focus, and we will send matched print workbook pricing ($45 print, $21 digital).\n\nRespectfully,\nThe Sound of Essentials Institutional Team"
+        },
+        {
+          "touch": 3,
+          "delay_days": 9,
+          "subject": "Final classroom rhythm note",
+          "body": "Hello {{contact_name}},\n\nThis is our last follow-up this month for {{organization}}. Your teachers and therapists remain welcome to stream the full 19-track album at https://soelearn.com/listen anytime.\n\nOur signal hub at https://thesoundofessentials.com/signal lists our standards crosswalk. Print Workbook editions ($45 print) are ready whenever your budget cycle opens.\n\nThank you for protecting young learners.\n\nRespectfully,\nThe Sound of Essentials Institutional Team"
+        }
+      ]
+    },
+    "global_policy_aligned_singapore": {
+      "id": "global_policy_aligned_singapore",
+      "theatre": "Singapore Grow Well SG",
+      "audience": "Singapore Preschools, ECDA Operators, and Family Hubs",
+      "from_name": "The Sound of Essentials Institutional Team",
+      "destination_url": "https://thesoundofessentials.com/signal",
+      "touches": [
+        {
+          "touch": 1,
+          "delay_days": 0,
+          "subject": "Zero-screen early rhythm kit",
+          "body": "Hello {{contact_name}},\n\nSingapore families seek calm, screen-free routines for children ages 2 to 7. Our independent music curriculum is designed in alignment with Grow Well SG healthy screen habits.\n\nEducators at {{organization}} can stream 19 Rhythm Quest tracks free at https://soelearn.com/listen. Download two printable classroom guides at https://thesoundofessentials.com/signal.\n\nMay I share a brief standards crosswalk for your centers?\n\nRespectfully,\nThe Sound of Essentials Institutional Team"
+        },
+        {
+          "touch": 2,
+          "delay_days": 4,
+          "subject": "Five neural pathways guide",
+          "body": "Hello {{contact_name}},\n\nSharing the direct link to our printable Five Neural Pathways Guide at https://thesoundofessentials.com/downloads/SOE_5_Neural_Pathways_Guide.html for {{organization}}.\n\nMany centers pair Track 1 (90 BPM) with tabletop object sorting to lower morning dysregulation without tablets.\n\nThe Sound of Essentials is an independent curriculum designed in alignment with regional early wellness priorities. Let me know if you want workbook sample pages.\n\nRespectfully,\nThe Sound of Essentials Institutional Team"
+        },
+        {
+          "touch": 3,
+          "delay_days": 9,
+          "subject": "Open audio link for teams",
+          "body": "Hello {{contact_name}},\n\nWrapping up our three-part note for {{organization}}. Your teachers keep permanent free streaming access at https://soelearn.com/listen and our full resource index at https://thesoundofessentials.com/signal.\n\nWhenever you expand tactile classroom materials, our Digital Workbook ($21) and Print Workbook ($45) are ready.\n\nRespectfully,\nThe Sound of Essentials Institutional Team"
+        }
+      ]
+    },
+    "global_policy_aligned_caribbean": {
+      "id": "global_policy_aligned_caribbean",
+      "theatre": "Caribbean Early Childhood Commission",
+      "audience": "Caribbean ECC Centers, Literacy Trusts, and Early Childhood Coordinators",
+      "from_name": "The Sound of Essentials Institutional Team",
+      "destination_url": "https://thesoundofessentials.com/signal",
+      "touches": [
+        {
+          "touch": 1,
+          "delay_days": 0,
+          "subject": "Free early rhythm audio",
+          "body": "Hello {{contact_name}},\n\nClassrooms thrive on warmth, voice, and rhythm. Our independent curriculum is designed in alignment with Caribbean Early Childhood Development standards for ages 2 to 7.\n\nTeams at {{organization}} can stream all 19 Rhythm Quest tracks free at https://soelearn.com/listen. Download printable guides at https://thesoundofessentials.com/signal.\n\nMay I send our sensory and phonological lesson outline for your coordinators?\n\nRespectfully,\nThe Sound of Essentials Institutional Team"
+        },
+        {
+          "touch": 2,
+          "delay_days": 4,
+          "subject": "Printable sensory guide",
+          "body": "Hello {{contact_name}},\n\nFollowing up for {{organization}}. Our printable Sensory Regulation Guide at https://thesoundofessentials.com/downloads/SOE_Sensory_Regulation_Guide.html works completely offline once saved.\n\nEducators use acoustic pulse and tabletop clapping games to stabilize busy rooms in under ten minutes. No paid apps or tablets are required.\n\nReply if your centers would like our Digital Workbook ($21) review kit.\n\nRespectfully,\nThe Sound of Essentials Institutional Team"
+        },
+        {
+          "touch": 3,
+          "delay_days": 9,
+          "subject": "Permanent listening access",
+          "body": "Hello {{contact_name}},\n\nFinal note for {{organization}} this cycle. Your educators retain open access to our 19-track album at https://soelearn.com/listen and our signal hub at https://thesoundofessentials.com/signal.\n\nThe Sound of Essentials is an independent creative curriculum designed in alignment with early childhood development standards. Thank you for serving families.\n\nRespectfully,\nThe Sound of Essentials Institutional Team"
+        }
+      ]
+    },
+    "global_policy_aligned_india": {
+      "id": "global_policy_aligned_india",
+      "theatre": "India Jaadui Pitara and IAP",
+      "audience": "Indian Foundational Stage Schools, Playboxes, and Pediatric Associations",
+      "from_name": "The Sound of Essentials Institutional Team",
+      "destination_url": "https://thesoundofessentials.com/signal",
+      "touches": [
+        {
+          "touch": 1,
+          "delay_days": 0,
+          "subject": "Zero-screen playbox rhythm",
+          "body": "Hello {{contact_name}},\n\nFoundational learners ages 2 to 7 retain phonemes fastest through joyful sound. Our independent curriculum is designed in alignment with Jaadui Pitara playbox principles without screens.\n\nSchools with {{organization}} can stream all 19 Rhythm Quest tracks free at https://soelearn.com/listen. Download educator guides at https://thesoundofessentials.com/signal.\n\nWould you like our tactile sound-before-symbols sheet for your teachers?\n\nRespectfully,\nThe Sound of Essentials Institutional Team"
+        },
+        {
+          "touch": 2,
+          "delay_days": 4,
+          "subject": "Acoustic focus for clinics",
+          "body": "Hello {{contact_name}},\n\nQuick follow-up for {{organization}}. Pediatric teams and preschool teachers pair our Five Neural Pathways Guide at https://thesoundofessentials.com/downloads/SOE_5_Neural_Pathways_Guide.html with everyday clay, pebbles, and clapping.\n\nThe Sound of Essentials is an independent curriculum designed in alignment with Foundational Stage screen-free wellness guidelines. Reply if you want digital pack licensing ($21 workbook) details.\n\nRespectfully,\nThe Sound of Essentials Institutional Team"
+        },
+        {
+          "touch": 3,
+          "delay_days": 9,
+          "subject": "Free audio resource hub",
+          "body": "Hello {{contact_name}},\n\nClosing our outreach sequence for {{organization}}. Please bookmark https://soelearn.com/listen for free classroom audio and https://thesoundofessentials.com/signal for printable guides and science citations.\n\nWe wish your teachers and pediatric partners a calm, thriving term.\n\nRespectfully,\nThe Sound of Essentials Institutional Team"
+        }
+      ]
+    }
+  }
+}

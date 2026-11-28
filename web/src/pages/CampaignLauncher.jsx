@@ -160,7 +160,7 @@ const FALLBACK_DIRECTIVES = [
     category: 'Paid Media & Conversion',
     summary:
       'Coordinates Engine A (/listen free gate), Engine B (/workbook & /shop direct), Engine C (90-day retargeting), and QPC B2B.',
-    content: `1. ENGINE A (70% Budget): Routes traffic to soelearn.com/listen for the free 19-track stream + $7 card-vaulting bump via Direct Stripe API.
+    content: `1. ENGINE A (70% Budget): Routes traffic to soelearn.com/listen for the free 19-track stream + $7 order bump via Direct Square Checkout.
 2. ENGINE B (20% Budget): Direct Tactile Showcase for the $35 Print Workbook and $55 Picture Dictionary (reserve your copy).
 3. ENGINE C (10% Budget): 90-Day Rhythm Guardian multi-touch retargeting bridge.
 4. INSTITUTIONAL QPC B2B: Routes school district & Head Start leads into Neon CRM (school_pilot stage) and Brevo List #12.`,
@@ -195,7 +195,7 @@ const FALLBACK_UNITS = [
     branch: 'executive_orchestration',
     data_sources: [
       'Neon Serverless PostgreSQL (mcls_approvals, mcls_memory_rules)',
-      'Direct Stripe Revenue Telemetry ($0 Free Gate, $35 Workbook, $55 Dictionary)',
+      'Direct Square Revenue Telemetry ($0 Free Gate, $35 Workbook, $55 Dictionary)',
       'Meta Ads Insights API & Brevo CRM Metrics',
     ],
     routines: [
@@ -571,7 +571,7 @@ const BRIDGE_TOOLS = [
   { name: 'mcls_forge_ad_bundle', desc: 'Edge-parity 3-Layer Meta/Pinterest Ad Builder (PAUSED state).' },
   { name: 'mcls_evaluate_rhythm_guardian', desc: 'Dual-Horizon Engine A/B ROAS, stop-loss & CPA evaluator.' },
   { name: 'mcls_foreman_compile_goal', desc: 'Compiles a plain-English goal into multi-unit gated cards.' },
-  { name: 'mcls_trigger_webhook_event', desc: 'Maps Stripe, Brevo, or telemetry webhooks into MCLS cards.' },
+  { name: 'mcls_trigger_webhook_event', desc: 'Maps Square, Brevo, or telemetry webhooks into MCLS cards.' },
   { name: 'mcls_stage_browser_takeover', desc: 'Pauses browser worker checkpoints for human verification.' },
 ];
 
@@ -1471,7 +1471,7 @@ const CampaignLauncher = () => {
               LIVE · SYNCED {syncedAt}
             </span>
             <span className="sl-status-muted">
-              CONNECTED: NEON · STRIPE · BREVO ·{' '}
+              CONNECTED: NEON · SQUARE · BREVO ·{' '}
               {metaStatus.is_configured ? 'META V21.0 LIVE' : 'META SANDBOX'}
             </span>
           </div>
@@ -3217,7 +3217,7 @@ const CampaignLauncher = () => {
                 </div>
                 <div style={{ fontSize: '12.5px', lineHeight: 1.5, color: 'rgba(10,10,10,0.78)' }}>
                   <strong>Rhythm Guardian Active:</strong> 90-day cohort attribution ledger
-                  protected. Direct Stripe card-vaulting &amp; Meta CAPI deduplication enabled on{' '}
+                  protected. Direct Square checkout &amp; Meta CAPI deduplication enabled on{' '}
                   <span className="sl-mono">soelearn.com</span>.
                 </div>
               </section>
@@ -3715,7 +3715,7 @@ const CampaignLauncher = () => {
       <footer className="sl-footer">
         <span>SOE-MCLS · GEN 3.5 · PROPRIETARY GROWTH ENGINE FOR AGES 2–7</span>
         <span className="sl-footer-accent">
-          SOELEARN.COM · HELIX GATE 1 VERIFIED · DIRECT STRIPE + NEON · SYNCED {syncedAt}
+          SOELEARN.COM · HELIX GATE 1 VERIFIED · DIRECT SQUARE + NEON · SYNCED {syncedAt}
         </span>
       </footer>
     </div>

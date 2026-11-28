@@ -190,6 +190,59 @@ const routes = [
     }),
   },
   {
+    route: '/signal',
+    title: 'The Seriphia Signal | Free 19-Track Screen-Free Acoustic Lifeline & Guides (Ages 2–7)',
+    description:
+      'Seriphia answers the early learning state of emergency for ages 2–7. Unlock the free 19-track studio-recorded acoustic lifeline, 5 Neural Pathways Guide, and Sensory Regulation Guide.',
+    extraSchemas: [
+      {
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'What is included free inside The Seriphia Signal for ages 2–7?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Families and educators unlock free streaming for all 19 master studio recordings (60–110 BPM) plus three printable screen-free guides: the First 10 Minutes Tactile Ritual Card, the 5 Neural Pathways Field Guide, and the SOE Sensory & Acoustic Regulation Guide.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'How does The Sound of Essentials support children ages 2–7 without screens?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Guided by Seriphia and 14 Land Heroes across 7 developmental Lands, the curriculum delivers Sound Before Symbol phonemic songs, bilateral midline movement, and tactile 10-block daily workbook routines for Pre-K through Grade 2.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Which print and digital editions follow the free 19-track signal?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Families can add the $7 Quest Starter & Coloring Pack, explore the Rhythm Quest Companion Storybook ($19 Digital / $35 Physical Print), order the 40-day Rhythm Ready Workbook ($21 Digital PDF / $45 Physical Print with Free US Shipping), or reserve their copy of the $55 Essential Picture Dictionary (4,000+ words across 125 scenes).',
+            },
+          },
+        ],
+      },
+    ],
+    bodyHtml: layoutShell({
+      badge: 'Staying on the Path, Always Learning · Ages 2–7',
+      h1: "Seriphia's Acoustic Signal for Early Learning",
+      bodyHtml: `
+        <p>Seriphia and 14 Land Heroes answer the early learning state of emergency for ages 2–7 with 19 master studio recordings with authentic human vocals and warm acoustic arrangements (60–110 BPM), paired with three printable screen-free guides.</p>
+        <h2>Included Free With Your Signal Unlock ($0)</h2>
+        <ul>
+          <li><a href="/player"><strong>19-Track Acoustic Streaming Player</strong></a> — Sound Before Symbol songs spanning all 7 Lands</li>
+          <li><a href="/assets/SOE_First_10_Minutes_Tactile_Ritual_Card.html"><strong>First 10 Minutes Tactile Ritual Card</strong></a> — Zero-prep circle-time and home routines</li>
+          <li><a href="/downloads/SOE_5_Neural_Pathways_Guide.html"><strong>The 5 Neural Pathways Field Guide</strong></a> — Auditory, spatial, midline motor, calming, and Socratic inquiry pathways</li>
+          <li><a href="/downloads/SOE_Sensory_Regulation_Guide.html"><strong>The SOE Sensory &amp; Acoustic Regulation Guide</strong></a> — Parent, OT, and SLP rhythmic pacing reference</li>
+        </ul>
+        <h2>5 Sanctuary Frequencies</h2>
+        <p>Explore Neuro-Parenting (<a href="/science">/science</a>), Micro-School Pods &amp; Classrooms (<a href="/institutions">/institutions</a>), Heritage &amp; Bilingual Immersion (<a href="/workbook#dictionary-presale">$55 Picture Dictionary — Reserve your copy</a>), Sensory Regulation (<a href="/sing-along-time">/sing-along-time</a>), and Tactile Print Editions (<a href="/rhythm-ready">$21 Digital / $45 Print Workbook</a>).</p>
+      `,
+    }),
+  },
+  {
     route: '/rhythm-ready',
     title: 'Rhythm Ready Workbook | 8-Week Screen-Free Preschool Readiness & Kindergarten Prep Activities (Ages 2–7)',
     description: 'Explore the 40-day Rhythm Ready Workbook (~400 tactile activities) and Essential Picture Dictionary (4,000+ words across 125 illustrated scenes) for ages 2–7.',

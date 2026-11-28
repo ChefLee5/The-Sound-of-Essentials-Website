@@ -153,6 +153,15 @@ export const trackLead = ({ email: _email = '', formName = 'gate1_listen', sourc
   if (typeof window.clarity === 'function') {
     window.clarity('event', 'lead_captured');
   }
+  if (typeof window.pintrk === 'function') {
+    window.pintrk('track', 'lead', { lead_type: formName, ...utms });
+  }
+  if (typeof window.rdt === 'function') {
+    window.rdt('track', 'Lead');
+  }
+  if (typeof window.twq === 'function') {
+    window.twq('track', 'Lead', { value: '1.00', currency: 'USD' });
+  }
 };
 
 /**
@@ -219,6 +228,12 @@ export const trackInitiateCheckout = ({
 
   if (typeof window.clarity === 'function') {
     window.clarity('event', 'checkout_initiated');
+  }
+  if (typeof window.pintrk === 'function') {
+    window.pintrk('track', 'checkout', { value: price, currency, order_quantity: 1 });
+  }
+  if (typeof window.rdt === 'function') {
+    window.rdt('track', 'AddToCart', { value: price, currency });
   }
 };
 

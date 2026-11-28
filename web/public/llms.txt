@@ -29,10 +29,11 @@ The curriculum spans 5 Core Domains of Essential Learning mapped across 7 Lands 
 *Note: Gabriel (Lil G, "The Keeper") is the unreleased 16th character reserved for founding members.*
 
 ## Product Ladder & Offer Architecture
+- **[The Seriphia Signal](https://thesoundofessentials.com/signal) ($0):** Free 19-track studio-recorded acoustic lifeline plus 3 printable screen-free guides (*First 10 Minutes Tactile Ritual Card*, *5 Neural Pathways Field Guide*, and *Sensory & Acoustic Regulation Guide*).
 - **[Free Album & Coloring Book](https://thesoundofessentials.com/listen) ($0):** Free lead magnet featuring 19 original educational songs and a printable 40-page coloring book.
 - **The Quest Starter Pack ($7):** In-cart bump & acute daily transition kit including 7-Land printable cue cards, refrigerator daily rhythm dial, phonics lyric sheets, and Seriphia's 432Hz bedtime calming track.
-- **SOE Rhythm Quest Illustrated Ebook ($19):** 66-page storybook companion through the 7 Lands.
-- **[Rhythm Ready Workbook](https://thesoundofessentials.com/rhythm-ready) ($21 Digital / $35 Print):** 8-week, 40-day readiness quest (Ages 2–7) across all 7 Lands.
+- **SOE Rhythm Quest Companion Storybook ($19 Digital / $35 Physical Print):** 66-page storybook companion through the 7 Lands.
+- **[Rhythm Ready Workbook](https://thesoundofessentials.com/rhythm-ready) ($21 Digital / $45 Physical Print):** 8-week, 40-day readiness quest (Ages 2–7) across all 7 Lands.
 - **The Complete Quest Pack ($49):** High-value bundle featuring the Ebook, Picture Dictionary digital edition, and audio masters.
 - **[Essential Picture Dictionary — Reserve Your Copy](https://thesoundofessentials.com/workbook#dictionary-presale) ($55 / $79 compare-at):** Reserve your copy today (digital delivery upon official release). 4,000+ words across 125 scenes with phonetic guides and ASL sign descriptions.
 - **The Rhythm Pass ($14.99/mo):** Recurring monthly adventure membership with interactive audio drops and learning modules.
@@ -40,6 +41,9 @@ The curriculum spans 5 Core Domains of Essential Learning mapped across 7 Lands 
 ## Website Routes & Canonical Links
 - [Home Experience](https://thesoundofessentials.com/): Core entry with the brand story, 5 domains layout, book features, and primary CTAs.
 - [The Learning Library (4-Part Guides for Ages 2–7)](https://thesoundofessentials.com/resources): Structured 4-part screen-free early learning library for ages 2–7 covering [Part 1: Sound Foundations](https://thesoundofessentials.com/resources/foundations), [Part 2: Play & Daily Practice](https://thesoundofessentials.com/resources/play), [Part 3: Kindergarten Readiness](https://thesoundofessentials.com/resources/readiness), [Part 4: Home & Classroom Systems](https://thesoundofessentials.com/resources/classrooms), and [The SOE Sound Notes Archive](https://thesoundofessentials.com/resources/notes).
+- [The Seriphia Signal (19-Track Lifeline & Printable Guides)](https://thesoundofessentials.com/signal): Flagship Ages 2–7 screen-free lifeline, empirical early-learning receipts, and 5 Sanctuary Frequencies.
+- [The 5 Neural Pathways Field Guide (Printable HTML)](https://thesoundofessentials.com/downloads/SOE_5_Neural_Pathways_Guide.html): Neuro-parenting field guide mapping all 5 developmental pathways across the 7 Lands.
+- [The SOE Sensory & Acoustic Regulation Guide (Printable HTML)](https://thesoundofessentials.com/downloads/SOE_Sensory_Regulation_Guide.html): Parent, OT & SLP reference for 60–110 BPM rhythmic pacing and transition resets.
 - [Free 19-Track Album Experience](https://thesoundofessentials.com/listen): Lead magnet gateway and streaming player for the 19-track album.
 - [Rhythm Ready 8-Week Readiness Quest](https://thesoundofessentials.com/rhythm-ready): Dedicated sales and curriculum breakdown for the 8-Week Rhythm Ready Workbook.
 - [The Seven Lands & 15 Hero Mentors](https://thesoundofessentials.com/heroes): Interactive explorer and character catalog across all 7 Lands.
@@ -102,4 +106,12 @@ The curriculum spans 5 Core Domains of Essential Learning mapped across 7 Lands 
 - [Substack Pedagogical Journal](https://thesoundofessentials.substack.com): Sound Before Symbol — early learning neuroscience and living room sanctuary research.
 - [Wellfound Organization Profile](https://wellfound.com/company/the-sound-of-essentials): Startup ecosystem, mission architecture, and team.
 - [GitHub Organization & Repos](https://github.com/ChefLee5/The-Sound-of-Essentials-Website): Open-source tools, curriculum generators, and web codebase.
+
+## Agentic Web & Web3 Protocol Endpoints
+- [A2A AgentCard](https://thesoundofessentials.com/.well-known/agent.json): Standard Agent-to-Agent discovery card and skill registry for Seriphia.
+- [ERC-8004 Registration & Provenance](https://thesoundofessentials.com/.well-known/erc8004.json): On-chain trustless agent metadata and studio audio provenance attestation.
+- [x402 Digital Catalog](https://thesoundofessentials.com/api/agent/catalog): Machine-readable Base USDC digital SKU directory.
+- [x402 HTTP 402 Purchase Endpoint](https://thesoundofessentials.com/api/agent/purchase): Automated HTTP 402 digital checkout for AI agents.
+- [Farcaster Frame v2 Signal](https://thesoundofessentials.com/api/frames/signal): Interactive social frame embedding The Seriphia Signal.
+- [MCLS MCP Bridge](https://thesoundofessentials.com/api/mcls/bridge): JSON-RPC 2.0 / MCP remote command bridge.
 

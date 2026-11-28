@@ -10,14 +10,19 @@ If this file has no tasks (only headers and comments), the agent will skip it. C
 
 ## Active Tasks
 
-- [ ] **SOE B2B Outreach Cohort Runner**:
-  Run `python scripts/nanobot_outreach_bridge.py status` to inspect lead queues and ledger.
-  Check how many leads remain in Pillar I and Pillar V.
-  When instructed or on schedule, dispatch the next 25-lead cohort using `python scripts/nanobot_outreach_bridge.py run-cohort --pillar 1 --size 25`.
-  Report any newly dispatched cohort count or delivery errors.
+- [ ] **SOE B2B Outreach Cohort Runner (Concord 1,209 & Global Advocacy 126)**:
+  Run `python scripts/nanobot_outreach_bridge.py status --json` to inspect Concord lead queues (`1,209` total) and `python scripts/nanobot_outreach_bridge.py status --theatre global-advocacy --json` for ranked Global Advocacy targets (`126` total).
+  Check remaining leads in Pillar I, Pillar V, Singapore (`Grow Well SG`), Caribbean ECC, and India (`Jaadui Pitara`).
+  When instructed or on schedule, stage dry-run briefs first using `python scripts/nanobot_outreach_bridge.py run-cohort --pillar 1 --size 25` and `python scripts/nanobot_outreach_bridge.py run-cohort --theatre global-advocacy --size 10`. Never pass `--send` without explicit human approval.
+  Report staged cohort counts, template lint health (`leads/seriphia_signal_campaigns.json`), or delivery errors.
 
-- [ ] **Inbound Educator Reply Triage**:
-  Monitor for replies from preschool directors or Head Start leaders.
-  Draft grounded replies offering the gift link to the **SOE ECE Lesson Extender Tool** (`SOE_ECE_Lesson_Extender_Tool.html`).
+- [ ] **Inbound Educator & Clinic Reply Triage (MyClaw Inbox Triage)**:
+  Monitor for replies from preschool directors, Head Start leaders, micro-school pods, and pediatric OT/SLP clinics.
+  Classify and draft grounded human-review replies via `python scripts/nanobot_outreach_bridge.py triage-inbox --body "<reply>" --org "<org>" --framework "<framework>" --stage --json`.
+  Intents handled: `PILOT_INTEREST`, `CLINICAL_SAMPLE_REQUEST`, `POD_KIT_INQUIRY`, `OBJECTION`, and `UNSUBSCRIBE`, using Haystack standards crosswalks and SOE-owned gift links (`/signal`, `SOE_Sensory_Regulation_Guide.html`, `SOE_5_Neural_Pathways_Guide.html`).
+
+- [ ] **Daily Seriphia Signal Pulse & Channel Pacing (Meta Cooldown Active)**:
+  Run daily `rt-mcls-pulse` (Reddit `r/ECEProfessionals`, `r/Preschoolers`, `r/teachers`, `r/Montessori`, `r/OccupationalTherapy`, `r/Parenting` + X social scan) and `rt-signal-global-stage` via `autonomous-systems-stack/runner.py`.
+  Keep paid media pacing locked to `40% Google / 25% Pinterest / 20% X.com / 15% Reddit` while Meta remains in `PAUSED_AUTOMATION_COOLDOWN`.
 
 

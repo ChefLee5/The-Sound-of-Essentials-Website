@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { appendUtmsToUrl } from '../utils/analytics';
+import { useSquareCheckoutAction } from '../utils/checkout';
 import './PhilanthropicDonationSection.css';
-
-const STRIPE_DONATION_FALLBACK = 'https://buy.stripe.com/test_14A9AT9BO4S140mc706Vq09';
 
 const PRESET_AMOUNTS = [
   { amount: 25, label: '$25' },
@@ -25,8 +23,10 @@ export const PhilanthropicDonationSection = ({ className = '' }) => {
     }
   }, []);
 
-  const rawStripeUrl = import.meta.env.VITE_STRIPE_DONATION_URL || STRIPE_DONATION_FALLBACK;
-  const targetStripeUrl = appendUtmsToUrl(rawStripeUrl);
+  const { href, isLaunching, notice, handleClick } = useSquareCheckoutAction({
+    handle: 'soe-philanthropic-donation',
+    amountCents: selectedAmount ? selectedAmount * 100 : null,
+  });
 
   return (
     <section className={`mission-donation-section ${className}`} id="philanthropy">
@@ -74,19 +74,27 @@ export const PhilanthropicDonationSection = ({ className = '' }) => {
 
         <div className="mission-donation-action">
           <a
-            href={targetStripeUrl}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={href}
+            onClick={handleClick}
+            aria-busy={isLaunching}
             className="btn btn-gold mission-donation-btn"
           >
-            {selectedAmount
-              ? `Donate $${selectedAmount} via Stripe →`
-              : 'Donate via Stripe Checkout →'}
+            {isLaunching
+              ? 'Opening Square Checkout...'
+              : selectedAmount
+                ? `Donate $${selectedAmount} via Square →`
+                : 'Donate via Square Checkout →'}
           </a>
         </div>
 
+        {notice && (
+          <p className="mission-donation-footnote" role="status" style={{ color: '#B45309', marginTop: '0.75rem' }}>
+            {notice}
+          </p>
+        )}
+
         <p className="mission-donation-footnote">
-          Secure payment processed directly through Stripe. Crafted by a father&apos;s heart and a mother&apos;s love.
+          Secure payment processed directly through Square. Crafted by a father&apos;s heart and a mother&apos;s love.
         </p>
       </div>
     </section>

@@ -1,5 +1,5 @@
 from typing import Dict, Any, List, Optional
-from soe_mcls.canon import CULTURAL_DELTAS, PRODUCTION_CAMPAIGNS, validate_three_layer_ad
+from soe_mcls.canon import CULTURAL_DELTAS, PRODUCTION_CAMPAIGNS, ALL_CAMPAIGNS, validate_three_layer_ad
 from soe_mcls.config import settings
 
 MULTILINGUAL_TEMPLATES = {
@@ -128,7 +128,7 @@ class CreativeForge:
     ) -> Dict[str, Any]:
         if delta not in CULTURAL_DELTAS:
             raise ValueError(f"Unknown Cultural Delta: {delta}")
-        if campaign not in PRODUCTION_CAMPAIGNS:
+        if campaign not in ALL_CAMPAIGNS:
             raise ValueError(f"Unknown Production Campaign: {campaign}")
 
         lang_dict = MULTILINGUAL_TEMPLATES.get(language, MULTILINGUAL_TEMPLATES["en"])
@@ -156,7 +156,7 @@ class CreativeForge:
             f"Warm, grounded, tactile editorial photograph in golden morning light. "
             f"A parent and a 4-year-old child sitting on a woven rug exploring an open illustrated picture dictionary "
             f"and clapping to music. Screen-free sanctuary aesthetic, Kodak Portra 400 film grain, "
-            f"theme: {CULTURAL_DELTAS[delta]}, campaign: {PRODUCTION_CAMPAIGNS[campaign]}."
+            f"theme: {CULTURAL_DELTAS[delta]}, campaign: {ALL_CAMPAIGNS[campaign]}."
         )
 
         return {

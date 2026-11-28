@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The SOE Sensory &amp; Acoustic Regulation Guide | Ages 2–7 Parent, OT &amp; SLP Reference</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-cream: #FFF8F0;
+      --card-white: #FFFFFF;
+      --brand-orange: #FF6F00;
+      --brand-orange-soft: #FFF0E0;
+      --aquaria-blue: #5ba4c9;
+      --aquaria-soft: #EFF8FC;
+      --terrasol-green: #5fb685;
+      --terrasol-soft: #ECFDF5;
+      --vitalis-clay: #c4785a;
+      --text-dark: #1F2937;
+      --text-muted: #4B5563;
+      --border-warm: #F3E5D8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg-cream);
+      color: var(--text-dark);
+      line-height: 1.55;
+      padding: 24px 16px 48px;
+    }
+
+    h1, h2, h3, .pill-badge, .btn-pill {
+      font-family: 'Fredoka', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    .toolbar {
+      max-width: 880px;
+      margin: 0 auto 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 22px;
+      border-radius: 50px;
+      font-size: 14.5px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .btn-pill:hover {
+      transform: translateY(-1px);
+    }
+
+    .btn-orange {
+      background-color: var(--brand-orange);
+      color: #FFFFFF;
+      box-shadow: 0 4px 14px rgba(255, 111, 0, 0.28);
+    }
+
+    .btn-outline {
+      background-color: var(--card-white);
+      color: var(--text-dark);
+      border: 2px solid var(--border-warm);
+    }
+
+    .sheet {
+      max-width: 880px;
+      margin: 0 auto;
+      background: var(--card-white);
+      border-radius: 24px;
+      border: 2px solid var(--border-warm);
+      box-shadow: 0 12px 32px rgba(31, 41, 55, 0.06);
+      overflow: hidden;
+    }
+
+    .sheet-header {
+      background: linear-gradient(135deg, #2B7A9E 0%, #5ba4c9 100%);
+      color: #FFFFFF;
+      padding: 28px 32px;
+    }
+
+    .header-pills {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .pill-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 14px;
+      border-radius: 50px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+    }
+
+    .pill-frosted {
+      background: rgba(255, 255, 255, 0.22);
+      color: #FFFFFF;
+    }
+
+    .pill-orange {
+      background: var(--brand-orange);
+      color: #FFFFFF;
+    }
+
+    .sheet-title {
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 6px;
+    }
+
+    .sheet-subtitle {
+      font-size: 14.5px;
+      opacity: 0.96;
+      font-weight: 500;
+    }
+
+    .sheet-body {
+      padding: 28px 32px;
+    }
+
+    .section {
+      margin-bottom: 24px;
+    }
+
+    .section:last-child {
+      margin-bottom: 0;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 16.5px;
+      font-weight: 700;
+      color: var(--brand-orange);
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      margin-bottom: 10px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid var(--bg-cream);
+    }
+
+    .scope-box {
+      background: var(--aquaria-soft);
+      border-left: 5px solid var(--aquaria-blue);
+      padding: 14px 18px;
+      border-radius: 0 14px 14px 0;
+      font-size: 14.5px;
+      color: #0C4A6E;
+    }
+
+    .tempo-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    @media (max-width: 680px) {
+      .tempo-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .tempo-card {
+      background: var(--bg-cream);
+      border: 1.5px solid var(--border-warm);
+      border-radius: 16px;
+      padding: 16px 18px;
+    }
+
+    .tempo-card h3 {
+      font-size: 16px;
+      color: var(--text-dark);
+      margin-bottom: 6px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .tempo-badge {
+      font-size: 11.5px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 50px;
+      background: #FFFFFF;
+      border: 1px solid var(--border-warm);
+      color: var(--brand-orange);
+    }
+
+    .tempo-card ul {
+      padding-left: 18px;
+      font-size: 13.5px;
+      color: var(--text-muted);
+    }
+
+    .tempo-card li {
+      margin-bottom: 5px;
+    }
+
+    .reset-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+    }
+
+    .reset-step {
+      background: #FFFFFF;
+      border: 1.5px solid var(--border-warm);
+      border-radius: 14px;
+      padding: 14px 16px;
+      font-size: 13.5px;
+    }
+
+    .reset-step strong {
+      display: block;
+      font-family: 'Fredoka', sans-serif;
+      font-size: 15px;
+      color: var(--brand-orange);
+      margin-bottom: 4px;
+    }
+
+    .blocks-box {
+      background: var(--terrasol-soft);
+      border: 1.5px solid #A7F3D0;
+      border-radius: 14px;
+      padding: 14px 18px;
+      font-size: 13.5px;
+      color: #065F46;
+    }
+
+    .crosswalk-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      margin-top: 6px;
+    }
+
+    .crosswalk-table th,
+    .crosswalk-table td {
+      padding: 10px 12px;
+      border: 1px solid var(--border-warm);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .crosswalk-table th {
+      background: var(--bg-cream);
+      font-weight: 700;
+      color: var(--text-dark);
+      width: 28%;
+    }
+
+    .next-step-banner {
+      margin-top: 18px;
+      background: var(--bg-cream);
+      border: 2px dashed var(--brand-orange);
+      border-radius: 16px;
+      padding: 16px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .next-step-text {
+      font-size: 13.5px;
+      max-width: 560px;
+    }
+
+    .next-step-text strong {
+      color: var(--brand-orange);
+      font-size: 15px;
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .sheet-footer {
+      text-align: center;
+      font-size: 11.5px;
+      color: var(--text-muted);
+      padding: 16px 24px;
+      background: var(--bg-cream);
+      border-top: 1.5px solid var(--border-warm);
+      line-height: 1.6;
+    }
+
+    @media print {
+      body {
+        background: #FFFFFF;
+        padding: 0;
+      }
+      .toolbar {
+        display: none !important;
+      }
+      .sheet {
+        box-shadow: none;
+        border: 1px solid #D1D5DB;
+        max-width: 100%;
+        border-radius: 12px;
+      }
+      .sheet-header,
+      .scope-box,
+      .tempo-card,
+      .blocks-box,
+      .pill-badge {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      @page {
+        size: letter portrait;
+        margin: 1cm;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="toolbar">
+    <a href="/signal" class="btn-pill btn-outline">&larr; Back to The Seriphia Signal</a>
+    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+      <a href="/institutions" class="btn-pill btn-outline">Classroom &amp; Clinic Frameworks</a>
+      <button type="button" onclick="window.print()" class="btn-pill btn-orange">Print / Save Sensory Guide (PDF)</button>
+    </div>
+  </div>
+
+  <article class="sheet">
+    <header class="sheet-header">
+      <div class="header-pills">
+        <span class="pill-badge pill-frosted">The Seriphia Signal · Parent, OT &amp; SLP Reference</span>
+        <span class="pill-badge pill-orange">Ages 2–7 · Screen-Free Acoustic Pacing</span>
+      </div>
+      <h1 class="sheet-title">The SOE Sensory &amp; Acoustic Regulation Guide</h1>
+      <p class="sheet-subtitle">
+        Predictable Rhythmic Auditory Pacing &amp; Tactile Transition Rituals Across the 7 Lands · Guided by Seriphia
+      </p>
+    </header>
+
+    <main class="sheet-body">
+      <section class="section">
+        <h2 class="section-title">1. Educational Scope &amp; Sensory-First Design</h2>
+        <div class="scope-box">
+          <strong>Educational Curriculum Reference (Not Medical Treatment):</strong> Every sensory-seeking child is an explorer on a quest. The Sound of Essentials provides <strong>19 master studio recordings with authentic human vocals and warm acoustic arrangements</strong> paired with structured tactile routines for ages 2–7. Steady acoustic rhythm removes unpredictable cartoon flash and volume spikes so children can co-regulate with a caregiver, therapist, or teacher.
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">2. Rhythmic Auditory Stimulation (RAS) Tempo Zones</h2>
+        <div class="tempo-grid">
+          <div class="tempo-card">
+            <h3>
+              <span>Down-Regulation &amp; Calm Zone</span>
+              <span class="tempo-badge">60–80 BPM</span>
+            </h3>
+            <ul>
+              <li><strong>Goal:</strong> Lower post-screen agitation, support smooth nap or bedtime wind-down, and lengthen exhalation.</li>
+              <li><strong>Land Mentors:</strong> Aquaria (Nerissa &amp; Ronan) and Terrasol (Vesta &amp; Silas).</li>
+              <li><strong>Recommended Tracks:</strong> Track 06 (<em>Let's Stretch</em>), Track 14 (<em>The Ocean</em>), Track 18 (<em>Rain</em>), and Track 19 (<em>After the Storm</em>).</li>
+              <li><strong>Sensory Cue:</strong> Pair audio with slow hand pressure on a cushion or gentle rocking on the rug.</li>
+            </ul>
+          </div>
+
+          <div class="tempo-card">
+            <h3>
+              <span>Organizing Movement &amp; Speech Zone</span>
+              <span class="tempo-badge">90–110 BPM</span>
+            </h3>
+            <ul>
+              <li><strong>Goal:</strong> Provide crisp temporal structure for bilateral midline crossing, syllable pacing, and joyful energy release.</li>
+              <li><strong>Land Mentors:</strong> Vitalis (Felix &amp; Amara) and Harmonia (Kenji &amp; Aiko).</li>
+              <li><strong>Recommended Tracks:</strong> Track 03 (<em>Alphabet Song Remix</em>), Track 07 (<em>Drill Time</em>), and Track 08 (<em>Numbers</em>).</li>
+              <li><strong>Sensory Cue:</strong> Tap palms or wooden spoons on knees in alternating left-right patterns on every strong beat.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">3. The 3-Step Transition Reset Protocol (Ordinary Room Objects)</h2>
+        <div class="reset-grid">
+          <div class="reset-step">
+            <strong>Step 1 · Clear Visual Noise</strong>
+            Close or turn off bright screens. Offer one tactile object already in the room: a folded washcloth, two wooden spoons, or a soft cushion.
+          </div>
+          <div class="reset-step">
+            <strong>Step 2 · Anchor the Body (Vitalis)</strong>
+            Start Track 06 (<em>Let's Stretch</em>) or Track 07 (<em>Drill Time</em>). Invite four slow nose inhales, six-count exhales, and cross-midline knee taps.
+          </div>
+          <div class="reset-step">
+            <strong>Step 3 · Settle the Breath (Aquaria)</strong>
+            Rest both palms gently on the ribcage and hum a soft <em>"Mmmmm"</em> for three calm breaths before starting seated play or table work.
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">4. Predictable 10-Block Readiness Structure (A–J)</h2>
+        <div class="blocks-box">
+          <strong>Low-Friction Predictability:</strong> The <em>Rhythm Ready Workbook</em> organizes 40 days of learning across <strong>10 short daily blocks (A through J)</strong> totaling roughly 15 minutes. Predictable block order reduces transition friction for sensory-sensitive learners while reinforcing fine-motor grip, auditory speech clarity, and spatial focus without screen stimulation.
+        </div>
+
+        <table class="crosswalk-table" style="margin-top: 12px;">
+          <tr>
+            <th>Speech &amp; Phonemic Focus</th>
+            <td>Track 03 (<em>Alphabet Song Remix</em>), Track 10 (<em>Manners</em>), and Track 15 (<em>Hard Words</em>) slow multisyllabic boundaries so children hear and articulate stops cleanly.</td>
+          </tr>
+          <tr>
+            <th>Proprioception &amp; Bilateral Coordination</th>
+            <td>Track 06 (<em>Let's Stretch</em>) and Track 07 (<em>Drill Time</em>) guide symmetrical reach, tiptoe balance, and left-right limb isolation for ages 2–7.</td>
+          </tr>
+          <tr>
+            <th>Safe Audio Pairing</th>
+            <td>Keep room speakers at gentle conversational levels (55–65 dB in active play; 30–40 dB for rest), or pair with wired 74/85 dB volume-limited sensory headphones.</td>
+          </tr>
+        </table>
+
+        <div class="next-step-banner">
+          <div class="next-step-text">
+            <strong>Bring Tactile, Screen-Free Regulation Home or Into Your Clinic</strong>
+            Unlock all 19 studio tracks free ($0) on <b>/signal</b>, add the $7 Quest Starter Pack (40-page coloring book + 432Hz reset track + daily rhythm dial), or order the $21 Digital / $45 Physical Print <em>Rhythm Ready Workbook</em> (Free US Shipping via Lulu POD). Instant digital delivery and dedicated support.
+          </div>
+          <a href="/institutions" class="btn-pill btn-orange">Clinic &amp; Classroom Packets &rarr;</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="sheet-footer">
+      <div><strong>The Sound of Essentials Collective</strong> · Voiced by Seriphia · Staying on the path, always learning · Ages 2–7 (Pre-K to Grade 2) · <a href="/signal" style="color: #FF6F00; text-decoration: none;">thesoundofessentials.com/signal</a></div>
+      <div style="margin-top: 6px;">The Sound of Essentials (SOE) is an independent educational curriculum designed in alignment with publicly published early-childhood health and learning guidelines (including Head Start ELOF, NAEYC, WHO under-5 screen guidelines, AAP pediatric recommendations, Singapore Grow Well SG, India IAP, and Caribbean ECC pillars). Alignment reflects pedagogical design and does not imply formal endorsement, accreditation, or sponsorship by any government agency or intergovernmental body. Not a substitute for individualized clinical evaluation or therapy.</div>
+    </footer>
+  </article>
+
+</body>
+</html>

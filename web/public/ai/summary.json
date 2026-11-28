@@ -74,6 +74,12 @@
   ],
   "productLadder": [
     {
+      "product": "The Seriphia Signal (19-Track Lifeline + 3 Printable Field Guides)",
+      "price": "$0",
+      "type": "Lead Magnet",
+      "url": "https://thesoundofessentials.com/signal"
+    },
+    {
       "product": "Deluxe 19-Track Album & Coloring Book",
       "price": "$0",
       "type": "Lead Magnet",
@@ -86,14 +92,14 @@
       "description": "7-Land tactile rhythm cue cards, refrigerator daily dial, phonics lyric sheets, Seriphia 432Hz calming track"
     },
     {
-      "product": "Rhythm Quest Illustrated Ebook",
-      "price": "$19",
-      "type": "Digital Companion",
+      "product": "Rhythm Quest Companion Storybook",
+      "price": "$19 Digital / $35 Physical Print",
+      "type": "Storybook Companion",
       "pages": 66
     },
     {
       "product": "Rhythm Ready Workbook",
-      "price": "$21 Digital / $35 Print",
+      "price": "$21 Digital / $45 Physical Print",
       "type": "8-Week Readiness Quest",
       "url": "https://thesoundofessentials.com/rhythm-ready"
     },
@@ -114,13 +120,29 @@
     "available": true,
     "tools": [
       {
-        "name": "explore_land",
-        "description": "Explore the 7 Lands of Rhythm Quest"
+        "name": "seriphia_recommend_pathway",
+        "description": "Recommend an Ages 2–7 Land, Hero Mentors, track, and field guide by child age and focus"
       },
       {
-        "name": "stream_track",
-        "description": "Stream 19 original educational audio tracks"
+        "name": "seriphia_unlock_free_signal",
+        "description": "Unlock all 19 studio tracks and 3 printable screen-free guides ($0)"
+      },
+      {
+        "name": "seriphia_crosswalk_standards",
+        "description": "Crosswalk SOE rituals to Head Start ELOF, NAEYC, WHO, Grow Well SG, and Caribbean ECC"
+      },
+      {
+        "name": "seriphia_generate_referral_link",
+        "description": "Generate soelearn.com/signal?ref= links for the 30%–35% Share the Sound Ambassador loop"
       }
     ]
+  },
+  "agenticProtocols": {
+    "a2aAgentCard": "https://thesoundofessentials.com/.well-known/agent.json",
+    "erc8004Registration": "https://thesoundofessentials.com/.well-known/erc8004.json",
+    "x402Catalog": "https://thesoundofessentials.com/api/agent/catalog",
+    "x402Purchase": "https://thesoundofessentials.com/api/agent/purchase",
+    "mcpBridge": "https://thesoundofessentials.com/api/mcls/bridge",
+    "farcasterFrame": "https://thesoundofessentials.com/api/frames/signal"
   }
 }
