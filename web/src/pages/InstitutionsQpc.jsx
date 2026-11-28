@@ -7,6 +7,7 @@ import JsonLd from '../components/JsonLd';
 import KineticHeadline from '../components/KineticHeadline';
 import { institutionalFaqSchema } from '../utils/schema';
 import { usePageMeta } from '../hooks/usePageMeta';
+import { assetPath } from '../utils/assetPath';
 import './InstitutionsQpc.css';
 
 export default function InstitutionsQpc() {
@@ -80,7 +81,7 @@ export default function InstitutionsQpc() {
       '@context': 'https://schema.org',
       '@type': 'EducationalOrganization',
       name: 'The Sound of Essentials: Rhythm Quest Institutional Concord',
-      description: 'Turnkey acoustic screen-free early learning curriculum for ages 2–7. 19 original tracks across 7 developmental lands, 400 hands-on readiness activities, and 4,000+ vocabulary words designed in alignment with Head Start ELOF, NAEYC standards, and leading international screen-free early-childhood guidelines.',
+      description: 'Turnkey acoustic screen-free early learning curriculum for ages 2–7. 19 original tracks across 7 developmental lands, 440 daily activity blocks (A–K) with Socratic critical thinking, and 4,000+ vocabulary words designed in alignment with Head Start ELOF, NAEYC standards, and leading international screen-free early-childhood guidelines.',
       url: 'https://soelearn.com/institutions',
       email: 'info@soelearn.com',
       audience: {
@@ -326,6 +327,48 @@ export default function InstitutionsQpc() {
               </div>
               <p className="qpc-compliance-note">{t('institutions.compliance_note')}</p>
 
+              {/* Founding Preschool & Head Start Pilot Cohort */}
+              <div className="qpc-pilot-cohort">
+                <span className="qpc-pilot-cohort__badge">Founding Pilot Cohort · 5 to 10 Sites</span>
+                <h3>8-Week Classroom Pilot &amp; 14-Day Onboarding Check-In</h3>
+                <p className="qpc-pilot-cohort__lead">
+                  We partner with 5 to 10 preschools and Head Start centers each term (Ages 2–7).
+                  Your team receives turnkey circle-time templates and bounded advocate support during launch.
+                </p>
+                <div className="qpc-pilot-cohort__grid">
+                  <div className="qpc-pilot-item">
+                    <strong>10-Minute Circle-Time Templates</strong>
+                    <p>Print the First 10 Minutes Tactile Ritual Card and run it tomorrow morning.</p>
+                  </div>
+                  <div className="qpc-pilot-item">
+                    <strong>8-Week Classroom Victory Chart</strong>
+                    <p>Track daily 11-block (A–K) milestones and Block K Socratic Sparks across all 7 Lands.</p>
+                  </div>
+                  <div className="qpc-pilot-item">
+                    <strong>14-Day Onboarding Feedback Window</strong>
+                    <p>Send teacher notes within 14 days to receive tailored pacing tips from our advocates.</p>
+                  </div>
+                </div>
+                <div className="qpc-pilot-cohort__links">
+                  <a
+                    href={assetPath('/assets/SOE_First_10_Minutes_Tactile_Ritual_Card.html')}
+                    target="_blank"
+                    rel="noopener"
+                    className="qpc-pilot-link"
+                  >
+                    🖨️ Preview 10-Min Circle-Time Template →
+                  </a>
+                  <a
+                    href={assetPath('/assets/SOE_8Week_Milestone_Victory_Tracker.html')}
+                    target="_blank"
+                    rel="noopener"
+                    className="qpc-pilot-link"
+                  >
+                    🖨️ Preview 8-Week Classroom Milestone Tracker →
+                  </a>
+                </div>
+              </div>
+
               {/* Application Form */}
               <div className="qpc-booking-box">
                 <h3>{t('institutions.step3_title')}</h3>
@@ -405,7 +448,8 @@ export default function InstitutionsQpc() {
                 <ol>
                   <li>An SOE Education Advocate will follow up personally within 24 business hours to ask about your loudest classroom transition.</li>
                   <li>You will receive your customized 50-State Head Start ELOF / NAEYC crosswalk exhibit via email.</li>
-                  <li>We will send a zero-prep 10-minute Tactile Ritual Card and complimentary Director Review Pass for your teachers to test tomorrow morning.</li>
+                  <li>We will send a zero-prep 10-minute Tactile Ritual Card, the 8-Week Classroom Milestone Tracker, and your Director Review Pass.</li>
+                  <li>Pilot cohorts receive a 14-day onboarding check-in with our Education Advocates to refine classroom pacing.</li>
                 </ol>
               </div>
 

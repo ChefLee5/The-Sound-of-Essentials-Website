@@ -256,17 +256,17 @@ const RhythmReadyHero = () => {
               scrollTrigger={false}
             >
               Workbook &amp; Curriculum
-              <span className="rq-hero__title-accent">8 Weeks. 40 Days. 240+ Activities.</span>
+              <span className="rq-hero__title-accent">8 Weeks. 40 Days. 440 Activity Blocks.</span>
             </KineticHeadline>
 
             <p className="section-subtitle rq-hero__hook">
-              Build kindergarten-ready phonics, focus, and calm without glowing screens or prep burnout.
+              Build phonics, number sense, and critical thinking in 8 structured weeks (40 days, Ages 2–7).
             </p>
 
             <p className="rq-hero__lede">
-              An analog, screen-free 8-week learning journey for Pre-K through Grade 2 (ages 2 to 7). Ten bite-sized
-              daily tactile blocks spanning phonics, math, science, somatic movement,
-              geography/civics, and reflection. Sound before symbol. Paired with our free 19-track acoustic album and 10-minute tactile ritual card.
+              An analog, screen-free 8-week learning journey for Pre-K through Grade 2 (ages 2 to 7). Eleven bite-sized
+              daily tactile blocks (A–K) spanning phonics, math, science, somatic movement,
+              geography/civics, fine motor, rhythm, hero lore, reflection, and Seriphia’s Socratic critical thinking. Paired with our free 19-track album and 10-minute tactile ritual card.
             </p>
 
             <div className="rq-hero__offer">
@@ -289,7 +289,7 @@ const RhythmReadyHero = () => {
               <ul className="rq-hero__assure">
                 <li>Instant PDF ($21) or 454-page physical print ($45)</li>
                 <li>Free Standard US Shipping on physical print</li>
-                <li>Built for Ages 2–7 (Pre-K to Grade 2)</li>
+                <li>Includes printable 8-Week Milestone &amp; Victory Tracker (Ages 2–7)</li>
               </ul>
 
               <p className="rq-hero__free-note">
@@ -342,7 +342,7 @@ const RhythmReadyHero = () => {
         >
           <div className="rq-hero__path-head">
             <span className="rq-hero__path-title">The 8-Week Rhythm Ready Journey</span>
-            <span className="rq-hero__path-sub">5 days a week, 6 daily blocks (~16 min/day). A clear path from Day 1 to Day 40.</span>
+            <span className="rq-hero__path-sub">5 days a week, 11 daily blocks (A–K). A clear path from Day 1 to Day 40.</span>
           </div>
 
           <div className="rq-hero__track" aria-hidden="true">
@@ -385,7 +385,7 @@ const proofEvidence = [
     pullNote: 'learning loss avoided',
     claim: '15 minutes of daily structured practice builds bedrock mastery and momentum.',
     detail: 'Studies indicate that students lose up to 2.5 months of reading and math skills without regular reinforcement. Micro-dosed daily rhythm halts regression completely.',
-    soWhat: 'So we designed 6 daily blocks totaling just 16 minutes: bite-sized, engaging, and impossible to burn out on.',
+    soWhat: 'We designed 11 bite-sized daily blocks (A–K) totaling ~35 minutes of playful rhythm, fine motor practice, and Socratic critical thinking.',
     href: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC3121007/',
     cite: 'Harvard Graduate School of Education & Frontiers in Psychology',
     tint: 'var(--color-orange)',
@@ -421,7 +421,8 @@ const proofEvidence = [
 
 const makerChips = [
   '8 Weeks · 40 Day-by-Day Lessons',
-  '240+ Core Activity Blocks',
+  '440 Daily Activity Blocks (A–K)',
+  'Block K: Socratic Critical Thinking',
   'Ages 2–7 (Pre-K to Grade 2)',
   'Sound Before Symbol Phonetics',
   'Full-Color & Printable',
@@ -557,7 +558,7 @@ const RhythmReadyProof = () => {
 };
 
 /* ═══════════════════════════════════════════════════════════════
-   WHAT'S INSIDE — THE 6 DAILY BLOCKS
+   WHAT'S INSIDE — THE 11 DAILY BLOCKS (A–K)
    ═══════════════════════════════════════════════════════════════ */
 const DAILY_BLOCKS = [
   {
@@ -582,7 +583,7 @@ const DAILY_BLOCKS = [
     subject: 'Science & Nature',
     land: 'Terrasol & Celestia',
     color: '#4CAF50',
-    desc: 'Plant growth, animal habitats, weather systems, solar astronomy, and the scientific method.',
+    desc: 'Plant growth, animal habitats, weather systems, solar astronomy, and hands-on sensory inquiry.',
   },
   {
     block: 'Block D',
@@ -608,6 +609,47 @@ const DAILY_BLOCKS = [
     color: '#9678c4',
     desc: 'Mindful journaling, gratitude prompts, goal tracking, and weekly Friday Quest Star rewards.',
   },
+  {
+    block: 'Block G',
+    time: '3 min',
+    subject: 'Pencil Power & Grip',
+    land: 'Vitalis & Harmonia',
+    color: '#FF6F00',
+    desc: 'Tripod pencil grip, finger control, tracing paths, and calm fine-motor readiness.',
+  },
+  {
+    block: 'Block H',
+    time: '3 min',
+    subject: 'Cursive Warm-Up',
+    land: 'Harmonia & Aquaria',
+    color: '#5ba4c9',
+    desc: 'Flowing ocean waves, rhythmic loops, and continuous stroke transitions for smooth writing.',
+  },
+  {
+    block: 'Block I',
+    time: '5 min',
+    subject: 'Rhythm & Sound',
+    land: '19-Track Album Sync',
+    color: '#FFB300',
+    desc: 'Call-and-response beat tapping and syllable fluency synced directly with the free 19-track album.',
+  },
+  {
+    block: 'Block J',
+    time: '5 min',
+    subject: 'Hero Quest Moment',
+    land: '15 Hero Mentors',
+    color: '#5fb685',
+    desc: 'Short character stories and growth-mindset reflection questions from all 7 Learning Lands.',
+  },
+  {
+    block: 'Block K',
+    time: '3 min',
+    subject: "Seriphia's Socratic Spark · Critical Thinking",
+    land: 'Critical Thinking Foundation',
+    color: '#FF6F00',
+    capstone: true,
+    desc: 'Daily Socratic questions and Universal Intellectual Standards (Clarity, Accuracy, Logic, Fairmindedness) adapted for Ages 2–7.',
+  },
 ];
 
 const RhythmReadyWhatsInside = () => {
@@ -615,31 +657,31 @@ const RhythmReadyWhatsInside = () => {
     <section className="rq-inside section" id="whats-inside">
       <div className="container">
         <RevealSection className="text-center">
-          <div className="section-label">The Daily 6-Block Routine</div>
+          <div className="section-label">The Daily 11-Block Routine (A–K)</div>
           <KineticHeadline
             tag="h2"
             className="section-title"
             variant="musical-bounce"
           >
-            Six Daily Blocks. <span className="text-gold">16 Minutes a Day.</span>
+            Eleven Daily Blocks. <span className="text-gold">Critical Thinking Built In.</span>
           </KineticHeadline>
           <p className="section-subtitle">
-            Every single day follows a predictable, neuro-affirming sequence that children look forward to.
+            Every single day follows a predictable, neuro-affirming 11-block sequence (A–K) ending with Seriphia’s Socratic Spark.
           </p>
           <ul className="rq-inside__facts">
             <li className="rq-inside__fact rq-inside__fact--price">$21 Digital / $45 Print</li>
             <li className="rq-inside__fact">40 Day-by-Day Lessons</li>
-            <li className="rq-inside__fact">400+ Activity Blocks</li>
+            <li className="rq-inside__fact">440 Activity Blocks (A–K)</li>
             <li className="rq-inside__fact">Pre-K to Grade 2 (Ages 2–7)</li>
           </ul>
         </RevealSection>
 
-        {/* ── 6 Daily Blocks Grid ── */}
+        {/* ── 11 Daily Blocks Grid ── */}
         <div className="rq-inside__deliver" style={{ marginTop: '2.5rem' }}>
           <div className="rq-inside__grid">
             {DAILY_BLOCKS.map((d, i) => (
-              <RevealSection key={d.block} delay={i * 0.07}>
-                <div className="rq-inside-card" style={{ '--feat-color': d.color }}>
+              <RevealSection key={d.block} delay={i * 0.05} className={d.capstone ? 'rq-inside-capstone-wrap' : ''}>
+                <div className={`rq-inside-card${d.capstone ? ' rq-inside-card--capstone' : ''}`} style={{ '--feat-color': d.color }}>
                   <span className="rq-inside-card__mark" style={{ fontSize: '1.2rem', fontWeight: 800 }}>
                     {d.block} · {d.time}
                   </span>
@@ -868,7 +910,7 @@ const RhythmReadyOffer = () => {
                 <li className="rq-offer__item">
                   <span className="rq-offer__tick" aria-hidden="true">✓</span>
                   <span>
-                    <strong>400+ Daily Activity Blocks.</strong> Ten 3-minute subject blocks per day (~30 mins/day).
+                    <strong>440 Daily Activity Blocks (A–K).</strong> Eleven tactile blocks per day including Block K: Seriphia’s Socratic Spark.
                   </span>
                 </li>
                 <li className="rq-offer__item">
@@ -886,7 +928,7 @@ const RhythmReadyOffer = () => {
                 <li className="rq-offer__item">
                   <span className="rq-offer__tick" aria-hidden="true">✓</span>
                   <span>
-                    <strong>Friday Milestone Celebrations &amp; Quest Stars.</strong> Gamified rewards &amp; progress mapping.
+                    <strong>8-Week Milestone &amp; Victory Tracker + Friday Quest Stars.</strong> Printable 40-day progress chart &amp; rewards.
                   </span>
                 </li>
                 <li className="rq-offer__item">
@@ -898,8 +940,19 @@ const RhythmReadyOffer = () => {
               </ul>
 
               <p className="rq-offer__free">
-                Pairs perfectly with the free 19-track album on /listen. No expensive curriculum boxes or
-                monthly subscription fees.
+                Pairs directly with the free 19-track album on /listen and daily routine templates for zero-prep mornings.
+              </p>
+
+              <p style={{ marginTop: '0.85rem' }}>
+                <a
+                  href={assetPath('/assets/SOE_8Week_Milestone_Victory_Tracker.html')}
+                  target="_blank"
+                  rel="noopener"
+                  className="btn btn-outline"
+                  style={{ display: 'inline-flex', alignItems: 'center', gap: '0.45rem', fontSize: '0.92rem' }}
+                >
+                  🖨️ Preview Printable 8-Week Milestone Tracker →
+                </a>
               </p>
             </div>
 
@@ -1153,7 +1206,7 @@ const faqs = [
     q: 'What age and grade levels is the Workbook & Curriculum designed for?',
     a: [
       'The Workbook & Curriculum is engineered for Pre-K through 2nd Grade (ages 2 to 7).',
-      'For younger learners (ages 2–4), parents guide the 10 short blocks together. For emerging readers and older learners (ages 5–7), children complete the blocks with joyful independence.',
+      'For younger learners (ages 2–4), parents guide the 11 short blocks (A–K) together. For emerging readers and older learners (ages 5–7), children complete the blocks and Block K Socratic questions with joyful independence.',
     ],
     chips: ['Pre-K to Grade 2', 'Ages 2 to 7', 'Guided & Independent'],
   },
@@ -1162,10 +1215,10 @@ const faqs = [
     color: 'var(--color-blue)',
     q: 'How much time does it take each day?',
     a: [
-      'About 30 minutes total per day.',
-      'The day is divided into ten quick 3-minute blocks (Phonics, Math, Science, Physical Movement, Geography/Civics, French/Bilingual, and Reflection). It is designed to fit smoothly into morning breakfast routines or afternoon quiet time with zero burnout.',
+      'About 30 to 35 minutes total per day.',
+      'Each day uses eleven quick blocks (A–K): Phonics, Math, Science, Movement, Geography/Civics, Reflection, Pencil Grip, Cursive Warm-Up, Rhythm & Sound, Hero Lore, and Block K Seriphia’s Socratic Spark for critical thinking.',
     ],
-    chips: ['~30 minutes/day', '10 short blocks', 'Zero burnout'],
+    chips: ['~30–35 minutes/day', '11 short blocks (A–K)', 'Critical Thinking'],
   },
   {
     id: 'supplies',
@@ -1376,7 +1429,7 @@ const RhythmQuestSale = () => {
                 Get the Workbook &amp; Curriculum Today
               </h2>
               <p className="section-subtitle" style={{ marginTop: '1rem' }}>
-                8 Weeks. 40 Days. 400+ Daily Activities. Pre-K to Grade 2 (Ages 2–7).
+                8 Weeks. 40 Days. 440 Activity Blocks (A–K) with Critical Thinking. Pre-K to Grade 2 (Ages 2–7).
                 <br />
                 <span style={{ color: 'var(--color-green)', fontWeight: 600 }}>
                   A multi-sensory, music-powered learning routine.

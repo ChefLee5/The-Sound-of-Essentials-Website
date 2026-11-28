@@ -163,7 +163,7 @@ const SeriphiaSignal = () => {
             name: 'How does The Sound of Essentials support children ages 2–7 without screens?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Guided by Seriphia and 14 Land Heroes across 7 developmental Lands, the curriculum delivers Sound Before Symbol phonemic songs, bilateral midline movement, and tactile 10-block daily workbook routines for Pre-K through Grade 2.',
+              text: 'Guided by Seriphia and 14 Land Heroes across 7 developmental Lands, the curriculum delivers Sound Before Symbol phonemic songs, bilateral midline movement, and tactile 11-block (A–K) daily workbook routines with Socratic critical thinking for Pre-K through Grade 2.',
             },
           },
           {

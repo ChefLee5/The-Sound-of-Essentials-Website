@@ -196,7 +196,7 @@ const corePseoPages = [
       }
     ],
     "features": [
-      "Daily 10-Block Activity Framework (Blocks A\u2013J)",
+      "Daily 11-Block Activity & Critical Thinking Framework (Blocks A\u2013K)",
       "Embedded Circle Time Songs with Clear Movement Prompts",
       "Full Standards Crosswalk to Early Childhood Frameworks",
       "Visual Cue Cards and Child-Friendly Character Mentors"

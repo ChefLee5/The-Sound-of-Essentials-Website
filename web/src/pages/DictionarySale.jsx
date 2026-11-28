@@ -156,9 +156,8 @@ const DictionarySale = () => {
               <span className="dict-hero__title-accent">World Behind It</span>
             </KineticHeadline>
             <p className="section-subtitle dict-hero__subtitle">
-              The most immersive picture dictionary ever designed for young learners.
-              4,000+ words. 125 illustrated scenes. 7 magical lands.
-              Powered by music, guided by 15 hero characters.
+              Build Ages 2–7 vocabulary in 10 minutes a day across 4,000+ words, 125 illustrated scenes, and 7 magical lands.
+              Powered by music, guided by 15 hero characters, with ready-to-use conversation templates.
             </p>
             <div className="dict-hero__price-tag">
               <span className="dict-hero__price-retail">$79</span>
@@ -221,7 +220,7 @@ const DictionarySale = () => {
           <RevealSection className="text-center">
             <div className="section-label">What's Inside</div>
             <h2 className="section-title" style={{ color: 'var(--color-text-dark)' }}>
-              Not Just a Dictionary. <span className="text-gold">A Learning Universe.</span>
+              Every Word Lives in a <span className="text-gold">Learning Universe.</span>
             </h2>
             <p className="section-subtitle">
               Designed for the developing brain — not the algorithm.
@@ -408,6 +407,7 @@ const DictionarySale = () => {
                   <li>✓ All 7 Lands &amp; 15 heroes included</li>
                   <li>✓ Phonetic pronunciation guides</li>
                   <li>✓ Bilingual EN/ES support</li>
+                  <li>✓ Parent &amp; Teacher Conversation Templates + A–Z Tracker</li>
                   <li>✓ Reserve your copy · Delivered upon release</li>
                 </ul>
                 <a

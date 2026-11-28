@@ -1746,6 +1746,15 @@
 
 .rq-inside__grid > .reveal-block { height: 100%; }
 
+.rq-inside-capstone-wrap {
+  grid-column: span 2;
+}
+
+.rq-inside-card--capstone {
+  background: linear-gradient(135deg, rgba(255, 248, 240, 0.96), rgba(255, 240, 224, 0.92));
+  border-color: rgba(255, 111, 0, 0.4);
+}
+
 .rq-inside-card {
   height: 100%;
   background: rgba(255, 255, 255, 0.75);
@@ -1872,6 +1881,7 @@
   .rq-inside { padding: 4rem 0; }
   .rq-inside__grid,
   .rq-inside__ledger-rows { grid-template-columns: 1fr; }
+  .rq-inside-capstone-wrap { grid-column: span 1; }
   .rq-stage__body { padding: 1.4rem 1.25rem 1.6rem; }
   .rq-stage__hero { width: 44px; height: 44px; }
   .rq-inside__ledger { padding: 1.75rem 1.25rem; }
